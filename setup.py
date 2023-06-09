@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='communicative_feedback',
+    name='grammaticality_annotation',
     version='',
     packages=['grammaticality_annotation'],
     url='',
