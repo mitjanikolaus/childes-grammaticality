@@ -101,7 +101,7 @@ def prepare(args):
             num_utts_to_annotate += 1
 
         if num_utts_to_annotate >= NUM_UTTS_TO_ANNOTATE_PER_FILE:
-            utterances_selection = utterances.iloc[start_idx:end_idx].copy()
+            utterances_selection = utterances.iloc[start_idx:end_idx+1].copy()
             utterances_selection["is_grammatical"] = ""
             utterances_selection["note"] = ""
             utterances_selection.loc[(utterances_selection.speaker_code == SPEAKER_CODE_CHILD) & (utterances_selection.num_words > 1), "is_grammatical"] = "TODO"
@@ -111,7 +111,7 @@ def prepare(args):
             utterances_selection.to_csv(os.path.join(base_path, f"{file_idx}.csv"))
             num_utts_to_annotate = 0
             file_idx += 1
-            start_idx = end_idx
+            start_idx = end_idx + 1
 
         end_idx += 1
 
