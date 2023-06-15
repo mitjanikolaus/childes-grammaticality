@@ -84,7 +84,7 @@ def prepare(args):
     random.shuffle(groups)
     utterances = pd.concat(groups).reset_index(drop=True)
 
-    base_path = PROJECT_ROOT_DIR+"/data/manual_annotation/new"
+    base_path = PROJECT_ROOT_DIR+"/data/manual_annotation/all"
     os.makedirs(base_path, exist_ok=True)
 
     file_idx = 0

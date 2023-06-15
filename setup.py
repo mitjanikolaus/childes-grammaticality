@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='grammaticality_annotation',
+    name='childes_grammaticality',
     version='',
-    packages=['grammaticality_annotation'],
+    packages=[''],
     url='',
     license='',
     author='',

@@ -17,7 +17,8 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import prepare_manual_annotation_data, CHILDESGrammarDataModule, calc_class_weights
-from grammaticality_annotation.pretrain_lstm import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LSTMSequenceClassification
+from grammaticality_annotation.tokenizer import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP
+from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
 
 FINE_TUNE_RANDOM_STATE = 1
 

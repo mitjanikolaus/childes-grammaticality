@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import pandas as pd
-# from krippendorff import krippendorff
+from krippendorff import krippendorff
 from sklearn.metrics import cohen_kappa_score, matthews_corrcoef
 
 from utils import PROJECT_ROOT_DIR
@@ -59,9 +59,9 @@ def eval(args):
 
         print(f"MCC: {np.mean(mcc_scores):.2f}")
 
-        # rel_data = [data[name] for name in columns]
-        # alpha = krippendorff.alpha(reliability_data=rel_data)
-        # print(f"Alpha: {alpha:.2f}")
+        rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
+        alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
+        print(f"Alpha: {alpha:.2f}")
 
 
 def eval_disagreement():
@@ -69,7 +69,6 @@ def eval_disagreement():
     data[data.disagreement == 1].groupby("disagreement_reason").size().sort_values(ascending=False).plot(kind="barh")
     plt.subplots_adjust(left=0.5)
     plt.show()
-
 
 
 def parse_args():

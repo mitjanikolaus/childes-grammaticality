@@ -16,7 +16,7 @@ from grammaticality_annotation.data import tokenize
 from grammaticality_annotation.fine_tune_grammaticality_nn import CHILDESGrammarModel
 from grammaticality_annotation.pretrain_lstm import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
     LSTMSequenceClassification
-from utils import get_num_unique_words, ERR_UNKNOWN
+from tokenizer import get_num_unique_words, ERR_UNKNOWN
 
 if os.environ["DISPLAY"] != ":0":
     matplotlib.use("Agg")

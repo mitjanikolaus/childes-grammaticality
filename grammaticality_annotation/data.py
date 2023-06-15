@@ -1,36 +1,53 @@
 import os
+from pathlib import Path
+
 import pandas as pd
 import numpy as np
 import torch
 from datasets import Dataset, DatasetDict, load_dataset
+from grammaticality_annotation.prepare_hiller_fernandez_data import HILLER_FERNANDEZ_DATA_OUT_PATH
 from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
-from grammaticality_annotation.pretrain_lstm import TOKEN_EOS
-from grammaticality_data_preprocessing.prepare_hiller_fernandez_data import HILLER_FERNANDEZ_DATA_OUT_PATH
-from utils import UTTERANCES_WITH_CHILDES_ERROR_ANNOTATIONS_FOR_TRAINING_FILE, FILE_GRAMMATICALITY_ANNOTATIONS
+from grammaticality_annotation.tokenizer import TOKEN_EOS, speaker_code_to_speaker_token, TEXT_FIELD, \
+    LABEL_FIELD, TOKEN_SPEAKER_CHILD
+from utils import PROJECT_ROOT_DIR
 
-DATA_PATH_ZORRO = "zorro/sentences/babyberta"
+DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
 
 DATA_SPLIT_RANDOM_STATE = 8
 
-TEXT_FIELDS = ["prev_transcript_clean", "transcript_clean"]
+DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
+
+LABEL_GRAMMATICAL = 1
+LABEL_UNGRAMMATICAL = -1
 
 
-def prepare_csv(file_path, include_extra_columns=False, val_split_proportion=None):
-    data = pd.read_csv(file_path, index_col=0)
-    data.dropna(subset=["is_grammatical", "transcript_clean", "prev_transcript_clean"], inplace=True)
+def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
+    transcripts = []
+    for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv"):
+        if os.path.isfile(f):
+            transcripts.append(pd.read_csv(f, index_col=0))
 
-    data["is_grammatical"] = data.is_grammatical.astype(int)
+    transcripts = pd.concat(transcripts, ignore_index=True)
+    transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
+    transcripts["sentence"] = transcripts.apply(lambda row: row.speaker_code + row.transcript_clean + TOKEN_EOS, axis=1).values
 
-    data.rename(columns={"labels": "categories"}, inplace=True)
-    data.rename(columns={"is_grammatical": "labels"}, inplace=True)
-    if include_extra_columns:
-        data = data[TEXT_FIELDS + ["labels", "categories", "note"]]
-    else:
-        data = data[TEXT_FIELDS + ["labels"]]
+    data = []
+    for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
+        sentence = row.sentence
+        for j in range(1, context_length+1):
+            if i-j in transcripts.index:
+                context_sentence = transcripts.loc[i-j].sentence
+                sentence = context_sentence + sentence
+        data.append({
+            TEXT_FIELD: sentence,
+            LABEL_FIELD: row[LABEL_FIELD],
+        })
+    data = pd.DataFrame.from_records(data)
 
     if val_split_proportion:
+        # TODO: once we have more data: make sure that val and train split do not contain data from the same transcripts
         train_data_size = int(len(data) * (1 - val_split_proportion))
         data_train = data.sample(train_data_size, random_state=DATA_SPLIT_RANDOM_STATE).copy()
         data_val = data[~data.index.isin(data_train.index)].copy()
@@ -40,6 +57,20 @@ def prepare_csv(file_path, include_extra_columns=False, val_split_proportion=Non
         return data_train, data_val
     else:
         return data
+
+
+def load_hiller_fernandez_data():
+    data_h_f = pd.read_csv(HILLER_FERNANDEZ_DATA_OUT_PATH, index_col=0)
+    data_h_f.dropna(subset=["is_grammatical", "transcript_clean"], inplace=True)
+
+    data_h_f[LABEL_FIELD] = data_h_f.is_grammatical.astype(int)
+
+    data_h_f.rename(columns={"transcript_clean": TEXT_FIELD, "labels": "categories"}, inplace=True)
+
+    data_h_f[TEXT_FIELD] = data_h_f[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+    data_h_f[LABEL_FIELD].replace({0: LABEL_UNGRAMMATICAL, 1: LABEL_GRAMMATICAL}, inplace=True)
+
+    return data_h_f
 
 
 def prepare_zorro_data():
@@ -52,45 +83,42 @@ def prepare_zorro_data():
                 with open(file_path, "r") as f:
                     for i, line in enumerate(f.readlines()):
                         data_zorro.append({
-                            "transcript_clean": line.replace("\n", ""),
-                            "prev_transcript_clean": ".",
-                            "labels": 0 if i % 2 == 0 else 1
+                            TEXT_FIELD: line.replace("\n", ""),
+                            LABEL_FIELD: LABEL_UNGRAMMATICAL if i % 2 == 0 else LABEL_GRAMMATICAL
                         })
+
     data_zorro = pd.DataFrame(data_zorro)
+
+    data_zorro[TEXT_FIELD] = data_zorro[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+
     return data_zorro
-
-
-def prepare_manual_annotation_data(val_split_proportion, include_extra_columns=False):
-    data_manual_annotations_train, data_manual_annotations_val = prepare_csv(FILE_GRAMMATICALITY_ANNOTATIONS, include_extra_columns, val_split_proportion)
-    # Replace unknown grammaticality values
-    data_manual_annotations_train = data_manual_annotations_train[data_manual_annotations_train.labels != 0]
-    data_manual_annotations_train.labels.replace({-1: 0}, inplace=True)
-
-    data_manual_annotations_val = data_manual_annotations_val[data_manual_annotations_val.labels != 0]
-    data_manual_annotations_val.labels.replace({-1: 0}, inplace=True)
-
-    return data_manual_annotations_train, data_manual_annotations_val
 
 
 def prepare_blimp_data():
     mor = load_dataset("metaeval/blimp_classification", "morphology")["train"].to_pandas()
     syntax = load_dataset("metaeval/blimp_classification", "syntax")["train"].to_pandas()
     data_blimp = pd.concat([mor, syntax], ignore_index=True)
-    data_blimp.rename(columns={"text": "transcript_clean"}, inplace=True)
-    data_blimp["prev_transcript_clean"] = "."
+    data_blimp.rename(columns={"sentence": TEXT_FIELD, "label": LABEL_FIELD}, inplace=True)
+    data_blimp[LABEL_FIELD].replace({0: LABEL_UNGRAMMATICAL, 1: LABEL_GRAMMATICAL}, inplace=True)
+
+    data_blimp[TEXT_FIELD] = data_blimp[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+
     data_blimp.set_index("idx", inplace=True)
     return data_blimp
 
 
 def prepare_cola_data():
     dataset = load_dataset("glue", "cola")
-    ds = dataset["train"]
-    ds = ds.rename_column("sentence", "transcript_clean")
-    ds = ds.rename_column("label", "labels")
-    ds = ds.add_column("prev_transcript_clean", ["." for _ in range(len(ds))])
-    ds = ds.to_pandas()
-    ds.set_index("idx", inplace=True)
-    return ds
+    data_cola = dataset["train"]
+    data_cola = data_cola.rename_column("sentence", TEXT_FIELD)
+    data_cola = data_cola.rename_column("label", LABEL_FIELD)
+    data_cola = data_cola.to_pandas()
+    data_cola[LABEL_FIELD].replace({0: LABEL_UNGRAMMATICAL, 1: LABEL_GRAMMATICAL}, inplace=True)
+
+    data_cola[TEXT_FIELD] = data_cola[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+
+    data_cola.set_index("idx", inplace=True)
+    return data_cola
 
 
 LOADER_COLUMNS = [
@@ -104,10 +132,8 @@ LOADER_COLUMNS = [
     ]
 
 
-def create_dataset_dict(train_datasets, val_datasets, val_split_proportion):
-    data_manual_annotations_train, data_manual_annotations_val = prepare_manual_annotation_data(val_split_proportion)
-    if "childes" in train_datasets + val_datasets:
-        data_childes_train, data_childes_val = prepare_csv(UTTERANCES_WITH_CHILDES_ERROR_ANNOTATIONS_FOR_TRAINING_FILE, val_split_proportion=val_split_proportion)
+def create_dataset_dict(train_datasets, val_datasets, val_split_proportion, context_length):
+    data_manual_annotations_train, data_manual_annotations_val = load_annotated_childes_data(context_length, val_split_proportion)
 
     def get_dataset_with_name(ds_name, val=False):
         if ds_name == "manual_annotations":
@@ -116,16 +142,11 @@ def create_dataset_dict(train_datasets, val_datasets, val_split_proportion):
             else:
                 return data_manual_annotations_train
         elif ds_name == "hiller_fernandez":
-            return prepare_csv(HILLER_FERNANDEZ_DATA_OUT_PATH)
+            return load_hiller_fernandez_data()
         elif ds_name == "cola":
             return prepare_cola_data()
         elif ds_name == "blimp":
             return prepare_blimp_data()
-        elif ds_name == "childes":
-            if val:
-                return data_childes_val
-            else:
-                return data_childes_train
         elif ds_name == "zorro":
             return prepare_zorro_data()
         else:
@@ -140,6 +161,9 @@ def create_dataset_dict(train_datasets, val_datasets, val_split_proportion):
     data_train = pd.concat(data_train, ignore_index=True)
     ds_train = Dataset.from_pandas(data_train)
     dataset_dict['train'] = ds_train
+
+    ds_val = Dataset.from_pandas(data_manual_annotations_val)
+    dataset_dict['validation'] = ds_val
 
     for ds_name in val_datasets:
         data = get_dataset_with_name(ds_name, val=True)
@@ -171,14 +195,14 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.train_datasets = train_datasets
         self.val_datasets = val_datasets
 
-        self.num_labels = 2
+        self.num_labels = 3
         self.tokenizer = tokenizer
 
     def setup(self, stage: str):
         self.dataset = create_dataset_dict(self.train_datasets, self.val_datasets, self.val_split_proportion)
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
-            self.dataset[split].set_format(type="torch", columns=columns + TEXT_FIELDS)
+            self.dataset[split].set_format(type="torch", columns=columns + TEXT_FIELD)
         self.eval_splits = [x for x in self.dataset.keys() if "validation" in x]
 
     def train_dataloader(self):
@@ -198,18 +222,15 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
 
 def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
-    if len(TEXT_FIELDS) > 1:
-        texts = [tokenizer.sep_token.join([b[TEXT_FIELDS[0]], b[TEXT_FIELDS[1]]]) for b in batch]
-        if TOKEN_EOS in tokenizer.all_special_tokens:
-            texts = [t + TOKEN_EOS for t in texts]
-    else:
-        raise NotImplementedError()
+    texts = [tokenizer.sep_token.join([b[TEXT_FIELD]]) for b in batch]
+    if TOKEN_EOS in tokenizer.all_special_tokens:
+        texts = [t + TOKEN_EOS for t in texts]
 
     features = tokenizer.batch_encode_plus(
         texts, max_length=max_seq_length, padding=True, truncation=True, return_tensors="pt"
     )
     if add_labels:
-        features.data["labels"] = torch.tensor([b["labels"] for b in batch])
+        features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
 
     return features
 

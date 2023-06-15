@@ -6,12 +6,9 @@ import torch
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
-from tokenizers.pre_tokenizers import Whitespace
 import pandas as pd
 from datasets import load_dataset
-from tokenizers import Tokenizer
-from tokenizers.models import BPE
-from tokenizers.trainers import BpeTrainer
+
 from torch import nn
 import pytorch_lightning as pl
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
@@ -19,10 +16,8 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
-from utils import UTTERANCES_WITH_PREV_UTTS_FILE, PROJECT_ROOT_DIR
-
-LM_DATA = os.path.expanduser("~/data/communicative_feedback/sentences.txt")
-TOKENIZER_PATH = PROJECT_ROOT_DIR+"/data/tokenizer-childes.json"
+from grammaticality_annotation.tokenizer import train_tokenizer, prepare_data, TOKENIZER_PATH
+from utils import UTTERANCES_WITH_PREV_UTTS_FILE
 
 BATCH_SIZE = 32
 
@@ -30,31 +25,7 @@ TRUNCATION_LENGTH = 40
 
 MAX_EPOCHS = 10
 
-TOKEN_PAD = "[PAD]"
-TOKEN_EOS = "[EOS]"
-TOKEN_UNK = "[UNK]"
-TOKEN_SEP = "[SEP]"
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-
-def train_tokenizer():
-    tokenizer = Tokenizer(BPE())
-    tokenizer.pre_tokenizer = Whitespace()
-    trainer = BpeTrainer(special_tokens=[TOKEN_PAD, TOKEN_UNK, TOKEN_EOS, TOKEN_SEP], show_progress=True, vocab_size=10000)
-    tokenizer.train(files=[LM_DATA], trainer=trainer)
-
-    tokenizer.save(TOKENIZER_PATH)
-
-
-def prepare_data():
-    data = pd.read_csv(UTTERANCES_WITH_PREV_UTTS_FILE, index_col=0)
-    data = data[data.is_speech_related & data.is_intelligible]
-    data.dropna(subset=["transcript_clean", "prev_transcript_clean"], inplace=True)
-
-    sentences = data.apply(lambda row: TOKEN_SEP.join([row.prev_transcript_clean, row.transcript_clean + TOKEN_EOS]), axis=1).values
-    with open(LM_DATA, 'w') as f:
-        f.write("\n".join(sentences))
 
 
 class CHILDESDataModule(pl.LightningDataModule):
