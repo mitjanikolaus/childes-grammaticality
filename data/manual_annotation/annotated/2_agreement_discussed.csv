@@ -564,7 +564,7 @@
 2332,Gelman/2014-IndDiff/66C-P2.cha,CHI,it's a lobster.,1,
 2333,Gelman/2014-IndDiff/66C-P2.cha,CAR,oh.,,
 2334,Gelman/2014-IndDiff/66C-P2.cha,CAR,how can you tell?,,
-2335,Gelman/2014-IndDiff/66C-P2.cha,CHI,because they have.,0,
+2335,Gelman/2014-IndDiff/66C-P2.cha,CHI,because they have.,-1,possible interruption
 2336,Gelman/2014-IndDiff/66C-P2.cha,CAR,the claws.,,
 2337,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah.,,
 2338,Gelman/2014-IndDiff/66C-P2.cha,CAR,remember what you used to call the lobsters when you were little?,,
@@ -682,7 +682,7 @@
 2450,Gelman/2014-IndDiff/66C-P2.cha,CAR,not ready to turn it yet.,,
 2451,Gelman/2014-IndDiff/66C-P2.cha,CAR,what do you like to eat popcorn?,,
 2452,Gelman/2014-IndDiff/66C-P2.cha,CAR,when do you like to eat popcorn?,,
-2453,Gelman/2014-IndDiff/66C-P2.cha,CHI,when it's when a movie's starting.,0,
+2453,Gelman/2014-IndDiff/66C-P2.cha,CHI,when it's when a movie's starting.,1,reformulation
 2454,Gelman/2014-IndDiff/66C-P2.cha,CAR,of course you gotta have popcorn at the movie.,,
 2455,Gelman/2014-IndDiff/66C-P2.cha,CAR,you know where else I think you guys like to eat popcorn?,,
 2456,Gelman/2014-IndDiff/66C-P2.cha,CHI,no.,,
@@ -1203,7 +1203,7 @@
 2971,Gelman/2014-IndDiff/66C-P2.cha,CHI,a penguin.,1,
 2972,Gelman/2014-IndDiff/66C-P2.cha,CAR,a penguin?,,
 2973,Gelman/2014-IndDiff/66C-P2.cha,CAR,how can you tell?,,
-2974,Gelman/2014-IndDiff/66C-P2.cha,CHI,"because it has, it's walking very slow.",-1,“slow” can be used as an adverb
+2974,Gelman/2014-IndDiff/66C-P2.cha,CHI,"because it has, it's walking very slow.",1,“slow” can be used as an adverb
 2975,Gelman/2014-IndDiff/66C-P2.cha,CAR,uh huh.,,
 2976,Gelman/2014-IndDiff/66C-P2.cha,CHI,it's on the they slide on their belly.,0,
 2977,Gelman/2014-IndDiff/66C-P2.cha,CAR,they slide on their bellies?,,
@@ -1232,7 +1232,7 @@
 3000,Gelman/2014-IndDiff/66C-P2.cha,CAR,and what do they eat in the water?,,
 3001,Gelman/2014-IndDiff/66C-P2.cha,CHI,fish.,,
 3002,Gelman/2014-IndDiff/66C-P2.cha,CAR,they like to eat fish don't they?,,
-3003,Gelman/2014-IndDiff/66C-P2.cha,CHI,"and and sea, what are those called again?",0,
+3003,Gelman/2014-IndDiff/66C-P2.cha,CHI,"and and sea, what are those called again?",1,
 3004,Gelman/2014-IndDiff/66C-P2.cha,CAR,what are what called?,,
 3005,Gelman/2014-IndDiff/66C-P2.cha,CHI,the things that eat penguins.,1,
 3006,Gelman/2014-IndDiff/66C-P2.cha,CAR,uh sea lions?,,
@@ -1333,7 +1333,7 @@
 3101,Suppes/021006.cha,CHI,yup.,,
 3102,Suppes/021006.cha,CAR,and then what?,,
 3103,Suppes/021006.cha,CHI,put them in their house.,0,
-3104,Suppes/021006.cha,CHI,and then we water.,0,
+3104,Suppes/021006.cha,CHI,and then we water.,-1,
 3105,Suppes/021006.cha,CHI,then we put water in for for the big duck to swim.,1,
 3106,Suppes/021006.cha,CAR,really?,,
 3107,Suppes/021006.cha,CHI,yeah.,,
