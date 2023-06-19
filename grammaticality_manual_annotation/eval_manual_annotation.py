@@ -26,7 +26,7 @@ def eval(args):
             if len(data_ann.dropna(subset=["is_grammatical"])) != len(data.dropna(subset=["is_grammatical"])):
                 missing = data_ann.is_grammatical.isna() != data.is_grammatical.isna()
                 missing = [i for i, v in missing.to_dict().items() if v]
-                raise RuntimeError(f"Missing annotations: Lines {missing}")
+                raise RuntimeError(f"Missing annotations: Annotator {ann}: Lines {missing}")
 
             column_name = f"is_grammatical_{ann}"
             data[column_name] = data_ann["is_grammatical"].values
