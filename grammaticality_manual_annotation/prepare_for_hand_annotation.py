@@ -22,6 +22,7 @@ MIN_NUM_WORDS = 1
 # The caregivers of children in these corpora are using slang (e.g., "you was" or "she don't") and are therefore excluded
 # We are unfortunately only studying mainstream US/UK English
 EXCLUDED_CORPORA = ["Wells", "MPI-EVA-Manchester", "Post", "HSLLD", "Bohannon", "Brown", "Hall", "Brent", "Gleason", "Morisset", "Belfast"]
+ADDITIONAL_EXCLUDED_CORPORA = ["Demetras1", "Demetras2"]
 
 TRANSCRIPT_FILES_EXCLUDED = ["Braunwald/020128.cha", "MPI-EVA-Manchester/Fraser/030100b.cha", "Providence/Alex/021025.cha"]
 
@@ -83,6 +84,8 @@ def prepare(args):
     random.seed(1)
     random.shuffle(groups)
     utterances = pd.concat(groups).reset_index(drop=True)
+
+    utterances = utterances[~utterances.corpus.isin(ADDITIONAL_EXCLUDED_CORPORA)]
 
     base_path = PROJECT_ROOT_DIR+"/data/manual_annotation/all"
     os.makedirs(base_path, exist_ok=True)
