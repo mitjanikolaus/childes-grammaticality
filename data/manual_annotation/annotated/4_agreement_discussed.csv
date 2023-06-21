@@ -125,7 +125,7 @@
 3820,Suppes/021006.cha,CAR,so they're not going to eat any more?,,
 3821,Suppes/021006.cha,CAR,I think that doll looks pretty hungry.,,
 3822,Suppes/021006.cha,CHI,oh this peanuts.,-1,
-3823,Suppes/021006.cha,CHI,in here.,0,pointing
+3823,Suppes/021006.cha,CHI,in here.,1,pointing
 3824,Suppes/021006.cha,CHI,not play dough.,-1,
 3825,Suppes/021006.cha,CAR,those are peanuts in there?,,
 3826,Suppes/021006.cha,CHI,yeah.,,
@@ -284,7 +284,7 @@
 3979,Suppes/021006.cha,CHI,yup.,,
 3980,Suppes/021006.cha,CHI,those fish too.,1,
 3981,Suppes/021006.cha,CHI,these fish too.,1,
-3982,Suppes/021006.cha,CHI,these fish.,0,pointing
+3982,Suppes/021006.cha,CHI,these fish.,1,pointing
 3983,Suppes/021006.cha,CHI,I'm going to.,-1,could be interuption
 3984,Suppes/021006.cha,CAR,what are you doing?,,
 3985,Suppes/021006.cha,CAR,what.,,
@@ -307,7 +307,7 @@
 4002,Suppes/021006.cha,CHI,I wanna go downstairs.,1,
 4003,Suppes/021006.cha,CAR,in a little while we can go downstairs.,,
 4004,Suppes/021006.cha,CAR,let's put this away.,,
-4005,Suppes/021006.cha,CHI,no this.,0,clearly pointing
+4005,Suppes/021006.cha,CHI,no this.,1,clearly pointing
 4006,Suppes/021006.cha,CHI,this is for the jam in here.,1,
 4007,Suppes/021006.cha,CHI,in the big.,-1,
 4008,Suppes/021006.cha,CAR,oh.,,
