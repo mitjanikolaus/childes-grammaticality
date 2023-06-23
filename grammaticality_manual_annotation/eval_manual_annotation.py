@@ -1,14 +1,18 @@
 import argparse
 import itertools
 import os
-import numpy as np
 import matplotlib.pyplot as plt
 
 import pandas as pd
+
 from krippendorff import krippendorff
 from sklearn.metrics import cohen_kappa_score, matthews_corrcoef
 
 from utils import PROJECT_ROOT_DIR
+
+import warnings
+# Ignore pandas CSV writing warnings
+warnings.filterwarnings("ignore")
 
 BASE_PATH = PROJECT_ROOT_DIR + "/data/manual_annotation/selection/"
 
@@ -55,13 +59,13 @@ def eval(args):
 
             mcc = matthews_corrcoef(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])
             mcc_scores.append(mcc)
-        print(f"Kappa: {np.mean(kappa_scores):.2f}")
-
-        print(f"MCC: {np.mean(mcc_scores):.2f}")
+        # print(f"Kappa: {np.mean(kappa_scores):.2f}")
+        #
+        # print(f"MCC: {np.mean(mcc_scores):.2f}")
 
         rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
         alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
-        print(f"Alpha: {alpha:.2f}")
+        # print(f"Alpha: {alpha:.2f}")
 
 
 def eval_disagreement():
