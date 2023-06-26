@@ -7,17 +7,16 @@ import torch
 from pytorch_lightning import LightningModule, Trainer, seed_everything
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from torch.nn import CrossEntropyLoss
-from torch.optim import Adam
+from torch.optim import Adam, AdamW
 from transformers import (
-    AdamW,
     AutoConfig,
     AutoModelForSequenceClassification,
     AutoTokenizer,
     get_linear_schedule_with_warmup, PreTrainedTokenizerFast,
 )
 
-from grammaticality_annotation.data import prepare_manual_annotation_data, CHILDESGrammarDataModule, calc_class_weights
-from grammaticality_annotation.tokenizer import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP
+from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights
+from grammaticality_annotation.tokenizer import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
 
 FINE_TUNE_RANDOM_STATE = 1
@@ -63,6 +62,7 @@ class CHILDESGrammarModel(LightningModule):
         else:
             self.config = AutoConfig.from_pretrained(model_name_or_path, num_labels=num_labels)
             self.model = AutoModelForSequenceClassification.from_pretrained(model_name_or_path, config=self.config)
+            #TODO model.classifier = nn.Linear(768, 2)
 
         self.metric_mcc = evaluate.load("matthews_correlation")
         self.metric_acc = evaluate.load("accuracy")
@@ -85,16 +85,16 @@ class CHILDESGrammarModel(LightningModule):
             attention_mask=batch["attention_mask"],
         )
         logits = output["logits"]
-        labels = batch["labels"]
+        labels = batch[LABEL_FIELD]
         loss = self.loss_fct(logits.view(-1, self.model.num_labels), labels.view(-1))
 
-        preds = torch.argmax(logits, axis=1)
+        preds = torch.argmax(logits, dim=1)
 
-        return {"loss": loss, "preds": preds, "labels": labels}
+        return {"loss": loss, "preds": preds, LABEL_FIELD: labels}
 
     def training_epoch_end(self, outputs):
         preds = torch.cat([x["preds"] for x in outputs]).detach().cpu().numpy()
-        labels = torch.cat([x["labels"] for x in outputs]).detach().cpu().numpy()
+        labels = torch.cat([x[LABEL_FIELD] for x in outputs]).detach().cpu().numpy()
 
         acc = self.metric_acc.compute(predictions=preds, references=labels)
         acc = {"train_" + key: value for key, value in acc.items()}
@@ -107,12 +107,12 @@ class CHILDESGrammarModel(LightningModule):
             attention_mask=batch["attention_mask"],
         )
         logits = output["logits"]
-        labels = batch["labels"]
+        labels = batch[LABEL_FIELD]
         val_loss = self.loss_fct(logits.view(-1, self.model.num_labels), labels.view(-1))
 
         preds = torch.argmax(logits, axis=1)
 
-        return {"loss": val_loss, "preds": preds, "labels": labels}
+        return {"loss": val_loss, "preds": preds, LABEL_FIELD: labels}
 
     def validation_epoch_end(self, outputs):
         if len(self.hparams.eval_splits) == 1:
@@ -120,7 +120,7 @@ class CHILDESGrammarModel(LightningModule):
 
         for out, split in zip(outputs, self.hparams.eval_splits):
             preds = torch.cat([x["preds"] for x in out]).detach().cpu().numpy()
-            labels = torch.cat([x["labels"] for x in out]).detach().cpu().numpy()
+            labels = torch.cat([x[LABEL_FIELD] for x in out]).detach().cpu().numpy()
             loss = torch.stack([x["loss"] for x in out]).mean()
 
             if split == self.reference_val:
@@ -204,9 +204,10 @@ def main(args):
                                   train_batch_size=args.batch_size,
                                   train_datasets=args.train_datasets,
                                   val_datasets=args.val_datasets,
-                                  tokenizer=tokenizer)
+                                  tokenizer=tokenizer,
+                                  context_length=args.context_length)
     dm.setup("fit")
-    class_weights = calc_class_weights(dm.dataset["train"]["labels"].numpy())
+    class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 
     model = CHILDESGrammarModel(
         class_weights=class_weights,
@@ -258,7 +259,7 @@ def parse_args():
         "--train-datasets",
         type=str,
         nargs="+",
-        default=[],
+        default=["manual_annotations"],
     )
     argparser.add_argument(
         "--val-datasets",
@@ -279,8 +280,14 @@ def parse_args():
     argparser.add_argument(
         "--val-split-proportion",
         type=float,
-        default=0.5,
+        default=0.2,
         help="Val split proportion (only for manually annotated data)"
+    )
+    argparser.add_argument(
+        "--context-length",
+        type=int,
+        default=0,
+        help="Number of preceding utterances to include as conversational context"
     )
     argparser = Trainer.add_argparse_args(argparser)
 

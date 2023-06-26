@@ -19,8 +19,8 @@ DATA_SPLIT_RANDOM_STATE = 8
 
 DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
 
-LABEL_GRAMMATICAL = 1
-LABEL_UNGRAMMATICAL = -1
+LABEL_GRAMMATICAL = 2
+LABEL_UNGRAMMATICAL = 0
 
 
 def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
@@ -46,6 +46,9 @@ def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
         })
     data = pd.DataFrame.from_records(data)
 
+    # Transform -1, 0, 1 to 0, 1, 2 so that they can be of dtype long
+    data[LABEL_FIELD] = (data[LABEL_FIELD] + 1).astype("int64")
+
     if val_split_proportion:
         # TODO: once we have more data: make sure that val and train split do not contain data from the same transcripts
         train_data_size = int(len(data) * (1 - val_split_proportion))
@@ -61,9 +64,9 @@ def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
 
 def load_hiller_fernandez_data():
     data_h_f = pd.read_csv(HILLER_FERNANDEZ_DATA_OUT_PATH, index_col=0)
-    data_h_f.dropna(subset=["is_grammatical", "transcript_clean"], inplace=True)
+    data_h_f.dropna(subset=[LABEL_FIELD, "transcript_clean"], inplace=True)
 
-    data_h_f[LABEL_FIELD] = data_h_f.is_grammatical.astype(int)
+    data_h_f[LABEL_FIELD] = data_h_f[LABEL_FIELD].astype(int)
 
     data_h_f.rename(columns={"transcript_clean": TEXT_FIELD, "labels": "categories"}, inplace=True)
 
@@ -128,7 +131,7 @@ LOADER_COLUMNS = [
         "attention_mask",
         "start_positions",
         "end_positions",
-        "labels",
+        LABEL_FIELD,
     ]
 
 
@@ -184,6 +187,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
             tokenizer,
             max_seq_length: int = 128,
             val_split_proportion: float = 0.5,
+            context_length: int = 1,
             **kwargs,
     ):
         super().__init__()
@@ -194,15 +198,16 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.val_split_proportion = val_split_proportion
         self.train_datasets = train_datasets
         self.val_datasets = val_datasets
+        self.context_length = context_length
 
         self.num_labels = 3
         self.tokenizer = tokenizer
 
     def setup(self, stage: str):
-        self.dataset = create_dataset_dict(self.train_datasets, self.val_datasets, self.val_split_proportion)
+        self.dataset = create_dataset_dict(self.train_datasets, self.val_datasets, self.val_split_proportion, self.context_length)
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
-            self.dataset[split].set_format(type="torch", columns=columns + TEXT_FIELD)
+            self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
         self.eval_splits = [x for x in self.dataset.keys() if "validation" in x]
 
     def train_dataloader(self):
@@ -236,6 +241,12 @@ def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
 
 
 def calc_class_weights(labels):
-    class_weight_pos = np.sum(labels).item() / len(labels)
-    class_weights = [class_weight_pos, 1 - class_weight_pos]
+    class_weights = []
+    distint_labels = np.unique(labels)
+    for label in distint_labels:
+        weight = (1 - len(labels[labels == label]) / len(labels)) / len(distint_labels)
+        class_weights.append(weight)
+
+    assert np.round(np.sum(class_weights)) == 1
+
     return class_weights
