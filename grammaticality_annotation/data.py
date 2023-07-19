@@ -49,6 +49,7 @@ def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
     # Transform -1, 0, 1 to 0, 1, 2 so that they can be of dtype long
     data[LABEL_FIELD] = (data[LABEL_FIELD] + 1).astype("int64")
 
+    print("Dataset size: ", len(data))
     if val_split_proportion:
         # TODO: once we have more data: make sure that val and train split do not contain data from the same transcripts
         train_data_size = int(len(data) * (1 - val_split_proportion))
