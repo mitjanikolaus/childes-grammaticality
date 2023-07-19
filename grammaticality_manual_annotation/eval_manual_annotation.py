@@ -1,6 +1,8 @@
 import argparse
 import itertools
 import os
+from collections import Counter
+
 import matplotlib.pyplot as plt
 
 import pandas as pd
@@ -24,9 +26,10 @@ def eval(args):
         annotated_files = {ann: os.path.join(BASE_PATH, f"{i}_{ann}.csv") for ann in args.annotators}
         annotated_files = {a: f for a, f in annotated_files.items() if os.path.isfile(f)}
 
-        data = pd.read_csv(base_file, index_col=0)
+        data = pd.read_csv(base_file, index_col=0, dtype={"note": str})
+        data["note"] = ""
         for ann, file in annotated_files.items():
-            data_ann = pd.read_csv(file, index_col=0)
+            data_ann = pd.read_csv(file, index_col=0, dtype={"note": str})
             if len(data_ann.dropna(subset=["is_grammatical"])) != len(data.dropna(subset=["is_grammatical"])):
                 missing = data_ann.is_grammatical.isna() != data.is_grammatical.isna()
                 missing = [i for i, v in missing.to_dict().items() if v]
@@ -34,6 +37,10 @@ def eval(args):
 
             column_name = f"is_grammatical_{ann}"
             data[column_name] = data_ann["is_grammatical"].values
+
+            # Update notes
+            notes_ann = data_ann.note.apply(lambda x: x if "nat" in str(x) else "")
+            data["note"] = data.note + notes_ann
 
         def is_disagreement(row):
             if row.is_grammatical != "TODO":
@@ -47,6 +54,24 @@ def eval(args):
         data["disagreement"] = data.disagreement.replace({1: 1, 0: ""})
         names = "_".join(args.annotators)
         data.to_csv(os.path.join(BASE_PATH, f"{i}_agreement_{names}.csv"))
+
+        def majority_vote(row):
+            if row.is_grammatical != "TODO":
+                return ""
+            votes = []
+            for ann in args.annotators:
+                votes.append(row[f"is_grammatical_{ann}"])
+
+            counter = Counter(votes).most_common()
+            if counter[0][1] > len(votes) / 2:
+                return counter[0][0]
+            else:
+                return 0
+
+        if len(args.annotators) == 3:
+            data_maj = data.copy()
+            data_maj["is_grammatical"] = data_maj.apply(majority_vote, axis=1)
+            data_maj[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note"]].to_csv(os.path.join(BASE_PATH, f"{i}_majority_vote.csv"))
 
         data.dropna(subset=["is_grammatical"], inplace=True)
 
