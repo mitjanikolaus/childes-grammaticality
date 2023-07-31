@@ -1,4 +1,5 @@
 import os
+import random
 from pathlib import Path
 
 import pandas as pd
@@ -10,7 +11,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
 from grammaticality_annotation.tokenizer import TOKEN_EOS, speaker_code_to_speaker_token, TEXT_FIELD, \
-    LABEL_FIELD, TOKEN_SPEAKER_CHILD
+    LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD
 from utils import PROJECT_ROOT_DIR
 
 DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
@@ -23,7 +24,7 @@ LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
 
 
-def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
+def load_annotated_childes_data(context_length=0, test_split_proportion=0.2, random_seed=1):
     transcripts = []
     for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv"):
         if os.path.isfile(f):
@@ -43,6 +44,7 @@ def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
         data.append({
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
+            TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
         })
     data = pd.DataFrame.from_records(data)
 
@@ -50,15 +52,23 @@ def load_annotated_childes_data(context_length=0, val_split_proportion=0.2):
     data[LABEL_FIELD] = (data[LABEL_FIELD] + 1).astype("int64")
 
     print("Dataset size: ", len(data))
-    if val_split_proportion:
-        # TODO: once we have more data: make sure that val and train split do not contain data from the same transcripts
-        train_data_size = int(len(data) * (1 - val_split_proportion))
-        data_train = data.sample(train_data_size, random_state=DATA_SPLIT_RANDOM_STATE).copy()
-        data_val = data[~data.index.isin(data_train.index)].copy()
+    if test_split_proportion:
+        # Make sure that test and train split do not contain data from the same transcripts
+        train_data_size = int(len(data) * (1 - test_split_proportion))
+        transcript_files = data.transcript_file.unique()
+        random.seed(random_seed)
+        random.shuffle(transcript_files)
+        transcript_files = iter(transcript_files)
+        data_train = pd.DataFrame()
+        # Append transcripts until we have the approximate train data size.
+        while len(data_train) < train_data_size:
+            data_train = pd.concat([data_train, data[data.transcript_file == next(transcript_files)]])
 
-        assert (len(set(data_train.index) & set(data_val.index)) == 0)
+        data_test = data[~data.index.isin(data_train.index)].copy()
 
-        return data_train, data_val
+        assert (len(set(data_train.index) & set(data_test.index)) == 0)
+
+        return data_train, data_test
     else:
         return data
 
@@ -136,13 +146,13 @@ LOADER_COLUMNS = [
     ]
 
 
-def create_dataset_dict(train_datasets, val_datasets, val_split_proportion, context_length):
-    data_manual_annotations_train, data_manual_annotations_val = load_annotated_childes_data(context_length, val_split_proportion)
+def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, val_datasets=None):
+    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_data(context_length, test_split_proportion, random_seed)
 
-    def get_dataset_with_name(ds_name, val=False):
+    def get_dataset_with_name(ds_name, test=False):
         if ds_name == "manual_annotations":
-            if val:
-                return data_manual_annotations_val
+            if test:
+                return data_manual_annotations_test
             else:
                 return data_manual_annotations_train
         elif ds_name == "hiller_fernandez":
@@ -160,19 +170,20 @@ def create_dataset_dict(train_datasets, val_datasets, val_split_proportion, cont
 
     data_train = []
     for ds_name in train_datasets:
-        data_train.append(get_dataset_with_name(ds_name, val=False))
+        data_train.append(get_dataset_with_name(ds_name, test=False))
 
     data_train = pd.concat(data_train, ignore_index=True)
     ds_train = Dataset.from_pandas(data_train)
     dataset_dict['train'] = ds_train
 
-    ds_val = Dataset.from_pandas(data_manual_annotations_val)
-    dataset_dict['validation'] = ds_val
+    ds_test = Dataset.from_pandas(data_manual_annotations_test)
+    dataset_dict['test'] = ds_test
 
-    for ds_name in val_datasets:
-        data = get_dataset_with_name(ds_name, val=True)
-        ds_val = Dataset.from_pandas(data)
-        dataset_dict[f"validation_{ds_name}"] = ds_val
+    if val_datasets:
+        for ds_name in val_datasets:
+            data = get_dataset_with_name(ds_name, test=True)
+            ds_val = Dataset.from_pandas(data)
+            dataset_dict[f"validation_{ds_name}"] = ds_val
 
     return dataset_dict
 

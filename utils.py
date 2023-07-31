@@ -62,10 +62,6 @@ MICRO_CONVERSATIONS_WITHOUT_NON_SPEECH_FILE = os.path.expanduser(
     "~/data/communicative_feedback/micro_conversations_without_non_speech.csv"
 )
 
-SPEECH_ACT_NO_FUNCTION = "YY"
-SPEECH_ACTS_NO_FUNCTION = ["YY", "OO"]
-
-
 POS_PUNCTUATION = [
     ".",
     "?",

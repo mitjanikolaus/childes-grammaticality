@@ -21,6 +21,7 @@ TOKEN_SPEAKER_CAREGIVER = "[CAR]"
 
 TEXT_FIELD = "transcript"
 LABEL_FIELD = "is_grammatical"
+TRANSCRIPT_FIELD = "transcript_file"
 
 LM_DATA = os.path.expanduser("~/data/childes_grammaticality/sentences.txt")
 DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")

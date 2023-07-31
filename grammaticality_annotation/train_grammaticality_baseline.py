@@ -55,47 +55,62 @@ def main(args):
     tokenizer.add_special_tokens(
         {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
 
-    datasets = create_dataset_dict(args.train_datasets, args.val_datasets, args.val_split_proportion, args.context_length)
+    test_labels = np.array([])
+    predictions = np.array([])
+    accuracies = []
+    maj_class_accuracies = []
 
-    datasets = datasets.map(tokenize, fn_kwargs={"tokenizer": tokenizer})
+    random_seeds = range(args.num_cv_folds)
+    for random_seed in random_seeds:
+        datasets = create_dataset_dict(args.train_datasets, args.test_split_proportion, args.context_length, random_seed)
+        datasets = datasets.map(tokenize, fn_kwargs={"tokenizer": tokenizer})
+        vocab_unigrams, vocab_bigrams, vocab_trigrams = create_n_gram_vocabs(datasets["train"]["encoded"], args.max_n_grams)
+        datasets = datasets.map(create_features, fn_kwargs={"vocab_unigrams": vocab_unigrams, "vocab_bigrams": vocab_bigrams, "vocab_trigrams": vocab_trigrams})
 
-    vocab_unigrams, vocab_bigrams, vocab_trigrams = create_n_gram_vocabs(datasets["train"]["encoded"], args.max_n_grams)
+        data_train = datasets["train"]
+        data_test = datasets["test"]
 
-    datasets = datasets.map(create_features, fn_kwargs={"vocab_unigrams": vocab_unigrams, "vocab_bigrams": vocab_bigrams, "vocab_trigrams": vocab_trigrams})
+        print("Train dataset size: ", len(data_train))
+        print("Test dataset size: ", len(data_test))
+        counter = Counter(data_train["is_grammatical"])
+        print("Label counts: ", counter)
+        most_common_label = counter.most_common()[0][0]
 
-    data_train = datasets["train"]
-    data_val = datasets["validation"]
+        maj_class_acc = np.mean(np.array(data_test["is_grammatical"]) == most_common_label)
+        maj_class_accuracies.append(maj_class_acc)
 
-    print("Train dataset size: ", len(data_train))
-    print("Val dataset size: ", len(data_val))
-    most_common_label = Counter(data_train["is_grammatical"]).most_common()[0][0]
-    maj_class_acc = np.mean(np.array(data_val["is_grammatical"]) == most_common_label)
-    print(f"Majority class acc: {maj_class_acc:.2f}")
+        if args.model == "svc":
+            clf = SVC(random_state=RANDOM_STATE, class_weight="balanced")
+        elif args.model == "linear_svc":
+            clf = LinearSVC(random_state=RANDOM_STATE, class_weight="balanced")
+        elif args.model == "random_forest":
+            clf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced")
+        else:
+            raise RuntimeError("Unknown model: ", args.model)
 
-    if args.model == "svc":
-        clf = SVC(random_state=RANDOM_STATE, class_weight="balanced")
-    elif args.model == "linear_svc":
-        clf = LinearSVC(random_state=RANDOM_STATE, class_weight="balanced")
-    elif args.model == "random_forest":
-        clf = RandomForestClassifier(random_state=RANDOM_STATE, class_weight="balanced")
-    else:
-        raise RuntimeError("Unknown model: ", args.model)
+        print("Training model.. ", end="")
+        clf.fit(data_train["features"], data_train["is_grammatical"])
+        print("Done.\n")
 
-    print("Training model.. ", end="")
-    clf.fit(data_train["features"], data_train["is_grammatical"])
-    print("Done.\n")
+        preds = clf.predict(data_test["features"])
+        predictions = np.concatenate([predictions, preds])
 
-    predictions = clf.predict(data_val["features"])
+        labels = np.array(datasets["test"]["is_grammatical"])
+        test_labels = np.concatenate([test_labels, labels])
 
-    labels_val = np.array(datasets["validation"]["is_grammatical"])
+        accuracy = np.mean(labels == preds)
+        accuracies.append(accuracy)
+        print("Accuracy: ", accuracy)
 
-    accuracy = np.mean(labels_val == predictions)
-    print("Accuracy: ", accuracy)
+    print(f"==================================\n"
+          f"Majority Classifier Accuracy: {np.mean(maj_class_accuracies):.2f} Stddev: {np.std(maj_class_accuracies):.2f}")
 
-    cm = confusion_matrix(labels_val, predictions, normalize="true")
+    print(f"Classifier Accuracy: {np.mean(accuracies):.2f} Stddev: {np.std(accuracies):.2f}")
+
+    cm = confusion_matrix(test_labels, predictions, normalize="true")
     print("Confusion matrix: \n", cm)
 
-    kappa = cohen_kappa_score(labels_val, predictions, weights="linear")
+    kappa = cohen_kappa_score(test_labels, predictions, weights="linear")
     print(f"Cohen's kappa: {kappa:.2f}")
 
 
@@ -109,16 +124,10 @@ def parse_args():
         default=["manual_annotations"],
     )
     argparser.add_argument(
-        "--val-datasets",
-        type=str,
-        nargs="+",
-        default=[],
-    )
-    argparser.add_argument(
-        "--val-split-proportion",
+        "--test-split-proportion",
         type=float,
         default=0.2,
-        help="Val split proportion (only for manually annotated data)"
+        help="Test split proportion"
     )
     argparser.add_argument(
         "--model",
@@ -129,7 +138,7 @@ def parse_args():
     argparser.add_argument(
         "--max-n-grams",
         type=int,
-        default=100,
+        default=1000,
         help="Maximum number of ngrams in the vocabulary"
     )
     argparser.add_argument(
@@ -137,6 +146,12 @@ def parse_args():
         type=int,
         default=0,
         help="Number of preceding utterances to include as conversational context"
+    )
+    argparser.add_argument(
+        "--num-cv-folds",
+        type=int,
+        default=5,
+        help="Number of cross-validation folds"
     )
     argparser = Trainer.add_argparse_args(argparser)
 
