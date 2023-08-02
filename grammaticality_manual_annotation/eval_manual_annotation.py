@@ -5,6 +5,7 @@ from collections import Counter
 
 import matplotlib.pyplot as plt
 
+import numpy as np
 import pandas as pd
 
 from krippendorff import krippendorff
@@ -20,6 +21,8 @@ BASE_PATH = PROJECT_ROOT_DIR + "/data/manual_annotation/selection/"
 
 
 def eval(args):
+    all_data = []
+
     for i in range(args.start_index, args.end_index+1):
         print(f"AGREEMENT SCORES FILE ID {i}:")
         base_file = os.path.join(BASE_PATH, f"{i}.csv")
@@ -41,6 +44,8 @@ def eval(args):
             # Update notes
             notes_ann = data_ann.note.apply(lambda x: x if "nat" in str(x) else "")
             data["note"] = data.note + notes_ann
+
+        all_data.append(data)
 
         def is_disagreement(row):
             if row.is_grammatical != "TODO":
@@ -84,13 +89,26 @@ def eval(args):
 
             mcc = matthews_corrcoef(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])
             mcc_scores.append(mcc)
-        # print(f"Kappa: {np.mean(kappa_scores):.2f}")
-        #
-        # print(f"MCC: {np.mean(mcc_scores):.2f}")
 
-        rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
-        alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
-        # print(f"Alpha: {alpha:.2f}")
+    print("\n\nAll files:")
+    data = pd.concat(all_data)
+
+    kappa_scores = []
+    mcc_scores = []
+    for ann_1, ann_2 in itertools.combinations(args.annotators, 2):
+        kappa = cohen_kappa_score(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"], weights="linear")
+        kappa_scores.append(kappa)
+        print(f"Kappa {(ann_1, ann_2)}: {kappa:.2f}")
+
+        mcc = matthews_corrcoef(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])
+        mcc_scores.append(mcc)
+
+    print(f"Mean kappa: {np.mean(kappa_scores):.2f} Std: {np.std(kappa_scores):.2f}")
+    print(f"Mean mcc: {np.mean(mcc_scores):.2f} Std: {np.std(mcc_scores):.2f}")
+
+    rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
+    alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
+    print(f"Krippendorff's Alpha: {alpha:.2f}")
 
 
 def eval_disagreement():
