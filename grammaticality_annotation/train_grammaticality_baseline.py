@@ -14,8 +14,8 @@ from transformers import (
 from sklearn.svm import SVC, LinearSVC
 
 from grammaticality_annotation.data import create_dataset_dict
-from grammaticality_annotation.tokenizer import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, tokenize, \
-    LM_DATA, prepare_data, train_tokenizer
+from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, tokenize, \
+    train_tokenizer, TOKENIZERS_DIR
 
 RANDOM_STATE = 1
 
@@ -46,15 +46,6 @@ def create_n_gram_vocabs(datasets, max_n_grams):
 
 
 def main(args):
-    if not os.path.isfile(LM_DATA):
-        prepare_data()
-    if not os.path.isfile(TOKENIZER_PATH):
-        train_tokenizer()
-
-    tokenizer = PreTrainedTokenizerFast(tokenizer_file=TOKENIZER_PATH)
-    tokenizer.add_special_tokens(
-        {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
-
     test_labels = np.array([])
     predictions = np.array([])
     accuracies = []
@@ -62,7 +53,17 @@ def main(args):
 
     random_seeds = range(args.num_cv_folds)
     for random_seed in random_seeds:
+
         datasets = create_dataset_dict(args.train_datasets, args.test_split_proportion, args.context_length, random_seed)
+
+        tokenizer_path = os.path.join(TOKENIZERS_DIR, f"tokenizer_{random_seed}.json")
+        if not os.path.isfile(tokenizer_path):
+            train_tokenizer(tokenizer_path, datasets["train"])
+
+        tokenizer = PreTrainedTokenizerFast(tokenizer_file=tokenizer_path)
+        tokenizer.add_special_tokens(
+            {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
+
         datasets = datasets.map(tokenize, fn_kwargs={"tokenizer": tokenizer})
         vocab_unigrams, vocab_bigrams, vocab_trigrams = create_n_gram_vocabs(datasets["train"]["encoded"], args.max_n_grams)
         datasets = datasets.map(create_features, fn_kwargs={"vocab_unigrams": vocab_unigrams, "vocab_bigrams": vocab_bigrams, "vocab_trigrams": vocab_trigrams})
@@ -150,7 +151,7 @@ def parse_args():
     argparser.add_argument(
         "--num-cv-folds",
         type=int,
-        default=5,
+        default=3,
         help="Number of cross-validation folds"
     )
     argparser = Trainer.add_argparse_args(argparser)

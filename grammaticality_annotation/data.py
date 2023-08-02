@@ -10,9 +10,9 @@ from grammaticality_annotation.prepare_hiller_fernandez_data import HILLER_FERNA
 from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
-from grammaticality_annotation.tokenizer import TOKEN_EOS, speaker_code_to_speaker_token, TEXT_FIELD, \
-    LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD
-from utils import PROJECT_ROOT_DIR
+from grammaticality_annotation.tokenizer import TOKEN_EOS, TEXT_FIELD, \
+    LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD, TOKEN_SPEAKER_CAREGIVER
+from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 
 DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
 
@@ -22,6 +22,14 @@ DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_ann
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
+
+
+def speaker_code_to_speaker_token(code):
+    if code == SPEAKER_CODE_CHILD:
+        return TOKEN_SPEAKER_CHILD
+    if code in SPEAKER_CODES_CAREGIVER:
+        return TOKEN_SPEAKER_CAREGIVER
+    raise RuntimeError("Unknown speaker code: ", code)
 
 
 def load_annotated_childes_data(context_length=0, test_split_proportion=0.2, random_seed=1):
