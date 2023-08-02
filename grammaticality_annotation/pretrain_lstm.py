@@ -6,7 +6,6 @@ import torch
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
-import pandas as pd
 from datasets import load_dataset
 
 from torch import nn
@@ -16,8 +15,7 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.tokenizer import train_tokenizer, prepare_data, TOKENIZER_PATH
-from utils import UTTERANCES_WITH_PREV_UTTS_FILE
+from grammaticality_annotation.tokenizer import train_tokenizer
 
 BATCH_SIZE = 32
 

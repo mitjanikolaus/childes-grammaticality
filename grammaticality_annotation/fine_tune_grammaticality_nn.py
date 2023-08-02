@@ -1,6 +1,7 @@
 import argparse
 import os
-from typing import Optional
+
+import numpy as np
 
 import evaluate
 import torch
@@ -15,8 +16,8 @@ from transformers import (
     get_linear_schedule_with_warmup, PreTrainedTokenizerFast,
 )
 
-from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights
-from grammaticality_annotation.tokenizer import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD
+from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_data
+from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD, TOKENIZERS_DIR
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
 
 FINE_TUNE_RANDOM_STATE = 1
@@ -40,15 +41,14 @@ class CHILDESGrammarModel(LightningModule):
             model_name_or_path: str,
             num_labels: int,
             train_datasets: list,
-            val_datasets: list,
             train_batch_size: int,
             eval_batch_size: int,
             learning_rate: float,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
-            eval_splits: Optional[list] = None,
             val_split_proportion: float = 0.5,
+            random_seed = 1,
             **kwargs,
     ):
         super().__init__()
@@ -62,7 +62,6 @@ class CHILDESGrammarModel(LightningModule):
         else:
             self.config = AutoConfig.from_pretrained(model_name_or_path, num_labels=num_labels)
             self.model = AutoModelForSequenceClassification.from_pretrained(model_name_or_path, config=self.config)
-            #TODO model.classifier = nn.Linear(768, 2)
 
         self.metric_mcc = evaluate.load("matthews_correlation")
         self.metric_acc = evaluate.load("accuracy")
@@ -71,9 +70,9 @@ class CHILDESGrammarModel(LightningModule):
         weight = torch.tensor(class_weights)
         self.loss_fct = CrossEntropyLoss(weight=weight)
 
-        self.val_error_analysis = False
+        self.random_seed = random_seed
 
-        self.reference_val = self.hparams.eval_splits[0]
+        self.test_error_analysis = False
 
     def forward(self, **inputs):
         return self.model(**inputs)
@@ -100,7 +99,7 @@ class CHILDESGrammarModel(LightningModule):
         acc = {"train_" + key: value for key, value in acc.items()}
         self.log_dict(acc, prog_bar=True)
 
-    def validation_step(self, batch, batch_idx, dataloader_idx=0):
+    def validation_step(self, batch, batch_idx):
         output = self(
             input_ids=batch["input_ids"],
             token_type_ids=batch["token_type_ids"],
@@ -114,50 +113,43 @@ class CHILDESGrammarModel(LightningModule):
 
         return {"loss": val_loss, "preds": preds, LABEL_FIELD: labels}
 
+    def test_step(self, batch, batch_idx):
+        return self.validation_step(batch, batch_idx)
+
     def validation_epoch_end(self, outputs):
-        if len(self.hparams.eval_splits) == 1:
-            outputs = [outputs]
+        preds = torch.cat([x["preds"] for x in outputs]).detach().cpu().numpy()
+        labels = torch.cat([x[LABEL_FIELD] for x in outputs]).detach().cpu().numpy()
+        loss = torch.stack([x["loss"] for x in outputs]).mean()
 
-        for out, split in zip(outputs, self.hparams.eval_splits):
-            preds = torch.cat([x["preds"] for x in out]).detach().cpu().numpy()
-            labels = torch.cat([x[LABEL_FIELD] for x in out]).detach().cpu().numpy()
-            loss = torch.stack([x["loss"] for x in out]).mean()
+        self.log(f"val_loss", loss, prog_bar=True)
+        for metric in self.metrics:
+            metric_results = metric.compute(predictions=preds, references=labels)
+            metric_results = {"val_" + key: value for key, value in metric_results.items()}
 
-            if split == self.reference_val:
-                self.log(f"val_loss", loss, prog_bar=True)
-                for metric in self.metrics:
-                    metric_results = metric.compute(predictions=preds, references=labels)
-                    self.log_dict(metric_results, prog_bar=True)
+            self.log_dict(metric_results, prog_bar=True)
 
-                acc_pos = self.metric_acc.compute(predictions=preds[labels == 1], references=labels[labels == 1])
-                acc_neg = self.metric_acc.compute(predictions=preds[labels == 0], references=labels[labels == 0])
-                self.log(f"accuracy_pos", acc_pos["accuracy"])
-                self.log(f"accuracy_neg", acc_neg["accuracy"])
+    def test_epoch_end(self, outputs):
+        preds = torch.cat([x["preds"] for x in outputs]).detach().cpu().numpy()
+        labels = torch.cat([x[LABEL_FIELD] for x in outputs]).detach().cpu().numpy()
+        loss = torch.stack([x["loss"] for x in outputs]).mean()
 
-                if self.val_error_analysis:
-                    _, data_manual_annotations_val = prepare_manual_annotation_data(self.hparams.val_split_proportion,
-                                                                                    include_extra_columns=True)
-                    data_manual_annotations_val["pred"] = preds
-                    errors = data_manual_annotations_val[
-                        data_manual_annotations_val.pred != data_manual_annotations_val.label]
-                    correct = data_manual_annotations_val[
-                        data_manual_annotations_val.pred == data_manual_annotations_val.label]
+        self.log(f"test_loss", loss, prog_bar=True)
+        for metric in self.metrics:
+            metric_results = metric.compute(predictions=preds, references=labels)
+            metric_results = {"test_" + key: value for key, value in metric_results.items()}
 
-                    errors.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_errors.csv"))
-                    correct.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_correct.csv"))
+            self.log_dict(metric_results, prog_bar=True)
 
-            else:
-                split = split.replace("validation_", "")
-                self.log(f"{split}_val_loss", loss)
-                for metric in self.metrics:
-                    metric_results = metric.compute(predictions=preds, references=labels)
-                    metric_results = {f"{split}_{key}": value for key, value in metric_results.items()}
-                    self.log_dict(metric_results)
+        if self.test_error_analysis:
+            _, data_manual_annotations_val = load_annotated_childes_data(self.hparams.context_length, self.hparams.val_split_proportion, random_seed=self.random_seed)
+            data_manual_annotations_val["pred"] = preds
+            errors = data_manual_annotations_val[
+                data_manual_annotations_val.pred != data_manual_annotations_val.label]
+            correct = data_manual_annotations_val[
+                data_manual_annotations_val.pred == data_manual_annotations_val.label]
 
-                acc_pos = self.metric_acc.compute(predictions=preds[labels == 1], references=labels[labels == 1])
-                acc_neg = self.metric_acc.compute(predictions=preds[labels == 0], references=labels[labels == 0])
-                self.log(f"{split}_accuracy_pos", acc_pos["accuracy"])
-                self.log(f"{split}_accuracy_neg", acc_neg["accuracy"])
+            errors.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_errors.csv"))
+            correct.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_correct.csv"))
 
     def configure_optimizers(self):
         """Prepare optimizer and schedule (linear warmup and decay)"""
@@ -191,60 +183,79 @@ class CHILDESGrammarModel(LightningModule):
 def main(args):
     seed_everything(FINE_TUNE_RANDOM_STATE)
 
-    if os.path.isfile(args.model):
-        tokenizer = PreTrainedTokenizerFast(tokenizer_file=TOKENIZER_PATH)
-        tokenizer.add_special_tokens(
-            {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
-    else:
-        tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
+    test_results = []
 
-    dm = CHILDESGrammarDataModule(val_split_proportion=args.val_split_proportion,
-                                  model_name_or_path=args.model,
-                                  eval_batch_size=args.batch_size,
-                                  train_batch_size=args.batch_size,
-                                  train_datasets=args.train_datasets,
-                                  val_datasets=args.val_datasets,
-                                  tokenizer=tokenizer,
-                                  context_length=args.context_length)
-    dm.setup("fit")
-    class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
+    random_seeds = range(args.num_cv_folds)
+    for random_seed in random_seeds:
+        print(f"\n\n\nStart training with random seed {random_seed}")
 
-    model = CHILDESGrammarModel(
-        class_weights=class_weights,
-        train_datasets=args.train_datasets,
-        val_datasets=args.val_datasets,
-        eval_batch_size=args.batch_size,
-        train_batch_size=args.batch_size,
-        model_name_or_path=args.model,
-        num_labels=dm.num_labels,
-        eval_splits=dm.eval_splits,
-        val_split_proportion=args.val_split_proportion,
-        learning_rate=args.learning_rate,
-    )
+        if os.path.isfile(args.model):
 
-    checkpoint_callback = ModelCheckpoint(monitor="matthews_correlation", mode="max", save_last=True,
-                                            filename="{epoch:02d}-{matthews_correlation:.2f}")
-    early_stop_callback = EarlyStopping(monitor="matthews_correlation", patience=10, verbose=True, mode="max",
-                                        min_delta=0.01, stopping_threshold=0.99)
+            tokenizer_path = os.path.join(TOKENIZERS_DIR, f"tokenizer_{random_seed}.json")
+            if not os.path.isfile(tokenizer_path):
+                raise RuntimeError(f"Tokenizer not found at {tokenizer_path}")
 
-    trainer = Trainer(
-        max_epochs=args.max_epochs,
-        accelerator="auto",
-        devices=1 if torch.cuda.is_available() else None,
-        callbacks=[checkpoint_callback, early_stop_callback],
-    )
+            tokenizer = PreTrainedTokenizerFast(tokenizer_file=tokenizer_path)
+            tokenizer.add_special_tokens(
+                {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
+        else:
+            tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
-    print("\n\n\nInitial validation:")
-    trainer.validate(model, datamodule=dm)
+        dm = CHILDESGrammarDataModule(val_split_proportion=args.val_split_proportion,
+                                      model_name_or_path=args.model,
+                                      eval_batch_size=args.batch_size,
+                                      train_batch_size=args.batch_size,
+                                      train_datasets=args.train_datasets,
+                                      tokenizer=tokenizer,
+                                      context_length=args.context_length,
+                                      random_seed=random_seed)
+        dm.setup("fit")
+        class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 
-    print("\n\n\nTraining:")
-    trainer.fit(model, datamodule=dm)
+        model = CHILDESGrammarModel(
+            class_weights=class_weights,
+            train_datasets=args.train_datasets,
+            eval_batch_size=args.batch_size,
+            train_batch_size=args.batch_size,
+            model_name_or_path=args.model,
+            num_labels=dm.num_labels,
+            val_split_proportion=args.val_split_proportion,
+            learning_rate=args.learning_rate,
+            random_seed=random_seed,
+        )
 
-    print(f"\n\n\nFinal validation (using {checkpoint_callback.best_model_path}:")
-    best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path)
+        checkpoint_callback = ModelCheckpoint(monitor="val_matthews_correlation", mode="max", save_last=True,
+                                                filename="{epoch:02d}-{val_matthews_correlation:.2f}")
+        early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=10, verbose=True, mode="max",
+                                            min_delta=0.01, stopping_threshold=0.99)
 
-    model.val_error_analysis = True
-    trainer.validate(best_model, datamodule=dm)
+        trainer = Trainer(
+            max_epochs=args.max_epochs,
+            accelerator="auto",
+            devices=1 if torch.cuda.is_available() else None,
+            callbacks=[checkpoint_callback, early_stop_callback],
+        )
+
+        print("\n\n\nInitial validation:")
+        trainer.validate(model, datamodule=dm)
+
+        print("\n\n\nTraining:")
+        trainer.fit(model, datamodule=dm)
+
+        print(f"\n\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
+        best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path)
+
+        trainer.validate(best_model, datamodule=dm)
+
+        model.test_error_analysis = True
+        test_result = trainer.test(best_model, datamodule=dm)
+        test_results.append(test_result)
+
+    accuracies = [results["test_accuracy"] for results in test_results]
+    print(f"\n\n\nAccuracy: {np.mean(accuracies):.2f} Stddev: {np.std(accuracies):.2f}")
+
+    mccs = [results["test_matthews_correlation"] for results in test_results]
+    print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
 
 def parse_args():
@@ -260,12 +271,6 @@ def parse_args():
         type=str,
         nargs="+",
         default=["manual_annotations"],
-    )
-    argparser.add_argument(
-        "--val-datasets",
-        type=str,
-        nargs="+",
-        default=[],
     )
     argparser.add_argument(
         "--batch-size",
@@ -288,6 +293,12 @@ def parse_args():
         type=int,
         default=0,
         help="Number of preceding utterances to include as conversational context"
+    )
+    argparser.add_argument(
+        "--num-cv-folds",
+        type=int,
+        default=3,
+        help="Number of cross-validation folds"
     )
     argparser = Trainer.add_argparse_args(argparser)
 

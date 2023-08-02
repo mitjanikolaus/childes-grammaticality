@@ -32,6 +32,25 @@ def speaker_code_to_speaker_token(code):
     raise RuntimeError("Unknown speaker code: ", code)
 
 
+def train_test_split(data, test_split_proportion, random_seed):
+    # Make sure that test and train split do not contain data from the same transcripts
+    train_data_size = int(len(data) * (1 - test_split_proportion))
+    transcript_files = data.transcript_file.unique()
+    random.seed(random_seed)
+    random.shuffle(transcript_files)
+    transcript_files = iter(transcript_files)
+    data_train = pd.DataFrame()
+    # Append transcripts until we have the approximate train data size.
+    while len(data_train) < train_data_size:
+        data_train = pd.concat([data_train, data[data.transcript_file == next(transcript_files)]])
+
+    data_test = data[~data.index.isin(data_train.index)].copy()
+
+    assert (len(set(data_train.index) & set(data_test.index)) == 0)
+
+    return data_train, data_test
+
+
 def load_annotated_childes_data(context_length=0, test_split_proportion=0.2, random_seed=1):
     transcripts = []
     for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv"):
@@ -61,22 +80,7 @@ def load_annotated_childes_data(context_length=0, test_split_proportion=0.2, ran
 
     print("Dataset size: ", len(data))
     if test_split_proportion:
-        # Make sure that test and train split do not contain data from the same transcripts
-        train_data_size = int(len(data) * (1 - test_split_proportion))
-        transcript_files = data.transcript_file.unique()
-        random.seed(random_seed)
-        random.shuffle(transcript_files)
-        transcript_files = iter(transcript_files)
-        data_train = pd.DataFrame()
-        # Append transcripts until we have the approximate train data size.
-        while len(data_train) < train_data_size:
-            data_train = pd.concat([data_train, data[data.transcript_file == next(transcript_files)]])
-
-        data_test = data[~data.index.isin(data_train.index)].copy()
-
-        assert (len(set(data_train.index) & set(data_test.index)) == 0)
-
-        return data_train, data_test
+        return train_test_split(data, test_split_proportion, random_seed)
     else:
         return data
 
@@ -154,8 +158,14 @@ LOADER_COLUMNS = [
     ]
 
 
-def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, val_datasets=None):
+def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False):
+    dataset_dict = DatasetDict()
+
     data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_data(context_length, test_split_proportion, random_seed)
+    if create_val_split:
+        data_manual_annotations_train, data_manual_annotations_val = train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
+        ds_val = Dataset.from_pandas(data_manual_annotations_val)
+        dataset_dict["validation"] = ds_val
 
     def get_dataset_with_name(ds_name, test=False):
         if ds_name == "manual_annotations":
@@ -174,8 +184,6 @@ def create_dataset_dict(train_datasets, test_split_proportion, context_length, r
         else:
             raise RuntimeError("Unknown dataset: ", ds_name)
 
-    dataset_dict = DatasetDict()
-
     data_train = []
     for ds_name in train_datasets:
         data_train.append(get_dataset_with_name(ds_name, test=False))
@@ -187,12 +195,6 @@ def create_dataset_dict(train_datasets, test_split_proportion, context_length, r
     ds_test = Dataset.from_pandas(data_manual_annotations_test)
     dataset_dict['test'] = ds_test
 
-    if val_datasets:
-        for ds_name in val_datasets:
-            data = get_dataset_with_name(ds_name, test=True)
-            ds_val = Dataset.from_pandas(data)
-            dataset_dict[f"validation_{ds_name}"] = ds_val
-
     return dataset_dict
 
 
@@ -203,11 +205,11 @@ class CHILDESGrammarDataModule(LightningDataModule):
             train_batch_size: int,
             eval_batch_size: int,
             train_datasets: list,
-            val_datasets: list,
             tokenizer,
             max_seq_length: int = 128,
-            val_split_proportion: float = 0.5,
+            test_split_proportion: float = 0.2,
             context_length: int = 1,
+            random_seed = 1,
             **kwargs,
     ):
         super().__init__()
@@ -215,32 +217,28 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.max_seq_length = max_seq_length
         self.train_batch_size = train_batch_size
         self.eval_batch_size = eval_batch_size
-        self.val_split_proportion = val_split_proportion
+        self.test_split_proportion = test_split_proportion
         self.train_datasets = train_datasets
-        self.val_datasets = val_datasets
         self.context_length = context_length
+        self.random_seed = random_seed
 
         self.num_labels = 3
         self.tokenizer = tokenizer
 
     def setup(self, stage: str):
-        self.dataset = create_dataset_dict(self.train_datasets, self.val_datasets, self.val_split_proportion, self.context_length)
+        self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length, self.random_seed, create_val_split=True)
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
             self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
-        self.eval_splits = [x for x in self.dataset.keys() if "validation" in x]
 
     def train_dataloader(self):
         return DataLoader(self.dataset["train"], batch_size=self.train_batch_size, shuffle=True, collate_fn=self.tokenize_batch)
 
     def val_dataloader(self):
-        return [DataLoader(self.dataset[x], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch) for x in self.eval_splits]
+        return DataLoader(self.dataset["validation"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch)
 
     def test_dataloader(self):
-        if len(self.eval_splits) == 1:
-            return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch)
-        elif len(self.eval_splits) > 1:
-            return [DataLoader(self.dataset[x], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch) for x in self.eval_splits]
+        return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch)
 
     def tokenize_batch(self, batch):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_labels=True)
