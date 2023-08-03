@@ -17,8 +17,8 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_data
-from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD, TOKENIZERS_DIR
-from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
+from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD
+from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 
 FINE_TUNE_RANDOM_STATE = 1
 
@@ -190,12 +190,10 @@ def main(args):
         print(f"\n\n\nStart training with random seed {random_seed}")
 
         if os.path.isfile(args.model):
+            if not os.path.isfile(LSTM_TOKENIZER_PATH):
+                raise RuntimeError(f"Tokenizer not found at {LSTM_TOKENIZER_PATH}")
 
-            tokenizer_path = os.path.join(TOKENIZERS_DIR, f"tokenizer_{random_seed}.json")
-            if not os.path.isfile(tokenizer_path):
-                raise RuntimeError(f"Tokenizer not found at {tokenizer_path}")
-
-            tokenizer = PreTrainedTokenizerFast(tokenizer_file=tokenizer_path)
+            tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
             tokenizer.add_special_tokens(
                 {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
         else:

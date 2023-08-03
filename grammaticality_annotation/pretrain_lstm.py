@@ -1,7 +1,9 @@
 import argparse
 import math
 import os.path
+from pathlib import Path
 
+import pandas as pd
 import torch
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
@@ -15,13 +17,24 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.tokenizer import train_tokenizer
+from grammaticality_annotation.data import speaker_code_to_speaker_token
+from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
+    TOKENIZERS_DIR
+from utils import PROJECT_ROOT_DIR
 
-BATCH_SIZE = 32
+DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")
+
+LM_DATA = os.path.expanduser("~/data/childes_grammaticality/sentences.txt")
+
+BATCH_SIZE = 100
 
 TRUNCATION_LENGTH = 40
 
 MAX_EPOCHS = 10
+
+LSTM_TOKENIZER_PATH = os.path.join(TOKENIZERS_DIR, "tokenizer_lstm.json")
+
+NUM_VAL_SENTENCES = 10000
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -33,7 +46,7 @@ class CHILDESDataModule(pl.LightningDataModule):
         self.tokenizer = tokenizer
 
         data = load_dataset("text", data_files={"train": LM_DATA})
-        self.data = data["train"].train_test_split(test_size=0.001)
+        self.data = data["train"].train_test_split(test_size=NUM_VAL_SENTENCES)
 
     def tokenize_batch(self, batch):
         text = [t["text"] for t in batch]
@@ -220,7 +233,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
             hidden_dim: int = 256,
             num_layers: int = 1,
             dropout_rate: float = 0.1,
-            learning_rate: float = 0.001,
+            learning_rate: float = 0.003,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
@@ -243,8 +256,6 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
 
         self.num_labels = num_labels
 
-        # self.freeze_base_weights()
-
     def freeze_base_weights(self):
         for param in self.model.parameters():
             param.requires_grad = False
@@ -256,15 +267,28 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
         return self.model.forward_classification(**inputs)
 
 
+def prepare_lm_data():
+    print("Preparing data...")
+    os.makedirs(os.path.dirname(LM_DATA), exist_ok=True)
+    data = []
+    for f in Path(DATA_DIR).glob("*.csv"):
+        if os.path.isfile(f):
+            data.append(pd.read_csv(f, index_col=0))
+
+    data = pd.concat(data, ignore_index=True)
+    data["speaker_code"] = data.speaker_code.apply(speaker_code_to_speaker_token)
+    sentences = data.apply(lambda row: row.speaker_code + row.transcript_clean + TOKEN_EOS, axis=1).values
+    with open(LM_DATA, 'w') as f:
+        f.write("\n".join(sentences))
+
+
 def train(args):
     if not os.path.isfile(LM_DATA):
-        print("Preparing data...")
-        prepare_data()
-    if not os.path.isfile(TOKENIZER_PATH):
-        print("Training tokenizer...")
-        train_tokenizer()
+        prepare_lm_data()
+    if not os.path.isfile(LSTM_TOKENIZER_PATH):
+        train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA)
 
-    tokenizer = PreTrainedTokenizerFast(tokenizer_file=TOKENIZER_PATH)
+    tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
     tokenizer.add_special_tokens(
         {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
 
@@ -288,7 +312,7 @@ def train(args):
         logger=tb_logger,
     )
 
-    # trainer.tune(model, datamodule=data_module)
+    trainer.tune(model, datamodule=data_module)
     #Learning rate set to 0.003311311214825908
 
     print("\n\n\nInitial validation:")
