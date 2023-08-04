@@ -227,6 +227,10 @@ def main(args):
             random_seed=random_seed,
         )
 
+        if args.model == "gpt2":
+            tokenizer.pad_token = tokenizer.eos_token
+            model.config.pad_token_id = model.config.eos_token_id
+
         checkpoint_callback = ModelCheckpoint(monitor="val_matthews_correlation", mode="max", save_last=True,
                                                 filename="{epoch:02d}-{val_matthews_correlation:.2f}")
         early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=10, verbose=True, mode="max",

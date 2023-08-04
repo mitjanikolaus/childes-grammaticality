@@ -247,7 +247,10 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
 
 def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
-    texts = [tokenizer.sep_token.join([b[TEXT_FIELD]]) for b in batch]
+    if tokenizer.sep_token is not None:
+        texts = [tokenizer.sep_token.join([b[TEXT_FIELD]]) for b in batch]
+    else:
+        texts = ["".join([b[TEXT_FIELD]]) for b in batch]
     if TOKEN_EOS in tokenizer.all_special_tokens:
         texts = [t + TOKEN_EOS for t in texts]
 
