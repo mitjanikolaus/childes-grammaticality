@@ -5,9 +5,10 @@ from collections import Counter
 import numpy as np
 
 import nltk
+import pandas as pd
 from pytorch_lightning import Trainer
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix, cohen_kappa_score
+from sklearn.metrics import confusion_matrix, cohen_kappa_score, matthews_corrcoef
 from transformers import (
     PreTrainedTokenizerFast,
 )
@@ -16,6 +17,7 @@ from sklearn.svm import SVC, LinearSVC
 from grammaticality_annotation.data import create_dataset_dict
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, tokenize, \
     train_tokenizer, TOKENIZERS_DIR
+from utils import RESULTS_DIR, RESULTS_FILE
 
 RANDOM_STATE = 1
 
@@ -49,7 +51,10 @@ def main(args):
     test_labels = np.array([])
     predictions = np.array([])
     accuracies = []
+    mccs = []
+
     maj_class_accuracies = []
+    maj_class_mccs = []
 
     random_seeds = range(args.num_cv_folds)
     for random_seed in random_seeds:
@@ -77,8 +82,12 @@ def main(args):
         print("Label counts: ", counter)
         most_common_label = counter.most_common()[0][0]
 
-        maj_class_acc = np.mean(np.array(data_test["is_grammatical"]) == most_common_label)
+        labels = np.array(data_test["is_grammatical"])
+        maj_class_acc = np.mean(labels == most_common_label)
         maj_class_accuracies.append(maj_class_acc)
+
+        maj_class_mcc = matthews_corrcoef(labels, np.repeat(most_common_label, len(labels)))
+        maj_class_mccs.append(maj_class_mcc)
 
         if args.model == "svc":
             clf = SVC(random_state=RANDOM_STATE, class_weight="balanced")
@@ -96,23 +105,43 @@ def main(args):
         preds = clf.predict(data_test["features"])
         predictions = np.concatenate([predictions, preds])
 
-        labels = np.array(datasets["test"]["is_grammatical"])
         test_labels = np.concatenate([test_labels, labels])
 
         accuracy = np.mean(labels == preds)
         accuracies.append(accuracy)
         print("Accuracy: ", accuracy)
 
+        mcc = matthews_corrcoef(labels, preds)
+        mccs.append(mcc)
+        print("MCC: ", mcc)
+
     print(f"==================================\n"
           f"Majority Classifier Accuracy: {np.mean(maj_class_accuracies):.2f} Stddev: {np.std(maj_class_accuracies):.2f}")
 
     print(f"Classifier Accuracy: {np.mean(accuracies):.2f} Stddev: {np.std(accuracies):.2f}")
+
+    print(f"Classifier MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
     cm = confusion_matrix(test_labels, predictions, normalize="true")
     print("Confusion matrix: \n", cm)
 
     kappa = cohen_kappa_score(test_labels, predictions, weights="linear")
     print(f"Cohen's kappa: {kappa:.2f}")
+
+    results_df = pd.DataFrame([{"model": "majority_classifier", "metric": "mcc", "mean": np.mean(maj_class_mccs), "std": np.std(maj_class_mccs)},
+                               {"model": "majority_classifier", "metric": "accuracy", "mean": np.mean(maj_class_accuracies), "std": np.std(maj_class_accuracies)},
+                               {"model": "ngrams", "metric": "mcc", "mean": np.mean(mccs), "std": np.std(mccs)},
+                               {"model": "ngrams", "metric": "accuracy", "mean": np.mean(accuracies), "std": np.std(accuracies)}])
+    results_df.set_index(["model", "metric"], inplace=True)
+
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+    if not os.path.isfile(RESULTS_FILE):
+        results_df.to_csv(RESULTS_FILE)
+    else:
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=[0, 1])
+        old_res_file.update(results_df)
+        old_res_file.to_csv(RESULTS_FILE)
+
 
 
 def parse_args():

@@ -2,6 +2,7 @@ import argparse
 import os
 
 import numpy as np
+import pandas as pd
 
 import evaluate
 import torch
@@ -19,6 +20,7 @@ from transformers import (
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_data
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
+from utils import RESULTS_FILE, RESULTS_DIR
 
 FINE_TUNE_RANDOM_STATE = 1
 
@@ -254,6 +256,18 @@ def main(args):
 
     mccs = [results["test_matthews_correlation"] for results in test_results]
     print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
+
+    results_df = pd.DataFrame([{"model": args.model, "metric": "mcc", "mean": np.mean(mccs), "std": np.std(mccs)},
+                               {"model": args.model, "metric": "accuracy", "mean": np.mean(accuracies), "std": np.std(accuracies)}])
+    results_df.set_index(["model", "metric"], inplace=True)
+
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+    if not os.path.isfile(RESULTS_FILE):
+        results_df.to_csv(RESULTS_FILE)
+    else:
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=[0, 1])
+        old_res_file.update(results_df)
+        old_res_file.to_csv(RESULTS_FILE)
 
 
 def parse_args():

@@ -26,6 +26,8 @@ SPEAKER_CODES_CAREGIVER = [
 ]
 
 PROJECT_ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+RESULTS_DIR = os.path.join(PROJECT_ROOT_DIR, "results")
+RESULTS_FILE = os.path.join(RESULTS_DIR, "results.csv")
 
 PREPROCESSED_UTTERANCES_FILE = os.path.expanduser(
     "~/data/communicative_feedback/utterances.csv"
