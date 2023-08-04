@@ -139,10 +139,8 @@ def main(args):
         results_df.to_csv(RESULTS_FILE)
     else:
         old_res_file = pd.read_csv(RESULTS_FILE, index_col=[0, 1])
-        old_res_file.update(results_df)
-        old_res_file.join(results_df)
-        old_res_file.to_csv(RESULTS_FILE)
-
+        results_df.combine_first(old_res_file)
+        results_df.to_csv(RESULTS_FILE)
 
 
 def parse_args():
