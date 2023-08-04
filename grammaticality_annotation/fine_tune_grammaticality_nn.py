@@ -266,7 +266,7 @@ def main(args):
         results_df.to_csv(RESULTS_FILE)
     else:
         old_res_file = pd.read_csv(RESULTS_FILE, index_col=[0, 1])
-        results_df.combine_first(old_res_file)
+        results_df = results_df.combine_first(old_res_file)
         results_df.to_csv(RESULTS_FILE)
 
 

@@ -4,7 +4,7 @@ from utils import RESULTS_FILE
 
 def main():
     results = pd.read_csv(RESULTS_FILE)
-    print(results.to_markdown(index=False))
+    print(results.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
     print(results.to_latex(float_format="%.2f", index=False))
 
