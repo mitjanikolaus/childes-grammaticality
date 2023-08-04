@@ -142,3 +142,6 @@ logs_pretrain_lstm/
 data/hiller_fernandez_2016/
 data/manual_annotation/all
 data/manual_annotation/selection
+
+# Logging
+out/
