@@ -180,7 +180,7 @@ class CHILDESGrammarLSTM(LightningModule):
         logits = logits[:, :-1, :]
         val_loss = self.loss_fct(logits.reshape(-1, self.vocab_size), labels.reshape(-1))
 
-        preds = torch.argmax(logits, axis=1)
+        preds = torch.argmax(logits, dim=1)
 
         return {"loss": val_loss, "preds": preds, "labels": labels}
 
