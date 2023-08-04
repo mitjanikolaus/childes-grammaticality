@@ -257,9 +257,8 @@ def main(args):
     mccs = [results["test_matthews_correlation"] for results in test_results]
     print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
-    results_df = pd.DataFrame([{"model": args.model, "metric": "mcc", "mean": np.mean(mccs), "std": np.std(mccs)},
-                               {"model": args.model, "metric": "accuracy", "mean": np.mean(accuracies), "std": np.std(accuracies)}])
-    results_df.set_index(["model", "metric"], inplace=True)
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies)}])
+    results_df.set_index(["model"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     if not os.path.isfile(RESULTS_FILE):

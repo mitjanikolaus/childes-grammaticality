@@ -128,11 +128,9 @@ def main(args):
     kappa = cohen_kappa_score(test_labels, predictions, weights="linear")
     print(f"Cohen's kappa: {kappa:.2f}")
 
-    results_df = pd.DataFrame([{"model": "majority_classifier", "metric": "mcc", "mean": np.mean(maj_class_mccs), "std": np.std(maj_class_mccs)},
-                               {"model": "majority_classifier", "metric": "accuracy", "mean": np.mean(maj_class_accuracies), "std": np.std(maj_class_accuracies)},
-                               {"model": "ngrams", "metric": "mcc", "mean": np.mean(mccs), "std": np.std(mccs)},
-                               {"model": "ngrams", "metric": "accuracy", "mean": np.mean(accuracies), "std": np.std(accuracies)}])
-    results_df.set_index(["model", "metric"], inplace=True)
+    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies)},
+                               {"model": "ngrams", "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies)}])
+    results_df.set_index(["model"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     if not os.path.isfile(RESULTS_FILE):
