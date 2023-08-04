@@ -140,6 +140,7 @@ def main(args):
     else:
         old_res_file = pd.read_csv(RESULTS_FILE, index_col=[0, 1])
         old_res_file.update(results_df)
+        old_res_file.join(results_df)
         old_res_file.to_csv(RESULTS_FILE)
 
 
