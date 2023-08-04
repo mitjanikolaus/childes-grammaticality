@@ -40,6 +40,9 @@ conda activate childes_grammaticality
 # Echo of launched commands
 set -x
 
+# Tell HF not to look for models online
+TRANSFORMERS_OFFLINE=1
+
 # Code execution
 model=bert-base-uncased
 context_length=1
