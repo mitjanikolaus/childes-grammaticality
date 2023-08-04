@@ -77,12 +77,15 @@ class CHILDESGrammarModel(LightningModule):
         self.test_error_analysis = False
 
     def forward(self, **inputs):
-        return self.model(**inputs)
+        output = self.model(**inputs)
+        if output["logits"].dtype == torch.float32:
+            output["logits"] = output["logits"].to(torch.float64)
+        return output
 
     def training_step(self, batch, batch_idx):
         output = self(
             input_ids=batch["input_ids"],
-            token_type_ids=batch["token_type_ids"],
+            token_type_ids=batch["token_type_ids"] if "token_type_ids" in batch.keys() else None,
             attention_mask=batch["attention_mask"],
         )
         logits = output["logits"]
@@ -104,7 +107,7 @@ class CHILDESGrammarModel(LightningModule):
     def validation_step(self, batch, batch_idx):
         output = self(
             input_ids=batch["input_ids"],
-            token_type_ids=batch["token_type_ids"],
+            token_type_ids=batch["token_type_ids"] if "token_type_ids" in batch.keys() else None,
             attention_mask=batch["attention_mask"],
         )
         logits = output["logits"]
