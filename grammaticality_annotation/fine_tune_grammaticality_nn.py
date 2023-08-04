@@ -247,7 +247,7 @@ def main(args):
 
         model.test_error_analysis = True
         test_result = trainer.test(best_model, datamodule=dm)
-        test_results.append(test_result)
+        test_results.append(test_result[0])
 
     accuracies = [results["test_accuracy"] for results in test_results]
     print(f"\n\n\nAccuracy: {np.mean(accuracies):.2f} Stddev: {np.std(accuracies):.2f}")
