@@ -28,11 +28,10 @@ DEFAULT_BATCH_SIZE = 16
 DEFAULT_LEARNING_RATE = 1e-5
 
 MODELS = [
-    "yevheniimaslov/deberta-v3-large-cola",
     "phueb/BabyBERTa-3",
-    "cointegrated/roberta-large-cola-krishna2020",  # Inverted labels!!
     "bert-base-uncased",
-    "textattack/bert-base-uncased-CoLA",
+    "gpt2",
+    "roberta-large"
 ]
 
 
