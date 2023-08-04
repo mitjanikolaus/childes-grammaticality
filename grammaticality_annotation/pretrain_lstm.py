@@ -64,11 +64,12 @@ class CHILDESDataModule(pl.LightningDataModule):
 
 
 class LSTM(nn.Module):
-    def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_rate):
+    def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_rate, num_labels=3):
         super().__init__()
         self.num_layers = num_layers
         self.hidden_dim = hidden_dim
         self.embedding_dim = embedding_dim
+        self.num_labels = num_labels
 
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
         if num_layers > 1:
@@ -79,7 +80,7 @@ class LSTM(nn.Module):
         self.dropout = nn.Dropout(dropout_rate)
         self.fc = nn.Linear(hidden_dim, vocab_size)
 
-        self.fc_classification = nn.Linear(hidden_dim, 2)
+        self.fc_classification = nn.Linear(hidden_dim, num_labels)
         self.max_pool = torch.nn.AdaptiveMaxPool1d(output_size=1)
 
     def forward(self, input_ids, hidden=None, attention_mask=None, token_type_ids=None):
@@ -134,6 +135,7 @@ class CHILDESGrammarLSTM(LightningModule):
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
+            num_labels = 3,
             **kwargs,
     ):
         super().__init__()
@@ -144,7 +146,7 @@ class CHILDESGrammarLSTM(LightningModule):
         self.loss_fct = nn.CrossEntropyLoss(ignore_index=pad_token_id)
 
         self.vocab_size = vocab_size
-        self.model = LSTM(self.vocab_size, embedding_dim,  hidden_dim, num_layers, dropout_rate)
+        self.model = LSTM(self.vocab_size, embedding_dim,  hidden_dim, num_layers, dropout_rate, num_labels)
 
     def forward(self, **inputs):
         return self.model(**inputs)
@@ -237,7 +239,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
-            num_labels: int = 2,
+            num_labels: int = 3,
             **kwargs,
     ):
         super().__init__(
@@ -252,6 +254,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
                          weight_decay=weight_decay,
                          pad_token_id=pad_token_id,
                          vocab_size=vocab_size,
+                         num_labels=num_labels,
                          )
 
         self.num_labels = num_labels
