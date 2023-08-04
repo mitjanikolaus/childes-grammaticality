@@ -232,7 +232,7 @@ def main(args):
 
         checkpoint_callback = ModelCheckpoint(monitor="val_matthews_correlation", mode="max", save_last=True,
                                                 filename="{epoch:02d}-{val_matthews_correlation:.2f}")
-        early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=10, verbose=True, mode="max",
+        early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=5, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
         trainer = Trainer(
