@@ -6,6 +6,8 @@ import pandas as pd
 import numpy as np
 import torch
 from datasets import Dataset, DatasetDict, load_dataset
+from sklearn.utils import class_weight
+
 from grammaticality_annotation.prepare_hiller_fernandez_data import HILLER_FERNANDEZ_DATA_OUT_PATH
 from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
@@ -259,12 +261,6 @@ def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
 
 
 def calc_class_weights(labels):
-    class_weights = []
-    distint_labels = np.unique(labels)
-    for label in distint_labels:
-        weight = (1 - len(labels[labels == label]) / len(labels)) / len(distint_labels)
-        class_weights.append(weight)
-
-    assert np.round(np.sum(class_weights)) == 1
+    class_weights = class_weight.compute_class_weight('balanced', classes=np.unique(labels), y=labels)
 
     return class_weights
