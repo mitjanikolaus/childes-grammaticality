@@ -13,7 +13,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
 from grammaticality_annotation.tokenizer import TOKEN_EOS, TEXT_FIELD, \
-    LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD, TOKEN_SPEAKER_CAREGIVER
+    LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD, TOKEN_SPEAKER_CAREGIVER, TOKEN_CLS
 from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 
 DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
@@ -258,6 +258,8 @@ def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
         texts = [tokenizer.sep_token.join(b[TEXT_FIELD]) for b in batch]
     else:
         texts = ["".join([b[TEXT_FIELD]]) for b in batch]
+    if TOKEN_CLS in tokenizer.all_special_tokens:
+        texts = [TOKEN_CLS + t for t in texts]
     if TOKEN_EOS in tokenizer.all_special_tokens:
         texts = [t + TOKEN_EOS for t in texts]
 
