@@ -148,9 +148,9 @@ class CHILDESGrammarModel(LightningModule):
             _, data_manual_annotations_val = load_annotated_childes_data(self.hparams.context_length, self.hparams.val_split_proportion, random_seed=self.random_seed)
             data_manual_annotations_val["pred"] = preds
             errors = data_manual_annotations_val[
-                data_manual_annotations_val.pred != data_manual_annotations_val.label]
+                data_manual_annotations_val.pred != data_manual_annotations_val[LABEL_FIELD]]
             correct = data_manual_annotations_val[
-                data_manual_annotations_val.pred == data_manual_annotations_val.label]
+                data_manual_annotations_val.pred == data_manual_annotations_val[LABEL_FIELD]]
 
             errors.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_errors.csv"))
             correct.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_correct.csv"))
