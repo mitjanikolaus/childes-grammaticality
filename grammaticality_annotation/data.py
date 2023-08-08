@@ -70,13 +70,11 @@ def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.
     transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
-        sentence = row.sentence
-        if context_length > 0:
-            sentence = [sentence]
-            for j in range(1, context_length+1):
-                if i-j in transcripts.index:
-                    context_sentence = transcripts.loc[i-j].sentence
-                    sentence = [context_sentence] + sentence
+        sentence = [row.sentence]
+        for j in range(1, context_length+1):
+            if i-j in transcripts.index:
+                context_sentence = transcripts.loc[i-j].sentence
+                sentence = [context_sentence] + sentence
         data.append({
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
@@ -257,7 +255,7 @@ def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
     if tokenizer.sep_token is not None:
         texts = [tokenizer.sep_token.join(b[TEXT_FIELD]) for b in batch]
     else:
-        texts = ["".join([b[TEXT_FIELD]]) for b in batch]
+        texts = ["".join(b[TEXT_FIELD]) for b in batch]
     if TOKEN_CLS in tokenizer.all_special_tokens:
         texts = [TOKEN_CLS + t for t in texts]
     if TOKEN_EOS in tokenizer.all_special_tokens:
