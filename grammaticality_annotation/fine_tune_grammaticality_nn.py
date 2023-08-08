@@ -253,7 +253,7 @@ def main(args):
 
         if args.model == "gpt2":
             tokenizer.pad_token = tokenizer.eos_token
-            model.config.pad_token_id = model.config.eos_token_id
+            best_model.config.pad_token_id = model.config.eos_token_id
 
         trainer.validate(best_model, datamodule=dm)
 
