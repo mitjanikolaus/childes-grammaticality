@@ -24,7 +24,7 @@ from utils import RESULTS_FILE, RESULTS_DIR
 
 FINE_TUNE_RANDOM_STATE = 1
 
-DEFAULT_BATCH_SIZE = 16
+DEFAULT_BATCH_SIZE = 128
 DEFAULT_LEARNING_RATE = 1e-5
 
 MODELS = [
@@ -191,7 +191,7 @@ def main(args):
 
     random_seeds = range(args.num_cv_folds)
     for random_seed in random_seeds:
-        print(f"\n\n\nStart training with random seed {random_seed}")
+        print(f"\n\n\n\nStart training with random seed {random_seed}")
 
         if os.path.isfile(args.model):
             if not os.path.isfile(LSTM_TOKENIZER_PATH):
@@ -232,7 +232,7 @@ def main(args):
 
         checkpoint_callback = ModelCheckpoint(monitor="val_matthews_correlation", mode="max", save_last=True,
                                                 filename="{epoch:02d}-{val_matthews_correlation:.2f}")
-        early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=5, verbose=True, mode="max",
+        early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=10, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
         trainer = Trainer(
@@ -242,13 +242,13 @@ def main(args):
             callbacks=[checkpoint_callback, early_stop_callback],
         )
 
-        print("\n\n\nInitial validation:")
+        print("Initial validation:")
         trainer.validate(model, datamodule=dm)
 
-        print("\n\n\nTraining:")
+        print("Training:")
         trainer.fit(model, datamodule=dm)
 
-        print(f"\n\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
+        print(f"\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
         best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path,
                                                               context_length=args.context_length,
                                                               val_split_proportion=args.val_split_proportion)
