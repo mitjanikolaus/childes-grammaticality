@@ -251,9 +251,13 @@ def main(args):
         print(f"\n\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
         best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path)
 
+        if args.model == "gpt2":
+            tokenizer.pad_token = tokenizer.eos_token
+            model.config.pad_token_id = model.config.eos_token_id
+
         trainer.validate(best_model, datamodule=dm)
 
-        model.test_error_analysis = True
+        best_model.test_error_analysis = True
         test_result = trainer.test(best_model, datamodule=dm)
         test_results.append(test_result[0])
 
