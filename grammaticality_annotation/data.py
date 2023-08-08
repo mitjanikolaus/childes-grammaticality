@@ -53,23 +53,30 @@ def train_test_split(data, test_split_proportion, random_seed):
     return data_train, data_test
 
 
-def load_annotated_childes_data(context_length=0, test_split_proportion=0.2, random_seed=1):
+def load_annotated_childes_data(path):
     transcripts = []
-    for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv"):
+    for f in Path(path).glob("*.csv"):
         if os.path.isfile(f):
             transcripts.append(pd.read_csv(f, index_col=0))
 
     transcripts = pd.concat(transcripts, ignore_index=True)
     transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
-    transcripts["sentence"] = transcripts.apply(lambda row: row.speaker_code + row.transcript_clean + TOKEN_EOS, axis=1).values
+    transcripts["sentence"] = transcripts.apply(lambda row: row.speaker_code + row.transcript_clean,
+                                                    axis=1).values
+    return transcripts
 
+
+def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.2, random_seed=1):
+    transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
         sentence = row.sentence
-        for j in range(1, context_length+1):
-            if i-j in transcripts.index:
-                context_sentence = transcripts.loc[i-j].sentence
-                sentence = context_sentence + sentence
+        if context_length > 0:
+            sentence = [sentence]
+            for j in range(1, context_length+1):
+                if i-j in transcripts.index:
+                    context_sentence = transcripts.loc[i-j].sentence
+                    sentence = [context_sentence] + sentence
         data.append({
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
@@ -95,7 +102,7 @@ def load_hiller_fernandez_data():
 
     data_h_f.rename(columns={"transcript_clean": TEXT_FIELD, "labels": "categories"}, inplace=True)
 
-    data_h_f[TEXT_FIELD] = data_h_f[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+    data_h_f[TEXT_FIELD] = data_h_f[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text)
     data_h_f[LABEL_FIELD].replace({0: LABEL_UNGRAMMATICAL, 1: LABEL_GRAMMATICAL}, inplace=True)
 
     return data_h_f
@@ -117,7 +124,7 @@ def prepare_zorro_data():
 
     data_zorro = pd.DataFrame(data_zorro)
 
-    data_zorro[TEXT_FIELD] = data_zorro[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+    data_zorro[TEXT_FIELD] = data_zorro[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text)
 
     return data_zorro
 
@@ -129,7 +136,7 @@ def prepare_blimp_data():
     data_blimp.rename(columns={"sentence": TEXT_FIELD, "label": LABEL_FIELD}, inplace=True)
     data_blimp[LABEL_FIELD].replace({0: LABEL_UNGRAMMATICAL, 1: LABEL_GRAMMATICAL}, inplace=True)
 
-    data_blimp[TEXT_FIELD] = data_blimp[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+    data_blimp[TEXT_FIELD] = data_blimp[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text)
 
     data_blimp.set_index("idx", inplace=True)
     return data_blimp
@@ -143,7 +150,7 @@ def prepare_cola_data():
     data_cola = data_cola.to_pandas()
     data_cola[LABEL_FIELD].replace({0: LABEL_UNGRAMMATICAL, 1: LABEL_GRAMMATICAL}, inplace=True)
 
-    data_cola[TEXT_FIELD] = data_cola[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text + TOKEN_EOS)
+    data_cola[TEXT_FIELD] = data_cola[TEXT_FIELD].apply(lambda text: TOKEN_SPEAKER_CHILD + text)
 
     data_cola.set_index("idx", inplace=True)
     return data_cola
@@ -163,7 +170,7 @@ LOADER_COLUMNS = [
 def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False):
     dataset_dict = DatasetDict()
 
-    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_data(context_length, test_split_proportion, random_seed)
+    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed)
     if create_val_split:
         data_manual_annotations_train, data_manual_annotations_val = train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
         ds_val = Dataset.from_pandas(data_manual_annotations_val)
@@ -248,7 +255,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
 def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
     if tokenizer.sep_token is not None:
-        texts = [tokenizer.sep_token.join([b[TEXT_FIELD]]) for b in batch]
+        texts = [tokenizer.sep_token.join(b[TEXT_FIELD]) for b in batch]
     else:
         texts = ["".join([b[TEXT_FIELD]]) for b in batch]
     if TOKEN_EOS in tokenizer.all_special_tokens:

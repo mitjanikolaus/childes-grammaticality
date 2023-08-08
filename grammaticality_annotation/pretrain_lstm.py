@@ -1,9 +1,6 @@
 import argparse
 import math
 import os.path
-from pathlib import Path
-
-import pandas as pd
 import torch
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
@@ -17,7 +14,7 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.data import speaker_code_to_speaker_token
+from grammaticality_annotation.data import speaker_code_to_speaker_token, load_annotated_childes_data
 from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
     TOKENIZERS_DIR
 from utils import PROJECT_ROOT_DIR
@@ -49,7 +46,7 @@ class CHILDESDataModule(pl.LightningDataModule):
         self.data = data["train"].train_test_split(test_size=NUM_VAL_SENTENCES)
 
     def tokenize_batch(self, batch):
-        text = [t["text"] for t in batch]
+        text = [t["text"] + TOKEN_EOS for t in batch]
         encodings = self.tokenizer.batch_encode_plus(text, padding=True, max_length=TRUNCATION_LENGTH, truncation=True,
                                                      return_tensors="pt")
         encodings.data["labels"] = encodings.data["input_ids"][:, 1:]
@@ -273,14 +270,9 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
 def prepare_lm_data():
     print("Preparing data...")
     os.makedirs(os.path.dirname(LM_DATA), exist_ok=True)
-    data = []
-    for f in Path(DATA_DIR).glob("*.csv"):
-        if os.path.isfile(f):
-            data.append(pd.read_csv(f, index_col=0))
+    data = load_annotated_childes_data(DATA_DIR)
+    sentences = data["sentence"]
 
-    data = pd.concat(data, ignore_index=True)
-    data["speaker_code"] = data.speaker_code.apply(speaker_code_to_speaker_token)
-    sentences = data.apply(lambda row: row.speaker_code + row.transcript_clean + TOKEN_EOS, axis=1).values
     with open(LM_DATA, 'w') as f:
         f.write("\n".join(sentences))
 

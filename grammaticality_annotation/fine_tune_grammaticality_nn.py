@@ -17,7 +17,7 @@ from transformers import (
     get_linear_schedule_with_warmup, PreTrainedTokenizerFast,
 )
 
-from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_data
+from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_datasplits
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
@@ -145,7 +145,7 @@ class CHILDESGrammarModel(LightningModule):
             self.log_dict(metric_results, prog_bar=True)
 
         if self.test_error_analysis:
-            _, data_manual_annotations_val = load_annotated_childes_data(self.hparams.context_length, self.hparams.val_split_proportion, random_seed=self.random_seed)
+            _, data_manual_annotations_val = load_annotated_childes_datasplits(self.hparams.context_length, self.hparams.val_split_proportion, random_seed=self.random_seed)
             data_manual_annotations_val["pred"] = preds
             errors = data_manual_annotations_val[
                 data_manual_annotations_val.pred != data_manual_annotations_val[LABEL_FIELD]]
