@@ -249,7 +249,9 @@ def main(args):
         trainer.fit(model, datamodule=dm)
 
         print(f"\n\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
-        best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path)
+        best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path,
+                                                              context_length=args.context_length,
+                                                              val_split_proportion=args.val_split_proportion)
 
         if args.model == "gpt2":
             tokenizer.pad_token = tokenizer.eos_token
