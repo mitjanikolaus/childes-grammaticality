@@ -61,7 +61,7 @@ class CHILDESLMDataset(Dataset):
 
 
 class CHILDESLMDataModule(pl.LightningDataModule):
-    def __init__(self, batch_size: int, tokenizer):
+    def __init__(self, batch_size: int, tokenizer, num_workers=8):
         super().__init__()
         self.batch_size = batch_size
         self.tokenizer = tokenizer
@@ -71,6 +71,8 @@ class CHILDESLMDataModule(pl.LightningDataModule):
         self.train_ds = CHILDESLMDataset(data_train)
         self.val_ds = CHILDESLMDataset(data_val)
 
+        self.num_workers = num_workers
+
     def tokenize_batch(self, batch):
         encodings = self.tokenizer.batch_encode_plus(batch, padding=True, return_tensors="pt")
         encodings.data["labels"] = encodings.data["input_ids"][:, 1:]
@@ -78,10 +80,10 @@ class CHILDESLMDataModule(pl.LightningDataModule):
         return encodings
 
     def train_dataloader(self):
-        return DataLoader(self.train_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch)
+        return DataLoader(self.train_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def val_dataloader(self):
-        return DataLoader(self.val_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch)
+        return DataLoader(self.val_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
 
 class LSTM(nn.Module):
@@ -314,7 +316,7 @@ def train(args):
     tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
     tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
 
-    data_module = CHILDESLMDataModule(BATCH_SIZE, tokenizer)
+    data_module = CHILDESLMDataModule(BATCH_SIZE, tokenizer, num_workers=args.num_workers)
 
     model = CHILDESGrammarLSTM(tokenizer=tokenizer, pad_token_id=tokenizer.pad_token_id, vocab_size=tokenizer.vocab_size)
 
@@ -349,6 +351,12 @@ def train(args):
 
 def parse_args():
     argparser = argparse.ArgumentParser()
+
+    argparser.add_argument(
+        "--num-workers",
+        type=int,
+        default=8,
+    )
 
     args = argparser.parse_args()
 
