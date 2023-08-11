@@ -12,6 +12,7 @@ import pytorch_lightning as pl
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from torch.optim import Adam
 from torch.utils.data import DataLoader
+import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
 from grammaticality_annotation.data import load_annotated_childes_data
@@ -78,6 +79,8 @@ class LSTM(nn.Module):
         self.dropout = nn.Dropout(dropout_rate)
         self.fc = nn.Linear(hidden_dim, vocab_size)
 
+        self.fc_attention = nn.Linear(hidden_dim, 1)
+
         self.fc_classification = nn.Linear(hidden_dim, num_labels)
         self.max_pool = torch.nn.AdaptiveMaxPool1d(output_size=1)
 
@@ -104,9 +107,12 @@ class LSTM(nn.Module):
         output, input_sizes = pad_packed_sequence(packed_output, batch_first=True)
         output = self.dropout(output)
 
-        output = output[range(output.shape[0]), input_sizes - 1]
+        # attention
+        att = self.fc_attention(output).squeeze(-1)
+        att = masked_softmax(att, attention_mask)
+        output_weighted = torch.sum(att.unsqueeze(-1) * output, dim=1)
 
-        logits = self.fc_classification(output)
+        logits = self.fc_classification(output_weighted)
 
         return {"logits": logits, "hidden": hidden}
 
@@ -114,6 +120,11 @@ class LSTM(nn.Module):
         hidden = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
         cell = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
         return hidden, cell
+
+
+def masked_softmax(scores, attention_mask):
+    masked = scores.masked_fill(attention_mask == 0, float('-inf'))
+    return F.softmax(masked, dim=1)
 
 
 class CHILDESGrammarLSTM(LightningModule):

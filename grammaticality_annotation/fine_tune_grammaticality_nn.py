@@ -59,7 +59,7 @@ class CHILDESGrammarModel(LightningModule):
         self.save_hyperparameters(ignore=["tokenizer"])
 
         if os.path.isfile(model_name_or_path):
-            self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels)
+            self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels, strict=False)
         else:
             self.config = AutoConfig.from_pretrained(model_name_or_path, num_labels=num_labels)
             self.model = AutoModelForSequenceClassification.from_pretrained(model_name_or_path, config=self.config)
