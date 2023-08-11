@@ -104,7 +104,7 @@ class LSTM(nn.Module):
         output, input_sizes = pad_packed_sequence(packed_output, batch_first=True)
         output = self.dropout(output)
 
-        output = output[range(output.shape[0]), input_sizes - 1]
+        output = output[range(output.shape[0]), input_sizes - 2]
 
         logits = self.fc_classification(output)
 
