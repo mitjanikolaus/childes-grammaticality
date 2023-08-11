@@ -25,6 +25,8 @@ DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_ann
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
 
+NUM_WORKERS = 10
+
 
 def speaker_code_to_speaker_token(code):
     if code == SPEAKER_CODE_CHILD:
@@ -239,13 +241,13 @@ class CHILDESGrammarDataModule(LightningDataModule):
             self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
 
     def train_dataloader(self):
-        return DataLoader(self.dataset["train"], batch_size=self.train_batch_size, shuffle=True, collate_fn=self.tokenize_batch)
+        return DataLoader(self.dataset["train"], batch_size=self.train_batch_size, shuffle=True, collate_fn=self.tokenize_batch, num_workers=NUM_WORKERS)
 
     def val_dataloader(self):
-        return DataLoader(self.dataset["validation"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch)
+        return DataLoader(self.dataset["validation"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=NUM_WORKERS)
 
     def test_dataloader(self):
-        return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch)
+        return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=NUM_WORKERS)
 
     def tokenize_batch(self, batch):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_labels=True)

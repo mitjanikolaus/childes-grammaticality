@@ -35,6 +35,11 @@ MODELS = [
 ]
 
 
+if torch.cuda.is_available():
+    torch.set_float32_matmul_precision("high")
+
+
+
 class CHILDESGrammarModel(LightningModule):
     def __init__(
             self,
@@ -236,7 +241,7 @@ def main(args):
                                             min_delta=0.01, stopping_threshold=0.99)
 
         trainer = Trainer(
-            max_epochs=args.max_epochs,
+            max_epochs=1000,
             accelerator="auto",
             devices=1 if torch.cuda.is_available() else None,
             callbacks=[checkpoint_callback, early_stop_callback],
