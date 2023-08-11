@@ -15,8 +15,8 @@ from transformers import (
 from sklearn.svm import SVC, LinearSVC
 
 from grammaticality_annotation.data import create_dataset_dict
-from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, tokenize, \
-    train_tokenizer, TOKENIZERS_DIR
+from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
+    train_tokenizer, TOKENIZERS_DIR, TEXT_FIELD
 from utils import RESULTS_DIR, RESULTS_FILE
 
 RANDOM_STATE = 1
@@ -45,6 +45,12 @@ def create_n_gram_vocabs(datasets, max_n_grams):
     trigrams = [t for t, c in Counter(trigrams).most_common(max_n_grams)]
 
     return unigrams, bigrams, trigrams
+
+
+def tokenize(datapoint, tokenizer):
+    encoded = tokenizer.encode(datapoint[TEXT_FIELD])
+    datapoint["encoded"] = encoded
+    return datapoint
 
 
 def main(args):

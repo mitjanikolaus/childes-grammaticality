@@ -38,7 +38,7 @@ NUM_VAL_SENTENCES = 10000
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-class CHILDESDataModule(pl.LightningDataModule):
+class CHILDESLMDataModule(pl.LightningDataModule):
     def __init__(self, batch_size: int, tokenizer):
         super().__init__()
         self.batch_size = batch_size
@@ -48,7 +48,7 @@ class CHILDESDataModule(pl.LightningDataModule):
         self.data = data["train"].train_test_split(test_size=NUM_VAL_SENTENCES)
 
     def tokenize_batch(self, batch):
-        text = [t["text"] + TOKEN_EOS for t in batch]
+        text = [t["text"] for t in batch]
         encodings = self.tokenizer.batch_encode_plus(text, padding=True, max_length=TRUNCATION_LENGTH, truncation=True,
                                                      return_tensors="pt")
         encodings.data["labels"] = encodings.data["input_ids"][:, 1:]
@@ -286,10 +286,9 @@ def train(args):
         train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA)
 
     tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
-    tokenizer.add_special_tokens(
-        {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
+    tokenizer.add_special_tokens({'pad_token': TOKEN_PAD})
 
-    data_module = CHILDESDataModule(BATCH_SIZE, tokenizer)
+    data_module = CHILDESLMDataModule(BATCH_SIZE, tokenizer)
 
     model = CHILDESGrammarLSTM(tokenizer=tokenizer, pad_token_id=tokenizer.pad_token_id, vocab_size=tokenizer.vocab_size)
 
