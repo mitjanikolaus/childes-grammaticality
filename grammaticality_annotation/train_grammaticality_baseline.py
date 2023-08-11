@@ -48,7 +48,7 @@ def create_n_gram_vocabs(datasets, max_n_grams):
 
 
 def tokenize(datapoint, tokenizer):
-    encoded = tokenizer.encode("".join(datapoint[TEXT_FIELD]))
+    encoded = tokenizer.encode(datapoint[TEXT_FIELD])
     datapoint["encoded"] = encoded
     return datapoint
 

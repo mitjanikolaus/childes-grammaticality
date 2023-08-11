@@ -25,7 +25,7 @@ DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_ann
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
 
-NUM_WORKERS = 10
+NUM_WORKERS = 8
 
 if torch.cuda.is_available():
     torch.set_float32_matmul_precision("high")
@@ -75,11 +75,11 @@ def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.
     transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
-        sentence = [row.sentence]
+        sentence = row.sentence
         for j in range(1, context_length+1):
             if i-j in transcripts.index:
                 context_sentence = transcripts.loc[i-j].sentence
-                sentence = [context_sentence] + sentence
+                sentence = context_sentence + sentence
         data.append({
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
