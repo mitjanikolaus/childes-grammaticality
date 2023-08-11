@@ -29,6 +29,8 @@ TRUNCATION_LENGTH = 40
 
 MAX_EPOCHS = 10
 
+LSTM_HIDDEN_DIM = 512
+
 LSTM_TOKENIZER_PATH = os.path.join(TOKENIZERS_DIR, "tokenizer_lstm.json")
 
 NUM_VAL_SENTENCES = 10000
@@ -124,8 +126,8 @@ class CHILDESGrammarLSTM(LightningModule):
             pad_token_id,
             vocab_size,
             tokenizer=None,
-            embedding_dim: int = 256,
-            hidden_dim: int = 256,
+            embedding_dim: int = LSTM_HIDDEN_DIM,
+            hidden_dim: int = LSTM_HIDDEN_DIM,
             num_layers: int = 1,
             dropout_rate: float = 0.1,
             learning_rate: float = 0.003,
@@ -228,8 +230,8 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
             pad_token_id: int,
             vocab_size: int,
             tokenizer = None,
-            embedding_dim: int = 256,
-            hidden_dim: int = 256,
+            embedding_dim: int = LSTM_HIDDEN_DIM,
+            hidden_dim: int = LSTM_HIDDEN_DIM,
             num_layers: int = 1,
             dropout_rate: float = 0.1,
             learning_rate: float = 0.003,
