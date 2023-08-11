@@ -35,11 +35,6 @@ MODELS = [
 ]
 
 
-if torch.cuda.is_available():
-    torch.set_float32_matmul_precision("high")
-
-
-
 class CHILDESGrammarModel(LightningModule):
     def __init__(
             self,

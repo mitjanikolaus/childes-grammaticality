@@ -12,8 +12,8 @@ from grammaticality_annotation.prepare_hiller_fernandez_data import HILLER_FERNA
 from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
-from grammaticality_annotation.tokenizer import TOKEN_EOS, TEXT_FIELD, \
-    LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD, TOKEN_SPEAKER_CAREGIVER, TOKEN_CLS
+from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD,
+                                                 TOKEN_SPEAKER_CAREGIVER)
 from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 
 DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
@@ -26,6 +26,9 @@ LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
 
 NUM_WORKERS = 10
+
+if torch.cuda.is_available():
+    torch.set_float32_matmul_precision("high")
 
 
 def speaker_code_to_speaker_token(code):

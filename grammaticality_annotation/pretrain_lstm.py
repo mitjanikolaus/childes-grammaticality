@@ -14,9 +14,8 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.data import speaker_code_to_speaker_token, load_annotated_childes_data
-from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
-    TOKENIZERS_DIR
+from grammaticality_annotation.data import load_annotated_childes_data
+from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR
 from utils import PROJECT_ROOT_DIR
 
 DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")

@@ -48,7 +48,7 @@ def create_n_gram_vocabs(datasets, max_n_grams):
 
 
 def tokenize(datapoint, tokenizer):
-    encoded = tokenizer.encode(datapoint[TEXT_FIELD])
+    encoded = tokenizer.encode("".join(datapoint[TEXT_FIELD]))
     datapoint["encoded"] = encoded
     return datapoint
 
@@ -134,15 +134,15 @@ def main(args):
     kappa = cohen_kappa_score(test_labels, predictions, weights="linear")
     print(f"Cohen's kappa: {kappa:.2f}")
 
-    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies)},
-                               {"model": "ngrams", "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies)}])
-    results_df.set_index(["model"], inplace=True)
+    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies), "context_length": 0},
+                               {"model": "ngrams", "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length}])
+    results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     if not os.path.isfile(RESULTS_FILE):
         results_df.to_csv(RESULTS_FILE)
     else:
-        old_res_file = pd.read_csv(RESULTS_FILE, index_col=0)
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length"])
         results_df = results_df.combine_first(old_res_file)
         results_df.to_csv(RESULTS_FILE)
 
