@@ -1,37 +1,37 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,notes
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 0,Kuczaj/021106.cha,CAR,boy that's a pretty picture Abe.,,
 1,Kuczaj/021106.cha,CHI,it's about a cave.,1,
 2,Kuczaj/021106.cha,CAR,it's a cave?,,
-3,Kuczaj/021106.cha,CHI,yeah this going to be a a you have to do this first.,1,reformulation
+3,Kuczaj/021106.cha,CHI,yeah this going to be a a you have to do this first.,1,
 4,Kuczaj/021106.cha,CHI,get those little marks off.,1,
 5,Kuczaj/021106.cha,CAR,that's okay.,,
 6,Kuczaj/021106.cha,CAR,we'll just leave them there.,,
-7,Kuczaj/021106.cha,CHI,this uh be a cave for for.,-1,
-8,Kuczaj/021106.cha,CHI,what you say?,-1,
-9,Kuczaj/021106.cha,CHI,a Thanksgiving one this uh be a cave.,-1,
+7,Kuczaj/021106.cha,CHI,this uh be a cave for for.,-1,sv_agreement
+8,Kuczaj/021106.cha,CHI,what you say?,-1,present_progressive
+9,Kuczaj/021106.cha,CHI,a Thanksgiving one this uh be a cave.,-1,sv_agreement
 10,Kuczaj/021106.cha,CAR,you're making a cave?,,
 11,Kuczaj/021106.cha,CAR,you aren't going to make a Thanksgiving picture?,,
-12,Kuczaj/021106.cha,CHI,this uh be a Thanksgiving picture you know that.,-1,
+12,Kuczaj/021106.cha,CHI,this uh be a Thanksgiving picture you know that.,-1,sv_agreement
 13,Kuczaj/021106.cha,CAR,I know it.,,
 14,Kuczaj/021106.cha,CAR,and you know it.,,
-15,Kuczaj/021106.cha,CHI,I have a I have a I need some more paint.,1,reformulation
+15,Kuczaj/021106.cha,CHI,I have a I have a I need some more paint.,1,
 16,Kuczaj/021106.cha,CAR,some more paint?,,
 17,Kuczaj/021106.cha,CAR,of each color?,,
 18,Kuczaj/021106.cha,CHI,yeah what's that?,1,
 19,Kuczaj/021106.cha,CAR,do you like it?,,
 20,Kuczaj/021106.cha,CHI,no.,,
 21,Kuczaj/021106.cha,CAR,what don't you like about it?,,
-22,Kuczaj/021106.cha,CHI,"I like this um those two more, those two more.",1,reformulation
+22,Kuczaj/021106.cha,CHI,"I like this um those two more, those two more.",1,
 23,Kuczaj/021106.cha,CAR,these colors?,,
 24,Kuczaj/021106.cha,CHI,huh?,,
 25,Kuczaj/021106.cha,CAR,these colors?,,
 26,Kuczaj/021106.cha,CHI,"no blue, blue.",1,
 27,Kuczaj/021106.cha,CHI,I like blue colors.,1,
-28,Kuczaj/021106.cha,CHI,it's mine favorite.,-1,
+28,Kuczaj/021106.cha,CHI,it's mine favorite.,-1,determiner
 29,Kuczaj/021106.cha,CAR,I already knew that.,,
 30,Kuczaj/021106.cha,CHI,I'm trying to get the dots off.,1,
-31,Kuczaj/021106.cha,CHI,I'm trying to paint them off.,-1,wrong preposition
-32,Kuczaj/021106.cha,CHI,I'm trying to paint them off.,-1,wrong preposition
+31,Kuczaj/021106.cha,CHI,I'm trying to paint them off.,-1,preposition
+32,Kuczaj/021106.cha,CHI,I'm trying to paint them off.,-1,preposition
 33,Kuczaj/021106.cha,CAR,okay.,,
 34,Kuczaj/021106.cha,CHI,what's that?,1,
 35,Kuczaj/021106.cha,CAR,some more paint.,,
@@ -40,7 +40,7 @@
 38,Kuczaj/021106.cha,CAR,uhhuh.,,
 39,Kuczaj/021106.cha,CHI,no I wanna use these.,1,
 40,Kuczaj/021106.cha,CAR,okay suit yourself.,,
-41,Kuczaj/021106.cha,CHI,know who got me these?,0,208
+41,Kuczaj/021106.cha,CHI,know who got me these?,0,
 42,Kuczaj/021106.cha,CAR,who?,,
 43,Kuczaj/021106.cha,CHI,Santa Claus.,0,
 44,Kuczaj/021106.cha,CAR,uhuh Mommy and Daddy did.,,
@@ -49,7 +49,7 @@
 47,Kuczaj/021106.cha,CAR,and Mommy and Daddy got you these paints.,,
 48,Kuczaj/021106.cha,CAR,what are you doing with that pen?,,
 49,Kuczaj/021106.cha,CHI,it's Daddy's.,1,
-50,Kuczaj/021106.cha,CHI,I'm going to give it back to him when I get done drawing this picture for Thanksgiving and and and this picture for trickortreat.,0,get done?
+50,Kuczaj/021106.cha,CHI,I'm going to give it back to him when I get done drawing this picture for Thanksgiving and and and this picture for trickortreat.,0,
 51,Kuczaj/021106.cha,CAR,you're using a pen and a paint brush at the same time?,,
 52,Kuczaj/021106.cha,CHI,uhhuh.,,
 53,Kuczaj/021106.cha,CAR,I bet that's going to be a strange picture.,,
@@ -57,13 +57,13 @@
 55,Kuczaj/021106.cha,CAR,no that one's just thick.,,
 56,Kuczaj/021106.cha,CAR,it still works alright.,,
 57,Kuczaj/021106.cha,CHI,hey!,,
-58,Kuczaj/021106.cha,CHI,this gotted on my hand.,-1,
+58,Kuczaj/021106.cha,CHI,this gotted on my hand.,-1,tense_aspect
 59,Kuczaj/021106.cha,CAR,that's alright.,,
 60,Kuczaj/021106.cha,CAR,it won't stain your hand.,,
 61,Kuczaj/021106.cha,CAR,I can wash it off when you're done.,,
-62,Kuczaj/021106.cha,CHI,why this stains on my shirt?,-1,
+62,Kuczaj/021106.cha,CHI,why this stains on my shirt?,-1,auxiliary
 63,Kuczaj/021106.cha,CAR,because your shirt we can't wash as fast as your hands get it?,,
-64,Kuczaj/021106.cha,CHI,why these are not fashed up?,-1,wrong word order in question
+64,Kuczaj/021106.cha,CHI,why these are not fashed up?,-1,auxiliary
 65,Kuczaj/021106.cha,CAR,smashed up?,,
 66,Kuczaj/021106.cha,CHI,no fashed like these.,0,
 67,Kuczaj/021106.cha,CAR,I don't know what made those get so watery.,,
@@ -80,8 +80,8 @@
 78,Kuczaj/021106.cha,CHI,uhuh.,,
 79,Kuczaj/021106.cha,CAR,okay then don't say that you don't like them.,,
 80,Kuczaj/021106.cha,CAR,wait until you taste them.,,
-81,Kuczaj/021106.cha,CHI,we didn't taste we tasted them at school.,1,reformulation
-82,Kuczaj/021106.cha,CHI,they didn't feel good.,1,grammar is ok
+81,Kuczaj/021106.cha,CHI,we didn't taste we tasted them at school.,1,
+82,Kuczaj/021106.cha,CHI,they didn't feel good.,1,
 83,Kuczaj/021106.cha,CAR,you tasted them at school?,,
 84,Kuczaj/021106.cha,CHI,and they didn't feel good.,1,
 85,Kuczaj/021106.cha,CAR,where didn't they feel good?,,
@@ -100,7 +100,7 @@
 98,Kuczaj/021106.cha,CHI,I think I will.,1,
 99,Kuczaj/021106.cha,CAR,how about pickles?,,
 100,Kuczaj/021106.cha,CHI,pickles?,,
-101,Kuczaj/021106.cha,CHI,what's pickles?,0,grammatical if child considers `pickles` as concept -> ambiguous
+101,Kuczaj/021106.cha,CHI,what's pickles?,0,
 102,Kuczaj/021106.cha,CAR,remember?,,
 103,Kuczaj/021106.cha,CAR,we made pickles.,,
 104,Kuczaj/021106.cha,CHI,I don't like pickles.,1,
@@ -110,17 +110,17 @@
 108,Kuczaj/021106.cha,CAR,that you don't like them then?,,
 109,Kuczaj/021106.cha,CHI,because I don't like them.,1,
 110,Kuczaj/021106.cha,CHI,I want some oranges when we eat dinner.,1,
-111,Kuczaj/021106.cha,CHI,know I'm a artist?,0,"208, missing subject, auxiliary"
+111,Kuczaj/021106.cha,CHI,know I'm a artist?,0,
 112,Kuczaj/021106.cha,CAR,I really think you are an artist.,,
 113,Kuczaj/021106.cha,CHI,I am.,1,
 114,Kuczaj/021106.cha,CAR,are you done with that picture?,,
 115,Kuczaj/021106.cha,CHI,no I'm still doing this one.,1,
 116,Kuczaj/021106.cha,CAR,okay you sure have been working on it for a long time.,,
-117,Kuczaj/021106.cha,CHI,are these uh are juicy ones this juicy paint it's juicy right?,1,reformulation
+117,Kuczaj/021106.cha,CHI,are these uh are juicy ones this juicy paint it's juicy right?,1,
 118,Kuczaj/021106.cha,CAR,uhhuh.,,
-119,Kuczaj/021106.cha,CHI,this is juicy right?,1,grammar is ok
+119,Kuczaj/021106.cha,CHI,this is juicy right?,1,
 120,Kuczaj/021106.cha,CAR,uhhuh it's watery.,,
-121,Kuczaj/021106.cha,CHI,why you can't fingerpaint with these?,-1,wrong word order in question
+121,Kuczaj/021106.cha,CHI,why you can't fingerpaint with these?,-1,auxiliary
 122,Kuczaj/021106.cha,CAR,oh you can.,,
 123,Kuczaj/021106.cha,CAR,but we ran out of fingerpainting paper.,,
 124,Kuczaj/021106.cha,CAR,so you can use the paintbrush instead.,,
@@ -138,15 +138,15 @@
 136,Kuczaj/021106.cha,CHI,I got it on my shirt.,1,
 137,Kuczaj/021106.cha,CAR,aw we better go take your shirt off and put it in the water to soak.,,
 138,Kuczaj/021106.cha,CHI,do you think that'll work?,1,
-139,Kuczaj/021106.cha,CHI,uhhuh then wear it again okay?,0,"208, missing subject"
+139,Kuczaj/021106.cha,CHI,uhhuh then wear it again okay?,0,
 140,Kuczaj/021106.cha,CAR,after I wash it.,,
-141,Kuczaj/021106.cha,CHI,you hot when you wear long sleeves?,0,"208, missing verb"
+141,Kuczaj/021106.cha,CHI,you hot when you wear long sleeves?,0,
 142,Kuczaj/021106.cha,CAR,not when it's cold outside.,,
 143,Kuczaj/021106.cha,CHI,can I wear another shirt?,1,
 144,Kuczaj/021106.cha,CAR,yeah you have to.,,
 145,Kuczaj/021106.cha,CHI,why?,,
 146,Kuczaj/021106.cha,CAR,because I don't want you to get too cold.,,
-147,Kuczaj/021106.cha,CHI,how long Thanksgiving and Christmas be over?,-1,
+147,Kuczaj/021106.cha,CHI,how long Thanksgiving and Christmas be over?,-1,"preposition, auxiliary"
 148,Kuczaj/021106.cha,CAR,Thanksgiving is on Thursday and Christmas is December twenty fifth.,,
 149,Kuczaj/021106.cha,CAR,so Thanksgiving and Christmas will both be over December twenty sixth.,,
 150,Kuczaj/021106.cha,CHI,why?,,
@@ -157,24 +157,24 @@
 155,Kuczaj/021106.cha,CHI,I have to turn the seven on.,1,
 156,Kuczaj/021106.cha,CHI,where's this is the seven okay?,0,
 157,Kuczaj/021106.cha,CAR,uhhuh.,,
-158,Kuczaj/021106.cha,CHI,it's not any good at seven.,1,grammar is ok
+158,Kuczaj/021106.cha,CHI,it's not any good at seven.,1,
 159,Kuczaj/021106.cha,CAR,Abe don't touch this cloth when your hands are dirty.,,
 160,Kuczaj/021106.cha,CHI,do my hands look like this dirty?,-1,
 161,Kuczaj/021106.cha,CAR,yes they look very dirty.,,
-162,Kuczaj/021106.cha,CHI,why I painted on them?,-1,wrong word order in question
+162,Kuczaj/021106.cha,CHI,why I painted on them?,-1,auxiliary
 163,Kuczaj/021106.cha,CAR,why did you?,,
 164,Kuczaj/021106.cha,CHI,because I thought my hands are paper.,1,
 165,Kuczaj/021106.cha,CAR,you thought they were paper?,,
 166,Kuczaj/021106.cha,CHI,yeah wash my hands.,0,
-167,Kuczaj/021106.cha,CHI,why you doing this one?,-1,
-168,Kuczaj/021106.cha,CHI,why you washing this one?,-1,
+167,Kuczaj/021106.cha,CHI,why you doing this one?,-1,auxiliary
+168,Kuczaj/021106.cha,CHI,why you washing this one?,-1,auxiliary
 169,Kuczaj/021106.cha,CAR,it's faster.,,
 170,Kuczaj/021106.cha,CHI,huh?,,
 171,Kuczaj/021106.cha,CAR,it's a faster way to use the wash cloth.,,
 172,Kuczaj/021106.cha,CHI,why?,,
 173,Kuczaj/021106.cha,CAR,just because.,,
 174,Kuczaj/021106.cha,CAR,what are you doing Abe?,,
-175,Kuczaj/021106.cha,CHI,I'm getting my shirt on.,-1,wrong preposition
+175,Kuczaj/021106.cha,CHI,I'm getting my shirt on.,-1,preposition
 176,Kuczaj/021106.cha,CAR,oh.,,
 177,Kuczaj/021106.cha,CHI,why Daddy have little pimples?,-1,
 178,Kuczaj/021106.cha,CAR,those are nipples Abe.,,
@@ -183,20 +183,20 @@
 181,Kuczaj/021106.cha,CAR,your king burger hat?,,
 182,Kuczaj/021106.cha,CHI,yeah my king burger hat.,1,
 183,Kuczaj/021106.cha,CAR,I think that it's over in the corner.,,
-184,Kuczaj/021106.cha,CHI,Daddy sick?,-1,
+184,Kuczaj/021106.cha,CHI,Daddy sick?,-1,auxiliary
 185,Kuczaj/021106.cha,CAR,uhhuh he has a upset tummy.,,
-186,Kuczaj/021106.cha,CHI,when people are sick.,1,completion
+186,Kuczaj/021106.cha,CHI,when people are sick.,1,
 187,Kuczaj/021106.cha,CHI,they are tired.,1,
 188,Kuczaj/021106.cha,CAR,uhhuh your body needs a lot of rest when you're sick.,,
 189,Kuczaj/021106.cha,CAR,so sick people sleep a lot.,,
 190,Kuczaj/021106.cha,CAR,Ann you can go to the co-op now if you want.,,
 191,Kuczaj/021106.cha,CAR,and I'll finish the tape when you get home.,,
-192,Kuczaj/021106.cha,CHI,and get strawberries I mean blueberries.,1,reformulation
+192,Kuczaj/021106.cha,CHI,and get strawberries I mean blueberries.,1,
 193,Kuczaj/021106.cha,CAR,Abe strawberries and blueberries are out of season.,,
 194,Kuczaj/021106.cha,CAR,we can only get them during the summer.,,
 195,Kuczaj/021106.cha,CHI,huh?,,
 196,Kuczaj/021106.cha,CAR,we can only get strawberries and blueberries during the summer.,,
-197,Kuczaj/021106.cha,CHI,this can't get up.,1,grammar is ok
+197,Kuczaj/021106.cha,CHI,this can't get up.,1,
 198,Kuczaj/021106.cha,CHI,this can't stand up either.,1,
 199,Kuczaj/021106.cha,CAR,do you wanna go to the store with me Abe?,,
 200,Kuczaj/021106.cha,CHI,yeah.,,
@@ -209,13 +209,13 @@
 207,Kuczaj/021106.cha,CHI,I'm hammering this.,1,
 208,Kuczaj/021106.cha,CAR,oh.,,
 209,Kuczaj/021106.cha,CHI,I'm hammering this too.,1,
-210,Kuczaj/021106.cha,CHI,why you dressed like that?,-1,
-211,Kuczaj/021106.cha,CHI,you wear a jacket.,-1,should be 'are wearing'
+210,Kuczaj/021106.cha,CHI,why you dressed like that?,-1,auxiliary
+211,Kuczaj/021106.cha,CHI,you wear a jacket.,-1,present_progressive
 212,Kuczaj/021106.cha,CAR,what?,,
-213,Kuczaj/021106.cha,CHI,you wear a jacket that don't had a hood on it.,-1,
+213,Kuczaj/021106.cha,CHI,you wear a jacket that don't had a hood on it.,-1,present_progressive
 214,Kuczaj/021106.cha,CHI,I wanna wear a jacket like that.,1,
 215,Kuczaj/021106.cha,CAR,are you going to come with me or stay home?,,
-216,Kuczaj/021106.cha,CHI,after this I will after these a lot of things.,1,reformulation
+216,Kuczaj/021106.cha,CHI,after this I will after these a lot of things.,1,
 217,Kuczaj/021106.cha,CAR,no I have to go now.,,
 218,Kuczaj/021106.cha,CHI,because I wanna get home in time to watch Charlie Brown.,1,
 219,Kuczaj/021106.cha,CAR,don't you wanna go now Abe so that you'll be home in time to watch Charlie Brown?,,
@@ -224,9 +224,9 @@
 222,Kuczaj/021106.cha,CHI,I'm going to hold on to you.,1,
 223,Kuczaj/021106.cha,CAR,how am I going to go if you're hanging on to me without your jacket?,,
 224,Kuczaj/021106.cha,CAR,huh?,,
-225,Kuczaj/021106.cha,CHI,I wanna hang on to you just a second.,-1,"208, missing preposition"
+225,Kuczaj/021106.cha,CHI,I wanna hang on to you just a second.,-1,preposition
 226,Kuczaj/021106.cha,CAR,no I wanna be home to watch Charlie Brown.,,
-227,Kuczaj/021106.cha,CHI,where's my book I got?,-1,
+227,Kuczaj/021106.cha,CHI,where's my book I got?,-1,determiner
 228,Kuczaj/021106.cha,CAR,your new one?,,
 229,Kuczaj/021106.cha,CHI,"yeah my new one, where is it?",1,
 230,Kuczaj/021106.cha,CAR,I don't know.,,
@@ -237,34 +237,34 @@
 235,Kuczaj/021106.cha,CAR,are you coming with me or not?,,
 236,Kuczaj/021106.cha,CHI,I will pretty soon.,1,
 237,Kuczaj/021106.cha,CAR,well I'm leaving now.,,
-238,Kuczaj/021106.cha,CHI,how long you get home?,-1,
+238,Kuczaj/021106.cha,CHI,how long you get home?,-1,preposition
 239,Kuczaj/021106.cha,CAR,about twenty minutes.,,
 240,Kuczaj/021106.cha,CHI,don't get a lot of stuff.,1,
 241,Kuczaj/021106.cha,CAR,I'm not.,,
 242,Kuczaj/021106.cha,CAR,I'm going to get honey and cranberries.,,
-243,Kuczaj/021106.cha,CHI,that all?,0,"208, missing verb"
+243,Kuczaj/021106.cha,CHI,that all?,0,
 244,Kuczaj/021106.cha,CAR,yeah.,,
 245,Kuczaj/021106.cha,CHI,I wanna go.,1,
-246,Kuczaj/021106.cha,CHI,why you not wearing a hood with jacket?,-1,"208, missing verb"
-247,Kuczaj/021106.cha,CHI,why you not wearing a jacket with a hood on it?,-1,"208, missing verb"
+246,Kuczaj/021106.cha,CHI,why you not wearing a hood with jacket?,-1,auxiliary
+247,Kuczaj/021106.cha,CHI,why you not wearing a jacket with a hood on it?,-1,auxiliary
 248,Kuczaj/021106.cha,CAR,you can take your hood off if you want.,,
 249,Kuczaj/021106.cha,CHI,will you carry me?,1,
 250,Kuczaj/021106.cha,CAR,I can't carry you.,,
 251,Kuczaj/021106.cha,CAR,you're a big boy.,,
-252,Kuczaj/021106.cha,CHI,I'm too heavy?,1,"SVO question, surprised!"
+252,Kuczaj/021106.cha,CHI,I'm too heavy?,1,
 253,Kuczaj/021106.cha,CAR,you sure are.,,
 254,Kuczaj/021106.cha,CHI,pretty soon I can carry you.,1,
 255,Kuczaj/021106.cha,CAR,when you get bigger you can carry me all you want.,,
 256,Kuczaj/021106.cha,CAR,I'd really enjoy that for a change.,,
-257,Kuczaj/021106.cha,CHI,you make my clothes bigger when I grow up?,-1,missing auxiliary
+257,Kuczaj/021106.cha,CHI,you make my clothes bigger when I grow up?,-1,auxiliary
 258,Kuczaj/021106.cha,CAR,yeah I'll have to.,,
 259,Kuczaj/021106.cha,CAR,let's go goodbye Dad.,,
 260,Kuczaj/021106.cha,CAR,bye.,,
 261,Kuczaj/021106.cha,CHI,bye.,,
-262,Kuczaj/021106.cha,CHI,you do this.,1,imperative
+262,Kuczaj/021106.cha,CHI,you do this.,1,
 263,Kuczaj/021106.cha,CHI,you get the stem off of this one.,1,
 264,Kuczaj/021106.cha,CHI,sure here you go.,1,
-265,Kuczaj/021106.cha,CHI,um that sounds like a good apple.,1,grammar is ok
+265,Kuczaj/021106.cha,CHI,um that sounds like a good apple.,1,
 266,Kuczaj/021106.cha,CHI,tell Daddy about the sparkles.,1,
 267,Kuczaj/021106.cha,CHI,huh?,,
 268,Kuczaj/021106.cha,CAR,tell Daddy about the sparkles we saw at the store.,,
@@ -274,7 +274,7 @@
 272,Kuczaj/021106.cha,CAR,would you like some walnuts?,,
 273,Kuczaj/021106.cha,CHI,yeah this is a big one.,1,
 274,Kuczaj/021106.cha,CHI,these are both big.,1,
-275,Kuczaj/021106.cha,CHI,is Charlie Brown on now when we got home?,-1,
+275,Kuczaj/021106.cha,CHI,is Charlie Brown on now when we got home?,-1,tense_aspect
 276,Kuczaj/021106.cha,CAR,pretty soon.,,
 277,Kuczaj/021106.cha,CAR,we got our shopping done so fast we have a little time to spare.,,
 278,Kuczaj/021106.cha,CHI,Daddy you want your apple?,1,
@@ -286,10 +286,10 @@
 284,Kuczaj/021106.cha,CAR,I did it.,,
 285,Kuczaj/021106.cha,CHI,why?,,
 286,Kuczaj/021106.cha,CAR,I wanted a taste.,,
-287,Kuczaj/021106.cha,CHI,why you did that?,-1,wrong word order in question
+287,Kuczaj/021106.cha,CHI,why you did that?,-1,auxiliary
 288,Kuczaj/021106.cha,CAR,because I wanted to find out what the apple tasted like.,,
 289,Kuczaj/021106.cha,CHI,I need to go tee tee.,0,
-290,Kuczaj/021106.cha,CHI,I need somebody watch me.,-1,
+290,Kuczaj/021106.cha,CHI,I need somebody watch me.,-1,preposition
 291,Kuczaj/021106.cha,CHI,I need somebody to come with me.,1,
 292,Kuczaj/021106.cha,CAR,how come?,,
 293,Kuczaj/021106.cha,CHI,because.,,
@@ -297,37 +297,37 @@
 295,Kuczaj/021106.cha,CHI,because.,,
 296,Kuczaj/021106.cha,CAR,how do you feel when someone watches you?,,
 297,Kuczaj/021106.cha,CHI,I don't know.,1,
-298,Kuczaj/021106.cha,CHI,I think I feel any not any good.,1,reformulation
+298,Kuczaj/021106.cha,CHI,I think I feel any not any good.,1,
 299,Kuczaj/021106.cha,CAR,you don't feel good?,,
 300,Kuczaj/021106.cha,CHI,hunhunh.,,
 301,Kuczaj/021106.cha,CAR,do you feel safe?,,
 302,Kuczaj/021106.cha,CHI,no.,,
 303,Kuczaj/021106.cha,CAR,do you feel secure?,,
-304,Kuczaj/021106.cha,CHI,I feel safe when someone's watching you watching me.,1,reformulation
+304,Kuczaj/021106.cha,CHI,I feel safe when someone's watching you watching me.,1,
 305,Kuczaj/021106.cha,CAR,oh who watched you today when you woke up from your nap?,,
 306,Kuczaj/021106.cha,CHI,I don't know who did it?,1,
 307,Kuczaj/021106.cha,CAR,Greggy.,,
-308,Kuczaj/021106.cha,CHI,yeah Greggy did.,1,elliptic answer
-309,Kuczaj/021106.cha,CHI,what Greggy did to me?,-1,wrong word order in question
+308,Kuczaj/021106.cha,CHI,yeah Greggy did.,1,
+309,Kuczaj/021106.cha,CHI,what Greggy did to me?,-1,auxiliary
 310,Kuczaj/021106.cha,CAR,he watched you poo poo remember?,,
 311,Kuczaj/021106.cha,CAR,you asked him.,,
 312,Kuczaj/021106.cha,CAR,and what did he say?,,
 313,Kuczaj/021106.cha,CHI,he didn't say anything.,1,
 314,Kuczaj/021106.cha,CAR,he didn't?,,
-315,Kuczaj/021106.cha,CHI,hunhunh know what he did?,0,"208, missing subject, auxiliary"
+315,Kuczaj/021106.cha,CHI,hunhunh know what he did?,0,
 316,Kuczaj/021106.cha,CAR,what?,,
 317,Kuczaj/021106.cha,CHI,I don't know.,1,
-318,Kuczaj/021106.cha,CHI,that was silly question.,-1,
+318,Kuczaj/021106.cha,CHI,that was silly question.,-1,determiner
 319,Kuczaj/021106.cha,CHI,you didn't know what he did.,1,
 320,Kuczaj/021106.cha,CAR,hey!,,
 321,Kuczaj/021106.cha,CAR,don't throw your walnuts on the floor.,,
 322,Kuczaj/021106.cha,CAR,they're expensive.,,
-323,Kuczaj/021106.cha,CHI,what kind this is?,-1,wrong word order in question
+323,Kuczaj/021106.cha,CHI,what kind this is?,-1,auxiliary
 324,Kuczaj/021106.cha,CAR,it's a walnut too.,,
 325,Kuczaj/021106.cha,CAR,it's just really fat.,,
 326,Kuczaj/021106.cha,CHI,owie!,,
 327,Kuczaj/021106.cha,CAR,what happened?,,
-328,Kuczaj/021106.cha,CHI,I eat this one.,-1,wrong tense
+328,Kuczaj/021106.cha,CHI,I eat this one.,-1,tense_aspect
 329,Kuczaj/021106.cha,CAR,you bit your cheek?,,
 330,Kuczaj/021106.cha,CHI,uhhuh.,,
 331,Kuczaj/021106.cha,CAR,are you hungry?,,
@@ -335,9 +335,9 @@
 333,Kuczaj/021106.cha,CAR,after you eat your apple.,,
 334,Kuczaj/021106.cha,CHI,we eat the white thing?,1,
 335,Kuczaj/021106.cha,CAR,uhhuh that's the fruit.,,
-336,Kuczaj/021106.cha,CHI,eat this part.,1,imperative
+336,Kuczaj/021106.cha,CHI,eat this part.,1,
 337,Kuczaj/021106.cha,CAR,uhhuh.,,
-338,Kuczaj/021106.cha,CHI,eat this part now.,1,imperative
+338,Kuczaj/021106.cha,CHI,eat this part now.,1,
 339,Kuczaj/021106.cha,CAR,you eat it.,,
 340,Kuczaj/021106.cha,CHI,I don't want it.,1,
 341,Kuczaj/021106.cha,CAR,that's the best part.,,
@@ -354,43 +354,43 @@
 352,Kuczaj/021106.cha,CAR,as a dog?,,
 353,Kuczaj/021106.cha,CHI,uhuh.,,
 354,Kuczaj/021106.cha,CAR,do you like that apple Abe?,,
-355,Kuczaj/021106.cha,CHI,you eat your one.,-1,"should be ""yours"""
+355,Kuczaj/021106.cha,CHI,you eat your one.,-1,other
 356,Kuczaj/021106.cha,CAR,I will later.,,
-357,Kuczaj/021106.cha,CHI,I eat the white part when I'm through eating this.,-1,
+357,Kuczaj/021106.cha,CHI,I eat the white part when I'm through eating this.,-1,tense_aspect
 358,Kuczaj/021106.cha,CAR,"good, the fruit is really good.",,
 359,Kuczaj/021106.cha,CAR,turn the tv on.,,
 360,Kuczaj/021106.cha,CAR,it's time for Charlie Brown and Snoopy.,,
 361,Kuczaj/021106.cha,CHI,I will turn it on.,1,
 362,Kuczaj/021106.cha,CHI,I wanna see Snoopy.,1,
-363,Kuczaj/021106.cha,CHI,remember in my book?,0,"208, missing subject, auxiliary"
+363,Kuczaj/021106.cha,CHI,remember in my book?,0,
 364,Kuczaj/021106.cha,CHI,he had soup.,1,
 365,Kuczaj/021106.cha,CAR,was he eating soup?,,
 366,Kuczaj/021106.cha,CHI,yeah he put his nose in.,1,
 367,Kuczaj/021106.cha,CAR,that was pretty silly wasn't it?,,
-368,Kuczaj/021106.cha,CHI,uhhuh why why Charlie Brown come get him?,-1,
+368,Kuczaj/021106.cha,CHI,uhhuh why why Charlie Brown come get him?,-1,auxiliary
 369,Kuczaj/021106.cha,CAR,because Peppermint Patty got tired of Snoopy.,,
 370,Kuczaj/021106.cha,CAR,he made her do too much work.,,
 371,Kuczaj/021106.cha,CHI,did he bite Charlie Brown?,1,
 372,Kuczaj/021106.cha,CAR,no Charlie Brown put a leash on him.,,
 373,Kuczaj/021106.cha,CAR,but Snoopy didn't like that.,,
 374,Kuczaj/021106.cha,CAR,so he took the leash off and ran back to Peppermint Patty's house.,,
-375,Kuczaj/021106.cha,CHI,why how you get leashes off?,-1,missing auxiliary
+375,Kuczaj/021106.cha,CHI,why how you get leashes off?,-1,"auxiliary, determiner"
 376,Kuczaj/021106.cha,CAR,you unbuckle it.,,
 377,Kuczaj/021106.cha,CAR,it's just like a belt.,,
-378,Kuczaj/021106.cha,CHI,remember Greg at school?,0,"208, missing subject, auxiliary"
+378,Kuczaj/021106.cha,CHI,remember Greg at school?,0,
 379,Kuczaj/021106.cha,CAR,yeah what did he do?,,
 380,Kuczaj/021106.cha,CHI,I don't know.,1,
 381,Kuczaj/021106.cha,CHI,he didn't do anything.,1,
 382,Kuczaj/021106.cha,CAR,Abe look on the tv.,,
 383,Kuczaj/021106.cha,CAR,what's that?,,
 384,Kuczaj/021106.cha,CHI,I don't know.,1,
-385,Kuczaj/021106.cha,CHI,what that is it's a turtle.,1,reformulation
+385,Kuczaj/021106.cha,CHI,what that is it's a turtle.,1,
 386,Kuczaj/021106.cha,CAR,right.,,
 387,Kuczaj/021106.cha,CAR,is that guy a horse?,,
 388,Kuczaj/021106.cha,CHI,huh?,,
 389,Kuczaj/021106.cha,CAR,do you think that that guy's a horse?,,
 390,Kuczaj/021106.cha,CAR,that's what the announcer said.,,
-391,Kuczaj/021106.cha,CHI,he didn\'t said.,-1,
+391,Kuczaj/021106.cha,CHI,he didn\'t said.,-1,tense_aspect
 392,Kuczaj/021106.cha,CHI,you\'re a horse.,1,
 393,Kuczaj/021106.cha,CHI,he said.,1,
 394,Kuczaj/021106.cha,CHI,you\'re like a horse.,1,
@@ -399,18 +399,18 @@
 397,Kuczaj/021106.cha,CAR,Jesus Christ.,,
 398,Kuczaj/021106.cha,CHI,Charlie Brown's on.,1,
 399,Kuczaj/021106.cha,CAR,yeah are you glad that you get to watch Charlie Brown?,,
-400,Kuczaj/021106.cha,CHI,yeah how long I go at sleep?,-1,
+400,Kuczaj/021106.cha,CHI,yeah how long I go at sleep?,-1,preposition
 401,Kuczaj/021106.cha,CAR,not now.,,
 402,Kuczaj/021106.cha,CAR,you can watch this.,,
 403,Kuczaj/021106.cha,CAR,"and when it's over, you can go to sleep.",,
 404,Kuczaj/021106.cha,CHI,not when a commercial comes on.,1,
 405,Kuczaj/021106.cha,CAR,no you can stay up until this show's over okay?,,
 406,Kuczaj/021106.cha,CHI,okay.,,
-407,TD/dirk2.cha,CHI,tape recorder.,-1,"missing determiner, verb!"
+407,TD/dirk2.cha,CHI,tape recorder.,-1,"verb, determiner"
 408,TD/dirk2.cha,CAR,tape recorder.,,
-409,TD/dirk2.cha,CHI,tape recorder.,-1,"missing determiner, verb!"
+409,TD/dirk2.cha,CHI,tape recorder.,-1,"verb, determiner"
 410,TD/dirk2.cha,CAR,yes.,,
-411,TD/dirk2.cha,CHI,tape recorder.,-1,"missing determiner, verb!"
+411,TD/dirk2.cha,CHI,tape recorder.,-1,"verb, determiner"
 412,TD/dirk2.cha,CAR,the man is fixing it.,,
 413,TD/dirk2.cha,CHI,all right.,1,
 414,TD/dirk2.cha,CAR,all right.,,
@@ -476,7 +476,7 @@
 474,TD/dirk2.cha,CAR,beef.,,
 475,TD/dirk2.cha,CAR,beans.,,
 476,TD/dirk2.cha,CAR,beans yes.,,
-477,TD/dirk2.cha,CHI,this go right there.,-1,
+477,TD/dirk2.cha,CHI,this go right there.,-1,sv_agreement
 478,TD/dirk2.cha,CAR,this goes.,,
 479,TD/dirk2.cha,CAR,right there.,,
 480,TD/dirk2.cha,CHI,people go.,0,
@@ -494,17 +494,17 @@
 492,TD/dirk2.cha,CAR,okay?,,
 493,TD/dirk2.cha,CAR,they are all sitting around.,,
 494,TD/dirk2.cha,CAR,are the finish eating yet?,,
-495,TD/dirk2.cha,CHI,eat more.,-1,
-496,TD/dirk2.cha,CHI,eat more.,-1,
+495,TD/dirk2.cha,CHI,eat more.,-1,"subject, present_progressive"
+496,TD/dirk2.cha,CHI,eat more.,-1,"subject, present_progressive"
 497,TD/dirk2.cha,CHI,in the house.,0,
 498,TD/dirk2.cha,CAR,in the house?,,
 499,TD/dirk2.cha,CHI,ya.,,
 500,TD/dirk2.cha,CAR,what are you going to do in the house?,,
-501,TD/dirk2.cha,CHI,ring the door.,0,ambiguous whether problem of syntax or semantics
+501,TD/dirk2.cha,CHI,ring the door.,0,
 502,TD/dirk2.cha,CAR,ring the door bell.,,
 503,TD/dirk2.cha,CAR,can you get it?,,
 504,TD/dirk2.cha,CAR,there.,,
-505,TD/dirk2.cha,CHI,who that?,-1,missing verb
+505,TD/dirk2.cha,CHI,who that?,-1,verb
 506,TD/dirk2.cha,CAR,who's that?,,
 507,TD/dirk2.cha,CHI,somebody.,,
 508,TD/dirk2.cha,CAR,somebody.,,
@@ -535,18 +535,18 @@
 533,TD/dirk2.cha,CHI,in there.,1,
 534,TD/dirk2.cha,CAR,I don't think there is room for two people is there?,,
 535,TD/dirk2.cha,CAR,okay.,,
-536,TD/dirk2.cha,CHI,fall down.,-1,
+536,TD/dirk2.cha,CHI,fall down.,-1,"subject, tense_aspect"
 537,TD/dirk2.cha,CAR,fall down the steps.,,
 538,TD/dirk2.cha,CHI,upstairs.,,
 539,TD/dirk2.cha,CAR,upstairs.,,
-540,TD/dirk2.cha,CHI,people go upstairs.,0,"probably missing ""these"""
+540,TD/dirk2.cha,CHI,people go upstairs.,0,
 541,TD/dirk2.cha,CAR,people go upstairs.,,
 542,TD/dirk2.cha,CHI,watch.,,
 543,TD/dirk2.cha,CAR,watching?,,
-544,TD/dirk2.cha,CHI,fall down.,-1,
+544,TD/dirk2.cha,CHI,fall down.,-1,"subject, tense_aspect"
 545,TD/dirk2.cha,CAR,fall down.,,
-546,TD/dirk2.cha,CHI,fall down okay.,-1,
-547,TD/dirk2.cha,CHI,go back go backwards.,0,imperative?
+546,TD/dirk2.cha,CHI,fall down okay.,-1,"subject, tense_aspect"
+547,TD/dirk2.cha,CHI,go back go backwards.,0,
 548,TD/dirk2.cha,CAR,can you say that?,,
 549,TD/dirk2.cha,CAR,everyone in going up there.,,
 550,TD/dirk2.cha,CAR,can they all go?,,
@@ -556,7 +556,7 @@
 554,TD/dirk2.cha,CAR,he is not going up there is he?,,
 555,TD/dirk2.cha,CAR,everyone is upstairs.,,
 556,TD/dirk2.cha,CAR,what are they doing?,,
-557,TD/dirk2.cha,CHI,saying upstairs.,-1,
+557,TD/dirk2.cha,CHI,saying upstairs.,-1,"subject, auxiliary"
 558,TD/dirk2.cha,CAR,staying upstairs?,,
 559,TD/dirk2.cha,CHI,ya.,,
 560,TD/dirk2.cha,CAR,is there a party?,,
@@ -578,17 +578,17 @@
 576,TD/dirk2.cha,CAR,see the tv right there?,,
 577,TD/dirk2.cha,CAR,can you see it?,,
 578,TD/dirk2.cha,CAR,there is a little girl there.,,
-579,TD/dirk2.cha,CHI,down stair.,-1,missing 's'
+579,TD/dirk2.cha,CHI,down stair.,-1,other
 580,TD/dirk2.cha,CAR,okay.,,
 581,TD/dirk2.cha,CAR,look at the owl in that bed room.,,
-582,TD/dirk2.cha,CHI,peeking out.,1,completion/expansion
+582,TD/dirk2.cha,CHI,peeking out.,1,
 583,TD/dirk2.cha,CAR,peeking out.,,
-584,TD/dirk2.cha,CHI,oh people.,0,pointing gesture?
+584,TD/dirk2.cha,CHI,oh people.,0,
 585,TD/dirk2.cha,CAR,happy birthday.,,
 586,TD/dirk2.cha,CAR,what?,,
 587,TD/dirk2.cha,CHI,in the house.,1,
 588,TD/dirk2.cha,CAR,in the house.,,
-589,TD/dirk2.cha,CHI,in the house.,1,repetition
+589,TD/dirk2.cha,CHI,in the house.,1,
 590,TD/dirk2.cha,CAR,in the house.,,
 591,TD/dirk2.cha,CAR,I wonder what they are doing up there.,,
 592,TD/dirk2.cha,CAR,someone fell down.,,
@@ -603,11 +603,11 @@
 601,TD/dirk2.cha,CAR,oh that lady?,,
 602,TD/dirk2.cha,CHI,ya.,,
 603,TD/dirk2.cha,CAR,she is asleep.,,
-604,TD/dirk2.cha,CHI,ah boy.,-1,"missing determiner, verb!"
+604,TD/dirk2.cha,CHI,ah boy.,-1,"determiner, verb"
 605,TD/dirk2.cha,CAR,the boy too?,,
 606,TD/dirk2.cha,CAR,what?,,
 607,TD/dirk2.cha,CHI,the boy too.,0,
-608,TD/dirk2.cha,CHI,fell down.,1,completion
+608,TD/dirk2.cha,CHI,fell down.,1,
 609,TD/dirk2.cha,CAR,did he fall off again?,,
 610,TD/dirk2.cha,CAR,okay.,,
 611,TD/dirk2.cha,CAR,fall down.,,

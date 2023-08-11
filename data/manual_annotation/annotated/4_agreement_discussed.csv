@@ -1,27 +1,27 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 3697,Suppes/021006.cha,CAR,they must be pretty hungry.,,
 3698,Suppes/021006.cha,CAR,you sure are giving them a lot of food.,,
-3699,Suppes/021006.cha,CHI,for to eat.,-1,
+3699,Suppes/021006.cha,CHI,for to eat.,-1,preposition
 3700,Suppes/021006.cha,CHI,now give the dog some food.,0,
-3701,Suppes/021006.cha,CHI,because the dog.,-1,
-3702,Suppes/021006.cha,CHI,because the dog.,-1,
+3701,Suppes/021006.cha,CHI,because the dog.,-1,preposition
+3702,Suppes/021006.cha,CHI,because the dog.,-1,preposition
 3703,Suppes/021006.cha,CHI,are you making a dog?,1,
-3704,Suppes/021006.cha,CHI,what that?,-1,
+3704,Suppes/021006.cha,CHI,what that?,-1,verb
 3705,Suppes/021006.cha,CAR,that's a dog.,,
 3706,Suppes/021006.cha,CHI,that's a funny looking dog.,1,
 3707,Suppes/021006.cha,CAR,it's a little dog.,,
 3708,Suppes/021006.cha,CHI,yeah.,,
 3709,Suppes/021006.cha,CHI,cause he's eating his food.,1,
-3710,Suppes/021006.cha,CHI,now what we should make?,-1,
+3710,Suppes/021006.cha,CHI,now what we should make?,-1,auxiliary
 3711,Suppes/021006.cha,CHI,some more dog food?,1,
-3712,Suppes/021006.cha,CHI,now what we should make?,-1,
+3712,Suppes/021006.cha,CHI,now what we should make?,-1,auxiliary
 3713,Suppes/021006.cha,CAR,oh I don't know.,,
 3714,Suppes/021006.cha,CAR,what's fun to make with play dough?,,
 3715,Suppes/021006.cha,CHI,pancake.,,
 3716,Suppes/021006.cha,CAR,who's going to eat the pancakes?,,
 3717,Suppes/021006.cha,CHI,I am.,1,
 3718,Suppes/021006.cha,CAR,shall we make big ones or little ones?,,
-3719,Suppes/021006.cha,CHI,big one.,-1,
+3719,Suppes/021006.cha,CHI,big one.,-1,plural
 3720,Suppes/021006.cha,CHI,this is a big one for me.,1,
 3721,Suppes/021006.cha,CHI,this this is for the dog.,1,
 3722,Suppes/021006.cha,CAR,what's.,,
@@ -39,7 +39,7 @@
 3734,Suppes/021006.cha,CAR,who was there?,,
 3735,Suppes/021006.cha,CHI,a lot of children.,1,
 3736,Suppes/021006.cha,CAR,what did you do with those bones?,,
-3737,Suppes/021006.cha,CHI,yup and made play dough.,-1,no subj
+3737,Suppes/021006.cha,CHI,yup and made play dough.,-1,subject
 3738,Suppes/021006.cha,CAR,and paint?,,
 3739,Suppes/021006.cha,CAR,and then what did you do?,,
 3740,Suppes/021006.cha,CAR,did you make a picture?,,
@@ -59,14 +59,14 @@
 3754,Suppes/021006.cha,CAR,did they play music?,,
 3755,Suppes/021006.cha,CHI,yup.,,
 3756,Suppes/021006.cha,CAR,what did you do there?,,
-3757,Suppes/021006.cha,CHI,I play music.,-1,wrong tense
+3757,Suppes/021006.cha,CHI,I play music.,-1,present_progressive
 3758,Suppes/021006.cha,CAR,what kind?,,
 3759,Suppes/021006.cha,CAR,what instrument did you play.,,
 3760,Suppes/021006.cha,CAR,with Gary and Mel?,,
 3761,Suppes/021006.cha,CHI,I played three blind mice.,1,
 3762,Suppes/021006.cha,CAR,what?,,
-3763,Suppes/021006.cha,CHI,on a guitar.,1,continuation
-3764,Suppes/021006.cha,CHI,on a on a guitar pluck.,-1,
+3763,Suppes/021006.cha,CHI,on a guitar.,1,
+3764,Suppes/021006.cha,CHI,on a on a guitar pluck.,-1,other
 3765,Suppes/021006.cha,CAR,what did you keep in your hand?,,
 3766,Suppes/021006.cha,CHI,a a clip.,1,
 3767,Suppes/021006.cha,CAR,a guitar pick?,,
@@ -82,69 +82,69 @@
 3777,Suppes/021006.cha,CHI,here's some dog food.,1,
 3778,Suppes/021006.cha,CAR,does Poy eat dog food?,,
 3779,Suppes/021006.cha,CHI,yup.,,
-3780,Suppes/021006.cha,CHI,there is dog food.,1,native?
-3781,Suppes/021006.cha,CHI,is there is dog food.,0,reformulation?
-3782,Suppes/021006.cha,CHI,all is dog food.,-1,
-3783,Suppes/021006.cha,CHI,is dog?,-1,
+3780,Suppes/021006.cha,CHI,there is dog food.,1,
+3781,Suppes/021006.cha,CHI,is there is dog food.,0,
+3782,Suppes/021006.cha,CHI,all is dog food.,-1,subject
+3783,Suppes/021006.cha,CHI,is dog?,-1,"subject, determiner"
 3784,Suppes/021006.cha,CHI,this is dog food too you know?,1,
 3785,Suppes/021006.cha,CAR,oh is it?,,
 3786,Suppes/021006.cha,CHI,yup.,,
 3787,Suppes/021006.cha,CHI,oh where's your little kitty cat?,1,
 3788,Suppes/021006.cha,CAR,yeah I made a little kitty cat with that play dough.,,
 3789,Suppes/021006.cha,CHI,yeah.,,
-3790,Suppes/021006.cha,CHI,I wanna.,-1,no object
-3791,Suppes/021006.cha,CHI,this is dog food.,1,reformulation? I don't know
+3790,Suppes/021006.cha,CHI,I wanna.,-1,object
+3791,Suppes/021006.cha,CHI,this is dog food.,1,
 3792,Suppes/021006.cha,CAR,okay you wanna make more dog food?,,
 3793,Suppes/021006.cha,CHI,yup.,,
 3794,Suppes/021006.cha,CHI,this is not a kitty.,1,
 3795,Suppes/021006.cha,CAR,do you think he would like to eat it?,,
 3796,Suppes/021006.cha,CHI,yup.,,
-3797,Suppes/021006.cha,CHI,elephant's eating the peas.,-1,208 no det
+3797,Suppes/021006.cha,CHI,elephant's eating the peas.,-1,determiner
 3798,Suppes/021006.cha,CAR,peas?,,
 3799,Suppes/021006.cha,CAR,how about making some peanuts for the elephant?,,
 3800,Suppes/021006.cha,CAR,or some hay?,,
 3801,Suppes/021006.cha,CAR,isn't that what elephants eat?,,
 3802,Suppes/021006.cha,CHI,this is.,-1,
-3803,Suppes/021006.cha,CHI,peanut for him.,-1,I am not sure
-3804,Suppes/021006.cha,CHI,that for peanut for him.,-1,
+3803,Suppes/021006.cha,CHI,peanut for him.,-1,determiner
+3804,Suppes/021006.cha,CHI,that for peanut for him.,-1,"verb, determiner"
 3805,Suppes/021006.cha,CHI,okay.,,
-3806,Suppes/021006.cha,CHI,you put his head back on.,1,it's correct as imp and as past tense
+3806,Suppes/021006.cha,CHI,you put his head back on.,1,
 3807,Suppes/021006.cha,CAR,oh did the elephant's head fall off?,,
 3808,Suppes/021006.cha,CHI,yup.,,
 3809,Suppes/021006.cha,CAR,okay now he's hungry.,,
 3810,Suppes/021006.cha,CAR,what do you wanna give him to eat?,,
-3811,Suppes/021006.cha,CHI,that peanuts.,-1,
+3811,Suppes/021006.cha,CHI,that peanuts.,-1,"verb, plural"
 3812,Suppes/021006.cha,CHI,he's eating it.,0,
 3813,Suppes/021006.cha,CAR,does he like it?,,
 3814,Suppes/021006.cha,CHI,yup.,,
 3815,Suppes/021006.cha,CHI,what.,,
 3816,Suppes/021006.cha,CHI,but the dog's gone.,1,
-3817,Suppes/021006.cha,CHI,dog and kitties are gone.,-1,208
+3817,Suppes/021006.cha,CHI,dog and kitties are gone.,-1,determiner
 3818,Suppes/021006.cha,CAR,gone?,,
 3819,Suppes/021006.cha,CHI,yup.,,
 3820,Suppes/021006.cha,CAR,so they're not going to eat any more?,,
 3821,Suppes/021006.cha,CAR,I think that doll looks pretty hungry.,,
-3822,Suppes/021006.cha,CHI,oh this peanuts.,-1,
-3823,Suppes/021006.cha,CHI,in here.,1,pointing
-3824,Suppes/021006.cha,CHI,not play dough.,-1,
+3822,Suppes/021006.cha,CHI,oh this peanuts.,-1,plural
+3823,Suppes/021006.cha,CHI,in here.,1,
+3824,Suppes/021006.cha,CHI,not play dough.,-1,"subject, verb"
 3825,Suppes/021006.cha,CAR,those are peanuts in there?,,
 3826,Suppes/021006.cha,CHI,yeah.,,
 3827,Suppes/021006.cha,CAR,red peanuts?,,
 3828,Suppes/021006.cha,CHI,yup.,,
 3829,Suppes/021006.cha,CAR,that's a funny color for peanuts isn't it?,,
 3830,Suppes/021006.cha,CAR,that's a funny color for peanuts isn't it?,,
-3831,Suppes/021006.cha,CHI,brown they are.,-1,hyperbaton
+3831,Suppes/021006.cha,CHI,brown they are.,-1,other
 3832,Suppes/021006.cha,CAR,brown.,,
 3833,Suppes/021006.cha,CAR,peanuts are usually brown aren't they?,,
 3834,Suppes/021006.cha,CHI,yup.,,
 3835,Suppes/021006.cha,CHI,oh I got a lot of play dough.,1,
-3836,Suppes/021006.cha,CHI,I got lot of play dough.,-1,
+3836,Suppes/021006.cha,CHI,I got lot of play dough.,-1,determiner
 3837,Suppes/021006.cha,CAR,you do.,,
 3838,Suppes/021006.cha,CAR,that's a very big box isn't it?,,
-3839,Suppes/021006.cha,CHI,got lot of play dough Mommy.,-1,
-3840,Suppes/021006.cha,CHI,got lot of little play dough.,-1,
+3839,Suppes/021006.cha,CHI,got lot of play dough Mommy.,-1,"subject, determiner"
+3840,Suppes/021006.cha,CHI,got lot of little play dough.,-1,"subject, determiner"
 3841,Suppes/021006.cha,CAR,I see.,,
-3842,Suppes/021006.cha,CHI,where's my little play dough Mommy?,-1,play dough is uncountable
+3842,Suppes/021006.cha,CHI,where's my little play dough Mommy?,-1,other
 3843,Suppes/021006.cha,CAR,what do you mean?,,
 3844,Suppes/021006.cha,CAR,the little boxes of play dough?,,
 3845,Suppes/021006.cha,CHI,yeah.,,
@@ -155,38 +155,38 @@
 3850,Suppes/021006.cha,CAR,that's a great big omelette.,,
 3851,Suppes/021006.cha,CHI,oh.,,
 3852,Suppes/021006.cha,CAR,see.,,
-3853,Suppes/021006.cha,CHI,this this a fish on my tummy.,-1,
+3853,Suppes/021006.cha,CHI,this this a fish on my tummy.,-1,verb
 3854,Suppes/021006.cha,CAR,what did you put on your tummy?,,
-3855,Suppes/021006.cha,CHI,on you?,0,clarification
+3855,Suppes/021006.cha,CHI,on you?,0,
 3856,Suppes/021006.cha,CAR,can I have it?,,
 3857,Suppes/021006.cha,CHI,yeah.,,
-3858,Suppes/021006.cha,CHI,that's to my fingers.,-1,
+3858,Suppes/021006.cha,CHI,that's to my fingers.,-1,preposition
 3859,Suppes/021006.cha,CHI,he he he's taking a rest now.,1,
 3860,Suppes/021006.cha,CHI,do you see?,1,
 3861,Suppes/021006.cha,CHI,fish.,,
-3862,Suppes/021006.cha,CHI,oh him for a blanket.,-1,
+3862,Suppes/021006.cha,CHI,oh him for a blanket.,-1,other
 3863,Suppes/021006.cha,CHI,he has a blanket on now.,1,
 3864,Suppes/021006.cha,CAR,put the fish on top of the elephant?,,
-3865,Suppes/021006.cha,CHI,no he has.,-1,
+3865,Suppes/021006.cha,CHI,no he has.,-1,object
 3866,Suppes/021006.cha,CHI,he has a blanket on him.,1,
 3867,Suppes/021006.cha,CAR,maybe the fish would like to eat.,,
 3868,Suppes/021006.cha,CHI,yeah.,,
 3869,Suppes/021006.cha,CHI,he could eat this.,1,
 3870,Suppes/021006.cha,CAR,make some fish food?,,
-3871,Suppes/021006.cha,CHI,oh lookat lookat lookat.,-1,
+3871,Suppes/021006.cha,CHI,oh lookat lookat lookat.,-1,object
 3872,Suppes/021006.cha,CAR,what happened?,,
-3873,Suppes/021006.cha,CHI,the play dough stick to his eye.,-1,wrong tense
-3874,Suppes/021006.cha,CHI,one eye.,1,reformulates last part
+3873,Suppes/021006.cha,CHI,the play dough stick to his eye.,-1,tense_aspect
+3874,Suppes/021006.cha,CHI,one eye.,1,
 3875,Suppes/021006.cha,CHI,to one eye.,1,
 3876,Suppes/021006.cha,CAR,oh is the play dough stuck to the fish's eye?,,
 3877,Suppes/021006.cha,CHI,yup.,,
-3878,Suppes/021006.cha,CHI,this one is going to stick to that.,-1,
+3878,Suppes/021006.cha,CHI,this one is going to stick to that.,-1,object
 3879,Suppes/021006.cha,CHI,play dough too.,1,
 3880,Suppes/021006.cha,CAR,ummhm.,,
 3881,Suppes/021006.cha,CHI,oh.,,
 3882,Suppes/021006.cha,CAR,what are the fish doing?,,
 3883,Suppes/021006.cha,CHI,oh.,,
-3884,Suppes/021006.cha,CHI,the play dough on my tummy.,-1,
+3884,Suppes/021006.cha,CHI,the play dough on my tummy.,-1,verb
 3885,Suppes/021006.cha,CAR,oh is there play dough on your tummy?,,
 3886,Suppes/021006.cha,CHI,yup.,,
 3887,Suppes/021006.cha,CHI,let's take all the play dough out.,1,
@@ -194,11 +194,11 @@
 3889,Suppes/021006.cha,CHI,I wanna play with it.,1,
 3890,Suppes/021006.cha,CAR,okay you can play with it.,,
 3891,Suppes/021006.cha,CAR,what's that?,,
-3892,Suppes/021006.cha,CHI,a omelette.,-1,
+3892,Suppes/021006.cha,CHI,a omelette.,-1,determiner
 3893,Suppes/021006.cha,CAR,oh my.,,
 3894,Suppes/021006.cha,CAR,who's going to eat the omelette?,,
 3895,Suppes/021006.cha,CHI,I am.,1,
-3896,Suppes/021006.cha,CHI,let's a sandwich.,-1,
+3896,Suppes/021006.cha,CHI,let's a sandwich.,-1,verb
 3897,Suppes/021006.cha,CHI,napkin.,,
 3898,Suppes/021006.cha,CHI,this is a sandwich.,1,
 3899,Suppes/021006.cha,CAR,it is?,,
@@ -208,13 +208,13 @@
 3903,Suppes/021006.cha,CHI,food.,,
 3904,Suppes/021006.cha,CHI,cake.,,
 3905,Suppes/021006.cha,CAR,and what did you do to the cake?,,
-3906,Suppes/021006.cha,CHI,eat it all up.,-1,not sure
+3906,Suppes/021006.cha,CHI,eat it all up.,-1,"verb, tense_aspect"
 3907,Suppes/021006.cha,CAR,did you put something on top of it?,,
 3908,Suppes/021006.cha,CHI,frost.,,
 3909,Suppes/021006.cha,CAR,oh frosting.,,
 3910,Suppes/021006.cha,CAR,was the frosting squishy?,,
 3911,Suppes/021006.cha,CHI,yeah.,,
-3912,Suppes/021006.cha,CHI,is on my bottom.,-1,
+3912,Suppes/021006.cha,CHI,is on my bottom.,-1,subject
 3913,Suppes/021006.cha,CAR,yeah I see.,,
 3914,Suppes/021006.cha,CAR,let me see.,,
 3915,Suppes/021006.cha,CAR,was the did the frosting feel like play dough?,,
@@ -227,16 +227,16 @@
 3922,Suppes/021006.cha,CHI,yup.,,
 3923,Suppes/021006.cha,CAR,no.,,
 3924,Suppes/021006.cha,CAR,what did you eat the frosting with?,,
-3925,Suppes/021006.cha,CHI,with spoon.,-1,no det
+3925,Suppes/021006.cha,CHI,with spoon.,-1,determiner
 3926,Suppes/021006.cha,CAR,a spoon?,,
 3927,Suppes/021006.cha,CAR,that must have been really good.,,
 3928,Suppes/021006.cha,CHI,what's this?,1,
 3929,Suppes/021006.cha,CAR,here's a little bracelet.,,
 3930,Suppes/021006.cha,CAR,do you want me to put a bracelet on your arm?,,
 3931,Suppes/021006.cha,CHI,yup.,,
-3932,Suppes/021006.cha,CHI,is break.,-1,
-3933,Suppes/021006.cha,CHI,is broken.,-1,
-3934,Suppes/021006.cha,CHI,oh it break.,-1,
+3932,Suppes/021006.cha,CHI,is break.,-1,"subject, determiner"
+3933,Suppes/021006.cha,CHI,is broken.,-1,subject
+3934,Suppes/021006.cha,CHI,oh it break.,-1,tense_aspect
 3935,Suppes/021006.cha,CAR,where do you play with these fish?,,
 3936,Suppes/021006.cha,CHI,in the bath tub.,1,
 3937,Suppes/021006.cha,CAR,what do you do with them?,,
@@ -249,14 +249,14 @@
 3944,Suppes/021006.cha,CAR,here.,,
 3945,Suppes/021006.cha,CAR,here's a piece of fish food.,,
 3946,Suppes/021006.cha,CAR,see little tiny crumbs.,,
-3947,Suppes/021006.cha,CHI,uh you all over me.,-1,no verb
+3947,Suppes/021006.cha,CHI,uh you all over me.,-1,verb
 3948,Suppes/021006.cha,CAR,oh look at the poor play dough.,,
 3949,Suppes/021006.cha,CAR,whoops.,,
 3950,Suppes/021006.cha,CHI,throw play dough.,0,
 3951,Suppes/021006.cha,CAR,it's all over the carpet.,,
 3952,Suppes/021006.cha,CAR,we have to be very careful.,,
 3953,Suppes/021006.cha,CHI,I wanna put it in there.,1,
-3954,Suppes/021006.cha,CHI,in the top of the fish.,-1,on top?
+3954,Suppes/021006.cha,CHI,in the top of the fish.,-1,preposition
 3955,Suppes/021006.cha,CAR,how about making me some spaghetti?,,
 3956,Suppes/021006.cha,CHI,no.,,
 3957,Suppes/021006.cha,CAR,no?,,
@@ -272,7 +272,7 @@
 3967,Suppes/021006.cha,CHI,I'm going to put it in there for you now.,1,
 3968,Suppes/021006.cha,CHI,for you to eat tomorrow.,1,
 3969,Suppes/021006.cha,CHI,now all the fish go in there.,1,
-3970,Suppes/021006.cha,CHI,and this is going to go in there?,1,question with emphasis on 'there'
+3970,Suppes/021006.cha,CHI,and this is going to go in there?,1,
 3971,Suppes/021006.cha,CAR,oh careful.,,
 3972,Suppes/021006.cha,CAR,I'm afraid that the fish are going to get ruined.,,
 3973,Suppes/021006.cha,CHI,oh.,,
@@ -284,8 +284,8 @@
 3979,Suppes/021006.cha,CHI,yup.,,
 3980,Suppes/021006.cha,CHI,those fish too.,1,
 3981,Suppes/021006.cha,CHI,these fish too.,1,
-3982,Suppes/021006.cha,CHI,these fish.,1,pointing
-3983,Suppes/021006.cha,CHI,I'm going to.,-1,could be interuption
+3982,Suppes/021006.cha,CHI,these fish.,1,
+3983,Suppes/021006.cha,CHI,I'm going to.,-1,verb
 3984,Suppes/021006.cha,CAR,what are you doing?,,
 3985,Suppes/021006.cha,CAR,what.,,
 3986,Suppes/021006.cha,CHI,bake.,,
@@ -302,33 +302,33 @@
 3997,Suppes/021006.cha,CHI,bacon.,,
 3998,Suppes/021006.cha,CAR,did you have bacon at the restaurant the other day?,,
 3999,Suppes/021006.cha,CHI,yup.,,
-4000,Suppes/021006.cha,CHI,said yes.,-1,
-4001,Suppes/021006.cha,CHI,I wanna.,-1,
+4000,Suppes/021006.cha,CHI,said yes.,-1,subject
+4001,Suppes/021006.cha,CHI,I wanna.,-1,verb
 4002,Suppes/021006.cha,CHI,I wanna go downstairs.,1,
 4003,Suppes/021006.cha,CAR,in a little while we can go downstairs.,,
 4004,Suppes/021006.cha,CAR,let's put this away.,,
-4005,Suppes/021006.cha,CHI,no this.,1,clearly pointing
+4005,Suppes/021006.cha,CHI,no this.,1,
 4006,Suppes/021006.cha,CHI,this is for the jam in here.,1,
-4007,Suppes/021006.cha,CHI,in the big.,-1,
+4007,Suppes/021006.cha,CHI,in the big.,-1,subject
 4008,Suppes/021006.cha,CAR,oh.,,
-4009,Suppes/021006.cha,CHI,and this is a big right here.,-1,
+4009,Suppes/021006.cha,CHI,and this is a big right here.,-1,object
 4010,Suppes/021006.cha,CHI,okay?,,
 4011,Suppes/021006.cha,CHI,right there.,1,
 4012,Suppes/021006.cha,CHI,okay?,,
 4013,Suppes/021006.cha,CAR,it is?,,
-4014,Suppes/021006.cha,CHI,for you.,1,completion
+4014,Suppes/021006.cha,CHI,for you.,1,
 4015,Suppes/021006.cha,CAR,oh thank you.,,
 4016,Suppes/021006.cha,CAR,do you like to cook?,,
 4017,Suppes/021006.cha,CHI,yeah.,,
 4018,Suppes/021006.cha,CAR,what else would you like to cook for me?,,
-4019,Suppes/021006.cha,CHI,a noun.,0,it's not like 'planer' because we can't tell what noun refers to
+4019,Suppes/021006.cha,CHI,a noun.,0,
 4020,Suppes/021006.cha,CHI,a noun to eat.,0,
 4021,Suppes/021006.cha,CHI,noun.,,
 4022,Suppes/021006.cha,CAR,a what?,,
 4023,Suppes/021006.cha,CHI,a pickle and a noun to eat.,0,
 4024,Suppes/021006.cha,CAR,what's a noun?,,
 4025,Suppes/021006.cha,CHI,it's a noun.,0,
-4026,Suppes/021006.cha,CHI,is a little.,-1,
+4026,Suppes/021006.cha,CHI,is a little.,-1,"subject, object"
 4027,Suppes/021006.cha,CHI,Momma.,,
 4028,Suppes/021006.cha,CAR,can you cook me some vegetables?,,
 4029,Suppes/021006.cha,CHI,nope.,,
@@ -338,16 +338,16 @@
 4033,Suppes/021006.cha,CAR,were the squash good that I made for you last night?,,
 4034,Suppes/021006.cha,CHI,yup.,,
 4035,Suppes/021006.cha,CAR,what did we put on it?,,
-4036,Suppes/021006.cha,CHI,tomatoes squash spaghetti for you eat.,-1,list
+4036,Suppes/021006.cha,CHI,tomatoes squash spaghetti for you eat.,-1,preposition
 4037,Suppes/021006.cha,CAR,that's going to be a big supper isn't it?,,
 4038,Suppes/021006.cha,CHI,yup.,,
-4039,Suppes/021006.cha,CHI,here's coming.,-1,
-4040,Suppes/021006.cha,CHI,here is coming.,-1,
-4041,Suppes/021006.cha,CHI,here is.,-1,
+4039,Suppes/021006.cha,CHI,here's coming.,-1,other
+4040,Suppes/021006.cha,CHI,here is coming.,-1,other
+4041,Suppes/021006.cha,CHI,here is.,-1,object
 4042,Suppes/021006.cha,CHI,here is a little plate for you.,1,
 4043,Suppes/021006.cha,CAR,thank you.,,
-4044,Suppes/021006.cha,CHI,where's little plates?,-1,
-4045,Suppes/021006.cha,CHI,where's these plates?,-1,
+4044,Suppes/021006.cha,CHI,where's little plates?,-1,"determiner, sv_agreement"
+4045,Suppes/021006.cha,CHI,where's these plates?,-1,sv_agreement
 4046,Suppes/021006.cha,CAR,oh we don't have any silverware.,,
 4047,Suppes/021006.cha,CAR,I guess I'll have to eat with my hands.,,
 4048,Suppes/021006.cha,CHI,yup.,,
@@ -357,14 +357,14 @@
 4052,Suppes/021006.cha,CHI,right there.,0,
 4053,Suppes/021006.cha,CAR,what are you cooking?,,
 4054,Suppes/021006.cha,CHI,nothing.,,
-4055,Suppes/021006.cha,CHI,nothing now.,1,elliptic answer
+4055,Suppes/021006.cha,CHI,nothing now.,1,
 4056,Suppes/021006.cha,CAR,oh no?,,
 4057,Suppes/021006.cha,CHI,let's take it out of that home.,1,
 4058,Suppes/021006.cha,CAR,no because it will spill.,,
 4059,Suppes/021006.cha,CAR,we have to keep it in here see.,,
 4060,Suppes/021006.cha,CAR,keep it on here.,,
 4061,Suppes/021006.cha,CHI,let's.,,
-4062,Suppes/021006.cha,CHI,you sit you sit on this chair right here.,0,clear imp
+4062,Suppes/021006.cha,CHI,you sit you sit on this chair right here.,0,
 4063,Suppes/021006.cha,CAR,and then what?,,
 4064,Suppes/021006.cha,CHI,then get off and go to piglet's.,1,
 4065,Suppes/021006.cha,CAR,oh and afterwards we're going to go to piglet's.,,
@@ -374,7 +374,7 @@
 4069,Suppes/021006.cha,CHI,when we finish playing with these?,1,
 4070,Suppes/021006.cha,CAR,where did you get this?,,
 4071,Suppes/021006.cha,CAR,oh where did you get this?,,
-4072,Suppes/021006.cha,CHI,she like to have this and you like to have that.,-1,
+4072,Suppes/021006.cha,CHI,she like to have this and you like to have that.,-1,sv_agreement
 4073,Suppes/021006.cha,CAR,oh do you wanna take this to Debbie's house?,,
 4074,Suppes/021006.cha,CHI,yeah.,,
 4075,Suppes/021006.cha,CAR,what is it?,,
@@ -403,16 +403,16 @@
 4098,Suppes/021006.cha,CHI,yup.,,
 4099,Suppes/021006.cha,CAR,I wonder where he is.,,
 4100,Suppes/021006.cha,CHI,here he is.,1,
-4101,Suppes/021006.cha,CHI,here his is.,-1,
+4101,Suppes/021006.cha,CHI,here his is.,-1,object
 4102,Suppes/021006.cha,CAR,did he just pop up?,,
 4103,Suppes/021006.cha,CHI,don't step on their food.,1,
 4104,Suppes/021006.cha,CAR,what is he wearing?,,
-4105,Suppes/021006.cha,CHI,nice hair.,1,a doll can wear hair
+4105,Suppes/021006.cha,CHI,nice hair.,1,
 4106,Suppes/021006.cha,CAR,does he have nice hair?,,
 4107,Suppes/021006.cha,CHI,yup.,,
 4108,Suppes/021006.cha,CAR,oh it's soft.,,
 4109,Suppes/021006.cha,CHI,oh.,,
-4110,Suppes/021006.cha,CHI,here tickling.,-1,
+4110,Suppes/021006.cha,CHI,here tickling.,-1,other
 4111,Suppes/021006.cha,CHI,tickle.,,
 4112,Suppes/021006.cha,CHI,tickle.,,
 4113,Suppes/021006.cha,CHI,tickle.,,
@@ -427,23 +427,23 @@
 4122,Suppes/021006.cha,CAR,that's fun isn't it?,,
 4123,Suppes/021006.cha,CHI,I wanna go to school again.,1,
 4124,Suppes/021006.cha,CAR,yeah will you bring your lunch to school?,,
-4125,Suppes/021006.cha,CHI,I want a little pot cook your food.,-1,
-4126,Suppes/021006.cha,CHI,put it back on here with the other one.,0,could be imp
+4125,Suppes/021006.cha,CHI,I want a little pot cook your food.,-1,tense_aspect
+4126,Suppes/021006.cha,CHI,put it back on here with the other one.,0,
 4127,Suppes/021006.cha,CAR,where shall I put this pot?,,
 4128,Suppes/021006.cha,CHI,on there.,1,
 4129,Suppes/021006.cha,CHI,cause you could eat it with your hands.,1,
 4130,Suppes/021006.cha,CAR,is it time to cook now?,,
 4131,Suppes/021006.cha,CHI,yup.,,
-4132,Suppes/021006.cha,CHI,it's going to go on the oven.,-1,
-4133,Suppes/021006.cha,CHI,hot hot hot.,0,pointing
+4132,Suppes/021006.cha,CHI,it's going to go on the oven.,-1,preposition
+4133,Suppes/021006.cha,CHI,hot hot hot.,0,
 4134,Suppes/021006.cha,CAR,the oven is hot?,,
 4135,Suppes/021006.cha,CAR,oh I like this doll.,,
 4136,Suppes/021006.cha,CHI,hot.,,
 4137,Suppes/021006.cha,CAR,do you think he would like something this puppet?,,
 4138,Suppes/021006.cha,CHI,oh nope.,1,
 4139,Suppes/021006.cha,CHI,he doesn't eat with his hand.,1,
-4140,Suppes/021006.cha,CHI,you your hands because you're a baby.,-1,
-4141,Suppes/021006.cha,CHI,look at him doing.,-1,
+4140,Suppes/021006.cha,CHI,you your hands because you're a baby.,-1,verb
+4141,Suppes/021006.cha,CHI,look at him doing.,-1,object
 4142,Suppes/021006.cha,CAR,what is he doing?,,
 4143,Suppes/021006.cha,CHI,swinging.,,
 4144,Suppes/021006.cha,CAR,oh you holding him by his hands?,,
@@ -451,9 +451,9 @@
 4146,Suppes/021006.cha,CAR,careful.,,
 4147,Suppes/021006.cha,CHI,eful.,,
 4148,Suppes/021006.cha,CAR,what happened?,,
-4149,Suppes/021006.cha,CHI,I got my head.,-1,
+4149,Suppes/021006.cha,CHI,I got my head.,-1,other
 4150,Suppes/021006.cha,CAR,what?,,
-4151,Suppes/021006.cha,CHI,it's the wood.,1,not sure
+4151,Suppes/021006.cha,CHI,it's the wood.,1,
 4152,Suppes/021006.cha,CAR,oh you see you have to be very careful when you swing wood around because it might hurt somebody.,,
 4153,Suppes/021006.cha,CHI,no it won't.,1,
 4154,Suppes/021006.cha,CAR,did it make a bump on your head?,,
@@ -465,7 +465,7 @@
 4160,Suppes/021006.cha,CHI,yes.,,
 4161,Suppes/021006.cha,CHI,yes I do.,1,
 4162,Suppes/021006.cha,CAR,you silly.,,
-4163,Suppes/021006.cha,CHI,I climb all over you Mommy.,1,not sure about tense
+4163,Suppes/021006.cha,CHI,I climb all over you Mommy.,1,
 4164,Suppes/021006.cha,CAR,you're going to climb all over me?,,
 4165,Suppes/021006.cha,CAR,you're silly.,,
 4166,Suppes/021006.cha,CAR,will you show me the book of bread and jam?,,
@@ -496,7 +496,7 @@
 4191,Suppes/021006.cha,CAR,he eats it for breakfast lunch and supper.,,
 4192,Suppes/021006.cha,CAR,what does his daddy eat?,,
 4193,Suppes/021006.cha,CAR,I wanna see what the daddy eats.,,
-4194,Suppes/021006.cha,CHI,nope I.,-1,could be interupted
+4194,Suppes/021006.cha,CHI,nope I.,-1,"verb, object"
 4195,Suppes/021006.cha,CHI,no.,,
 4196,Suppes/021006.cha,CAR,what does the daddy eat?,,
 4197,Suppes/021006.cha,CHI,nope.,,
@@ -509,14 +509,14 @@
 4204,Suppes/021006.cha,CHI,okay he likes to come here.,1,
 4205,Suppes/021006.cha,CHI,Gumpy.,,
 4206,Suppes/021006.cha,CHI,here is Gumpy.,1,
-4207,Suppes/021006.cha,CHI,Gumpy Gumpy Gumpy.,1,pointing
+4207,Suppes/021006.cha,CHI,Gumpy Gumpy Gumpy.,1,
 4208,Suppes/021006.cha,CHI,Gumpy Gumpy Gumpy.,1,
 4209,Suppes/021006.cha,CAR,wanna bend Gumpy in a funny way?,,
 4210,Suppes/021006.cha,CHI,yeah.,,
 4211,Suppes/021006.cha,CAR,what are you bending?,,
 4212,Suppes/021006.cha,CHI,Gumpy.,,
 4213,Suppes/021006.cha,CHI,lookat.,,
-4214,Suppes/021006.cha,CHI,look at funny way.,-1,
+4214,Suppes/021006.cha,CHI,look at funny way.,-1,determiner
 4215,Suppes/021006.cha,CAR,what is he doing?,,
 4216,Suppes/021006.cha,CHI,lookat.,,
 4217,Suppes/021006.cha,CHI,he's.,,
@@ -533,25 +533,25 @@
 4228,Suppes/021006.cha,CAR,how shall I how do I make him sit down?,,
 4229,Suppes/021006.cha,CAR,bend his legs?,,
 4230,Suppes/021006.cha,CHI,yup.,,
-4231,Suppes/021006.cha,CHI,just like that.,1,clearly pointing
+4231,Suppes/021006.cha,CHI,just like that.,1,
 4232,Suppes/021006.cha,CAR,like what?,,
-4233,Suppes/021006.cha,CHI,let he sit down look at food till it's ready okay?,-1,
+4233,Suppes/021006.cha,CHI,let he sit down look at food till it's ready okay?,-1,"preposition, determiner"
 4234,Suppes/021006.cha,CAR,what are you cooking for Gumpy?,,
 4235,Suppes/021006.cha,CHI,nothing.,,
-4236,Suppes/021006.cha,CHI,he doesn't like nothing to eat.,0,208
+4236,Suppes/021006.cha,CHI,he doesn't like nothing to eat.,0,
 4237,Suppes/021006.cha,CAR,he doesn't?,,
-4238,Suppes/021006.cha,CHI,let's make a play dough.,-1,"I'm not sure, I think it's uncountable"
+4238,Suppes/021006.cha,CHI,let's make a play dough.,-1,determiner
 4239,Suppes/021006.cha,CAR,do you wanna get dressed to go see piglet?,,
 4240,Suppes/021006.cha,CHI,yup.,,
-4241,Suppes/021006.cha,CHI,I wanna take the play dough to piglet.,1,no det
+4241,Suppes/021006.cha,CHI,I wanna take the play dough to piglet.,1,
 4242,Suppes/021006.cha,CAR,they probably have play dough there.,,
-4243,Suppes/021006.cha,CHI,oh okay then I could their play dough.,-1,
+4243,Suppes/021006.cha,CHI,oh okay then I could their play dough.,-1,verb
 4244,Suppes/021006.cha,CAR,what do you wanna wear to piglet's?,,
 4245,Suppes/021006.cha,CHI,oh a dress.,1,
 4246,Suppes/021006.cha,CAR,which dress?,,
 4247,Suppes/021006.cha,CAR,your red dress?,,
 4248,Suppes/021006.cha,CHI,no.,,
-4249,Suppes/021006.cha,CHI,Gumpy dress.,-1,
+4249,Suppes/021006.cha,CHI,Gumpy dress.,-1,possessive
 4250,Suppes/021006.cha,CHI,Gumpy's dress.,1,
 4251,Suppes/021006.cha,CAR,that's a pretty dress to wear.,,
 4252,Suppes/021006.cha,CHI,no that's Gumpy's dress.,1,
@@ -562,7 +562,7 @@
 4257,Suppes/021006.cha,CHI,Mommy.,,
 4258,Suppes/021006.cha,CHI,Mommy.,,
 4259,Suppes/021006.cha,CAR,what is Debbie going to say when she sees you?,,
-4260,Suppes/021006.cha,CHI,she going to say I have a pretty dress on.,-1,
+4260,Suppes/021006.cha,CHI,she going to say I have a pretty dress on.,-1,auxiliary
 4261,Suppes/021006.cha,CAR,she is?,,
 4262,Suppes/021006.cha,CAR,how do you know?,,
 4263,Suppes/021006.cha,CAR,do you think this is a pretty dress?,,

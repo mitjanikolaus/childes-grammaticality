@@ -1,10 +1,10 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,notes
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 1770,Thomas/020609.cha,CHI,the carrots together.,0,
 1771,Thomas/020609.cha,CAR,the carrots together.,,
 1772,Thomas/020609.cha,CAR,Mummy just needs to put that in the compost bin now doesn't she?,,
 1773,Thomas/020609.cha,CHI,yes.,,
 1774,Thomas/020609.cha,CAR,so I'll put it back in the bag and then we can have a trip outside in a moment.,,
-1775,Thomas/020609.cha,CHI,"back a moment, Mummy.",-1,
+1775,Thomas/020609.cha,CHI,"back a moment, Mummy.",-1,other
 1776,Thomas/020609.cha,CAR,"back a moment, Mummy.",,
 1777,Thomas/020609.cha,CAR,no.,,
 1778,Thomas/020609.cha,CAR,I'm not going to take them now.,,
@@ -29,7 +29,7 @@
 1797,Thomas/020609.cha,CAR,watch your teeth.,,
 1798,Thomas/020609.cha,CAR,oh mm.,,
 1799,Thomas/020609.cha,CAR,very very nice.,,
-1800,Thomas/020609.cha,CHI,not not Thomas crunch.,-1,
+1800,Thomas/020609.cha,CHI,not not Thomas crunch.,-1,other
 1801,Thomas/020609.cha,CAR,not Thomas crunch.,,
 1802,Thomas/020609.cha,CHI,no.,,
 1803,Thomas/020609.cha,CAR,"I'm cutting these into rounds, Thomas.",,
@@ -40,20 +40,20 @@
 1808,Thomas/020609.cha,CAR,or you can leave then whole.,,
 1809,Thomas/020609.cha,CAR,bit these are a little bit too large aren't they?,,
 1810,Thomas/020609.cha,CAR,to leave whole.,,
-1811,Thomas/020609.cha,CHI,not like it now.,-1,
+1811,Thomas/020609.cha,CHI,not like it now.,-1,"subject, auxiliary"
 1812,Thomas/020609.cha,CAR,not like it now.,,
 1813,Thomas/020609.cha,CHI,no.,,
 1814,Thomas/020609.cha,CAR,no.,,
 1815,Thomas/020609.cha,CAR,I didn't think you did the last time you tried it.,,
 1816,Thomas/020609.cha,CAR,but as I say when you were teething.,,
-1817,Thomas/020609.cha,CHI,there two pieces.,-1,
+1817,Thomas/020609.cha,CHI,there two pieces.,-1,verb
 1818,Thomas/020609.cha,CAR,two pieces.,,
 1819,Thomas/020609.cha,CAR,well you hold two pieces.,,
 1820,Thomas/020609.cha,CAR,when you were a baby you really useta enjoy eating raw carrot.,,
 1821,Thomas/020609.cha,CAR,when you were teething not when you were a baby.,,
 1822,Thomas/020609.cha,CAR,when you were a baby you useta like carrots cooked and pureed with some stewed stewed apple.,,
 1823,Thomas/020609.cha,CAR,carrot and apple mixed together.,,
-1824,Thomas/020609.cha,CHI,hold two two.,-1,
+1824,Thomas/020609.cha,CHI,hold two two.,-1,object
 1825,Thomas/020609.cha,CAR,you wanna hold two more.,,
 1826,Thomas/020609.cha,CHI,two more.,1,
 1827,Thomas/020609.cha,CHI,two three four five.,0,
@@ -65,7 +65,7 @@
 1833,Thomas/020609.cha,CHI,no.,,
 1834,Thomas/020609.cha,CHI,sharp.,,
 1835,Thomas/020609.cha,CAR,sharp knife.,,
-1836,Thomas/020609.cha,CHI,me another one.,-1,
+1836,Thomas/020609.cha,CHI,me another one.,-1,verb
 1837,Thomas/020609.cha,CAR,another one.,,
 1838,Thomas/020609.cha,CAR,you'd like some more.,,
 1839,Thomas/020609.cha,CHI,no.,,
@@ -87,7 +87,7 @@
 1855,Thomas/020609.cha,CAR,is that what you said empty it all out?,,
 1856,Thomas/020609.cha,CHI,yes.,,
 1857,Thomas/020609.cha,CAR,now we can put them into this bright red colander.,,
-1858,Thomas/020609.cha,CHI,there there Thomas hold it.,-1,
+1858,Thomas/020609.cha,CHI,there there Thomas hold it.,-1,present_progressive
 1859,Thomas/020609.cha,CAR,this is like a plastic pan with holes in the bottom isn't it?,,
 1860,Thomas/020609.cha,CHI,yes.,,
 1861,Thomas/020609.cha,CAR,what's it called?,,
@@ -102,7 +102,7 @@
 1870,Thomas/020609.cha,CHI,colander.,,
 1871,Thomas/020609.cha,CAR,and we use the sieve when we're sieving flour don't we?,,
 1872,Thomas/020609.cha,CHI,no.,,
-1873,Thomas/020609.cha,CHI,put in trailer.,-1,
+1873,Thomas/020609.cha,CHI,put in trailer.,-1,determiner
 1874,Thomas/020609.cha,CAR,putting them in the trailer.,,
 1875,Thomas/020609.cha,CHI,yes.,,
 1876,Thomas/020609.cha,CAR,but the colander is used more for washing fruit and vegetables isn't it?,,
@@ -117,7 +117,7 @@
 1885,Thomas/020609.cha,CAR,yes.,,
 1886,Thomas/020609.cha,CAR,like when you were a baby.,,
 1887,Thomas/020609.cha,CAR,wodar wodar wodar wodar.,,
-1888,Thomas/020609.cha,CHI,put put now.,-1,
+1888,Thomas/020609.cha,CHI,put put now.,-1,"subject, object"
 1889,Thomas/020609.cha,CHI,in.,,
 1890,Thomas/020609.cha,CAR,mm.,,
 1891,Thomas/020609.cha,CAR,"I'm still crunching on raw carrot, Thomas.",,
@@ -126,7 +126,7 @@
 1894,Thomas/020609.cha,CAR,I don't think we better put that one in the pan do you?,,
 1895,Thomas/020609.cha,CHI,no.,,
 1896,Thomas/020609.cha,CAR,I don't think anyone would fancy it once it had been in my shoe.,,
-1897,Thomas/020609.cha,CHI,empty all the out.,-1,
+1897,Thomas/020609.cha,CHI,empty all the out.,-1,"subject, determiner"
 1898,Thomas/020609.cha,CHI,empty it all.,0,
 1899,Thomas/020609.cha,CAR,oh no.,,
 1900,Thomas/020609.cha,CAR,"don't empty them all out in the table, Thomas.",,
@@ -190,7 +190,7 @@
 1958,Thomas/020609.cha,CAR,you're smelling them and blowing them.,,
 1959,Thomas/020609.cha,CAR,do they smell nice?,,
 1960,Thomas/020609.cha,CHI,yes.,,
-1961,Thomas/020609.cha,CHI,smells nice.,-1,
+1961,Thomas/020609.cha,CHI,smells nice.,-1,subject
 1962,Thomas/020609.cha,CAR,the greengrocer sells carrots doesn't he?,,
 1963,Thomas/020609.cha,CAR,the greengrocer sells carrots and so does the supermarket.,,
 1964,Thomas/020609.cha,CAR,I think little shops like the Spar shops sell carrots as well don't they?,,
@@ -215,9 +215,9 @@
 1983,Thomas/020609.cha,CAR,and hungry.,,
 1984,Thomas/020609.cha,CHI,yes.,,
 1985,Thomas/020609.cha,CAR,ask him if he'd like a drink?,,
-1986,Thomas/020609.cha,CHI,like a drink.,-1,
+1986,Thomas/020609.cha,CHI,like a drink.,-1,"subject, other"
 1987,Thomas/020609.cha,CHI,oh dear.,1,
-1988,Thomas/020609.cha,CHI,not turn it.,-1,
+1988,Thomas/020609.cha,CHI,not turn it.,-1,auxiliary
 1989,Thomas/020609.cha,CAR,not turn it.,,
 1990,Thomas/020609.cha,CAR,I think he's sat in that cab for so long he can't get out can he?,,
 1991,Thomas/020609.cha,CAR,poor chap.,,
@@ -230,7 +230,7 @@
 1998,Thomas/020609.cha,CAR,there we are.,,
 1999,Thomas/020609.cha,CHI,"thanks, driver.",1,
 2000,Thomas/020609.cha,CAR,"thanks, driver.",,
-2001,Thomas/020609.cha,CHI,ta much indeed.,-1,
+2001,Thomas/020609.cha,CHI,ta much indeed.,-1,other
 2002,Thomas/020609.cha,CAR,I think on the Aunty Mabel program they had carrots with fish pie didn't they?,,
 2003,Thomas/020609.cha,CAR,or something like that.,,
 2004,Thomas/020609.cha,CAR,we might have carrots with Shepherds Pie.,,
@@ -268,7 +268,7 @@
 2036,Thomas/020609.cha,CAR,Mummy mixes grated carrot with coconut and sultanas.,,
 2037,Thomas/020609.cha,CAR,that makes a nice salad.,,
 2038,Thomas/020609.cha,CAR,ah look at that.,,
-2039,Thomas/020609.cha,CHI,Thomas hold it.,-1,
+2039,Thomas/020609.cha,CHI,Thomas hold it.,-1,present_progressive
 2040,Thomas/020609.cha,CAR,no.,,
 2041,Thomas/020609.cha,CAR,"it's too sharp, darling.",,
 2042,Thomas/020609.cha,CAR,you can hold it but you mustn't grate.,,
@@ -289,14 +289,14 @@
 2057,Thomas/020609.cha,CAR,there you are.,,
 2058,Thomas/020609.cha,CAR,there's a little dish washing brush there.,,
 2059,Thomas/020609.cha,CAR,that's ideal isn't it?,,
-2060,Thomas/020609.cha,CHI,the driver sweep it.,-1,
+2060,Thomas/020609.cha,CHI,the driver sweep it.,-1,present_progressive
 2061,Thomas/020609.cha,CAR,the driver sweep it.,,
 2062,Thomas/020609.cha,CHI,"here you are, driver.",1,
 2063,Thomas/020609.cha,CAR,"here you are, driver.",,
 2064,Thomas/020609.cha,CHI,"here you are, driver.",1,
 2065,Thomas/020609.cha,CAR,is he sweeping the path?,,
 2066,Thomas/020609.cha,CHI,yes.,,
-2067,Thomas/020609.cha,CHI,he sweep it.,-1,
+2067,Thomas/020609.cha,CHI,he sweep it.,-1,present_progressive
 2068,Thomas/020609.cha,CAR,you're sweeping with the brush aren't you?,,
 2069,Thomas/020609.cha,CAR,there we are.,,
 2070,Thomas/020609.cha,CHI,get the crumbs out.,0,
@@ -323,7 +323,7 @@
 2091,Thomas/020609.cha,CAR,the horse'll eat that little bit of grated carrot.,,
 2092,Thomas/020609.cha,CAR,let's put it here in a pile.,,
 2093,Thomas/020609.cha,CAR,yum yum yum.,,
-2094,Thomas/020609.cha,CHI,the horse eat it now.,-1,
+2094,Thomas/020609.cha,CHI,the horse eat it now.,-1,present_progressive
 2095,Thomas/020609.cha,CAR,the horse'll eat it.,,
 2096,Thomas/020609.cha,CHI,cross.,,
 2097,Thomas/020609.cha,CAR,who's cross?,,
@@ -333,10 +333,10 @@
 2101,Thomas/020609.cha,CAR,he's not in his cab.,,
 2102,Thomas/020609.cha,CAR,he has not got back in after sweeping the path has he?,,
 2103,Thomas/020609.cha,CHI,no.,,
-2104,Thomas/020609.cha,CHI,not sweeping.,-1,
+2104,Thomas/020609.cha,CHI,not sweeping.,-1,"subject, auxiliary"
 2105,Thomas/020609.cha,CAR,he has got to make one last trip to the to the red colander.,,
 2106,Thomas/020609.cha,CHI,and then we'll find.,1,
-2107,Thomas/020609.cha,CHI,red colander.,-1,
+2107,Thomas/020609.cha,CHI,red colander.,-1,determiner
 2108,Thomas/020609.cha,CAR,the red colander.,,
 2109,Thomas/020609.cha,CAR,and then we'll find a nice.,,
 2110,Thomas/020609.cha,CAR,oh wonderful.,,
@@ -375,7 +375,7 @@
 2143,Thomas/020609.cha,CHI,there.,,
 2144,Thomas/020609.cha,CAR,a little bit of grated carrot.,,
 2145,Thomas/020609.cha,CHI,yes.,,
-2146,Thomas/020609.cha,CHI,me hold it.,-1,
+2146,Thomas/020609.cha,CHI,me hold it.,-1,"determiner, tense_aspect"
 2147,Thomas/020609.cha,CAR,yes.,,
 2148,Thomas/020609.cha,CAR,you can hold that.,,
 2149,Thomas/020609.cha,CAR,because the driver has not finished yet.,,
@@ -385,11 +385,11 @@
 2153,Thomas/020609.cha,CAR,because I think there was too much for the horse to eat.,,
 2154,Thomas/020609.cha,CHI,yes.,,
 2155,Thomas/020609.cha,CAR,we could always ask the train driver if he'd take that little bit of grated carrot to the paddock so that when the horse wants to eat it he has got some.,,
-2156,Thomas/020609.cha,CHI,out cab.,-1,
+2156,Thomas/020609.cha,CHI,out cab.,-1,other
 2157,Thomas/020609.cha,CAR,he has got out of the cab has he?,,
 2158,Thomas/020609.cha,CHI,yes.,,
 2159,Thomas/020609.cha,CHI,it.,,
-2160,Thomas/020609.cha,CHI,and out the cab.,-1,
+2160,Thomas/020609.cha,CHI,and out the cab.,-1,preposition
 2161,Thomas/020609.cha,CAR,he has put it into the cart has he?,,
 2162,Thomas/020609.cha,CHI,yes.,,
 2163,Thomas/020609.cha,CAR,I bet you can't count the pieces of grated carrot can you?,,
@@ -412,7 +412,7 @@
 2180,Thomas/020609.cha,CAR,and for caterpillar.,,
 2181,Thomas/020609.cha,CAR,you've got a caterpillar on your bib haven't you?,,
 2182,Thomas/020609.cha,CAR,and for cup.,,
-2183,Thomas/020609.cha,CHI,bib off.,-1,
+2183,Thomas/020609.cha,CHI,bib off.,-1,other
 2184,Thomas/020609.cha,CAR,you want your bib off.,,
 2185,Thomas/020609.cha,CAR,"Thomas, for carrot.",,
 2186,Thomas/020609.cha,CAR,for cat.,,
@@ -437,8 +437,8 @@
 2205,Thomas/020609.cha,CHI,skip.,,
 2206,Thomas/020609.cha,CHI,skip.,,
 2207,Thomas/020609.cha,CAR,they're going into a skip.,,
-2208,Thomas/020609.cha,CHI,no skip.,-1,
-2209,Thomas/020609.cha,CHI,no skip.,-1,
+2208,Thomas/020609.cha,CHI,no skip.,-1,"subject, verb"
+2209,Thomas/020609.cha,CHI,no skip.,-1,"subject, verb"
 2210,Thomas/020609.cha,CAR,no skip.,,
 2211,Thomas/020609.cha,CHI,no.,,
 2212,Thomas/020609.cha,CAR,we haven't got a skip have we?,,
@@ -478,13 +478,13 @@
 2246,Thomas/020609.cha,CAR,crash.,,
 2247,Thomas/020609.cha,CAR,oh you're a noisy boy now aren't you?,,
 2248,Thomas/020609.cha,CAR,oh what a noisy boy.,,
-2249,Thomas/020609.cha,CHI,sweeping up.,-1,
+2249,Thomas/020609.cha,CHI,sweeping up.,-1,"subject, auxiliary"
 2250,Thomas/020609.cha,CAR,oh you're sweeping up again.,,
 2251,Thomas/020609.cha,CAR,oh would you like the brush?,,
 2252,Thomas/020609.cha,CHI,yes.,,
 2253,Thomas/020609.cha,CAR,there you are.,,
 2254,Thomas/020609.cha,CHI,yes.,,
-2255,Thomas/020609.cha,CHI,sweep sweep sweep.,-1,
+2255,Thomas/020609.cha,CHI,sweep sweep sweep.,-1,other
 2256,Thomas/020609.cha,CAR,sweep sweep sweep.,,
 2257,Thomas/020609.cha,CAR,"oh Thomas, not onto the floor.",,
 2258,Thomas/020609.cha,CAR,you don't sweep onto the floor.,,
@@ -510,11 +510,11 @@
 2278,Thomas/020609.cha,CAR,everything's getting too much isn't it?,,
 2279,Thomas/020609.cha,CAR,now.,,
 2280,Thomas/020609.cha,CAR,everything's a real nuisance.,,
-2281,Thomas/020609.cha,CHI,oh done it.,-1,
+2281,Thomas/020609.cha,CHI,oh done it.,-1,"subject, auxiliary"
 2282,Thomas/020609.cha,CAR,you've done it.,,
 2283,Thomas/020609.cha,CHI,yes.,,
 2284,Thomas/020609.cha,CAR,oh what have you done?,,
-2285,Thomas/020609.cha,CHI,done carrots.,-1,
+2285,Thomas/020609.cha,CHI,done carrots.,-1,other
 2286,Thomas/020609.cha,CAR,you've done the carrots.,,
 2287,Thomas/020609.cha,CAR,you've done it.,,
 2288,Thomas/020609.cha,CAR,"oh that sounded very Northern, Thomas.",,
@@ -532,7 +532,7 @@
 2300,Thomas/020609.cha,CHI,"watch, Mummy.",0,
 2301,Thomas/020609.cha,CAR,"watch, Mummy.",,
 2302,Thomas/020609.cha,CAR,I'm watching.,,
-2303,Thomas/020609.cha,CHI,done it.,-1,
+2303,Thomas/020609.cha,CHI,done it.,-1,"subject, auxiliary"
 2304,Thomas/020609.cha,CAR,I've done it.,,
 2305,Thomas/020609.cha,CHI,hooray.,,
 2306,Thomas/020609.cha,CAR,hooray.,,
@@ -554,7 +554,7 @@
 2322,Thomas/020609.cha,CAR,going on a sledge is really easy.,,
 2323,Thomas/020609.cha,CAR,we don't even need Daddy to take us.,,
 2324,Thomas/020609.cha,CAR,I think that's what you're thinking of.,,
-2325,Thomas/020609.cha,CHI,done it.,-1,
+2325,Thomas/020609.cha,CHI,done it.,-1,"subject, auxiliary"
 2326,Thomas/020609.cha,CAR,I've done it.,,
 2327,Gelman/2014-IndDiff/66C-P2.cha,CAR,ahh.,,
 2328,Gelman/2014-IndDiff/66C-P2.cha,CHI,it's a new one.,1,
@@ -564,7 +564,7 @@
 2332,Gelman/2014-IndDiff/66C-P2.cha,CHI,it's a lobster.,1,
 2333,Gelman/2014-IndDiff/66C-P2.cha,CAR,oh.,,
 2334,Gelman/2014-IndDiff/66C-P2.cha,CAR,how can you tell?,,
-2335,Gelman/2014-IndDiff/66C-P2.cha,CHI,because they have.,-1,possible interruption
+2335,Gelman/2014-IndDiff/66C-P2.cha,CHI,because they have.,-1,object
 2336,Gelman/2014-IndDiff/66C-P2.cha,CAR,the claws.,,
 2337,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah.,,
 2338,Gelman/2014-IndDiff/66C-P2.cha,CAR,remember what you used to call the lobsters when you were little?,,
@@ -599,7 +599,7 @@
 2367,Gelman/2014-IndDiff/66C-P2.cha,CAR,hold on.,,
 2368,Gelman/2014-IndDiff/66C-P2.cha,CAR,I don't like lobster.,,
 2369,Gelman/2014-IndDiff/66C-P2.cha,CAR,it doesn't taste very good to Mama.,,
-2370,Gelman/2014-IndDiff/66C-P2.cha,CHI,"but it, taste.",-1,
+2370,Gelman/2014-IndDiff/66C-P2.cha,CHI,"but it, taste.",-1,sv_agreement
 2371,Gelman/2014-IndDiff/66C-P2.cha,CHI,that's yummy.,1,
 2372,Gelman/2014-IndDiff/66C-P2.cha,CAR,hold on I think we skipped one.,,
 2373,Gelman/2014-IndDiff/66C-P2.cha,CAR,oh my goodness.,,
@@ -620,7 +620,7 @@
 2388,Gelman/2014-IndDiff/66C-P2.cha,CAR,and then it grows up and it becomes a horse.,,
 2389,Gelman/2014-IndDiff/66C-P2.cha,CAR,what does a horse say?,,
 2390,Gelman/2014-IndDiff/66C-P2.cha,CAR,do.,,
-2391,Gelman/2014-IndDiff/66C-P2.cha,CHI,I'm making a horse with finger.,-1,
+2391,Gelman/2014-IndDiff/66C-P2.cha,CHI,I'm making a horse with finger.,-1,determiner
 2392,Gelman/2014-IndDiff/66C-P2.cha,CAR,"you're, drawing around it?",,
 2393,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah.,,
 2394,Gelman/2014-IndDiff/66C-P2.cha,CAR,well how many legs does a horse have?,,
@@ -632,7 +632,7 @@
 2400,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah.,,
 2401,Gelman/2014-IndDiff/66C-P2.cha,CAR,usually horses have.,,
 2402,Gelman/2014-IndDiff/66C-P2.cha,CAR,how long is a regular horse's tail?,,
-2403,Gelman/2014-IndDiff/66C-P2.cha,CHI,this long length with hands.,-1,
+2403,Gelman/2014-IndDiff/66C-P2.cha,CHI,this long length with hands.,-1,determiner
 2404,Gelman/2014-IndDiff/66C-P2.cha,CAR,yeah like you show me on here?,,
 2405,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah.,,
 2406,Gelman/2014-IndDiff/66C-P2.cha,CAR,how long would it be?,,
@@ -682,7 +682,7 @@
 2450,Gelman/2014-IndDiff/66C-P2.cha,CAR,not ready to turn it yet.,,
 2451,Gelman/2014-IndDiff/66C-P2.cha,CAR,what do you like to eat popcorn?,,
 2452,Gelman/2014-IndDiff/66C-P2.cha,CAR,when do you like to eat popcorn?,,
-2453,Gelman/2014-IndDiff/66C-P2.cha,CHI,when it's when a movie's starting.,1,reformulation
+2453,Gelman/2014-IndDiff/66C-P2.cha,CHI,when it's when a movie's starting.,1,
 2454,Gelman/2014-IndDiff/66C-P2.cha,CAR,of course you gotta have popcorn at the movie.,,
 2455,Gelman/2014-IndDiff/66C-P2.cha,CAR,you know where else I think you guys like to eat popcorn?,,
 2456,Gelman/2014-IndDiff/66C-P2.cha,CHI,no.,,
@@ -953,7 +953,7 @@
 2721,Gelman/2014-IndDiff/66C-P2.cha,CAR,are you ready to turn the page?,,
 2722,Gelman/2014-IndDiff/66C-P2.cha,CAR,okay.,,
 2723,Gelman/2014-IndDiff/66C-P2.cha,CAR,oh what's that?,,
-2724,Gelman/2014-IndDiff/66C-P2.cha,CHI,a orange.,-1,
+2724,Gelman/2014-IndDiff/66C-P2.cha,CHI,a orange.,-1,determiner
 2725,Gelman/2014-IndDiff/66C-P2.cha,CHI,it's healthy.,1,
 2726,Gelman/2014-IndDiff/66C-P2.cha,CAR,it is healthy you're right.,,
 2727,Gelman/2014-IndDiff/66C-P2.cha,CAR,is it what kind of a food is it?,,
@@ -1001,7 +1001,7 @@
 2769,Gelman/2014-IndDiff/66C-P2.cha,CAR,they were my favorite.,,
 2770,Gelman/2014-IndDiff/66C-P2.cha,CAR,grandma and Grandpa still have the orange trees at their house.,,
 2771,Gelman/2014-IndDiff/66C-P2.cha,CAR,did you know that?,,
-2772,Gelman/2014-IndDiff/66C-P2.cha,CHI,when when can I when ca-what what Grandma?,-1,
+2772,Gelman/2014-IndDiff/66C-P2.cha,CHI,when when can I when ca-what what Grandma?,-1,other
 2773,Gelman/2014-IndDiff/66C-P2.cha,CAR,grandma Firstname that's coming today.,,
 2774,Gelman/2014-IndDiff/66C-P2.cha,CHI,not today.,1,
 2775,Gelman/2014-IndDiff/66C-P2.cha,CAR,tonight.,,
@@ -1010,7 +1010,7 @@
 2778,Gelman/2014-IndDiff/66C-P2.cha,CAR,today is Monday.,,
 2779,Gelman/2014-IndDiff/66C-P2.cha,CHI,mm.,,
 2780,Gelman/2014-IndDiff/66C-P2.cha,CAR,what is that?,,
-2781,Gelman/2014-IndDiff/66C-P2.cha,CHI,a planer.,0,Child-invented word
+2781,Gelman/2014-IndDiff/66C-P2.cha,CHI,a planer.,0,
 2782,Gelman/2014-IndDiff/66C-P2.cha,CAR,it's a what?,,
 2783,Gelman/2014-IndDiff/66C-P2.cha,CHI,a plane guy.,1,
 2784,Gelman/2014-IndDiff/66C-P2.cha,CAR,it's an airplane pilot right?,,
@@ -1039,7 +1039,7 @@
 2807,Gelman/2014-IndDiff/66C-P2.cha,CAR,does it look like a girl?,,
 2808,Gelman/2014-IndDiff/66C-P2.cha,CHI,yes.,,
 2809,Gelman/2014-IndDiff/66C-P2.cha,CAR,it looks like a girl to me too.,,
-2810,Gelman/2014-IndDiff/66C-P2.cha,CHI,because that.,-1,possible interruption
+2810,Gelman/2014-IndDiff/66C-P2.cha,CHI,because that.,-1,preposition
 2811,Gelman/2014-IndDiff/66C-P2.cha,CAR,what.,,
 2812,Gelman/2014-IndDiff/66C-P2.cha,CAR,what's she playing?,,
 2813,Gelman/2014-IndDiff/66C-P2.cha,CAR,what sport?,,
@@ -1203,7 +1203,7 @@
 2971,Gelman/2014-IndDiff/66C-P2.cha,CHI,a penguin.,1,
 2972,Gelman/2014-IndDiff/66C-P2.cha,CAR,a penguin?,,
 2973,Gelman/2014-IndDiff/66C-P2.cha,CAR,how can you tell?,,
-2974,Gelman/2014-IndDiff/66C-P2.cha,CHI,"because it has, it's walking very slow.",1,“slow” can be used as an adverb
+2974,Gelman/2014-IndDiff/66C-P2.cha,CHI,"because it has, it's walking very slow.",1,
 2975,Gelman/2014-IndDiff/66C-P2.cha,CAR,uh huh.,,
 2976,Gelman/2014-IndDiff/66C-P2.cha,CHI,it's on the they slide on their belly.,0,
 2977,Gelman/2014-IndDiff/66C-P2.cha,CAR,they slide on their bellies?,,
@@ -1213,7 +1213,7 @@
 2981,Gelman/2014-IndDiff/66C-P2.cha,CHI,not if I was a penguin.,1,
 2982,Gelman/2014-IndDiff/66C-P2.cha,CAR,if you were a penguin you sure sure could.,,
 2983,Gelman/2014-IndDiff/66C-P2.cha,CAR,but you probably have to slide on something that's icy and slippery huh?,,
-2984,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah but.,-1,possible interruption
+2984,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah but.,-1,
 2985,Gelman/2014-IndDiff/66C-P2.cha,CAR,do you remember where penguins live?,,
 2986,Gelman/2014-IndDiff/66C-P2.cha,CHI,no.,,
 2987,Gelman/2014-IndDiff/66C-P2.cha,CAR,what was Firstname's book say that penguins live?,,
@@ -1260,12 +1260,12 @@
 3028,Gelman/2014-IndDiff/66C-P2.cha,CAR,do you like elephants?,,
 3029,Gelman/2014-IndDiff/66C-P2.cha,CHI,no.,,
 3030,Gelman/2014-IndDiff/66C-P2.cha,CAR,I like to see the elephants at the zoo.,,
-3031,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah me.,-1,possible interruption
+3031,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah me.,-1,other
 3032,Gelman/2014-IndDiff/66C-P2.cha,CAR,you know why?,,
 3033,Gelman/2014-IndDiff/66C-P2.cha,CHI,no.,,
 3034,Gelman/2014-IndDiff/66C-P2.cha,CAR,because they're like the biggest ele-the biggest animals at the zoo.,,
 3035,Gelman/2014-IndDiff/66C-P2.cha,CHI,me too.,1,
-3036,Gelman/2014-IndDiff/66C-P2.cha,CHI,the end.,0,Context-dependent
+3036,Gelman/2014-IndDiff/66C-P2.cha,CHI,the end.,0,
 3037,Gelman/2014-IndDiff/66C-P2.cha,CAR,you're going to be done?,,
 3038,Gelman/2014-IndDiff/66C-P2.cha,CHI,yeah.,,
 3039,Gelman/2014-IndDiff/66C-P2.cha,CAR,okay.,,
@@ -1282,7 +1282,7 @@
 3050,Gelman/2014-IndDiff/66C-P2.cha,CAR,oh my goodness.,,
 3051,Gelman/2014-IndDiff/66C-P2.cha,CAR,well I certainly like oranges a lot.,,
 3052,Gelman/2014-IndDiff/66C-P2.cha,CAR,they're very juicy.,,
-3053,Gelman/2014-IndDiff/66C-P2.cha,CHI,actually no.,-1,
+3053,Gelman/2014-IndDiff/66C-P2.cha,CHI,actually no.,-1,other
 3054,Gelman/2014-IndDiff/66C-P2.cha,CAR,no?,,
 3055,Gelman/2014-IndDiff/66C-P2.cha,CHI,cake.,,
 3056,Gelman/2014-IndDiff/66C-P2.cha,CAR,yeah.,,
@@ -1333,15 +1333,15 @@
 3101,Suppes/021006.cha,CHI,yup.,,
 3102,Suppes/021006.cha,CAR,and then what?,,
 3103,Suppes/021006.cha,CHI,put them in their house.,0,
-3104,Suppes/021006.cha,CHI,and then we water.,-1,
+3104,Suppes/021006.cha,CHI,and then we water.,-1,"verb, preposition"
 3105,Suppes/021006.cha,CHI,then we put water in for for the big duck to swim.,1,
 3106,Suppes/021006.cha,CAR,really?,,
 3107,Suppes/021006.cha,CHI,yeah.,,
 3108,Suppes/021006.cha,CAR,where did you put the water?,,
 3109,Suppes/021006.cha,CHI,in the swimming pool.,1,
 3110,Suppes/021006.cha,CAR,oh and what did the duck do?,,
-3111,Suppes/021006.cha,CHI,he swim he drinked it all up.,-1,
-3112,Suppes/021006.cha,CHI,and he swimmed in it.,-1,
+3111,Suppes/021006.cha,CHI,he swim he drinked it all up.,-1,tense_aspect
+3112,Suppes/021006.cha,CHI,and he swimmed in it.,-1,tense_aspect
 3113,Suppes/021006.cha,CAR,he did.,,
 3114,Suppes/021006.cha,CHI,yeah.,,
 3115,Suppes/021006.cha,CHI,yeah.,,
@@ -1360,7 +1360,7 @@
 3128,Suppes/021006.cha,CAR,where did you find eggs?,,
 3129,Suppes/021006.cha,CHI,on some more chickens.,1,
 3130,Suppes/021006.cha,CAR,where did you find the eggs?,,
-3131,Suppes/021006.cha,CHI,some more chickens I said.,0,missing preposition
+3131,Suppes/021006.cha,CHI,some more chickens I said.,0,
 3132,Suppes/021006.cha,CAR,did you find them on the ground?,,
 3133,Suppes/021006.cha,CHI,yup.,,
 3134,Suppes/021006.cha,CAR,were they still hot?,,

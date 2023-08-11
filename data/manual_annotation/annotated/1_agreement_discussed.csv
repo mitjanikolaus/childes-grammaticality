@@ -1,4 +1,4 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,notes
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 612,TD/dirk2.cha,CHI,fall down.,0,
 613,TD/dirk2.cha,CAR,good night now.,,
 614,TD/dirk2.cha,CHI,good night now.,1,
@@ -7,18 +7,18 @@
 617,TD/dirk2.cha,CAR,someone is riding on the horse.,,
 618,TD/dirk2.cha,CAR,he's rocking.,,
 619,TD/dirk2.cha,CAR,rock rock.,,
-620,TD/dirk2.cha,CHI,someone go in the chair.,-1,
+620,TD/dirk2.cha,CHI,someone go in the chair.,-1,sv_agreement
 621,TD/dirk2.cha,CAR,someone goes in the chair.,,
-622,TD/dirk2.cha,CHI,someone go upstairs.,-1,
+622,TD/dirk2.cha,CHI,someone go upstairs.,-1,sv_agreement
 623,TD/dirk2.cha,CAR,someone goes upstairs.,,
 624,TD/dirk2.cha,CHI,man go upstairs.,-1,
 625,TD/dirk2.cha,CAR,the man goes upstairs?,,
-626,TD/dirk2.cha,CHI,lady go upstairs.,-1,
+626,TD/dirk2.cha,CHI,lady go upstairs.,-1,sv_agreement
 627,TD/dirk2.cha,CAR,the lady goes upstairs.,,
-628,TD/dirk2.cha,CHI,all people.,-1,
+628,TD/dirk2.cha,CHI,all people.,-1,"verb, determiner"
 629,TD/dirk2.cha,CAR,all the people?,,
-630,TD/dirk2.cha,CHI,all people.,-1,
-631,TD/dirk2.cha,CHI,lady go upstairs.,-1,
+630,TD/dirk2.cha,CHI,all people.,-1,"verb, determiner"
+631,TD/dirk2.cha,CHI,lady go upstairs.,-1,sv_agreement
 632,TD/dirk2.cha,CAR,who?,,
 633,TD/dirk2.cha,CHI,a man.,1,
 634,TD/dirk2.cha,CHI,oh this.,1,
@@ -29,7 +29,7 @@
 639,TD/dirk2.cha,CAR,car.,,
 640,TD/dirk2.cha,CAR,here comes the car.,,
 641,TD/dirk2.cha,CAR,who is going in the car?,,
-642,TD/dirk2.cha,CHI,this people.,-1,
+642,TD/dirk2.cha,CHI,this people.,-1,determiner
 643,TD/dirk2.cha,CAR,this people that's the father.,,
 644,TD/dirk2.cha,CAR,here is another father.,,
 645,TD/dirk2.cha,CHI,father.,,
@@ -39,7 +39,7 @@
 649,TD/dirk2.cha,CAR,two two fathers can ride in here.,,
 650,TD/dirk2.cha,CAR,Kim and Steph are banging the doors.,,
 651,TD/dirk2.cha,CAR,where are they gone huh?,,
-652,TD/dirk2.cha,CHI,someone go.,-1,
+652,TD/dirk2.cha,CHI,someone go.,-1,sv_agreement
 653,TD/dirk2.cha,CHI,go.,,
 654,TD/dirk2.cha,CAR,somebody goes in there.,,
 655,TD/dirk2.cha,CAR,here is another car he can use.,,
@@ -51,9 +51,9 @@
 661,TD/dirk2.cha,CAR,the lady.,,
 662,TD/dirk2.cha,CHI,the man.,1,
 663,TD/dirk2.cha,CAR,the man.,,
-664,TD/dirk2.cha,CHI,someone ride in wagon.,-1,
+664,TD/dirk2.cha,CHI,someone ride in wagon.,-1,present_progressive
 665,TD/dirk2.cha,CAR,someone rides in the wagon.,,
-666,TD/dirk2.cha,CHI,all people.,-1,
+666,TD/dirk2.cha,CHI,all people.,-1,determiner
 667,TD/dirk2.cha,CAR,all the people.,,
 668,TD/dirk2.cha,CAR,is that lamb going to ride the wagon?,,
 669,TD/dirk2.cha,CAR,the tractor?,,
@@ -74,19 +74,19 @@
 684,TD/dirk2.cha,CAR,look at his grumpy face.,,
 685,TD/dirk2.cha,CHI,that thing.,0,
 686,TD/dirk2.cha,CAR,there is a dog over here.,,
-687,TD/dirk2.cha,CHI,someone ride in here.,-1,
+687,TD/dirk2.cha,CHI,someone ride in here.,-1,present_progressive
 688,TD/dirk2.cha,CAR,someone ride in there.,,
 689,TD/dirk2.cha,CAR,soon.,,
 690,TD/dirk2.cha,CAR,oh oh it came apart.,,
 691,TD/dirk2.cha,CAR,can you fix it?,,
 692,TD/dirk2.cha,CAR,can you help?,,
 693,TD/dirk2.cha,CAR,good.,,
-694,TD/dirk2.cha,CHI,this go right here.,-1,
+694,TD/dirk2.cha,CHI,this go right here.,-1,sv_agreement
 695,TD/dirk2.cha,CAR,this goes right here.,,
 696,TD/dirk2.cha,CAR,good.,,
-697,TD/dirk2.cha,CHI,lady do that.,-1,
+697,TD/dirk2.cha,CHI,lady do that.,-1,"determiner, present_progressive"
 698,TD/dirk2.cha,CAR,what lady?,,
-699,TD/dirk2.cha,CHI,I want.,-1,potential interruption
+699,TD/dirk2.cha,CHI,I want.,-1,object
 700,TD/dirk2.cha,CAR,what did the lady?,,
 701,TD/dirk2.cha,CHI,store.,,
 702,TD/dirk2.cha,CAR,do you want her by the store?,,
@@ -101,13 +101,13 @@
 711,TD/dirk2.cha,CAR,oh careful on there.,,
 712,TD/dirk2.cha,CAR,that makes a loud noise when you put it on there.,,
 713,TD/dirk2.cha,CAR,okay.,,
-714,TD/dirk2.cha,CHI,that lady go up there.,-1,
+714,TD/dirk2.cha,CHI,that lady go up there.,-1,present_progressive
 715,TD/dirk2.cha,CAR,this lady goes up there.,,
 716,TD/dirk2.cha,CAR,careful.,,
-717,TD/dirk2.cha,CHI,boy lady in there.,-1,potential reformulation
+717,TD/dirk2.cha,CHI,boy lady in there.,-1,"determiner, verb"
 718,TD/dirk2.cha,CAR,where is she gone?,,
 719,TD/dirk2.cha,CAR,where?,,
-720,TD/dirk2.cha,CHI,peeking out.,-1,potential continuation
+720,TD/dirk2.cha,CHI,peeking out.,-1,"subject, auxiliary"
 721,TD/dirk2.cha,CAR,who is peeking out?,,
 722,TD/dirk2.cha,CHI,people.,,
 723,TD/dirk2.cha,CAR,people.,,
@@ -122,7 +122,7 @@
 732,TD/dirk2.cha,CAR,he is too big to go on the steps.,,
 733,TD/dirk2.cha,CHI,people.,,
 734,TD/dirk2.cha,CAR,mhm.,,
-735,TD/dirk2.cha,CHI,all people.,-1,
+735,TD/dirk2.cha,CHI,all people.,-1,determiner
 736,TD/dirk2.cha,CAR,yes.,,
 737,TD/dirk2.cha,CAR,well.,,
 738,TD/dirk2.cha,CAR,your sister is closing the doors upstairs.,,
@@ -141,7 +141,7 @@
 751,TD/dirk2.cha,CAR,that man drives the gas truck right here.,,
 752,TD/dirk2.cha,CAR,I have to ask your sister to be quiet again.,,
 753,TD/dirk2.cha,CAR,you just play with me okay?,,
-754,TD/dirk2.cha,CHI,what that?,-1,
+754,TD/dirk2.cha,CHI,what that?,-1,auxiliary
 755,TD/dirk2.cha,CAR,that's a little microphone.,,
 756,TD/dirk2.cha,CAR,can you say that?,,
 757,TD/dirk2.cha,CHI,microphone.,,
@@ -150,7 +150,7 @@
 760,TD/dirk2.cha,CAR,it will make a big loud noise when they sit down.,,
 761,TD/dirk2.cha,CAR,on the tape.,,
 762,TD/dirk2.cha,CAR,come on.,,
-763,TD/dirk2.cha,CHI,Stephie do that.,-1,
+763,TD/dirk2.cha,CHI,Stephie do that.,-1,present_progressive
 764,TD/dirk2.cha,CAR,Stephie did.,,
 765,TD/dirk2.cha,CAR,what's she doing?,,
 766,TD/dirk2.cha,CHI,put this on.,0,
@@ -165,7 +165,7 @@
 775,TD/dirk2.cha,CAR,pop.,,
 776,TD/dirk2.cha,CAR,look at the little circle it made on your leg.,,
 777,TD/dirk2.cha,CAR,see?,,
-778,TD/dirk2.cha,CHI,put it on back.,-1,
+778,TD/dirk2.cha,CHI,put it on back.,-1,preposition
 779,TD/dirk2.cha,CAR,put it on back?,,
 780,TD/dirk2.cha,CAR,put it on again?,,
 781,TD/dirk2.cha,CHI,ya.,,
@@ -214,7 +214,7 @@
 824,TD/dirk2.cha,CAR,one two three.,,
 825,TD/dirk2.cha,CHI,two.,,
 826,TD/dirk2.cha,CHI,three.,,
-827,TD/dirk2.cha,CHI,circle on my leg.,-1,
+827,TD/dirk2.cha,CHI,circle on my leg.,-1,"verb, determiner"
 828,TD/dirk2.cha,CAR,circles on my leg.,,
 829,TD/dirk2.cha,CAR,okay.,,
 830,TD/dirk2.cha,CHI,do it again.,1,
@@ -270,7 +270,7 @@
 880,TD/dirk2.cha,CAR,not on me.,,
 881,TD/dirk2.cha,CHI,I like that.,1,
 882,TD/dirk2.cha,CAR,do you like it in the tractor?,,
-883,TD/dirk2.cha,CHI,in tractor.,-1,
+883,TD/dirk2.cha,CHI,in tractor.,-1,determiner
 884,TD/dirk2.cha,CAR,in the wagon.,,
 885,TD/dirk2.cha,CAR,here they go.,,
 886,TD/dirk2.cha,CAR,here they go bzz bzz.,,
@@ -279,7 +279,7 @@
 889,TD/dirk2.cha,CHI,in the park.,1,
 890,TD/dirk2.cha,CAR,in the park.,,
 891,TD/dirk2.cha,CAR,what will they do at the park?,,
-892,TD/dirk2.cha,CHI,ah do it.,-1,
+892,TD/dirk2.cha,CHI,ah do it.,-1,"subject, tense_aspect"
 893,TD/dirk2.cha,CAR,oh that chicken is going in here too.,,
 894,TD/dirk2.cha,CAR,can he fit?,,
 895,TD/dirk2.cha,CAR,is he going into the park too?,,
@@ -296,7 +296,7 @@
 906,TD/dirk2.cha,CAR,what will he do here in the park?,,
 907,TD/dirk2.cha,CHI,that.,,
 908,TD/dirk2.cha,CAR,swing on the swings?,,
-909,TD/dirk2.cha,CHI,where is swing?,-1,
+909,TD/dirk2.cha,CHI,where is swing?,-1,determiner
 910,TD/dirk2.cha,CAR,where is the swing?,,
 911,TD/dirk2.cha,CAR,where is the swing?,,
 912,TD/dirk2.cha,CAR,oh the swing is over in the in the.,,
@@ -322,14 +322,14 @@
 932,TD/dirk2.cha,CAR,there now.,,
 933,TD/dirk2.cha,CAR,swing then.,,
 934,TD/dirk2.cha,CHI,walk this line walk up this line.,0,
-935,TD/dirk2.cha,CHI,walk this line.,-1,
+935,TD/dirk2.cha,CHI,walk this line.,-1,"subject, tense_aspect"
 936,TD/dirk2.cha,CAR,dzzz.,,
 937,TD/dirk2.cha,CAR,here it goes.,,
 938,TD/dirk2.cha,CHI,wee down.,0,
 939,TD/dirk2.cha,CAR,wee down.,,
 940,TD/dirk2.cha,CHI,wee down.,0,
 941,TD/dirk2.cha,CAR,wee down the slide.,,
-942,TD/dirk2.cha,CHI,wee down slide.,-1,
+942,TD/dirk2.cha,CHI,wee down slide.,-1,"subject, determiner"
 943,TD/dirk2.cha,CAR,does this chicken wanna go too?,,
 944,TD/dirk2.cha,CAR,up up.,,
 945,TD/dirk2.cha,CAR,down he goes.,,
@@ -342,7 +342,7 @@
 952,TD/dirk2.cha,CAR,he is smaller.,,
 953,TD/dirk2.cha,CAR,see?,,
 954,TD/dirk2.cha,CAR,the man is taller and he is bigger than the boy.,,
-955,TD/dirk2.cha,CHI,bigger man.,-1,
+955,TD/dirk2.cha,CHI,bigger man.,-1,determiner
 956,TD/dirk2.cha,CAR,this is a little boy too but he has a hat on.,,
 957,TD/dirk2.cha,CAR,see?,,
 958,TD/dirk2.cha,CAR,this one is bigger.,,
@@ -356,14 +356,14 @@
 966,Thomas/020609.cha,CAR,where have we just been?,,
 967,Thomas/020609.cha,CHI,playgroup.,,
 968,Thomas/020609.cha,CAR,playgroup.,,
-969,Thomas/020609.cha,CHI,no happy birthday.,-1,
+969,Thomas/020609.cha,CHI,no happy birthday.,-1,other
 970,Thomas/020609.cha,CAR,no.,,
 971,Thomas/020609.cha,CAR,there was no happy birthday today was there?,,
 972,Thomas/020609.cha,CHI,no.,,
 973,Thomas/020609.cha,CAR,they only sing happy birthday if it's somebody's birthday.,,
 974,Thomas/020609.cha,CAR,ah are you disappointed?,,
 975,Thomas/020609.cha,CHI,yes.,,
-976,Thomas/020609.cha,CHI,not singing the words.,-1,
+976,Thomas/020609.cha,CHI,not singing the words.,-1,"subject, present_progressive"
 977,Thomas/020609.cha,CAR,not singing the words.,,
 978,Thomas/020609.cha,CHI,no.,,
 979,Thomas/020609.cha,CAR,oh dear.,,
@@ -378,7 +378,7 @@
 988,Thomas/020609.cha,CAR,let's get you changed and then we can have lunch.,,
 989,Thomas/020609.cha,CAR,because.,,
 990,Thomas/020609.cha,CAR,where've we been?,,
-991,Thomas/020609.cha,CHI,me got fire engine.,-1,
+991,Thomas/020609.cha,CHI,me got fire engine.,-1,"determiner, determiner"
 992,Thomas/020609.cha,CAR,are you going to play with the fire engine again?,,
 993,Thomas/020609.cha,CHI,yes.,,
 994,Thomas/020609.cha,CAR,where've we been?,,
@@ -386,11 +386,11 @@
 996,Thomas/020609.cha,CAR,that's how you can tell it's Tuesday.,,
 997,Thomas/020609.cha,CAR,we go to the sausage roll shop on Tuesdays don't we?,,
 998,Thomas/020609.cha,CHI,oh no no no no.,1,
-999,Thomas/020609.cha,CHI,not me changed.,-1,
+999,Thomas/020609.cha,CHI,not me changed.,-1,"determiner, tense_aspect"
 1000,Thomas/020609.cha,CAR,"yes, darling.",,
 1001,Thomas/020609.cha,CAR,you need changing.,,
 1002,Thomas/020609.cha,CHI,no.,,
-1003,Thomas/020609.cha,CHI,play a fire engine.,-1,
+1003,Thomas/020609.cha,CHI,play a fire engine.,-1,"subject, tense_aspect"
 1004,Thomas/020609.cha,CAR,you wanna play with the fire engine.,,
 1005,Thomas/020609.cha,CHI,yes.,,
 1006,Thomas/020609.cha,CAR,oh perhaps you don't need your nappie changing.,,
@@ -413,7 +413,7 @@
 1023,Thomas/020609.cha,CHI,a trailer too.,0,
 1024,Thomas/020609.cha,CAR,and there's a trailer too.,,
 1025,Thomas/020609.cha,CAR,you can see that on the floor can you?,,
-1026,Thomas/020609.cha,CHI,no no no trailer.,-1,
+1026,Thomas/020609.cha,CHI,no no no trailer.,-1,determiner
 1027,Thomas/020609.cha,CAR,no trailer.,,
 1028,Thomas/020609.cha,CHI,no.,,
 1029,Thomas/020609.cha,CAR,"I think it's the train you're thinking of, Thomas.",,
@@ -428,10 +428,10 @@
 1038,Thomas/020609.cha,CHI,beebeebabeeba.,,
 1039,Thomas/020609.cha,CAR,beebabeeba.,,
 1040,Thomas/020609.cha,CHI,oh no.,1,
-1041,Thomas/020609.cha,CHI,oh driver.,-1,
-1042,Thomas/020609.cha,CHI,on the table driver.,-1,
+1041,Thomas/020609.cha,CHI,oh driver.,-1,determiner
+1042,Thomas/020609.cha,CHI,on the table driver.,-1,"verb, determiner"
 1043,Thomas/020609.cha,CAR,driver.,,
-1044,Thomas/020609.cha,CHI,on the table.,0,potential continuation or repetition
+1044,Thomas/020609.cha,CHI,on the table.,0,
 1045,Thomas/020609.cha,CAR,there we are.,,
 1046,Thomas/020609.cha,CAR,give your hands a nice wash.,,
 1047,Thomas/020609.cha,CAR,your hands feel quite cold.,,
@@ -441,7 +441,7 @@
 1051,Thomas/020609.cha,CAR,she's going to have a baby isn't she?,,
 1052,Thomas/020609.cha,CHI,yes.,,
 1053,Thomas/020609.cha,CAR,as well as Becky to look after she's going to have a little baby next Summer.,,
-1054,Thomas/020609.cha,CHI,little baby.,-1,
+1054,Thomas/020609.cha,CHI,little baby.,-1,determiner
 1055,Thomas/020609.cha,CAR,a little baby next Summer.,,
 1056,Thomas/020609.cha,CAR,yes.,,
 1057,Thomas/020609.cha,CAR,we thought she was walking very slowly up the hill didn't we?,,
@@ -460,7 +460,7 @@
 1070,Thomas/020609.cha,CAR,just a second.,,
 1071,Thomas/020609.cha,CAR,right.,,
 1072,Thomas/020609.cha,CAR,let's put a bib on because we're going to have lunch aren't we?,,
-1073,Thomas/020609.cha,CHI,no lunch.,-1,
+1073,Thomas/020609.cha,CHI,no lunch.,-1,other
 1074,Thomas/020609.cha,CHI,no.,,
 1075,Thomas/020609.cha,CAR,oh yes.,,
 1076,Thomas/020609.cha,CAR,I think we'll have some lunch.,,
@@ -479,19 +479,19 @@
 1089,Thomas/020609.cha,CAR,so were you disappointed?,,
 1090,Thomas/020609.cha,CHI,no.,,
 1091,Thomas/020609.cha,CAR,that nobody had a birthday at toddler group this morning.,,
-1092,Thomas/020609.cha,CHI,no no no birthday.,-1,
+1092,Thomas/020609.cha,CHI,no no no birthday.,-1,other
 1093,Thomas/020609.cha,CAR,no happy birthday.,,
 1094,Thomas/020609.cha,CHI,no no.,1,
-1095,Thomas/020609.cha,CHI,another birthday.,-1,
-1096,Thomas/020609.cha,CHI,another birthday.,-1,
+1095,Thomas/020609.cha,CHI,another birthday.,-1,other
+1096,Thomas/020609.cha,CHI,another birthday.,-1,other
 1097,Thomas/020609.cha,CAR,well next week you've got to sing happy birthday to your Granddad haven't you?,,
 1098,Thomas/020609.cha,CAR,because Granddad's going to be eighty.,,
 1099,Thomas/020609.cha,CHI,eighty.,,
 1100,Thomas/020609.cha,CHI,oh dear.,1,
 1101,Thomas/020609.cha,CHI,oh dear.,1,
-1102,Thomas/020609.cha,CHI,piece train I think.,-1,
+1102,Thomas/020609.cha,CHI,piece train I think.,-1,"preposition, determiner"
 1103,Thomas/020609.cha,CAR,what do you think?,,
-1104,Thomas/020609.cha,CHI,piece trailer.,-1,
+1104,Thomas/020609.cha,CHI,piece trailer.,-1,"preposition, determiner"
 1105,Thomas/020609.cha,CHI,oh.,,
 1106,Thomas/020609.cha,CAR,yes.,,
 1107,Thomas/020609.cha,CAR,I think a little bit of it's missing isn't it?,,
@@ -502,25 +502,25 @@
 1112,Thomas/020609.cha,CHI,stop.,,
 1113,Thomas/020609.cha,CAR,"oh Thomas, what happened to the bag that we brought back from the baker's.",,
 1114,Thomas/020609.cha,CAR,oh here it is.,,
-1115,Thomas/020609.cha,CHI,nothing in it.,-1,
-1116,Thomas/020609.cha,CHI,nothing in it.,-1,
+1115,Thomas/020609.cha,CHI,nothing in it.,-1,"subject, verb"
+1116,Thomas/020609.cha,CHI,nothing in it.,-1,"subject, verb"
 1117,Thomas/020609.cha,CAR,nothing in it.,,
 1118,Thomas/020609.cha,CHI,yes.,,
-1119,Thomas/020609.cha,CHI,nothing in it.,-1,
+1119,Thomas/020609.cha,CHI,nothing in it.,-1,"subject, verb"
 1120,Thomas/020609.cha,CAR,there is something in it.,,
 1121,Thomas/020609.cha,CAR,there you are.,,
 1122,Thomas/020609.cha,CHI,no.,,
 1123,Thomas/020609.cha,CHI,"thank you, horse.",1,
-1124,Thomas/020609.cha,CHI,ta much indeed.,-1,
+1124,Thomas/020609.cha,CHI,ta much indeed.,-1,other
 1125,Thomas/020609.cha,CAR,"thank you, horse.",,
 1126,Thomas/020609.cha,CAR,ta much indeed.,,
 1127,Thomas/020609.cha,CAR,why are you saying thank you to the horse?,,
-1128,Thomas/020609.cha,CHI,ta much indeed.,-1,
-1129,Thomas/020609.cha,CHI,in the car.,-1,
+1128,Thomas/020609.cha,CHI,ta much indeed.,-1,other
+1129,Thomas/020609.cha,CHI,in the car.,-1,"subject, verb"
 1130,Thomas/020609.cha,CHI,vroom vroom.,0,
 1131,Thomas/020609.cha,CAR,the horse is getting in the car is it?,,
 1132,Thomas/020609.cha,CHI,yes.,,
-1133,Thomas/020609.cha,CHI,not fit.,-1,
+1133,Thomas/020609.cha,CHI,not fit.,-1,"subject, verb"
 1134,Thomas/020609.cha,CAR,no.,,
 1135,Thomas/020609.cha,CAR,it won't fit.,,
 1136,Thomas/020609.cha,CAR,no.,,
@@ -549,7 +549,7 @@
 1159,Thomas/020609.cha,CHI,what's this?,1,
 1160,Thomas/020609.cha,CAR,that is a little bit of cheese because even though you said you didn't want it I thought perhaps you would when you saw it.,,
 1161,Thomas/020609.cha,CAR,does that taste nice?,,
-1162,Thomas/020609.cha,CHI,not taste nice.,-1,
+1162,Thomas/020609.cha,CHI,not taste nice.,-1,"subject, auxiliary"
 1163,Thomas/020609.cha,CAR,not taste nice.,,
 1164,Thomas/020609.cha,CAR,oh I think it tastes nice.,,
 1165,Thomas/020609.cha,CAR,so have you seen Sonia and Isabel this morning?,,
@@ -558,7 +558,7 @@
 1168,Thomas/020609.cha,CAR,we have.,,
 1169,Thomas/020609.cha,CHI,yes.,,
 1170,Thomas/020609.cha,CAR,Isabel's Mummy is still hobbling around isn't she?,,
-1171,Thomas/020609.cha,CHI,no red jam.,-1,
+1171,Thomas/020609.cha,CHI,no red jam.,-1,"subject, verb"
 1172,Thomas/020609.cha,CAR,no.,,
 1173,Thomas/020609.cha,CAR,"it's not jam, darling.",,
 1174,Thomas/020609.cha,CAR,no.,,
@@ -581,7 +581,7 @@
 1191,Thomas/020609.cha,CAR,it is tasty.,,
 1192,Thomas/020609.cha,CAR,it's really lovely isn't it?,,
 1193,Thomas/020609.cha,CHI,yes.,,
-1194,Thomas/020609.cha,CHI,sausage roll fell over.,-1,
+1194,Thomas/020609.cha,CHI,sausage roll fell over.,-1,determiner
 1195,Thomas/020609.cha,CAR,sausage roll fell over.,,
 1196,Thomas/020609.cha,CAR,yes.,,
 1197,Thomas/020609.cha,CAR,I was cutting it and it just rolled didn't it?,,
@@ -600,12 +600,12 @@
 1210,Thomas/020609.cha,CHI,yes.,,
 1211,Thomas/020609.cha,CAR,and we didn't want those did we?,,
 1212,Thomas/020609.cha,CHI,no.,,
-1213,Thomas/020609.cha,CHI,no want those.,-1,
+1213,Thomas/020609.cha,CHI,no want those.,-1,"subject, auxiliary"
 1214,Thomas/020609.cha,CAR,no.,,
 1215,Thomas/020609.cha,CAR,we didn't want those.,,
 1216,Thomas/020609.cha,CAR,we wanted the ones that looked very nice at the front.,,
 1217,Thomas/020609.cha,CHI,tasty.,,
-1218,Thomas/020609.cha,CHI,tasty front.,-1,
+1218,Thomas/020609.cha,CHI,tasty front.,-1,determiner
 1219,Thomas/020609.cha,CAR,pardon.,,
 1220,Thomas/020609.cha,CHI,tasty.,,
 1221,Thomas/020609.cha,CAR,tasty.,,
@@ -626,13 +626,13 @@
 1236,Thomas/020609.cha,CAR,who grows cabbages?,,
 1237,Thomas/020609.cha,CAR,Granddad.,,
 1238,Thomas/020609.cha,CHI,no.,,
-1239,Thomas/020609.cha,CHI,two cabbage.,-1,
-1240,Thomas/020609.cha,CHI,no cabbage.,-1,
+1239,Thomas/020609.cha,CHI,two cabbage.,-1,"verb, plural"
+1240,Thomas/020609.cha,CHI,no cabbage.,-1,"subject, verb"
 1241,Thomas/020609.cha,CHI,cabbage.,,
-1242,Thomas/020609.cha,CHI,no Sooty.,-1,
+1242,Thomas/020609.cha,CHI,no Sooty.,-1,"subject, verb"
 1243,Thomas/020609.cha,CAR,no we've seen Jo and Becky today but she didn't have Sooty the dog with her did she?,,
 1244,Thomas/020609.cha,CHI,no.,,
-1245,Thomas/020609.cha,CHI,not bite Thomas.,-1,
+1245,Thomas/020609.cha,CHI,not bite Thomas.,-1,auxiliary
 1246,Thomas/020609.cha,CAR,no.,,
 1247,Thomas/020609.cha,CAR,not bite Thomas.,,
 1248,Thomas/020609.cha,CAR,"I don't think you've been bitten by a dog, Thomas have you?",,
@@ -641,7 +641,7 @@
 1251,Thomas/020609.cha,CHI,hm.,,
 1252,Thomas/020609.cha,CAR,the sun's still shining isn't it?,,
 1253,Thomas/020609.cha,CHI,yes.,,
-1254,Thomas/020609.cha,CHI,hold big blue pen.,-1,
+1254,Thomas/020609.cha,CHI,hold big blue pen.,-1,determiner
 1255,Thomas/020609.cha,CAR,hm.,,
 1256,Thomas/020609.cha,CHI,hold it.,1,
 1257,Thomas/020609.cha,CAR,you want hold the big pen now.,,
@@ -656,7 +656,7 @@
 1266,Thomas/020609.cha,CAR,"don't kick, Thomas don't kick.",,
 1267,Thomas/020609.cha,CAR,it's not nice.,,
 1268,Thomas/020609.cha,CAR,if you keep on kicking I shall take your shoes off and then when you kick the table it'll hurt your foot won't it?,,
-1269,Thomas/020609.cha,CHI,no shoes.,-1,
+1269,Thomas/020609.cha,CHI,no shoes.,-1,"subject, verb"
 1270,Thomas/020609.cha,CAR,I will.,,
 1271,Thomas/020609.cha,CAR,are you tired?,,
 1272,Thomas/020609.cha,CHI,no.,,
@@ -684,7 +684,7 @@
 1294,Thomas/020609.cha,CAR,it has just come out of the fridge.,,
 1295,Thomas/020609.cha,CAR,no.,,
 1296,Thomas/020609.cha,CAR,you can't take the lid off.,,
-1297,Thomas/020609.cha,CHI,broke it.,-1,
+1297,Thomas/020609.cha,CHI,broke it.,-1,subject
 1298,Thomas/020609.cha,CAR,no.,,
 1299,Thomas/020609.cha,CAR,it hasn't broken.,,
 1300,Thomas/020609.cha,CAR,"but the lid has got to be kept on tightly to keep it fresh, hasn't it?",,
@@ -693,7 +693,7 @@
 1303,Thomas/020609.cha,CAR,it's a glass jar.,,
 1304,Thomas/020609.cha,CHI,yes.,,
 1305,Thomas/020609.cha,CAR,what else is made from glass?,,
-1306,Thomas/020609.cha,CHI,glass on.,-1,
+1306,Thomas/020609.cha,CHI,glass on.,-1,"determiner, verb"
 1307,Thomas/020609.cha,CHI,glass.,,
 1308,Thomas/020609.cha,CAR,it's glass.,,
 1309,Thomas/020609.cha,CAR,it's the glass jar.,,
@@ -716,7 +716,7 @@
 1326,Thomas/020609.cha,CAR,the horse is jumping too.,,
 1327,Thomas/020609.cha,CHI,yes.,,
 1328,Thomas/020609.cha,CAR,the horse is galloping.,,
-1329,Thomas/020609.cha,CHI,not reach.,-1,
+1329,Thomas/020609.cha,CHI,not reach.,-1,"subject, auxiliary"
 1330,Thomas/020609.cha,CAR,can the horse not reach the sausage roll?,,
 1331,Thomas/020609.cha,CAR,well perhaps I'll turn the plate round.,,
 1332,Thomas/020609.cha,CAR,can the horse reach now?,,
@@ -734,9 +734,9 @@
 1344,Thomas/020609.cha,CHI,open.,,
 1345,Thomas/020609.cha,CHI,shut.,,
 1346,Thomas/020609.cha,CAR,"are you just going to have a little bit more to eat, Thomas?",,
-1347,Thomas/020609.cha,CHI,eat it.,-1,
+1347,Thomas/020609.cha,CHI,eat it.,-1,"subject, tense_aspect"
 1348,Thomas/020609.cha,CAR,who can eat it?,,
-1349,Thomas/020609.cha,CHI,choochootank eat it.,-1,
+1349,Thomas/020609.cha,CHI,choochootank eat it.,-1,present_progressive
 1350,Thomas/020609.cha,CAR,choochootank eat it.,,
 1351,Thomas/020609.cha,CAR,you mean the train driver or the train?,,
 1352,Thomas/020609.cha,CHI,train.,,
@@ -752,24 +752,24 @@
 1362,Thomas/020609.cha,CAR,on the plate rather.,,
 1363,Thomas/020609.cha,CHI,the bowl.,0,
 1364,Thomas/020609.cha,CHI,no.,,
-1365,Thomas/020609.cha,CHI,the eat it.,-1,
+1365,Thomas/020609.cha,CHI,the eat it.,-1,"subject, tense_aspect"
 1366,Thomas/020609.cha,CAR,can you reach the apple?,,
 1367,Thomas/020609.cha,CHI,no.,,
 1368,Thomas/020609.cha,CAR,no.,,
 1369,Thomas/020609.cha,CAR,mm that tastes nice.,,
 1370,Thomas/020609.cha,CAR,steady.,,
-1371,Thomas/020609.cha,CHI,train driver on a platform.,-1,
+1371,Thomas/020609.cha,CHI,train driver on a platform.,-1,"determiner, determiner"
 1372,Thomas/020609.cha,CAR,the driver's on the platform.,,
 1373,Thomas/020609.cha,CAR,I think he's going to have a cup of coffee.,,
 1374,Thomas/020609.cha,CAR,would he like to share my coffee?,,
 1375,Thomas/020609.cha,CAR,mm.,,
 1376,Thomas/020609.cha,CAR,oh lovely.,,
 1377,Thomas/020609.cha,CAR,he's enjoying a warm drink isn't he?,,
-1378,Thomas/020609.cha,CHI,enjoyed it.,-1,
+1378,Thomas/020609.cha,CHI,enjoyed it.,-1,subject
 1379,Thomas/020609.cha,CAR,enjoyed it.,,
 1380,Thomas/020609.cha,CAR,yes.,,
 1381,Thomas/020609.cha,CAR,that's right.,,
-1382,Thomas/020609.cha,CHI,the horse drink it.,-1,
+1382,Thomas/020609.cha,CHI,the horse drink it.,-1,sv_agreement
 1383,Thomas/020609.cha,CAR,the horse drink it.,,
 1384,Thomas/020609.cha,CHI,yes.,,
 1385,Thomas/020609.cha,CAR,do you think the horse would like some coffee or it might prefer some water?,,
@@ -780,7 +780,7 @@
 1390,Thomas/020609.cha,CAR,it's the engine driver that perhaps he'd like a sausage roll and a sandwich.,,
 1391,Thomas/020609.cha,CAR,and he might like to share your apple and have a cup of coffee.,,
 1392,Thomas/020609.cha,CAR,the horse might like the apple.,,
-1393,Thomas/020609.cha,CHI,horse eat.,-1,
+1393,Thomas/020609.cha,CHI,horse eat.,-1,"determiner, sv_agreement"
 1394,Thomas/020609.cha,CAR,hm.,,
 1395,Thomas/020609.cha,CAR,horses eat apples.,,
 1396,Thomas/020609.cha,CHI,oh.,,
@@ -820,10 +820,10 @@
 1430,Thomas/020609.cha,CHI,drive off.,0,
 1431,Thomas/020609.cha,CAR,is he driving off now?,,
 1432,Thomas/020609.cha,CHI,yes.,,
-1433,Thomas/020609.cha,CHI,no late.,-1,
-1434,Thomas/020609.cha,CHI,no late.,-1,
+1433,Thomas/020609.cha,CHI,no late.,-1,other
+1434,Thomas/020609.cha,CHI,no late.,-1,other
 1435,Thomas/020609.cha,CAR,Mummy has got very sticky hands now.,,
-1436,Thomas/020609.cha,CHI,drive off now.,-1,208
+1436,Thomas/020609.cha,CHI,drive off now.,-1,"subject, present_progressive"
 1437,Thomas/020609.cha,CAR,"would you like some of this, Thomas?",,
 1438,Thomas/020609.cha,CHI,no.,,
 1439,Thomas/020609.cha,CAR,would you like some of that?,,
@@ -834,8 +834,8 @@
 1444,Thomas/020609.cha,CHI,yes.,,
 1445,Thomas/020609.cha,CAR,mhm.,,
 1446,Thomas/020609.cha,CAR,whereabouts is he going to in Manchester because he has got a horse in the back?,,
-1447,Thomas/020609.cha,CHI,got horse.,-1,
-1448,Thomas/020609.cha,CHI,got horse on it.,-1,
+1447,Thomas/020609.cha,CHI,got horse.,-1,"subject, determiner"
+1448,Thomas/020609.cha,CHI,got horse on it.,-1,"subject, determiner"
 1449,Thomas/020609.cha,CAR,got a horse on it.,,
 1450,Thomas/020609.cha,CHI,no.,,
 1451,Thomas/020609.cha,CAR,where do you think he's going?,,
@@ -850,7 +850,7 @@
 1460,Thomas/020609.cha,CHI,there there.,0,
 1461,Thomas/020609.cha,CAR,police horses.,,
 1462,Thomas/020609.cha,CHI,there there.,0,
-1463,Thomas/020609.cha,CHI,not talking any words.,-1,
+1463,Thomas/020609.cha,CHI,not talking any words.,-1,"subject, auxiliary"
 1464,Thomas/020609.cha,CAR,pardon.,,
 1465,Thomas/020609.cha,CHI,not.,,
 1466,Thomas/020609.cha,CHI,oh.,,
@@ -877,24 +877,24 @@
 1487,Thomas/020609.cha,CHI,pop.,,
 1488,Thomas/020609.cha,CAR,it looks to me now as if the racing car is pulling the train.,,
 1489,Thomas/020609.cha,CHI,hiding.,,
-1490,Thomas/020609.cha,CHI,not fall down.,-1,
+1490,Thomas/020609.cha,CHI,not fall down.,-1,"subject, auxiliary"
 1491,Thomas/020609.cha,CAR,hiding.,,
 1492,Thomas/020609.cha,CAR,not fall down.,,
-1493,Thomas/020609.cha,CHI,this piece off.,-1,
+1493,Thomas/020609.cha,CHI,this piece off.,-1,verb
 1494,Thomas/020609.cha,CHI,that's better.,1,
 1495,Thomas/020609.cha,CAR,is that better?,,
 1496,Thomas/020609.cha,CHI,yes.,,
 1497,Thomas/020609.cha,CAR,do you think it's time for the horse to have something else to drink?,,
 1498,Thomas/020609.cha,CHI,yes.,,
 1499,Thomas/020609.cha,CAR,would you like to fetch a bucket of water?,,
-1500,Thomas/020609.cha,CHI,bucket of water.,-1,
+1500,Thomas/020609.cha,CHI,bucket of water.,-1,determiner
 1501,Thomas/020609.cha,CAR,bucket of water.,,
 1502,Thomas/020609.cha,CAR,"you sound snuffly, Thomas.",,
 1503,Thomas/020609.cha,CAR,have you got a cold.,,
 1504,Thomas/020609.cha,CHI,no.,,
-1505,Thomas/020609.cha,CHI,no drink.,-1,
+1505,Thomas/020609.cha,CHI,no drink.,-1,other
 1506,Thomas/020609.cha,CAR,pardon.,,
-1507,Thomas/020609.cha,CHI,no drink.,-1,
+1507,Thomas/020609.cha,CHI,no drink.,-1,other
 1508,Thomas/020609.cha,CAR,no drink.,,
 1509,Thomas/020609.cha,CAR,does the horse not want a drink?,,
 1510,Thomas/020609.cha,CHI,no.,,
@@ -918,13 +918,13 @@
 1528,Thomas/020609.cha,CAR,together.,,
 1529,Thomas/020609.cha,CHI,yes.,,
 1530,Thomas/020609.cha,CAR,two together.,,
-1531,Thomas/020609.cha,CHI,not fall table.,-1,
-1532,Thomas/020609.cha,CHI,the pieces off.,-1,
+1531,Thomas/020609.cha,CHI,not fall table.,-1,"auxiliary, preposition, determiner"
+1532,Thomas/020609.cha,CHI,the pieces off.,-1,verb
 1533,Thomas/020609.cha,CAR,not fall off the table.,,
 1534,Thomas/020609.cha,CAR,the little pieces off.,,
-1535,Thomas/020609.cha,CHI,carrying the pieces.,-1,
+1535,Thomas/020609.cha,CHI,carrying the pieces.,-1,"subject, auxiliary"
 1536,Thomas/020609.cha,CAR,carrying the pieces.,,
-1537,Thomas/020609.cha,CHI,carrying the piece.,-1,
+1537,Thomas/020609.cha,CHI,carrying the piece.,-1,"subject, auxiliary"
 1538,Thomas/020609.cha,CAR,did you say carried pieces or carrying the pieces?,,
 1539,Thomas/020609.cha,CAR,carry the piece.,,
 1540,Thomas/020609.cha,CAR,are you putting them back together again now?,,
@@ -958,18 +958,18 @@
 1568,Thomas/020609.cha,CAR,I think you're too engrossed in playing with the trains aren't you?,,
 1569,Thomas/020609.cha,CAR,to be bothered about eating.,,
 1570,Thomas/020609.cha,CHI,yes.,,
-1571,Thomas/020609.cha,CHI,juice blackcurrant.,-1,
+1571,Thomas/020609.cha,CHI,juice blackcurrant.,-1,determiner
 1572,Thomas/020609.cha,CAR,blackcurrant.,,
 1573,Thomas/020609.cha,CAR,that's right.,,
-1574,Thomas/020609.cha,CHI,all done now.,0,208
+1574,Thomas/020609.cha,CHI,all done now.,0,
 1575,Thomas/020609.cha,CHI,shop.,,
-1576,Thomas/020609.cha,CHI,shops more.,-1,
+1576,Thomas/020609.cha,CHI,shops more.,-1,other
 1577,Thomas/020609.cha,CAR,oh all done now.,,
 1578,Thomas/020609.cha,CAR,shops for some more.,,
 1579,Thomas/020609.cha,CAR,yes.,,
 1580,Thomas/020609.cha,CAR,we don't seem to have a lot of blackcurrant left in the bottle do we?,,
 1581,Thomas/020609.cha,CHI,yes.,,
-1582,Thomas/020609.cha,CHI,little drop there.,-1,
+1582,Thomas/020609.cha,CHI,little drop there.,-1,"verb, determiner"
 1583,Thomas/020609.cha,CAR,there's a little drop there.,,
 1584,Thomas/020609.cha,CHI,there.,,
 1585,Thomas/020609.cha,CAR,well tomorrow if we don't go to the shops later today.,,
@@ -989,9 +989,9 @@
 1599,Thomas/020609.cha,CHI,yes.,,
 1600,Thomas/020609.cha,CAR,"I need to buy some more fruit from the shop as well, Thomas.",,
 1601,Thomas/020609.cha,CAR,we haven't got many apples or bananas have we?,,
-1602,Thomas/020609.cha,CHI,no apples.,-1,
+1602,Thomas/020609.cha,CHI,no apples.,-1,"subject, verb"
 1603,Thomas/020609.cha,CAR,no.,,
-1604,Thomas/020609.cha,CHI,no pears there.,-1,
+1604,Thomas/020609.cha,CHI,no pears there.,-1,"subject, verb"
 1605,Thomas/020609.cha,CAR,no.,,
 1606,Thomas/020609.cha,CAR,no pears.,,
 1607,Thomas/020609.cha,CAR,there are a few apples but not very many.,,
@@ -1014,19 +1014,19 @@
 1624,Thomas/020609.cha,CHI,Isabel.,,
 1625,Thomas/020609.cha,CAR,did you say something about Isabel?,,
 1626,Thomas/020609.cha,CHI,yes.,,
-1627,Thomas/020609.cha,CHI,Daddy Rod eat it.,-1,
+1627,Thomas/020609.cha,CHI,Daddy Rod eat it.,-1,present_progressive
 1628,Thomas/020609.cha,CAR,Isabel and Daddy Rod eat it.,,
 1629,Thomas/020609.cha,CHI,yes.,,
-1630,Thomas/020609.cha,CHI,Daddy Daddy Rod hungry.,-1,
+1630,Thomas/020609.cha,CHI,Daddy Daddy Rod hungry.,-1,verb
 1631,Thomas/020609.cha,CAR,Daddy Rod's hungry is he?,,
 1632,Thomas/020609.cha,CHI,yes.,,
-1633,Thomas/020609.cha,CHI,what we make?,-1,
+1633,Thomas/020609.cha,CHI,what we make?,-1,present_progressive
 1634,Thomas/020609.cha,CAR,are you asking me what we make?,,
 1635,Thomas/020609.cha,CAR,oh this is something that you learnt at bangadrumtime isn't it?,,
 1636,Thomas/020609.cha,CHI,yes.,,
 1637,Thomas/020609.cha,CAR,and you say what shall we make.,,
 1638,Thomas/020609.cha,CAR,and I will say strawberry milkshake.,,
-1639,Thomas/020609.cha,CHI,shake shake.,0,onomatopoeic sound of shaking motion?
+1639,Thomas/020609.cha,CHI,shake shake.,0,
 1640,Thomas/020609.cha,CHI,hold the carrots.,0,
 1641,Thomas/020609.cha,CAR,shake shake.,,
 1642,Thomas/020609.cha,CAR,hold the carrots.,,
@@ -1034,10 +1034,10 @@
 1644,Thomas/020609.cha,CAR,I'm just looking for the peeling machine.,,
 1645,Thomas/020609.cha,CAR,not the peeling machine.,,
 1646,Thomas/020609.cha,CAR,I mean the little potato peeler.,,
-1647,Thomas/020609.cha,CHI,potato peeler.,-1,
+1647,Thomas/020609.cha,CHI,potato peeler.,-1,determiner
 1648,Thomas/020609.cha,CAR,a potato peeler.,,
-1649,Thomas/020609.cha,CHI,not bite them.,-1,
-1650,Thomas/020609.cha,CHI,not bite.,-1,
+1649,Thomas/020609.cha,CHI,not bite them.,-1,auxiliary
+1650,Thomas/020609.cha,CHI,not bite.,-1,auxiliary
 1651,Thomas/020609.cha,CAR,not bite.,,
 1652,Thomas/020609.cha,CHI,dirty.,,
 1653,Thomas/020609.cha,CAR,they are dirty carrots aren't they?,,
@@ -1066,7 +1066,7 @@
 1676,Thomas/020609.cha,CHI,yes.,,
 1677,Thomas/020609.cha,CAR,it showed her farm where carrots were grown and how they were harvested.,,
 1678,Thomas/020609.cha,CAR,and packed and sent to the shops.,,
-1679,Thomas/020609.cha,CHI,the shops big lorry.,-1,
+1679,Thomas/020609.cha,CHI,the shops big lorry.,-1,"verb, determiner"
 1680,Thomas/020609.cha,CAR,in a big lorry.,,
 1681,Thomas/020609.cha,CAR,and somebody was.,,
 1682,Thomas/020609.cha,CHI,more lorrys.,0,
@@ -1106,9 +1106,9 @@
 1716,Thomas/020609.cha,CAR,and I like carrots when they're raw.,,
 1717,Thomas/020609.cha,CAR,you can crunch them like an apple.,,
 1718,Thomas/020609.cha,CAR,you don't seem to keen do you?,,
-1719,Thomas/020609.cha,CHI,Thomas bite it.,-1,
+1719,Thomas/020609.cha,CHI,Thomas bite it.,-1,sv_agreement
 1720,Thomas/020609.cha,CAR,you can bite it certainly.,,
-1721,Thomas/020609.cha,CHI,Thomas bite it there.,-1,
+1721,Thomas/020609.cha,CHI,Thomas bite it there.,-1,sv_agreement
 1722,Thomas/020609.cha,CAR,just let me finish peeling this one and then I'll wash you a piece.,,
 1723,Thomas/020609.cha,CAR,they're very good for you.,,
 1724,Thomas/020609.cha,CAR,when you were teething you useta like chewing on raw carrot because they're nice and crunchy especially if they've been in the fridge they were cold and nice to bite on.,,
@@ -1124,9 +1124,9 @@
 1734,Thomas/020609.cha,CAR,this is a very dirty carrot isn't it?,,
 1735,Thomas/020609.cha,CHI,yes.,,
 1736,Thomas/020609.cha,CAR,I'm actually peeling them now because we've got an awful lot and I'm frightened that they're going to go bad before I get a chance to use them.,,
-1737,Thomas/020609.cha,CHI,all done now.,-1,208
+1737,Thomas/020609.cha,CHI,all done now.,-1,"subject, auxiliary"
 1738,Thomas/020609.cha,CAR,hm.,,
-1739,Thomas/020609.cha,CHI,nearly done.,-1,208
+1739,Thomas/020609.cha,CHI,nearly done.,-1,"subject, auxiliary"
 1740,Thomas/020609.cha,CAR,nearly done.,,
 1741,Thomas/020609.cha,CAR,so these carrots in this bag.,,
 1742,Thomas/020609.cha,CAR,I'm going to peel and wash and slice.,,
