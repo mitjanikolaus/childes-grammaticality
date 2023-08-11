@@ -25,7 +25,6 @@ DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_ann
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
 
-NUM_WORKERS = 8
 
 if torch.cuda.is_available():
     torch.set_float32_matmul_precision("high")
@@ -222,6 +221,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
             test_split_proportion: float = 0.2,
             context_length: int = 1,
             random_seed = 1,
+            num_workers = 8,
             **kwargs,
     ):
         super().__init__()
@@ -233,6 +233,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.train_datasets = train_datasets
         self.context_length = context_length
         self.random_seed = random_seed
+        self.num_workers = num_workers
 
         self.num_labels = 3
         self.tokenizer = tokenizer
@@ -244,13 +245,13 @@ class CHILDESGrammarDataModule(LightningDataModule):
             self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
 
     def train_dataloader(self):
-        return DataLoader(self.dataset["train"], batch_size=self.train_batch_size, shuffle=True, collate_fn=self.tokenize_batch, num_workers=NUM_WORKERS)
+        return DataLoader(self.dataset["train"], batch_size=self.train_batch_size, shuffle=True, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def val_dataloader(self):
-        return DataLoader(self.dataset["validation"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=NUM_WORKERS)
+        return DataLoader(self.dataset["validation"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def test_dataloader(self):
-        return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=NUM_WORKERS)
+        return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def tokenize_batch(self, batch):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_labels=True)

@@ -210,7 +210,8 @@ def main(args):
                                       train_datasets=args.train_datasets,
                                       tokenizer=tokenizer,
                                       context_length=args.context_length,
-                                      random_seed=random_seed)
+                                      random_seed=random_seed,
+                                      num_workers=args.num_workers)
         dm.setup("fit")
         class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 
@@ -322,6 +323,11 @@ def parse_args():
         type=int,
         default=3,
         help="Number of cross-validation folds"
+    )
+    argparser.add_argument(
+        "--num-workers",
+        type=int,
+        default=8,
     )
     argparser = Trainer.add_argparse_args(argparser)
 

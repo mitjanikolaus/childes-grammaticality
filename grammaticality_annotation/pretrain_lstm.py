@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
 from grammaticality_annotation.data import load_annotated_childes_data
-from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR
+from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS
 from utils import PROJECT_ROOT_DIR
 
 DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")
@@ -104,10 +104,7 @@ class LSTM(nn.Module):
         output, input_sizes = pad_packed_sequence(packed_output, batch_first=True)
         output = self.dropout(output)
 
-        # Zero all output that is padded
-        output = output * attention_mask.unsqueeze(2)
-        # Max pool over time dimension
-        output = self.max_pool(output.permute(0, 2, 1)).squeeze()
+        output = output[range(output.shape[0]), input_sizes - 1]
 
         logits = self.fc_classification(output)
 
@@ -285,7 +282,7 @@ def train(args):
         train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA)
 
     tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
-    tokenizer.add_special_tokens({'pad_token': TOKEN_PAD})
+    tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
 
     data_module = CHILDESLMDataModule(BATCH_SIZE, tokenizer)
 
