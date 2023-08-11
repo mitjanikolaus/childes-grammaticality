@@ -5,7 +5,9 @@ import torch
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
-from datasets import load_dataset
+from torch.utils.data import Dataset
+
+import pandas as pd
 
 from torch import nn
 import pytorch_lightning as pl
@@ -15,22 +17,22 @@ from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.data import load_annotated_childes_data
+from grammaticality_annotation.data import load_annotated_childes_data, train_test_split
 from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS, \
     TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER
 from utils import PROJECT_ROOT_DIR
 
 DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")
 
-LM_DATA = os.path.expanduser("~/data/childes_grammaticality/sentences.txt")
+LM_DATA = os.path.expanduser("~/data/childes_grammaticality/sentences.csv")
 
 BATCH_SIZE = 100
 
-TRUNCATION_LENGTH = 40
+MAX_SEQ_LENGTH = 200    # (number of characters)
 
 MAX_EPOCHS = 10
 
-LSTM_HIDDEN_DIM = 512
+LSTM_HIDDEN_DIM = 256
 
 LSTM_TOKENIZER_PATH = os.path.join(TOKENIZERS_DIR, "tokenizer_lstm.json")
 
@@ -39,28 +41,47 @@ NUM_VAL_SENTENCES = 10000
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
+class CHILDESLMDataset(Dataset):
+    def __init__(self, data):
+        self.data = data
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        sentence = self.data.iloc[idx]["sentence"]
+        transcript = self.data.iloc[idx]["transcript_file"]
+        idx +=1
+        while idx < len(self.data) and transcript == self.data.iloc[idx]["transcript_file"] and len(sentence) < MAX_SEQ_LENGTH:
+            sentence = sentence + self.data.iloc[idx]["sentence"]
+            idx += 1
+
+        sentence = sentence[:MAX_SEQ_LENGTH]
+        return sentence
+
+
 class CHILDESLMDataModule(pl.LightningDataModule):
     def __init__(self, batch_size: int, tokenizer):
         super().__init__()
         self.batch_size = batch_size
         self.tokenizer = tokenizer
 
-        data = load_dataset("text", data_files={"train": LM_DATA})
-        self.data = data["train"].train_test_split(test_size=NUM_VAL_SENTENCES)
+        data = pd.read_csv(LM_DATA, index_col=0)
+        data_train, data_val = train_test_split(data, NUM_VAL_SENTENCES)
+        self.train_ds = CHILDESLMDataset(data_train)
+        self.val_ds = CHILDESLMDataset(data_val)
 
     def tokenize_batch(self, batch):
-        text = [t["text"] for t in batch]
-        encodings = self.tokenizer.batch_encode_plus(text, padding=True, max_length=TRUNCATION_LENGTH, truncation=True,
-                                                     return_tensors="pt")
+        encodings = self.tokenizer.batch_encode_plus(batch, padding=True, return_tensors="pt")
         encodings.data["labels"] = encodings.data["input_ids"][:, 1:]
 
         return encodings
 
     def train_dataloader(self):
-        return DataLoader(self.data["train"], batch_size=self.batch_size, collate_fn=self.tokenize_batch)
+        return DataLoader(self.train_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch)
 
     def val_dataloader(self):
-        return DataLoader(self.data["test"], batch_size=self.batch_size, collate_fn=self.tokenize_batch)
+        return DataLoader(self.val_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch)
 
 
 class LSTM(nn.Module):
@@ -280,10 +301,8 @@ def prepare_lm_data():
     print("Preparing data...")
     os.makedirs(os.path.dirname(LM_DATA), exist_ok=True)
     data = load_annotated_childes_data(DATA_DIR)
-    sentences = data["sentence"]
-
-    with open(LM_DATA, 'w') as f:
-        f.write("\n".join(sentences))
+    data = data[["transcript_file", "sentence"]]
+    data.to_csv(LM_DATA)
 
 
 def train(args):
@@ -301,7 +320,7 @@ def train(args):
 
     checkpoint_callback = ModelCheckpoint(monitor="val_loss", mode="min", save_last=True,
                                             filename="{epoch:02d}-{val_loss:.2f}")
-    early_stop_callback = EarlyStopping(monitor="val_loss", patience=3, verbose=True, mode="min",
+    early_stop_callback = EarlyStopping(monitor="val_loss", patience=10, verbose=True, mode="min",
                                         min_delta=0.01, stopping_threshold=0.0)
 
     tb_logger = TensorBoardLogger(name="logs_pretrain_lstm", save_dir=os.path.curdir)

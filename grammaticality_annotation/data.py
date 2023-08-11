@@ -38,9 +38,12 @@ def speaker_code_to_speaker_token(code):
     raise RuntimeError("Unknown speaker code: ", code)
 
 
-def train_test_split(data, test_split_proportion, random_seed):
+def train_test_split(data, test_split_size, random_seed=DATA_SPLIT_RANDOM_STATE):
     # Make sure that test and train split do not contain data from the same transcripts
-    train_data_size = int(len(data) * (1 - test_split_proportion))
+    if isinstance(test_split_size, float):
+        train_data_size = int(len(data) * (1 - test_split_size))
+    else:
+        train_data_size = len(data) - test_split_size
     transcript_files = data.transcript_file.unique()
     random.seed(random_seed)
     random.shuffle(transcript_files)
