@@ -188,6 +188,7 @@ def main(args):
     seed_everything(FINE_TUNE_RANDOM_STATE)
 
     test_results = []
+    val_results = []
 
     random_seeds = range(args.num_cv_folds)
     for random_seed in random_seeds:
@@ -258,7 +259,8 @@ def main(args):
             tokenizer.pad_token = tokenizer.eos_token
             best_model.config.pad_token_id = model.config.eos_token_id
 
-        trainer.validate(best_model, datamodule=dm)
+        val_result = trainer.validate(best_model, datamodule=dm)
+        val_results.append(val_result[0])
 
         best_model.test_error_analysis = True
         test_result = trainer.test(best_model, datamodule=dm)
@@ -270,7 +272,9 @@ def main(args):
     mccs = [results["test_matthews_correlation"] for results in test_results]
     print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length}])
+    val_mccs = [results["val_matthews_correlation"] for results in test_results]
+
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "context_length": args.context_length}])
     results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
