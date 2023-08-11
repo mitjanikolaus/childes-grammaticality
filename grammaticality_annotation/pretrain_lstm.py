@@ -301,7 +301,7 @@ def train(args):
     trainer = Trainer(
         max_epochs=MAX_EPOCHS,
         devices=1 if torch.cuda.is_available() else None,
-        accelerator="gpu" if torch.cuda.is_available() else None,
+        accelerator="auto",
         val_check_interval=1000,
         auto_lr_find=True,
         callbacks=[checkpoint_callback, early_stop_callback],
