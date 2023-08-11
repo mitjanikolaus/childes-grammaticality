@@ -269,14 +269,14 @@ def main(args):
     mccs = [results["test_matthews_correlation"] for results in test_results]
     print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies)}])
-    results_df.set_index(["model"], inplace=True)
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length}])
+    results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     if not os.path.isfile(RESULTS_FILE):
         results_df.to_csv(RESULTS_FILE)
     else:
-        old_res_file = pd.read_csv(RESULTS_FILE, index_col=0)
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length"])
         results_df = results_df.combine_first(old_res_file)
         results_df.to_csv(RESULTS_FILE)
 
