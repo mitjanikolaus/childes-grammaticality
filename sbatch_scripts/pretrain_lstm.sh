@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=finetune
+#SBATCH --job-name=pre_lstm
 #
 #SBATCH -A eqb@a100
 #
@@ -22,7 +22,7 @@
 #
 # /!\ Caution, "multithread" in Slurm vocabulary refers to hyperthreading.
 #SBATCH --hint=nomultithread         # hyperthreading is deactivated
-#SBATCH --time=5:00:00              # maximum execution time requested (HH:MM:SS)
+#SBATCH --time=3:00:00              # maximum execution time requested (HH:MM:SS)
 #SBATCH --output=out/train_%j.out
 #SBATCH --error=out/train_%j.out
  
@@ -44,12 +44,10 @@ set -x
 TRANSFORMERS_OFFLINE=1
 
 # Code execution
-model=roberta-large	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
-context_length=5
 
 # Debugging:
 # export CUDA_LAUNCH_BLOCKING=1
 
-python -u grammaticality_annotation/fine_tune_grammaticality_nn.py --accelerator gpu --model $model --context-length $context_length
+python -u grammaticality_annotation/pretrain_lstm.py
 
 #--trainer.val_check_interval 5000

@@ -44,12 +44,13 @@ set -x
 TRANSFORMERS_OFFLINE=1
 
 # Code execution
-model=roberta-large	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
-context_length=5
+model=logs_pretrain_lstm/version_2/checkpoints/epoch\=01-val_loss\=2.80.ckpt
+context_length=0
+learning_rate=1e-3
 
 # Debugging:
 # export CUDA_LAUNCH_BLOCKING=1
 
-python -u grammaticality_annotation/fine_tune_grammaticality_nn.py --accelerator gpu --model $model --context-length $context_length
+python -u grammaticality_annotation/fine_tune_grammaticality_nn.py --model $model --context-length $context_length --learning-rate $learning_rate
 
 #--trainer.val_check_interval 5000
