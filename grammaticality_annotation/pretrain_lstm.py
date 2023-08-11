@@ -16,7 +16,8 @@ import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
 from grammaticality_annotation.data import load_annotated_childes_data
-from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS
+from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS, \
+    TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER
 from utils import PROJECT_ROOT_DIR
 
 DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")
@@ -194,9 +195,8 @@ class CHILDESGrammarLSTM(LightningModule):
         loss = torch.stack([x["loss"] for x in outputs]).mean()
 
         print("\n\n")
-        print(self.generate("you", max_seq_len=20, temperature=0.3))
-        print(self.generate("you", max_seq_len=20, temperature=0.5))
-        print(self.generate("you", max_seq_len=20, temperature=0.7))
+        print(self.generate(TOKEN_SPEAKER_CHILD, max_seq_len=20, temperature=0.3))
+        print(self.generate(TOKEN_SPEAKER_CAREGIVER, max_seq_len=20, temperature=0.3))
 
         self.log(f"val_loss", loss, prog_bar=True)
 
