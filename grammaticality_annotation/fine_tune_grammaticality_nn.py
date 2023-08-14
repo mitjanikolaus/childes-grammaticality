@@ -194,12 +194,14 @@ def main(args):
     for random_seed in random_seeds:
         print(f"\n\n\n\nStart training with random seed {random_seed}")
 
+        add_eos_token = False
         if os.path.isfile(args.model):
             if not os.path.isfile(LSTM_TOKENIZER_PATH):
                 raise RuntimeError(f"Tokenizer not found at {LSTM_TOKENIZER_PATH}")
 
             tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
             tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
+            add_eos_token = True
         else:
             tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
@@ -212,7 +214,7 @@ def main(args):
                                       context_length=args.context_length,
                                       random_seed=random_seed,
                                       num_workers=args.num_workers,
-                                      add_eos_tokens=True if tokenizer.eos_token is not None else False,)
+                                      add_eos_tokens=add_eos_token)
         dm.setup("fit")
         class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 

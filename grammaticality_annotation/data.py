@@ -265,7 +265,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
 def tokenize(batch, tokenizer, max_seq_length, add_labels=False, add_eos_token=False):
     texts = [b[TEXT_FIELD] for b in batch]
     if add_eos_token:
-        texts = [t+TOKEN_EOS for t in texts]
+        texts = [t+tokenizer.eos_token for t in texts]
 
     features = tokenizer.batch_encode_plus(
         texts, max_length=max_seq_length, padding=True, truncation=True, return_tensors="pt"
