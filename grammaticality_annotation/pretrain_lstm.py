@@ -32,7 +32,7 @@ MAX_SEQ_LENGTH = 200    # (number of characters)
 
 MAX_EPOCHS = 10
 
-LSTM_HIDDEN_DIM = 256
+LSTM_HIDDEN_DIM = 512
 
 LSTM_TOKENIZER_PATH = os.path.join(TOKENIZERS_DIR, "tokenizer_lstm.json")
 
