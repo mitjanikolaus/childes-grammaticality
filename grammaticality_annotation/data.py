@@ -13,7 +13,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
 from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD,
-                                                 TOKEN_SPEAKER_CAREGIVER)
+                                                 TOKEN_SPEAKER_CAREGIVER, TOKEN_EOS)
 from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 
 DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
@@ -225,6 +225,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
             context_length: int = 1,
             random_seed = 1,
             num_workers = 8,
+            add_eos_tokens = False,
             **kwargs,
     ):
         super().__init__()
@@ -240,6 +241,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
         self.num_labels = 3
         self.tokenizer = tokenizer
+        self.add_eos_tokens = add_eos_tokens
 
     def setup(self, stage: str):
         self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length, self.random_seed, create_val_split=True)
@@ -257,11 +259,13 @@ class CHILDESGrammarDataModule(LightningDataModule):
         return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def tokenize_batch(self, batch):
-        return tokenize(batch, self.tokenizer, self.max_seq_length, add_labels=True)
+        return tokenize(batch, self.tokenizer, self.max_seq_length, add_labels=True, add_eos_token=self.add_eos_tokens)
 
 
-def tokenize(batch, tokenizer, max_seq_length, add_labels=False):
+def tokenize(batch, tokenizer, max_seq_length, add_labels=False, add_eos_token=False):
     texts = [b[TEXT_FIELD] for b in batch]
+    if add_eos_token:
+        texts = [t+TOKEN_EOS for t in texts]
 
     features = tokenizer.batch_encode_plus(
         texts, max_length=max_seq_length, padding=True, truncation=True, return_tensors="pt"

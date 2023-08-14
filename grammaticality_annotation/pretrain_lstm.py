@@ -51,12 +51,15 @@ class CHILDESLMDataset(Dataset):
     def __getitem__(self, idx):
         sentence = self.data.iloc[idx]["sentence"]
         transcript = self.data.iloc[idx]["transcript_file"]
-        idx +=1
-        while idx < len(self.data) and transcript == self.data.iloc[idx]["transcript_file"] and len(sentence) < MAX_SEQ_LENGTH:
-            sentence = sentence + self.data.iloc[idx]["sentence"]
+        idx += 1
+        while idx < len(self.data) and transcript == self.data.iloc[idx]["transcript_file"]:
+            if len(sentence + self.data.iloc[idx]["sentence"] + TOKEN_EOS) < MAX_SEQ_LENGTH:
+                sentence = sentence + self.data.iloc[idx]["sentence"]
             idx += 1
 
-        sentence = sentence[:MAX_SEQ_LENGTH]
+        sentence = sentence + TOKEN_EOS
+        assert len(sentence) <= MAX_SEQ_LENGTH
+
         return sentence
 
 
@@ -311,7 +314,7 @@ def train(args):
     if not os.path.isfile(LM_DATA):
         prepare_lm_data()
     if not os.path.isfile(LSTM_TOKENIZER_PATH):
-        train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA)
+        train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA, add_eos_token=True)
 
     tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
     tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})

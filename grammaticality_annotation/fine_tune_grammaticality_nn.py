@@ -199,8 +199,7 @@ def main(args):
                 raise RuntimeError(f"Tokenizer not found at {LSTM_TOKENIZER_PATH}")
 
             tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
-            tokenizer.add_special_tokens(
-                {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
+            tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
         else:
             tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
@@ -212,7 +211,8 @@ def main(args):
                                       tokenizer=tokenizer,
                                       context_length=args.context_length,
                                       random_seed=random_seed,
-                                      num_workers=args.num_workers)
+                                      num_workers=args.num_workers,
+                                      add_eos_tokens=True if tokenizer.eos_token is not None else False,)
         dm.setup("fit")
         class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 

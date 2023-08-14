@@ -25,10 +25,13 @@ TRANSCRIPT_FIELD = "transcript_file"
 VOCAB_SIZE = 10000
 
 
-def train_tokenizer(path, train_data):
+def train_tokenizer(path, train_data, add_eos_token=False):
     tokenizer = Tokenizer(BPE())
     tokenizer.pre_tokenizer = Whitespace()
-    trainer = BpeTrainer(special_tokens=[TOKEN_PAD], show_progress=True, vocab_size=VOCAB_SIZE)
+    special_tokens = [TOKEN_PAD]
+    if add_eos_token:
+        special_tokens.append(TOKEN_EOS)
+    trainer = BpeTrainer(special_tokens=special_tokens, show_progress=True, vocab_size=VOCAB_SIZE)
 
     if isinstance(train_data, str) and os.path.isfile(train_data):
         tokenizer.train(files=[train_data], trainer=trainer)
