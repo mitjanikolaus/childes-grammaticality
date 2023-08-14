@@ -92,18 +92,23 @@ class CHILDESLMDataModule(pl.LightningDataModule):
 
 
 class LSTM(nn.Module):
-    def __init__(self, vocab_size, embedding_dim, hidden_dim, dropout_rate, num_labels=3):
+    def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_rate, num_labels=3):
         super().__init__()
+        self.num_layers = num_layers
         self.hidden_dim = hidden_dim
         self.embedding_dim = embedding_dim
         self.num_labels = num_labels
 
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
-        self.lstm = nn.LSTM(embedding_dim, hidden_dim, batch_first=True, bidirectional=True)
+        if num_layers > 1:
+            self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers,
+                                dropout=dropout_rate, batch_first=True)
+        else:
+            self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, batch_first=True)
         self.dropout = nn.Dropout(dropout_rate)
-        self.fc = nn.Linear(hidden_dim*2, vocab_size)
+        self.fc = nn.Linear(hidden_dim, vocab_size)
 
-        self.fc_attention = nn.Linear(hidden_dim*2, 1)
+        self.fc_attention = nn.Linear(hidden_dim, 1)
 
         self.fc_classification = nn.Linear(hidden_dim, num_labels)
         self.max_pool = torch.nn.AdaptiveMaxPool1d(output_size=1)
@@ -141,8 +146,8 @@ class LSTM(nn.Module):
         return {"logits": logits, "hidden": hidden}
 
     def init_hidden(self, batch_size):
-        hidden = torch.zeros(2, batch_size, self.hidden_dim).to(device)
-        cell = torch.zeros(2, batch_size, self.hidden_dim).to(device)
+        hidden = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
+        cell = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
         return hidden, cell
 
 
@@ -159,6 +164,7 @@ class CHILDESGrammarLSTM(LightningModule):
             tokenizer=None,
             embedding_dim: int = LSTM_HIDDEN_DIM,
             hidden_dim: int = LSTM_HIDDEN_DIM,
+            num_layers: int = 1,
             dropout_rate: float = 0.1,
             learning_rate: float = 0.003,
             adam_epsilon: float = 1e-8,
@@ -175,7 +181,7 @@ class CHILDESGrammarLSTM(LightningModule):
         self.loss_fct = nn.CrossEntropyLoss(ignore_index=pad_token_id)
 
         self.vocab_size = vocab_size
-        self.model = LSTM(self.vocab_size, embedding_dim,  hidden_dim, dropout_rate, num_labels)
+        self.model = LSTM(self.vocab_size, embedding_dim,  hidden_dim, num_layers, dropout_rate, num_labels)
 
     def forward(self, **inputs):
         return self.model(**inputs)
@@ -261,6 +267,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
             tokenizer = None,
             embedding_dim: int = LSTM_HIDDEN_DIM,
             hidden_dim: int = LSTM_HIDDEN_DIM,
+            num_layers: int = 1,
             dropout_rate: float = 0.1,
             learning_rate: float = 0.003,
             adam_epsilon: float = 1e-8,
@@ -273,6 +280,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
                          tokenizer=tokenizer,
                          embedding_dim=embedding_dim,
                          hidden_dim=hidden_dim,
+                         num_layers=num_layers,
                          dropout_rate=dropout_rate,
                          learning_rate=learning_rate,
                          adam_epsilon=adam_epsilon,
