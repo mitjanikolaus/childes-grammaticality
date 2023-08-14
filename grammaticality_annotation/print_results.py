@@ -2,13 +2,14 @@ import pandas as pd
 from utils import RESULTS_FILE
 
 REFERENCE_METRIC = "val_mcc: mean"
+MODELS_NO_CONTEXT = ["majority_classifier", "human_annotators"]
 
 
 def create_results_table_model_comparison(results, context_length=1):
     print("\n\nMODEL COMPARISON:")
 
-    results_context_length = results[results.context_length == context_length].copy()
-
+    results_context_length = results[(results.context_length == context_length) | results.model.isin(MODELS_NO_CONTEXT)].copy()
+    results_context_length.sort_values(by="mcc: mean", inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
     # print("\n\n\n")
     # print(results.to_latex(float_format="%.2f", index=False))
@@ -34,8 +35,8 @@ def main():
 
     create_results_table_model_comparison(results, best_context_length)
 
-    print("\n\nALL RESULTS:")
-    print(results.to_markdown(index=False, floatfmt=".2f"))
+    # print("\n\nALL RESULTS:")
+    # print(results.to_markdown(index=False, floatfmt=".2f"))
 
 
 

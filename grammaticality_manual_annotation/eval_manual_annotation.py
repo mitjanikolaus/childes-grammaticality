@@ -11,7 +11,7 @@ import pandas as pd
 from krippendorff import krippendorff
 from sklearn.metrics import cohen_kappa_score, matthews_corrcoef
 
-from utils import PROJECT_ROOT_DIR
+from utils import PROJECT_ROOT_DIR, RESULTS_DIR, RESULTS_FILE
 
 import warnings
 # Ignore pandas CSV writing warnings
@@ -109,6 +109,18 @@ def eval(args):
     rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
     alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
     print(f"Krippendorff's Alpha: {alpha:.2f}")
+
+    results_df = pd.DataFrame([{"model": "human_annotators", "mcc: mean": np.mean(mcc_scores), "mcc: std": np.std(mcc_scores),
+                                "context_length": 0}])
+    results_df.set_index(["model", "context_length"], inplace=True)
+
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+    if not os.path.isfile(RESULTS_FILE):
+        results_df.to_csv(RESULTS_FILE)
+    else:
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length"])
+        results_df = results_df.combine_first(old_res_file)
+        results_df.to_csv(RESULTS_FILE)
 
 
 def eval_disagreement():
