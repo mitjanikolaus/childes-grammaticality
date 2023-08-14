@@ -203,7 +203,7 @@
 9029,Thomas/021005.cha,CHI,my train driver man.,-1,
 9030,Thomas/021005.cha,CAR,well I went to the baker's in Heaton Mersey and got some sausage rolls for our lunch.,,
 9031,Thomas/021005.cha,CHI,thanks.,,
-9032,Thomas/021005.cha,CHI,that's my my train driver dinner.,0,native?
+9032,Thomas/021005.cha,CHI,that's my my train driver dinner.,1,
 9033,Thomas/021005.cha,CAR,it is.,,
 9034,Thomas/021005.cha,CAR,would you like some coleslaw with that?,,
 9035,Thomas/021005.cha,CHI,um no.,1,
@@ -347,7 +347,7 @@
 9173,Thomas/021005.cha,CAR,ah.,,
 9174,Thomas/021005.cha,CHI,yeah.,,
 9175,Thomas/021005.cha,CHI,what's this?,1,
-9176,Thomas/021005.cha,CHI,where's my boxes?,0,native?
+9176,Thomas/021005.cha,CHI,where's my boxes?,0,
 9177,Thomas/021005.cha,CAR,yes.,,
 9178,Thomas/021005.cha,CAR,what are we going to do with all your boxes?,,
 9179,Thomas/021005.cha,CHI,put them in shapes.,1,
@@ -521,7 +521,7 @@
 9347,Thomas/021005.cha,CHI,yeah.,,
 9348,Thomas/021005.cha,CAR,that taste really good?,,
 9349,Thomas/021005.cha,CHI,mhm.,,
-9350,Thomas/021005.cha,CHI,yes it is.,0,native?
+9350,Thomas/021005.cha,CHI,yes it is.,1,
 9351,Thomas/021005.cha,CAR,I think you're enjoying the tomato sauce as well aren't you?,,
 9352,Thomas/021005.cha,CHI,yes.,,
 9353,Thomas/021005.cha,CHI,oh look.,1,
@@ -874,7 +874,7 @@
 9700,Thomas/021005.cha,CAR,yes.,,
 9701,Thomas/021005.cha,CHI,and I not seen a big bear.,-1,
 9702,Thomas/021005.cha,CHI,Mummy.,,
-9703,Thomas/021005.cha,CHI,a big bear has eaten Mummy all up.,1,native?
+9703,Thomas/021005.cha,CHI,a big bear has eaten Mummy all up.,1,
 9704,Thomas/021005.cha,CAR,oh.,,
 9705,Thomas/021005.cha,CAR,well yes.,,
 9706,Thomas/021005.cha,CAR,you could tell the policeman if a big bear ate Mummy all up.,,

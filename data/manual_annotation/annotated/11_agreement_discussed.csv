@@ -216,8 +216,8 @@
 10023,Lara/020316.cha,CAR,have you done it?,,
 10024,Lara/020316.cha,CHI,mhm.,,
 10025,Lara/020316.cha,CAR,good.,,
-10026,Lara/020316.cha,CHI,this can't fit on.,0,native?
-10027,Lara/020316.cha,CHI,this one can't fit on.,0,native?
+10026,Lara/020316.cha,CHI,this can't fit on.,-1,
+10027,Lara/020316.cha,CHI,this one can't fit on.,-1,
 10028,Lara/020316.cha,CAR,doesn't fit on?,,
 10029,Lara/020316.cha,CAR,that's right.,,
 10030,Lara/020316.cha,CAR,what about some dinner?,,
@@ -519,7 +519,7 @@
 10326,Braunwald/0diary/020523.cha,CAR,yes.,,
 10327,Braunwald/0diary/020523.cha,CHI,"I'm sorry I made poo in my pants, I am.",-1,
 10328,Braunwald/0diary/020523.cha,CAR,okay.,,
-10329,Braunwald/0diary/020523.cha,CHI,I smell hamburger cooking.,0,native?
+10329,Braunwald/0diary/020523.cha,CHI,I smell hamburger cooking.,1,
 10330,Braunwald/0diary/020523.cha,CAR,you should.,,
 10331,Braunwald/0diary/020523.cha,CHI,I do.,1,
 10332,Braunwald/0diary/020523.cha,CHI,when it's morning time then we eat our food.,1,

@@ -222,7 +222,7 @@
 7511,Thomas/020924.cha,CAR,is she?,,
 7512,Thomas/020924.cha,CAR,oh yes.,,
 7513,Thomas/020924.cha,CAR,she's coming a bit nearer isn't she?,,
-7514,Thomas/020924.cha,CHI,it's going meow.,0,native?
+7514,Thomas/020924.cha,CHI,it's going meow.,1,
 7515,Thomas/020924.cha,CAR,yes.,,
 7516,Thomas/020924.cha,CAR,she went meow.,,
 7517,Thomas/020924.cha,CAR,she perhaps wants to go outside but she's maybe a little bit nervous because we're sitting here.,,
@@ -743,7 +743,7 @@
 8032,Kuczaj/030906.cha,CHI,are you going to get me some new milk?,1,
 8033,Kuczaj/030906.cha,CAR,I will.,,
 8034,Kuczaj/030906.cha,CAR,let me wipe this up first okay?,,
-8035,Kuczaj/030906.cha,CHI,okay how did it get to over there?,0,native?
+8035,Kuczaj/030906.cha,CHI,okay how did it get to over there?,1,
 8036,Kuczaj/030906.cha,CAR,because when it fell it fell all over.,,
 8037,Kuczaj/030906.cha,CHI,was it a big one too?,1,
 8038,Kuczaj/030906.cha,CAR,yep.,,
@@ -776,14 +776,14 @@
 8065,Kuczaj/030906.cha,CHI,okay except are you going to get me new milk?,1,
 8066,Kuczaj/030906.cha,CAR,yeah I'm not going to cut it.,,
 8067,Kuczaj/030906.cha,CAR,because this bread is shaped differently.,,
-8068,Kuczaj/030906.cha,CHI,how how do you know it's shaped different?,0,native?
+8068,Kuczaj/030906.cha,CHI,how how do you know it's shaped different?,1,
 8069,Kuczaj/030906.cha,CAR,because I can see it.,,
 8070,Kuczaj/030906.cha,CHI,I can't see it.,1,
 8071,Kuczaj/030906.cha,CHI,is it square?,1,
 8072,Kuczaj/030906.cha,CAR,no it's round.,,
 8073,Kuczaj/030906.cha,CAR,but it's not very big.,,
 8074,Kuczaj/030906.cha,CHI,did you cut it?,1,
-8075,Kuczaj/030906.cha,CHI,did you cut it round?,1,native?
+8075,Kuczaj/030906.cha,CHI,did you cut it round?,1,
 8076,Kuczaj/030906.cha,CAR,that's the way the loaf is shaped.,,
 8077,Kuczaj/030906.cha,CAR,the loaf is round.,,
 8078,Kuczaj/030906.cha,CHI,Daddy.,,
