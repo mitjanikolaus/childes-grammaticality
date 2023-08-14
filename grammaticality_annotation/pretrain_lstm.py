@@ -55,10 +55,12 @@ class CHILDESLMDataset(Dataset):
         while idx < len(self.data) and transcript == self.data.iloc[idx]["transcript_file"]:
             if len(sentence + self.data.iloc[idx]["sentence"] + TOKEN_EOS) < MAX_SEQ_LENGTH:
                 sentence = sentence + self.data.iloc[idx]["sentence"]
+            else:
+                break
             idx += 1
 
         sentence = sentence + TOKEN_EOS
-        assert len(sentence) <= MAX_SEQ_LENGTH
+        sentence = sentence[:MAX_SEQ_LENGTH]
 
         return sentence
 
