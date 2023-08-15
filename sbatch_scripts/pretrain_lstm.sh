@@ -43,6 +43,8 @@ set -x
 # Tell HF not to look for models online
 TRANSFORMERS_OFFLINE=1
 
+TOKENIZERS_PARALLELISM=false
+
 # Code execution
 
 # Debugging:

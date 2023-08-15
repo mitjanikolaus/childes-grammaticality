@@ -44,8 +44,8 @@ set -x
 TRANSFORMERS_OFFLINE=1
 
 # Code execution
-model=roberta-large	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
-context_length=5
+model=microsoft/deberta-v3-large	#microsoft/deberta-v3-base	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
+context_length=4
 
 # Debugging:
 # export CUDA_LAUNCH_BLOCKING=1
