@@ -7,6 +7,7 @@ import numpy as np
 import torch
 from datasets import Dataset, DatasetDict, load_dataset
 from sklearn.utils import class_weight
+from sklearn.model_selection import train_test_split
 
 from grammaticality_annotation.prepare_hiller_fernandez_data import HILLER_FERNANDEZ_DATA_OUT_PATH
 from pytorch_lightning import LightningDataModule
@@ -20,7 +21,7 @@ DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babybert
 
 DATA_SPLIT_RANDOM_STATE = 8
 
-DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
+DATA_PATH_CHILDES_ANNOTATED = os.path.expanduser(os.path.join("~", "data", "coherence"))
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
@@ -38,22 +39,22 @@ def speaker_code_to_speaker_token(code):
     raise RuntimeError("Unknown speaker code: ", code)
 
 
-def train_test_split(data, test_split_size, random_seed=DATA_SPLIT_RANDOM_STATE):
+def get_train_test_split(data, test_split_size, random_seed=DATA_SPLIT_RANDOM_STATE):
     # Make sure that test and train split do not contain data from the same transcripts
-    if isinstance(test_split_size, float):
-        train_data_size = int(len(data) * (1 - test_split_size))
-    else:
-        train_data_size = len(data) - test_split_size
-    transcript_files = data.transcript_file.unique()
+    # if isinstance(test_split_size, float):
+    #     train_data_size = int(len(data) * (1 - test_split_size))
+    # else:
+    #     train_data_size = len(data) - test_split_size
+    # transcript_files = data.transcript_file.unique()
     random.seed(random_seed)
-    random.shuffle(transcript_files)
-    transcript_files = iter(transcript_files)
-    data_train = pd.DataFrame()
+    # random.shuffle(transcript_files)
+    # transcript_files = iter(transcript_files)
+    data_train, data_test = train_test_split(data, test_size=test_split_size)
     # Append transcripts until we have the approximate train data size.
-    while len(data_train) < train_data_size:
-        data_train = pd.concat([data_train, data[data.transcript_file == next(transcript_files)]])
+    # while len(data_train) < train_data_size:
+    #     data_train = pd.concat([data_train, data[data.transcript_file == next(transcript_files)]])
 
-    data_test = data[~data.index.isin(data_train.index)].copy()
+    # data_test = data[~data.index.isin(data_train.index)].copy()
 
     assert (len(set(data_train.index) & set(data_test.index)) == 0)
 
@@ -62,14 +63,14 @@ def train_test_split(data, test_split_size, random_seed=DATA_SPLIT_RANDOM_STATE)
 
 def load_annotated_childes_data(path):
     transcripts = []
-    for f in Path(path).glob("*.csv"):
+    for f in Path(path).glob("*.json"):
         if os.path.isfile(f):
-            transcripts.append(pd.read_csv(f, index_col=0))
+            transcripts.append(pd.read_json(f))
 
     transcripts = pd.concat(transcripts, ignore_index=True)
-    transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
-    transcripts["sentence"] = transcripts.apply(lambda row: row.speaker_code + row.transcript_clean,
-                                                    axis=1).values
+    # transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
+    # transcripts["sentence"] = transcripts.apply(lambda row: row.speaker_code + row.transcript_clean,
+    #                                                 axis=1).values
     return transcripts
 
 
@@ -77,15 +78,16 @@ def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.
     transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
-        sentence = row.sentence
-        for j in range(1, context_length+1):
-            if i-j in transcripts.index:
-                context_sentence = transcripts.loc[i-j].sentence
-                sentence = context_sentence + sentence
+        # TODO: put correct speaker code!
+        sentence = row.context +  TOKEN_SPEAKER_CHILD + row.turn
+        # for j in range(1, context_length+1):
+        #     if i-j in transcripts.index:
+        #         context_sentence = transcripts.loc[i-j].sentence
+        #         sentence = context_sentence + sentence
         data.append({
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
-            TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
+            # TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
         })
     data = pd.DataFrame.from_records(data)
 
@@ -94,7 +96,7 @@ def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.
 
     print("Dataset size: ", len(data))
     if test_split_proportion:
-        return train_test_split(data, test_split_proportion, random_seed)
+        return get_train_test_split(data, test_split_proportion, random_seed)
     else:
         return data
 
@@ -177,7 +179,7 @@ def create_dataset_dict(train_datasets, test_split_proportion, context_length, r
 
     data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed)
     if create_val_split:
-        data_manual_annotations_train, data_manual_annotations_val = train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
+        data_manual_annotations_train, data_manual_annotations_val = get_train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
         ds_val = Dataset.from_pandas(data_manual_annotations_val)
         dataset_dict["validation"] = ds_val
 

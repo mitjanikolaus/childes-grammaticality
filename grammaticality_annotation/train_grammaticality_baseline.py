@@ -8,7 +8,7 @@ import nltk
 import pandas as pd
 from pytorch_lightning import Trainer
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix, cohen_kappa_score, matthews_corrcoef
+from sklearn.metrics import confusion_matrix, cohen_kappa_score, matthews_corrcoef, f1_score
 from transformers import (
     PreTrainedTokenizerFast,
 )
@@ -16,7 +16,7 @@ from sklearn.svm import SVC, LinearSVC
 
 from grammaticality_annotation.data import create_dataset_dict
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
-    train_tokenizer, TOKENIZERS_DIR, TEXT_FIELD
+    train_tokenizer, TOKENIZERS_DIR, TEXT_FIELD, LABEL_FIELD
 from utils import RESULTS_DIR, RESULTS_FILE
 
 RANDOM_STATE = 1
@@ -58,9 +58,11 @@ def main(args):
     predictions = np.array([])
     accuracies = []
     mccs = []
+    f1s = []
 
     maj_class_accuracies = []
     maj_class_mccs = []
+    maj_class_f1s = []
 
     random_seeds = range(args.num_cv_folds)
     for random_seed in random_seeds:
@@ -84,16 +86,19 @@ def main(args):
 
         print("Train dataset size: ", len(data_train))
         print("Test dataset size: ", len(data_test))
-        counter = Counter(data_train["is_grammatical"])
+        counter = Counter(data_train[LABEL_FIELD])
         print("Label counts: ", counter)
         most_common_label = counter.most_common()[0][0]
 
-        labels = np.array(data_test["is_grammatical"])
+        labels = np.array(data_test[LABEL_FIELD])
         maj_class_acc = np.mean(labels == most_common_label)
         maj_class_accuracies.append(maj_class_acc)
 
         maj_class_mcc = matthews_corrcoef(labels, np.repeat(most_common_label, len(labels)))
         maj_class_mccs.append(maj_class_mcc)
+
+        maj_class_f1 = f1_score(labels, np.repeat(most_common_label, len(labels)), average="weighted")
+        maj_class_f1s.append(maj_class_f1)
 
         if args.model == "svc":
             clf = SVC(random_state=RANDOM_STATE, class_weight="balanced")
@@ -105,7 +110,7 @@ def main(args):
             raise RuntimeError("Unknown model: ", args.model)
 
         print("Training model.. ", end="")
-        clf.fit(data_train["features"], data_train["is_grammatical"])
+        clf.fit(data_train["features"], data_train[LABEL_FIELD])
         print("Done.\n")
 
         preds = clf.predict(data_test["features"])
@@ -121,12 +126,21 @@ def main(args):
         mccs.append(mcc)
         print("MCC: ", mcc)
 
+        f1 = f1_score(labels, preds, average="weighted")
+        f1s.append(f1)
+        print("F1: ", f1)
+
     print(f"==================================\n"
           f"Majority Classifier Accuracy: {np.mean(maj_class_accuracies):.2f} Stddev: {np.std(maj_class_accuracies):.2f}")
+
+    print(f"==================================\n"
+          f"Majority Classifier F1: {np.mean(maj_class_f1s):.2f} Stddev: {np.std(maj_class_f1s):.2f}")
 
     print(f"Classifier Accuracy: {np.mean(accuracies):.2f} Stddev: {np.std(accuracies):.2f}")
 
     print(f"Classifier MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
+
+    print(f"Classifier F1: {np.mean(f1s):.2f} Stddev: {np.std(f1s):.2f}")
 
     cm = confusion_matrix(test_labels, predictions, normalize="true")
     print("Confusion matrix: \n", cm)
@@ -183,7 +197,7 @@ def parse_args():
     argparser.add_argument(
         "--num-cv-folds",
         type=int,
-        default=3,
+        default=10,
         help="Number of cross-validation folds"
     )
     argparser = Trainer.add_argparse_args(argparser)

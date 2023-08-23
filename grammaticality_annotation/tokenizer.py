@@ -8,7 +8,7 @@ from tokenizers.trainers import BpeTrainer
 
 from utils import PROJECT_ROOT_DIR
 
-TOKENIZERS_DIR = PROJECT_ROOT_DIR+"/data/tokenizers/"
+TOKENIZERS_DIR = PROJECT_ROOT_DIR+"/data/tokenizers_coherence/"
 
 TOKEN_PAD = "[PAD]"
 TOKEN_EOS = "[EOS]"
@@ -19,7 +19,7 @@ TOKEN_SPEAKER_CHILD = "[CHI]"
 TOKEN_SPEAKER_CAREGIVER = "[CAR]"
 
 TEXT_FIELD = "transcript"
-LABEL_FIELD = "is_grammatical"
+LABEL_FIELD = "annotation"
 TRANSCRIPT_FIELD = "transcript_file"
 
 VOCAB_SIZE = 10000

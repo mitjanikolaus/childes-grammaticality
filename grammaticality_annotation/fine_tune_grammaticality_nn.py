@@ -66,7 +66,9 @@ class CHILDESGrammarModel(LightningModule):
 
         self.metric_mcc = evaluate.load("matthews_correlation")
         self.metric_acc = evaluate.load("accuracy")
-        self.metrics = [self.metric_mcc, self.metric_acc]
+        self.metric_f1 = evaluate.load("f1")
+
+        self.metrics = [self.metric_mcc, self.metric_acc, self.metric_f1]
 
         weight = torch.tensor(class_weights)
         self.loss_fct = CrossEntropyLoss(weight=weight)
@@ -127,7 +129,10 @@ class CHILDESGrammarModel(LightningModule):
 
         self.log(f"val_loss", loss, prog_bar=True)
         for metric in self.metrics:
-            metric_results = metric.compute(predictions=preds, references=labels)
+            if metric == self.metric_f1:
+                metric_results = metric.compute(predictions=preds, references=labels, average="weighted")
+            else:
+                metric_results = metric.compute(predictions=preds, references=labels)
             metric_results = {"val_" + key: value for key, value in metric_results.items()}
 
             self.log_dict(metric_results, prog_bar=True)
@@ -139,7 +144,10 @@ class CHILDESGrammarModel(LightningModule):
 
         self.log(f"test_loss", loss, prog_bar=True)
         for metric in self.metrics:
-            metric_results = metric.compute(predictions=preds, references=labels)
+            if metric == self.metric_f1:
+                metric_results = metric.compute(predictions=preds, references=labels, average="weighted")
+            else:
+                metric_results = metric.compute(predictions=preds, references=labels)
             metric_results = {"test_" + key: value for key, value in metric_results.items()}
 
             self.log_dict(metric_results, prog_bar=True)
@@ -276,6 +284,9 @@ def main(args):
 
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
+    f1s = [results["test_f1"] for results in test_results]
+    print(f"F1: {np.mean(f1s):.2f} Stddev: {np.std(f1s):.2f}")
+
     results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "context_length": args.context_length}])
     results_df.set_index(["model", "context_length"], inplace=True)
 
@@ -327,7 +338,7 @@ def parse_args():
     argparser.add_argument(
         "--num-cv-folds",
         type=int,
-        default=3,
+        default=10,
         help="Number of cross-validation folds"
     )
     argparser.add_argument(
