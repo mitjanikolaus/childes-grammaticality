@@ -15,7 +15,7 @@ def create_results_table_model_comparison(results, context_length=1):
     # print(results.to_latex(float_format="%.2f", index=False))
 
 
-def create_results_table_context_lengths(results, model="roberta-large"):
+def create_results_table_context_lengths(results, model="microsoft/deberta-v3-large"):
     print("\n\nEXP CONTEXT LENGTHS:")
 
     results_model = results[results.model == model].copy()
