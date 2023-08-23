@@ -1,4 +1,4 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 6173,EllisWeismer/LT/30pc/22142.cha,CAR,oh look.,,
 6174,EllisWeismer/LT/30pc/22142.cha,CAR,what's this?,,
 6175,EllisWeismer/LT/30pc/22142.cha,CHI,I don't know.,1,
@@ -94,12 +94,12 @@
 6265,Gelman/2004-Gender/26.cha,CHI,girl.,,
 6266,Gelman/2004-Gender/26.cha,CAR,girl.,,
 6267,Gelman/2004-Gender/26.cha,CAR,"see, this is her room, and this is a door.",,
-6268,Gelman/2004-Gender/26.cha,CHI,this is a door?,1,clarification
+6268,Gelman/2004-Gender/26.cha,CHI,this is a door?,1,
 6269,Gelman/2004-Gender/26.cha,CAR,"well, it looked like a door.",,
 6270,Gelman/2004-Gender/26.cha,CAR,here's the door.,,
 6271,Gelman/2004-Gender/26.cha,CAR,I don't know what that is.,,
 6272,Gelman/2004-Gender/26.cha,CAR,she's.,,
-6273,Gelman/2004-Gender/26.cha,CHI,that's the roof.,1,pointing
+6273,Gelman/2004-Gender/26.cha,CHI,that's the roof.,1,
 6274,Gelman/2004-Gender/26.cha,CAR,"oh, I see.",,
 6275,Gelman/2004-Gender/26.cha,CAR,she's putting.,,
 6276,Gelman/2004-Gender/26.cha,CHI,that's.,,
@@ -111,7 +111,7 @@
 6282,Gelman/2004-Gender/26.cha,CAR,it says paint bucket?,,
 6283,Gelman/2004-Gender/26.cha,CAR,with red paint.,,
 6284,Gelman/2004-Gender/26.cha,CHI,hey mom?,1,
-6285,Gelman/2004-Gender/26.cha,CHI,this is where all the snow.,-1,maybe interrupted
+6285,Gelman/2004-Gender/26.cha,CHI,this is where all the snow.,-1,verb
 6286,Gelman/2004-Gender/26.cha,CAR,oh.,,
 6287,Gelman/2004-Gender/26.cha,CAR,what's this?,,
 6288,Gelman/2004-Gender/26.cha,CHI,I don't know.,1,
@@ -130,7 +130,7 @@
 6301,Gelman/2004-Gender/26.cha,CAR,what?,,
 6302,Gelman/2004-Gender/26.cha,CHI,"um, I don't know.",1,
 6303,Gelman/2004-Gender/26.cha,CAR,boat.,,
-6304,Gelman/2004-Gender/26.cha,CHI,a boat.,1,repetition
+6304,Gelman/2004-Gender/26.cha,CHI,a boat.,1,
 6305,Gelman/2004-Gender/26.cha,CAR,mhm.,,
 6306,Gelman/2004-Gender/26.cha,CAR,see this?,,
 6307,Gelman/2004-Gender/26.cha,CAR,"remember on the Muppet Treasure Island, there's that wheel, and that's what they use to to steer the boat.",,
@@ -206,7 +206,7 @@
 6377,Thomas/020924.cha,CAR,there's Stephen.,,
 6378,Thomas/020924.cha,CAR,look.,,
 6379,Thomas/020924.cha,CAR,getting into his car.,,
-6380,Thomas/020924.cha,CHI,in his van.,1,correction?
+6380,Thomas/020924.cha,CHI,in his van.,1,
 6381,Thomas/020924.cha,CAR,perhaps he has been putting some parcels in his van because he does that doesn't he?,,
 6382,Thomas/020924.cha,CAR,lots of big lorrys drop parcels off at Stephen's house and then he loads them into his car and delivers them to other people.,,
 6383,Thomas/020924.cha,CAR,Sue's at home today.,,
@@ -216,14 +216,14 @@
 6387,Thomas/020924.cha,CAR,oh mind you she's home most afternoons.,,
 6388,Thomas/020924.cha,CAR,I'm forgetting it's.,,
 6389,Thomas/020924.cha,CAR,she has perhaps been to work this morning and she's home now.,,
-6390,Thomas/020924.cha,CHI,my snake.,0,pointing
+6390,Thomas/020924.cha,CHI,my snake.,0,
 6391,Thomas/020924.cha,CAR,you're a snake.,,
 6392,Thomas/020924.cha,CHI,um.,,
-6393,Thomas/020924.cha,CHI,a snake lying on a bed.,1,pointing
-6394,Thomas/020924.cha,CHI,I lying on.,-1,
+6393,Thomas/020924.cha,CHI,a snake lying on a bed.,1,
+6394,Thomas/020924.cha,CHI,I lying on.,-1,"auxiliary, object"
 6395,Thomas/020924.cha,CHI,oh.,,
 6396,Thomas/020924.cha,CAR,what's this?,,
-6397,Thomas/020924.cha,CHI,Thomas The Tank Engine story.,1,title
+6397,Thomas/020924.cha,CHI,Thomas The Tank Engine story.,1,
 6398,Thomas/020924.cha,CAR,Thomas The Tank Engine story.,,
 6399,Thomas/020924.cha,CAR,"well this isn't really a Thomas The Tank Engine story, Thomas.",,
 6400,Thomas/020924.cha,CAR,this is more a learning book.,,
@@ -236,10 +236,10 @@
 6407,Thomas/020924.cha,CAR,yes.,,
 6408,Thomas/020924.cha,CAR,trains.,,
 6409,Thomas/020924.cha,CAR,absolutely.,,
-6410,Thomas/020924.cha,CHI,and I want lots of ones.,-1,
+6410,Thomas/020924.cha,CHI,and I want lots of ones.,-1,determiner
 6411,Thomas/020924.cha,CHI,and lots and lots of trains.,1,
 6412,Thomas/020924.cha,CAR,yes.,,
-6413,Thomas/020924.cha,CHI,just two.,0,completion?
+6413,Thomas/020924.cha,CHI,just two.,0,
 6414,Thomas/020924.cha,CAR,just two.,,
 6415,Thomas/020924.cha,CHI,two.,,
 6416,Thomas/020924.cha,CAR,yes.,,
@@ -275,7 +275,7 @@
 6446,Thomas/020924.cha,CAR,oh Toby.,,
 6447,Thomas/020924.cha,CAR,I thought you said Purdie.,,
 6448,Thomas/020924.cha,CAR,ah.,,
-6449,Thomas/020924.cha,CHI,got got two engines.,-1,208 for me
+6449,Thomas/020924.cha,CHI,got got two engines.,-1,subject
 6450,Thomas/020924.cha,CAR,shall we have a look then at this book?,,
 6451,Thomas/020924.cha,CHI,oh there's a lot of engines on.,0,
 6452,Thomas/020924.cha,CAR,why don't you sit on your chair?,,
@@ -317,7 +317,7 @@
 6488,Thomas/020924.cha,CHI,yes.,,
 6489,Thomas/020924.cha,CAR,well Donald and Douglas look at sort of greyie black color but James is nice and bright.,,
 6490,Thomas/020924.cha,CAR,he's red isn't he?,,
-6491,Thomas/020924.cha,CHI,lots of coal.,0,pointing
+6491,Thomas/020924.cha,CHI,lots of coal.,0,
 6492,Thomas/020924.cha,CHI,lots of coal.,0,
 6493,Thomas/020924.cha,CHI,lots of coal.,0,
 6494,Thomas/020924.cha,CHI,lots of coal.,0,
@@ -342,7 +342,7 @@
 6513,Thomas/020924.cha,CAR,but Donald and Douglas look to me as if they carry a lot of coal.,,
 6514,Thomas/020924.cha,CHI,lot.,,
 6515,Thomas/020924.cha,CAR,a lot of coal.,,
-6516,Thomas/020924.cha,CHI,lots of coal.,1,repetition
+6516,Thomas/020924.cha,CHI,lots of coal.,1,
 6517,Thomas/020924.cha,CAR,can you see all the numbers on them?,,
 6518,Thomas/020924.cha,CAR,let's count.,,
 6519,Thomas/020924.cha,CAR,number one is.,,
@@ -412,29 +412,29 @@
 6583,Thomas/020924.cha,CHI,hm.,,
 6584,Thomas/020924.cha,CAR,and when Thomas got stuck in the snow who came to pull him out?,,
 6585,Thomas/020924.cha,CAR,the twins.,,
-6586,Thomas/020924.cha,CHI,big man.,-1,"pointing, no det"
-6587,Thomas/020924.cha,CHI,big wagon.,-1,pointing
+6586,Thomas/020924.cha,CHI,big man.,-1,determiner
+6587,Thomas/020924.cha,CHI,big wagon.,-1,determiner
 6588,Thomas/020924.cha,CAR,big wagons.,,
 6589,Thomas/020924.cha,CAR,Douglas and Donald.,,
 6590,Thomas/020924.cha,CAR,so number eight is Duck.,,
 6591,Thomas/020924.cha,CAR,number nine is Donald and number ten is Douglas.,,
 6592,Thomas/020924.cha,CAR,so we've got ten engines.,,
 6593,Thomas/020924.cha,CAR,one two three four five six seven eight nine ten.,,
-6594,Thomas/020924.cha,CHI,lots of engines.,0,pointing
+6594,Thomas/020924.cha,CHI,lots of engines.,0,
 6595,Thomas/020924.cha,CAR,lots of engines.,,
 6596,Thomas/020924.cha,CAR,how many blue ones are there?,,
-6597,Thomas/020924.cha,CHI,I not know.,-1,
+6597,Thomas/020924.cha,CHI,I not know.,-1,auxiliary
 6598,Thomas/020924.cha,CAR,one.,,
-6599,Thomas/020924.cha,CHI,two three.,0,completion
-6600,Thomas/020924.cha,CHI,lots of blue.,0,pointing
+6599,Thomas/020924.cha,CHI,two three.,0,
+6600,Thomas/020924.cha,CHI,lots of blue.,0,
 6601,Thomas/020924.cha,CAR,three blue engines.,,
 6602,Thomas/020924.cha,CAR,how many green engines are there?,,
-6603,Thomas/020924.cha,CHI,blue green.,0,pointing
+6603,Thomas/020924.cha,CHI,blue green.,0,
 6604,Thomas/020924.cha,CHI,green.,,
 6605,Thomas/020924.cha,CAR,green and green.,,
 6606,Thomas/020924.cha,CAR,that's three greens.,,
 6607,Thomas/020924.cha,CAR,and how many grey engines are there?,,
-6608,Thomas/020924.cha,CHI,round circle.,-1,no det
+6608,Thomas/020924.cha,CHI,round circle.,-1,determiner
 6609,Thomas/020924.cha,CAR,one and two.,,
 6610,Thomas/020924.cha,CAR,how many red engines are there?,,
 6611,Thomas/020924.cha,CHI,one.,,
@@ -447,17 +447,17 @@
 6618,Thomas/020924.cha,CAR,I can see Bertie.,,
 6619,Thomas/020924.cha,CAR,Bertie and James are red aren't they?,,
 6620,Thomas/020924.cha,CHI,yes.,,
-6621,Thomas/020924.cha,CHI,James putting the animals.,-1,
+6621,Thomas/020924.cha,CHI,James putting the animals.,-1,auxiliary
 6622,Thomas/020924.cha,CHI,giraffe.,,
-6623,Thomas/020924.cha,CHI,the big lion.,0,pointing
+6623,Thomas/020924.cha,CHI,the big lion.,0,
 6624,Thomas/020924.cha,CAR,yes.,,
 6625,Thomas/020924.cha,CAR,James is carrying a big animal.,,
 6626,Thomas/020924.cha,CAR,it's a giraffe.,,
 6627,Thomas/020924.cha,CAR,this is a picture about the zoo.,,
-6628,Thomas/020924.cha,CHI,um big lion.,-1,pointing
+6628,Thomas/020924.cha,CHI,um big lion.,-1,determiner
 6629,Thomas/020924.cha,CAR,there's a big lion isn't there?,,
 6630,Thomas/020924.cha,CHI,no.,,
-6631,Thomas/020924.cha,CHI,big elephant.,-1,pointing
+6631,Thomas/020924.cha,CHI,big elephant.,-1,determiner
 6632,Thomas/020924.cha,CAR,yes.,,
 6633,Thomas/020924.cha,CAR,well it says Henry found this animal in his tunnel.,,
 6634,Thomas/020924.cha,CAR,what is it?,,
@@ -468,14 +468,14 @@
 6639,Thomas/020924.cha,CAR,what animal is it?,,
 6640,Thomas/020924.cha,CAR,and you're right.,,
 6641,Thomas/020924.cha,CAR,you said a lion.,,
-6642,Thomas/020924.cha,CHI,a lion.,1,pointing
+6642,Thomas/020924.cha,CHI,a lion.,1,
 6643,Thomas/020924.cha,CAR,do you know what this is?,,
 6644,Thomas/020924.cha,CHI,um.,,
 6645,Thomas/020924.cha,CAR,black and white and it eats bamboo shoots.,,
-6646,Thomas/020924.cha,CHI,bamboo shoots.,1,repetition
+6646,Thomas/020924.cha,CHI,bamboo shoots.,1,
 6647,Thomas/020924.cha,CHI,oh yes.,1,
 6648,Thomas/020924.cha,CAR,that's a panda.,,
-6649,Thomas/020924.cha,CHI,um Bertie.,0,pointing
+6649,Thomas/020924.cha,CHI,um Bertie.,0,
 6650,Thomas/020924.cha,CAR,Bertie the bus.,,
 6651,Thomas/020924.cha,CAR,what's sitting on the front front of Bertie bus on the radiator?,,
 6652,Thomas/020924.cha,CHI,um um a monkey.,1,
@@ -483,13 +483,13 @@
 6654,Thomas/020924.cha,CAR,ah and you know what this is.,,
 6655,Thomas/020924.cha,CHI,yes.,,
 6656,Thomas/020924.cha,CAR,it's that.,,
-6657,Thomas/020924.cha,CHI,big crocodile.,0,no det
+6657,Thomas/020924.cha,CHI,big crocodile.,0,
 6658,Thomas/020924.cha,CAR,a big crocodile.,,
 6659,Thomas/020924.cha,CAR,what does the crocodile say?,,
 6660,Thomas/020924.cha,CAR,I bet the crocodile snap.,,
 6661,Thomas/020924.cha,CHI,snap.,,
 6662,Thomas/020924.cha,CAR,snap went the crocodile.,,
-6663,Thomas/020924.cha,CHI,oh dear me.,1,native?
+6663,Thomas/020924.cha,CHI,oh dear me.,1,
 6664,Thomas/020924.cha,CAR,oh dear me.,,
 6665,Thomas/020924.cha,CAR,because we know a song about a monkey and a crocodile don't we?,,
 6666,Thomas/020924.cha,CAR,shall we do it?,,
@@ -499,7 +499,7 @@
 6670,Thomas/020924.cha,CAR,well can Mummy do it?,,
 6671,Thomas/020924.cha,CHI,no.,,
 6672,Thomas/020924.cha,CHI,no.,,
-6673,Thomas/020924.cha,CHI,no no sing that.,0,not sure if imp
+6673,Thomas/020924.cha,CHI,no no sing that.,0,
 6674,Thomas/020924.cha,CAR,no sing that.,,
 6675,Thomas/020924.cha,CHI,no.,,
 6676,Thomas/020924.cha,CAR,alright.,,
@@ -509,7 +509,7 @@
 6680,Thomas/020924.cha,CAR,what's this?,,
 6681,Thomas/020924.cha,CAR,that looks Didsbury Park to me.,,
 6682,Thomas/020924.cha,CAR,what's going up the tree?,,
-6683,Thomas/020924.cha,CHI,Thomas very cross.,-1,
+6683,Thomas/020924.cha,CHI,Thomas very cross.,-1,"verb, other"
 6684,Thomas/020924.cha,CAR,why's Thomas The Tank Engine very cross?,,
 6685,Thomas/020924.cha,CAR,oh I know.,,
 6686,Thomas/020924.cha,CHI,yes.,,
@@ -519,7 +519,7 @@
 6690,Thomas/020924.cha,CHI,a big giraffe.,1,
 6691,Thomas/020924.cha,CAR,no.,,
 6692,Thomas/020924.cha,CAR,that's a.,,
-6693,Thomas/020924.cha,CHI,like a lion.,0,could be completion: it's like a lion
+6693,Thomas/020924.cha,CHI,like a lion.,0,
 6694,Thomas/020924.cha,CAR,it's like a lion but lion.,,
 6695,Thomas/020924.cha,CAR,that's the lion there with the big fluffy mane.,,
 6696,Thomas/020924.cha,CAR,this is like a lion but it has got stripes.,,
@@ -528,12 +528,12 @@
 6699,Thomas/020924.cha,CAR,that's right.,,
 6700,Thomas/020924.cha,CAR,you still haven't told me what this is.,,
 6701,Thomas/020924.cha,CHI,a monkey.,1,
-6702,Thomas/020924.cha,CHI,a big elephant in the in the tunnel.,1,answers 531
+6702,Thomas/020924.cha,CHI,a big elephant in the in the tunnel.,1,
 6703,Thomas/020924.cha,CAR,it's a big elephant in the tunnel.,,
 6704,Thomas/020924.cha,CAR,what's this climbing the tree?,,
 6705,Thomas/020924.cha,CHI,I don't know.,1,
 6706,Thomas/020924.cha,CAR,well I'm very surprised because you are always telling me that in the trees there are.,,
-6707,Thomas/020924.cha,CHI,big bears.,1,he figures out the question for 533
+6707,Thomas/020924.cha,CHI,big bears.,1,
 6708,Thomas/020924.cha,CAR,big bears.,,
 6709,Thomas/020924.cha,CAR,and that's the big brown bear.,,
 6710,Thomas/020924.cha,CAR,do you think Bertie the bus is taking passengers to the zoo?,,
@@ -541,11 +541,11 @@
 6712,Thomas/020924.cha,CAR,shapes.,,
 6713,Thomas/020924.cha,CAR,we're going to have a look at some shapes.,,
 6714,Thomas/020924.cha,CHI,uh look.,1,
-6715,Thomas/020924.cha,CHI,a moon.,0,pointing
+6715,Thomas/020924.cha,CHI,a moon.,0,
 6716,Thomas/020924.cha,CAR,a moon.,,
 6717,Thomas/020924.cha,CAR,that's a circle.,,
 6718,Thomas/020924.cha,CHI,look.,,
-6719,Thomas/020924.cha,CHI,fat controller waking up two two ears.,-1,
+6719,Thomas/020924.cha,CHI,fat controller waking up two two ears.,-1,"determiner, auxiliary, other"
 6720,Thomas/020924.cha,CAR,the fat controller's waking up.,,
 6721,Thomas/020924.cha,CHI,yes.,,
 6722,Thomas/020924.cha,CHI,two ears.,0,
@@ -560,35 +560,35 @@
 6731,Thomas/020924.cha,CHI,yes.,,
 6732,Thomas/020924.cha,CAR,but we'll just have a quick look now.,,
 6733,Thomas/020924.cha,CHI,no no.,1,
-6734,Thomas/020924.cha,CHI,I not looking this now.,-1,
+6734,Thomas/020924.cha,CHI,I not looking this now.,-1,"auxiliary, preposition"
 6735,Thomas/020924.cha,CAR,no.,,
 6736,Thomas/020924.cha,CAR,alright.,,
 6737,Thomas/020924.cha,CAR,we won't look at shapes now.,,
 6738,Thomas/020924.cha,CAR,let's see what's.,,
-6739,Thomas/020924.cha,CHI,want look at shapes.,-1,
+6739,Thomas/020924.cha,CHI,want look at shapes.,-1,"subject, tense_aspect, determiner"
 6740,Thomas/020924.cha,CAR,do you wanna look at some shapes?,,
 6741,Thomas/020924.cha,CHI,yes.,,
 6742,Thomas/020924.cha,CAR,ah this.,,
 6743,Thomas/020924.cha,CAR,oh this is an exciting page.,,
 6744,Thomas/020924.cha,CAR,this is all about.,,
-6745,Thomas/020924.cha,CHI,fire engine.,-1,pointing
+6745,Thomas/020924.cha,CHI,fire engine.,-1,determiner
 6746,Thomas/020924.cha,CAR,yes.,,
 6747,Thomas/020924.cha,CAR,this is a page about wheels.,,
-6748,Thomas/020924.cha,CHI,fire the fire engine the big football.,-1,
+6748,Thomas/020924.cha,CHI,fire the fire engine the big football.,-1,verb
 6749,Thomas/020924.cha,CAR,well that's not a big football.,,
 6750,Thomas/020924.cha,CAR,that's the headlamp on the fire engine.,,
 6751,Thomas/020924.cha,CAR,and as the fire engine's dashing to a fire it's going bebaa bebaa and the lights are flashing.,,
 6752,Thomas/020924.cha,CAR,it says.,,
 6753,Thomas/020924.cha,CAR,there's a fire on the line.,,
 6754,Thomas/020924.cha,CAR,how many firemen can you see?,,
-6755,Thomas/020924.cha,CHI,firemen fire.,-1,pointing to firemen and fire
+6755,Thomas/020924.cha,CHI,firemen fire.,-1,determiner
 6756,Thomas/020924.cha,CAR,and the man's there holding his fire hose isn't he?,,
 6757,Thomas/020924.cha,CAR,"do you know something, Thomas?",,
 6758,Thomas/020924.cha,CAR,Mummy's one of Mummy's cousins is a fire a fireman.,,
 6759,Thomas/020924.cha,CHI,um.,,
 6760,Thomas/020924.cha,CAR,she has got one cousin who's a fireman.,,
 6761,Thomas/020924.cha,CAR,another cousin who's a fire chief.,,
-6762,Thomas/020924.cha,CHI,the fire not again cross.,-1,
+6762,Thomas/020924.cha,CHI,the fire not again cross.,-1,verb
 6763,Thomas/020924.cha,CAR,who's very cross?,,
 6764,Thomas/020924.cha,CHI,Gordon.,,
 6765,Thomas/020924.cha,CAR,Gordon's very cross.,,
@@ -599,7 +599,7 @@
 6770,Thomas/020924.cha,CAR,because look.,,
 6771,Thomas/020924.cha,CAR,it says.,,
 6772,Thomas/020924.cha,CAR,there's a fire on the line.,,
-6773,Thomas/020924.cha,CHI,uh Gordon get a fright.,-1,
+6773,Thomas/020924.cha,CHI,uh Gordon get a fright.,-1,tense_aspect
 6774,Thomas/020924.cha,CAR,he's very frightened.,,
 6775,Thomas/020924.cha,CAR,he's very worried.,,
 6776,Thomas/020924.cha,CAR,uh there goes a white van.,,
@@ -607,7 +607,7 @@
 6778,Thomas/020924.cha,CHI,yes.,,
 6779,Thomas/020924.cha,CAR,how many firemen can you see?,,
 6780,Thomas/020924.cha,CAR,one two three four.,,
-6781,Thomas/020924.cha,CHI,fire a fire a fire on the line.,0,pointing
+6781,Thomas/020924.cha,CHI,fire a fire a fire on the line.,0,
 6782,Thomas/020924.cha,CAR,fire fire fire on the line.,,
 6783,Thomas/020924.cha,CAR,help help.,,
 6784,Thomas/020924.cha,CAR,fire!,,
@@ -623,10 +623,10 @@
 6794,Thomas/020924.cha,CAR,and Michael is in charge of a lot of fire engines and a lot of firemen at the station.,,
 6795,Thomas/020924.cha,CHI,yes.,,
 6796,Thomas/020924.cha,CAR,well we see we quite often see cousin Michael on the news when something has happened don't we?,,
-6797,Thomas/020924.cha,CHI,fire on there.,0,pointing
+6797,Thomas/020924.cha,CHI,fire on there.,0,
 6798,Thomas/020924.cha,CHI,fire on the track.,0,
 6799,Thomas/020924.cha,CAR,yes.,,
-6800,Thomas/020924.cha,CHI,Gordon get frightened.,-1,clearly not imp
+6800,Thomas/020924.cha,CHI,Gordon get frightened.,-1,tense_aspect
 6801,Thomas/020924.cha,CAR,oh yes.,,
 6802,Thomas/020924.cha,CAR,he's very frightened isn't he?,,
 6803,Thomas/020924.cha,CHI,oh.,,
@@ -636,7 +636,7 @@
 6807,Thomas/020924.cha,CAR,there are bicycles.,,
 6808,Thomas/020924.cha,CAR,bicycles have been left at the station.,,
 6809,Thomas/020924.cha,CAR,that's a car transporter.,,
-6810,Thomas/020924.cha,CHI,breakdown lorry.,-1,
+6810,Thomas/020924.cha,CHI,breakdown lorry.,-1,determiner
 6811,Thomas/020924.cha,CAR,a breakdown lorry.,,
 6812,Thomas/020924.cha,CAR,yes.,,
 6813,Thomas/020924.cha,CAR,it's a.,,
@@ -651,15 +651,15 @@
 6822,Thomas/020924.cha,CAR,the breakdown lorry picks the cars up and takes them to to the garage to be mended.,,
 6823,Thomas/020924.cha,CHI,um.,,
 6824,Thomas/020924.cha,CAR,what kind of vehicle is this?,,
-6825,Thomas/020924.cha,CHI,uh ambulance.,-1,"not sure, no det"
+6825,Thomas/020924.cha,CHI,uh ambulance.,-1,determiner
 6826,Thomas/020924.cha,CAR,an ambulance.,,
 6827,Thomas/020924.cha,CAR,and it says.,,
 6828,Thomas/020924.cha,CAR,who does this van belong to?,,
 6829,Thomas/020924.cha,CAR,now I'd be surprised if you didn't know because yesterday when a van pulled up outside with a ladder on top and a bucket and a cloth you said it's the.,,
-6830,Thomas/020924.cha,CHI,fire engine.,1,continuation
+6830,Thomas/020924.cha,CHI,fire engine.,1,
 6831,Thomas/020924.cha,CAR,no.,,
 6832,Thomas/020924.cha,CAR,the window cleaner.,,
-6833,Thomas/020924.cha,CHI,window cleaner.,-1,pointing
+6833,Thomas/020924.cha,CHI,window cleaner.,-1,determiner
 6834,Thomas/020924.cha,CAR,ah and what you know who these two are don't you?,,
 6835,Thomas/020924.cha,CHI,yes.,,
 6836,Thomas/020924.cha,CAR,Thomas is having a race with Bertie the bus.,,
@@ -685,8 +685,8 @@
 6856,Thomas/020924.cha,CAR,and there are these cars.,,
 6857,Thomas/020924.cha,CAR,how many station how many cars in the station car park?,,
 6858,Thomas/020924.cha,CHI,no.,,
-6859,Thomas/020924.cha,CHI,I not read this.,-1,
-6860,Thomas/020924.cha,CHI,I want get shapes.,-1,
+6859,Thomas/020924.cha,CHI,I not read this.,-1,tense_aspect
+6860,Thomas/020924.cha,CHI,I want get shapes.,-1,auxiliary
 6861,Thomas/020924.cha,CAR,you wanna get the shapes.,,
 6862,Thomas/020924.cha,CHI,yes.,,
 6863,Thomas/020924.cha,CAR,come on then.,,
@@ -700,12 +700,12 @@
 6871,Thomas/020924.cha,CAR,and it really does have to go in the loft.,,
 6872,Thomas/020924.cha,CAR,we've no room for it here have we?,,
 6873,Thomas/020924.cha,CAR,let's have a look.,,
-6874,Thomas/020924.cha,CHI,your shapes.,0,pointing
+6874,Thomas/020924.cha,CHI,your shapes.,0,
 6875,Thomas/020924.cha,CAR,shapes.,,
-6876,Thomas/020924.cha,CHI,two blue triangles.,0,pointing
+6876,Thomas/020924.cha,CHI,two blue triangles.,0,
 6877,Thomas/020924.cha,CAR,two blue triangles.,,
 6878,Thomas/020924.cha,CHI,poo.,,
-6879,Thomas/020924.cha,CHI,get it in my poo.,0,not sure if imp
+6879,Thomas/020924.cha,CHI,get it in my poo.,0,
 6880,Thomas/020924.cha,CAR,"oh you did didn't you, Thomas?",,
 6881,Thomas/020924.cha,CAR,you did do that.,,
 6882,Thomas/020924.cha,CAR,yes.,,
@@ -721,7 +721,7 @@
 6892,Thomas/020924.cha,CAR,that day.,,
 6893,Thomas/020924.cha,CHI,no.,,
 6894,Thomas/020924.cha,CAR,what did she say?,,
-6895,Thomas/020924.cha,CHI,not touch anything.,-1,
+6895,Thomas/020924.cha,CHI,not touch anything.,-1,auxiliary
 6896,Thomas/020924.cha,CAR,I said stand there and don't touch anything didn't I?,,
 6897,Thomas/020924.cha,CHI,yes.,,
 6898,Thomas/020924.cha,CAR,oh dear dear.,,
@@ -737,7 +737,7 @@
 6908,Thomas/020924.cha,CAR,we've got two yellow shapes here.,,
 6909,Thomas/020924.cha,CAR,one's.,,
 6910,Thomas/020924.cha,CAR,what's that one?,,
-6911,Thomas/020924.cha,CHI,it's triangle.,-1,
+6911,Thomas/020924.cha,CHI,it's triangle.,-1,determiner
 6912,Thomas/020924.cha,CAR,no.,,
 6913,Thomas/020924.cha,CAR,that's a circle.,,
 6914,Thomas/020924.cha,CAR,it's round.,,
@@ -747,16 +747,16 @@
 6918,Thomas/020924.cha,CAR,here's the digger.,,
 6919,Thomas/020924.cha,CAR,who are the diggers?,,
 6920,Thomas/020924.cha,CAR,come and tell me.,,
-6921,Thomas/020924.cha,CHI,the diggers.,0,pointing
+6921,Thomas/020924.cha,CHI,the diggers.,0,
 6922,Thomas/020924.cha,CAR,you're putting all your shapes in the digger are you?,,
 6923,Thomas/020924.cha,CHI,yes.,,
 6924,Thomas/020924.cha,CAR,one of these little books here has.,,
 6925,Thomas/020924.cha,CAR,it's a little shape and color book.,,
 6926,Thomas/020924.cha,CAR,what color is that?,,
-6927,Thomas/020924.cha,CHI,don't know.,0,208 for me
+6927,Thomas/020924.cha,CHI,don't know.,0,
 6928,Thomas/020924.cha,CAR,oh Thomas Lastname.,,
 6929,Thomas/020924.cha,CAR,it's red.,,
-6930,Thomas/020924.cha,CHI,and look.,1,imp
+6930,Thomas/020924.cha,CHI,and look.,1,
 6931,Thomas/020924.cha,CHI,orange.,,
 6932,Thomas/020924.cha,CAR,yes.,,
 6933,Thomas/020924.cha,CAR,that's orange.,,
@@ -773,7 +773,7 @@
 6944,Thomas/020924.cha,CHI,yes.,,
 6945,Thomas/020924.cha,CAR,orange.,,
 6946,Thomas/020924.cha,CHI,orange.,,
-6947,Thomas/020924.cha,CHI,chocolate orange.,-1,pointing
+6947,Thomas/020924.cha,CHI,chocolate orange.,-1,determiner
 6948,Thomas/020924.cha,CAR,a chocolate orange.,,
 6949,Thomas/020924.cha,CAR,it's an orange circle.,,
 6950,Thomas/020924.cha,CAR,a circle is round like a wheel.,,
@@ -793,17 +793,17 @@
 6964,Thomas/020924.cha,CAR,they're round.,,
 6965,Thomas/020924.cha,CAR,football's round.,,
 6966,Thomas/020924.cha,CAR,the wheel on the baby walker is round.,,
-6967,Thomas/020924.cha,CHI,big wheels.,0,not sure if it needs a det
+6967,Thomas/020924.cha,CHI,big wheels.,0,
 6968,Thomas/020924.cha,CAR,so you have a look in the digger and tell me which of those shapes.,,
 6969,Thomas/020924.cha,CAR,there should be two shapes that are round.,,
 6970,Thomas/020924.cha,CAR,a circle's round.,,
 6971,Thomas/020924.cha,CHI,what what's happening?,1,
-6972,Thomas/020924.cha,CHI,lot lot lots of men in your side.,-1,
+6972,Thomas/020924.cha,CHI,lot lot lots of men in your side.,-1,"verb, preposition"
 6973,Thomas/020924.cha,CAR,pardon.,,
-6974,Thomas/020924.cha,CHI,lot lots of fire on your side.,0,lots of fire? Native?
+6974,Thomas/020924.cha,CHI,lot lots of fire on your side.,0,
 6975,Thomas/020924.cha,CAR,is there a lot of fire on my side?,,
 6976,Thomas/020924.cha,CHI,yes.,,
-6977,Thomas/020924.cha,CHI,my digger man.,0,pointing
+6977,Thomas/020924.cha,CHI,my digger man.,0,
 6978,Thomas/020924.cha,CAR,oh your digger man.,,
 6979,Thomas/020924.cha,CAR,where is the digger man?,,
 6980,Thomas/020924.cha,CAR,I haven't seen him.,,
@@ -818,7 +818,7 @@
 6989,Thomas/020924.cha,CHI,cylinder.,,
 6990,Thomas/020924.cha,CAR,or a tube.,,
 6991,Thomas/020924.cha,CAR,who plays with a tube?,,
-6992,Thomas/020924.cha,CHI,I not know.,-1,
+6992,Thomas/020924.cha,CHI,I not know.,-1,auxiliary
 6993,Thomas/020924.cha,CAR,on television.,,
 6994,Thomas/020924.cha,CHI,Bella.,,
 6995,Thomas/020924.cha,CAR,Bella plays with a tube doesn't she?,,
@@ -832,7 +832,7 @@
 7003,Thomas/020924.cha,CHI,yes.,,
 7004,Thomas/020924.cha,CAR,you play with a cardboard cylinder don't you?,,
 7005,Thomas/020924.cha,CAR,the tube inside.,,
-7006,Thomas/020924.cha,CHI,uh the Bella played the tube.,-1,the Bella*
+7006,Thomas/020924.cha,CHI,uh the Bella played the tube.,-1,determiner
 7007,Thomas/020924.cha,CAR,Bella plays with the tube.,,
 7008,Thomas/020924.cha,CAR,yes.,,
 7009,Thomas/020924.cha,CAR,now in these shapes you haven't got a tube have you?,,
@@ -840,11 +840,11 @@
 7011,Thomas/020924.cha,CHI,no.,,
 7012,Thomas/020924.cha,CAR,and that's a pink.,,
 7013,Thomas/020924.cha,CAR,now that's called a rectangle.,,
-7014,Thomas/020924.cha,CHI,I getting something?,-1,
+7014,Thomas/020924.cha,CHI,I getting something?,-1,auxiliary
 7015,Thomas/020924.cha,CAR,are you?,,
 7016,Thomas/020924.cha,CAR,right.,,
 7017,Thomas/020924.cha,CAR,okay.,,
-7018,Thomas/020924.cha,CHI,get my cup of coffee.,0,not sure if imp
+7018,Thomas/020924.cha,CHI,get my cup of coffee.,0,
 7019,Thomas/020924.cha,CAR,you're getting your cup of coffee.,,
 7020,Thomas/020924.cha,CAR,I think it's the beaker of orange isn't it?,,
 7021,Thomas/020924.cha,CHI,no.,,
@@ -869,7 +869,7 @@
 7040,Thomas/020924.cha,CAR,it's a star shape.,,
 7041,Thomas/020924.cha,CAR,can we see anything that's star shaped when we're looking round?,,
 7042,Thomas/020924.cha,CHI,no.,,
-7043,Thomas/020924.cha,CHI,not here.,1,not here [we can't]
+7043,Thomas/020924.cha,CHI,not here.,1,
 7044,Thomas/020924.cha,CAR,not here.,,
 7045,Thomas/020924.cha,CAR,um we can't but when we were sorting through some papers earlier on we found the invitation to Molly's birthday party and that had stars on it.,,
 7046,Thomas/020924.cha,CHI,um.,,
@@ -895,15 +895,15 @@
 7066,Thomas/020924.cha,CHI,triangle.,,
 7067,Thomas/020924.cha,CAR,a triangle.,,
 7068,Thomas/020924.cha,CAR,and what color is the triangle in this picture?,,
-7069,Thomas/020924.cha,CHI,green triangle.,-1,
+7069,Thomas/020924.cha,CHI,green triangle.,-1,determiner
 7070,Thomas/020924.cha,CAR,it's green.,,
 7071,Thomas/020924.cha,CAR,there's the green triangle.,,
-7072,Thomas/020924.cha,CHI,green triangle.,-1,
+7072,Thomas/020924.cha,CHI,green triangle.,-1,determiner
 7073,Thomas/020924.cha,CAR,a green triangle.,,
 7074,Thomas/020924.cha,CAR,yes.,,
 7075,Thomas/020924.cha,CAR,shall we put the green triangle from the baby walker on top of the green triangle in the book?,,
 7076,Thomas/020924.cha,CAR,look.,,
-7077,Thomas/020924.cha,CHI,try and close it.,0,not sure if imp
+7077,Thomas/020924.cha,CHI,try and close it.,0,
 7078,Thomas/020924.cha,CAR,"now what have we got in the house that's made that looks like a triangle a triangle, Thomas?",,
 7079,Thomas/020924.cha,CAR,can you see anything?,,
 7080,Thomas/020924.cha,CHI,I can see a blue something.,1,
@@ -915,14 +915,14 @@
 7086,Thomas/020924.cha,CHI,hm.,,
 7087,Thomas/020924.cha,CAR,I can't see anything with a triangle.,,
 7088,Thomas/020924.cha,CAR,I'm sure there must be something.,,
-7089,Thomas/020924.cha,CHI,want draw round it.,-1,
+7089,Thomas/020924.cha,CHI,want draw round it.,-1,"subject, tense_aspect, other"
 7090,Thomas/020924.cha,CAR,you wanna draw round it.,,
 7091,Thomas/020924.cha,CHI,yes.,,
 7092,Thomas/020924.cha,CAR,oh this is drawing shapes isn't it?,,
 7093,Thomas/020924.cha,CAR,on a piece of paper.,,
 7094,Thomas/020924.cha,CAR,if we do that we've drawn a triangle.,,
 7095,Thomas/020924.cha,CAR,if we do that we've drawn a square.,,
-7096,Thomas/020924.cha,CHI,round a square.,-1,what?
+7096,Thomas/020924.cha,CHI,round a square.,-1,verb
 7097,Thomas/020924.cha,CAR,and if we put the elephant from the Noahs Ark on the paper.,,
 7098,Thomas/020924.cha,CAR,let's draw round him.,,
 7099,Thomas/020924.cha,CAR,let's turn the paper over so we've got a nice clean piece of paper.,,
@@ -935,7 +935,7 @@
 7106,Thomas/020924.cha,CAR,that's it.,,
 7107,Thomas/020924.cha,CAR,round and round and round.,,
 7108,Thomas/020924.cha,CAR,then we take the shape off it and we've drawn.,,
-7109,Thomas/020924.cha,CHI,a elephant.,-1,
+7109,Thomas/020924.cha,CHI,a elephant.,-1,determiner
 7110,Thomas/020924.cha,CAR,an elephant.,,
 7111,Thomas/020924.cha,CAR,we've drawn round a shape haven't we?,,
 7112,Thomas/020924.cha,CHI,yes.,,
@@ -963,7 +963,7 @@
 7134,Thomas/020924.cha,CAR,yes.,,
 7135,Thomas/020924.cha,CAR,but it's not a circle.,,
 7136,Thomas/020924.cha,CAR,it's an oval.,,
-7137,Thomas/020924.cha,CHI,not a triangle.,1,completion
+7137,Thomas/020924.cha,CHI,not a triangle.,1,
 7138,Thomas/020924.cha,CAR,and the is a black diamond.,,
 7139,Thomas/020924.cha,CAR,that looks a bit like a star.,,
 7140,Thomas/020924.cha,CAR,Mummy has got a diamond on her ring but it doesn't look like that.,,
@@ -981,38 +981,38 @@
 7152,Thomas/020924.cha,CAR,the picture on this book has lots of shapes.,,
 7153,Thomas/020924.cha,CHI,um.,,
 7154,Thomas/020924.cha,CAR,the tower blocks are made of.,,
-7155,Thomas/020924.cha,CHI,I getting see something.,-1,
+7155,Thomas/020924.cha,CHI,I getting see something.,-1,"tense_aspect, present_progressive"
 7156,Thomas/020924.cha,CAR,are you getting something?,,
 7157,Thomas/020924.cha,CHI,yes.,,
 7158,Thomas/020924.cha,CAR,what are you getting?,,
-7159,Thomas/020924.cha,CHI,get trains in a box.,-1,
+7159,Thomas/020924.cha,CHI,get trains in a box.,-1,"subject, present_progressive"
 7160,Thomas/020924.cha,CAR,you're getting the trains in the box.,,
-7161,Thomas/020924.cha,CHI,this box cornflakes in.,-1,
+7161,Thomas/020924.cha,CHI,this box cornflakes in.,-1,verb
 7162,Thomas/020924.cha,CAR,that's your Rice Krispie box isn't it?,,
-7163,Thomas/020924.cha,CHI,putting cornflakes.,-1,208 for me
-7164,Thomas/020924.cha,CHI,putting cornflakes in.,-1,208 for me
+7163,Thomas/020924.cha,CHI,putting cornflakes.,-1,"subject, present_progressive"
+7164,Thomas/020924.cha,CHI,putting cornflakes in.,-1,"subject, present_progressive"
 7165,Thomas/020924.cha,CAR,"are you alright, sweetheart?",,
-7166,Thomas/020924.cha,CHI,putting all the trains in the box.,-1,208 for me
+7166,Thomas/020924.cha,CHI,putting all the trains in the box.,-1,"subject, present_progressive"
 7167,Thomas/020924.cha,CAR,you're putting all your trains in the box are you?,,
 7168,Thomas/020924.cha,CHI,yes.,,
 7169,Thomas/020924.cha,CAR,"when we do a jigsaw, Thomas.",,
 7170,Thomas/020924.cha,CAR,that's lots of funny shapes isn't it?,,
 7171,Thomas/020924.cha,CAR,we're putting them all together.,,
-7172,Thomas/020924.cha,CHI,going on the floor.,-1,
+7172,Thomas/020924.cha,CHI,going on the floor.,-1,"subject, present_progressive"
 7173,Thomas/020924.cha,CAR,all going on the floor.,,
 7174,Thomas/020924.cha,CAR,you wanna play with your trains now.,,
 7175,Thomas/020924.cha,CHI,yes.,,
 7176,Thomas/020924.cha,CAR,yes.,,
 7177,Thomas/020924.cha,CAR,that's fine.,,
-7178,Thomas/020924.cha,CHI,on the table.,0,pointing
+7178,Thomas/020924.cha,CHI,on the table.,0,
 7179,Thomas/020924.cha,CAR,yes.,,
 7180,Thomas/020924.cha,CAR,you can play with them on the table.,,
-7181,Thomas/020924.cha,CHI,lots lots in here.,-1,
+7181,Thomas/020924.cha,CHI,lots lots in here.,-1,"subject, verb"
 7182,Thomas/020924.cha,CAR,there are lots in there.,,
 7183,Thomas/020924.cha,CHI,yes.,,
 7184,Thomas/020924.cha,CHI,there.,,
 7185,Thomas/020924.cha,CAR,that's lovely.,,
-7186,Thomas/020924.cha,CHI,not playing this now.,-1,208 for me
+7186,Thomas/020924.cha,CHI,not playing this now.,-1,"subject, present_progressive"
 7187,Thomas/020924.cha,CAR,no.,,
 7188,Thomas/020924.cha,CAR,we're not playing with the book now are we?,,
 7189,Thomas/020924.cha,CAR,no.,,
@@ -1037,7 +1037,7 @@
 7208,Thomas/020924.cha,CAR,I said to Daddy what has happened here.,,
 7209,Thomas/020924.cha,CAR,and he said.,,
 7210,Thomas/020924.cha,CAR,ah I trod on that on Christmas Day.,,
-7211,Thomas/020924.cha,CHI,Christmas Day.,1,repetition
+7211,Thomas/020924.cha,CHI,Christmas Day.,1,
 7212,Thomas/020924.cha,CAR,I didn't know he had trodden on a train and broken it did you?,,
 7213,Thomas/020924.cha,CHI,no.,,
 7214,Thomas/020924.cha,CAR,well he has.,,
@@ -1045,43 +1045,43 @@
 7216,Thomas/020924.cha,CHI,yes.,,
 7217,Thomas/020924.cha,CAR,I think we'll have to.,,
 7218,Thomas/020924.cha,CHI,yes.,,
-7219,Thomas/020924.cha,CHI,have to.,-1,
+7219,Thomas/020924.cha,CHI,have to.,-1,subject
 7220,Thomas/020924.cha,CAR,keep pestering him won't we?,,
 7221,Thomas/020924.cha,CHI,um.,,
 7222,Thomas/020924.cha,CAR,"are you alright, darling?",,
 7223,Thomas/020924.cha,CHI,uh.,,
-7224,Thomas/020924.cha,CHI,I builded it.,-1,
+7224,Thomas/020924.cha,CHI,I builded it.,-1,tense_aspect
 7225,Thomas/020924.cha,CAR,you've builded it.,,
 7226,Thomas/020924.cha,CAR,you've built it I think is the.,,
 7227,Thomas/020924.cha,CAR,you've built it.,,
-7228,Thomas/020924.cha,CHI,and I not need the track on it.,-1,
+7228,Thomas/020924.cha,CHI,and I not need the track on it.,-1,auxiliary
 7229,Thomas/020924.cha,CAR,you don't need the track.,,
 7230,Thomas/020924.cha,CAR,no.,,
 7231,Thomas/020924.cha,CAR,you're just happy playing with it on the table aren't you?,,
-7232,Thomas/020924.cha,CHI,Thomas not dropping off two passengers on.,-1,
-7233,Thomas/020924.cha,CHI,it's it's not lots of passengers.,0,native?
+7232,Thomas/020924.cha,CHI,Thomas not dropping off two passengers on.,-1,"present_progressive, preposition"
+7233,Thomas/020924.cha,CHI,it's it's not lots of passengers.,0,
 7234,Thomas/020924.cha,CHI,not.,,
 7235,Thomas/020924.cha,CHI,what's this?,1,
-7236,Thomas/020924.cha,CHI,oh it's not work.,-1,
-7237,Thomas/020924.cha,CHI,driving other ways.,-1,
+7236,Thomas/020924.cha,CHI,oh it's not work.,-1,present_progressive
+7237,Thomas/020924.cha,CHI,driving other ways.,-1,"subject, present_progressive, preposition"
 7238,Thomas/020924.cha,CHI,yes.,,
 7239,Thomas/020924.cha,CHI,it is working.,1,
 7240,Thomas/020924.cha,CAR,is it working?,,
 7241,Thomas/020924.cha,CHI,yes.,,
 7242,Thomas/020924.cha,CHI,it's the station.,1,
-7243,Thomas/020924.cha,CHI,shut doors.,-1,
-7244,Thomas/020924.cha,CHI,shut his door.,0,not sure if imp
+7243,Thomas/020924.cha,CHI,shut doors.,-1,determiner
+7244,Thomas/020924.cha,CHI,shut his door.,0,
 7245,Thomas/020924.cha,CAR,he has shut the door and he's driving off now is he?,,
-7246,Thomas/020924.cha,CHI,it's stopping Mummy's side.,-1,
+7246,Thomas/020924.cha,CHI,it's stopping Mummy's side.,-1,preposition
 7247,Thomas/020924.cha,CHI,engine.,,
-7248,Thomas/020924.cha,CHI,good engine.,0,pointing/touching
-7249,Thomas/020924.cha,CHI,shut doors.,-1,
-7250,Thomas/020924.cha,CHI,driving off.,-1,
+7248,Thomas/020924.cha,CHI,good engine.,0,
+7249,Thomas/020924.cha,CHI,shut doors.,-1,determiner
+7250,Thomas/020924.cha,CHI,driving off.,-1,"subject, present_progressive"
 7251,Thomas/020924.cha,CHI,it's driving off.,1,
 7252,Thomas/020924.cha,CAR,"where's he driving to, Thomas?",,
 7253,Thomas/020924.cha,CHI,the airport.,1,
 7254,Thomas/020924.cha,CAR,the airport.,,
-7255,Thomas/020924.cha,CHI,in the track.,0,not sure what this means
+7255,Thomas/020924.cha,CHI,in the track.,0,
 7256,Thomas/020924.cha,CAR,we went to the airport with Lynne Ben and Charlotte didn't we?,,
 7257,Thomas/020924.cha,CAR,a while a go.,,
 7258,Thomas/020924.cha,CHI,yes.,,
@@ -1093,11 +1093,11 @@
 7264,Thomas/020924.cha,CAR,we're going to Spain again aren't we?,,
 7265,Thomas/020924.cha,CHI,yes.,,
 7266,Thomas/020924.cha,CAR,in June.,,
-7267,Thomas/020924.cha,CHI,in June.,1,repetition
-7268,Thomas/020924.cha,CHI,and Grandad.,-1,
+7267,Thomas/020924.cha,CHI,in June.,1,
+7268,Thomas/020924.cha,CHI,and Grandad.,-1,other
 7269,Thomas/020924.cha,CAR,with Grandad and Nana.,,
 7270,Thomas/020924.cha,CAR,yes.,,
-7271,Thomas/020924.cha,CHI,and Mum and Nana.,1,completion
+7271,Thomas/020924.cha,CHI,and Mum and Nana.,1,
 7272,Thomas/020924.cha,CAR,yes.,,
 7273,Thomas/020924.cha,CAR,with Nana.,,
 7274,Thomas/020924.cha,CAR,and who else is going?,,
@@ -1111,9 +1111,9 @@
 7282,Thomas/020924.cha,CHI,I wanna play something.,1,
 7283,Thomas/020924.cha,CAR,you wanna play something.,,
 7284,Thomas/020924.cha,CAR,what would you like to play?,,
-7285,Thomas/020924.cha,CHI,play upstairs.,-1,not sure if imp
+7285,Thomas/020924.cha,CHI,play upstairs.,-1,"subject, tense_aspect"
 7286,Thomas/020924.cha,CAR,oh we can't play upstairs.,,
 7287,Thomas/020924.cha,CHI,yes.,,
 7288,Thomas/020924.cha,CAR,I thought you were happy playing with your trains.,,
 7289,Thomas/020924.cha,CHI,yes.,,
-7290,Thomas/020924.cha,CHI,I happy playing it.,-1,
+7290,Thomas/020924.cha,CHI,I happy playing it.,-1,verb

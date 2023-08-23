@@ -1,7 +1,7 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 5516,Kuczaj/041113.cha,CAR,I really do.,,
 5517,Kuczaj/041113.cha,CAR,those were good Thanksgiving pictures.,,
-5518,Kuczaj/041113.cha,CHI,how much people do you think liked them?,-1,*much
+5518,Kuczaj/041113.cha,CHI,how much people do you think liked them?,-1,other
 5519,Kuczaj/041113.cha,CAR,Jean liked them.,,
 5520,Kuczaj/041113.cha,CAR,and Lyle liked them.,,
 5521,Kuczaj/041113.cha,CAR,and I know Daddy liked them.,,
@@ -9,27 +9,27 @@
 5523,Kuczaj/041113.cha,CHI,I have to go poop.,1,
 5524,Kuczaj/041113.cha,CHI,you can't go down there unless you get your bluejeans on.,1,
 5525,Kuczaj/041113.cha,CAR,I can go down right now.,,
-5526,Kuczaj/041113.cha,CHI,you don't got no bluejeans on.,-1,
+5526,Kuczaj/041113.cha,CHI,you don't got no bluejeans on.,-1,determiner
 5527,Kuczaj/041113.cha,CAR,I know.,,
 5528,Kuczaj/041113.cha,CAR,I'm just going down for a second.,,
 5529,Kuczaj/041113.cha,CAR,we both have to go to the dentist in January.,,
-5530,Kuczaj/041113.cha,CHI,you got to go in January.,1,got = have
+5530,Kuczaj/041113.cha,CHI,you got to go in January.,1,
 5531,Kuczaj/041113.cha,CHI,January is when the baby's getting born.,1,
 5532,Kuczaj/041113.cha,CAR,in February.,,
 5533,Kuczaj/041113.cha,CHI,oh yeah Mom I didn't know farmers would let robins sit in barns.,1,
 5534,Kuczaj/041113.cha,CAR,some do.,,
 5535,Kuczaj/041113.cha,CHI,huh?,,
 5536,Kuczaj/041113.cha,CAR,some do.,,
-5537,Kuczaj/041113.cha,CHI,"of course like Joe he useta run a farm, a neat farm too.",1,"like Joe [=Joe is an example of a farmer who let robins..], then a pause"
+5537,Kuczaj/041113.cha,CHI,"of course like Joe he useta run a farm, a neat farm too.",1,
 5538,Kuczaj/041113.cha,CAR,yeah.,,
-5539,Kuczaj/041113.cha,CHI,I thought it was neat farm.,-1,
+5539,Kuczaj/041113.cha,CHI,I thought it was neat farm.,-1,determiner
 5540,Kuczaj/041113.cha,CAR,it looks like some birds have eaten some of the bread.,,
 5541,Kuczaj/041113.cha,CHI,I wanna see.,1,
-5542,Kuczaj/041113.cha,CHI,could I see?,1,could you pass me the knife?
+5542,Kuczaj/041113.cha,CHI,could I see?,1,
 5543,Kuczaj/041113.cha,CAR,sure go look.,,
-5544,Kuczaj/041113.cha,CHI,you mean some of the birds had a Thanksgiving.,-1,*a Thanksgiving
+5544,Kuczaj/041113.cha,CHI,you mean some of the birds had a Thanksgiving.,-1,determiner
 5545,Kuczaj/041113.cha,CAR,huh?,,
-5546,Kuczaj/041113.cha,CHI,one bird had a Thanksgiving when he ate our breads.,-1,"bread is uncountable (except weird circumstances, e.g. bakery varieties)"
+5546,Kuczaj/041113.cha,CHI,one bird had a Thanksgiving when he ate our breads.,-1,plural
 5547,Kuczaj/041113.cha,CAR,uhhuh see that number fifteen Abe?,,
 5548,Kuczaj/041113.cha,CAR,with the yellow circle around it?,,
 5549,Kuczaj/041113.cha,CHI,I can't see a yellow circle.,1,
@@ -37,7 +37,7 @@
 5551,Kuczaj/041113.cha,CHI,uhhuh.,,
 5552,Kuczaj/041113.cha,CAR,guess whose birthday that is.,,
 5553,Kuczaj/041113.cha,CHI,mine.,,
-5554,Kuczaj/041113.cha,CHI,how many more days?,1,till the birthday?
+5554,Kuczaj/041113.cha,CHI,how many more days?,1,
 5555,Kuczaj/041113.cha,CAR,seventeen.,,
 5556,Kuczaj/041113.cha,CHI,oh.,,
 5557,Kuczaj/041113.cha,CAR,what would you do if I stole all your gifts?,,
@@ -48,7 +48,7 @@
 5562,Kuczaj/041113.cha,CAR,know why?,,
 5563,Kuczaj/041113.cha,CHI,it costs too much.,1,
 5564,Kuczaj/041113.cha,CAR,uhhuh.,,
-5565,Kuczaj/041113.cha,CHI,why didn't they pay for Karen and then Karen only goes?,-1,question and regular in same sent
+5565,Kuczaj/041113.cha,CHI,why didn't they pay for Karen and then Karen only goes?,-1,tense_aspect
 5566,Kuczaj/041113.cha,CAR,well I suggested that.,,
 5567,Kuczaj/041113.cha,CAR,but it still costs too much.,,
 5568,Kuczaj/041113.cha,CHI,hey!,,
@@ -64,12 +64,12 @@
 5578,Kuczaj/041113.cha,CHI,we can put this up after we're done eating.,1,
 5579,Kuczaj/041113.cha,CAR,uhhuh which do you think Mike would like?,,
 5580,Kuczaj/041113.cha,CAR,a cowboy jacket or a zebra robe?,,
-5581,Kuczaj/041113.cha,CHI,probably one of those zebra robes and a cowboy jacket.,1,ell ans
+5581,Kuczaj/041113.cha,CHI,probably one of those zebra robes and a cowboy jacket.,1,
 5582,Kuczaj/041113.cha,CAR,no it has to one or the other.,,
 5583,Kuczaj/041113.cha,CHI,how about a cowboy jacket like the one I have?,1,
 5584,Kuczaj/041113.cha,CAR,do you think he'd like it?,,
-5585,Kuczaj/041113.cha,CHI,except with a different kind of material.,1,"not sure, elliptic"
-5586,Kuczaj/041113.cha,CHI,because he likes softest material.,-1,softer / the softest
+5585,Kuczaj/041113.cha,CHI,except with a different kind of material.,1,
+5586,Kuczaj/041113.cha,CHI,because he likes softest material.,-1,"determiner, other"
 5587,Kuczaj/041113.cha,CAR,oh Abe.,,
 5588,Kuczaj/041113.cha,CHI,I can't talk with my mouth full.,1,
 5589,Kuczaj/041113.cha,CHI,I can't talk now.,1,
@@ -82,36 +82,36 @@
 5596,Kuczaj/041113.cha,CAR,he has magical powers.,,
 5597,Kuczaj/041113.cha,CHI,no he doesn't.,1,
 5598,Kuczaj/041113.cha,CHI,he has real sneak shoes or slippers.,1,
-5599,Kuczaj/041113.cha,CHI,real quiet shoes.,1,Real as col for really?
+5599,Kuczaj/041113.cha,CHI,real quiet shoes.,1,
 5600,Kuczaj/041113.cha,CAR,I think I'll stay up real late this year and see if I can see Santa when he comes to our house.,,
-5601,Kuczaj/041113.cha,CHI,Santa gots real magical powers if you look up he'll be up down.,-1,
+5601,Kuczaj/041113.cha,CHI,Santa gots real magical powers if you look up he'll be up down.,-1,tense_aspect
 5602,Kuczaj/041113.cha,CHI,if you look down he'll be up.,1,
 5603,Kuczaj/041113.cha,CHI,so you better not stay up.,1,
 5604,Kuczaj/041113.cha,CHI,because if he sees you he'll give you a spanking.,1,
 5605,Kuczaj/041113.cha,CAR,if he sees me he won't leave any presents for anybody.,,
 5606,Kuczaj/041113.cha,CAR,that'd be okay.,,
 5607,Kuczaj/041113.cha,CHI,no he wouldn't.,1,
-5608,Kuczaj/041113.cha,CHI,he would just leave not presents for you.,-1,
+5608,Kuczaj/041113.cha,CHI,he would just leave not presents for you.,-1,determiner
 5609,Kuczaj/041113.cha,CAR,oh should we leave him a carrot to eat?,,
 5610,Kuczaj/041113.cha,CHI,I don't know.,1,
 5611,Kuczaj/041113.cha,CHI,but when is it going to be Easter?,1,
 5612,Kuczaj/041113.cha,CAR,I hope he doesn't bring the reindeer in the house.,,
 5613,Kuczaj/041113.cha,CAR,they'd make a real mess.,,
 5614,Kuczaj/041113.cha,CHI,or leave footprints.,1,
-5615,Kuczaj/041113.cha,CHI,or go tee tee on the floor.,0,child speech
+5615,Kuczaj/041113.cha,CHI,or go tee tee on the floor.,0,
 5616,Kuczaj/041113.cha,CHI,Mom where did you see the Christmas decorations?,1,
 5617,Kuczaj/041113.cha,CAR,in Dayton's.,,
 5618,Kuczaj/041113.cha,CHI,how much do they cost?,1,
 5619,Kuczaj/041113.cha,CAR,I can't remember.,,
 5620,Kuczaj/041113.cha,CAR,they also had some beautiful wreaths that we can make.,,
-5621,Kuczaj/041113.cha,CHI,how would how could we make them?,1,reform
+5621,Kuczaj/041113.cha,CHI,how would how could we make them?,1,
 5622,Kuczaj/041113.cha,CAR,it's a kit.,,
-5623,Kuczaj/041113.cha,CHI,did they give you the thread and needle?,1,not sure: the needle?
+5623,Kuczaj/041113.cha,CHI,did they give you the thread and needle?,1,
 5624,Kuczaj/041113.cha,CHI,and did they give the package of the shapes?,1,
 5625,Kuczaj/041113.cha,CAR,uhhuh.,,
-5626,Kuczaj/041113.cha,CHI,so you could sew them?,0,clarficatory question is correct but 'could you sew them' interpretation would make it wrong
+5626,Kuczaj/041113.cha,CHI,so you could sew them?,0,
 5627,Kuczaj/041113.cha,CAR,uhhuh.,,
-5628,Kuczaj/041113.cha,CHI,remember that Christmas wrapper that we useta have or have?,1,or have (now)
+5628,Kuczaj/041113.cha,CHI,remember that Christmas wrapper that we useta have or have?,1,
 5629,Kuczaj/041113.cha,CHI,we could use that to wrap our presents.,1,
 5630,Kuczaj/041113.cha,CAR,good idea.,,
 5631,Kuczaj/041113.cha,CHI,we could buy some ribbon or wrap it with string.,1,
@@ -127,23 +127,23 @@
 5641,Kuczaj/020818.cha,CAR,they really like those leaves.,,
 5642,Kuczaj/020818.cha,CAR,uhhuh see all that poop on the bottom?,,
 5643,Kuczaj/020818.cha,CAR,they must be eating something.,,
-5644,Kuczaj/020818.cha,CHI,Mom they pooping?,-1,208 for me
+5644,Kuczaj/020818.cha,CHI,Mom they pooping?,-1,auxiliary
 5645,Kuczaj/020818.cha,CAR,uhhuh.,,
-5646,Kuczaj/020818.cha,CHI,what they are pooping Mom?,-1,
+5646,Kuczaj/020818.cha,CHI,what they are pooping Mom?,-1,auxiliary
 5647,Kuczaj/020818.cha,CAR,those caterpillars eat those sunflower leaves.,,
 5648,Kuczaj/020818.cha,CAR,and then they poop are they?,,
 5649,Kuczaj/020818.cha,CHI,uhhuh.,,
 5650,Kuczaj/020818.cha,CAR,I guess they are.,,
-5651,Kuczaj/020818.cha,CHI,Daddy you put my new shoes on?,-1,native?
+5651,Kuczaj/020818.cha,CHI,Daddy you put my new shoes on?,-1,auxiliary
 5652,Kuczaj/020818.cha,CAR,you wanna put your shoes on?,,
 5653,Kuczaj/020818.cha,CHI,uhhuh Daddy you put them on.,1,
 5654,Kuczaj/020818.cha,CAR,okay I'll put them on.,,
 5655,Kuczaj/020818.cha,CHI,Daddy.,,
 5656,Kuczaj/020818.cha,CAR,uhhuh.,,
-5657,Kuczaj/020818.cha,CHI,you got bigger shoes and I got bigger shoes also.,1,not sure about 'also' at the end
+5657,Kuczaj/020818.cha,CHI,you got bigger shoes and I got bigger shoes also.,1,
 5658,Kuczaj/020818.cha,CAR,uhhuh we both have bigger shoes.,,
 5659,Kuczaj/020818.cha,CAR,what about mine?,,
-5660,Kuczaj/020818.cha,CHI,you have bigger shoes also like mine right there.,1,not sure
+5660,Kuczaj/020818.cha,CHI,you have bigger shoes also like mine right there.,1,
 5661,Kuczaj/020818.cha,CAR,uhhuh do you know what they're called?,,
 5662,Kuczaj/020818.cha,CHI,uhhuh.,,
 5663,Kuczaj/020818.cha,CAR,waffle stompers.,,
@@ -157,7 +157,7 @@
 5671,Kuczaj/020818.cha,CAR,don't you remember when he felt your toes to make sure that your shoes were the right size?,,
 5672,Kuczaj/020818.cha,CHI,hunhunh.,,
 5673,Kuczaj/020818.cha,CAR,why did you get these shoes Abe?,,
-5674,Kuczaj/020818.cha,CHI,because I want those brown shoes.,-1,
+5674,Kuczaj/020818.cha,CHI,because I want those brown shoes.,-1,tense_aspect
 5675,Kuczaj/020818.cha,CAR,oh you know what?,,
 5676,Kuczaj/020818.cha,CHI,uhhuh Daddy.,1,
 5677,Kuczaj/020818.cha,CAR,we have to be careful with these shoes don't we?,,
@@ -166,7 +166,7 @@
 5680,Kuczaj/020818.cha,CAR,go ahead and tell me.,,
 5681,Kuczaj/020818.cha,CHI,I said uhhuh.,1,
 5682,Kuczaj/020818.cha,CAR,oh.,,
-5683,Kuczaj/020818.cha,CHI,I wanna taste of flour Daddy.,0,"wanna' and 'want a' are homophones because t is silent, so it could be correct or not"
+5683,Kuczaj/020818.cha,CHI,I wanna taste of flour Daddy.,0,
 5684,Kuczaj/020818.cha,CHI,this is a right leg.,1,
 5685,Kuczaj/020818.cha,CHI,and this is a foot leg.,1,
 5686,Kuczaj/020818.cha,CAR,this is a right leg?,,
@@ -174,8 +174,8 @@
 5688,Kuczaj/020818.cha,CAR,this is a right leg?,,
 5689,Kuczaj/020818.cha,CHI,uhhuh.,,
 5690,Kuczaj/020818.cha,CAR,one's right and one's left?,,
-5691,Kuczaj/020818.cha,CHI,uhhuh Mom I have a piece okay?,-1,am having/'ll have
-5692,Kuczaj/020818.cha,CHI,Mom I have a piece okay?,-1,
+5691,Kuczaj/020818.cha,CHI,uhhuh Mom I have a piece okay?,-1,auxiliary
+5692,Kuczaj/020818.cha,CHI,Mom I have a piece okay?,-1,auxiliary
 5693,Kuczaj/020818.cha,CAR,I'm going to run out in the garden and get some onions and tomatoes.,,
 5694,Kuczaj/020818.cha,CHI,I'm going to go out there with you.,1,
 5695,Kuczaj/020818.cha,CAR,you are?,,
@@ -198,15 +198,15 @@
 5712,Kuczaj/020818.cha,CAR,cheese.,,
 5713,Kuczaj/020818.cha,CHI,uhhuh.,,
 5714,Kuczaj/020818.cha,CAR,and lettuce.,,
-5715,Kuczaj/020818.cha,CHI,uhhuh and that.,1,completion
+5715,Kuczaj/020818.cha,CHI,uhhuh and that.,1,
 5716,Kuczaj/020818.cha,CAR,uhhuh I have to cut that onion too.,,
-5717,Kuczaj/020818.cha,CHI,Mom they still eating?,0,208 for me
-5718,Kuczaj/020818.cha,CHI,Mom they still eating?,0,208
-5719,Kuczaj/020818.cha,CHI,Mommy they still eating these?,0,208
+5717,Kuczaj/020818.cha,CHI,Mom they still eating?,0,
+5718,Kuczaj/020818.cha,CHI,Mom they still eating?,0,
+5719,Kuczaj/020818.cha,CHI,Mommy they still eating these?,0,
 5720,Kuczaj/020818.cha,CAR,what?,,
-5721,Kuczaj/020818.cha,CHI,Mommy they still eating those?,0,208
+5721,Kuczaj/020818.cha,CHI,Mommy they still eating those?,0,
 5722,Kuczaj/020818.cha,CAR,the onion?,,
-5723,Kuczaj/020818.cha,CHI,uhhuh I mean those those things.,1,elliptic answer
+5723,Kuczaj/020818.cha,CHI,uhhuh I mean those those things.,1,
 5724,Kuczaj/020818.cha,CAR,oh yeah the caterpillars are still eating sunflower leaves.,,
 5725,Kuczaj/020818.cha,CAR,we'll go out and pick them some more later okay?,,
 5726,Kuczaj/020818.cha,CHI,okay.,,
@@ -216,38 +216,38 @@
 5730,Kuczaj/020818.cha,CAR,is it okay?,,
 5731,Kuczaj/020818.cha,CHI,uhhuh it's okay with me.,1,
 5732,Kuczaj/020818.cha,CAR,these are such tiny little onions.,,
-5733,Kuczaj/020818.cha,CHI,that mine?,0,208 for me
+5733,Kuczaj/020818.cha,CHI,that mine?,0,
 5734,Kuczaj/020818.cha,CAR,uhhuh no Daddy has yours.,,
-5735,Kuczaj/020818.cha,CHI,oh that yours?,0,208 for me
-5736,Kuczaj/020818.cha,CHI,that yours?,0,208 for me
+5735,Kuczaj/020818.cha,CHI,oh that yours?,0,
+5736,Kuczaj/020818.cha,CHI,that yours?,0,
 5737,Kuczaj/020818.cha,CAR,this is for the taco meat.,,
-5738,Kuczaj/020818.cha,CHI,why you making tacos?,0,208 for me
+5738,Kuczaj/020818.cha,CHI,why you making tacos?,0,
 5739,Kuczaj/020818.cha,CAR,I thought you'd like them.,,
 5740,Kuczaj/020818.cha,CHI,I like tacos tacos tacos tacos!,1,
 5741,Kuczaj/020818.cha,CAR,who told you that?,,
-5742,Kuczaj/020818.cha,CHI,my Daddy told it.,-1,tell someone (necessarily)
+5742,Kuczaj/020818.cha,CHI,my Daddy told it.,-1,object
 5743,Kuczaj/020818.cha,CAR,he did?,,
-5744,Kuczaj/020818.cha,CHI,uhhuh Mom how that comed off?,-1,
+5744,Kuczaj/020818.cha,CHI,uhhuh Mom how that comed off?,-1,auxiliary
 5745,Kuczaj/020818.cha,CAR,hm?,,
-5746,Kuczaj/020818.cha,CHI,how that comed off?,-1,
+5746,Kuczaj/020818.cha,CHI,how that comed off?,-1,"auxiliary, tense-aspect"
 5747,Kuczaj/020818.cha,CAR,it came off and I put it in there.,,
-5748,Kuczaj/020818.cha,CHI,you put it all in there?,1,208 for me
-5749,Kuczaj/020818.cha,CHI,you put it all in there?,1,208 for me
+5748,Kuczaj/020818.cha,CHI,you put it all in there?,1,
+5749,Kuczaj/020818.cha,CHI,you put it all in there?,1,
 5750,Kuczaj/020818.cha,CAR,all the popper.,,
 5751,Kuczaj/020818.cha,CHI,what's that Mommy?,1,
 5752,Kuczaj/020818.cha,CHI,what's that Mommy?,1,
 5753,Kuczaj/020818.cha,CAR,chili powder.,,
 5754,Kuczaj/020818.cha,CAR,and I put way too much in there.,,
-5755,Kuczaj/020818.cha,CHI,how'd you put some a lot of money in there Mom?,1,"reformulation, but I donít think 'd is a contraction for did"
+5755,Kuczaj/020818.cha,CHI,how'd you put some a lot of money in there Mom?,1,
 5756,Kuczaj/020818.cha,CAR,a lot of chili powder.,,
 5757,Kuczaj/020818.cha,CHI,Mom you put that in there.,1,
 5758,Kuczaj/020818.cha,CAR,a lot of salt.,,
-5759,Kuczaj/020818.cha,CHI,Mom that's not all.,1,pointing
+5759,Kuczaj/020818.cha,CHI,Mom that's not all.,1,
 5760,Kuczaj/020818.cha,CHI,Mom that's not all.,1,
 5761,Kuczaj/020818.cha,CHI,that's not all.,1,
 5762,Kuczaj/020818.cha,CHI,what's that Mom?,1,
-5763,Kuczaj/020818.cha,CHI,what's what's why that's meat for tacos?,-1,
-5764,Kuczaj/020818.cha,CHI,Mom why that's meat for tacos?,-1,
+5763,Kuczaj/020818.cha,CHI,what's what's why that's meat for tacos?,-1,auxiliary
+5764,Kuczaj/020818.cha,CHI,Mom why that's meat for tacos?,-1,auxiliary
 5765,Kuczaj/020818.cha,CAR,that's to make our tacos Abe.,,
 5766,Kuczaj/020818.cha,CHI,uhhuh Mom I can't believe that.,1,
 5767,Kuczaj/020818.cha,CAR,you can't believe what?,,
@@ -260,62 +260,62 @@
 5774,Kuczaj/020818.cha,CHI,uhuh I said no!,1,
 5775,Kuczaj/020818.cha,CAR,how come?,,
 5776,Kuczaj/020818.cha,CHI,I just said no!,1,
-5777,Kuczaj/020818.cha,CHI,I don't want a woodpecker peck on me.,-1,I donít want a dog to bite me
+5777,Kuczaj/020818.cha,CHI,I don't want a woodpecker peck on me.,-1,tense_aspect
 5778,Kuczaj/020818.cha,CAR,I don't either.,,
 5779,Kuczaj/020818.cha,CAR,what makes you think a woodpecker would peck on you?,,
-5780,Kuczaj/020818.cha,CHI,I get a hole in my hole in my mouth and my nose and my eyes and here and here and here and here and here and here and here and here and here and here.,1,have a hole
+5780,Kuczaj/020818.cha,CHI,I get a hole in my hole in my mouth and my nose and my eyes and here and here and here and here and here and here and here and here and here and here.,1,
 5781,Kuczaj/020818.cha,CAR,you'd be a holey Abe wouldn't you?,,
-5782,Kuczaj/020818.cha,CHI,uhhuh and then I can't walk when them peck holes on me.,-1,"208 for me: them = those, + ommits 'are'"
+5782,Kuczaj/020818.cha,CHI,uhhuh and then I can't walk when them peck holes on me.,-1,verb
 5783,Kuczaj/020818.cha,CAR,not if you had all those holes in you could you?,,
-5784,Kuczaj/020818.cha,CHI,hunhunh and then I can't walk when them peck holes on me.,-1,
+5784,Kuczaj/020818.cha,CHI,hunhunh and then I can't walk when them peck holes on me.,-1,verb
 5785,Kuczaj/020818.cha,CAR,you couldn't walk if you had that many holes?,,
 5786,Kuczaj/020818.cha,CHI,hunhunh.,,
 5787,Kuczaj/020818.cha,CAR,what would happen if you drank water?,,
-5788,Kuczaj/020818.cha,CHI,make all the holes feel good.,1,pretty sure not an imp
+5788,Kuczaj/020818.cha,CHI,make all the holes feel good.,1,
 5789,Kuczaj/020818.cha,CAR,all the water would come out of all those holes?,,
 5790,Kuczaj/020818.cha,CAR,like a water fountain?,,
-5791,Kuczaj/020818.cha,CHI,I I blowed that Mommy.,-1,
+5791,Kuczaj/020818.cha,CHI,I I blowed that Mommy.,-1,tense_aspect
 5792,Kuczaj/020818.cha,CAR,the sugar?,,
 5793,Kuczaj/020818.cha,CAR,the baking powder?,,
-5794,Kuczaj/020818.cha,CHI,the the sugar I blowed the sugar Mom.,-1,reform
-5795,Kuczaj/020818.cha,CHI,why that's yellow Mom?,-1,208
+5794,Kuczaj/020818.cha,CHI,the the sugar I blowed the sugar Mom.,-1,tense_aspect
+5795,Kuczaj/020818.cha,CHI,why that's yellow Mom?,-1,auxiliary
 5796,Kuczaj/020818.cha,CAR,I don't know why this ended up yellow.,,
 5797,Kuczaj/020818.cha,CAR,what are you thinking Abe?,,
 5798,Kuczaj/020818.cha,CAR,will you like tacos made with yellow lard?,,
 5799,Kuczaj/020818.cha,CHI,I also like this goes around and makes these things flat.,1,
 5800,Kuczaj/020818.cha,CHI,Mom what's this letter?,1,
-5801,Kuczaj/020818.cha,CHI,a e what's two letters?,-1,what are theseÖ
+5801,Kuczaj/020818.cha,CHI,a e what's two letters?,-1,determiner
 5802,Kuczaj/020818.cha,CHI,what's this?,1,
 5803,Kuczaj/020818.cha,CHI,what's.,,
-5804,Kuczaj/020818.cha,CHI,Mommy when you're through with.,-1,with what?
-5805,Kuczaj/020818.cha,CHI,don't beater it Mom!,0,not a verb
+5804,Kuczaj/020818.cha,CHI,Mommy when you're through with.,-1,object
+5805,Kuczaj/020818.cha,CHI,don't beater it Mom!,0,
 5806,Kuczaj/020818.cha,CAR,I'm sort of blending it in.,,
-5807,Kuczaj/020818.cha,CHI,you cut those.,1,imp and past are correct
+5807,Kuczaj/020818.cha,CHI,you cut those.,1,
 5808,Kuczaj/020818.cha,CAR,I'm going to cut them.,,
-5809,Kuczaj/020818.cha,CHI,cut that onion too.,1,imp from context
+5809,Kuczaj/020818.cha,CHI,cut that onion too.,1,
 5810,Kuczaj/020818.cha,CAR,I already cut the onion.,,
 5811,Kuczaj/020818.cha,CHI,huh?,,
 5812,Kuczaj/020818.cha,CAR,I already cut the onion.,,
 5813,Kuczaj/020818.cha,CHI,huh?,,
-5814,Kuczaj/020818.cha,CHI,where the onion at?,-1,208 for me
+5814,Kuczaj/020818.cha,CHI,where the onion at?,-1,verb
 5815,Kuczaj/020818.cha,CAR,it's over there on the table all cut up.,,
-5816,Kuczaj/020818.cha,CHI,why that's cut all cut up?,-1,208
-5817,Kuczaj/020818.cha,CHI,Dad you should have cut up right there.,-1,"no obj, I think it's ok"
+5816,Kuczaj/020818.cha,CHI,why that's cut all cut up?,-1,
+5817,Kuczaj/020818.cha,CHI,Dad you should have cut up right there.,-1,object
 5818,Kuczaj/020818.cha,CHI,that's the onion I picked.,1,
 5819,Kuczaj/020818.cha,CAR,is that the onion you picked?,,
-5820,Kuczaj/020818.cha,CHI,uhhuh Mommy Mommy see Mommy see Mommy see.,1,imp
+5820,Kuczaj/020818.cha,CHI,uhhuh Mommy Mommy see Mommy see Mommy see.,1,
 5821,Kuczaj/020818.cha,CAR,yes indeed you've gotten into the flour haven't you?,,
 5822,Kuczaj/020818.cha,CHI,Mom Mommy see Mommy see.,1,
 5823,Kuczaj/020818.cha,CAR,I don't think that you should get into it any more.,,
-5824,Kuczaj/020818.cha,CHI,why you put some water in there Mom?,-1,208 for me
-5825,Kuczaj/020818.cha,CHI,why you put some water in there Mom?,-1,208
+5824,Kuczaj/020818.cha,CHI,why you put some water in there Mom?,-1,auxiliary
+5825,Kuczaj/020818.cha,CHI,why you put some water in there Mom?,-1,auxiliary
 5826,Kuczaj/020818.cha,CAR,to help mix all of the ingredients together.,,
-5827,Kuczaj/020818.cha,CHI,when you through with that I have a lick of bowl that bowl?,-1,
+5827,Kuczaj/020818.cha,CHI,when you through with that I have a lick of bowl that bowl?,-1,"verb, auxiliary, determiner"
 5828,Kuczaj/020818.cha,CAR,you wanna lick the bowl?,,
-5829,Kuczaj/020818.cha,CHI,I lick one little piece okay?,-1,
-5830,Kuczaj/020818.cha,CHI,Mom one big piece.,1,reformulation/completion + imp
+5829,Kuczaj/020818.cha,CHI,I lick one little piece okay?,-1,auxiliary
+5830,Kuczaj/020818.cha,CHI,Mom one big piece.,1,
 5831,Kuczaj/020818.cha,CAR,just a second.,,
-5832,Kuczaj/020818.cha,CHI,a bigger piece!,0,imp
+5832,Kuczaj/020818.cha,CHI,a bigger piece!,0,
 5833,Kuczaj/020818.cha,CHI,not this small piece!,1,
 5834,Kuczaj/020818.cha,CAR,here.,,
 5835,Kuczaj/020818.cha,CHI,thank you.,1,
@@ -324,11 +324,11 @@
 5838,Kuczaj/020818.cha,CHI,one two three four.,0,
 5839,Kuczaj/020818.cha,CAR,four.,,
 5840,Kuczaj/020818.cha,CAR,okay I'll have four.,,
-5841,Kuczaj/020818.cha,CHI,Mommy I have one little another lick please.,-1,
+5841,Kuczaj/020818.cha,CHI,Mommy I have one little another lick please.,-1,auxliary
 5842,Kuczaj/020818.cha,CAR,I thought you wanted tacos.,,
 5843,Kuczaj/020818.cha,CHI,huh?,,
 5844,Kuczaj/020818.cha,CAR,I thought you wanted to eat tacos.,,
-5845,Kuczaj/020818.cha,CHI,I have one.,0,have as in 'on my plate rn'
+5845,Kuczaj/020818.cha,CHI,I have one.,0,
 5846,Kuczaj/020818.cha,CHI,I have one.,0,
 5847,Kuczaj/020818.cha,CHI,I have one two three four I have Mommy.,0,
 5848,Kuczaj/020818.cha,CAR,five tacos?,,
@@ -337,12 +337,12 @@
 5851,Kuczaj/020818.cha,CHI,don't bug me fly.,1,
 5852,Kuczaj/020818.cha,CHI,shoo fly don't bother me.,1,
 5853,Kuczaj/020818.cha,CAR,shoo fly get out of here.,,
-5854,Kuczaj/020818.cha,CHI,I catch you.,-1,
-5855,Kuczaj/020818.cha,CHI,and I cook you.,-1,
-5856,Kuczaj/020818.cha,CHI,shoo fly.,0,imp/onom?
-5857,Kuczaj/020818.cha,CHI,we don't wanna cook some fly.,1,could be correct / some as in 'one/a'
+5854,Kuczaj/020818.cha,CHI,I catch you.,-1,auxiliary
+5855,Kuczaj/020818.cha,CHI,and I cook you.,-1,auxliary
+5856,Kuczaj/020818.cha,CHI,shoo fly.,0,
+5857,Kuczaj/020818.cha,CHI,we don't wanna cook some fly.,1,
 5858,Kuczaj/020818.cha,CHI,uhhuh we don't wanna cook some fly.,1,
-5859,Kuczaj/020818.cha,CHI,not me either I will not fit in the pan.,-1,me neither
+5859,Kuczaj/020818.cha,CHI,not me either I will not fit in the pan.,-1,other
 5860,Kuczaj/020818.cha,CHI,I will not fit in the pan Mom.,1,
 5861,Kuczaj/020818.cha,CAR,that's right.,,
 5862,Kuczaj/020818.cha,CHI,I'm cutting this Mom.,1,
@@ -350,10 +350,10 @@
 5864,Kuczaj/020818.cha,CHI,then we don't wanna break it.,1,
 5865,Kuczaj/020818.cha,CHI,I don't wanna cook a fly Mom.,1,
 5866,Kuczaj/020818.cha,CAR,you don't wanna cook a fly?,,
-5867,Kuczaj/020818.cha,CHI,hunhunh I have one more little taste Mom?,-1,
-5868,Kuczaj/020818.cha,CHI,I have one little taste?,-1,
-5869,Kuczaj/020818.cha,CHI,I have a big taste Mom?,-1,
-5870,Kuczaj/020818.cha,CHI,I have one more little big taste again Mom?,-1,
+5867,Kuczaj/020818.cha,CHI,hunhunh I have one more little taste Mom?,-1,auxiliary
+5868,Kuczaj/020818.cha,CHI,I have one little taste?,-1,auxiliary
+5869,Kuczaj/020818.cha,CHI,I have a big taste Mom?,-1,auxiliary
+5870,Kuczaj/020818.cha,CHI,I have one more little big taste again Mom?,-1,auxiliary
 5871,Kuczaj/020818.cha,CAR,no I don't think so Abe.,,
 5872,Kuczaj/020818.cha,CAR,you're going to get full of dough and won't have any room for tacos.,,
 5873,Kuczaj/020818.cha,CHI,I don't wanna have tacos.,1,
@@ -369,7 +369,7 @@
 5883,Kuczaj/020818.cha,CHI,oh what's this Mom?,1,
 5884,Kuczaj/020818.cha,CHI,what's this Mom?,1,
 5885,Kuczaj/020818.cha,CAR,little pieces of lettuce.,,
-5886,Kuczaj/020818.cha,CHI,oh little pieces of lettuce for tacos?,1,clarification
+5886,Kuczaj/020818.cha,CHI,oh little pieces of lettuce for tacos?,1,
 5887,Kuczaj/020818.cha,CAR,uhhuh.,,
 5888,Kuczaj/020818.cha,CAR,Abe guess what's on tv tonight?,,
 5889,Kuczaj/020818.cha,CHI,I don't know.,1,
@@ -377,21 +377,21 @@
 5891,Kuczaj/020818.cha,CHI,Mickey Mouse.,1,
 5892,Kuczaj/020818.cha,CAR,yeah at six thirty.,,
 5893,Kuczaj/020818.cha,CAR,one hour and fifteen minutes do you think that you can wait that long?,,
-5894,Kuczaj/020818.cha,CHI,uhhuh our tiny cheese Dad.,0,no sense
+5894,Kuczaj/020818.cha,CHI,uhhuh our tiny cheese Dad.,0,
 5895,Kuczaj/020818.cha,CHI,I got tiny cheese cut it up okay?,0,
 5896,Kuczaj/020818.cha,CAR,we'll use it later okay?,,
 5897,Kuczaj/020818.cha,CHI,now.,,
 5898,Kuczaj/020818.cha,CAR,we'll see.,,
 5899,Kuczaj/020818.cha,CAR,but I think this would work better big Abe.,,
-5900,Kuczaj/020818.cha,CHI,I'm bigger.,1,"not sure, maybe pointing"
+5900,Kuczaj/020818.cha,CHI,I'm bigger.,1,
 5901,Kuczaj/020818.cha,CAR,you're bigger?,,
 5902,Kuczaj/020818.cha,CHI,I'm going to grow big and big and touch the wall.,1,
 5903,Kuczaj/020818.cha,CAR,you are?,,
-5904,Kuczaj/020818.cha,CHI,uhhuh put those in Mom.,1,it's imp look at next line
+5904,Kuczaj/020818.cha,CHI,uhhuh put those in Mom.,1,
 5905,Kuczaj/020818.cha,CHI,Mom put those in Mom.,1,
 5906,Kuczaj/020818.cha,CHI,I'll eat it all Mommy.,1,
 5907,Kuczaj/020818.cha,CAR,you did?,,
-5908,Kuczaj/020818.cha,CHI,uhuh uhuh I eat a real tiny one like yours.,-1,
+5908,Kuczaj/020818.cha,CHI,uhuh uhuh I eat a real tiny one like yours.,-1,auxiliary
 5909,Kuczaj/020818.cha,CAR,it didn't fill you up then did it?,,
 5910,Kuczaj/020818.cha,CHI,I tried to eat it all.,1,
 5911,Kuczaj/020818.cha,CAR,you did try?,,
@@ -402,7 +402,7 @@
 5916,Kuczaj/020818.cha,CAR,milk.,,
 5917,Kuczaj/020818.cha,CHI,I want some milk.,1,
 5918,Kuczaj/020818.cha,CAR,okay I think I can arrange that.,,
-5919,Kuczaj/020818.cha,CHI,Daddy what we watch Daddy.,-1,
+5919,Kuczaj/020818.cha,CHI,Daddy what we watch Daddy.,-1,auxiliary
 5920,Kuczaj/020818.cha,CAR,what are we going to watch?,,
 5921,Kuczaj/020818.cha,CHI,uhhuh.,,
 5922,Kuczaj/020818.cha,CAR,let's see.,,
@@ -415,15 +415,15 @@
 5929,Kuczaj/020818.cha,CHI,Mommy I can't see it.,1,
 5930,Kuczaj/020818.cha,CAR,it's wiggling because it's real windy outside.,,
 5931,Kuczaj/020818.cha,CAR,it'll be okay soon.,,
-5932,Kuczaj/020818.cha,CHI,Daddy soon that's a be gone.,-1,
+5932,Kuczaj/020818.cha,CHI,Daddy soon that's a be gone.,-1,"auxiliary, determiner"
 5933,Kuczaj/020818.cha,CAR,soon it will be gone?,,
 5934,Kuczaj/020818.cha,CHI,uhhuh it's gone now Mom.,1,
 5935,Kuczaj/020818.cha,CAR,uhhuh I'll have to grate some more.,,
-5936,Kuczaj/020818.cha,CHI,Mommy I need some another one Mom.,1,"not sure, could be reform"
+5936,Kuczaj/020818.cha,CHI,Mommy I need some another one Mom.,1,
 5937,Kuczaj/020818.cha,CAR,another taco?,,
-5938,Kuczaj/020818.cha,CHI,uhhuh I I don't want you eat them all.,-1,
+5938,Kuczaj/020818.cha,CHI,uhhuh I I don't want you eat them all.,-1,tense_aspect
 5939,Kuczaj/020818.cha,CAR,I won't I'll just eat a couple.,,
-5940,Kuczaj/020818.cha,CHI,Mommy Mommy see that he's walking!,0,pause after that
+5940,Kuczaj/020818.cha,CHI,Mommy Mommy see that he's walking!,0,
 5941,Kuczaj/020818.cha,CAR,uhhuh see how he walks he just sort of.,,
 5942,EllisWeismer/LT/30pc/22142.cha,CAR,should we get some some water in case he's thirsty?,,
 5943,EllisWeismer/LT/30pc/22142.cha,CAR,and some hay.,,
@@ -450,7 +450,7 @@
 5964,EllisWeismer/LT/30pc/22142.cha,CAR,I think there's one.,,
 5965,EllisWeismer/LT/30pc/22142.cha,CAR,what's that?,,
 5966,EllisWeismer/LT/30pc/22142.cha,CAR,in that stall?,,
-5967,EllisWeismer/LT/30pc/22142.cha,CHI,baby horse.,-1,pointing
+5967,EllisWeismer/LT/30pc/22142.cha,CHI,baby horse.,-1,determiner
 5968,EllisWeismer/LT/30pc/22142.cha,CAR,baby horse.,,
 5969,EllisWeismer/LT/30pc/22142.cha,CAR,that's right.,,
 5970,EllisWeismer/LT/30pc/22142.cha,CAR,oh the baby horse is so happy to be with his mo.,,
@@ -487,7 +487,7 @@
 6001,EllisWeismer/LT/30pc/22142.cha,CAR,mama cow.,,
 6002,EllisWeismer/LT/30pc/22142.cha,CHI,hello horse.,1,
 6003,EllisWeismer/LT/30pc/22142.cha,CAR,say hello Mr Horse.,,
-6004,EllisWeismer/LT/30pc/22142.cha,CHI,this is baby.,-1,
+6004,EllisWeismer/LT/30pc/22142.cha,CHI,this is baby.,-1,determiner
 6005,EllisWeismer/LT/30pc/22142.cha,CAR,uhhuh she's with her baby.,,
 6006,EllisWeismer/LT/30pc/22142.cha,CAR,she wants to go back in her stall?,,
 6007,EllisWeismer/LT/30pc/22142.cha,CAR,oh nice job.,,
@@ -511,7 +511,7 @@
 6025,EllisWeismer/LT/30pc/22142.cha,CAR,or would the sheep like a stall.,,
 6026,EllisWeismer/LT/30pc/22142.cha,CHI,huh.,,
 6027,EllisWeismer/LT/30pc/22142.cha,CAR,what's that?,,
-6028,EllisWeismer/LT/30pc/22142.cha,CHI,there's water.,1,"not sure, weird response but grammatical"
+6028,EllisWeismer/LT/30pc/22142.cha,CHI,there's water.,1,
 6029,EllisWeismer/LT/30pc/22142.cha,CAR,yeah we can pretend like that's water.,,
 6030,EllisWeismer/LT/30pc/22142.cha,CHI,oh.,,
 6031,EllisWeismer/LT/30pc/22142.cha,CAR,oh nice.,,
@@ -522,7 +522,7 @@
 6036,EllisWeismer/LT/30pc/22142.cha,CAR,oh nice job.,,
 6037,EllisWeismer/LT/30pc/22142.cha,CAR,yeah you fixed the gate nicely.,,
 6038,EllisWeismer/LT/30pc/22142.cha,CAR,so they have water and they have hay.,,
-6039,EllisWeismer/LT/30pc/22142.cha,CHI,I eat and bite the.,-1,
+6039,EllisWeismer/LT/30pc/22142.cha,CHI,I eat and bite the.,-1,"auxiliary, object"
 6040,EllisWeismer/LT/30pc/22142.cha,CAR,so he's going to play with the cow?,,
 6041,EllisWeismer/LT/30pc/22142.cha,CAR,oh I think they're enjoying playing together.,,
 6042,EllisWeismer/LT/30pc/22142.cha,CAR,very nice you shut the door nicely okay.,,
@@ -537,7 +537,7 @@
 6051,EllisWeismer/LT/30pc/22142.cha,CAR,or the pig?,,
 6052,EllisWeismer/LT/30pc/22142.cha,CAR,hey Childsname I would like some eggs for breakfast.,,
 6053,EllisWeismer/LT/30pc/22142.cha,CAR,do you know where we get the eggs?,,
-6054,EllisWeismer/LT/30pc/22142.cha,CHI,mm egg.,-1,pointing
+6054,EllisWeismer/LT/30pc/22142.cha,CHI,mm egg.,-1,determiner
 6055,EllisWeismer/LT/30pc/22142.cha,CAR,underneath the chicken.,,
 6056,EllisWeismer/LT/30pc/22142.cha,CAR,oh let's check the nest.,,
 6057,EllisWeismer/LT/30pc/22142.cha,CAR,oh there's one.,,
@@ -655,4 +655,4 @@
 6169,EllisWeismer/LT/30pc/22142.cha,CAR,mm good sweet hay.,,
 6170,EllisWeismer/LT/30pc/22142.cha,CAR,do you think Mr Horse would like some?,,
 6171,EllisWeismer/LT/30pc/22142.cha,CAR,mm a cool drink of water.,,
-6172,EllisWeismer/LT/30pc/22142.cha,CHI,up oh.,-1,
+6172,EllisWeismer/LT/30pc/22142.cha,CHI,up oh.,-1,verb
