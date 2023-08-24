@@ -173,7 +173,7 @@ def parse_args():
     argparser.add_argument(
         "--test-split-proportion",
         type=float,
-        default=0.2,
+        default=0.1,
         help="Test split proportion"
     )
     argparser.add_argument(

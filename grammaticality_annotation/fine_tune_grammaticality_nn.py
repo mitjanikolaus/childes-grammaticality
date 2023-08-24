@@ -326,7 +326,7 @@ def parse_args():
     argparser.add_argument(
         "--val-split-proportion",
         type=float,
-        default=0.2,
+        default=0.1,
         help="Val split proportion (only for manually annotated data)"
     )
     argparser.add_argument(
