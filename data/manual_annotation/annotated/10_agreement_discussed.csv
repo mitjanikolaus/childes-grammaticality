@@ -1,4 +1,4 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 8828,Thomas/021005.cha,CAR,it says.,,
 8829,Thomas/021005.cha,CAR,dear Thomas.,,
 8830,Thomas/021005.cha,CAR,will you come to my party.,,
@@ -18,7 +18,7 @@
 8844,Thomas/021005.cha,CHI,that's Thomas.,1,
 8845,Thomas/021005.cha,CAR,is it?,,
 8846,Thomas/021005.cha,CAR,let's just see what day the twenty third is.,,
-8847,Thomas/021005.cha,CHI,twenty third is Christmas.,-1,208
+8847,Thomas/021005.cha,CHI,twenty third is Christmas.,-1,determiner
 8848,Thomas/021005.cha,CAR,no.,,
 8849,Thomas/021005.cha,CAR,twenty third of February isn't Christmas.,,
 8850,Thomas/021005.cha,CAR,the twenty fifth of December is Christmas.,,
@@ -55,7 +55,7 @@
 8881,Thomas/021005.cha,CAR,well I haven't eaten them all.,,
 8882,Thomas/021005.cha,CAR,no.,,
 8883,Thomas/021005.cha,CAR,Charlotte's.,,
-8884,Thomas/021005.cha,CHI,twenty three.,1,cont
+8884,Thomas/021005.cha,CHI,twenty three.,1,
 8885,Thomas/021005.cha,CAR,Charlotte's twenty three?,,
 8886,Thomas/021005.cha,CAR,Charlotte's second birthday.,,
 8887,Thomas/021005.cha,CAR,and I shall just write underneath party two to four o'clock p m.,,
@@ -70,7 +70,7 @@
 8896,Thomas/021005.cha,CAR,so while we've got the calendar out shall we write there.,,
 8897,Thomas/021005.cha,CAR,that was a Wednesday as well.,,
 8898,Thomas/021005.cha,CAR,Lyn's.,,
-8899,Thomas/021005.cha,CHI,Charlotte's birthday.,0,pointing
+8899,Thomas/021005.cha,CHI,Charlotte's birthday.,0,
 8900,Thomas/021005.cha,CHI,yeah.,,
 8901,Thomas/021005.cha,CAR,birthday.,,
 8902,Thomas/021005.cha,CAR,but Lyn didn't have a party did she?,,
@@ -80,47 +80,47 @@
 8906,Thomas/021005.cha,CAR,"you ready for lunch now, Thomas?",,
 8907,Thomas/021005.cha,CHI,where's my train man?,1,
 8908,Thomas/021005.cha,CHI,Mummy.,,
-8909,Thomas/021005.cha,CHI,I train man.,-1,
+8909,Thomas/021005.cha,CHI,I train man.,-1,determiner
 8910,Thomas/021005.cha,CAR,you're a train man?,,
 8911,Thomas/021005.cha,CHI,yeah.,,
-8912,Thomas/021005.cha,CHI,on the station platform.,0,pointing
+8912,Thomas/021005.cha,CHI,on the station platform.,0,
 8913,Thomas/021005.cha,CAR,are you?,,
 8914,Thomas/021005.cha,CHI,yeah.,,
 8915,Thomas/021005.cha,CAR,what're you doing on the station platform?,,
-8916,Thomas/021005.cha,CHI,I not drawing.,-1,
-8917,Thomas/021005.cha,CHI,I ride round in my engine all up.,-1,
+8916,Thomas/021005.cha,CHI,I not drawing.,-1,present_progressive
+8917,Thomas/021005.cha,CHI,I ride round in my engine all up.,-1,"preposition, other"
 8918,Thomas/021005.cha,CHI,it's James.,1,
-8919,Thomas/021005.cha,CHI,my James's driver.,-1,
+8919,Thomas/021005.cha,CHI,my James's driver.,-1,determiner
 8920,Thomas/021005.cha,CAR,oh you're James's driver are you?,,
 8921,Thomas/021005.cha,CHI,yeah.,,
 8922,Thomas/021005.cha,CAR,right.,,
 8923,Thomas/021005.cha,CHI,yes it is James there.,1,
-8924,Thomas/021005.cha,CHI,I'm coming you're coming you.,-1,
+8924,Thomas/021005.cha,CHI,I'm coming you're coming you.,-1,other
 8925,Thomas/021005.cha,CAR,pardon?,,
-8926,Thomas/021005.cha,CHI,not no no.,0,reform
-8927,Thomas/021005.cha,CHI,I not got lots of seats for you.,-1,
+8926,Thomas/021005.cha,CHI,not no no.,0,
+8927,Thomas/021005.cha,CHI,I not got lots of seats for you.,-1,auxiliary
 8928,Thomas/021005.cha,CAR,oh you've no seats for me?,,
 8929,Thomas/021005.cha,CHI,no.,,
 8930,Thomas/021005.cha,CAR,there's no room for Mummy?,,
 8931,Thomas/021005.cha,CHI,no.,,
 8932,Thomas/021005.cha,CAR,oh no.,,
-8933,Thomas/021005.cha,CHI,I up.,-1,
+8933,Thomas/021005.cha,CHI,I up.,-1,verb
 8934,Thomas/021005.cha,CHI,that's my dinner chair.,1,
-8935,Thomas/021005.cha,CHI,I just eated it all up.,-1,
-8936,Thomas/021005.cha,CHI,your chair all up.,-1,
+8935,Thomas/021005.cha,CHI,I just eated it all up.,-1,tense_aspect
+8936,Thomas/021005.cha,CHI,your chair all up.,-1,verb
 8937,Thomas/021005.cha,CAR,what have you eaten all up?,,
-8938,Thomas/021005.cha,CHI,your chair all up.,-1,
+8938,Thomas/021005.cha,CHI,your chair all up.,-1,verb
 8939,Thomas/021005.cha,CAR,you've eaten my chair?,,
 8940,Thomas/021005.cha,CHI,yeah.,,
 8941,Thomas/021005.cha,CAR,so who are you?,,
 8942,Thomas/021005.cha,CAR,James?,,
 8943,Thomas/021005.cha,CAR,or James's driver?,,
-8944,Thomas/021005.cha,CHI,James's driver.,1,rep
+8944,Thomas/021005.cha,CHI,James's driver.,1,
 8945,Thomas/021005.cha,CHI,that's James.,1,
 8946,Thomas/021005.cha,CAR,oh I see.,,
 8947,Thomas/021005.cha,CAR,the train is James and you're the driver of the engine called James are you?,,
-8948,Thomas/021005.cha,CHI,engine driver.,-1,
-8949,Thomas/021005.cha,CHI,uh engine driver brush his my brush his hair.,-1,
+8948,Thomas/021005.cha,CHI,engine driver.,-1,determiner
+8949,Thomas/021005.cha,CHI,uh engine driver brush his my brush his hair.,-1,"determiner, sv_agreement"
 8950,Thomas/021005.cha,CAR,oh well I've just brushed your hair because you look a bit windswept as well don't you?,,
 8951,Thomas/021005.cha,CAR,it was very blowy outside.,,
 8952,Thomas/021005.cha,CHI,my train man's all strapped up in his train.,1,
@@ -133,7 +133,7 @@
 8959,Thomas/021005.cha,CHI,just a minute.,1,
 8960,Thomas/021005.cha,CAR,oops.,,
 8961,Thomas/021005.cha,CHI,nearly.,,
-8962,Thomas/021005.cha,CHI,I go now.,-1,
+8962,Thomas/021005.cha,CHI,I go now.,-1,present_progressive
 8963,Thomas/021005.cha,CAR,you're going now?,,
 8964,Thomas/021005.cha,CHI,mhm.,,
 8965,Thomas/021005.cha,CAR,has the guard blown his whistle?,,
@@ -151,10 +151,10 @@
 8977,Thomas/021005.cha,CHI,choo choo choo.,0,
 8978,Thomas/021005.cha,CAR,you driving off?,,
 8979,Thomas/021005.cha,CAR,where are you driving to?,,
-8980,Thomas/021005.cha,CHI,uh uh seaside.,-1,
+8980,Thomas/021005.cha,CHI,uh uh seaside.,-1,determiner
 8981,Thomas/021005.cha,CAR,the seaside?,,
 8982,Thomas/021005.cha,CAR,which seaside?,,
-8983,Thomas/021005.cha,CHI,blue one.,-1,
+8983,Thomas/021005.cha,CHI,blue one.,-1,determiner
 8984,Thomas/021005.cha,CAR,the blue one?,,
 8985,Thomas/021005.cha,CAR,you mean the blue sea?,,
 8986,Thomas/021005.cha,CHI,yeah.,,
@@ -169,21 +169,21 @@
 8995,Thomas/021005.cha,CAR,who lives in York?,,
 8996,Thomas/021005.cha,CHI,Nana Bealby.,1,
 8997,Thomas/021005.cha,CAR,Nana Bealby and who else?,,
-8998,Thomas/021005.cha,CHI,no what Purdie.,0,not sure if reform
+8998,Thomas/021005.cha,CHI,no what Purdie.,0,
 8999,Thomas/021005.cha,CAR,well Purdie stays at Grandma's sometimes.,,
 9000,Thomas/021005.cha,CAR,what about Grandad?,,
 9001,Thomas/021005.cha,CHI,Grandad Bealby.,1,
 9002,Thomas/021005.cha,CAR,Grandad Bealby.,,
-9003,Thomas/021005.cha,CHI,train driver doing.,-1,
+9003,Thomas/021005.cha,CHI,train driver doing.,-1,"determiner, present_progressive, object"
 9004,Thomas/021005.cha,CAR,well I think the train driver must be a bit hungry now.,,
 9005,Thomas/021005.cha,CAR,is it time for the train driver's lunch?,,
 9006,Thomas/021005.cha,CAR,oh you're rolling up your sleeves?,,
 9007,Thomas/021005.cha,CHI,mhm.,,
 9008,Thomas/021005.cha,CAR,does that mean you mean business?,,
 9009,Thomas/021005.cha,CHI,mhm.,,
-9010,Thomas/021005.cha,CHI,I been Tesco.,-1,
+9010,Thomas/021005.cha,CHI,I been Tesco.,-1,"auxiliary, preposition"
 9011,Thomas/021005.cha,CAR,you wanna kiss me?,,
-9012,Thomas/021005.cha,CHI,I been Tesco.,-1,
+9012,Thomas/021005.cha,CHI,I been Tesco.,-1,"auxiliary, preposition"
 9013,Thomas/021005.cha,CAR,oh you've been to Tesco.,,
 9014,Thomas/021005.cha,CHI,yeah.,,
 9015,Thomas/021005.cha,CAR,I thought you said you wanted to kiss me.,,
@@ -200,7 +200,7 @@
 9026,Thomas/021005.cha,CHI,yeah.,,
 9027,Thomas/021005.cha,CAR,that sounds nice.,,
 9028,Thomas/021005.cha,CHI,yeah.,,
-9029,Thomas/021005.cha,CHI,my train driver man.,-1,
+9029,Thomas/021005.cha,CHI,my train driver man.,-1,verb
 9030,Thomas/021005.cha,CAR,well I went to the baker's in Heaton Mersey and got some sausage rolls for our lunch.,,
 9031,Thomas/021005.cha,CHI,thanks.,,
 9032,Thomas/021005.cha,CHI,that's my my train driver dinner.,1,
@@ -216,14 +216,14 @@
 9042,Thomas/021005.cha,CAR,are you sure you don't want some coleslaw?,,
 9043,Thomas/021005.cha,CHI,no.,,
 9044,Thomas/021005.cha,CAR,"there you are, sweetheart.",,
-9045,Thomas/021005.cha,CHI,like some Quavers.,-1,
+9045,Thomas/021005.cha,CHI,like some Quavers.,-1,"subject, auxiliary"
 9046,Thomas/021005.cha,CAR,would you?,,
 9047,Thomas/021005.cha,CHI,yeah.,,
 9048,Thomas/021005.cha,CAR,what do you say?,,
-9049,Thomas/021005.cha,CHI,and pastry.,0,native?
+9049,Thomas/021005.cha,CHI,and pastry.,0,
 9050,Thomas/021005.cha,CAR,it's pastry.,,
 9051,Thomas/021005.cha,CAR,yes.,,
-9052,Thomas/021005.cha,CHI,I not like pastry.,-1,
+9052,Thomas/021005.cha,CHI,I not like pastry.,-1,auxiliary
 9053,Thomas/021005.cha,CAR,"you do sometimes, Thomas.",,
 9054,Thomas/021005.cha,CAR,there you are.,,
 9055,Thomas/021005.cha,CAR,well you must eat some of the pastry.,,
@@ -232,9 +232,9 @@
 9058,Thomas/021005.cha,CAR,I'm going to pinch a Quaver for me.,,
 9059,Thomas/021005.cha,CHI,mhm.,,
 9060,Thomas/021005.cha,CHI,"look, Mummy.",1,
-9061,Thomas/021005.cha,CHI,got a sausage in my mouth.,-1,
+9061,Thomas/021005.cha,CHI,got a sausage in my mouth.,-1,subject
 9062,Thomas/021005.cha,CAR,have you got a sausage roll in your mouth?,,
-9063,Thomas/021005.cha,CHI,like a sandwich.,-1,
+9063,Thomas/021005.cha,CHI,like a sandwich.,-1,"subject, auxiliary"
 9064,Thomas/021005.cha,CAR,a sandwich?,,
 9065,Thomas/021005.cha,CHI,mhm.,,
 9066,Thomas/021005.cha,CAR,I'm sorry we haven't got sandwiches today.,,
@@ -264,7 +264,7 @@
 9090,Thomas/021005.cha,CAR,and then in the afternoon you had some fruit and some biscuits didn't you?,,
 9091,Thomas/021005.cha,CHI,mhm.,,
 9092,Thomas/021005.cha,CAR,you ate an apple.,,
-9093,Thomas/021005.cha,CHI,Becky not want cheese.,-1,
+9093,Thomas/021005.cha,CHI,Becky not want cheese.,-1,auxiliary
 9094,Thomas/021005.cha,CAR,she didn't want her cheese did she?,,
 9095,Thomas/021005.cha,CHI,no.,,
 9096,Thomas/021005.cha,CAR,because you had some little cheese sandwiches.,,
@@ -277,12 +277,12 @@
 9103,Thomas/021005.cha,CAR,but Becky didn't want that.,,
 9104,Thomas/021005.cha,CAR,"she's quite a bit younger than you though, Thomas.",,
 9105,Thomas/021005.cha,CHI,yeah.,,
-9106,Thomas/021005.cha,CHI,I like Mummy train driver said.,-1,
+9106,Thomas/021005.cha,CHI,I like Mummy train driver said.,-1,determiner
 9107,Thomas/021005.cha,CAR,did I sound like the train driver?,,
 9108,Thomas/021005.cha,CHI,the train driver said I like you.,1,
 9109,Thomas/021005.cha,CAR,you like me?,,
 9110,Thomas/021005.cha,CHI,mhm.,,
-9111,Thomas/021005.cha,CHI,my train driver man.,0,man is an expression
+9111,Thomas/021005.cha,CHI,my train driver man.,0,
 9112,Thomas/021005.cha,CAR,"does that taste good, Thomas?",,
 9113,Thomas/021005.cha,CHI,yeah.,,
 9114,Thomas/021005.cha,CAR,oh your lip's a bit sore isn't it?,,
@@ -370,7 +370,7 @@
 9196,Thomas/021005.cha,CAR,you're going to miss it.,,
 9197,Thomas/021005.cha,CHI,mhm.,,
 9198,Thomas/021005.cha,CAR,aah.,,
-9199,Thomas/021005.cha,CHI,wanna play a helicopter.,-1,
+9199,Thomas/021005.cha,CHI,wanna play a helicopter.,-1,"subject, tense_aspect"
 9200,Thomas/021005.cha,CAR,you wanna play with your helicopter?,,
 9201,Thomas/021005.cha,CHI,yes.,,
 9202,Thomas/021005.cha,CAR,now?,,
@@ -393,9 +393,9 @@
 9219,Thomas/021005.cha,CAR,no.,,
 9220,Thomas/021005.cha,CAR,I don't know either.,,
 9221,Thomas/021005.cha,CAR,I think you just made it up.,,
-9222,Thomas/021005.cha,CHI,a a giraffe is suitsuit.,-1,
+9222,Thomas/021005.cha,CHI,a a giraffe is suitsuit.,-1,determiner
 9223,Thomas/021005.cha,CAR,pardon?,,
-9224,Thomas/021005.cha,CHI,giraffe is suitsuit.,-1,
+9224,Thomas/021005.cha,CHI,giraffe is suitsuit.,-1,determiner
 9225,Thomas/021005.cha,CAR,a giraffe?,,
 9226,Thomas/021005.cha,CHI,mhm.,,
 9227,Thomas/021005.cha,CHI,my dustbin lorry.,0,
@@ -409,7 +409,7 @@
 9235,Thomas/021005.cha,CAR,if it's not raining too hard.,,
 9236,Thomas/021005.cha,CHI,boo.,,
 9237,Thomas/021005.cha,CAR,you're just making up silly words and I'm trying to have a conversation with you.,,
-9238,Thomas/021005.cha,CHI,my say boo boo.,-1,
+9238,Thomas/021005.cha,CHI,my say boo boo.,-1,"subject, sv_agreement"
 9239,Thomas/021005.cha,CHI,um.,,
 9240,Thomas/021005.cha,CAR,"I tell you what we'll have to do, Thomas.",,
 9241,Thomas/021005.cha,CAR,we'll have to ask Lyn.,,
@@ -425,7 +425,7 @@
 9251,Thomas/021005.cha,CHI,no.,,
 9252,Thomas/021005.cha,CAR,I don't think you know what you mean either do you?,,
 9253,Thomas/021005.cha,CHI,psh.,,
-9254,Thomas/021005.cha,CHI,dustbin wagon said.,-1,he said 427
+9254,Thomas/021005.cha,CHI,dustbin wagon said.,-1,determiner
 9255,Thomas/021005.cha,CAR,oh is that what the dustbin wagon said?,,
 9256,Thomas/021005.cha,CAR,is that noise he makes when he's lifting up the bags?,,
 9257,Thomas/021005.cha,CHI,oooo.,,
@@ -441,11 +441,11 @@
 9267,Thomas/021005.cha,CAR,because we know that they weren't collected when we came home about twelve o'clock.,,
 9268,Thomas/021005.cha,CHI,mhm.,,
 9269,Thomas/021005.cha,CAR,it was about between twelve and half past when we came home.,,
-9270,Thomas/021005.cha,CHI,not on the tape.,-1,
-9271,Thomas/021005.cha,CHI,a dustbin wagon come.,-1,
+9270,Thomas/021005.cha,CHI,not on the tape.,-1,verb
+9271,Thomas/021005.cha,CHI,a dustbin wagon come.,-1,tense_aspect
 9272,Thomas/021005.cha,CAR,no we didn't manage to get it on tape yesterday did we?,,
 9273,Thomas/021005.cha,CHI,no.,,
-9274,Thomas/021005.cha,CHI,dustbin wagon pulled up.,-1,it's like a name
+9274,Thomas/021005.cha,CHI,dustbin wagon pulled up.,-1,determiner
 9275,Thomas/021005.cha,CAR,yes that's right.,,
 9276,Thomas/021005.cha,CAR,because we'd just come home.,,
 9277,Thomas/021005.cha,CAR,after Jo and Becky had finished their lunch.,,
@@ -486,7 +486,7 @@
 9312,Thomas/021005.cha,CHI,aah.,,
 9313,Thomas/021005.cha,CAR,"oh that's really lovely, Thomas.",,
 9314,Thomas/021005.cha,CAR,you like blueberries.,,
-9315,Thomas/021005.cha,CHI,that cheese cold.,-1,
+9315,Thomas/021005.cha,CHI,that cheese cold.,-1,verb
 9316,Thomas/021005.cha,CAR,cheese is cold?,,
 9317,Thomas/021005.cha,CHI,yeah.,,
 9318,Thomas/021005.cha,CAR,just come out of the fridge.,,
@@ -501,11 +501,11 @@
 9327,Thomas/021005.cha,CAR,you giving the cheese a drink of juice?,,
 9328,Thomas/021005.cha,CHI,mhm.,,
 9329,Thomas/021005.cha,CHI,it's water.,1,
-9330,Thomas/021005.cha,CHI,Fireman Sam water.,0,clarification
+9330,Thomas/021005.cha,CHI,Fireman Sam water.,0,
 9331,Thomas/021005.cha,CAR,oh I see.,,
 9332,Thomas/021005.cha,CAR,you're pretending it's a fire and you're using your water to put the drink the fire out.,,
 9333,Thomas/021005.cha,CHI,I'm Fireman Sam Thomas.,1,
-9334,Thomas/021005.cha,CHI,some bit of cheese on lids.,-1,bits*
+9334,Thomas/021005.cha,CHI,some bit of cheese on lids.,-1,"verb, plural"
 9335,Thomas/021005.cha,CAR,would you like your nose wiping?,,
 9336,Thomas/021005.cha,CAR,it's running again isn't it?,,
 9337,Thomas/021005.cha,CHI,no.,,
@@ -515,8 +515,8 @@
 9341,Thomas/021005.cha,CAR,well Fireman Sam's naughty.,,
 9342,Thomas/021005.cha,CAR,I bet Fireman Sam and Postman Pat don't use their sleeve.,,
 9343,Thomas/021005.cha,CAR,I bet they use a tissue or a handkerchief.,,
-9344,Thomas/021005.cha,CHI,fine now.,-1,
-9345,Thomas/021005.cha,CHI,I fine.,-1,
+9344,Thomas/021005.cha,CHI,fine now.,-1,"subject, verb"
+9345,Thomas/021005.cha,CHI,I fine.,-1,verb
 9346,Thomas/021005.cha,CAR,you're fine?,,
 9347,Thomas/021005.cha,CHI,yeah.,,
 9348,Thomas/021005.cha,CAR,that taste really good?,,
@@ -525,14 +525,14 @@
 9351,Thomas/021005.cha,CAR,I think you're enjoying the tomato sauce as well aren't you?,,
 9352,Thomas/021005.cha,CHI,yes.,,
 9353,Thomas/021005.cha,CHI,oh look.,1,
-9354,Thomas/021005.cha,CHI,dustbin bag's on the floor.,-1,
+9354,Thomas/021005.cha,CHI,dustbin bag's on the floor.,-1,determiner
 9355,Thomas/021005.cha,CHI,there.,,
 9356,Thomas/021005.cha,CAR,you've dropped one Quaver.,,
 9357,Thomas/021005.cha,CAR,are you saying it's a dustbin bag on the floor?,,
 9358,Thomas/021005.cha,CAR,there you are.,,
 9359,Thomas/021005.cha,CAR,I've really enjoyed that.,,
-9360,Thomas/021005.cha,CHI,buy some more Quavers the shop.,-1,
-9361,Thomas/021005.cha,CHI,not got any more.,-1,
+9360,Thomas/021005.cha,CHI,buy some more Quavers the shop.,-1,"subject, tense_aspect"
+9361,Thomas/021005.cha,CHI,not got any more.,-1,"subject, auxiliary"
 9362,Thomas/021005.cha,CAR,no.,,
 9363,Thomas/021005.cha,CAR,we haven't got any more Quavers.,,
 9364,Thomas/021005.cha,CAR,but then I think one packet's enough a day don't you?,,
@@ -542,14 +542,14 @@
 9368,Thomas/021005.cha,CHI,yeah.,,
 9369,Thomas/021005.cha,CAR,no.,,
 9370,Thomas/021005.cha,CAR,you've had Quavers instead of crisps.,,
-9371,Thomas/021005.cha,CHI,want some crisps now.,-1,208
+9371,Thomas/021005.cha,CHI,want some crisps now.,-1,subject
 9372,Thomas/021005.cha,CAR,"I think you've had plenty really, Thomas.",,
 9373,Thomas/021005.cha,CAR,you've had sausage rolls.,,
 9374,Thomas/021005.cha,CAR,cheese.,,
 9375,Thomas/021005.cha,CHI,on there.,1,
 9376,Thomas/021005.cha,CAR,you've had Quavers.,,
 9377,Thomas/021005.cha,CHI,beebaa beebaa beebaa.,0,
-9378,Thomas/021005.cha,CHI,fire engine said.,-1,
+9378,Thomas/021005.cha,CHI,fire engine said.,-1,determiner
 9379,Thomas/021005.cha,CAR,is that what the fire engine said?,,
 9380,Thomas/021005.cha,CHI,mhm.,,
 9381,Thomas/021005.cha,CAR,well where's the fire?,,
@@ -561,9 +561,9 @@
 9387,Thomas/021005.cha,CAR,sure?,,
 9388,Thomas/021005.cha,CAR,it's my fire engine cake.,,
 9389,Thomas/021005.cha,CAR,your fire engine cake?,,
-9390,Thomas/021005.cha,CHI,is my fireman's.,-1,
-9391,Thomas/021005.cha,CHI,look like like a mixer.,-1,
-9392,Thomas/021005.cha,CHI,like a mixer.,-1,
+9390,Thomas/021005.cha,CHI,is my fireman's.,-1,subject
+9391,Thomas/021005.cha,CHI,look like like a mixer.,-1,"subject, sv_agreement"
+9392,Thomas/021005.cha,CHI,like a mixer.,-1,"subject, verb"
 9393,Thomas/021005.cha,CHI,look look.,1,
 9394,Thomas/021005.cha,CHI,Fireman Sam building a house.,0,
 9395,Thomas/021005.cha,CAR,is he?,,
@@ -582,14 +582,14 @@
 9408,Thomas/021005.cha,CAR,it goes round and round.,,
 9409,Thomas/021005.cha,CHI,look.,,
 9410,Thomas/021005.cha,CAR,we saw a cement mixer this morning didn't we?,,
-9411,Thomas/021005.cha,CHI,just one.,1,clarification
+9411,Thomas/021005.cha,CHI,just one.,1,
 9412,Thomas/021005.cha,CAR,just one.,,
 9413,Thomas/021005.cha,CAR,what was near it?,,
 9414,Thomas/021005.cha,CHI,skip.,,
 9415,Thomas/021005.cha,CAR,a skip.,,
 9416,Thomas/021005.cha,CHI,a skip.,1,
-9417,Thomas/021005.cha,CHI,lots lots bricks on it.,-1,
-9418,Thomas/021005.cha,CHI,lots of bricks on it.,-1,
+9417,Thomas/021005.cha,CHI,lots lots bricks on it.,-1,"subject, verb"
+9418,Thomas/021005.cha,CHI,lots of bricks on it.,-1,"subject, verb"
 9419,Thomas/021005.cha,CAR,did the skip have a lot of bricks on it?,,
 9420,Thomas/021005.cha,CHI,yeah.,,
 9421,Thomas/021005.cha,CHI,bang!,,
@@ -611,13 +611,13 @@
 9437,Thomas/021005.cha,CAR,no.,,
 9438,Thomas/021005.cha,CHI,not that firework.,0,
 9439,Thomas/021005.cha,CAR,no.,,
-9440,Thomas/021005.cha,CHI,not lid off like that.,-1,
+9440,Thomas/021005.cha,CHI,not lid off like that.,-1,"verb, determiner"
 9441,Thomas/021005.cha,CAR,no.,,
 9442,Thomas/021005.cha,CAR,"well if you keep banging it on the table, Thomas, the lid will come off, the juice will spill and Mummy will be cross.",,
 9443,Thomas/021005.cha,CHI,no.,,
-9444,Thomas/021005.cha,CHI,Mummy not cross.,-1,
+9444,Thomas/021005.cha,CHI,Mummy not cross.,-1,auxiliary
 9445,Thomas/021005.cha,CAR,no I'm not cross now but I will be if the juice gets spilt.,,
-9446,Thomas/021005.cha,CHI,want wanna get down now and wash my hands.,-1,
+9446,Thomas/021005.cha,CHI,want wanna get down now and wash my hands.,-1,subject
 9447,Thomas/021005.cha,CAR,you wanna get down and wash your hands.,,
 9448,Thomas/021005.cha,CAR,okay.,,
 9449,Thomas/021005.cha,CAR,what about that last mouthful of sausage roll?,,
@@ -629,21 +629,21 @@
 9455,Thomas/021005.cha,CHI,yes.,,
 9456,Thomas/021005.cha,CAR,"did you enjoy that, Thomas?",,
 9457,Thomas/021005.cha,CHI,yeah.,,
-9458,Thomas/021005.cha,CHI,I Bella's.,-1,
+9458,Thomas/021005.cha,CHI,I Bella's.,-1,verb
 9459,Thomas/021005.cha,CAR,Bella's.,,
-9460,Thomas/021005.cha,CHI,in two two months.,-1,
+9460,Thomas/021005.cha,CHI,in two two months.,-1,"subject, verb"
 9461,Thomas/021005.cha,CAR,"what are you saying, darling, about Bella?",,
-9462,Thomas/021005.cha,CHI,I Bella and three months.,-1,
+9462,Thomas/021005.cha,CHI,I Bella and three months.,-1,"verb, other"
 9463,Thomas/021005.cha,CAR,you're Bella and three months?,,
 9464,Thomas/021005.cha,CHI,yeah.,,
 9465,Thomas/021005.cha,CAR,not quite sure what you mean.,,
 9466,Thomas/021005.cha,CAR,you're Bella in three months?,,
 9467,Thomas/021005.cha,CHI,yeah.,,
 9468,Thomas/021005.cha,CAR,you're going to be three.,,
-9469,Thomas/021005.cha,CHI,in April.,1,continuation
+9469,Thomas/021005.cha,CHI,in April.,1,
 9470,Thomas/021005.cha,CAR,in April.,,
 9471,Thomas/021005.cha,CAR,what date in April?,,
-9472,Thomas/021005.cha,CHI,uh the.,-1,
+9472,Thomas/021005.cha,CHI,uh the.,-1,subject
 9473,Thomas/021005.cha,CAR,the third of April.,,
 9474,Thomas/021005.cha,CAR,Thomas will be three.,,
 9475,Thomas/021005.cha,CHI,mhm.,,
@@ -656,7 +656,7 @@
 9482,Thomas/021005.cha,CHI,Daddy's.,,
 9483,Thomas/021005.cha,CAR,Daddy's is in October.,,
 9484,Thomas/021005.cha,CHI,yeah.,,
-9485,Thomas/021005.cha,CHI,and Daddy's six.,0,weird completion
+9485,Thomas/021005.cha,CHI,and Daddy's six.,0,
 9486,Thomas/021005.cha,CAR,Daddy's six is he?,,
 9487,Thomas/021005.cha,CAR,in October.,,
 9488,Thomas/021005.cha,CAR,and Grandma Grandma Bealby.,,
@@ -672,7 +672,7 @@
 9498,Thomas/021005.cha,CAR,you're Bella are you?,,
 9499,Thomas/021005.cha,CHI,yeah.,,
 9500,Thomas/021005.cha,CAR,how old is Bella?,,
-9501,Thomas/021005.cha,CHI,I I three.,0,reformulation
+9501,Thomas/021005.cha,CHI,I I three.,0,
 9502,Thomas/021005.cha,CAR,is Bella three?,,
 9503,Thomas/021005.cha,CHI,yeah.,,
 9504,Thomas/021005.cha,CAR,one of the Tweenies had a birthday the other day.,,
@@ -685,7 +685,7 @@
 9511,Thomas/021005.cha,CAR,no.,,
 9512,Thomas/021005.cha,CAR,Charlotte will be two.,,
 9513,Thomas/021005.cha,CHI,mhm.,,
-9514,Thomas/021005.cha,CHI,like Bella three.,-1,
+9514,Thomas/021005.cha,CHI,like Bella three.,-1,"verb, other"
 9515,Thomas/021005.cha,CAR,Ben's three.,,
 9516,Thomas/021005.cha,CAR,Ben was three in August wasn't he?,,
 9517,Thomas/021005.cha,CHI,mhm.,,
@@ -702,7 +702,7 @@
 9528,Thomas/021005.cha,CAR,and a girlfriend who's three.,,
 9529,Thomas/021005.cha,CAR,Isabel.,,
 9530,Thomas/021005.cha,CHI,yeah.,,
-9531,Thomas/021005.cha,CHI,Bella looking at something.,-1,
+9531,Thomas/021005.cha,CHI,Bella looking at something.,-1,present_progressive
 9532,Thomas/021005.cha,CAR,what's Bella looking at now?,,
 9533,Thomas/021005.cha,CHI,I don't know.,1,
 9534,Thomas/021005.cha,CAR,oops.,,
@@ -715,14 +715,14 @@
 9541,Thomas/021005.cha,CHI,Noo Noo.,1,
 9542,Thomas/021005.cha,CAR,Noo Noo the vacuum cleaner.,,
 9543,Thomas/021005.cha,CAR,right.,,
-9544,Thomas/021005.cha,CHI,not need Noo Noo.,-1,
-9545,Thomas/021005.cha,CHI,Mummy need sweep Purdie all up.,-1,
+9544,Thomas/021005.cha,CHI,not need Noo Noo.,-1,subject
+9545,Thomas/021005.cha,CHI,Mummy need sweep Purdie all up.,-1,sv_agreement
 9546,Thomas/021005.cha,CAR,ah.,,
 9547,Thomas/021005.cha,CAR,I'm not going to sweep Purdie all up.,,
 9548,Thomas/021005.cha,CHI,yes.,,
 9549,Thomas/021005.cha,CAR,no.,,
 9550,Thomas/021005.cha,CAR,Purdie's my little pal.,,
-9551,Thomas/021005.cha,CHI,Grandad's pal.,1,completion
+9551,Thomas/021005.cha,CHI,Grandad's pal.,1,
 9552,Thomas/021005.cha,CAR,Grandad's pal.,,
 9553,Thomas/021005.cha,CAR,you're Grandad's pal now aren't you?,,
 9554,Thomas/021005.cha,CAR,but if I sweep Purdie all up I won't have a pussy cat.,,
@@ -748,7 +748,7 @@
 9574,Thomas/021005.cha,CHI,my blue.,0,
 9575,Thomas/021005.cha,CAR,am I blue?,,
 9576,Thomas/021005.cha,CHI,yeah.,,
-9577,Thomas/021005.cha,CHI,Thomas green.,-1,
+9577,Thomas/021005.cha,CHI,Thomas green.,-1,verb
 9578,Thomas/021005.cha,CAR,you're green.,,
 9579,Thomas/021005.cha,CHI,Daddy's blue.,1,
 9580,Thomas/021005.cha,CAR,we do that at night don't we?,,
@@ -767,7 +767,7 @@
 9593,Thomas/021005.cha,CHI,a purple snake.,0,
 9594,Thomas/021005.cha,CHI,a purple snake now.,0,
 9595,Thomas/021005.cha,CAR,you're a purple snake now?,,
-9596,Thomas/021005.cha,CHI,not Bella now.,-1,
+9596,Thomas/021005.cha,CHI,not Bella now.,-1,"subject, verb"
 9597,Thomas/021005.cha,CAR,you're not Bella you're a purple snake are you?,,
 9598,Thomas/021005.cha,CAR,I've only got one thing to say to that.,,
 9599,Thomas/021005.cha,CAR,you're putting your tongue out.,,
@@ -777,7 +777,7 @@
 9603,Thomas/021005.cha,CAR,oh it's the blackcurrant juice.,,
 9604,Thomas/021005.cha,CAR,I thought you'd got some deadly disease because your tongue has gone black.,,
 9605,Thomas/021005.cha,CAR,I've just realized what it is.,,
-9606,Thomas/021005.cha,CHI,my black.,-1,
+9606,Thomas/021005.cha,CHI,my black.,-1,verb
 9607,Thomas/021005.cha,CAR,it's your blackcurrant juice.,,
 9608,Thomas/021005.cha,CAR,it has made your tongue go a very dark purple black color.,,
 9609,Thomas/021005.cha,CHI,brown brown brown.,0,
@@ -788,7 +788,7 @@
 9614,Thomas/021005.cha,CAR,did Daddy lift you in?,,
 9615,Thomas/021005.cha,CHI,yes.,,
 9616,Thomas/021005.cha,CAR,did Daddy bring you through or did you come on your own?,,
-9617,Thomas/021005.cha,CHI,come my own.,-1,
+9617,Thomas/021005.cha,CHI,come my own.,-1,"subject, tense_aspect, preposition"
 9618,Thomas/021005.cha,CAR,did you come through on your own?,,
 9619,Thomas/021005.cha,CHI,yeah.,,
 9620,Thomas/021005.cha,CAR,because Daddy said it was quarter to five this morning.,,
@@ -800,9 +800,9 @@
 9626,Thomas/021005.cha,CAR,no wonder he woke up.,,
 9627,Thomas/021005.cha,CAR,I didn't hear you.,,
 9628,Thomas/021005.cha,CHI,uh look.,1,
-9629,Thomas/021005.cha,CHI,I see something on stairs.,-1,on?
+9629,Thomas/021005.cha,CHI,I see something on stairs.,-1,determiner
 9630,Thomas/021005.cha,CAR,what can you see?,,
-9631,Thomas/021005.cha,CHI,see see La La on see Lala on something.,-1,
+9631,Thomas/021005.cha,CHI,see see La La on see Lala on something.,-1,subject
 9632,Thomas/021005.cha,CAR,Lala's on your coat isn't she?,,
 9633,Thomas/021005.cha,CHI,yeah.,,
 9634,Thomas/021005.cha,CAR,yes.,,
@@ -832,7 +832,7 @@
 9658,Thomas/021005.cha,CAR,and now you're a policeman.,,
 9659,Thomas/021005.cha,CHI,yeah.,,
 9660,Thomas/021005.cha,CAR,no wonder you are tired at night.,,
-9661,Thomas/021005.cha,CHI,I've just got whiskers.,0,not acceptable in British
+9661,Thomas/021005.cha,CHI,I've just got whiskers.,0,
 9662,Thomas/021005.cha,CAR,who has got whiskers?,,
 9663,Thomas/021005.cha,CHI,policeman.,,
 9664,Thomas/021005.cha,CAR,has he?,,
@@ -842,8 +842,8 @@
 9668,Thomas/021005.cha,CAR,P C Plod in Noddy.,,
 9669,Thomas/021005.cha,CAR,he has whiskers doesn't he?,,
 9670,Thomas/021005.cha,CHI,mhm.,,
-9671,Thomas/021005.cha,CHI,is what policeman say.,-1,
-9672,Thomas/021005.cha,CHI,policeman say.,-1,
+9671,Thomas/021005.cha,CHI,is what policeman say.,-1,subject
+9672,Thomas/021005.cha,CHI,policeman say.,-1,"determiner, sv_agreement"
 9673,Thomas/021005.cha,CAR,what does the policeman say?,,
 9674,Thomas/021005.cha,CHI,I don't know.,1,
 9675,Thomas/021005.cha,CAR,he usually goes looking for naughty boys doesn't he?,,
@@ -869,10 +869,10 @@
 9695,Thomas/021005.cha,CAR,so if ever you need help ask a policeman.,,
 9696,Thomas/021005.cha,CHI,mhm.,,
 9697,Thomas/021005.cha,CAR,yeah.,,
-9698,Thomas/021005.cha,CHI,ask Mummy.,-1,
+9698,Thomas/021005.cha,CHI,ask Mummy.,-1,"subject, tense_aspect"
 9699,Thomas/021005.cha,CAR,well you could ask Mummy.,,
 9700,Thomas/021005.cha,CAR,yes.,,
-9701,Thomas/021005.cha,CHI,and I not seen a big bear.,-1,
+9701,Thomas/021005.cha,CHI,and I not seen a big bear.,-1,auxiliary
 9702,Thomas/021005.cha,CHI,Mummy.,,
 9703,Thomas/021005.cha,CHI,a big bear has eaten Mummy all up.,1,
 9704,Thomas/021005.cha,CAR,oh.,,
@@ -883,7 +883,7 @@
 9709,Thomas/021005.cha,CAR,Mister Lastname what was the big bear like that ate your Mummy up?,,
 9710,Thomas/021005.cha,CAR,and you'd have to give them a big description wouldn't you?,,
 9711,Thomas/021005.cha,CHI,yeah.,,
-9712,Thomas/021005.cha,CHI,Mummy a big sausage.,0,pointing
+9712,Thomas/021005.cha,CHI,Mummy a big sausage.,0,
 9713,Thomas/021005.cha,CHI,policeman.,,
 9714,Thomas/021005.cha,CAR,ooh.,,
 9715,Thomas/021005.cha,CAR,well if Mummy's hair looks like a sausage that's perhaps why the the bear ate me up.,,
@@ -891,7 +891,7 @@
 9717,Thomas/021005.cha,CAR,thought I was a big juicy sausage.,,
 9718,Thomas/021005.cha,CHI,yeah.,,
 9719,Thomas/021005.cha,CHI,yes.,,
-9720,Thomas/021005.cha,CHI,my policeman looking naughty boys.,-1,
+9720,Thomas/021005.cha,CHI,my policeman looking naughty boys.,-1,"present_progressive, preposition"
 9721,Thomas/021005.cha,CAR,yes.,,
 9722,Thomas/021005.cha,CAR,"but as I say, Thomas.",,
 9723,Thomas/021005.cha,CAR,if you need a policeman they they they put naughty boys in the back of their van but they're very very happy to help good boys.,,
@@ -899,12 +899,12 @@
 9725,Thomas/021005.cha,CAR,they talk to good boys.,,
 9726,Thomas/021005.cha,CHI,yeah.,,
 9727,Thomas/021005.cha,CAR,so you could talk to them couldn't you?,,
-9728,Thomas/021005.cha,CHI,my bigger.,-1,
+9728,Thomas/021005.cha,CHI,my bigger.,-1,"subject, verb"
 9729,Thomas/021005.cha,CAR,pardon?,,
-9730,Thomas/021005.cha,CHI,my my big.,-1,
-9731,Thomas/021005.cha,CHI,go another policeman like that.,-1,
+9730,Thomas/021005.cha,CHI,my my big.,-1,"subject, verb"
+9731,Thomas/021005.cha,CHI,go another policeman like that.,-1,other
 9732,Thomas/021005.cha,CAR,I'm not quite sure what you're saying.,,
-9733,Thomas/021005.cha,CHI,a go my back my van my naughty.,-1,
+9733,Thomas/021005.cha,CHI,a go my back my van my naughty.,-1,other
 9734,Thomas/021005.cha,CAR,no no.,,
 9735,Thomas/021005.cha,CAR,we once last summer we got in the back of a police van didn't we?,,
 9736,Thomas/021005.cha,CAR,because we saw the policeman and the fire engine and the ambulance.,,
@@ -919,7 +919,7 @@
 9745,Thomas/021005.cha,CAR,do you remember in the summer?,,
 9746,Thomas/021005.cha,CHI,yeah.,,
 9747,Thomas/021005.cha,CAR,oh we were looking at the tortoise yesterday weren't we?,,
-9748,Thomas/021005.cha,CHI,that's little friend.,-1,
+9748,Thomas/021005.cha,CHI,that's little friend.,-1,determiner
 9749,Thomas/021005.cha,CAR,is it your little friend?,,
 9750,Thomas/021005.cha,CHI,yeah.,,
 9751,Thomas/021005.cha,CAR,what were you going to the the tortoise?,,
@@ -943,26 +943,26 @@
 9769,Thomas/021005.cha,CHI,yes.,,
 9770,Thomas/021005.cha,CAR,going to ask her to wake up?,,
 9771,Thomas/021005.cha,CHI,hello.,,
-9772,Thomas/021005.cha,CHI,wake up.,1,imp
+9772,Thomas/021005.cha,CHI,wake up.,1,
 9773,Thomas/021005.cha,CAR,aah.,,
 9774,Thomas/021005.cha,CAR,ah do you know.,,
 9775,Thomas/021005.cha,CAR,"it's beautiful and sunny through there, Thomas.",,
 9776,Thomas/021005.cha,CAR,it's not really too good through here but through there.,,
 9777,Thomas/021005.cha,CHI,yes.,,
 9778,Thomas/021005.cha,CAR,the sun's shining.,,
-9779,Thomas/021005.cha,CHI,a policeman look uh uh uh policeman looking at nice La La.,-1,
+9779,Thomas/021005.cha,CHI,a policeman look uh uh uh policeman looking at nice La La.,-1,present_progressive
 9780,Thomas/021005.cha,CAR,policeman's looking at nice La La?,,
 9781,Thomas/021005.cha,CHI,mhm.,,
 9782,Thomas/021005.cha,CAR,yes.,,
 9783,Thomas/021005.cha,CAR,La La's nice isn't she?,,
 9784,Thomas/021005.cha,CAR,I bet La La's not naughty.,,
 9785,Thomas/021005.cha,CHI,hello La La.,1,
-9786,Thomas/021005.cha,CHI,policeman said hello Lala.,-1,
+9786,Thomas/021005.cha,CHI,policeman said hello Lala.,-1,determiner
 9787,Thomas/021005.cha,CAR,hello La La the policeman said to La La.,,
 9788,Thomas/021005.cha,CAR,that's a good one.,,
-9789,Thomas/021005.cha,CHI,uh policeman La La's money.,-1,maybe pointing
+9789,Thomas/021005.cha,CHI,uh policeman La La's money.,-1,verb
 9790,Thomas/021005.cha,CAR,what's the policeman doing with La La's money?,,
-9791,Thomas/021005.cha,CHI,put in La La's in La La's La La's pocket.,-1,
+9791,Thomas/021005.cha,CHI,put in La La's in La La's La La's pocket.,-1,"tense_aspect, object"
 9792,Thomas/021005.cha,CAR,oh yes.,,
 9793,Thomas/021005.cha,CAR,La La has got a pocket hasn't she?,,
 9794,Thomas/021005.cha,CAR,La La has got a bag at the back.,,
@@ -979,4 +979,4 @@
 9805,Thomas/021005.cha,CAR,all four of them.,,
 9806,Thomas/021005.cha,CHI,hello Tinky Winky.,1,
 9807,Thomas/021005.cha,CHI,hello Po.,1,
-9808,Thomas/021005.cha,CHI,what's La La doing down the floor?,-1,
+9808,Thomas/021005.cha,CHI,what's La La doing down the floor?,-1,preposition

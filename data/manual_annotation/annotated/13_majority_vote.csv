@@ -1,4 +1,4 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 12339,NewEngland/32/19.cha,CHI,you read it.,0,
 12340,NewEngland/32/19.cha,CAR,what's what what can you recognize in this picture?,,
 12341,NewEngland/32/19.cha,CAR,what's that?,,
@@ -86,7 +86,7 @@
 12423,NewEngland/32/19.cha,CAR,a jacket.,,
 12424,NewEngland/32/19.cha,CAR,and a hat.,,
 12425,NewEngland/32/19.cha,CAR,and some shoes.,,
-12426,NewEngland/32/19.cha,CHI,and and some.,-1,
+12426,NewEngland/32/19.cha,CHI,and and some.,-1,object
 12427,NewEngland/32/19.cha,CHI,is this a raincoat?,1,
 12428,NewEngland/32/19.cha,CAR,looks like a raincoat to me.,,
 12429,NewEngland/32/19.cha,CAR,looks like a raincoat to me.,,
@@ -133,7 +133,7 @@
 12470,NewEngland/32/19.cha,CAR,who eats eggs in our house?,,
 12471,NewEngland/32/19.cha,CHI,uh does Prissy does?,1,
 12472,NewEngland/32/19.cha,CAR,Prissy does.,,
-12473,NewEngland/32/19.cha,CHI,does do I do?,-1,
+12473,NewEngland/32/19.cha,CHI,does do I do?,-1,object
 12474,NewEngland/32/19.cha,CAR,I don't think I've ever seen you eat an egg cooked like this.,,
 12475,NewEngland/32/19.cha,CAR,daddy eats them like that though.,,
 12476,NewEngland/32/19.cha,CHI,and I do too.,1,
@@ -159,7 +159,7 @@
 12496,NewEngland/32/19.cha,CHI,I don't know.,1,
 12497,NewEngland/32/19.cha,CAR,I don't know.,,
 12498,NewEngland/32/19.cha,CAR,are they brushing their teeth?,,
-12499,NewEngland/32/19.cha,CHI,look it.,-1,
+12499,NewEngland/32/19.cha,CHI,look it.,-1,preposition
 12500,NewEngland/32/19.cha,CHI,they're each in the bed.,1,
 12501,NewEngland/32/19.cha,CAR,in their beds.,,
 12502,NewEngland/32/19.cha,CAR,who's reading their bedtime story?,,
@@ -221,7 +221,7 @@
 12558,NewEngland/32/19.cha,CHI,hi.,,
 12559,NewEngland/32/19.cha,CAR,how are you?,,
 12560,NewEngland/32/19.cha,CHI,hi.,,
-12561,NewEngland/32/19.cha,CHI,what has in him?,-1,
+12561,NewEngland/32/19.cha,CHI,what has in him?,-1,"auxiliary, subject"
 12562,NewEngland/32/19.cha,CAR,what does he have in him?,,
 12563,NewEngland/32/19.cha,CHI,yeah.,,
 12564,NewEngland/32/19.cha,CAR,what's in there?,,
@@ -288,7 +288,7 @@
 12625,NewEngland/32/19.cha,CAR,okay.,,
 12626,NewEngland/32/19.cha,CAR,I'll use the bird.,,
 12627,NewEngland/32/19.cha,CAR,do you like my fancy blue hair?,,
-12628,NewEngland/32/19.cha,CHI,something has inside here.,-1,
+12628,NewEngland/32/19.cha,CHI,something has inside here.,-1,"object, preposition"
 12629,NewEngland/32/19.cha,CAR,yeah it's like a piece of plastic in there.,,
 12630,NewEngland/32/19.cha,CAR,I wish we could turn it inside out so we could see it.,,
 12631,NewEngland/32/19.cha,CAR,see this is what's inside that makes it move.,,
@@ -397,7 +397,7 @@
 12734,NewEngland/32/19.cha,CHI,yeah.,,
 12735,NewEngland/32/19.cha,CAR,I see.,,
 12736,NewEngland/32/19.cha,CHI,that's me.,1,
-12737,NewEngland/32/19.cha,CHI,this my face.,-1,
+12737,NewEngland/32/19.cha,CHI,this my face.,-1,verb
 12738,NewEngland/32/19.cha,CAR,nice face.,,
 12739,NewEngland/32/19.cha,CAR,can you put the eyes on?,,
 12740,NewEngland/32/19.cha,CHI,yeah.,,
@@ -408,7 +408,7 @@
 12745,NewEngland/32/19.cha,CAR,I like the eyes.,,
 12746,NewEngland/32/19.cha,CAR,okay how about a big smily mouth?,,
 12747,NewEngland/32/19.cha,CAR,wow.,,
-12748,NewEngland/32/19.cha,CHI,I wanna make sad face.,-1,
+12748,NewEngland/32/19.cha,CHI,I wanna make sad face.,-1,determiner
 12749,NewEngland/32/19.cha,CAR,a sad face?,,
 12750,NewEngland/32/19.cha,CAR,how come he's making a sad face?,,
 12751,NewEngland/32/19.cha,CHI,because I wanna.,1,
@@ -523,7 +523,7 @@
 12860,Gelman/2014-IndDiff/43C-P2.cha,CHI,no.,,
 12861,Gelman/2014-IndDiff/43C-P2.cha,CAR,okay.,,
 12862,Gelman/2014-IndDiff/43C-P2.cha,CAR,"ah, that's a kitty cat.",,
-12863,Gelman/2014-IndDiff/43C-P2.cha,CHI,kitty cat.,-1,
+12863,Gelman/2014-IndDiff/43C-P2.cha,CHI,kitty cat.,-1,determiner
 12864,Gelman/2014-IndDiff/43C-P2.cha,CAR,kitty cat.,,
 12865,Gelman/2014-IndDiff/43C-P2.cha,CHI,kitty.,,
 12866,Gelman/2014-IndDiff/43C-P2.cha,CAR,yeah.,,
@@ -615,7 +615,7 @@
 12952,Gelman/2014-IndDiff/43C-P2.cha,CAR,you know what I think about?,,
 12953,Gelman/2014-IndDiff/43C-P2.cha,CHI,what?,,
 12954,Gelman/2014-IndDiff/43C-P2.cha,CAR,"I think about, I think halloween.",,
-12955,Gelman/2014-IndDiff/43C-P2.cha,CHI,"I think about cutting this um, this this hallow- this.",-1,
+12955,Gelman/2014-IndDiff/43C-P2.cha,CHI,"I think about cutting this um, this this hallow- this.",-1,object
 12956,Gelman/2014-IndDiff/43C-P2.cha,CHI,what is this again?,1,
 12957,Gelman/2014-IndDiff/43C-P2.cha,CAR,this is a pumpkin.,,
 12958,Gelman/2014-IndDiff/43C-P2.cha,CHI,I'm going to carve a pumpkin.,1,
@@ -624,7 +624,7 @@
 12961,Gelman/2014-IndDiff/43C-P2.cha,CAR,and when you carve the pumpkin.,,
 12962,Gelman/2014-IndDiff/43C-P2.cha,CHI,you put a light in it.,1,
 12963,Gelman/2014-IndDiff/43C-P2.cha,CAR,"you put a light in it, that's right.",,
-12964,Gelman/2014-IndDiff/43C-P2.cha,CHI,it's jack-o-lantern.,-1,
+12964,Gelman/2014-IndDiff/43C-P2.cha,CHI,it's jack-o-lantern.,-1,determiner
 12965,Gelman/2014-IndDiff/43C-P2.cha,CAR,and then it's a jack-o-lantern.,,
 12966,Gelman/2014-IndDiff/43C-P2.cha,CAR,that's right.,,
 12967,Gelman/2014-IndDiff/43C-P2.cha,CAR,that's right.,,
@@ -668,7 +668,7 @@
 13005,Gelman/2014-IndDiff/43C-P2.cha,CAR,I almost bought one today at the grocery store.,,
 13006,Gelman/2014-IndDiff/43C-P2.cha,CAR,"but we still have some left, at home.",,
 13007,Gelman/2014-IndDiff/43C-P2.cha,CHI,cool.,,
-13008,Gelman/2014-IndDiff/43C-P2.cha,CHI,pineapple pineapple.,-1,
+13008,Gelman/2014-IndDiff/43C-P2.cha,CHI,pineapple pineapple.,-1,determiner
 13009,Gelman/2014-IndDiff/43C-P2.cha,CAR,that's right.,,
 13010,Gelman/2014-IndDiff/43C-P2.cha,CAR,"and, pineapple is sweet too.",,
 13011,Gelman/2014-IndDiff/43C-P2.cha,CAR,that one that we had was really sweet and juicy.,,
@@ -709,7 +709,7 @@
 13046,Gelman/2014-IndDiff/43C-P2.cha,CHI,three?,,
 13047,Gelman/2014-IndDiff/43C-P2.cha,CAR,three?,,
 13048,Gelman/2014-IndDiff/43C-P2.cha,CAR,yeah.,,
-13049,Gelman/2014-IndDiff/43C-P2.cha,CHI,like there was a hundred.,-1,
+13049,Gelman/2014-IndDiff/43C-P2.cha,CHI,like there was a hundred.,-1,"sv_agreement, object"
 13050,Gelman/2014-IndDiff/43C-P2.cha,CAR,"there were a lot, yeah.",,
 13051,Gelman/2014-IndDiff/43C-P2.cha,CAR,and they lived under the deck.,,
 13052,Gelman/2014-IndDiff/43C-P2.cha,CAR,like right underneath the ground.,,
@@ -745,7 +745,7 @@
 13082,Gelman/2014-IndDiff/43C-P2.cha,CAR,only a couple more.,,
 13083,Gelman/2014-IndDiff/43C-P2.cha,CAR,three more left.,,
 13084,Gelman/2014-IndDiff/43C-P2.cha,CAR,what do you think?,,
-13085,Gelman/2014-IndDiff/43C-P2.cha,CHI,no we got.,-1,
+13085,Gelman/2014-IndDiff/43C-P2.cha,CHI,no we got.,-1,object
 13086,Gelman/2014-IndDiff/43C-P2.cha,CAR,how many do we have?,,
 13087,Gelman/2014-IndDiff/43C-P2.cha,CHI,"I think, I think we got one, two three left.",1,
 13088,Gelman/2014-IndDiff/43C-P2.cha,CAR,one mm-hm.,,
@@ -757,9 +757,9 @@
 13094,Gelman/2014-IndDiff/43C-P2.cha,CHI,grandma.,,
 13095,Gelman/2014-IndDiff/43C-P2.cha,CAR,it looks like a grandma doesn't it?,,
 13096,Gelman/2014-IndDiff/43C-P2.cha,CAR,and.,,
-13097,Gelman/2014-IndDiff/43C-P2.cha,CHI,it's old old old grandma.,-1,
+13097,Gelman/2014-IndDiff/43C-P2.cha,CHI,it's old old old grandma.,-1,determiner
 13098,Gelman/2014-IndDiff/43C-P2.cha,CAR,what's that?,,
-13099,Gelman/2014-IndDiff/43C-P2.cha,CHI,it's a old old old.,-1,
+13099,Gelman/2014-IndDiff/43C-P2.cha,CHI,it's a old old old.,-1,"determiner, object"
 13100,Gelman/2014-IndDiff/43C-P2.cha,CAR,old old grandma?,,
 13101,Gelman/2014-IndDiff/43C-P2.cha,CAR,how can you tell?,,
 13102,Gelman/2014-IndDiff/43C-P2.cha,CHI,because she's walking on a stick.,1,
@@ -783,7 +783,7 @@
 13120,Gelman/2014-IndDiff/43C-P2.cha,CAR,or actually we have that with soup.,,
 13121,Gelman/2014-IndDiff/43C-P2.cha,CAR,we'll eat our crackers with soup.,,
 13122,Gelman/2014-IndDiff/43C-P2.cha,CAR,now what's that?,,
-13123,Gelman/2014-IndDiff/43C-P2.cha,CHI,at his office.,-1,
+13123,Gelman/2014-IndDiff/43C-P2.cha,CHI,at his office.,-1,"subject, verb"
 13124,Gelman/2014-IndDiff/43C-P2.cha,CAR,who is that?,,
 13125,Gelman/2014-IndDiff/43C-P2.cha,CHI,a principal.,1,
 13126,Gelman/2014-IndDiff/43C-P2.cha,CAR,it's a principal?,,
@@ -806,10 +806,10 @@
 13143,Gelman/2014-IndDiff/43C-P2.cha,CAR,I just I don't know if principals if they wear the robe like that.,,
 13144,Gelman/2014-IndDiff/43C-P2.cha,CAR,they might.,,
 13145,Gelman/2014-IndDiff/43C-P2.cha,CAR,I don't know.,,
-13146,Gelman/2014-IndDiff/43C-P2.cha,CHI,let's turn the.,-1,
+13146,Gelman/2014-IndDiff/43C-P2.cha,CHI,let's turn the.,-1,object
 13147,Gelman/2014-IndDiff/43C-P2.cha,CAR,that was the last picture.,,
 13148,Gelman/2014-IndDiff/43C-P2.cha,CAR,now we'll we'll uh knock on the glass but I think we should get a kleenex for your nose.,,
-13149,Thomas/021011.cha,CHI,not going yet.,-1,native
+13149,Thomas/021011.cha,CHI,not going yet.,-1,"subject, present_progressive"
 13150,Thomas/021011.cha,CAR,that was quick wasn't it?,,
 13151,Thomas/021011.cha,CAR,"I've just been outside, Thomas.",,
 13152,Thomas/021011.cha,CHI,yes.,,
@@ -845,19 +845,19 @@
 13182,Thomas/021011.cha,CAR,and that's the driver got into his cab.,,
 13183,Thomas/021011.cha,CAR,right.,,
 13184,Thomas/021011.cha,CAR,that's.,,
-13185,Thomas/021011.cha,CHI,yellow trousers walking.,-1,"native, trousers walk?"
+13185,Thomas/021011.cha,CHI,yellow trousers walking.,-1,"determiner, present_progressive"
 13186,Thomas/021011.cha,CAR,yellow trousers walking.,,
 13187,Thomas/021011.cha,CAR,oh I don't think he is the dustbin man.,,
 13188,Thomas/021011.cha,CAR,I think he has got the same colored trousers.,,
 13189,Thomas/021011.cha,CAR,oh perhaps he has.,,
-13190,Thomas/021011.cha,CHI,look like a dustbin man.,-1,
+13190,Thomas/021011.cha,CHI,look like a dustbin man.,-1,"subject, sv_agreement"
 13191,Thomas/021011.cha,CAR,he does look like a dustbin man.,,
 13192,Thomas/021011.cha,CAR,he has got green and yellow trousers like the dustbin man but he looks like he's pushing something through peoples letterboxes.,,
-13193,Thomas/021011.cha,CHI,by me.,-1,
-13194,Thomas/021011.cha,CHI,by my house.,-1,
+13193,Thomas/021011.cha,CHI,by me.,-1,"subject, verb"
+13194,Thomas/021011.cha,CHI,by my house.,-1,"subject, verb"
 13195,Thomas/021011.cha,CAR,well we'll see in a minute because he's bound to put something in ours isn't he?,,
 13196,Thomas/021011.cha,CAR,right.,,
-13197,Thomas/021011.cha,CHI,where dustbin man.,-1,
+13197,Thomas/021011.cha,CHI,where dustbin man.,-1,"verb, determiner"
 13198,Thomas/021011.cha,CAR,yes.,,
 13199,Thomas/021011.cha,CAR,and there's Stephen.,,
 13200,Thomas/021011.cha,CAR,he must be going to collect Liam from school I think.,,
@@ -870,22 +870,22 @@
 13207,Thomas/021011.cha,CAR,yes.,,
 13208,Thomas/021011.cha,CAR,Purdie jumped over your juice to get into the window didn't she?,,
 13209,Thomas/021011.cha,CHI,"sorry, Purd.",1,
-13210,Thomas/021011.cha,CHI,I not mean.,-1,
-13211,Thomas/021011.cha,CHI,Purdie jump over your window.,-1,
+13210,Thomas/021011.cha,CHI,I not mean.,-1,auxiliary
+13211,Thomas/021011.cha,CHI,Purdie jump over your window.,-1,sv_agreement
 13212,Thomas/021011.cha,CAR,oh she has come to watch the dustbin men and she has missed them.,,
 13213,Thomas/021011.cha,CAR,they've gone haven't they?,,
 13214,Thomas/021011.cha,CHI,um.,,
 13215,Thomas/021011.cha,CHI,"sorry, Purdie.",1,
-13216,Thomas/021011.cha,CHI,dustbin men gone now round corner.,-1,
+13216,Thomas/021011.cha,CHI,dustbin men gone now round corner.,-1,tense_aspect
 13217,Thomas/021011.cha,CHI,your missed them now.,1,
 13218,Thomas/021011.cha,CAR,that's right.,,
 13219,Thomas/021011.cha,CAR,the dustbin men have gone round the corner.,,
 13220,Thomas/021011.cha,CAR,"you've missed them now, Purdie.",,
-13221,Thomas/021011.cha,CHI,"next time your see them, Purdie.",-1,
+13221,Thomas/021011.cha,CHI,"next time your see them, Purdie.",-1,"subject, possesive, tense_aspect"
 13222,Thomas/021011.cha,CAR,next time she'll see them will she?,,
 13223,Thomas/021011.cha,CAR,next Monday.,,
 13224,Thomas/021011.cha,CAR,next week.,,
-13225,Thomas/021011.cha,CHI,"Monday get it, Purdie.",-1,
+13225,Thomas/021011.cha,CHI,"Monday get it, Purdie.",-1,"tense_aspect, subject"
 13226,Thomas/021011.cha,CAR,next Monday.,,
 13227,Thomas/021011.cha,CAR,"Mummy has got to go to work next Monday, Thomas.",,
 13228,Thomas/021011.cha,CAR,so either Nana or Grandad will be here or Daddy.,,
@@ -900,7 +900,7 @@
 13237,Thomas/021011.cha,CAR,watching them.,,
 13238,Thomas/021011.cha,CAR,watch them go past.,,
 13239,Thomas/021011.cha,CAR,can you see them?,,
-13240,Thomas/021011.cha,CHI,I stand up again.,-1,
+13240,Thomas/021011.cha,CHI,I stand up again.,-1,tense_aspect
 13241,Thomas/021011.cha,CAR,you can stand up again can't you?,,
 13242,Thomas/021011.cha,CAR,oh.,,
 13243,Thomas/021011.cha,CAR,there we are.,,
@@ -909,14 +909,14 @@
 13246,Thomas/021011.cha,CAR,I can still hear them.,,
 13247,Thomas/021011.cha,CAR,look at the clouds.,,
 13248,Thomas/021011.cha,CAR,can you see them blowing?,,
-13249,Thomas/021011.cha,CHI,which way they going?,-1,
+13249,Thomas/021011.cha,CHI,which way they going?,-1,present_progressive
 13250,Thomas/021011.cha,CAR,which way are they going?,,
 13251,Thomas/021011.cha,CAR,they're going that way.,,
 13252,Thomas/021011.cha,CAR,they're going towards the left.,,
 13253,Thomas/021011.cha,CAR,look at this big one coming up now.,,
-13254,Thomas/021011.cha,CHI,look like a crocodile.,-1,
+13254,Thomas/021011.cha,CHI,look like a crocodile.,-1,"subject, sv_agreement"
 13255,Thomas/021011.cha,CAR,is it like a crocodile?,,
-13256,Thomas/021011.cha,CHI,eating eating Purdie.,-1,
+13256,Thomas/021011.cha,CHI,eating eating Purdie.,-1,"subject, present_progressive"
 13257,Thomas/021011.cha,CAR,oh it better not eat Purdie.,,
 13258,Thomas/021011.cha,CHI,yes.,,
 13259,Thomas/021011.cha,CAR,but you can often see shapes in the clouds if you look can't you?,,
@@ -960,7 +960,7 @@
 13297,Thomas/021011.cha,CHI,uhoh.,,
 13298,Thomas/021011.cha,CAR,do you know where we're going?,,
 13299,Thomas/021011.cha,CHI,no.,,
-13300,Thomas/021011.cha,CHI,I not need go.,-1,
+13300,Thomas/021011.cha,CHI,I not need go.,-1,auxiliary
 13301,Thomas/021011.cha,CAR,you don't need to go.,,
 13302,Thomas/021011.cha,CAR,we've got to go into Didsbury because we've got buy Daddy a Valentines card.,,
 13303,Thomas/021011.cha,CAR,because it's Valentines Day today.,,
@@ -980,14 +980,14 @@
 13317,Thomas/021011.cha,CAR,oh suddenly you wanna go to Didsbury don't you?,,
 13318,Thomas/021011.cha,CHI,no.,,
 13319,Thomas/021011.cha,CAR,oh I just thought you'd perked up them when you thought there was something in it for you.,,
-13320,Thomas/021011.cha,CHI,my big fire engine there.,-1,
-13321,Thomas/021011.cha,CHI,I fireman.,-1,
+13320,Thomas/021011.cha,CHI,my big fire engine there.,-1,verb
+13321,Thomas/021011.cha,CHI,I fireman.,-1,verb
 13322,Thomas/021011.cha,CAR,you're a fireman are you?,,
 13323,Thomas/021011.cha,CHI,and you're not a dustbin.,1,
 13324,Thomas/021011.cha,CHI,you're not.,0,
 13325,Thomas/021011.cha,CAR,what am I?,,
 13326,Thomas/021011.cha,CHI,you're.,,
-13327,Thomas/021011.cha,CHI,you're not.,-1,
+13327,Thomas/021011.cha,CHI,you're not.,-1,object
 13328,Thomas/021011.cha,CHI,you're a lady.,1,
 13329,Thomas/021011.cha,CAR,I'm a lady am I?,,
 13330,Thomas/021011.cha,CHI,yes.,,
@@ -999,7 +999,7 @@
 13336,Thomas/021011.cha,CAR,look at this.,,
 13337,Thomas/021011.cha,CHI,yes.,,
 13338,Thomas/021011.cha,CAR,what's this?,,
-13339,Thomas/021011.cha,CHI,I wanna jump out my fire engine.,-1,
+13339,Thomas/021011.cha,CHI,I wanna jump out my fire engine.,-1,preposition
 13340,Thomas/021011.cha,CAR,you wanna jump out of your fire engine.,,
 13341,Thomas/021011.cha,CHI,yes.,,
 13342,Thomas/021011.cha,CAR,I was going to show you this.,,
@@ -1008,9 +1008,9 @@
 13345,Thomas/021011.cha,CHI,yes.,,
 13346,Thomas/021011.cha,CAR,it's a Valentines card.,,
 13347,Thomas/021011.cha,CAR,and that's from Daddy to Mummy.,,
-13348,Thomas/021011.cha,CHI,wanna hold it.,-1,
+13348,Thomas/021011.cha,CHI,wanna hold it.,-1,subject
 13349,Thomas/021011.cha,CAR,hold it gently.,,
-13350,Thomas/021011.cha,CHI,fire engine.,-1,
+13350,Thomas/021011.cha,CHI,fire engine.,-1,determiner
 13351,Thomas/021011.cha,CAR,can you see the red heart on the cover?,,
 13352,Thomas/021011.cha,CAR,on the front.,,
 13353,Thomas/021011.cha,CHI,yes.,,
@@ -1020,7 +1020,7 @@
 13357,Thomas/021011.cha,CAR,and that says love.,,
 13358,Thomas/021011.cha,CAR,love.,,
 13359,Thomas/021011.cha,CAR,and what did Daddy buy Mummy?,,
-13360,Thomas/021011.cha,CHI,new ring.,-1,
+13360,Thomas/021011.cha,CHI,new ring.,-1,determiner
 13361,Thomas/021011.cha,CAR,a new ring.,,
 13362,Thomas/021011.cha,CAR,no.,,
 13363,Thomas/021011.cha,CHI,yes.,,
@@ -1032,8 +1032,8 @@
 13369,Thomas/021011.cha,CAR,a nice jewelery box.,,
 13370,Thomas/021011.cha,CAR,shall we show Purdie the jewelery box?,,
 13371,Thomas/021011.cha,CHI,okay.,,
-13372,Thomas/021011.cha,CHI,box upstairs.,-1,
-13373,Thomas/021011.cha,CHI,box upstairs.,-1,
+13372,Thomas/021011.cha,CHI,box upstairs.,-1,determiner
+13373,Thomas/021011.cha,CHI,box upstairs.,-1,determiner
 13374,Thomas/021011.cha,CAR,the box.,,
 13375,Thomas/021011.cha,CAR,no.,,
 13376,Thomas/021011.cha,CAR,I think it's here.,,
@@ -1041,23 +1041,23 @@
 13378,Thomas/021011.cha,CAR,look at this.,,
 13379,Thomas/021011.cha,CAR,it's a nice leather box.,,
 13380,Thomas/021011.cha,CHI,"look, Purdy.",1,
-13381,Thomas/021011.cha,CHI,it's a big.,-1,
+13381,Thomas/021011.cha,CHI,it's a big.,-1,object
 13382,Thomas/021011.cha,CHI,Mummy's bringing the big box.,1,
 13383,Thomas/021011.cha,CHI,yes.,,
 13384,Thomas/021011.cha,CAR,Mummy's Mummy's bringing the big box to show Purdie isn't she?,,
 13385,Thomas/021011.cha,CAR,do you want Mummy to open it?,,
 13386,Thomas/021011.cha,CHI,yes.,,
-13387,Thomas/021011.cha,CHI,it's surprise.,-1,
+13387,Thomas/021011.cha,CHI,it's surprise.,-1,determiner
 13388,Thomas/021011.cha,CAR,it's a surprise is it?,,
-13389,Thomas/021011.cha,CHI,"it's surprise, Purdie.",-1,
+13389,Thomas/021011.cha,CHI,"it's surprise, Purdie.",-1,determiner
 13390,Thomas/021011.cha,CAR,that's it.,,
 13391,Thomas/021011.cha,CAR,open the lid.,,
 13392,Thomas/021011.cha,CHI,"here you are, Purd.",1,
 13393,Thomas/021011.cha,CHI,this is nice.,1,
 13394,Thomas/021011.cha,CAR,is it nice?,,
 13395,Thomas/021011.cha,CAR,this is nice.,,
-13396,Thomas/021011.cha,CHI,something in here.,-1,
-13397,Thomas/021011.cha,CHI,something in there.,-1,
+13396,Thomas/021011.cha,CHI,something in here.,-1,verb
+13397,Thomas/021011.cha,CHI,something in there.,-1,verb
 13398,Thomas/021011.cha,CAR,yes.,,
 13399,Thomas/021011.cha,CHI,it's a piece of paper.,1,
 13400,Thomas/021011.cha,CAR,it's something that they put in things like bags and boxes and shoes just so that they they stay nice and fresh.,,
@@ -1074,7 +1074,7 @@
 13411,Thomas/021011.cha,CAR,doesn't it feel nice and soft?,,
 13412,Thomas/021011.cha,CHI,yes.,,
 13413,Thomas/021011.cha,CHI,this is a hose pipe.,1,
-13414,Thomas/021011.cha,CHI,this a fire engine's hosepipe.,-1,
+13414,Thomas/021011.cha,CHI,this a fire engine's hosepipe.,-1,verb
 13415,Thomas/021011.cha,CAR,it's a fire engine's hose pipe is it?,,
 13416,Thomas/021011.cha,CAR,look.,,
 13417,Thomas/021011.cha,CAR,there's even a mirror.,,
@@ -1094,10 +1094,10 @@
 13431,Thomas/021011.cha,CAR,and look.,,
 13432,Thomas/021011.cha,CAR,can you see yourself in the mirror?,,
 13433,Thomas/021011.cha,CHI,I like these buttons.,1,
-13434,Thomas/021011.cha,CHI,I somebody.,-1,
+13434,Thomas/021011.cha,CHI,I somebody.,-1,verb
 13435,Thomas/021011.cha,CAR,who are you?,,
-13436,Thomas/021011.cha,CHI,I be a postman.,-1,
-13437,Thomas/021011.cha,CHI,I Postman Pat.,-1,
+13436,Thomas/021011.cha,CHI,I be a postman.,-1,tense_aspect
+13437,Thomas/021011.cha,CHI,I Postman Pat.,-1,verb
 13438,Thomas/021011.cha,CAR,right.,,
 13439,Thomas/021011.cha,CAR,well shall we put them back now one at a time?,,
 13440,Thomas/021011.cha,CAR,right.,,
@@ -1117,7 +1117,7 @@
 13454,Thomas/021011.cha,CHI,the top.,1,
 13455,Thomas/021011.cha,CAR,I thought it was black but I think it's actually navy blue.,,
 13456,Thomas/021011.cha,CAR,it's very dark navy blue isn't it?,,
-13457,Thomas/021011.cha,CHI,"I open it for you, Puss.",-1,
+13457,Thomas/021011.cha,CHI,"I open it for you, Puss.",-1,tense_aspect
 13458,Thomas/021011.cha,CAR,"I'm not I'm not quite sure what this is, Thomas.",,
 13459,Thomas/021011.cha,CAR,look.,,
 13460,Thomas/021011.cha,CAR,what do you think that is?,,
@@ -1130,15 +1130,15 @@
 13467,Thomas/021011.cha,CHI,I'm going to show Purdie.,1,
 13468,Thomas/021011.cha,CAR,you're going to show Purdie are you?,,
 13469,Thomas/021011.cha,CHI,"hello, Puss.",1,
-13470,Thomas/021011.cha,CHI,got something.,-1,native?
-13471,Thomas/021011.cha,CHI,I show at you.,-1,
+13470,Thomas/021011.cha,CHI,got something.,-1,subject
+13471,Thomas/021011.cha,CHI,I show at you.,-1,preposition
 13472,Thomas/021011.cha,CHI,yes.,,
 13473,Thomas/021011.cha,CHI,"I like your ears, Purdie.",1,
 13474,Thomas/021011.cha,CAR,what are you telling Purdie you like?,,
-13475,Thomas/021011.cha,CHI,"like your ears, Purdie.",-1,
+13475,Thomas/021011.cha,CHI,"like your ears, Purdie.",-1,subject
 13476,Thomas/021011.cha,CAR,oh you like your ears Purdie.,,
 13477,Thomas/021011.cha,CHI,okay.,,
-13478,Thomas/021011.cha,CHI,Purdie see something.,-1,
+13478,Thomas/021011.cha,CHI,Purdie see something.,-1,tense_aspect
 13479,Thomas/021011.cha,CAR,ah that's nice.,,
 13480,Thomas/021011.cha,CAR,you're using it to stroke Purdie with are you?,,
 13481,Thomas/021011.cha,CAR,right.,,
@@ -1150,7 +1150,7 @@
 13487,Thomas/021011.cha,CAR,I could do with some scissors to cut it.,,
 13488,Thomas/021011.cha,CAR,there we are.,,
 13489,Thomas/021011.cha,CAR,we've managed without.,,
-13490,Thomas/021011.cha,CHI,I Postman Pat jump.,-1,
+13490,Thomas/021011.cha,CHI,I Postman Pat jump.,-1,"verb, other"
 13491,Thomas/021011.cha,CAR,"oh darling, be careful.",,
 13492,Thomas/021011.cha,CHI,sorry.,,
 13493,Thomas/021011.cha,CAR,right.,,
@@ -1165,8 +1165,8 @@
 13502,Thomas/021011.cha,CAR,pop the key in here.,,
 13503,Thomas/021011.cha,CHI,open.,,
 13504,Thomas/021011.cha,CAR,look.,,
-13505,Thomas/021011.cha,CHI,key on key on your ring.,-1,
-13506,Thomas/021011.cha,CHI,finding a poke it on Purdie's fur.,-1,
+13505,Thomas/021011.cha,CHI,key on key on your ring.,-1,"determiner, verb"
+13506,Thomas/021011.cha,CHI,finding a poke it on Purdie's fur.,-1,"other, subject"
 13507,Thomas/021011.cha,CAR,oh don't poke Purdie with the key.,,
 13508,Thomas/021011.cha,CAR,that's not nice.,,
 13509,Thomas/021011.cha,CAR,right.,,
@@ -1185,4 +1185,4 @@
 13522,Thomas/021011.cha,CAR,you try it again.,,
 13523,Thomas/021011.cha,CAR,we'll turn the key upside down and try another way shall we?,,
 13524,Thomas/021011.cha,CHI,"no, Mummy.",1,
-13525,Thomas/021011.cha,CHI,I pushing it out.,-1,
+13525,Thomas/021011.cha,CHI,I pushing it out.,-1,present_progressive
