@@ -1,4 +1,4 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 18129,Suppes/030003.cha,CAR,this scotch tape really doesn't help a hurt you know.,,
 18130,Suppes/030003.cha,CAR,you need band-aids for a hurt.,,
 18131,Suppes/030003.cha,CAR,okay.,,
@@ -15,7 +15,7 @@
 18142,Suppes/030003.cha,CAR,did you tell Mel about your birthday Nina?,,
 18143,Suppes/030003.cha,CHI,where does your finger hurt?,1,
 18144,Suppes/030003.cha,CAR,it doesn't hurt any more.,,
-18145,Suppes/030003.cha,CHI,let me.,-1,
+18145,Suppes/030003.cha,CHI,let me.,-1,verb
 18146,Suppes/030003.cha,CAR,I don't wanna think about being hurt.,,
 18147,Suppes/030003.cha,CAR,it's no fun.,,
 18148,Suppes/030003.cha,CAR,I wanna think about birthdays.,,
@@ -56,7 +56,7 @@
 18183,Suppes/030003.cha,CAR,it's pretty.,,
 18184,Suppes/030003.cha,CAR,bumpety where's the balloon?,,
 18185,Suppes/030003.cha,CAR,where's the balloon?,,
-18186,Suppes/030003.cha,CHI,have to go out out in the living room for a little while.,-1,
+18186,Suppes/030003.cha,CHI,have to go out out in the living room for a little while.,-1,subject
 18187,Suppes/030003.cha,CHI,then I will come back.,1,
 18188,Suppes/030003.cha,CAR,I'm going to play with this.,,
 18189,Suppes/030003.cha,CHI,ah.,,
@@ -65,11 +65,11 @@
 18192,Suppes/030003.cha,CAR,okay let's have some tea.,,
 18193,Suppes/030003.cha,CAR,put some things out for me to have tea with.,,
 18194,Suppes/030003.cha,CHI,okay.,,
-18195,Suppes/030003.cha,CHI,I'll put them out fork.,-1,
+18195,Suppes/030003.cha,CHI,I'll put them out fork.,-1,"preposition, determiner"
 18196,Suppes/030003.cha,CAR,who gave you the tea set?,,
 18197,Suppes/030003.cha,CHI,here's your cup.,1,
 18198,Suppes/030003.cha,CHI,and here's my cup.,1,
-18199,Suppes/030003.cha,CHI,and here's.,-1,
+18199,Suppes/030003.cha,CHI,and here's.,-1,subject
 18200,Suppes/030003.cha,CHI,the fork.,1,
 18201,Suppes/030003.cha,CHI,and I have the the plate.,1,
 18202,Suppes/030003.cha,CHI,here's your plate.,1,
@@ -81,7 +81,7 @@
 18208,Suppes/030003.cha,CAR,thank you.,,
 18209,Suppes/030003.cha,CHI,that's your spaghetti.,1,
 18210,Suppes/030003.cha,CHI,this is mine.,1,
-18211,Suppes/030003.cha,CHI,this is.,-1,
+18211,Suppes/030003.cha,CHI,this is.,-1,object
 18212,Suppes/030003.cha,CHI,this is mine.,1,
 18213,Suppes/030003.cha,CHI,knife.,,
 18214,Suppes/030003.cha,CHI,this is my plate.,1,
@@ -118,23 +118,23 @@
 18245,Suppes/030003.cha,CAR,may I have some more cheese?,,
 18246,Suppes/030003.cha,CHI,no that's all.,1,
 18247,Suppes/030003.cha,CAR,what's that?,,
-18248,Suppes/030003.cha,CHI,this your.,-1,
+18248,Suppes/030003.cha,CHI,this your.,-1,"verb, object"
 18249,Suppes/030003.cha,CHI,this is sugar.,1,
 18250,Suppes/030003.cha,CHI,you have to put the top on it.,1,
 18251,Suppes/030003.cha,CHI,okay Mommy?,1,
 18252,Suppes/030003.cha,CHI,you have to put the top on here.,1,
-18253,Suppes/030003.cha,CHI,then we have to.,-1,
+18253,Suppes/030003.cha,CHI,then we have to.,-1,object
 18254,Suppes/030003.cha,CHI,and this is the tea.,1,
 18255,Suppes/030003.cha,CHI,see in here.,1,
 18256,Suppes/030003.cha,CHI,my fork and spoon.,0,
 18257,Suppes/030003.cha,CHI,my knife.,0,
 18258,Suppes/030003.cha,CHI,and my tea.,0,
-18259,Suppes/030003.cha,CHI,and here's my.,-1,
+18259,Suppes/030003.cha,CHI,and here's my.,-1,subject
 18260,Suppes/030003.cha,CHI,and here's the sugar.,1,
-18261,Suppes/030003.cha,CHI,and here.,-1,
+18261,Suppes/030003.cha,CHI,and here.,-1,"verb, subject"
 18262,Suppes/030003.cha,CHI,and I need some spaghetti.,1,
 18263,Suppes/030003.cha,CHI,here's some spaghetti that I have.,1,
-18264,Suppes/030003.cha,CHI,and here's.,-1,
+18264,Suppes/030003.cha,CHI,and here's.,-1,subject
 18265,Suppes/030003.cha,CHI,you eat some spaghetti.,1,
 18266,Suppes/030003.cha,CAR,um I need something else.,,
 18267,Suppes/030003.cha,CAR,what could I have?,,
@@ -250,14 +250,14 @@
 18377,Suppes/030003.cha,CAR,hey Nina did Lawny and you go for a hike yesterday?,,
 18378,Suppes/030003.cha,CHI,yup.,,
 18379,Suppes/030003.cha,CAR,where did we go?,,
-18380,Suppes/030003.cha,CHI,have to put these things away now.,-1,
+18380,Suppes/030003.cha,CHI,have to put these things away now.,-1,subject
 18381,Suppes/030003.cha,CHI,right on this table.,1,
 18382,Suppes/030003.cha,CHI,okay?,,
 18383,Suppes/030003.cha,CAR,ummhm.,,
-18384,Suppes/030003.cha,CHI,cause where those these things go.,-1,
+18384,Suppes/030003.cha,CHI,cause where those these things go.,-1,"subject, verb"
 18385,Suppes/030003.cha,CAR,tell turtle about the hike we took.,,
 18386,Suppes/030003.cha,CAR,he wants to know.,,
-18387,Suppes/030003.cha,CHI,he wanna eat all the food up.,-1,
+18387,Suppes/030003.cha,CHI,he wanna eat all the food up.,-1,"sv_agreement, tense_aspect"
 18388,Suppes/030003.cha,CAR,oh you think he'd rather eat food then hear about the hike?,,
 18389,Suppes/030003.cha,CHI,yup.,,
 18390,Suppes/030003.cha,CAR,I'm going to tell him about the hike.,,
@@ -276,10 +276,10 @@
 18403,Suppes/030003.cha,CAR,did they eat from your hand?,,
 18404,Suppes/030003.cha,CHI,yup.,,
 18405,Suppes/030003.cha,CAR,what did you do with your hand?,,
-18406,Suppes/030003.cha,CHI,put out straight.,-1,
+18406,Suppes/030003.cha,CHI,put out straight.,-1,"subject, object"
 18407,Suppes/030003.cha,CAR,and then what happened?,,
-18408,Suppes/030003.cha,CHI,and then it.,-1,
-18409,Suppes/030003.cha,CHI,and then the deer take the sandwich today away.,-1,
+18408,Suppes/030003.cha,CHI,and then it.,-1,verb
+18409,Suppes/030003.cha,CHI,and then the deer take the sandwich today away.,-1,"sv_agreement, other"
 18410,Suppes/030003.cha,CAR,how?,,
 18411,Suppes/030003.cha,CHI,with their mouth.,1,
 18412,Suppes/030003.cha,CAR,with the mouth?,,
@@ -302,12 +302,12 @@
 18429,Suppes/030003.cha,CAR,did we go by camel?,,
 18430,Suppes/030003.cha,CHI,no.,,
 18431,Suppes/030003.cha,CAR,how did we go?,,
-18432,Suppes/030003.cha,CHI,all by ourself.,-1,
+18432,Suppes/030003.cha,CHI,all by ourself.,-1,plural
 18433,Suppes/030003.cha,CAR,in what?,,
 18434,Suppes/030003.cha,CAR,a train?,,
 18435,Suppes/030003.cha,CHI,no.,,
 18436,Suppes/030003.cha,CAR,in what?,,
-18437,Suppes/030003.cha,CHI,in when we were walking.,-1,
+18437,Suppes/030003.cha,CHI,in when we were walking.,-1,other
 18438,Suppes/030003.cha,CAR,but how did we get to the walk?,,
 18439,Suppes/030003.cha,CAR,in a train in a boat in a car?,,
 18440,Suppes/030003.cha,CAR,in what?,,
@@ -328,7 +328,7 @@
 18455,Suppes/030003.cha,CAR,do you want me to jump?,,
 18456,Suppes/030003.cha,CAR,here let me have it.,,
 18457,Suppes/030003.cha,CHI,no.,,
-18458,Suppes/030003.cha,CHI,no jump rope out here.,-1,
+18458,Suppes/030003.cha,CHI,no jump rope out here.,-1,"verb, other"
 18459,Suppes/030003.cha,CAR,give it to me.,,
 18460,Suppes/030003.cha,CAR,I can't jump unless you give it to me.,,
 18461,Suppes/030003.cha,CHI,oh.,,
@@ -373,7 +373,7 @@
 18500,Suppes/030003.cha,CAR,what is on this card?,,
 18501,Suppes/030003.cha,CHI,a lady.,1,
 18502,Suppes/030003.cha,CAR,what is she doing?,,
-18503,Suppes/030003.cha,CHI,this is.,-1,
+18503,Suppes/030003.cha,CHI,this is.,-1,object
 18504,Suppes/030003.cha,CHI,I have a queen party hat.,1,
 18505,Suppes/030003.cha,CAR,is there a queen on your party hat?,,
 18506,Suppes/030003.cha,CHI,yup.,,
@@ -404,7 +404,7 @@
 18531,Suppes/030003.cha,CAR,what's on that card?,,
 18532,Suppes/030003.cha,CHI,no lemme put the tape on there.,1,
 18533,Suppes/030003.cha,CHI,you hold this up on the wall and I put the tape on there.,1,
-18534,Suppes/030003.cha,CHI,hold this up on the.,-1,
+18534,Suppes/030003.cha,CHI,hold this up on the.,-1,other
 18535,Suppes/030003.cha,CAR,where shall I hold it?,,
 18536,Suppes/030003.cha,CAR,near which card?,,
 18537,Suppes/030003.cha,CAR,the one with the rabbit or the one with the girl?,,
@@ -474,18 +474,18 @@
 18601,Suppes/030003.cha,CHI,Karen.,,
 18602,Suppes/030003.cha,CAR,she's a pretty doll.,,
 18603,Suppes/030003.cha,CAR,what happened to her hair?,,
-18604,Suppes/030003.cha,CHI,it fall off.,-1,
+18604,Suppes/030003.cha,CHI,it fall off.,-1,tense_aspect
 18605,Suppes/030003.cha,CAR,can you fix it?,,
 18606,Suppes/030003.cha,CHI,no.,,
 18607,Suppes/030003.cha,CAR,why not?,,
 18608,Suppes/030003.cha,CHI,cause it's kind of hard.,1,
 18609,Suppes/030003.cha,CAR,why don't you put her in your doll carriage?,,
-18610,Suppes/030003.cha,CHI,look at.,-1,
+18610,Suppes/030003.cha,CHI,look at.,-1,object
 18611,Suppes/030003.cha,CAR,what did you do?,,
 18612,Suppes/030003.cha,CHI,to the tape?,1,
 18613,Suppes/030003.cha,CAR,yeah.,,
-18614,Suppes/030003.cha,CHI,I mend it.,-1,
-18615,Suppes/030003.cha,CHI,I mend the tape.,-1,
+18614,Suppes/030003.cha,CHI,I mend it.,-1,tense_aspect
+18615,Suppes/030003.cha,CHI,I mend the tape.,-1,tense_aspect
 18616,Suppes/030003.cha,CAR,you mend.,,
 18617,Suppes/030003.cha,CAR,you mended the the birthday card?,,
 18618,Suppes/030003.cha,CHI,yup.,,
@@ -507,24 +507,24 @@
 18634,Suppes/030003.cha,CAR,why don't you put her down with your dolly in the carriage.,,
 18635,Suppes/030003.cha,CHI,nope.,,
 18636,Suppes/030003.cha,CHI,where's my dolly in the carriage?,1,
-18637,Suppes/030003.cha,CHI,there is with the.,-1,
-18638,Suppes/030003.cha,CHI,with panties.,-1,
+18637,Suppes/030003.cha,CHI,there is with the.,-1,"subject, other"
+18638,Suppes/030003.cha,CHI,with panties.,-1,"subject, verb, object"
 18639,Suppes/030003.cha,CHI,she's angry.,1,
 18640,Suppes/030003.cha,CAR,why is she angry?,,
 18641,Suppes/030003.cha,CHI,is she angry?,1,
 18642,Suppes/030003.cha,CHI,get out of my house.,1,
-18643,Suppes/030003.cha,CHI,that what the lady said.,-1,
+18643,Suppes/030003.cha,CHI,that what the lady said.,-1,verb
 18644,Suppes/030003.cha,CAR,why did the lady get angry?,,
 18645,Suppes/030003.cha,CHI,cause she did.,1,
 18646,Suppes/030003.cha,CAR,why don't you put her down to sleep and get and have her have dreams.,,
-18647,Suppes/030003.cha,CHI,like the baby did have dreams?,-1,
+18647,Suppes/030003.cha,CHI,like the baby did have dreams?,-1,other
 18648,Suppes/030003.cha,CAR,ummhm.,,
 18649,Suppes/030003.cha,CAR,what kind of dream will she have?,,
 18650,Suppes/030003.cha,CHI,a lion dream.,1,
 18651,Suppes/030003.cha,CAR,you told me you had a dream about a snowman.,,
 18652,Suppes/030003.cha,CHI,yup.,,
 18653,Suppes/030003.cha,CAR,what happened?,,
-18654,Suppes/030003.cha,CHI,you and the snowman waked you up.,-1,
+18654,Suppes/030003.cha,CHI,you and the snowman waked you up.,-1,tense_aspect
 18655,Suppes/030003.cha,CAR,oh he woke me up?,,
 18656,Suppes/030003.cha,CHI,yup.,,
 18657,Suppes/030003.cha,CAR,and then what happened?,,
@@ -533,7 +533,7 @@
 18660,Suppes/030003.cha,CHI,what else?,1,
 18661,Suppes/030003.cha,CHI,and then a gorilla came.,1,
 18662,Suppes/030003.cha,CAR,yeah and.,,
-18663,Suppes/030003.cha,CHI,bite you up.,-1,
+18663,Suppes/030003.cha,CHI,bite you up.,-1,"subject, tense_aspect"
 18664,Suppes/030003.cha,CAR,he did?,,
 18665,Suppes/030003.cha,CAR,why did he do that?,,
 18666,Suppes/030003.cha,CHI,I wanna go outside and play.,1,
@@ -600,7 +600,7 @@
 18727,Suppes/030003.cha,CAR,let's see does this thing go round?,,
 18728,Suppes/030003.cha,CHI,yup.,,
 18729,Suppes/030003.cha,CAR,how do I make it go round?,,
-18730,Suppes/030003.cha,CHI,Mommy let me have the.,-1,
+18730,Suppes/030003.cha,CHI,Mommy let me have the.,-1,object
 18731,Suppes/030003.cha,CAR,don't hold it and it'll go round.,,
 18732,Suppes/030003.cha,CAR,see watch it spin.,,
 18733,Suppes/030003.cha,CAR,let me see if it spins.,,
