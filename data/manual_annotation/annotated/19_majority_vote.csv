@@ -1,4 +1,4 @@
-,transcript_file,speaker_code,transcript_clean,is_grammatical,note
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels
 17555,Suppes/030003.cha,CAR,he's wearing a suit isn't he?,,
 17556,Suppes/030003.cha,CHI,don't you make the dog fall down.,1,
 17557,Suppes/030003.cha,CAR,did I?,,
@@ -6,15 +6,15 @@
 17559,Suppes/030003.cha,CHI,and that hurts him so you hurt him too.,1,
 17560,Suppes/030003.cha,CAR,I'm sorry dog.,,
 17561,Suppes/030003.cha,CHI,and dog doesn't like that.,1,
-17562,Suppes/030003.cha,CHI,that what he doesn't like.,-1,
-17563,Suppes/030003.cha,CHI,cause don't do that every time.,-1,
+17562,Suppes/030003.cha,CHI,that what he doesn't like.,-1,verb
+17563,Suppes/030003.cha,CHI,cause don't do that every time.,-1,subject
 17564,Suppes/030003.cha,CHI,okay.,,
 17565,Suppes/030003.cha,CAR,I didn't mean to knock him over.,,
 17566,Suppes/030003.cha,CHI,cause he cries every day when you push him down.,1,
 17567,Suppes/030003.cha,CAR,oh I didn't do it on purpose.,,
 17568,Suppes/030003.cha,CAR,what else did Pierre and Maryse bring for your birthday?,,
 17569,Suppes/030003.cha,CHI,Mommy.,,
-17570,Suppes/030003.cha,CHI,put right on this shelf.,-1,
+17570,Suppes/030003.cha,CHI,put right on this shelf.,-1,object
 17571,Suppes/030003.cha,CHI,we could take them out.,1,
 17572,Suppes/030003.cha,CAR,take something else out and show me.,,
 17573,Suppes/030003.cha,CHI,see all those people.,1,
@@ -57,15 +57,15 @@
 17610,Suppes/030003.cha,CHI,I made a cake at at school.,1,
 17611,Suppes/030003.cha,CAR,you did?,,
 17612,Suppes/030003.cha,CAR,when?,,
-17613,Suppes/030003.cha,CHI,cause I did.,-1,
+17613,Suppes/030003.cha,CHI,cause I did.,-1,object
 17614,Suppes/030003.cha,CHI,cause I wanted to.,1,
-17615,Suppes/030003.cha,CHI,cause I put the chocolate on and said.,-1,
+17615,Suppes/030003.cha,CHI,cause I put the chocolate on and said.,-1,object
 17616,Suppes/030003.cha,CHI,happy birthday dear Gary.,1,
 17617,Suppes/030003.cha,CAR,oh for Gary?,,
 17618,Suppes/030003.cha,CHI,yup.,,
 17619,Suppes/030003.cha,CAR,when was his birthday?,,
 17620,Suppes/030003.cha,CHI,on Tuesday.,1,
-17621,Suppes/030003.cha,CHI,tomorrow it was.,-1,
+17621,Suppes/030003.cha,CHI,tomorrow it was.,-1,other
 17622,Suppes/030003.cha,CHI,this is the match.,1,
 17623,Suppes/030003.cha,CAR,when it was your birthday did you have something at school?,,
 17624,Suppes/030003.cha,CHI,yup.,,
@@ -83,14 +83,14 @@
 17636,Suppes/030003.cha,CAR,for your birthday on Friday I brought lots of cup cakes remember?,,
 17637,Suppes/030003.cha,CHI,this candle is stupid.,1,
 17638,Suppes/030003.cha,CAR,what's wrong?,,
-17639,Suppes/030003.cha,CHI,came out.,-1,
+17639,Suppes/030003.cha,CHI,came out.,-1,subject
 17640,Suppes/030003.cha,CHI,let's put the big candles on the cake.,1,
 17641,Suppes/030003.cha,CAR,is that how many you had on your cake?,,
 17642,Suppes/030003.cha,CHI,yup.,,
 17643,Suppes/030003.cha,CAR,what did you do to the candles?,,
 17644,Suppes/030003.cha,CHI,we put them in the cake.,1,
 17645,Suppes/030003.cha,CAR,and then what?,,
-17646,Suppes/030003.cha,CHI,and then we sing.,-1,
+17646,Suppes/030003.cha,CHI,and then we sing.,-1,object
 17647,Suppes/030003.cha,CHI,happy birthday dear Nina.,1,
 17648,Suppes/030003.cha,CAR,did I light the cake?,,
 17649,Suppes/030003.cha,CHI,yeah.,,
@@ -111,17 +111,17 @@
 17664,Suppes/030003.cha,CHI,yeah.,,
 17665,Suppes/030003.cha,CAR,what happened?,,
 17666,Suppes/030003.cha,CHI,now this is your cake.,1,
-17667,Suppes/030003.cha,CHI,this is your cake with a candle on.,1,native
+17667,Suppes/030003.cha,CHI,this is your cake with a candle on.,1,
 17668,Suppes/030003.cha,CHI,I made yours.,1,
 17669,Suppes/030003.cha,CAR,thank you.,,
 17670,Suppes/030003.cha,CHI,happy birthday dear Florence.,1,
 17671,Suppes/030003.cha,CHI,you you blow it out now.,1,
-17672,Suppes/030003.cha,CHI,have to cut this cake if you want another one okay?,-1,
+17672,Suppes/030003.cha,CHI,have to cut this cake if you want another one okay?,-1,subject
 17673,Suppes/030003.cha,CAR,how are you cutting it?,,
 17674,Suppes/030003.cha,CHI,with the match.,1,
 17675,Suppes/030003.cha,CAR,with a knife?,,
 17676,Suppes/030003.cha,CHI,yup.,,
-17677,Suppes/030003.cha,CHI,and pretend knife.,-1,
+17677,Suppes/030003.cha,CHI,and pretend knife.,-1,determiner
 17678,Suppes/030003.cha,CAR,a pretend knife?,,
 17679,Suppes/030003.cha,CHI,yup because it's a match.,1,
 17680,Suppes/030003.cha,CAR,did you like the cake I made for you for your birthday?,,
@@ -157,10 +157,10 @@
 17710,Suppes/030003.cha,CHI,Nicole is going to bring you a present Mommy.,1,
 17711,Suppes/030003.cha,CAR,what kind of a present?,,
 17712,Suppes/030003.cha,CHI,a turtle.,1,
-17713,Suppes/030003.cha,CHI,she's going to give you.,-1,native
+17713,Suppes/030003.cha,CHI,she's going to give you.,-1,object
 17714,Suppes/030003.cha,CAR,oh.,,
 17715,Suppes/030003.cha,CHI,these are pieces of cakes for you.,1,
-17716,Suppes/030003.cha,CHI,when you want another one.,-1,
+17716,Suppes/030003.cha,CHI,when you want another one.,-1,preposition
 17717,Suppes/030003.cha,CHI,match.,,
 17718,Suppes/030003.cha,CHI,blow the candle out.,0,
 17719,Suppes/030003.cha,CHI,that's the doggy's cake.,1,
@@ -168,16 +168,16 @@
 17721,Suppes/030003.cha,CHI,we have to take the candles out.,1,
 17722,Suppes/030003.cha,CHI,cause I put a cherry in his cake.,1,
 17723,Suppes/030003.cha,CHI,yummy yummy yummy yummy yummy yummy.,0,
-17724,Suppes/030003.cha,CHI,he bite the cake.,-1,
-17725,Suppes/030003.cha,CHI,he has to put this on the.,-1,
+17724,Suppes/030003.cha,CHI,he bite the cake.,-1,tense_aspect
+17725,Suppes/030003.cha,CHI,he has to put this on the.,-1,other
 17726,Suppes/030003.cha,CHI,no that's where this cake goes.,1,
 17727,Suppes/030003.cha,CAR,where?,,
 17728,Suppes/030003.cha,CAR,where you putting the cake?,,
 17729,Suppes/030003.cha,CHI,right there.,1,
 17730,Suppes/030003.cha,CAR,on what?,,
 17731,Suppes/030003.cha,CHI,on the table.,1,
-17732,Suppes/030003.cha,CHI,but this where's the cake goes.,-1,
-17733,Suppes/030003.cha,CHI,cause these are all my thing.,-1,
+17732,Suppes/030003.cha,CHI,but this where's the cake goes.,-1,"verb, other"
+17733,Suppes/030003.cha,CHI,cause these are all my thing.,-1,"possessive, other"
 17734,Suppes/030003.cha,CHI,but you could play with them.,1,
 17735,Suppes/030003.cha,CHI,I'll share them.,1,
 17736,Suppes/030003.cha,CAR,who's going to eat that cake?,,
@@ -185,13 +185,13 @@
 17738,Suppes/030003.cha,CAR,who else is going to get to sit at the table?,,
 17739,Suppes/030003.cha,CHI,nobody.,,
 17740,Suppes/030003.cha,CAR,nobody?,,
-17741,Suppes/030003.cha,CHI,I matched the the.,-1,
+17741,Suppes/030003.cha,CHI,I matched the the.,-1,object
 17742,Suppes/030003.cha,CHI,oh that's funny.,1,
 17743,Suppes/030003.cha,CHI,I matched the candle.,0,
 17744,Suppes/030003.cha,CAR,you mean you lit the candle?,,
 17745,Suppes/030003.cha,CHI,yup.,,
 17746,Suppes/030003.cha,CAR,with what?,,
-17747,Suppes/030003.cha,CHI,you don't know how to.,-1,
+17747,Suppes/030003.cha,CHI,you don't know how to.,-1,verb
 17748,Suppes/030003.cha,CHI,sit down.,0,
 17749,Suppes/030003.cha,CHI,at the table.,1,
 17750,Suppes/030003.cha,CHI,he doesn't know how to sit down.,1,
@@ -200,7 +200,7 @@
 17753,Suppes/030003.cha,CAR,where does he sit?,,
 17754,Suppes/030003.cha,CHI,right.,,
 17755,Suppes/030003.cha,CHI,you have to eat with this.,1,
-17756,Suppes/030003.cha,CHI,he he bite the cake.,-1,
+17756,Suppes/030003.cha,CHI,he he bite the cake.,-1,tense_aspect
 17757,Suppes/030003.cha,CHI,he licked the frosting.,1,
 17758,Suppes/030003.cha,CHI,he licked the frosting.,1,
 17759,Suppes/030003.cha,CAR,who licked the frosting?,,
@@ -209,7 +209,7 @@
 17762,Suppes/030003.cha,CHI,okay.,,
 17763,Suppes/030003.cha,CHI,the Mommy would eat this cake.,1,
 17764,Suppes/030003.cha,CHI,the doggy's sharing it.,1,
-17765,Suppes/030003.cha,CHI,he bite his tongue while he was eating.,-1,
+17765,Suppes/030003.cha,CHI,he bite his tongue while he was eating.,-1,tense_aspect
 17766,Suppes/030003.cha,CHI,and so he's going to have a little rest with his blanket on.,1,
 17767,Suppes/030003.cha,CHI,now.,,
 17768,Suppes/030003.cha,CHI,oh.,,
@@ -243,11 +243,11 @@
 17796,Suppes/030003.cha,CAR,oh what are you doing?,,
 17797,Suppes/030003.cha,CAR,taking out the rest of your birthday presents?,,
 17798,Suppes/030003.cha,CHI,yup.,,
-17799,Suppes/030003.cha,CHI,this is a cleaner.,1,native? Made up word?
+17799,Suppes/030003.cha,CHI,this is a cleaner.,1,
 17800,Suppes/030003.cha,CHI,this is a cleaner thing.,1,
 17801,Suppes/030003.cha,CAR,cleaner thing?,,
 17802,Suppes/030003.cha,CAR,what is it?,,
-17803,Suppes/030003.cha,CHI,is a cleaner thing.,-1,
+17803,Suppes/030003.cha,CHI,is a cleaner thing.,-1,subject
 17804,Suppes/030003.cha,CAR,what is it used for?,,
 17805,Suppes/030003.cha,CAR,you mean a vacuum cleaner?,,
 17806,Suppes/030003.cha,CHI,yup.,,
@@ -282,9 +282,9 @@
 17835,Suppes/030003.cha,CHI,have to go to Karen's house and play.,0,
 17836,Suppes/030003.cha,CAR,you can go after her nap.,,
 17837,Suppes/030003.cha,CAR,when the clock gets to be here.,,
-17838,Suppes/030003.cha,CHI,look at.,-1,
+17838,Suppes/030003.cha,CHI,look at.,-1,object
 17839,Suppes/030003.cha,CHI,this one's going to go in there.,1,
-17840,Suppes/030003.cha,CHI,cause doesn't stand up very well.,-1,
+17840,Suppes/030003.cha,CHI,cause doesn't stand up very well.,-1,subject
 17841,Suppes/030003.cha,CHI,cause it's broken.,1,
 17842,Suppes/030003.cha,CHI,and this lamb doesn't stand up very well.,1,
 17843,Suppes/030003.cha,CHI,cause it has to go on this piece of grass.,1,
@@ -294,7 +294,7 @@
 17847,Suppes/030003.cha,CHI,has to put blankets on.,1,
 17848,Suppes/030003.cha,CHI,we have to put blankets on it.,1,
 17849,Suppes/030003.cha,CAR,on whom are you putting a blanket?,,
-17850,Suppes/030003.cha,CHI,on lamb because he's cold.,-1,
+17850,Suppes/030003.cha,CHI,on lamb because he's cold.,-1,"subject, verb, determiner"
 17851,Suppes/030003.cha,CAR,who gave all the little animals to the children?,,
 17852,Suppes/030003.cha,CHI,Maryse.,,
 17853,Suppes/030003.cha,CHI,you did.,1,
@@ -329,7 +329,7 @@
 17882,Suppes/030003.cha,CHI,he's crying.,1,
 17883,Suppes/030003.cha,CAR,what happens?,,
 17884,Suppes/030003.cha,CHI,I will stay with you.,1,
-17885,Suppes/030003.cha,CHI,his mother going to stay with him.,-1,native
+17885,Suppes/030003.cha,CHI,his mother going to stay with him.,-1,present_progressive
 17886,Suppes/030003.cha,CHI,his doggy and his mother and the father and the girl are going to stay with that baby Mommy.,1,
 17887,Suppes/030003.cha,CAR,let's see.,,
 17888,Suppes/030003.cha,CAR,do you think the baby will have a dream when he goes to sleep?,,
@@ -380,7 +380,7 @@
 17933,Suppes/030003.cha,CAR,did you have ice cream at your birthday?,,
 17934,Suppes/030003.cha,CHI,yup.,,
 17935,Suppes/030003.cha,CAR,what kind?,,
-17936,Suppes/030003.cha,CHI,oh he doesn't stand up very well this lamb.,1,"native, 'this lamb' could be clarficatory"
+17936,Suppes/030003.cha,CHI,oh he doesn't stand up very well this lamb.,1,
 17937,Suppes/030003.cha,CHI,Mommy this lamb doesn't stand up very well.,1,
 17938,Suppes/030003.cha,CAR,let's see.,,
 17939,Suppes/030003.cha,CAR,well we'll put him on some play dough and then he can stand up.,,
@@ -398,7 +398,7 @@
 17951,Suppes/030003.cha,CAR,hey did you see deer yesterday?,,
 17952,Suppes/030003.cha,CHI,yup.,,
 17953,Suppes/030003.cha,CAR,where?,,
-17954,Suppes/030003.cha,CHI,at the hiking.,-1,
+17954,Suppes/030003.cha,CHI,at the hiking.,-1,other
 17955,Suppes/030003.cha,CAR,what did we do with the deer?,,
 17956,Suppes/030003.cha,CHI,say.,,
 17957,Suppes/030003.cha,CHI,come here and eat this apple.,1,
@@ -421,7 +421,7 @@
 17974,Suppes/030003.cha,CAR,I can't see them from way over there.,,
 17975,Suppes/030003.cha,CAR,bring them to me.,,
 17976,Suppes/030003.cha,CAR,let me see them.,,
-17977,Suppes/030003.cha,CHI,you could see them from over.,-1,
+17977,Suppes/030003.cha,CHI,you could see them from over.,-1,other
 17978,Suppes/030003.cha,CAR,I can't see.,,
 17979,Suppes/030003.cha,CAR,that's too far away.,,
 17980,Suppes/030003.cha,CAR,bring them to me.,,
@@ -447,7 +447,7 @@
 18000,Suppes/030003.cha,CAR,what is he doing?,,
 18001,Suppes/030003.cha,CAR,eating a turtle.,,
 18002,Suppes/030003.cha,CAR,he's eating a turtle or talking to a turtle?,,
-18003,Suppes/030003.cha,CHI,is not coming out.,-1,
+18003,Suppes/030003.cha,CHI,is not coming out.,-1,subject
 18004,Suppes/030003.cha,CAR,who isn't?,,
 18005,Suppes/030003.cha,CHI,the turtle.,1,
 18006,Suppes/030003.cha,CAR,where is he?,,
@@ -487,7 +487,7 @@
 18040,Suppes/030003.cha,CAR,what happens when you punch?,,
 18041,Suppes/030003.cha,CHI,he's going to the floor.,1,
 18042,Suppes/030003.cha,CAR,and then what happens.,,
-18043,Suppes/030003.cha,CHI,and then comes up.,-1,
+18043,Suppes/030003.cha,CHI,and then comes up.,-1,subject
 18044,Suppes/030003.cha,CHI,to me.,0,
 18045,Suppes/030003.cha,CAR,bring him here.,,
 18046,Suppes/030003.cha,CAR,I'd like to try punching him.,,
@@ -513,14 +513,14 @@
 18066,Suppes/030003.cha,CAR,did you hurt yourself when you fell?,,
 18067,Suppes/030003.cha,CHI,what's this?,1,
 18068,Suppes/030003.cha,CAR,let me see.,,
-18069,Suppes/030003.cha,CHI,where my hurt?,-1,
+18069,Suppes/030003.cha,CHI,where my hurt?,-1,verb
 18070,Suppes/030003.cha,CAR,oh I'll kiss it.,,
 18071,Suppes/030003.cha,CAR,bring your knee over here.,,
 18072,Suppes/030003.cha,CAR,you bumped your knee when you fell?,,
 18073,Suppes/030003.cha,CHI,yeah.,,
 18074,Suppes/030003.cha,CAR,I guess you can't punch it so fast.,,
 18075,Suppes/030003.cha,CAR,um a big kiss.,,
-18076,Suppes/030003.cha,CHI,no right on this hurt.,-1,
+18076,Suppes/030003.cha,CHI,no right on this hurt.,-1,"subject, verb"
 18077,Suppes/030003.cha,CAR,oh you made a scratch there didn't you?,,
 18078,Suppes/030003.cha,CAR,is that from hitting against the bookshelf?,,
 18079,Suppes/030003.cha,CHI,yup.,,
@@ -538,7 +538,7 @@
 18091,Suppes/030003.cha,CAR,yeah that's a nose.,,
 18092,Suppes/030003.cha,CHI,is this a nose?,1,
 18093,Suppes/030003.cha,CAR,now what else does he have?,,
-18094,Suppes/030003.cha,CHI,put that tape on the Snoopy.,-1,
+18094,Suppes/030003.cha,CHI,put that tape on the Snoopy.,-1,"subject, determiner"
 18095,Suppes/030003.cha,CAR,what are you putting the tape on?,,
 18096,Suppes/030003.cha,CHI,I'm putting the tape on my hurt.,1,
 18097,Suppes/030003.cha,CAR,what did the children wear at the birthday party when they were sitting at the table?,,
