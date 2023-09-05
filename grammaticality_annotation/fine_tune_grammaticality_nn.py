@@ -64,8 +64,8 @@ class CHILDESGrammarModel(LightningModule):
             self.config = AutoConfig.from_pretrained(model_name_or_path, num_labels=num_labels)
             self.model = AutoModelForSequenceClassification.from_pretrained(model_name_or_path, config=self.config)
 
-        self.metric_mcc = evaluate.load("matthews_correlation")
-        self.metric_acc = evaluate.load("accuracy")
+        self.metric_mcc = evaluate.load("matthews_correlation", experiment_id=str(torch.rand(10)))
+        self.metric_acc = evaluate.load("accuracy", experiment_id=str(torch.rand(10)))
         self.metrics = [self.metric_mcc, self.metric_acc]
 
         weight = torch.tensor(class_weights)
