@@ -22,29 +22,31 @@ from utils import RESULTS_DIR, RESULTS_FILE
 RANDOM_STATE = 1
 
 
-def create_features(datapoint, vocab_unigrams, vocab_bigrams, vocab_trigrams):
+def create_features(datapoint, vocabs):
+    vocab_unigrams = vocabs[0]
     unigrams = Counter([u for u in datapoint["encoded"] if u in vocab_unigrams])
-    bigrams = Counter(nltk.ngrams(unigrams, 2))
-    trigrams = Counter(nltk.ngrams(unigrams, 3))
-
     feat_unigrams = [unigrams[u] for u in vocab_unigrams]
-    feat_bigrams = [bigrams[b] for b in vocab_bigrams]
-    feat_trigrams = [trigrams[t] for t in vocab_trigrams]
-    datapoint["features"] = feat_unigrams + feat_bigrams + feat_trigrams
+    datapoint["features"] = feat_unigrams
+
+    for level, vocab in zip(range(2, len(vocabs)+1), vocabs[1:]):
+        ngrams = Counter(nltk.ngrams(unigrams, level))
+        feats = [ngrams[b] for b in vocab]
+        datapoint["features"] += feats
 
     return datapoint
 
 
-def create_n_gram_vocabs(datasets, max_n_grams):
+def create_n_gram_vocabs(datasets, max_n_grams, max_n_gram_level):
     unigrams = itertools.chain(*datasets)
-    bigrams = nltk.ngrams(itertools.chain(*datasets), 2)
-    trigrams = nltk.ngrams(itertools.chain(*datasets), 3)
-
     unigrams = [u for u, c in Counter(unigrams).most_common(max_n_grams)]
-    bigrams = [b for b, c in Counter(bigrams).most_common(max_n_grams)]
-    trigrams = [t for t, c in Counter(trigrams).most_common(max_n_grams)]
 
-    return unigrams, bigrams, trigrams
+    vocabs = [unigrams]
+    for level in range(2, max_n_gram_level+1):
+        ngrams = nltk.ngrams(itertools.chain(*datasets), level)
+        ngrams = [b for b, c in Counter(ngrams).most_common(max_n_grams)]
+        vocabs.append(ngrams)
+
+    return vocabs
 
 
 def tokenize(datapoint, tokenizer):
@@ -76,8 +78,8 @@ def main(args):
             {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
 
         datasets = datasets.map(tokenize, fn_kwargs={"tokenizer": tokenizer})
-        vocab_unigrams, vocab_bigrams, vocab_trigrams = create_n_gram_vocabs(datasets["train"]["encoded"], args.max_n_grams)
-        datasets = datasets.map(create_features, fn_kwargs={"vocab_unigrams": vocab_unigrams, "vocab_bigrams": vocab_bigrams, "vocab_trigrams": vocab_trigrams})
+        vocabs = create_n_gram_vocabs(datasets["train"]["encoded"], args.max_n_grams, args.max_n_gram_level)
+        datasets = datasets.map(create_features, fn_kwargs={"vocabs": vocabs})
 
         data_train = datasets["train"]
         data_test = datasets["test"]
@@ -134,8 +136,9 @@ def main(args):
     kappa = cohen_kappa_score(test_labels, predictions, weights="linear")
     print(f"Cohen's kappa: {kappa:.2f}")
 
+    model_name = f"{args.max_n_gram_level}-gram"
     results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies), "context_length": 0},
-                               {"model": "ngrams", "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length}])
+                               {"model": model_name, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length}])
     results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -165,8 +168,13 @@ def parse_args():
     argparser.add_argument(
         "--model",
         type=str,
-        default="random_forest",
+        default="svc",
         choices=["random_forest", "svc", "linear_svc"]
+    )
+    argparser.add_argument(
+        "--max-n-gram-level",
+        type=int,
+        default=3,
     )
     argparser.add_argument(
         "--max-n-grams",

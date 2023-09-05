@@ -2,7 +2,7 @@ import pandas as pd
 from utils import RESULTS_FILE
 
 REFERENCE_METRIC = "val_mcc: mean"
-MODELS_NO_CONTEXT = ["majority_classifier", "human_annotators"]
+MODELS_NO_CONTEXT = ["majority_classifier", "human_annotators", "1-gram", "2-gram", "3-gram", "4-gram"]
 
 
 def create_results_table_model_comparison(results, context_length=1):
