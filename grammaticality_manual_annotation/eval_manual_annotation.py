@@ -95,6 +95,7 @@ def eval(args):
 
     kappa_scores = []
     mcc_scores = []
+    acc_scores = []
     for ann_1, ann_2 in itertools.combinations(args.annotators, 2):
         kappa = cohen_kappa_score(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"], weights="linear")
         kappa_scores.append(kappa)
@@ -103,15 +104,22 @@ def eval(args):
         mcc = matthews_corrcoef(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])
         mcc_scores.append(mcc)
 
+        acc = np.mean(data[f"is_grammatical_{ann_1}"] == data[f"is_grammatical_{ann_2}"])
+        acc_scores.append(acc)
+
     print(f"Mean kappa: {np.mean(kappa_scores):.2f} Std: {np.std(kappa_scores):.2f}")
     print(f"Mean mcc: {np.mean(mcc_scores):.2f} Std: {np.std(mcc_scores):.2f}")
+    print(f"Mean acc: {np.mean(acc_scores):.2f} Std: {np.std(acc_scores):.2f}")
+
 
     rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
     alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
     print(f"Krippendorff's Alpha: {alpha:.2f}")
 
-    results_df = pd.DataFrame([{"model": "human_annotators", "mcc: mean": np.mean(mcc_scores), "mcc: std": np.std(mcc_scores),
-                                "context_length": 0}])
+    results_df = pd.DataFrame([{"model": "human_annotators", "context_length": 0,
+                                "mcc: mean": np.mean(mcc_scores), "mcc: std": np.std(mcc_scores),
+                                "accuracy: mean": np.mean(acc_scores), "accuracy: std": np.std(acc_scores),
+                                }])
     results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
