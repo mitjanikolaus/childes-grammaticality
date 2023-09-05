@@ -18,7 +18,7 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_datasplits
-from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, LABEL_FIELD
+from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, LABEL_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
 
