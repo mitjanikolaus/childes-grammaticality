@@ -145,15 +145,14 @@ class CHILDESGrammarModel(LightningModule):
             self.log_dict(metric_results, prog_bar=True)
 
         if self.test_error_analysis:
-            _, data_manual_annotations_val = load_annotated_childes_datasplits(self.hparams.context_length, self.hparams.val_split_proportion, random_seed=self.random_seed)
-            data_manual_annotations_val["pred"] = preds
-            errors = data_manual_annotations_val[
-                data_manual_annotations_val.pred != data_manual_annotations_val[LABEL_FIELD]]
-            correct = data_manual_annotations_val[
-                data_manual_annotations_val.pred == data_manual_annotations_val[LABEL_FIELD]]
+            _, data_manual_annotations_test = load_annotated_childes_datasplits(self.hparams.context_length,
+                                                                                self.hparams.val_split_proportion,
+                                                                                random_seed=self.random_seed,
+                                                                                keep_error_labels_column=True)
+            data_manual_annotations_test["pred"] = preds
 
-            errors.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_errors.csv"))
-            correct.to_csv(os.path.join(self.logger.log_dir, "manual_annotations_correct.csv"))
+            output_path = os.path.join(self.logger.log_dir, "test_set_predictions.csv")
+            data_manual_annotations_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
 
     def configure_optimizers(self):
         """Prepare optimizer and schedule (linear warmup and decay)"""

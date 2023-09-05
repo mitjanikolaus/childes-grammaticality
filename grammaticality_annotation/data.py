@@ -13,7 +13,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
 from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD,
-                                                 TOKEN_SPEAKER_CAREGIVER, TOKEN_EOS)
+                                                 TOKEN_SPEAKER_CAREGIVER, ERROR_LABELS_FIELD)
 from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 
 DATA_PATH_ZORRO = os.path.join(PROJECT_ROOT_DIR, "Zorro", "sentences", "babyberta")
@@ -74,20 +74,26 @@ def load_annotated_childes_data(path, exclude_test_data=False):
     return transcripts
 
 
-def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.2, random_seed=1):
+def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.2, random_seed=1, sep_token=None, keep_error_labels_column=False):
     transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
         sentence = row.sentence
+        if sep_token and context_length >= 1:
+            sentence = sep_token + sentence
         for j in range(1, context_length+1):
             if i-j in transcripts.index:
                 context_sentence = transcripts.loc[i-j].sentence
                 sentence = context_sentence + sentence
-        data.append({
+        datapoint = {
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
             TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
-        })
+        }
+        if keep_error_labels_column:
+            datapoint[ERROR_LABELS_FIELD] = row[ERROR_LABELS_FIELD]
+        data.append(datapoint)
+
     data = pd.DataFrame.from_records(data)
 
     # Transform -1, 0, 1 to 0, 1, 2 so that they can be of dtype long
@@ -173,10 +179,10 @@ LOADER_COLUMNS = [
     ]
 
 
-def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False):
+def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False, sep_token=None):
     dataset_dict = DatasetDict()
 
-    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed)
+    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed, sep_token)
     if create_val_split:
         data_manual_annotations_train, data_manual_annotations_val = train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
         ds_val = Dataset.from_pandas(data_manual_annotations_val)
@@ -245,7 +251,8 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.add_eos_tokens = add_eos_tokens
 
     def setup(self, stage: str):
-        self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length, self.random_seed, create_val_split=True)
+        self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length,
+                                           self.random_seed, create_val_split=True, sep_token=self.tokenizer.sep_token)
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
             self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
