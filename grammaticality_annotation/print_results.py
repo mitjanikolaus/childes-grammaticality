@@ -10,6 +10,7 @@ def create_results_table_model_comparison(results, context_length=1):
 
     results_context_length = results[(results.context_length == context_length) | results.model.isin(MODELS_NO_CONTEXT)].copy()
     results_context_length.sort_values(by="mcc: mean", inplace=True)
+    results_context_length.drop(columns=[REFERENCE_METRIC], inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
     # print("\n\n\n")
     # print(results.to_latex(float_format="%.2f", index=False))
@@ -19,6 +20,8 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     print("\n\nEXP CONTEXT LENGTHS:")
 
     results_model = results[results.model == model].copy()
+    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std"], inplace=True)
+
     print(results_model.to_markdown(index=False, floatfmt=".2f"))
     # print("\n\n\n")
     # print(results.to_latex(float_format="%.2f", index=False))
