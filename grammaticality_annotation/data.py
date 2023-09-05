@@ -60,10 +60,11 @@ def train_test_split(data, test_split_size, random_seed=DATA_SPLIT_RANDOM_STATE)
     return data_train, data_test
 
 
-def load_annotated_childes_data(path):
+def load_annotated_childes_data(path, exclude_test_data=False):
     transcripts = []
+    file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
     for f in Path(path).glob("*.csv"):
-        if os.path.isfile(f):
+        if not exclude_test_data or (f.name.replace(".csv", "") not in file_ids_annotated):
             transcripts.append(pd.read_csv(f, index_col=0))
 
     transcripts = pd.concat(transcripts, ignore_index=True)

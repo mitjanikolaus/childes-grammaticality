@@ -307,7 +307,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
 def prepare_lm_data():
     print("Preparing data...")
     os.makedirs(os.path.dirname(LM_DATA), exist_ok=True)
-    data = load_annotated_childes_data(DATA_DIR)
+    data = load_annotated_childes_data(DATA_DIR, exclude_test_data=True)
     data = data[["transcript_file", "sentence"]]
     data.to_csv(LM_DATA)
 
