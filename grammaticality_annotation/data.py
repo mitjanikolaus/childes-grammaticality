@@ -79,7 +79,7 @@ def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
         sentence = row.sentence
-        if sep_token and context_length >= 1:
+        if sep_token and context_length > 1:
             sentence = sep_token + sentence
         for j in range(1, context_length+1):
             if i-j in transcripts.index:
