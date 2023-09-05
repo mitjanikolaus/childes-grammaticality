@@ -74,13 +74,11 @@ def load_annotated_childes_data(path, exclude_test_data=False):
     return transcripts
 
 
-def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.2, random_seed=1, sep_token=None):
+def load_annotated_childes_datasplits(context_length=0, test_split_proportion=0.2, random_seed=1):
     transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
         sentence = row.sentence
-        if sep_token and context_length > 1:
-            sentence = sep_token + sentence
         for j in range(1, context_length+1):
             if i-j in transcripts.index:
                 context_sentence = transcripts.loc[i-j].sentence
@@ -175,10 +173,10 @@ LOADER_COLUMNS = [
     ]
 
 
-def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False, sep_token=None):
+def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False):
     dataset_dict = DatasetDict()
 
-    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed, sep_token)
+    data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed)
     if create_val_split:
         data_manual_annotations_train, data_manual_annotations_val = train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
         ds_val = Dataset.from_pandas(data_manual_annotations_val)
@@ -247,8 +245,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.add_eos_tokens = add_eos_tokens
 
     def setup(self, stage: str):
-        self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length,
-                                           self.random_seed, create_val_split=True, sep_token=self.tokenizer.sep_token)
+        self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length, self.random_seed, create_val_split=True)
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
             self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
