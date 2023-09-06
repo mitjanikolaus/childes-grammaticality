@@ -2,37 +2,47 @@ import pandas as pd
 from utils import RESULTS_FILE
 
 REFERENCE_METRIC = "val_mcc: mean"
-MODELS_NO_CONTEXT = ["majority_classifier", "human_annotators", "1-gram", "2-gram", "3-gram", "4-gram"]
+MODELS_NO_CONTEXT = ["majority-classifier", "human-annotators", "1-gram", "2-gram", "3-gram", "4-gram"]
 
 
 def create_results_table_model_comparison(results, context_length=1):
     print("\n\nMODEL COMPARISON:")
 
-    results_context_length = results[(results.context_length == context_length) | results.model.isin(MODELS_NO_CONTEXT)].copy()
+    results_context_length = results[(results["context length"] == context_length) | results.model.isin(MODELS_NO_CONTEXT)].copy()
     results_context_length.sort_values(by="mcc: mean", inplace=True)
-    results_context_length.drop(columns=[REFERENCE_METRIC], inplace=True)
+    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std"], inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
-    # print("\n\n\n")
-    # print(results.to_latex(float_format="%.2f", index=False))
+    print("\n\n\n")
+    print(results_context_length.style.hide(axis="index").to_latex(hrules=True))
 
 
 def create_results_table_context_lengths(results, model="microsoft/deberta-v3-large"):
-    print("\n\nEXP CONTEXT LENGTHS:")
+    print("\n\nCONTEXT LENGTHS:")
 
     results_model = results[results.model == model].copy()
-    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std"], inplace=True)
+
+    results_model["MCC"] = results_model["val_mcc: mean"].round(2).astype(str) # TODO: stddev
+
+    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "Acc", "val_mcc: mean"], inplace=True)
 
     print(results_model.to_markdown(index=False, floatfmt=".2f"))
-    # print("\n\n\n")
-    # print(results.to_latex(float_format="%.2f", index=False))
+    print("\n\n\n")
+    print(results_model.style.hide(axis="index").to_latex(hrules=True))
 
-    best_context_length = results_model.sort_values(REFERENCE_METRIC, ascending=False).iloc[0].context_length
+    best_context_length = results_model.sort_values("MCC", ascending=False).iloc[0]["context length"]
     print(f"\nBest context length: {best_context_length}\n")
     return best_context_length
 
 
 def main():
     results = pd.read_csv(RESULTS_FILE)
+
+    results["model"] = results.model.apply(lambda x: x.replace("_", "-")) #.split("/")[-1]
+
+    results["MCC"] = results["mcc: mean"].apply("{:.02f}".format) + " $\pm$ " + results["mcc: std"].apply("{:.02f}".format)
+    results["Acc"] = results["accuracy: mean"].apply("{:.02f}".format) + " $\pm$ " + results["accuracy: std"].apply("{:.02f}".format)
+    results["context_length"] = results["context_length"].astype(int)
+    results.rename(columns={"context_length": "context length"}, inplace=True)
 
     best_context_length = create_results_table_context_lengths(results)
 
