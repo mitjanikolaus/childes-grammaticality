@@ -22,13 +22,12 @@ def main(args):
 
     data_ungrammatical = data[data[LABEL_FIELD] == False].copy()
 
-    # TODO:
-    data_ungrammatical.dropna(subset=["labels"], inplace=True)
-
     data_ungrammatical[ERROR_LABELS_FIELD] = data_ungrammatical[ERROR_LABELS_FIELD].apply(lambda x: x.split(", "))
     data_ungrammatical = data_ungrammatical.explode(ERROR_LABELS_FIELD)
 
     counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
+
+    plt.figure(figsize=(4, 5))
     axis = counts.plot(kind="barh", color="#b5c9e6")
 
     correctly_predicted = data_ungrammatical[data_ungrammatical[PREDICTION_FIELD] == LABEL_UNGRAMMATICAL][ERROR_LABELS_FIELD].value_counts()
