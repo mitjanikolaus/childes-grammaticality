@@ -275,7 +275,7 @@ def main(args):
 
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "context_length": args.context_length}])
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length}])
     results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
