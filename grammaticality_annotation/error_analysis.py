@@ -1,10 +1,15 @@
 import argparse
+import os
+
 import pandas as pd
 from sklearn.metrics import matthews_corrcoef
 
+from grammaticality_annotation.data import LABEL_UNGRAMMATICAL
 from grammaticality_annotation.tokenizer import LABEL_FIELD, ERROR_LABELS_FIELD
 
 import matplotlib.pyplot as plt
+
+from utils import RESULTS_DIR
 
 PREDICTION_FIELD = "pred"
 
@@ -15,7 +20,7 @@ def main(args):
     mcc = matthews_corrcoef(data[PREDICTION_FIELD], data[LABEL_FIELD])
     print(f"Acc: {acc:.2f} | MCC: {mcc:.2f}")
 
-    data_ungrammatical = data[data[LABEL_FIELD] == False]
+    data_ungrammatical = data[data[LABEL_FIELD] == False].copy()
 
     # TODO:
     data_ungrammatical.dropna(subset=["labels"], inplace=True)
@@ -23,11 +28,19 @@ def main(args):
     data_ungrammatical[ERROR_LABELS_FIELD] = data_ungrammatical[ERROR_LABELS_FIELD].apply(lambda x: x.split(", "))
     data_ungrammatical = data_ungrammatical.explode(ERROR_LABELS_FIELD)
 
-    data_ungrammatical[ERROR_LABELS_FIELD].hist()
+    counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
+    axis = counts.plot(kind="barh", color="#b5c9e6")
 
+    correctly_predicted = data_ungrammatical[data_ungrammatical[PREDICTION_FIELD] == LABEL_UNGRAMMATICAL][ERROR_LABELS_FIELD].value_counts()
+    axis2 = correctly_predicted.plot(kind="barh", ax=axis, color="#617fab")
+
+    handles, _ = axis2.get_legend_handles_labels()
+    axis2.legend(handles, ["# Errors annotated", "# Errors predicted"])
+
+    plt.subplots_adjust(left=0.24)
+    plt.tight_layout()
+    plt.savefig(os.path.join(RESULTS_DIR, "error_analysis.png"), dpi=300)
     plt.show()
-
-
 
 
 def parse_args():
