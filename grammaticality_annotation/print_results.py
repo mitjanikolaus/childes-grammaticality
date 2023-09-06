@@ -10,7 +10,7 @@ def create_results_table_model_comparison(results, context_length=1):
 
     results_context_length = results[(results["context length"] == context_length) | results.model.isin(MODELS_NO_CONTEXT)].copy()
     results_context_length.sort_values(by="mcc: mean", inplace=True)
-    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std"], inplace=True)
+    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "val_mcc: std"], inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
     print(results_context_length.style.hide(axis="index").to_latex(hrules=True))
@@ -20,17 +20,17 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     print("\n\nCONTEXT LENGTHS:")
 
     results_model = results[results.model == model].copy()
+    best_context_length = results_model.sort_values("val_mcc: mean", ascending=False).iloc[0]["context length"]
+    print(f"\nBest context length: {best_context_length}\n")
 
     results_model["MCC"] = results_model["val_mcc: mean"].round(2).astype(str) # TODO: stddev
 
-    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "Acc", "val_mcc: mean"], inplace=True)
+    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "Acc", "val_mcc: mean", "val_mcc: std"], inplace=True)
 
     print(results_model.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
     print(results_model.style.hide(axis="index").to_latex(hrules=True))
 
-    best_context_length = results_model.sort_values("MCC", ascending=False).iloc[0]["context length"]
-    print(f"\nBest context length: {best_context_length}\n")
     return best_context_length
 
 
