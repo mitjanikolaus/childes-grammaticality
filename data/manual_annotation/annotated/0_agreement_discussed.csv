@@ -159,7 +159,7 @@
 157,Kuczaj/021106.cha,CAR,uhhuh.,,
 158,Kuczaj/021106.cha,CHI,it's not any good at seven.,1,
 159,Kuczaj/021106.cha,CAR,Abe don't touch this cloth when your hands are dirty.,,
-160,Kuczaj/021106.cha,CHI,do my hands look like this dirty?,-1,
+160,Kuczaj/021106.cha,CHI,do my hands look like this dirty?,-1,other
 161,Kuczaj/021106.cha,CAR,yes they look very dirty.,,
 162,Kuczaj/021106.cha,CHI,why I painted on them?,-1,auxiliary
 163,Kuczaj/021106.cha,CAR,why did you?,,
@@ -176,7 +176,7 @@
 174,Kuczaj/021106.cha,CAR,what are you doing Abe?,,
 175,Kuczaj/021106.cha,CHI,I'm getting my shirt on.,-1,preposition
 176,Kuczaj/021106.cha,CAR,oh.,,
-177,Kuczaj/021106.cha,CHI,why Daddy have little pimples?,-1,
+177,Kuczaj/021106.cha,CHI,why Daddy have little pimples?,-1,auxiliary
 178,Kuczaj/021106.cha,CAR,those are nipples Abe.,,
 179,Kuczaj/021106.cha,CAR,it's an n word.,,
 180,Kuczaj/021106.cha,CHI,where's my burger hat?,1,
@@ -203,7 +203,7 @@
 201,Kuczaj/021106.cha,CAR,go get your jacket on.,,
 202,Kuczaj/021106.cha,CHI,I I don't wanna go.,1,
 203,Kuczaj/021106.cha,CAR,okay.,,
-204,Kuczaj/021106.cha,CHI,why you going?,-1,
+204,Kuczaj/021106.cha,CHI,why you going?,-1,present_progressive
 205,Kuczaj/021106.cha,CAR,I have to get some cranberries.,,
 206,Kuczaj/021106.cha,CAR,what are you doing Abe?,,
 207,Kuczaj/021106.cha,CHI,I'm hammering this.,1,
