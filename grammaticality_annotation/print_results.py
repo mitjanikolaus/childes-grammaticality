@@ -10,10 +10,12 @@ REFERENCE_METRIC = "val_mcc: mean"
 MODELS_NO_CONTEXT = ["majority-classifier", "human-annotators", "1-gram", "2-gram", "3-gram", "4-gram"]
 
 
-def create_results_table_model_comparison(results, context_length=1):
+def create_results_table_model_comparison(results, context_length):
     print("\n\nMODEL COMPARISON:")
 
-    results_context_length = results[(results["context length"] == context_length) | results.model.isin(MODELS_NO_CONTEXT)].copy()
+    results_full_train_data_size = results[results["train_data_size"] == 1].copy()
+
+    results_context_length = results_full_train_data_size[(results_full_train_data_size["context length"] == context_length) | results_full_train_data_size.model.isin(MODELS_NO_CONTEXT)].copy()
     results_context_length.sort_values(by="mcc: mean", inplace=True)
     results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "val_mcc: std"], inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
@@ -24,7 +26,10 @@ def create_results_table_model_comparison(results, context_length=1):
 def create_results_table_context_lengths(results, model="microsoft/deberta-v3-large"):
     print("\n\nCONTEXT LENGTHS:")
 
-    results_model = results[results.model == model].copy()
+    results_full_train_data_size = results[results["train_data_size"] == 1].copy()
+
+    results_model = results_full_train_data_size[results_full_train_data_size.model == model].copy()
+
     best_context_length = results_model.sort_values("val_mcc: mean", ascending=False).iloc[0]["context length"]
     print(f"\nBest context length: {best_context_length}\n")
 
@@ -47,6 +52,25 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     return best_context_length
 
 
+MAX_NUM_TRAIN_SAMPLES = 3360
+
+
+def create_results_train_data_size(results, context_length, model="microsoft/deberta-v3-large"):
+    print("\n\nTRAIN DATA SIZE:")
+
+    results_context_length = results[results["context length"] == context_length].copy()
+    results_model = results_context_length[results_context_length.model == model].copy()
+
+    results_model["mcc: stderr"] = results_model["mcc: std"].apply(lambda x: x/np.sqrt(3))
+    results_model["train_data_samples"] = results_model["train_data_size"] * MAX_NUM_TRAIN_SAMPLES
+    plt.figure(figsize=(4, 4))
+    plt.errorbar(results_model["train_data_samples"], results_model["mcc: mean"], results_model["mcc: stderr"],
+                 fmt=".", elinewidth=.5)
+    plt.xlabel("train data samples")
+    plt.tight_layout()
+    plt.savefig(os.path.join(RESULTS_DIR, "train_data_size.png"), dpi=300)
+
+
 def main():
     results = pd.read_csv(RESULTS_FILE)
 
@@ -57,7 +81,10 @@ def main():
     results["context_length"] = results["context_length"].astype(int)
     results.rename(columns={"context_length": "context length"}, inplace=True)
 
+
     best_context_length = create_results_table_context_lengths(results)
+
+    create_results_train_data_size(results, best_context_length)
 
     create_results_table_model_comparison(results, best_context_length)
 
