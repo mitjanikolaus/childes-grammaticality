@@ -213,7 +213,8 @@ def main(args):
                                       context_length=args.context_length,
                                       random_seed=random_seed,
                                       num_workers=args.num_workers,
-                                      add_eos_tokens=add_eos_token)
+                                      add_eos_tokens=add_eos_token,
+                                      train_data_size=args.train_data_size,)
         dm.setup("fit")
         class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 
@@ -275,7 +276,7 @@ def main(args):
 
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length}])
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length, "train_data_size": args.train_data_size}])
     results_df.set_index(["model", "context_length"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -333,6 +334,12 @@ def parse_args():
         "--num-workers",
         type=int,
         default=8,
+    )
+    argparser.add_argument(
+        "--train-data-size",
+        type=float,
+        default=1.0,
+        help="Use only a subset of the available training data."
     )
     argparser = Trainer.add_argparse_args(argparser)
 

@@ -179,7 +179,7 @@ LOADER_COLUMNS = [
     ]
 
 
-def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, create_val_split=False, sep_token=None):
+def create_dataset_dict(train_datasets, test_split_proportion, context_length, random_seed, train_data_size=1.0, create_val_split=False, sep_token=None):
     dataset_dict = DatasetDict()
 
     data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed, sep_token)
@@ -210,6 +210,8 @@ def create_dataset_dict(train_datasets, test_split_proportion, context_length, r
         data_train.append(get_dataset_with_name(ds_name, test=False))
 
     data_train = pd.concat(data_train, ignore_index=True)
+    if train_data_size < 1.0:
+        data_train = data_train.sample(round(len(data_train) * train_data_size), random_state=DATA_SPLIT_RANDOM_STATE)
     ds_train = Dataset.from_pandas(data_train)
     dataset_dict['train'] = ds_train
 
@@ -233,6 +235,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
             random_seed = 1,
             num_workers = 8,
             add_eos_tokens = False,
+            train_data_size = 1.0,
             **kwargs,
     ):
         super().__init__()
@@ -245,6 +248,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.context_length = context_length
         self.random_seed = random_seed
         self.num_workers = num_workers
+        self.train_data_size = train_data_size
 
         self.num_labels = 3
         self.tokenizer = tokenizer
@@ -252,7 +256,8 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
     def setup(self, stage: str):
         self.dataset = create_dataset_dict(self.train_datasets, self.test_split_proportion, self.context_length,
-                                           self.random_seed, create_val_split=True, sep_token=self.tokenizer.sep_token)
+                                           self.random_seed, self.train_data_size, create_val_split=True,
+                                           sep_token=self.tokenizer.sep_token)
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
             self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
