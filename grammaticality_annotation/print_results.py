@@ -23,9 +23,9 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     best_context_length = results_model.sort_values("val_mcc: mean", ascending=False).iloc[0]["context length"]
     print(f"\nBest context length: {best_context_length}\n")
 
-    results_model["MCC"] = results_model["val_mcc: mean"].round(2).astype(str) # TODO: stddev
+    results_model["MCC"] = results_model["val_mcc: mean"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0')) + " $\pm$ " + results["val_mcc: std"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0'))
 
-    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "Acc", "val_mcc: mean", "val_mcc: std"], inplace=True)
+    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "Accuracy", "val_mcc: mean", "val_mcc: std"], inplace=True)
 
     print(results_model.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
@@ -40,7 +40,7 @@ def main():
     results["model"] = results.model.apply(lambda x: x.replace("_", "-")) #.split("/")[-1]
 
     results["MCC"] = results["mcc: mean"].apply("{:.02f}".format) + " $\pm$ " + results["mcc: std"].apply("{:.02f}".format)
-    results["Acc"] = results["accuracy: mean"].apply("{:.02f}".format) + " $\pm$ " + results["accuracy: std"].apply("{:.02f}".format)
+    results["Accuracy"] = results["accuracy: mean"].apply("{:.02f}".format) + " $\pm$ " + results["accuracy: std"].apply("{:.02f}".format)
     results["context_length"] = results["context_length"].astype(int)
     results.rename(columns={"context_length": "context length"}, inplace=True)
 
