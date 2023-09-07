@@ -1,5 +1,10 @@
+import os
+
+import numpy as np
 import pandas as pd
-from utils import RESULTS_FILE
+import matplotlib.pyplot as plt
+
+from utils import RESULTS_FILE, RESULTS_DIR
 
 REFERENCE_METRIC = "val_mcc: mean"
 MODELS_NO_CONTEXT = ["majority-classifier", "human-annotators", "1-gram", "2-gram", "3-gram", "4-gram"]
@@ -22,6 +27,14 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     results_model = results[results.model == model].copy()
     best_context_length = results_model.sort_values("val_mcc: mean", ascending=False).iloc[0]["context length"]
     print(f"\nBest context length: {best_context_length}\n")
+
+    results_model["val_mcc: stderr"] = results_model["val_mcc: std"].apply(lambda x: x/np.sqrt(3))
+    plt.figure(figsize=(4, 4))
+    plt.errorbar(results_model["context length"], results_model["val_mcc: mean"], results_model["val_mcc: stderr"],
+                 fmt=".", elinewidth=.5)
+    plt.xlabel("context length")
+    plt.tight_layout()
+    plt.savefig(os.path.join(RESULTS_DIR, "context_lengths.png"), dpi=300)
 
     results_model["MCC"] = results_model["val_mcc: mean"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0')) + " $\pm$ " + results["val_mcc: std"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0'))
 
