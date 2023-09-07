@@ -183,6 +183,9 @@ def create_dataset_dict(train_datasets, test_split_proportion, context_length, r
     dataset_dict = DatasetDict()
 
     data_manual_annotations_train, data_manual_annotations_test = load_annotated_childes_datasplits(context_length, test_split_proportion, random_seed, sep_token)
+    if train_data_size < 1.0:
+        data_manual_annotations_train = data_manual_annotations_train.sample(round(len(data_manual_annotations_train) * train_data_size), random_state=DATA_SPLIT_RANDOM_STATE)
+
     if create_val_split:
         data_manual_annotations_train, data_manual_annotations_val = train_test_split(data_manual_annotations_train, test_split_proportion, random_seed)
         ds_val = Dataset.from_pandas(data_manual_annotations_val)
@@ -210,8 +213,6 @@ def create_dataset_dict(train_datasets, test_split_proportion, context_length, r
         data_train.append(get_dataset_with_name(ds_name, test=False))
 
     data_train = pd.concat(data_train, ignore_index=True)
-    if train_data_size < 1.0:
-        data_train = data_train.sample(round(len(data_train) * train_data_size), random_state=DATA_SPLIT_RANDOM_STATE)
     ds_train = Dataset.from_pandas(data_train)
     dataset_dict['train'] = ds_train
 
