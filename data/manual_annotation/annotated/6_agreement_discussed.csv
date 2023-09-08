@@ -227,9 +227,9 @@
 5741,Kuczaj/020818.cha,CAR,who told you that?,,,33
 5742,Kuczaj/020818.cha,CHI,my Daddy told it.,-1.0,object,33
 5743,Kuczaj/020818.cha,CAR,he did?,,,33
-5744,Kuczaj/020818.cha,CHI,uhhuh Mom how that comed off?,-1.0,auxiliary,33
+5744,Kuczaj/020818.cha,CHI,uhhuh Mom how that comed off?,-1.0,"auxiliary, tense_aspect",33
 5745,Kuczaj/020818.cha,CAR,hm?,,,33
-5746,Kuczaj/020818.cha,CHI,how that comed off?,-1.0,"auxiliary, tense-aspect",33
+5746,Kuczaj/020818.cha,CHI,how that comed off?,-1.0,"auxiliary, tense_aspect",33
 5747,Kuczaj/020818.cha,CAR,it came off and I put it in there.,,,33
 5748,Kuczaj/020818.cha,CHI,you put it all in there?,1.0,,33
 5749,Kuczaj/020818.cha,CHI,you put it all in there?,1.0,,33
@@ -324,7 +324,7 @@
 5838,Kuczaj/020818.cha,CHI,one two three four.,0.0,,33
 5839,Kuczaj/020818.cha,CAR,four.,,,33
 5840,Kuczaj/020818.cha,CAR,okay I'll have four.,,,33
-5841,Kuczaj/020818.cha,CHI,Mommy I have one little another lick please.,-1.0,auxliary,33
+5841,Kuczaj/020818.cha,CHI,Mommy I have one little another lick please.,-1.0,auxiliary,33
 5842,Kuczaj/020818.cha,CAR,I thought you wanted tacos.,,,33
 5843,Kuczaj/020818.cha,CHI,huh?,,,33
 5844,Kuczaj/020818.cha,CAR,I thought you wanted to eat tacos.,,,33
