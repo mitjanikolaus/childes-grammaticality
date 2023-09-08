@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.data import load_annotated_childes_data, train_test_split
+from grammaticality_annotation.data import load_annotated_childes_data, train_val_split
 from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS, \
     TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER
 from utils import PROJECT_ROOT_DIR
@@ -72,7 +72,7 @@ class CHILDESLMDataModule(pl.LightningDataModule):
         self.tokenizer = tokenizer
 
         data = pd.read_csv(LM_DATA, index_col=0)
-        data_train, data_val = train_test_split(data, NUM_VAL_SENTENCES)
+        data_train, data_val = train_val_split(data, NUM_VAL_SENTENCES)
         self.train_ds = CHILDESLMDataset(data_train)
         self.val_ds = CHILDESLMDataset(data_val)
 

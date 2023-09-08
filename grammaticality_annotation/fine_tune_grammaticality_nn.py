@@ -17,7 +17,8 @@ from transformers import (
     get_linear_schedule_with_warmup, PreTrainedTokenizerFast,
 )
 
-from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, load_annotated_childes_datasplits
+from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
+    load_annotated_childes_datasplits, create_dataset_dicts
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, LABEL_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
@@ -41,7 +42,6 @@ class CHILDESGrammarModel(LightningModule):
             class_weights,
             model_name_or_path: str,
             num_labels: int,
-            train_datasets: list,
             train_batch_size: int,
             eval_batch_size: int,
             learning_rate: float,
@@ -189,45 +189,48 @@ def main(args):
     test_results = []
     val_results = []
 
-    random_seeds = range(args.num_cv_folds)
-    for random_seed in random_seeds:
-        print(f"\n\n\n\nStart training with random seed {random_seed}")
+    add_eos_token = False
+    if os.path.isfile(args.model):
+        if not os.path.isfile(LSTM_TOKENIZER_PATH):
+            raise RuntimeError(f"Tokenizer not found at {LSTM_TOKENIZER_PATH}")
 
-        add_eos_token = False
-        if os.path.isfile(args.model):
-            if not os.path.isfile(LSTM_TOKENIZER_PATH):
-                raise RuntimeError(f"Tokenizer not found at {LSTM_TOKENIZER_PATH}")
+        tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
+        tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
+        add_eos_token = True
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
-            tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
-            tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
-            add_eos_token = True
-        else:
-            tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
+    datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length,
+                                       args.train_data_size, create_val_split=True,
+                                       sep_token=tokenizer.sep_token)
+
+    for fold in range(args.num_cv_folds):
+        print(f"\n\n\n\nStart training CV fold #{fold}")
 
         dm = CHILDESGrammarDataModule(val_split_proportion=args.val_split_proportion,
+                                      num_cv_folds=args.num_cv_folds,
                                       model_name_or_path=args.model,
                                       eval_batch_size=args.batch_size,
                                       train_batch_size=args.batch_size,
-                                      train_datasets=args.train_datasets,
                                       tokenizer=tokenizer,
                                       context_length=args.context_length,
-                                      random_seed=random_seed,
+                                      random_seed=FINE_TUNE_RANDOM_STATE,
                                       num_workers=args.num_workers,
                                       add_eos_tokens=add_eos_token,
-                                      train_data_size=args.train_data_size,)
+                                      train_data_size=args.train_data_size,
+                                      dataset=datasets[fold])
         dm.setup("fit")
         class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 
         model = CHILDESGrammarModel(
             class_weights=class_weights,
-            train_datasets=args.train_datasets,
             eval_batch_size=args.batch_size,
             train_batch_size=args.batch_size,
             model_name_or_path=args.model,
             num_labels=dm.num_labels,
             val_split_proportion=args.val_split_proportion,
             learning_rate=args.learning_rate,
-            random_seed=random_seed,
+            random_seed=fold,
         )
 
         if args.model == "gpt2":
@@ -297,12 +300,6 @@ def parse_args():
         required=True,
     )
     argparser.add_argument(
-        "--train-datasets",
-        type=str,
-        nargs="+",
-        default=["manual_annotations"],
-    )
-    argparser.add_argument(
         "--batch-size",
         type=int,
         default=DEFAULT_BATCH_SIZE,
@@ -327,7 +324,7 @@ def parse_args():
     argparser.add_argument(
         "--num-cv-folds",
         type=int,
-        default=3,
+        default=5,
         help="Number of cross-validation folds"
     )
     argparser.add_argument(
