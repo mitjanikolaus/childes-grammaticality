@@ -18,7 +18,7 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
-    load_annotated_childes_datasplits, create_dataset_dicts
+    create_dataset_dicts
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, LABEL_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
@@ -40,6 +40,7 @@ class CHILDESGrammarModel(LightningModule):
     def __init__(
             self,
             class_weights,
+            dataset,
             model_name_or_path: str,
             num_labels: int,
             train_batch_size: int,
@@ -71,6 +72,7 @@ class CHILDESGrammarModel(LightningModule):
         weight = torch.tensor(class_weights)
         self.loss_fct = CrossEntropyLoss(weight=weight)
 
+        self.dataset = dataset
         self.random_seed = random_seed
 
         self.test_error_analysis = False
@@ -145,14 +147,11 @@ class CHILDESGrammarModel(LightningModule):
             self.log_dict(metric_results, prog_bar=True)
 
         if self.test_error_analysis:
-            _, data_manual_annotations_test = load_annotated_childes_datasplits(self.hparams.context_length,
-                                                                                self.hparams.val_split_proportion,
-                                                                                random_seed=self.random_seed,
-                                                                                keep_error_labels_column=True)
-            data_manual_annotations_test["pred"] = preds
+            data_test = self.dataset["test"].to_pandas()
+            data_test["pred"] = preds
 
             output_path = os.path.join(self.logger.log_dir, "test_set_predictions.csv")
-            data_manual_annotations_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
+            data_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
 
     def configure_optimizers(self):
         """Prepare optimizer and schedule (linear warmup and decay)"""
@@ -231,6 +230,7 @@ def main(args):
             val_split_proportion=args.val_split_proportion,
             learning_rate=args.learning_rate,
             random_seed=fold,
+            dataset=datasets[fold],
         )
 
         if args.model == "gpt2":

@@ -91,7 +91,7 @@ def load_annotated_childes_data(path, exclude_test_data=False):
     return transcripts
 
 
-def load_annotated_childes_datasplits(context_length=0, num_cv_folds=5, sep_token=None, keep_error_labels_column=False):
+def load_annotated_childes_datasplits(context_length=0, num_cv_folds=5, sep_token=None):
     transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
@@ -106,9 +106,8 @@ def load_annotated_childes_datasplits(context_length=0, num_cv_folds=5, sep_toke
             TEXT_FIELD: sentence,
             LABEL_FIELD: row[LABEL_FIELD],
             TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
+            ERROR_LABELS_FIELD: row[ERROR_LABELS_FIELD]
         }
-        if keep_error_labels_column:
-            datapoint[ERROR_LABELS_FIELD] = row[ERROR_LABELS_FIELD]
         data.append(datapoint)
 
     data = pd.DataFrame.from_records(data)
@@ -128,6 +127,7 @@ LOADER_COLUMNS = [
         "start_positions",
         "end_positions",
         LABEL_FIELD,
+        ERROR_LABELS_FIELD,
     ]
 
 
@@ -141,13 +141,13 @@ def create_dataset_dicts(num_cv_folds, val_split_proportion, context_length, ran
     for fold in range(num_cv_folds):
         if create_val_split:
             data_manual_annotations_train_splits[fold], data_manual_annotations_val_split = train_val_split(data_manual_annotations_train_splits[fold], val_split_proportion, random_seed)
-            ds_val = Dataset.from_pandas(data_manual_annotations_val_split)
+            ds_val = Dataset.from_pandas(data_manual_annotations_val_split, preserve_index=False)
             dataset_dicts[fold]["validation"] = ds_val
 
-        ds_train = Dataset.from_pandas(data_manual_annotations_train_splits[fold])
+        ds_train = Dataset.from_pandas(data_manual_annotations_train_splits[fold], preserve_index=False)
         dataset_dicts[fold]["train"] = ds_train
 
-        ds_test = Dataset.from_pandas(data_manual_annotations_test_splits[fold])
+        ds_test = Dataset.from_pandas(data_manual_annotations_test_splits[fold], preserve_index=False)
         dataset_dicts[fold]["test"] = ds_test
 
     return dataset_dicts
@@ -203,10 +203,10 @@ class CHILDESGrammarDataModule(LightningDataModule):
         return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def tokenize_batch(self, batch):
-        return tokenize(batch, self.tokenizer, self.max_seq_length, add_labels=True, add_eos_token=self.add_eos_tokens)
+        return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens)
 
 
-def tokenize(batch, tokenizer, max_seq_length, add_labels=False, add_eos_token=False):
+def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False):
     texts = [b[TEXT_FIELD] for b in batch]
     if add_eos_token:
         texts = [t+tokenizer.eos_token for t in texts]
@@ -214,8 +214,7 @@ def tokenize(batch, tokenizer, max_seq_length, add_labels=False, add_eos_token=F
     features = tokenizer.batch_encode_plus(
         texts, max_length=max_seq_length, padding=True, truncation=True, return_tensors="pt"
     )
-    if add_labels:
-        features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
+    features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
 
     return features
 

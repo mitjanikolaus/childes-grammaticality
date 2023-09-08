@@ -14,7 +14,7 @@ from transformers import (
 )
 from sklearn.svm import SVC, LinearSVC
 
-from grammaticality_annotation.data import create_dataset_dict
+from grammaticality_annotation.data import create_dataset_dicts
 from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
     train_tokenizer, TOKENIZERS_DIR, TEXT_FIELD
 from utils import RESULTS_DIR, RESULTS_FILE
@@ -64,25 +64,23 @@ def main(args):
     maj_class_accuracies = []
     maj_class_mccs = []
 
-    random_seeds = range(args.num_cv_folds)
-    for random_seed in random_seeds:
+    dataset_dicts = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length)
 
-        datasets = create_dataset_dict(args.train_datasets, args.test_split_proportion, args.context_length, random_seed)
-
-        tokenizer_path = os.path.join(TOKENIZERS_DIR, f"tokenizer_{random_seed}.json")
+    for fold, dataset in enumerate(dataset_dicts):
+        tokenizer_path = os.path.join(TOKENIZERS_DIR, f"tokenizer_{fold}.json")
         if not os.path.isfile(tokenizer_path):
-            train_tokenizer(tokenizer_path, datasets["train"])
+            train_tokenizer(tokenizer_path, dataset["train"])
 
         tokenizer = PreTrainedTokenizerFast(tokenizer_file=tokenizer_path)
         tokenizer.add_special_tokens(
             {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
 
-        datasets = datasets.map(tokenize, fn_kwargs={"tokenizer": tokenizer})
-        vocabs = create_n_gram_vocabs(datasets["train"]["encoded"], args.max_n_grams, args.max_n_gram_level)
-        datasets = datasets.map(create_features, fn_kwargs={"vocabs": vocabs})
+        dataset = dataset.map(tokenize, fn_kwargs={"tokenizer": tokenizer})
+        vocabs = create_n_gram_vocabs(dataset["train"]["encoded"], args.max_n_grams, args.max_n_gram_level)
+        dataset = dataset.map(create_features, fn_kwargs={"vocabs": vocabs})
 
-        data_train = datasets["train"]
-        data_test = datasets["test"]
+        data_train = dataset["train"]
+        data_test = dataset["test"]
 
         print("Train dataset size: ", len(data_train))
         print("Test dataset size: ", len(data_test))
@@ -154,16 +152,10 @@ def parse_args():
     argparser = argparse.ArgumentParser()
 
     argparser.add_argument(
-        "--train-datasets",
-        type=str,
-        nargs="+",
-        default=["manual_annotations"],
-    )
-    argparser.add_argument(
-        "--test-split-proportion",
+        "--val-split-proportion",
         type=float,
         default=0.2,
-        help="Test split proportion"
+        help="Val split proportion"
     )
     argparser.add_argument(
         "--model",
@@ -191,7 +183,7 @@ def parse_args():
     argparser.add_argument(
         "--num-cv-folds",
         type=int,
-        default=3,
+        default=5,
         help="Number of cross-validation folds"
     )
     argparser = Trainer.add_argparse_args(argparser)
