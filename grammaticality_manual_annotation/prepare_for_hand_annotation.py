@@ -109,7 +109,7 @@ def prepare(args):
             utterances_selection["note"] = ""
             utterances_selection.loc[(utterances_selection.speaker_code == SPEAKER_CODE_CHILD) & (utterances_selection.num_words > 1), "is_grammatical"] = "TODO"
 
-            utterances_selection = utterances_selection[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note"]]
+            utterances_selection = utterances_selection[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note", "age"]]
 
             utterances_selection.to_csv(os.path.join(base_path, f"{file_idx}.csv"))
             num_utts_to_annotate = 0
