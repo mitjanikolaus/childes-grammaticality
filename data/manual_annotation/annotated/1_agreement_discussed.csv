@@ -11,7 +11,7 @@
 621,TD/dirk2.cha,CAR,someone goes in the chair.,,
 622,TD/dirk2.cha,CHI,someone go upstairs.,-1,sv_agreement
 623,TD/dirk2.cha,CAR,someone goes upstairs.,,
-624,TD/dirk2.cha,CHI,man go upstairs.,-1,
+624,TD/dirk2.cha,CHI,man go upstairs.,-1,"determiner, sv_agreement"
 625,TD/dirk2.cha,CAR,the man goes upstairs?,,
 626,TD/dirk2.cha,CHI,lady go upstairs.,-1,sv_agreement
 627,TD/dirk2.cha,CAR,the lady goes upstairs.,,
