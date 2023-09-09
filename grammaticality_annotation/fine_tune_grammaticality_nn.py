@@ -201,7 +201,7 @@ def main(args):
 
     datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length,
                                        args.train_data_size, create_val_split=True,
-                                       sep_token=tokenizer.sep_token)
+                                       sep_token=tokenizer.sep_token, train_data_size=args.train_data_size)
 
     for fold in range(args.num_cv_folds):
         print(f"\n\n\n\nStart training CV fold #{fold}")
