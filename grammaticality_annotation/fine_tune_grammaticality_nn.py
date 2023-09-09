@@ -57,7 +57,7 @@ class CHILDESGrammarModel(LightningModule):
         self.learning_rate = learning_rate
 
         print(f"Model loss class weights: {class_weights}")
-        self.save_hyperparameters(ignore=["tokenizer", "dataset"])
+        self.save_hyperparameters(ignore=["dataset"])
 
         if os.path.isfile(model_name_or_path):
             self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels, strict=False)
@@ -258,7 +258,8 @@ def main(args):
         print(f"\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
         best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path,
                                                               context_length=args.context_length,
-                                                              val_split_proportion=args.val_split_proportion)
+                                                              val_split_proportion=args.val_split_proportion,
+                                                              dataset=datasets[fold])
 
         if args.model == "gpt2":
             tokenizer.pad_token = tokenizer.eos_token
