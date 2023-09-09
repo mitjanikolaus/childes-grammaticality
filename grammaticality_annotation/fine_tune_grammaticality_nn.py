@@ -57,7 +57,7 @@ class CHILDESGrammarModel(LightningModule):
         self.learning_rate = learning_rate
 
         print(f"Model loss class weights: {class_weights}")
-        self.save_hyperparameters(ignore=["tokenizer"])
+        self.save_hyperparameters(ignore=["tokenizer", "dataset"])
 
         if os.path.isfile(model_name_or_path):
             self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels, strict=False)
