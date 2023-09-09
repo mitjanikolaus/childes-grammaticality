@@ -135,15 +135,15 @@ def main(args):
     print(f"Cohen's kappa: {kappa:.2f}")
 
     model_name = f"{args.max_n_gram_level}-gram"
-    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies), "context_length": 0},
-                               {"model": model_name, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length}])
-    results_df.set_index(["model", "context_length"], inplace=True)
+    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies), "context_length": 0, "val_mcc: mean": 0, "val_mcc: std": 0, "train_data_size": 1.0},
+                               {"model": model_name, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length, "val_mcc: mean": 0, "val_mcc: std": 0, "train_data_size": 1.0}])
+    results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     if not os.path.isfile(RESULTS_FILE):
         results_df.to_csv(RESULTS_FILE)
     else:
-        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length"])
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length", "train_data_size"])
         results_df = results_df.combine_first(old_res_file)
         results_df.to_csv(RESULTS_FILE)
 

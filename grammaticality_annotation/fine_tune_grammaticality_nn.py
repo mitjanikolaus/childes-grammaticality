@@ -280,13 +280,13 @@ def main(args):
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
     results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length, "train_data_size": args.train_data_size}])
-    results_df.set_index(["model", "context_length"], inplace=True)
+    results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
     if not os.path.isfile(RESULTS_FILE):
         results_df.to_csv(RESULTS_FILE)
     else:
-        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length"])
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length", "train_data_size"])
         results_df = results_df.combine_first(old_res_file)
         results_df.to_csv(RESULTS_FILE)
 
