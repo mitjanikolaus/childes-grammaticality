@@ -13,11 +13,11 @@ MODELS_NO_CONTEXT = ["majority-classifier", "human-annotators", "1-gram", "2-gra
 def create_results_table_model_comparison(results, context_length):
     print("\n\nMODEL COMPARISON:")
 
-    results_full_train_data_size = results[results["train_data_size"] == 1].copy()
+    results_full_train_data_size = results[(results["train_data_size"] == 1) | results.model.isin(MODELS_NO_CONTEXT)].copy()
 
     results_context_length = results_full_train_data_size[(results_full_train_data_size["context length"] == context_length) | results_full_train_data_size.model.isin(MODELS_NO_CONTEXT)].copy()
     results_context_length.sort_values(by="mcc: mean", inplace=True)
-    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "val_mcc: std"], inplace=True)
+    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "val_mcc: std", "train_data_size"], inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
     print(results_context_length.style.hide(axis="index").to_latex(hrules=True))
@@ -38,12 +38,13 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     plt.errorbar(results_model["context length"], results_model["val_mcc: mean"], results_model["val_mcc: stderr"],
                  fmt=".", elinewidth=.5)
     plt.xlabel("context length")
+    plt.ylabel("MCC")
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, "context_lengths.png"), dpi=300)
 
-    results_model["MCC"] = results_model["val_mcc: mean"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0')) + " $\pm$ " + results["val_mcc: std"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0'))
+    results_model["val_mcc"] = results_model["val_mcc: mean"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0')) + " $\pm$ " + results["val_mcc: std"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0'))
 
-    results_model.drop(columns=["mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "Accuracy", "val_mcc: mean", "val_mcc: std"], inplace=True)
+    results_model.drop(columns=["mcc: mean", "mcc: std", "MCC", "accuracy: mean", "accuracy: std", "Accuracy", "val_mcc: mean", "val_mcc: std", "val_mcc: stderr", "train_data_size"], inplace=True)
 
     print(results_model.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
@@ -56,8 +57,6 @@ MAX_NUM_TRAIN_SAMPLES = 3360
 
 
 def create_results_train_data_size(results, context_length, model="microsoft/deberta-v3-large"):
-    print("\n\nTRAIN DATA SIZE:")
-
     results_context_length = results[results["context length"] == context_length].copy()
     results_model = results_context_length[results_context_length.model == model].copy()
 
@@ -67,6 +66,7 @@ def create_results_train_data_size(results, context_length, model="microsoft/deb
     plt.errorbar(results_model["train_data_samples"], results_model["mcc: mean"], results_model["mcc: stderr"],
                  fmt=".", elinewidth=.5)
     plt.xlabel("train data samples")
+    plt.ylabel("MCC")
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, "train_data_size.png"), dpi=300)
 
