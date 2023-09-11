@@ -20,7 +20,7 @@ def main(args):
     mcc = matthews_corrcoef(data[PREDICTION_FIELD], data[LABEL_FIELD])
     print(f"Acc: {acc:.2f} | MCC: {mcc:.2f}")
 
-    data_ungrammatical = data[data[LABEL_FIELD] == False].copy()
+    data_ungrammatical = data[data[LABEL_FIELD] == LABEL_UNGRAMMATICAL].copy()
 
     data_ungrammatical[ERROR_LABELS_FIELD] = data_ungrammatical[ERROR_LABELS_FIELD].apply(lambda x: x.split(", "))
     data_ungrammatical = data_ungrammatical.explode(ERROR_LABELS_FIELD)
@@ -34,8 +34,8 @@ def main(args):
     axis2 = correctly_predicted.plot(kind="barh", ax=axis, color="#617fab")
 
     handles, _ = axis2.get_legend_handles_labels()
-    axis2.legend(handles, ["# Errors annotated", "# Errors predicted"])
-
+    axis2.legend(handles, ["Annotated", "Correctly predicted"])
+    plt.xlabel("Number of errors")
     plt.subplots_adjust(left=0.24)
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, "error_analysis.png"), dpi=300)
