@@ -45,8 +45,6 @@ def eval(args):
             notes_ann = data_ann.note.apply(lambda x: x if "nat" in str(x) else "")
             data["note"] = data.note + notes_ann
 
-        all_data.append(data)
-
         def is_disagreement(row):
             if row.is_grammatical != "TODO":
                 return 0
@@ -62,7 +60,7 @@ def eval(args):
 
         def majority_vote(row):
             if row.is_grammatical != "TODO":
-                return ""
+                return np.nan
             votes = []
             for ann in args.annotators:
                 votes.append(row[f"is_grammatical_{ann}"])
@@ -74,21 +72,19 @@ def eval(args):
                 return 0
 
         if len(args.annotators) == 3:
+            data["is_grammatical"] = data.apply(majority_vote, axis=1)
             data_maj = data.copy()
-            data_maj["is_grammatical"] = data_maj.apply(majority_vote, axis=1)
+            data_maj["is_grammatical"] = data.is_grammatical.fillna("")
             data_maj[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note"]].to_csv(os.path.join(BASE_PATH, f"{i}_majority_vote.csv"))
 
         data.dropna(subset=["is_grammatical"], inplace=True)
 
-        kappa_scores = []
-        mcc_scores = []
+        all_data.append(data)
+
         for ann_1, ann_2 in itertools.combinations(annotated_files.keys(), 2):
             kappa = cohen_kappa_score(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"], weights="linear")
-            kappa_scores.append(kappa)
             print(f"Kappa {(ann_1, ann_2)}: {kappa:.2f}")
 
-            mcc = matthews_corrcoef(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])
-            mcc_scores.append(mcc)
 
     print("\n\nAll files:")
     data = pd.concat(all_data)
@@ -126,7 +122,7 @@ def eval(args):
     if not os.path.isfile(RESULTS_FILE):
         results_df.to_csv(RESULTS_FILE)
     else:
-        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length"])
+        old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length", "train_data_size"])
         results_df = results_df.combine_first(old_res_file)
         results_df.to_csv(RESULTS_FILE)
 
