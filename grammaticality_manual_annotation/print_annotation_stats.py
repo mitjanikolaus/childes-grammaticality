@@ -2,8 +2,9 @@ import os
 
 import matplotlib
 import matplotlib.pyplot as plt
+import seaborn as sns
 
-from grammaticality_annotation.data import load_annotated_childes_data, DATA_PATH_CHILDES_ANNOTATED, LABEL_UNGRAMMATICAL
+from grammaticality_annotation.data import load_annotated_childes_data, DATA_PATH_CHILDES_ANNOTATED
 from grammaticality_annotation.tokenizer import ERROR_LABELS_FIELD, LABEL_FIELD
 from utils import RESULTS_DIR
 
@@ -13,8 +14,14 @@ from utils import RESULTS_DIR
 #         max_age, max(min_age, int((age + num_months / 2) / num_months) * num_months)
 #     )
 
+
+COLORS_PLOT_CATEGORICAL = sns.color_palette("Set2")
+COLORS_PLOT_CATEGORICAL.extend(["#FF4A46", "#997D87", "#FFFF00", "#1CE6FF",])
+
+
 def age_bin(age, num_months=12):
     return int((age + num_months / 2) / num_months) * num_months
+
 
 def main():
     data = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
@@ -32,7 +39,7 @@ def main():
 
     matplotlib.rcParams.update({'font.size': 15})
     counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
-    counts.plot(kind="pie")
+    counts.plot(kind="pie", colors=COLORS_PLOT_CATEGORICAL)
     plt.tight_layout()
     plt.ylabel("")
     plt.savefig(os.path.join(RESULTS_DIR, "manual_annotation_error_labels.png"), dpi=300)
