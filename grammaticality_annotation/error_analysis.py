@@ -3,7 +3,7 @@ import os
 
 import pandas as pd
 import seaborn as sns
-from sklearn.metrics import matthews_corrcoef
+from sklearn.metrics import matthews_corrcoef, confusion_matrix
 
 from grammaticality_annotation.data import LABEL_UNGRAMMATICAL
 from grammaticality_annotation.tokenizer import LABEL_FIELD, ERROR_LABELS_FIELD
@@ -56,11 +56,17 @@ def create_proportions_plot(data_ungrammatical):
     plt.show()
 
 
+LABEL_NAMES = {l: name for l, name in enumerate(["Ungramm.", "Ambig.", "Gramm."])}
+
+
 def main(args):
     data = pd.read_csv(args.predictions_file,  index_col=0)
     acc = (data[PREDICTION_FIELD] == data[LABEL_FIELD]).mean()
     mcc = matthews_corrcoef(data[PREDICTION_FIELD], data[LABEL_FIELD])
     print(f"Acc: {acc:.2f} | MCC: {mcc:.2f}")
+
+    cm = confusion_matrix(data[LABEL_FIELD], data[PREDICTION_FIELD], normalize='true')
+    print(pd.DataFrame(cm).rename(index=LABEL_NAMES, columns=LABEL_NAMES).style.format(precision=2).to_latex(hrules=True))
 
     data_ungrammatical = data[data[LABEL_FIELD] == LABEL_UNGRAMMATICAL].copy()
 
