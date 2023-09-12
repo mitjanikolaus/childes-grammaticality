@@ -42,12 +42,13 @@ def create_proportions_plot(data_ungrammatical):
         ERROR_LABELS_FIELD].value_counts() / counts
     plt.figure(figsize=(4, 5))
     sns.pointplot(x=PREDICTION_FIELD, y=ERROR_LABELS_FIELD, data=data_ungrammatical, color=BASE_COLOR, linestyles="",
-                  errwidth=.7, markers='.', estimator=lambda x: sum(x == LABEL_UNGRAMMATICAL) * 100.0 / len(x),
+                  errwidth=1, markers='o', estimator=lambda x: sum(x == LABEL_UNGRAMMATICAL) * 100.0 / len(x),
                   order=correctly_predicted_proportions.sort_values().index
                   )
+    plt.axvline(x=(data_ungrammatical[LABEL_FIELD] == data_ungrammatical[PREDICTION_FIELD]).mean() * 100, linestyle="--")
 
     plt.ylabel("")
-    plt.xlabel("% Correctly annotated")
+    plt.xlabel("Recall")
     plt.xlim((0, 120))
     plt.xticks([0, 25, 50, 75, 100])
     plt.subplots_adjust(left=0.24)
