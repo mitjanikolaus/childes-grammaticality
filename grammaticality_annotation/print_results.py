@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from grammaticality_annotation.error_analysis import BASE_COLOR
 from utils import RESULTS_FILE, RESULTS_DIR
 
 REFERENCE_METRIC = "val_mcc: mean"
@@ -36,7 +37,7 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     results_model["val_mcc: stderr"] = results_model["val_mcc: std"].apply(lambda x: x/np.sqrt(3))
     plt.figure(figsize=(4, 4))
     plt.errorbar(results_model["context length"], results_model["val_mcc: mean"], results_model["val_mcc: stderr"],
-                 fmt=".", elinewidth=.5)
+                 fmt=".", elinewidth=.5, color=BASE_COLOR)
     plt.xlabel("context length")
     plt.ylabel("MCC")
     plt.tight_layout()
@@ -64,7 +65,7 @@ def create_results_train_data_size(results, context_length, model="microsoft/deb
     results_model["train_data_samples"] = results_model["train_data_size"] * MAX_NUM_TRAIN_SAMPLES
     plt.figure(figsize=(4, 4))
     plt.errorbar(results_model["train_data_samples"], results_model["mcc: mean"], results_model["mcc: stderr"],
-                 fmt=".", elinewidth=.5)
+                 fmt=".", elinewidth=.5, color=BASE_COLOR)
     plt.xlabel("train data samples")
     plt.ylabel("MCC")
     plt.tight_layout()

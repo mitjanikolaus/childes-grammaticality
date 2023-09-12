@@ -2,6 +2,7 @@ import argparse
 import os
 
 import pandas as pd
+import seaborn as sns
 from sklearn.metrics import matthews_corrcoef
 
 from grammaticality_annotation.data import LABEL_UNGRAMMATICAL
@@ -12,6 +13,47 @@ import matplotlib.pyplot as plt
 from utils import RESULTS_DIR
 
 PREDICTION_FIELD = "pred"
+
+BASE_COLOR = "#617fab"
+
+
+def create_barplot(data_ungrammatical):
+    counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
+
+    plt.figure(figsize=(4, 5))
+    axis = counts.plot(kind="barh", color="#b5c9e6")
+
+    correctly_predicted = data_ungrammatical[data_ungrammatical[PREDICTION_FIELD] == LABEL_UNGRAMMATICAL][
+        ERROR_LABELS_FIELD].value_counts()
+    axis2 = correctly_predicted.plot(kind="barh", ax=axis, color="#617fab")
+
+    handles, _ = axis2.get_legend_handles_labels()
+    axis2.legend(handles, ["Annotated", "Correctly predicted"])
+    plt.xlabel("Number of errors")
+    plt.subplots_adjust(left=0.24)
+    plt.tight_layout()
+    plt.savefig(os.path.join(RESULTS_DIR, "error_analysis.png"), dpi=300)
+    plt.show()
+
+
+def create_proportions_plot(data_ungrammatical):
+    counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
+    correctly_predicted_proportions = data_ungrammatical[data_ungrammatical[PREDICTION_FIELD] == LABEL_UNGRAMMATICAL][
+        ERROR_LABELS_FIELD].value_counts() / counts
+    plt.figure(figsize=(4, 5))
+    sns.pointplot(x=PREDICTION_FIELD, y=ERROR_LABELS_FIELD, data=data_ungrammatical, color=BASE_COLOR, linestyles="",
+                  errwidth=.7, markers='.', estimator=lambda x: sum(x == LABEL_UNGRAMMATICAL) * 100.0 / len(x),
+                  order=correctly_predicted_proportions.sort_values().index
+                  )
+
+    plt.ylabel("")
+    plt.xlabel("% Correctly annotated")
+    plt.xlim((0, 120))
+    plt.xticks([0, 25, 50, 75, 100])
+    plt.subplots_adjust(left=0.24)
+    plt.tight_layout()
+    plt.savefig(os.path.join(RESULTS_DIR, "error_analysis.png"), dpi=300)
+    plt.show()
 
 
 def main(args):
@@ -25,21 +67,8 @@ def main(args):
     data_ungrammatical[ERROR_LABELS_FIELD] = data_ungrammatical[ERROR_LABELS_FIELD].apply(lambda x: x.split(", "))
     data_ungrammatical = data_ungrammatical.explode(ERROR_LABELS_FIELD)
 
-    counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
+    create_proportions_plot(data_ungrammatical)
 
-    plt.figure(figsize=(4, 5))
-    axis = counts.plot(kind="barh", color="#b5c9e6")
-
-    correctly_predicted = data_ungrammatical[data_ungrammatical[PREDICTION_FIELD] == LABEL_UNGRAMMATICAL][ERROR_LABELS_FIELD].value_counts()
-    axis2 = correctly_predicted.plot(kind="barh", ax=axis, color="#617fab")
-
-    handles, _ = axis2.get_legend_handles_labels()
-    axis2.legend(handles, ["Annotated", "Correctly predicted"])
-    plt.xlabel("Number of errors")
-    plt.subplots_adjust(left=0.24)
-    plt.tight_layout()
-    plt.savefig(os.path.join(RESULTS_DIR, "error_analysis.png"), dpi=300)
-    plt.show()
 
 
 def parse_args():
