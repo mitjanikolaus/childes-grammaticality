@@ -16,7 +16,7 @@ from utils import RESULTS_DIR
 
 
 COLORS_PLOT_CATEGORICAL = sns.color_palette("Set2")
-COLORS_PLOT_CATEGORICAL.extend(["#FF4A46", "#997D87", "#FFFF00", "#1CE6FF",])
+COLORS_PLOT_CATEGORICAL.extend(["#FF4A46", "#997D87", "#d402bf", "#1CE6FF"])
 
 
 def age_bin(age, num_months=12):
