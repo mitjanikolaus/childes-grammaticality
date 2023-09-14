@@ -43,6 +43,9 @@ class CHILDESGrammarModel(LightningModule):
             dataset,
             model_name_or_path: str,
             num_labels: int,
+            context_length: int,
+            num_cv_folds: int,
+            train_data_size: float,
             train_batch_size: int,
             eval_batch_size: int,
             learning_rate: float,
@@ -50,7 +53,7 @@ class CHILDESGrammarModel(LightningModule):
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
             val_split_proportion: float = 0.5,
-            random_seed = 1,
+            random_seed=1,
             **kwargs,
     ):
         super().__init__()
@@ -203,6 +206,7 @@ def main(args):
                                        args.train_data_size, create_val_split=True,
                                        sep_token=tokenizer.sep_token, train_data_size=args.train_data_size)
 
+    run_id = 0
     for fold in range(args.num_cv_folds):
         print(f"\n\n\n\nStart training CV fold #{fold}")
 
@@ -231,6 +235,9 @@ def main(args):
             learning_rate=args.learning_rate,
             random_seed=fold,
             dataset=datasets[fold],
+            context_length=args.context_length,
+            train_data_size=args.train_data_size,
+            num_cv_folds=args.num_cv_folds,
         )
 
         if args.model == "gpt2":
@@ -248,6 +255,8 @@ def main(args):
             devices=1 if torch.cuda.is_available() else None,
             callbacks=[checkpoint_callback, early_stop_callback],
         )
+
+        run_id = trainer.logger.version
 
         print("Initial validation:")
         trainer.validate(model, datamodule=dm)
@@ -280,7 +289,8 @@ def main(args):
 
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length, "train_data_size": args.train_data_size}])
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length, "train_data_size": args.train_data_size,
+                                "run_id": run_id}])
     results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
