@@ -38,17 +38,15 @@ def speaker_code_to_speaker_token(code):
 def create_cv_folds(data, num_folds):
     transcript_files_sizes = data.transcript_file.value_counts()
 
-    test_split_size = round(len(data) / 5)
     test_sets = [pd.DataFrame() for _ in range(num_folds)]
 
     while len(transcript_files_sizes) > 0:
-        fold = np.argmin([len(s) for s in test_sets])
-        distances = transcript_files_sizes - test_split_size - len(test_sets[fold])
-        distances = distances.__abs__().sort_values()
+        smallest_fold = np.argmin([len(s) for s in test_sets])
+        largest_transcript = transcript_files_sizes.index[0]
 
-        transcript_closest_size = distances.index[0]
-        test_sets[fold] = pd.concat([test_sets[fold], data[data.transcript_file == transcript_closest_size]])
-        del transcript_files_sizes[transcript_files_sizes.index[0]]
+        # Add the largest transcript to the smallest fold
+        test_sets[smallest_fold] = pd.concat([test_sets[smallest_fold], data[data.transcript_file == largest_transcript]])
+        del transcript_files_sizes[largest_transcript]
 
     train_sets = [data[~data.index.isin(data_test.index)].copy() for data_test in test_sets]
 
