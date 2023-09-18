@@ -22,7 +22,7 @@
 #
 # /!\ Caution, "multithread" in Slurm vocabulary refers to hyperthreading.
 #SBATCH --hint=nomultithread         # hyperthreading is deactivated
-#SBATCH --time=5:00:00              # maximum execution time requested (HH:MM:SS)
+#SBATCH --time=3:00:00              # maximum execution time requested (HH:MM:SS)
 #SBATCH --output=out/train_%j.out
 #SBATCH --error=out/train_%j.out
  
@@ -44,12 +44,15 @@ set -x
 TRANSFORMERS_OFFLINE=1
 
 # Code execution
-model=microsoft/deberta-v3-large	#microsoft/deberta-v3-base	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
-context_length=4
+model=microsoft/deberta-v3-large #roberta-base microsoft/deberta-v3-large	#microsoft/deberta-v3-base	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
+context_length=6
+train_data_size=1
+batch_size=50
+accumulate=2
 
 # Debugging:
 # export CUDA_LAUNCH_BLOCKING=1
 
-python -u grammaticality_annotation/fine_tune_grammaticality_nn.py --accelerator gpu --model $model --context-length $context_length
+python -u grammaticality_annotation/fine_tune_grammaticality_nn.py --accelerator gpu --model $model --context-length $context_length --batch-size $batch_size --accumulate_grad_batches $accumulate --train-data-size $train_data_size #--num-cv-folds 2
 
 #--trainer.val_check_interval 5000

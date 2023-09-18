@@ -44,8 +44,8 @@ set -x
 TRANSFORMERS_OFFLINE=1
 
 # Code execution
-model=logs_pretrain_lstm/version_10/checkpoints/epoch\=03-val_loss\=2.23.ckpt
-context_length=1
+model=logs_pretrain_lstm/version_12/checkpoints/epoch\=03-val_loss\=2.45.ckpt
+context_length=0
 learning_rate=1e-3
 
 # Debugging:
