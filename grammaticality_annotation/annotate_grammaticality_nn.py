@@ -54,7 +54,7 @@ def annotate(args):
         model = CHILDESGrammarModel.load_from_checkpoint(checkpoint, predict_data_dir=args.data_dir, model_id=i)
         model.eval()
 
-        trainer = Trainer(devices=1 if torch.cuda.is_available() else None)
+        trainer = Trainer(devices=1 if torch.cuda.is_available() else None, accelerator="auto")
         predictions = trainer.predict(model, datamodule=dm)
         torch.cat(predictions)
 
