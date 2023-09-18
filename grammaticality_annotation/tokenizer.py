@@ -22,6 +22,8 @@ TEXT_FIELD = "transcript"
 LABEL_FIELD = "is_grammatical"
 TRANSCRIPT_FIELD = "transcript_file"
 ERROR_LABELS_FIELD = "labels"
+AGE_FIELD = "age"
+FILE_ID_FIELD = "file_id"
 
 VOCAB_SIZE = 10000
 

@@ -18,8 +18,8 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
-    create_dataset_dicts
-from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, LABEL_FIELD
+    create_dataset_dicts, load_childes_data_file
+from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, LABEL_FIELD, FILE_ID_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
 
@@ -40,7 +40,6 @@ class CHILDESGrammarModel(LightningModule):
     def __init__(
             self,
             class_weights,
-            dataset,
             model_name_or_path: str,
             num_labels: int,
             context_length: int,
@@ -49,18 +48,21 @@ class CHILDESGrammarModel(LightningModule):
             train_batch_size: int,
             eval_batch_size: int,
             learning_rate: float,
+            dataset = None,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
             val_split_proportion: float = 0.5,
             random_seed=1,
+            predict_data_dir=None,
+            model_id=None,
             **kwargs,
     ):
         super().__init__()
         self.learning_rate = learning_rate
 
         print(f"Model loss class weights: {class_weights}")
-        self.save_hyperparameters(ignore=["dataset"])
+        self.save_hyperparameters(ignore=["dataset", "class_weights"])
 
         if os.path.isfile(model_name_or_path):
             self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels, strict=False)
@@ -77,6 +79,9 @@ class CHILDESGrammarModel(LightningModule):
 
         self.dataset = dataset
         self.random_seed = random_seed
+
+        self.predict_data_dir = predict_data_dir
+        self.model_id = model_id
 
         self.test_error_analysis = False
 
@@ -184,6 +189,30 @@ class CHILDESGrammarModel(LightningModule):
 
             return [optimizer], [scheduler]
 
+    def predict_step(self, batch, batch_idx, dataloader_idx=0):
+        output = self(
+            input_ids=batch["input_ids"],
+            token_type_ids=batch["token_type_ids"] if "token_type_ids" in batch.keys() else None,
+            attention_mask=batch["attention_mask"],
+        )
+        logits = output["logits"]
+
+        preds = torch.argmax(logits, axis=1)
+
+        preds = preds - 1
+
+        file_ids = batch[FILE_ID_FIELD]
+        assert torch.all(file_ids == torch.min(file_ids))
+
+        # Store predictions
+        path_name = os.path.join(self.predict_data_dir, f"{int(torch.min(file_ids))}.csv")
+        data_raw = load_childes_data_file(path_name)
+        data_raw.loc[data_raw[LABEL_FIELD] == "TODO", f"is_grammatical_{self.model_id}"] = preds.tolist()
+
+        data_raw.to_csv(path_name)
+
+        return preds
+
 
 def main(args):
     seed_everything(FINE_TUNE_RANDOM_STATE)
@@ -221,7 +250,7 @@ def main(args):
                                       num_workers=args.num_workers,
                                       add_eos_tokens=add_eos_token,
                                       train_data_size=args.train_data_size,
-                                      dataset=datasets[fold])
+                                      ds_dict=datasets[fold])
         dm.setup("fit")
         class_weights = calc_class_weights(dm.dataset["train"][LABEL_FIELD].numpy())
 

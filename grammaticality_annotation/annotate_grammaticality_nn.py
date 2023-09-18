@@ -1,197 +1,103 @@
 import argparse
+import glob
 import os
 import numpy as np
-import pandas as pd
 import torch
-import matplotlib.pyplot as plt
-import seaborn as sns
-from datasets import Dataset
-from torch.utils.data import DataLoader
-from tqdm import tqdm
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, PreTrainedTokenizerFast, AutoConfig
+import yaml
+from datasets import Dataset, DatasetDict
+from pytorch_lightning import Trainer
+from transformers import AutoTokenizer
+import pandas as pd
 
-import matplotlib
-
-from grammaticality_annotation.data import tokenize
+from grammaticality_annotation.data import load_childes_data, load_annotated_childes_data_with_context, \
+    CHILDESGrammarDataModule, DATA_PATH_CHILDES_ANNOTATED
 from grammaticality_annotation.fine_tune_grammaticality_nn import CHILDESGrammarModel
-from grammaticality_annotation.pretrain_lstm import TOKENIZER_PATH, TOKEN_PAD, TOKEN_EOS, TOKEN_UNK, TOKEN_SEP, \
-    LSTMSequenceClassification
-from tokenizer import get_num_unique_words, ERR_UNKNOWN
+from grammaticality_annotation.tokenizer import LABEL_FIELD
+from grammaticality_manual_annotation.prepare_for_hand_annotation import ANNOTATION_ALL_FILES_PATH
+from utils import PROJECT_ROOT_DIR
 
-if os.environ["DISPLAY"] != ":0":
-    matplotlib.use("Agg")
-
-DEFAULT_MODEL_GRAMMATICALITY_ANNOTATION = "cointegrated/roberta-large-cola-krishna2020"
-MODELS_ACCEPTABILITY_JUDGMENTS_INVERTED = ["cointegrated/roberta-large-cola-krishna2020"]
-BATCH_SIZE = 32
+ANNOTATION_ANNOTATED_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/automatically_annotated"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-
-OUT_UTTERANCES_FILE = os.path.expanduser(
-    "~/data/communicative_feedback/utterances_annotated_grammaticality.csv"
-)
-
-DEFAULT_MODELS_GRAMMATICALITY_ANNOTATION = [
-    "cointegrated/roberta-large-cola-krishna2020",
-    "textattack/bert-base-uncased-CoLA",
-    "yevheniimaslov/deberta-v3-large-cola",
-    "textattack/distilbert-base-cased-CoLA",
-    "ModelTC/bert-base-uncased-cola",
-    "WillHeld/roberta-base-cola",
-    "Aktsvigun/electra-large-cola"
-]
-BATCH_SIZE = 10
-
-device = "cuda" if torch.cuda.is_available() else "cpu"
-
-NUM_LABELS = 2
-MAX_SEQ_LENGTH = 40
+# Needs to match the number of utterances within a file to be annotated!
+BATCH_SIZE = 200
 
 
-def annotate_grammaticality(utterances, model_name, label_empty_utterance=pd.NA,
-                            label_one_word_utterance=pd.NA, label_empty_prev_utterance=pd.NA):
-    if os.path.isfile(model_name):
-        model = CHILDESGrammarModel.load_from_checkpoint(model_name).to(device)
-        if "pretrain_lstm" in model_name:
-            tokenizer = PreTrainedTokenizerFast(tokenizer_file=TOKENIZER_PATH)
-            tokenizer.add_special_tokens(
-                {'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS, 'unk_token': TOKEN_UNK, 'sep_token': TOKEN_SEP})
+def annotate(args):
+    hparams = yaml.safe_load(open(os.path.join(args.model, "hparams.yaml")))
+    tokenizer = AutoTokenizer.from_pretrained(hparams["model_name_or_path"], use_fast=True)
+
+    context_length = hparams["context_length"]
+    sep_token = tokenizer.sep_token
+    data = load_annotated_childes_data_with_context(args.data_dir, context_length=context_length, sep_token=sep_token,
+                                                    exclude_test_data=True, preserve_age_column=True, add_file_ids=True)
+    dataset = Dataset.from_pandas(data, preserve_index=False)
+    dataset_dict = DatasetDict()
+    dataset_dict["pred"] = dataset
+    dm = CHILDESGrammarDataModule(val_split_proportion=0,
+                                  num_cv_folds=0,
+                                  model_name_or_path=args.model,
+                                  eval_batch_size=BATCH_SIZE,
+                                  train_batch_size=BATCH_SIZE,
+                                  tokenizer=tokenizer,
+                                  context_length=context_length,
+                                  num_workers=args.num_workers,
+                                  add_eos_tokens=False,
+                                  train_data_size=1,
+                                  ds_dict=dataset_dict)
+
+    checkpoints = glob.glob(args.model+"/checkpoints/*.ckpt")
+
+    for i, checkpoint in enumerate(checkpoints):
+        print(f"\n\nAnnotating with model checkpoint #{i}")
+        model = CHILDESGrammarModel.load_from_checkpoint(checkpoint, predict_data_dir=args.data_dir, model_id=i)
+        model.eval()
+
+        trainer = Trainer(devices=1 if torch.cuda.is_available() else None)
+        predictions = trainer.predict(model, datamodule=dm)
+        torch.cat(predictions)
+
+    # Majority voting
+    data_annotated = load_childes_data(args.data_dir)
+
+    def majority_vote(row):
+        if row[LABEL_FIELD] == "TODO":
+            votes = [row[f"is_grammatical_{i}"] for i in range(len(checkpoints))]
+            return np.median(votes)
         else:
-            tokenizer = AutoTokenizer.from_pretrained(model.hparams.model_name_or_path, use_fast=True)
-    else:
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
-        model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
+            return ""
 
-    grammaticalities = np.zeros_like(utterances.transcript_clean, dtype=bool).astype(object)  # cast to object to allow for NA
-    num_unique_words = get_num_unique_words(utterances.transcript_clean)
-    grammaticalities[(num_unique_words == 0)] = label_empty_utterance
-    grammaticalities[(num_unique_words == 1)] = label_one_word_utterance
-    grammaticalities[utterances.prev_transcript_clean.isna()] = label_empty_prev_utterance
+    data_annotated[LABEL_FIELD] = data_annotated.apply(majority_vote, axis=1)
 
-    utts_to_annotate = utterances[num_unique_words > 1]
-    utts_to_annotate = utts_to_annotate[~utts_to_annotate.prev_transcript_clean.isna()]
+    # Append training data
+    data_train = load_childes_data(DATA_PATH_CHILDES_ANNOTATED)
+    data_all = pd.concat([data_train, data_annotated])
 
-    dataset = Dataset.from_pandas(utts_to_annotate)
-
-    def tokenize_batch(batch):
-        return tokenize(batch, tokenizer, MAX_SEQ_LENGTH).to(device)
-
-    dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=tokenize_batch)
-
-    annotated_grammaticalities = []
-    for tokenized in tqdm(dataloader):
-        predicted_class_ids = model(input_ids=tokenized.input_ids, attention_mask=tokenized.attention_mask).logits.argmax(dim=-1)
-        batch_grammaticalities = predicted_class_ids.bool()
-        if model_name in MODELS_ACCEPTABILITY_JUDGMENTS_INVERTED:
-            batch_grammaticalities = ~batch_grammaticalities
-        batch_grammaticalities = batch_grammaticalities.cpu().numpy().astype(object)
-
-        annotated_grammaticalities.extend(batch_grammaticalities.tolist())
-
-    grammaticalities[(num_unique_words > 1) & (~utts_to_annotate.prev_transcript_clean.isna())] = annotated_grammaticalities
-
-    return grammaticalities
-
-
-def plot_error_type_stats(utterances, drop_unknown=True, drop_zeros=False):
-    if "is_grammatical" in utterances.columns:
-        utts = utterances.dropna(subset=["is_grammatical", "labels"]).copy()
-        utts = utts[utts.is_grammatical != 1]
-
-        utts["label"] = utts.labels.astype(str).apply(lambda x: x.split(", "))
-        utts.drop(columns="labels", inplace=True)
-        utts = utts.explode("label")
-        if drop_unknown:
-            print(f"removing {len(utts[utts.label == ERR_UNKNOWN])} rows with unknown errors")
-            utts = utts[utts.label != ERR_UNKNOWN]
-        if drop_zeros:
-            utts = utts[utts.is_grammatical != 0]
-        utts.label.value_counts().plot(kind="barh")
-        plt.subplots_adjust(left=0.2, right=0.99)
-
-
-def plot_errors(utterances):
-    if "is_grammatical" in utterances.columns:
-        plt.figure()
-        utts = utterances.dropna(subset=["is_grammatical", "labels"]).copy()
-        utts["label"] = utts.labels.astype(str).apply(lambda x: x.replace("?", "").split(", "))
-        utts.drop(columns="labels", inplace=True)
-        keep_columns = [column for column in utts.columns if "_is_correct" in column or column == "label"]
-        utts = utts[keep_columns]
-        utts = utts.explode("label")
-        utts_grouped = utts.groupby("label").mean()
-        utts_melted = utts_grouped.reset_index().melt("label", var_name='cols', value_name='vals')
-        sns.barplot(data=utts_melted, x="label", y="vals", hue="cols")
-        plt.xticks(rotation=90)
-        plt.subplots_adjust(bottom=0.25, top=0.99)
-        plt.legend(loc='lower left', fontsize='5')
-
-
-def column_name_model_grammaticality(model_name):
-    return "is_grammatical_" + model_name.replace('/', '_')
-
-
-def column_name_model_correct(model_name):
-    return model_name.replace('/', '_') + "_is_correct"
-
-
-def annotate(utterances):
-    for model_name in args.grammaticality_annotation_models:
-        column_name = column_name_model_grammaticality(model_name)
-        if column_name in utterances.columns:
-            print(f"Annotation for {model_name} already done. Skipping.")
-            continue
-        print(f"Annotating grammaticality with {model_name}..")
-        utterances[column_name] = annotate_grammaticality(utterances, model_name)
-
-    if "is_grammatical" in utterances.columns:
-        utterances.dropna(subset=["is_grammatical"], inplace=True)
-        print(f"Accuracy scores for {len(utterances)} samples:")
-        utterances["is_grammatical"] = utterances.is_grammatical.astype(bool)
-
-        results = []
-        for model_name in args.grammaticality_annotation_models:
-            column_name = column_name_model_grammaticality(model_name)
-            column_name_correct = column_name_model_correct(model_name)
-
-            utterances[column_name] = utterances[column_name].astype(bool)
-            utterances[column_name_correct] = utterances[column_name] == utterances.is_grammatical
-            acc = utterances[column_name_correct].mean()
-            utt_pos = utterances[utterances.is_grammatical]
-            acc_pos = utt_pos[column_name_correct].mean()
-            utt_neg = utterances[~utterances.is_grammatical]
-            acc_neg = utt_neg[column_name_correct].mean()
-
-            results.append({"model": model_name, "accuracy": acc, "accuracy (pos)": acc_pos, "accuracy (neg)": acc_neg})
-
-        results = pd.DataFrame(results)
-        pd.set_option('display.precision', 2)
-        pd.set_option('display.max_columns', 10)
-        pd.set_option('display.max_rows', len(args.grammaticality_annotation_models))
-        pd.set_option('display.width', 1000)
-        print(results)
-
-    return utterances
+    data_all.to_csv(os.path.join(args.data_dir, "majority_vote.csv"))
 
 
 def parse_args():
     argparser = argparse.ArgumentParser()
     argparser.add_argument(
-        "--utterances-file",
+        "--data-dir",
         type=str,
-        required=True,
+        default=ANNOTATION_ALL_FILES_PATH,
     )
     argparser.add_argument(
-        "--grammaticality-annotation-models",
+        "--model",
         type=str,
-        nargs="+",
-        default=DEFAULT_MODELS_GRAMMATICALITY_ANNOTATION,
+        help="path to model checkpoint"
     )
     argparser.add_argument(
-        "--out",
+        "--out-dir",
         type=str,
-        default=OUT_UTTERANCES_FILE
+        default=ANNOTATION_ANNOTATED_FILES_PATH
+    )
+    argparser.add_argument(
+        "--num-workers",
+        type=int,
+        default=8,
     )
 
     args = argparser.parse_args()
@@ -201,15 +107,5 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    if not args.out.endswith(".csv"):
-        raise ValueError("Out file should have .csv ending!")
 
-    utterances = pd.read_csv(args.utterances_file, index_col=0)
-    plot_error_type_stats(utterances)
-
-    annotated_utts = annotate(utterances)
-    plot_errors(annotated_utts)
-
-    annotated_utts.to_csv(args.out)
-
-    plt.show()
+    annotate(args)

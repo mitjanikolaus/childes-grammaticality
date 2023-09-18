@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.data import load_annotated_childes_data, train_val_split
+from grammaticality_annotation.data import load_childes_data, train_val_split
 from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS, \
     TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER
 from utils import PROJECT_ROOT_DIR
@@ -307,7 +307,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
 def prepare_lm_data():
     print("Preparing data...")
     os.makedirs(os.path.dirname(LM_DATA), exist_ok=True)
-    data = load_annotated_childes_data(DATA_DIR, exclude_test_data=True)
+    data = load_childes_data(DATA_DIR, exclude_test_data=True)
     data = data[["transcript_file", "sentence"]]
     data.to_csv(LM_DATA)
 

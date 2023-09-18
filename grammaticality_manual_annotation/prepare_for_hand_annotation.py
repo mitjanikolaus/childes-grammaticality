@@ -62,6 +62,9 @@ def get_utts_to_annotate(utterances):
     return utts_to_annotate
 
 
+ANNOTATION_ALL_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/all"
+
+
 def prepare(args):
     utterances = pd.read_csv(args.utterances_file, index_col=0, dtype={"error": object})
 
@@ -87,8 +90,7 @@ def prepare(args):
 
     utterances = utterances[~utterances.corpus.isin(ADDITIONAL_EXCLUDED_CORPORA)]
 
-    base_path = PROJECT_ROOT_DIR+"/data/manual_annotation/all"
-    os.makedirs(base_path, exist_ok=True)
+    os.makedirs(ANNOTATION_ALL_FILES_PATH, exist_ok=True)
 
     file_idx = 0
     start_idx = 0
@@ -111,7 +113,7 @@ def prepare(args):
 
             utterances_selection = utterances_selection[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note", "age"]]
 
-            utterances_selection.to_csv(os.path.join(base_path, f"{file_idx}.csv"))
+            utterances_selection.to_csv(os.path.join(ANNOTATION_ALL_FILES_PATH, f"{file_idx}.csv"))
             num_utts_to_annotate = 0
             file_idx += 1
             start_idx = end_idx + 1

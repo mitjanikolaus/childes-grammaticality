@@ -12,7 +12,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 
 from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TOKEN_SPEAKER_CHILD, TRANSCRIPT_FIELD,
-                                                 TOKEN_SPEAKER_CAREGIVER, ERROR_LABELS_FIELD)
+                                                 TOKEN_SPEAKER_CAREGIVER, ERROR_LABELS_FIELD, AGE_FIELD, FILE_ID_FIELD)
 from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 
 DATA_SPLIT_RANDOM_STATE = 8
@@ -28,6 +28,8 @@ if torch.cuda.is_available():
 
 
 def speaker_code_to_speaker_token(code):
+    if code in [TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER]:
+        return code
     if code == SPEAKER_CODE_CHILD:
         return TOKEN_SPEAKER_CHILD
     if code in SPEAKER_CODES_CAREGIVER:
@@ -75,64 +77,68 @@ def train_val_split(data, val_split_size, random_seed=DATA_SPLIT_RANDOM_STATE):
     return data_train, data_val
 
 
-def load_annotated_childes_data(path, exclude_test_data=False):
+def load_childes_data_file(path, add_file_ids=False):
+    data = pd.read_csv(path, index_col=0)
+    data["speaker_code"] = data.speaker_code.apply(speaker_code_to_speaker_token)
+    if add_file_ids:
+        data[FILE_ID_FIELD] = int(os.path.basename(path).split(".csv")[0])
+    return data
+
+
+def load_childes_data(path, exclude_test_data=False, add_file_ids=False):
     transcripts = []
     file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
     for f in Path(path).glob("*.csv"):
         if not exclude_test_data or (f.name.replace(".csv", "") not in file_ids_annotated):
-            transcripts.append(pd.read_csv(f, index_col=0))
+            data = load_childes_data_file(f, add_file_ids)
+            transcripts.append(data)
 
     transcripts = pd.concat(transcripts, ignore_index=True)
-    transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
-    transcripts["sentence"] = transcripts.apply(lambda row: row.speaker_code + row.transcript_clean,
-                                                    axis=1).values
+
     return transcripts
 
 
-def load_annotated_childes_datasplits(context_length=0, num_cv_folds=5, sep_token=None):
-    transcripts = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
+def load_annotated_childes_data_with_context(path=DATA_PATH_CHILDES_ANNOTATED, context_length=0, sep_token=None,
+                                             exclude_test_data=False, preserve_age_column=False, add_file_ids=False):
+    transcripts = load_childes_data(path, exclude_test_data, add_file_ids)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
-        sentence = row.sentence
+        sentence = row.speaker_code + row.transcript_clean
         if sep_token and context_length >= 1:
             sentence = sep_token + sentence
         for j in range(1, context_length+1):
             if i-j in transcripts.index:
-                context_sentence = transcripts.loc[i-j].sentence
+                context_sentence = transcripts.loc[i-j].speaker_code + transcripts.loc[i-j].transcript_clean
                 sentence = context_sentence + sentence
         datapoint = {
             TEXT_FIELD: sentence,
-            LABEL_FIELD: row[LABEL_FIELD],
             TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
-            ERROR_LABELS_FIELD: row[ERROR_LABELS_FIELD]
         }
+        if LABEL_FIELD in row.index:
+            datapoint[LABEL_FIELD] = row[LABEL_FIELD]
+        if ERROR_LABELS_FIELD in row.index:
+            datapoint[ERROR_LABELS_FIELD] = row[ERROR_LABELS_FIELD]
+        if preserve_age_column:
+            datapoint[AGE_FIELD] = row[AGE_FIELD]
+        if add_file_ids:
+            datapoint[FILE_ID_FIELD] = row[FILE_ID_FIELD]
         data.append(datapoint)
 
     data = pd.DataFrame.from_records(data)
 
-    # Transform -1, 0, 1 to 0, 1, 2 so that they can be of dtype long
-    data[LABEL_FIELD] = (data[LABEL_FIELD] + 1).astype("int64")
+    if LABEL_FIELD in data.index:
+        # Transform -1, 0, 1 to 0, 1, 2 so that they can be of dtype long
+        data[LABEL_FIELD] = (data[LABEL_FIELD] + 1).astype("int64")
 
     print("Dataset size: ", len(data))
-    return create_cv_folds(data, num_cv_folds)
-
-
-LOADER_COLUMNS = [
-        "datasets_idx",
-        "input_ids",
-        "token_type_ids",
-        "attention_mask",
-        "start_positions",
-        "end_positions",
-        LABEL_FIELD,
-        ERROR_LABELS_FIELD,
-    ]
+    return data
 
 
 def create_dataset_dicts(num_cv_folds, val_split_proportion, context_length, random_seed=DATA_SPLIT_RANDOM_STATE, train_data_size=1.0, create_val_split=False, sep_token=None):
     dataset_dicts = [DatasetDict() for _ in range(num_cv_folds)]
 
-    data_manual_annotations_train_splits, data_manual_annotations_test_splits = load_annotated_childes_datasplits(context_length, num_cv_folds, sep_token)
+    data_manual_annotations = load_annotated_childes_data_with_context(context_length=context_length, sep_token=sep_token)
+    data_manual_annotations_train_splits, data_manual_annotations_test_splits = create_cv_folds(data_manual_annotations, num_cv_folds)
     if train_data_size < 1.0:
         data_manual_annotations_train_splits = [d.sample(round(len(d) * train_data_size), random_state=DATA_SPLIT_RANDOM_STATE) for d in data_manual_annotations_train_splits]
 
@@ -157,7 +163,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
             model_name_or_path: str,
             train_batch_size: int,
             eval_batch_size: int,
-            dataset: Dataset,
+            ds_dict: DatasetDict,
             tokenizer,
             max_seq_length: int = 128,
             num_cv_folds = 5,
@@ -180,7 +186,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.random_seed = random_seed
         self.num_workers = num_workers
         self.train_data_size = train_data_size
-        self.dataset = dataset
+        self.dataset = ds_dict
 
         self.num_labels = 3
         self.tokenizer = tokenizer
@@ -188,8 +194,8 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
     def setup(self, stage: str):
         for split in self.dataset.keys():
-            columns = [c for c in self.dataset[split].column_names if c in LOADER_COLUMNS]
-            self.dataset[split].set_format(type="torch", columns=columns + [TEXT_FIELD])
+            columns = [c for c in self.dataset[split].column_names]
+            self.dataset[split].set_format(type="torch", columns=columns)
 
     def train_dataloader(self):
         return DataLoader(self.dataset["train"], batch_size=self.train_batch_size, shuffle=True, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
@@ -200,11 +206,17 @@ class CHILDESGrammarDataModule(LightningDataModule):
     def test_dataloader(self):
         return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
+    def predict_dataloader(self):
+        return DataLoader(self.dataset["pred"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_inference_batch, num_workers=self.num_workers)
+
     def tokenize_batch(self, batch):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens)
 
+    def tokenize_inference_batch(self, batch):
+        return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens, add_labels=False, add_file_ids=True)
 
-def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False):
+
+def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=True, add_file_ids=False):
     texts = [b[TEXT_FIELD] for b in batch]
     if add_eos_token:
         texts = [t+tokenizer.eos_token for t in texts]
@@ -212,7 +224,10 @@ def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False):
     features = tokenizer.batch_encode_plus(
         texts, max_length=max_seq_length, padding=True, truncation=True, return_tensors="pt"
     )
-    features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
+    if add_labels:
+        features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
+    if add_file_ids:
+        features.data[FILE_ID_FIELD] = torch.tensor([b[FILE_ID_FIELD] for b in batch])
 
     return features
 

@@ -4,7 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from grammaticality_annotation.data import load_annotated_childes_data, DATA_PATH_CHILDES_ANNOTATED
+from grammaticality_annotation.data import load_childes_data, DATA_PATH_CHILDES_ANNOTATED
 from grammaticality_annotation.tokenizer import ERROR_LABELS_FIELD, LABEL_FIELD
 from utils import RESULTS_DIR
 
@@ -24,7 +24,7 @@ def age_bin(age, num_months=12):
 
 
 def main():
-    data = load_annotated_childes_data(DATA_PATH_CHILDES_ANNOTATED)
+    data = load_childes_data(DATA_PATH_CHILDES_ANNOTATED)
 
     labels = ["ungrammatical", "ambiguous", "grammatical"]
     label_counts = data.is_grammatical.value_counts().sort_index()
