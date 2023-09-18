@@ -77,7 +77,6 @@ def main(args):
     create_proportions_plot(data_ungrammatical)
 
 
-
 def parse_args():
     argparser = argparse.ArgumentParser()
     argparser.add_argument(
