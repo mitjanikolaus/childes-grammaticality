@@ -90,11 +90,6 @@ def parse_args():
         help="path to model checkpoint"
     )
     argparser.add_argument(
-        "--out-dir",
-        type=str,
-        default=ANNOTATION_ANNOTATED_FILES_PATH
-    )
-    argparser.add_argument(
         "--num-workers",
         type=int,
         default=8,
