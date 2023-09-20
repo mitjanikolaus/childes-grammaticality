@@ -47,7 +47,8 @@ def annotate(args):
                                   train_data_size=1,
                                   ds_dict=dataset_dict)
 
-    checkpoints = glob.glob(args.model+"/checkpoints/*.ckpt")
+    checkpoints = glob.glob(args.model+"/checkpoints/epoch*.ckpt")
+    print(f"Model checkpoints: {checkpoints}")
 
     for i, checkpoint in enumerate(checkpoints):
         print(f"\n\nAnnotating with model checkpoint #{i}")
