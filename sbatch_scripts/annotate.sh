@@ -23,8 +23,8 @@
 # /!\ Caution, "multithread" in Slurm vocabulary refers to hyperthreading.
 #SBATCH --hint=nomultithread         # hyperthreading is deactivated
 #SBATCH --time=4:00:00              # maximum execution time requested (HH:MM:SS)
-#SBATCH --output=out/train_%j.out
-#SBATCH --error=out/train_%j.out
+#SBATCH --output=out/annotate_%j.out
+#SBATCH --error=out/annotate_%j.out
  
 # Cleans out the modules loaded in interactive and inherited by default 
 module purge
