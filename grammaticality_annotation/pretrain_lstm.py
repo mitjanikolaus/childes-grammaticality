@@ -102,13 +102,11 @@ class LSTM(nn.Module):
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
         if num_layers > 1:
             self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers,
-                                dropout=dropout_rate, batch_first=True)
+                                dropout=dropout_rate, batch_first=True, bidirectional=True)
         else:
-            self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, batch_first=True)
+            self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers=num_layers, batch_first=True, bidirectional=True)
         self.dropout = nn.Dropout(dropout_rate)
-        self.fc = nn.Linear(hidden_dim, vocab_size)
-
-        self.fc_attention = nn.Linear(hidden_dim, 1)
+        self.fc = nn.Linear(2*hidden_dim, vocab_size)
 
         self.fc_classification = nn.Linear(hidden_dim, num_labels)
         self.max_pool = torch.nn.AdaptiveMaxPool1d(output_size=1)
@@ -136,24 +134,14 @@ class LSTM(nn.Module):
         output, input_sizes = pad_packed_sequence(packed_output, batch_first=True)
         output = self.dropout(output)
 
-        # attention
-        att = self.fc_attention(output).squeeze(-1)
-        att = masked_softmax(att, attention_mask)
-        output_weighted = torch.sum(att.unsqueeze(-1) * output, dim=1)
-
-        logits = self.fc_classification(output_weighted)
+        logits = self.fc_classification(output)
 
         return {"logits": logits, "hidden": hidden}
 
     def init_hidden(self, batch_size):
-        hidden = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
-        cell = torch.zeros(self.num_layers, batch_size, self.hidden_dim).to(device)
+        hidden = torch.zeros(2*self.num_layers, batch_size, self.hidden_dim).to(device)
+        cell = torch.zeros(2*self.num_layers, batch_size, self.hidden_dim).to(device)
         return hidden, cell
-
-
-def masked_softmax(scores, attention_mask):
-    masked = scores.masked_fill(attention_mask == 0, float('-inf'))
-    return F.softmax(masked, dim=1)
 
 
 class CHILDESGrammarLSTM(LightningModule):
