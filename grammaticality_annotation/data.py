@@ -59,21 +59,20 @@ def create_cv_folds(data, num_folds):
 def train_val_split(data, val_split_size, random_seed=DATA_SPLIT_RANDOM_STATE):
     # Make sure that test and train split do not contain data from the same transcripts
     if isinstance(val_split_size, float):
-        train_data_size = int(len(data) * (1 - val_split_size))
-    else:
-        train_data_size = len(data) - val_split_size
+        val_split_size = int(len(data) * val_split_size)
     transcript_files = data.transcript_file.unique()
     random.seed(random_seed)
     random.shuffle(transcript_files)
     transcript_files = iter(transcript_files)
-    data_train = pd.DataFrame()
+    data_val = pd.DataFrame()
     # Append transcripts until we have the approximate train data size.
-    while len(data_train) < train_data_size:
-        data_train = pd.concat([data_train, data[data.transcript_file == next(transcript_files)]])
+    while len(data_val) < val_split_size:
+        data_val = pd.concat([data_val, data[data.transcript_file == next(transcript_files)]])
 
-    data_val = data[~data.index.isin(data_train.index)].copy()
+    data_train = data[~data.index.isin(data_val.index)].copy()
 
     assert (len(set(data_train.index) & set(data_val.index)) == 0)
+    print(f"Train data size: {len(data_train)} | val data size: {len(data_val)}")
     return data_train, data_val
 
 

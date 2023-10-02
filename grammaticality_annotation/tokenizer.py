@@ -31,7 +31,7 @@ VOCAB_SIZE = 10000
 def train_tokenizer(path, train_data, add_eos_token=False):
     tokenizer = Tokenizer(BPE())
     tokenizer.pre_tokenizer = Whitespace()
-    special_tokens = [TOKEN_PAD]
+    special_tokens = [TOKEN_PAD,TOKEN_SPEAKER_CAREGIVER,TOKEN_SPEAKER_CHILD]
     if add_eos_token:
         special_tokens.append(TOKEN_EOS)
     trainer = BpeTrainer(special_tokens=special_tokens, show_progress=True, vocab_size=VOCAB_SIZE)
