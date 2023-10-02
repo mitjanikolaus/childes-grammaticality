@@ -69,7 +69,9 @@ class CHILDESLMDataModule(pl.LightningDataModule):
         self.batch_size = batch_size
         self.tokenizer = tokenizer
 
+        print("loading data.. ", end="")
         data = pd.read_csv(LM_DATA, index_col=0)
+        print("done.")
 
         print("Creating train and val splits")
         data_train, data_val = train_val_split(data, NUM_VAL_SENTENCES)
@@ -99,7 +101,7 @@ class CHILDESLMDataModule(pl.LightningDataModule):
         return encodings
 
     def train_dataloader(self):
-        return DataLoader(self.train_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
+        return DataLoader(self.train_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers, shuffle=True)
 
     def val_dataloader(self):
         return DataLoader(self.val_ds, batch_size=self.batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
@@ -341,6 +343,7 @@ def train(args):
         val_check_interval=1000,
         auto_lr_find=True,
         callbacks=[checkpoint_callback, early_stop_callback],
+        reload_dataloaders_every_n_epochs=1,
         logger=tb_logger,
     )
 
