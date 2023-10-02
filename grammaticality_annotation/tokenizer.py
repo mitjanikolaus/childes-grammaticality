@@ -1,5 +1,6 @@
 import os
 
+import pandas as pd
 from tokenizers.pre_tokenizers import Whitespace
 
 from tokenizers import Tokenizer
@@ -38,9 +39,10 @@ def train_tokenizer(path, train_data, add_eos_token=False):
     trainer = BpeTrainer(special_tokens=special_tokens, show_progress=True, vocab_size=VOCAB_SIZE)
 
     if isinstance(train_data, str) and os.path.isfile(train_data):
-        tokenizer.train(files=[train_data], trainer=trainer)
-    else:
-        tokenizer.train_from_iterator(train_data[TEXT_FIELD], trainer=trainer, length=len(train_data))
+        train_data = pd.read_csv(train_data, index_col=0)
+        train_data[TEXT_FIELD] = train_data["speaker_code"] + train_data["transcript_clean"]
+
+    tokenizer.train_from_iterator(train_data[TEXT_FIELD], trainer=trainer, length=len(train_data))
 
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tokenizer.save(path)
