@@ -29,6 +29,7 @@ VOCAB_SIZE = 10000
 
 
 def train_tokenizer(path, train_data, add_eos_token=False):
+    print("Training tokenizer..")
     tokenizer = Tokenizer(BPE())
     tokenizer.pre_tokenizer = Whitespace()
     special_tokens = [TOKEN_PAD,TOKEN_SPEAKER_CAREGIVER,TOKEN_SPEAKER_CHILD]
