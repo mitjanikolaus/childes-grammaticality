@@ -72,7 +72,11 @@ class CHILDESLMDataModule(pl.LightningDataModule):
         self.tokenizer = tokenizer
 
         data = pd.read_csv(LM_DATA, index_col=0)
+
+        print("Creating train and val splits..", end="")
         data_train, data_val = train_val_split(data, NUM_VAL_SENTENCES)
+        print("Done.")
+
         self.train_ds = CHILDESLMDataset(data_train)
         self.val_ds = CHILDESLMDataset(data_val)
 
