@@ -49,12 +49,12 @@ class CHILDESLMDataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, idx):
-        sentence = self.data.iloc[idx]["sentence"]
+        sentence = self.data.iloc[idx]["speaker_code"] + self.data.iloc[idx]["transcript_clean"]
         transcript = self.data.iloc[idx]["transcript_file"]
         idx += 1
         while idx < len(self.data) and transcript == self.data.iloc[idx]["transcript_file"]:
-            if len(sentence + self.data.iloc[idx]["sentence"] + TOKEN_EOS) < MAX_SEQ_LENGTH:
-                sentence = sentence + self.data.iloc[idx]["sentence"]
+            if len(sentence + self.data.iloc[idx]["speaker_code"] + self.data.iloc[idx]["transcript_clean"] + TOKEN_EOS) < MAX_SEQ_LENGTH:
+                sentence = sentence + self.data.iloc[idx]["speaker_code"] + self.data.iloc[idx]["transcript_clean"]
             else:
                 break
             idx += 1
@@ -300,7 +300,7 @@ def prepare_lm_data():
     print("Preparing data...")
     os.makedirs(os.path.dirname(LM_DATA), exist_ok=True)
     data = load_childes_data(DATA_DIR, exclude_test_data=True)
-    data = data[["transcript_file", "sentence"]]
+    data = data[["transcript_file", "transcript_clean", "speaker_code"]]
     data.to_csv(LM_DATA)
 
 
