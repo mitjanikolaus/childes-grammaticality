@@ -108,7 +108,7 @@ class LSTM(nn.Module):
         self.dropout = nn.Dropout(dropout_rate)
         self.fc = nn.Linear(2*hidden_dim, vocab_size)
 
-        self.fc_classification = nn.Linear(hidden_dim, num_labels)
+        self.fc_classification = nn.Linear(2*hidden_dim, num_labels)
         self.max_pool = torch.nn.AdaptiveMaxPool1d(output_size=1)
 
     def forward(self, input_ids, hidden=None, attention_mask=None, token_type_ids=None):
