@@ -14,12 +14,11 @@ import pytorch_lightning as pl
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from torch.optim import Adam
 from torch.utils.data import DataLoader
-import torch.nn.functional as F
 from transformers import PreTrainedTokenizerFast
 
 from grammaticality_annotation.data import load_childes_data, train_val_split
-from grammaticality_annotation.tokenizer import train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR, TOKEN_EOS, \
-    TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER
+from grammaticality_annotation.tokenizer import (train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR,
+                                                 TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER)
 from utils import PROJECT_ROOT_DIR
 
 DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "all")
@@ -53,13 +52,12 @@ class CHILDESLMDataset(Dataset):
         transcript = self.data.iloc[idx]["transcript_file"]
         idx += 1
         while idx < len(self.data) and transcript == self.data.iloc[idx]["transcript_file"]:
-            if len(sentence + self.data.iloc[idx]["speaker_code"] + self.data.iloc[idx]["transcript_clean"] + TOKEN_EOS) < MAX_SEQ_LENGTH:
+            if len(sentence + self.data.iloc[idx]["speaker_code"] + self.data.iloc[idx]["transcript_clean"]) < MAX_SEQ_LENGTH:
                 sentence = sentence + self.data.iloc[idx]["speaker_code"] + self.data.iloc[idx]["transcript_clean"]
             else:
                 break
             idx += 1
 
-        sentence = sentence + TOKEN_EOS
         sentence = sentence[:MAX_SEQ_LENGTH]
 
         return sentence
@@ -83,7 +81,20 @@ class CHILDESLMDataModule(pl.LightningDataModule):
 
     def tokenize_batch(self, batch):
         encodings = self.tokenizer.batch_encode_plus(batch, padding=True, return_tensors="pt")
-        encodings.data["labels"] = encodings.data["input_ids"][:, 1:]
+
+        labels = []
+        for i in range(len(batch)):
+            padding_token_ids = (encodings.attention_mask[i] == self.tokenizer.pad_token_id).nonzero(as_tuple=True)[0]
+            if len(padding_token_ids) > 0:
+                last_token = padding_token_ids[0].item() - 1
+            else:
+                last_token = len(encodings[i]) - 1
+            label = encodings.input_ids[i][last_token].clone()
+            labels.append(label)
+            encodings.input_ids[i][last_token] = self.tokenizer.pad_token_id
+            encodings.attention_mask[i][last_token] = 0
+
+        encodings.data["labels"] = torch.stack(labels)
 
         return encodings
 
@@ -185,8 +196,8 @@ class CHILDESGrammarLSTM(LightningModule):
         )
         labels = batch["labels"]
         logits = output["logits"]
-        logits = logits[:, :-1, :]
-        loss = self.loss_fct(logits.reshape(-1, self.vocab_size), labels.reshape(-1))
+        logits = logits[:, -1, :]
+        loss = self.loss_fct(logits, labels)
 
         return {"loss": loss}
 
@@ -203,8 +214,8 @@ class CHILDESGrammarLSTM(LightningModule):
         )
         labels = batch["labels"]
         logits = output["logits"]
-        logits = logits[:, :-1, :]
-        val_loss = self.loss_fct(logits.reshape(-1, self.vocab_size), labels.reshape(-1))
+        logits = logits[:, -1, :]
+        val_loss = self.loss_fct(logits, labels)
 
         preds = torch.argmax(logits, dim=1)
 
@@ -307,10 +318,10 @@ def train(args):
     if not os.path.isfile(LM_DATA):
         prepare_lm_data()
     if not os.path.isfile(LSTM_TOKENIZER_PATH):
-        train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA, add_eos_token=True)
+        train_tokenizer(LSTM_TOKENIZER_PATH, LM_DATA, add_eos_token=False)
 
     tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
-    tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
+    tokenizer.add_special_tokens({'pad_token': TOKEN_PAD})
 
     data_module = CHILDESLMDataModule(BATCH_SIZE, tokenizer, num_workers=args.num_workers)
 
