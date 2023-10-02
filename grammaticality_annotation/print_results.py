@@ -18,7 +18,7 @@ def create_results_table_model_comparison(results, context_length):
 
     results_context_length = results_full_train_data_size[(results_full_train_data_size["context length"] == context_length) | results_full_train_data_size.model.isin(MODELS_NO_CONTEXT)].copy()
     results_context_length.sort_values(by="mcc: mean", inplace=True)
-    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "val_mcc: std", "train_data_size"], inplace=True)
+    results_context_length.drop(columns=[REFERENCE_METRIC, "mcc: mean", "mcc: std", "accuracy: mean", "accuracy: std", "val_mcc: std", "train_data_size", "context length"], inplace=True)
     print(results_context_length.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
     print(results_context_length.style.hide(axis="index").to_latex(hrules=True))
