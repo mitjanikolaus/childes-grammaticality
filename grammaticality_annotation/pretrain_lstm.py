@@ -333,7 +333,8 @@ def train(args):
     data_module = CHILDESLMDataModule(BATCH_SIZE, tokenizer, num_workers=args.num_workers)
 
     model = CHILDESGrammarLSTM(tokenizer=tokenizer, pad_token_id=tokenizer.pad_token_id,
-                               vocab_size=tokenizer.vocab_size, num_layers=args.num_layers)
+                               vocab_size=tokenizer.vocab_size, num_layers=args.num_layers,
+                               learning_rate=args.learning_rate)
 
     checkpoint_callback = ModelCheckpoint(monitor="val_loss", mode="min", save_last=True,
                                             filename="{epoch:02d}-{val_loss:.2f}")
@@ -376,6 +377,12 @@ def parse_args():
         "--num-layers",
         type=int,
         default=1,
+    )
+
+    argparser.add_argument(
+        "--learning-rate",
+        type=float,
+        default=1e-4,
     )
 
     args = argparser.parse_args()
