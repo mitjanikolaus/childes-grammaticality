@@ -215,7 +215,6 @@ class CHILDESGrammarLSTM(LightningModule):
             token_type_ids=batch["token_type_ids"],
             attention_mask=batch["attention_mask"],
         )
-        # batch_size = batch["input_ids"].shape[0]
         labels_forward = batch["labels_forward"]
         labels_backward = batch["labels_backward"]
         logits_fw, logits_bw = output["logits_fw"], output["logits_bw"]
@@ -223,8 +222,6 @@ class CHILDESGrammarLSTM(LightningModule):
         logits_bw = logits_bw[:, 1:, :]
         val_loss_fw = self.loss_fct(logits_fw.reshape(-1, self.vocab_size), labels_forward.reshape(-1))
         val_loss_bw = self.loss_fct(logits_bw.reshape(-1, self.vocab_size), labels_backward.reshape(-1))
-
-        # preds = torch.argmax(logits, dim=1)
 
         return {"val_loss_fw": val_loss_fw, "val_loss_bw": val_loss_bw, "logits_fw": logits_fw}
 
@@ -351,14 +348,10 @@ def train(args):
         devices=1 if torch.cuda.is_available() else None,
         accelerator="auto",
         val_check_interval=1000,
-        auto_lr_find=True,
         callbacks=[checkpoint_callback, early_stop_callback],
         reload_dataloaders_every_n_epochs=1,
         logger=tb_logger,
     )
-
-    trainer.tune(model, datamodule=data_module)
-    #Learning rate set to 0.003311311214825908
 
     print("\n\n\nInitial validation:")
     initial_eval = trainer.validate(model, data_module)
