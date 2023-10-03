@@ -236,6 +236,8 @@ class CHILDESGrammarLSTM(LightningModule):
         print(self.generate(TOKEN_SPEAKER_CHILD, max_seq_len=20, temperature=0.3))
         print(self.generate(TOKEN_SPEAKER_CAREGIVER, max_seq_len=20, temperature=0.3))
 
+        val_loss = val_loss_fw + val_loss_bw
+        self.log("val_loss", val_loss)
         self.log(f"val_loss_fw", val_loss_fw, prog_bar=True)
         self.log(f"val_loss_bw", val_loss_bw, prog_bar=True)
 
