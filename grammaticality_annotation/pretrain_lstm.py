@@ -165,7 +165,7 @@ class CHILDESGrammarLSTM(LightningModule):
             hidden_dim: int = LSTM_HIDDEN_DIM,
             num_layers: int = 1,
             dropout_rate: float = 0.1,
-            learning_rate: float = 0.003,
+            learning_rate: float = 0.001,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
@@ -238,7 +238,6 @@ class CHILDESGrammarLSTM(LightningModule):
         self.log(f"val_loss_fw", val_loss_fw, prog_bar=True)
         self.log(f"val_loss_bw", val_loss_bw, prog_bar=True)
 
-
     def configure_optimizers(self):
         optimizer = Adam(self.parameters(), lr=self.hparams.learning_rate, eps=self.hparams.adam_epsilon)
         return [optimizer]
@@ -280,7 +279,7 @@ class LSTMSequenceClassification(CHILDESGrammarLSTM):
             hidden_dim: int = LSTM_HIDDEN_DIM,
             num_layers: int = 1,
             dropout_rate: float = 0.1,
-            learning_rate: float = 0.003,
+            learning_rate: float = 0.001,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
