@@ -19,7 +19,7 @@ from transformers import (
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
     create_dataset_dicts, load_childes_data_file
-from grammaticality_annotation.tokenizer import TOKEN_PAD, TOKEN_EOS, LABEL_FIELD, FILE_ID_FIELD
+from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, FILE_ID_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
 
@@ -27,13 +27,6 @@ FINE_TUNE_RANDOM_STATE = 1
 
 DEFAULT_BATCH_SIZE = 100
 DEFAULT_LEARNING_RATE = 1e-5
-
-MODELS = [
-    "phueb/BabyBERTa-3",
-    "bert-base-uncased",
-    "gpt2",
-    "roberta-large"
-]
 
 
 class CHILDESGrammarModel(LightningModule):
@@ -220,14 +213,12 @@ def main(args):
     test_results = []
     val_results = []
 
-    add_eos_token = False
     if os.path.isfile(args.model):
         if not os.path.isfile(LSTM_TOKENIZER_PATH):
             raise RuntimeError(f"Tokenizer not found at {LSTM_TOKENIZER_PATH}")
 
         tokenizer = PreTrainedTokenizerFast(tokenizer_file=LSTM_TOKENIZER_PATH)
-        tokenizer.add_special_tokens({'pad_token': TOKEN_PAD, 'eos_token': TOKEN_EOS})
-        add_eos_token = True
+        tokenizer.add_special_tokens({'pad_token': TOKEN_PAD})
     else:
         tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
@@ -248,7 +239,7 @@ def main(args):
                                       context_length=args.context_length,
                                       random_seed=FINE_TUNE_RANDOM_STATE,
                                       num_workers=args.num_workers,
-                                      add_eos_tokens=add_eos_token,
+                                      add_eos_tokens=False,
                                       train_data_size=args.train_data_size,
                                       ds_dict=datasets[fold])
         dm.setup("fit")

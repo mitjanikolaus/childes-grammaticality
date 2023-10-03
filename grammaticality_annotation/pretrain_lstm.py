@@ -143,9 +143,8 @@ class LSTM(nn.Module):
         packed_input = pack_padded_sequence(embedding, lengths, batch_first=True, enforce_sorted=False)
         packed_output, hidden = self.lstm(packed_input, hidden)
         output, input_sizes = pad_packed_sequence(packed_output, batch_first=True)
-        output = self.dropout(output)
 
-        logits = self.fc_classification(output)
+        logits = self.fc_classification(output[:, -1])
 
         return {"logits": logits, "hidden": hidden}
 

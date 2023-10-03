@@ -125,7 +125,7 @@ def load_annotated_childes_data_with_context(path=DATA_PATH_CHILDES_ANNOTATED, c
 
     data = pd.DataFrame.from_records(data)
 
-    if LABEL_FIELD in data.index:
+    if LABEL_FIELD in data.columns:
         # Transform -1, 0, 1 to 0, 1, 2 so that they can be of dtype long
         data[LABEL_FIELD] = (data[LABEL_FIELD] + 1).astype("int64")
 
