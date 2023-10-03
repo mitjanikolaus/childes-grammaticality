@@ -288,7 +288,8 @@ def main(args):
         best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path,
                                                               context_length=args.context_length,
                                                               val_split_proportion=args.val_split_proportion,
-                                                              dataset=datasets[fold])
+                                                              dataset=datasets[fold],
+                                                              class_weights=class_weights)
 
         if args.model == "gpt2":
             tokenizer.pad_token = tokenizer.eos_token
