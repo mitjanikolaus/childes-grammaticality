@@ -24,6 +24,7 @@ MIN_NUM_WORDS = 1
 EXCLUDED_CORPORA = ["Wells", "MPI-EVA-Manchester", "Post", "HSLLD", "Bohannon", "Brown", "Hall", "Brent", "Gleason", "Morisset", "Belfast"]
 ADDITIONAL_EXCLUDED_CORPORA = ["Demetras1", "Demetras2"]
 
+# These files have been excluded as they have been included in preliminary annotation experiments
 TRANSCRIPT_FILES_EXCLUDED = ["Braunwald/020128.cha", "MPI-EVA-Manchester/Fraser/030100b.cha", "Providence/Alex/021025.cha"]
 
 MIN_AGE = 24
@@ -111,8 +112,7 @@ def prepare(args):
             utterances_selection["note"] = ""
             utterances_selection.loc[(utterances_selection.speaker_code == SPEAKER_CODE_CHILD) & (utterances_selection.num_words > 1), "is_grammatical"] = "TODO"
 
-            utterances_selection = utterances_selection[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note", "age"]]
-
+            utterances_selection = utterances_selection[["transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "note", "age", "child_name"]]
             utterances_selection.to_csv(os.path.join(ANNOTATION_ALL_FILES_PATH, f"{file_idx}.csv"))
             num_utts_to_annotate = 0
             file_idx += 1
