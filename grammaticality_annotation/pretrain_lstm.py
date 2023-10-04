@@ -142,8 +142,13 @@ class LSTM(nn.Module):
         lengths = attention_mask.sum(dim=1).cpu().numpy()
         packed_input = pack_padded_sequence(embedding, lengths, batch_first=True, enforce_sorted=False)
         packed_output, (hidden, cell) = self.lstm(packed_input, hidden)
-
-        last_states = torch.cat((hidden[0], hidden[1]), dim=1)
+        output, lengths = pad_packed_sequence(packed_output, batch_first=True)
+        batch_size = input_ids.shape[0]
+        output = output.view(batch_size, -1, 2, self.hidden_dim)
+        output_fw = output[:, :, 0]
+        output_fw_last = output_fw[range(batch_size), lengths - 1]
+        output_bw_last = hidden[1]
+        last_states = torch.cat((output_fw_last, output_bw_last), dim=1)
         logits = self.fc_classification(last_states)
 
         return {"logits": logits, "hidden": (hidden, cell)}
