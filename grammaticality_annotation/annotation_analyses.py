@@ -1,8 +1,11 @@
 import os
 
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+import statsmodels.formula.api as smf
 
 from grammaticality_annotation.tokenizer import LABEL_FIELD
 from grammaticality_manual_annotation.prepare_for_hand_annotation import ANNOTATION_ALL_FILES_PATH
@@ -26,16 +29,49 @@ def main():
 
     data_grammar["age"] = data_grammar.age.apply(age_bin).astype(int)
 
-    sns.lineplot(data=data_grammar, x="age", y="grammatical", errorbar="se", linestyle=(0, (1, 1)))
-    sns.lineplot(data=data_grammar, x="age", y="ambiguous", errorbar="se", linestyle=(0, (1, 1)))
-    ax = sns.lineplot(data=data_grammar, x="age", y="ungrammatical", errorbar="se", linestyle=(0, (1, 1)))
-    plt.ylabel("proportion")
+    transcripts_enough_data = [name for name, size in data_grammar.groupby("transcript_file").size().items() if size > 100]
+    print(len(transcripts_enough_data))
+    data_filtered = data_grammar[data_grammar.transcript_file.isin(transcripts_enough_data)].copy()
+
+    data_grouped = data_filtered.groupby("transcript_file").aggregate({"age": "mean", LABEL_FIELD: "mean", "grammatical": "mean", "ambiguous": "mean", "ungrammatical": "mean"})
+
+    data_grouped["age"] = data_grouped["age"].astype(int)
+
+    plt.figure(figsize=(10, 5))
+
+    for y_target in ["grammatical", "ambiguous", "ungrammatical"]:
+        ax = sns.stripplot(
+            data=data_grouped, x="age", y=y_target,
+            jitter=.35, alpha=.3, legend=False, marker=".",
+        )
+        ax_x_ticks = ax.get_xticks()
+        ax_x_dense = np.linspace(np.min(ax_x_ticks), np.max(ax_x_ticks), len(ax_x_ticks)*10)
+        x = np.linspace(data_grouped.age.min(), data_grouped.age.max(), len(ax_x_dense))
+
+        clf = LogisticRegression(random_state=0).fit(data_filtered.age.values.reshape(-1, 1), data_filtered[y_target])
+        y = [y[1] for y in clf.predict_proba(x.reshape(-1, 1))]
+        sns.lineplot(x=ax_x_dense, y=y)
+
+    plt.ylabel("")
     plt.xlabel("age (months)")
-    plt.xticks([24, 30, 36, 42, 48, 54, 60])
+
     plt.legend(handles=ax.lines, labels=["grammatical", "ambiguous", "ungrammatical"])
 
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, "annotations_grammaticality_over_age.png"), dpi=300)
+
+
+    md = smf.mixedlm("grammatical ~ age", data_filtered, groups=data_filtered["transcript_file"])
+    mdf = md.fit()
+    print(mdf.summary())
+
+    md = smf.mixedlm("ambiguous ~ age", data_filtered, groups=data_filtered["transcript_file"])
+    mdf = md.fit()
+    print(mdf.summary())
+
+    md = smf.mixedlm("ungrammatical ~ age", data_filtered, groups=data_filtered["transcript_file"])
+    mdf = md.fit()
+    print(mdf.summary())
 
     plt.show()
 
