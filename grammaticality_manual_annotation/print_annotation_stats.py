@@ -34,9 +34,11 @@ def main():
     data_ungrammatical = data_ungrammatical.explode(ERROR_LABELS_FIELD)
 
     counts = data_ungrammatical[ERROR_LABELS_FIELD].value_counts()
+    print(counts)
     plt.figure(figsize=(4, 5))
     ax = counts.plot(kind="barh", color="#617fab")
     percentages = data_ungrammatical[ERROR_LABELS_FIELD].value_counts(normalize=True) * 100
+    print(percentages)
     patches = ax.patches
     for i in range(len(patches)):
         x = patches[i].get_width() + 5
