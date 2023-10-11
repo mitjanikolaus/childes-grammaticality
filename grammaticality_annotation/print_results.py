@@ -37,7 +37,7 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     results_model["val_mcc: stderr"] = results_model["val_mcc: std"].apply(lambda x: x/np.sqrt(3))
     plt.figure(figsize=(4, 4))
     plt.errorbar(results_model["context length"], results_model["val_mcc: mean"], results_model["val_mcc: stderr"],
-                 fmt="o", elinewidth=1, color=BASE_COLOR)
+                 fmt="o--", elinewidth=1, color=BASE_COLOR)
     plt.xlabel("Context length")
     plt.ylabel("MCC")
     plt.tight_layout()
