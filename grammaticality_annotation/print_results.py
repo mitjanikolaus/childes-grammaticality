@@ -38,7 +38,7 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     plt.figure(figsize=(4, 4))
     plt.errorbar(results_model["context length"], results_model["val_mcc: mean"], results_model["val_mcc: stderr"],
                  fmt="o", elinewidth=1, color=BASE_COLOR)
-    plt.xlabel("context length")
+    plt.xlabel("Context length")
     plt.ylabel("MCC")
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, "context_lengths.png"), dpi=300)
@@ -66,7 +66,7 @@ def create_results_train_data_size(results, context_length, model="microsoft/deb
     plt.figure(figsize=(4, 4))
     plt.errorbar(results_model["train_data_samples"], results_model["mcc: mean"], results_model["mcc: stderr"],
                  fmt="o--", elinewidth=1, color=BASE_COLOR)
-    plt.xlabel("train data samples")
+    plt.xlabel("Number of training data samples")
     plt.ylabel("MCC")
     plt.tight_layout()
     plt.savefig(os.path.join(RESULTS_DIR, "train_data_size.png"), dpi=300)
