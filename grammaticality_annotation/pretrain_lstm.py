@@ -112,7 +112,6 @@ class LSTM(nn.Module):
         self.fc = nn.Linear(hidden_dim, vocab_size)
 
         self.fc_classification = nn.Linear(hidden_dim, num_labels)
-        self.max_pool = torch.nn.AdaptiveMaxPool1d(output_size=1)
 
     def forward(self, input_ids, hidden=None, attention_mask=None, token_type_ids=None):
         if not hidden:
@@ -122,8 +121,6 @@ class LSTM(nn.Module):
         packed_input = pack_padded_sequence(embedding, lengths, batch_first=True, enforce_sorted=False)
         packed_output, hidden = self.lstm(packed_input, hidden)
         output, _ = pad_packed_sequence(packed_output, batch_first=True)
-        # batch_size = input_ids.shape[0]
-        # output_last_ts = output[range(batch_size), input_sizes-1]
         logits = self.fc(output)
 
         return {"logits": logits, "hidden": hidden}
