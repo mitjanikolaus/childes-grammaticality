@@ -19,8 +19,7 @@ from transformers import (
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
     create_dataset_dicts, load_childes_data_file
-from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, FILE_ID_FIELD, TOKEN_SPEAKER_CHILD, \
-    TOKEN_SPEAKER_CAREGIVER
+from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, FILE_ID_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
 
@@ -222,7 +221,6 @@ def main(args):
         tokenizer.add_special_tokens({'pad_token': TOKEN_PAD})
     else:
         tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
-        tokenizer.add_tokens([TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER])
 
     datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length,
                                        args.train_data_size, create_val_split=True,
