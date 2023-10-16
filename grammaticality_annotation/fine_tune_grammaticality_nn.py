@@ -266,8 +266,8 @@ def main(args):
             model.config.pad_token_id = model.config.eos_token_id
 
         checkpoint_callback = ModelCheckpoint(monitor="val_person_r", mode="max", save_last=True,
-                                                filename="{epoch:02d}-{val_pearson_r:.2f}")
-        early_stop_callback = EarlyStopping(monitor="val_pearson_r", patience=10, verbose=True, mode="max",
+                                                filename="{epoch:02d}-{val_pearsonr:.2f}")
+        early_stop_callback = EarlyStopping(monitor="val_pearsonr", patience=10, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
         trainer = Trainer(
@@ -309,14 +309,14 @@ def main(args):
     mccs = [results["test_matthews_correlation"] for results in test_results]
     print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
-    pearson_r_scores = [results["test_pearson_r"] for results in test_results]
+    pearson_r_scores = [results["test_pearsonr"] for results in test_results]
     print(f"Pearson r: {np.mean(pearson_r_scores):.2f} Stddev: {np.std(pearson_r_scores):.2f}")
 
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
-    val_pearson_r_scores = [results["val_pearson_r"] for results in val_results]
+    val_pearsonr_scores = [results["val_pearsonr"] for results in val_results]
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "pearson_r: mean": np.mean(pearson_r_scores), "pearson_r: std": np.std(pearson_r_scores), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "val_pearson_r: mean": np.mean(val_pearson_r_scores), "val_pearson_r: std": np.std(val_pearson_r_scores), "context_length": args.context_length, "train_data_size": args.train_data_size,
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "pearson_r: mean": np.mean(pearson_r_scores), "pearson_r: std": np.std(pearson_r_scores), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "val_pearsonr: mean": np.mean(val_pearsonr_scores), "val_pearsonr: std": np.std(val_pearsonr_scores), "context_length": args.context_length, "train_data_size": args.train_data_size,
                                 "run_id": run_id}])
     results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 
