@@ -64,8 +64,9 @@ class CHILDESGrammarModel(LightningModule):
             self.model = AutoModelForSequenceClassification.from_pretrained(model_name_or_path, config=self.config)
 
         self.metric_mcc = evaluate.load("matthews_correlation", experiment_id=str(torch.rand(10)))
+        self.metric_pearson_r = evaluate.load("pearsonr", experiment_id=str(torch.rand(10)))
         self.metric_acc = evaluate.load("accuracy", experiment_id=str(torch.rand(10)))
-        self.metrics = [self.metric_mcc, self.metric_acc]
+        self.metrics = [self.metric_mcc, self.metric_acc, self.metric_pearson_r]
 
         weight = torch.tensor(class_weights)
         self.loss_fct = CrossEntropyLoss(weight=weight)
@@ -264,9 +265,9 @@ def main(args):
             tokenizer.pad_token = tokenizer.eos_token
             model.config.pad_token_id = model.config.eos_token_id
 
-        checkpoint_callback = ModelCheckpoint(monitor="val_matthews_correlation", mode="max", save_last=True,
-                                                filename="{epoch:02d}-{val_matthews_correlation:.2f}")
-        early_stop_callback = EarlyStopping(monitor="val_matthews_correlation", patience=10, verbose=True, mode="max",
+        checkpoint_callback = ModelCheckpoint(monitor="val_person_r", mode="max", save_last=True,
+                                                filename="{epoch:02d}-{val_pearson_r:.2f}")
+        early_stop_callback = EarlyStopping(monitor="val_pearson_r", patience=10, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
         trainer = Trainer(
@@ -308,9 +309,14 @@ def main(args):
     mccs = [results["test_matthews_correlation"] for results in test_results]
     print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
+    pearson_r_scores = [results["test_pearson_r"] for results in test_results]
+    print(f"Pearson r: {np.mean(pearson_r_scores):.2f} Stddev: {np.std(pearson_r_scores):.2f}")
+
     val_mccs = [results["val_matthews_correlation"] for results in val_results]
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "context_length": args.context_length, "train_data_size": args.train_data_size,
+    val_pearson_r_scores = [results["val_pearson_r"] for results in val_results]
+
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "pearson_r: mean": np.mean(pearson_r_scores), "pearson_r: std": np.std(pearson_r_scores), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "val_pearson_r: mean": np.mean(val_pearson_r_scores), "val_pearson_r: std": np.std(val_pearson_r_scores), "context_length": args.context_length, "train_data_size": args.train_data_size,
                                 "run_id": run_id}])
     results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 

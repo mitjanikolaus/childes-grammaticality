@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 
 from krippendorff import krippendorff
+from scipy.stats import pearsonr
 from sklearn.metrics import cohen_kappa_score, matthews_corrcoef
 
 from utils import PROJECT_ROOT_DIR, RESULTS_DIR, RESULTS_FILE
@@ -92,6 +93,7 @@ def eval(args):
     kappa_scores = []
     mcc_scores = []
     acc_scores = []
+    pearson_scores = []
     for ann_1, ann_2 in itertools.combinations(args.annotators, 2):
         kappa = cohen_kappa_score(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"], weights="linear")
         kappa_scores.append(kappa)
@@ -100,13 +102,16 @@ def eval(args):
         mcc = matthews_corrcoef(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])
         mcc_scores.append(mcc)
 
+        pearson_r = pearsonr(data[f"is_grammatical_{ann_1}"], data[f"is_grammatical_{ann_2}"])[0]
+        pearson_scores.append(pearson_r)
+
         acc = np.mean(data[f"is_grammatical_{ann_1}"] == data[f"is_grammatical_{ann_2}"])
         acc_scores.append(acc)
 
     print(f"Mean kappa: {np.mean(kappa_scores):.2f} Std: {np.std(kappa_scores):.2f}")
     print(f"Mean mcc: {np.mean(mcc_scores):.2f} Std: {np.std(mcc_scores):.2f}")
     print(f"Mean acc: {np.mean(acc_scores):.2f} Std: {np.std(acc_scores):.2f}")
-
+    print(f"Mean pearson r: {np.mean(pearson_scores):.2f} Std: {np.std(pearson_scores):.2f}")
 
     rel_data = [data[f"is_grammatical_{ann}"] for ann in args.annotators]
     alpha = krippendorff.alpha(reliability_data=rel_data, level_of_measurement="ordinal")
