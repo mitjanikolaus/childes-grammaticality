@@ -132,7 +132,7 @@ class CHILDESGrammarModel(LightningModule):
         self.log(f"val_loss", loss, prog_bar=True)
         for metric in self.metrics:
             metric_results = metric.compute(predictions=preds, references=labels)
-            metric_results = {"val_" + key: value for key, value in metric_results.items()}
+            metric_results = {"val_" + key: value if not np.isnan(value) else 0 for key, value in metric_results.items()}
 
             self.log_dict(metric_results, prog_bar=True)
 
@@ -144,7 +144,7 @@ class CHILDESGrammarModel(LightningModule):
         self.log(f"test_loss", loss, prog_bar=True)
         for metric in self.metrics:
             metric_results = metric.compute(predictions=preds, references=labels)
-            metric_results = {"test_" + key: value for key, value in metric_results.items()}
+            metric_results = {"test_" + key: value if not np.isnan(value) else 0 for key, value in metric_results.items()}
 
             self.log_dict(metric_results, prog_bar=True)
 
