@@ -265,7 +265,7 @@ def main(args):
             tokenizer.pad_token = tokenizer.eos_token
             model.config.pad_token_id = model.config.eos_token_id
 
-        checkpoint_callback = ModelCheckpoint(monitor="val_person_r", mode="max", save_last=True,
+        checkpoint_callback = ModelCheckpoint(monitor="val_pearsonr", mode="max", save_last=True,
                                                 filename="{epoch:02d}-{val_pearsonr:.2f}")
         early_stop_callback = EarlyStopping(monitor="val_pearsonr", patience=10, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
