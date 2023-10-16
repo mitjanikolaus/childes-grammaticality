@@ -37,7 +37,7 @@ def main():
 
     data_grouped["age"] = data_grouped["age"].astype(int)
 
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(11, 5))
 
     for y_target in ["grammatical", "ambiguous", "ungrammatical"]:
         ax = sns.stripplot(
@@ -53,7 +53,7 @@ def main():
         sns.lineplot(x=ax_x_dense, y=y)
 
     plt.ylabel("")
-    plt.xlabel("age (months)")
+    plt.xlabel("Age (months)")
 
     plt.legend(handles=ax.lines, labels=["grammatical", "ambiguous", "ungrammatical"])
 
