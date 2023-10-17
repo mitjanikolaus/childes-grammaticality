@@ -119,6 +119,7 @@ def eval(args):
 
     results_df = pd.DataFrame([{"model": "human_annotators", "context_length": 0,
                                 "mcc: mean": np.mean(mcc_scores), "mcc: std": np.std(mcc_scores),
+                                "pearson_r: mean": np.mean(pearson_scores), "pearson_r: std": np.std(pearson_scores),
                                 "accuracy: mean": np.mean(acc_scores), "accuracy: std": np.std(acc_scores),
                                 }])
     results_df.set_index(["model", "context_length"], inplace=True)

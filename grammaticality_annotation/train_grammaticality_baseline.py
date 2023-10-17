@@ -7,6 +7,7 @@ import numpy as np
 import nltk
 import pandas as pd
 from pytorch_lightning import Trainer
+from scipy.stats import pearsonr
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, cohen_kappa_score, matthews_corrcoef
 from transformers import (
@@ -60,9 +61,11 @@ def main(args):
     predictions = np.array([])
     accuracies = []
     mccs = []
+    pearson_scores = []
 
     maj_class_accuracies = []
     maj_class_mccs = []
+    maj_class_pearson_scores = []
 
     dataset_dicts = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length)
 
@@ -95,6 +98,10 @@ def main(args):
         maj_class_mcc = matthews_corrcoef(labels, np.repeat(most_common_label, len(labels)))
         maj_class_mccs.append(maj_class_mcc)
 
+        maj_class_pearson_r = pearsonr(labels, np.repeat(most_common_label, len(labels)))[0]
+        maj_class_pearson_r = 0 if np.isnan(maj_class_pearson_r) else maj_class_pearson_r
+        maj_class_pearson_scores.append(maj_class_pearson_r)
+
         if args.model == "svc":
             clf = SVC(random_state=RANDOM_STATE, class_weight="balanced")
         elif args.model == "linear_svc":
@@ -119,6 +126,9 @@ def main(args):
 
         mcc = matthews_corrcoef(labels, preds)
         mccs.append(mcc)
+
+        pearson_r = pearsonr(labels, preds)[0]
+        pearson_scores.append(pearson_r)
         print("MCC: ", mcc)
 
     print(f"==================================\n"
@@ -128,15 +138,17 @@ def main(args):
 
     print(f"Classifier MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
 
+    print(f"Classifier Pearson r: {np.mean(pearson_scores):.2f} Stddev: {np.std(pearson_scores):.2f}")
+
     cm = confusion_matrix(test_labels, predictions, normalize="true")
     print("Confusion matrix: \n", cm)
 
     kappa = cohen_kappa_score(test_labels, predictions, weights="linear")
     print(f"Cohen's kappa: {kappa:.2f}")
 
-    model_name = f"{args.max_n_gram_level}-gram"
-    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies), "context_length": 0, "val_mcc: mean": 0, "val_mcc: std": 0, "train_data_size": 1.0},
-                               {"model": model_name, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length, "val_mcc: mean": 0, "val_mcc: std": 0, "train_data_size": 1.0}])
+    model_name = f"{args.model.upper()} ({args.max_n_gram_level}-gram)"
+    results_df = pd.DataFrame([{"model": "majority_classifier", "mcc: mean": np.mean(maj_class_mccs), "mcc: std": np.std(maj_class_mccs), "pearson_r: mean": np.mean(maj_class_pearson_scores), "pearson_r: std": np.std(maj_class_pearson_scores), "accuracy: mean": np.mean(maj_class_accuracies), "accuracy: std": np.std(maj_class_accuracies), "context_length": 0, "val_mcc: mean": 0, "val_mcc: std": 0, "train_data_size": 1.0},
+                               {"model": model_name, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "pearson_r: mean": np.mean(pearson_scores), "pearson_r: std": np.std(pearson_scores), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "context_length": args.context_length, "val_mcc: mean": 0, "val_mcc: std": 0, "val_pearsonr: mean": 0, "val_pearsonr: std": 0, "train_data_size": 1.0}])
     results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 
     os.makedirs(RESULTS_DIR, exist_ok=True)
