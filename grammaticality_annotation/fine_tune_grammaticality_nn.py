@@ -32,7 +32,6 @@ DEFAULT_LEARNING_RATE = 1e-5
 class CHILDESGrammarModel(LightningModule):
     def __init__(
             self,
-            class_weights,
             model_name_or_path: str,
             num_labels: int,
             context_length: int,
@@ -41,6 +40,7 @@ class CHILDESGrammarModel(LightningModule):
             train_batch_size: int,
             eval_batch_size: int,
             learning_rate: float,
+            class_weights=None,
             dataset = None,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
@@ -68,8 +68,9 @@ class CHILDESGrammarModel(LightningModule):
         self.metric_acc = evaluate.load("accuracy", experiment_id=str(torch.rand(10)))
         self.metrics = [self.metric_mcc, self.metric_acc, self.metric_pearson_r]
 
-        weight = torch.tensor(class_weights)
-        self.loss_fct = CrossEntropyLoss(weight=weight)
+        if class_weights:
+            weight = torch.tensor(class_weights)
+            self.loss_fct = CrossEntropyLoss(weight=weight)
 
         self.dataset = dataset
         self.random_seed = random_seed
