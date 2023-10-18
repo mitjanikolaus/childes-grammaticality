@@ -22,9 +22,9 @@
 #
 # /!\ Caution, "multithread" in Slurm vocabulary refers to hyperthreading.
 #SBATCH --hint=nomultithread         # hyperthreading is deactivated
-#SBATCH --time=3:00:00              # maximum execution time requested (HH:MM:SS)
-#SBATCH --output=out/train_%j.out
-#SBATCH --error=out/train_%j.out
+#SBATCH --time=10:00:00              # maximum execution time requested (HH:MM:SS)
+#SBATCH --output=out/pretrain_%j.out
+#SBATCH --error=out/pretrain_%j.out
  
 # Cleans out the modules loaded in interactive and inherited by default 
 module purge
@@ -50,6 +50,5 @@ export TOKENIZERS_PARALLELISM=false
 # Debugging:
 # export CUDA_LAUNCH_BLOCKING=1
 
-python -u grammaticality_annotation/pretrain_lstm.py
-
+python -u grammaticality_annotation/pretrain_lstm.py --learning-rate 1e-3
 #--trainer.val_check_interval 5000

@@ -45,8 +45,8 @@ TRANSFORMERS_OFFLINE=1
 
 # Code execution
 model=microsoft/deberta-v3-large #roberta-base microsoft/deberta-v3-large	#microsoft/deberta-v3-base	# babylm/roberta-base-strict	#gpt2	#	roberta-large	#cointegrated/roberta-large-cola-krishna2020	#phueb/BabyBERTa-3	#bert-base-uncased
-context_length=6
-train_data_size=1
+context_length=8
+train_data_size=0.4
 batch_size=50
 accumulate=2
 

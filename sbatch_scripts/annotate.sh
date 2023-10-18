@@ -44,7 +44,7 @@ set -x
 TRANSFORMERS_OFFLINE=1
 
 # Code execution
-model=lightning_logs/version_1918412
+model=lightning_logs/version_408635
 data_dir=data/manual_annotation/all/
 
 
