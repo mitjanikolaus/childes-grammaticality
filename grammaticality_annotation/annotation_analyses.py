@@ -37,7 +37,7 @@ def main():
 
     data_grouped["age"] = data_grouped["age"].astype(int)
 
-    plt.figure(figsize=(11, 5))
+    plt.figure(figsize=(12, 5))
 
     for y_target in ["grammatical", "ambiguous", "ungrammatical"]:
         ax = sns.stripplot(

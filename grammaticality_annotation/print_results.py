@@ -34,7 +34,7 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     best_context_length = results_model.sort_values("val_pearsonr: mean", ascending=False).iloc[0]["context length"]
     print(f"\nBest context length: {best_context_length}\n")
 
-    plt.figure(figsize=(4, 4))
+    plt.figure(figsize=(5, 4))
     plt.errorbar(results_model["context length"], results_model["val_pearsonr: mean"], results_model["val_pearsonr: std"],
                  fmt="o--", elinewidth=1, color=BASE_COLOR)
     plt.xlabel("Context length")
@@ -61,7 +61,7 @@ def create_results_train_data_size(results, context_length, model="microsoft/deb
     results_model = results_context_length[results_context_length.model == model].copy()
 
     results_model["train_data_samples"] = results_model["train_data_size"] * MAX_NUM_TRAIN_SAMPLES
-    plt.figure(figsize=(4, 4))
+    plt.figure(figsize=(5, 4))
     plt.errorbar(results_model["train_data_samples"], results_model["pearson_r: mean"], results_model["pearson_r: std"],
                  fmt="o--", elinewidth=1, color=BASE_COLOR)
     plt.xlabel("Number of training data samples")
