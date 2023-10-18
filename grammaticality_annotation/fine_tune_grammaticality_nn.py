@@ -70,7 +70,9 @@ class CHILDESGrammarModel(LightningModule):
 
         if class_weights:
             weight = torch.tensor(class_weights)
-            self.loss_fct = CrossEntropyLoss(weight=weight)
+        else:
+            weight = torch.ones(num_labels)
+        self.loss_fct = CrossEntropyLoss(weight=weight)
 
         self.dataset = dataset
         self.random_seed = random_seed
