@@ -34,9 +34,8 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
     best_context_length = results_model.sort_values("val_pearsonr: mean", ascending=False).iloc[0]["context length"]
     print(f"\nBest context length: {best_context_length}\n")
 
-    results_model["val_pearsonr: stderr"] = results_model["val_pearsonr: std"].apply(lambda x: x/np.sqrt(3))
     plt.figure(figsize=(4, 4))
-    plt.errorbar(results_model["context length"], results_model["val_pearsonr: mean"], results_model["val_pearsonr: stderr"],
+    plt.errorbar(results_model["context length"], results_model["val_pearsonr: mean"], results_model["val_pearsonr: std"],
                  fmt="o--", elinewidth=1, color=BASE_COLOR)
     plt.xlabel("Context length")
     plt.ylabel("PCC")
@@ -45,7 +44,7 @@ def create_results_table_context_lengths(results, model="microsoft/deberta-v3-la
 
     results_model["val_pearsonr"] = results_model["val_pearsonr: mean"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0')) + " $\pm$ " + results["val_pearsonr: std"].apply("{:.03f}".format).apply(lambda x: x.lstrip('0'))
 
-    results_model.drop(columns=["pearson_r: mean", "pearson_r: std", "Pearson r", "accuracy: mean", "accuracy: std", "Accuracy", "val_pearsonr: mean", "val_pearsonr: std", "val_pearsonr: stderr", "train_data_size"], inplace=True)
+    results_model.drop(columns=["pearson_r: mean", "pearson_r: std", "Pearson r", "accuracy: mean", "accuracy: std", "Accuracy", "val_pearsonr: mean", "val_pearsonr: std", "train_data_size"], inplace=True)
 
     print(results_model.to_markdown(index=False, floatfmt=".2f"))
     print("\n\n\n")
@@ -61,10 +60,9 @@ def create_results_train_data_size(results, context_length, model="microsoft/deb
     results_context_length = results[results["context length"] == context_length].copy()
     results_model = results_context_length[results_context_length.model == model].copy()
 
-    results_model["pearson_r: stderr"] = results_model["pearson_r: std"].apply(lambda x: x/np.sqrt(3))
     results_model["train_data_samples"] = results_model["train_data_size"] * MAX_NUM_TRAIN_SAMPLES
     plt.figure(figsize=(4, 4))
-    plt.errorbar(results_model["train_data_samples"], results_model["pearson_r: mean"], results_model["pearson_r: stderr"],
+    plt.errorbar(results_model["train_data_samples"], results_model["pearson_r: mean"], results_model["pearson_r: std"],
                  fmt="o--", elinewidth=1, color=BASE_COLOR)
     plt.xlabel("Number of training data samples")
     plt.ylabel("PCC")
