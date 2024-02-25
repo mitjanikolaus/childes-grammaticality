@@ -217,4 +217,3 @@ dependencies:
     - pyyaml==6.0.1
     - responses==0.18.0
     - xxhash==3.3.0
-prefix: /linkhome/rech/genzuo01/upu93zz/.conda/envs/childes_grammaticality
