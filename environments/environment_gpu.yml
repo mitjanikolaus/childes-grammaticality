@@ -4,9 +4,6 @@ channels:
   - nvidia
   - conda-forge
   - defaults
-  - https://repo.anaconda.com/pkgs/free
-  - menpo
-  - roebel
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_gnu
@@ -54,7 +51,6 @@ dependencies:
   - cycler=0.11.0=pyhd8ed1ab_0
   - dataclasses=0.8=pyhc8e2a94_3
   - dill=0.3.7=pyhd8ed1ab_0
-  - enchant=2.5.0=h977cf35_0
   - filelock=3.12.2=pyhd8ed1ab_0
   - freetype=2.12.1=hca18f0e_1
   - frozenlist=1.4.0=py38h01eb140_0
@@ -148,10 +144,11 @@ dependencies:
   - platformdirs=3.10.0=pyhd8ed1ab_0
   - pooch=1.7.0=pyha770c72_3
   - protobuf=4.23.3=py38h830738e_0
+  - pyarrow=12.0.1=py38h39356d1_7_cpu
+  - pyarrow-hotfix=0.6=pyhd8ed1ab_0
   - pyasn1=0.4.8=py_0
   - pyasn1-modules=0.2.7=py_0
   - pycparser=2.21=pyhd8ed1ab_0
-  - pyenchant=3.2.2=pyhd8ed1ab_0
   - pyjwt=2.8.0=pyhd8ed1ab_0
   - pyopenssl=23.2.0=pyhd8ed1ab_1
   - pyparsing=3.1.1=pyhd8ed1ab_0
@@ -159,7 +156,6 @@ dependencies:
   - python=3.8.17=he550d4f_0_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
   - python-tzdata=2023.3=pyhd8ed1ab_0
-  - python-xxhash=3.2.0=py38h1de0b5d_0
   - python_abi=3.8=3_cp38
   - pytorch=2.0.1=py3.8_cuda11.8_cudnn8.7.0_0
   - pytorch-cuda=11.8=h7e8668a_5
@@ -167,6 +163,7 @@ dependencies:
   - pytorch-mutex=1.0=cuda
   - pytz=2023.3=pyhd8ed1ab_0
   - pyu2f=0.1.5=pyhd8ed1ab_0
+  - pyyaml=6.0.1=py38h01eb140_1
   - re2=2023.03.02=h8c504da_0
   - readline=8.2=h8228510_1
   - regex=2023.6.3=py38h01eb140_0
@@ -210,10 +207,9 @@ dependencies:
   - zlib=1.2.13=hd590300_5
   - zstd=1.5.2=hfc55251_7
   - pip:
-    - certifi==2023.7.22
-    - datasets==2.14.3
-    - evaluate==0.4.0
-    - pyarrow==12.0.1
-    - pyyaml==6.0.1
-    - responses==0.18.0
-    - xxhash==3.3.0
+      - certifi==2023.7.22
+      - datasets==2.14.3
+      - evaluate==0.4.0
+      - pyenchant==3.2.2
+      - responses==0.18.0
+      - xxhash==3.3.0
