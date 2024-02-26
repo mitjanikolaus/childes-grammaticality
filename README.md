@@ -5,7 +5,16 @@ Automatic annotation of grammaticality for child-caregiver conversations.
 ## Python environment
 
 A python environment can be created using the [environment.yml](environments/environment.yml) file (for
-GPU: [environment_gpu.yml](environments/environment_gpu.yml)). 
+GPU: [environment_gpu.yml](environments/environment_gpu.yml)):
+
+```
+conda env create --file environments/environment.yml
+```
+
+To install the current repo:
+```
+pip install .
+```
 
 Additionally, we need to install [my fork of the pylangacq repo](https://github.com/mitjanikolaus/pylangacq) (The original repo can be found here: [pylangacq](https://github.com/jacksonllee/pylangacq)) using pip:
 ```
@@ -62,7 +71,7 @@ python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsof
 ## Annotate data
 
 ```
-python grmamaticality_annotation/annotate_grammaticality_nn.py --model lightning_logs/version_1918412 --data-dir data/manual_annotation/all
+python grammaticality_annotation/annotate_grammaticality_nn.py --model lightning_logs/version_1918412 --data-dir data/manual_annotation/all
 ```
 
 The data will be annotated with the following coding scheme:
