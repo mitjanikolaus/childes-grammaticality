@@ -4,9 +4,6 @@ from ast import literal_eval
 
 import pandas as pd
 
-from tqdm import tqdm
-tqdm.pandas()
-
 from utils import (
     remove_punctuation,
     str2bool,
@@ -14,27 +11,16 @@ from utils import (
     ANNOTATED_UTTERANCES_FILE,
     split_into_words, PREPROCESSED_UTTERANCES_FILE,
     remove_superfluous_annotations,
-)
-from utils import (
     remove_nonspeech_events,
     IS_UNINTELLIGIBLE,
 )
+from tqdm import tqdm
+
+tqdm.pandas()
 
 DEFAULT_LABEL_PARTIALLY_SPEECH_RELATED = True
 
 DEFAULT_LABEL_PARTIALLY_INTELLIGIBLE = False
-
-# Speech acts that relate to nonverbal/external events
-SPEECH_ACTS_NONVERBAL_EVENTS = [
-    "CR",  # Criticize or point out error in nonverbal act.
-    "PM",  # Praise for motor acts i.e for nonverbal behavior.
-    "WD",  # Warn of danger.
-    "DS",  # Disapprove scold protest disruptive behavior.
-    "AB",  # Approve of appropriate behavior.
-    "TO",  # Mark transfer of object to hearer
-    "ET",  # Express enthusiasm for hearer's performance.
-    "ED",  # Exclaim in disapproval.
-]
 
 
 def is_speech_related(
@@ -96,7 +82,8 @@ def is_intelligible(
 
 
 def annotate(args):
-    utterances = pd.read_csv(args.utterances_file, index_col=0, converters={"pos": literal_eval, "tokens": literal_eval}, dtype={"error": object})
+    utterances = pd.read_csv(args.utterances_file, index_col=0,
+                             converters={"pos": literal_eval, "tokens": literal_eval}, dtype={"error": object})
     utterances.dropna(subset=["transcript_raw"], inplace=True)
     raw_transcripts = utterances["transcript_raw"].apply(
         remove_superfluous_annotations
@@ -124,7 +111,7 @@ def parse_args():
         "--utterances-file",
         default=PREPROCESSED_UTTERANCES_FILE,
         type=str,
-        help="Path to utterances annotated with speech acts",
+        help="Path to preprocessed utterances file",
     )
     argparser.add_argument(
         "--out",

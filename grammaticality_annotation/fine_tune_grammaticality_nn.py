@@ -68,7 +68,7 @@ class CHILDESGrammarModel(LightningModule):
         self.metric_acc = evaluate.load("accuracy", experiment_id=str(torch.rand(10)))
         self.metrics = [self.metric_mcc, self.metric_acc, self.metric_pearson_r]
 
-        if class_weights:
+        if class_weights is not None:
             weight = torch.tensor(class_weights)
         else:
             weight = torch.ones(num_labels)
