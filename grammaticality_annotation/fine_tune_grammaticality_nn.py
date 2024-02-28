@@ -273,7 +273,10 @@ def main(args):
         early_stop_callback = EarlyStopping(monitor="val_pearsonr", patience=10, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
+        logging_dir = os.path.expanduser("~/data/childes_grammaticality")
+        os.makedirs(logging_dir, exist_ok=True)
         trainer = Trainer(
+            default_root_dir=logging_dir,
             max_epochs=1000,
             accelerator="auto",
             devices=1 if torch.cuda.is_available() else None,
