@@ -279,6 +279,7 @@ def main(args):
             default_root_dir=logging_dir,
             max_epochs=1000,
             accelerator="auto",
+            val_check_interval=0.25,
             devices=1 if torch.cuda.is_available() else None,
             callbacks=[checkpoint_callback, early_stop_callback],
         )
