@@ -270,7 +270,7 @@ def main(args):
 
         checkpoint_callback = ModelCheckpoint(monitor="val_pearsonr", mode="max", save_last=True,
                                                 filename="{epoch:02d}-{val_pearsonr:.2f}")
-        early_stop_callback = EarlyStopping(monitor="val_pearsonr", patience=10, verbose=True, mode="max",
+        early_stop_callback = EarlyStopping(monitor="val_pearsonr", patience=20, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
         logging_dir = os.path.expanduser("~/data/childes_grammaticality")
