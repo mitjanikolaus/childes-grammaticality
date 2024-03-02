@@ -62,16 +62,22 @@ python grammaticality_annotation/train_grammaticality_baseline.py --model svc --
 
 ### Transformer-based models
 
-These models are only fine-tuned on the task. Example for DeBERTa with context length 8:
+These models are only fine-tuned on the task. Example for DeBERTa:
 ```
-python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsoft/deberta-v3-large --context-length 8
+python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsoft/deberta-v3-large
 ```
 
+If you are using a small GPU you will most likely need to decrease the batch size for finetuning. The following command
+can be used to train models which reach a Pearson Correlation Coefficient (PCC) of 0.75 on the test set, even better
+than what the score reported in the paper (thanks to improved hyperparameters).
+```
+python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsoft/deberta-v3-large --context-length 8 --batch-size 5 --accumulate_grad_batches 20 --learning-rate 5e-6
+```
 
 ## Annotate data
 
 ```
-python grammaticality_annotation/annotate_grammaticality_nn.py --model lightning_logs/version_1918412 --data-dir data/manual_annotation/all
+python grammaticality_annotation/annotate_grammaticality_nn.py --model lightning_logs/version_123 --data-dir data/manual_annotation/all
 ```
 
 The data will be annotated with the following coding scheme:
