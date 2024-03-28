@@ -20,7 +20,7 @@ DATA_SPLIT_RANDOM_STATE = 8
 
 DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
 DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_fixes_childes_db")
-DATA_PATH_CHILDES_DB_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db")
+DATA_PATH_CHILDES_DB_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db.csv")
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
