@@ -1,0 +1,825 @@
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels,age
+13526,Thomas/021011.cha,CAR,ah I've worked out why we can't do it.,,,34
+13527,Thomas/021011.cha,CAR,there's a piece of paper.,,,34
+13528,Thomas/021011.cha,CAR,look.,,,34
+13529,Thomas/021011.cha,CAR,over the lock.,,,34
+13530,Thomas/021011.cha,CAR,can you see?,,,34
+13531,Thomas/021011.cha,CAR,that's better.,,,34
+13532,Thomas/021011.cha,CAR,that must be so it doesn't get damaged.,,,34
+13533,Thomas/021011.cha,CAR,it's a little piece of clear plastic.,,,34
+13534,Thomas/021011.cha,CHI,on your head uh.,1.0,,34
+13535,Thomas/021011.cha,CAR,there.,,,34
+13536,Thomas/021011.cha,CAR,now the lock.,,,34
+13537,Thomas/021011.cha,CAR,ah look.,,,34
+13538,Thomas/021011.cha,CAR,the key goes in easily now.,,,34
+13539,Thomas/021011.cha,CAR,can't unlock it.,,,34
+13540,Thomas/021011.cha,CHI,I open it.,-1.0,tense_aspect,34
+13541,Thomas/021011.cha,CAR,no.,,,34
+13542,Thomas/021011.cha,CAR,it won't open now.,,,34
+13543,Thomas/021011.cha,CAR,we'll put the key back in and you turn the key round.,,,34
+13544,Thomas/021011.cha,CHI,I need see it open.,-1.0,tense_aspect,34
+13545,Thomas/021011.cha,CHI,it sticks.,1.0,,34
+13546,Thomas/021011.cha,CAR,it's sticking isn't it?,,,34
+13547,Thomas/021011.cha,CAR,there we are.,,,34
+13548,Thomas/021011.cha,CAR,oh it's open now.,,,34
+13549,Thomas/021011.cha,CHI,oh yes.,1.0,,34
+13550,Thomas/021011.cha,CAR,that's lovely isn't it?,,,34
+13551,Thomas/021011.cha,CAR,there we are.,,,34
+13552,Thomas/021011.cha,CHI,stick.,,,34
+13553,Thomas/021011.cha,CAR,I don't think we need to stick it on now do you?,,,34
+13554,Thomas/021011.cha,CHI,I think stick on here.,-1.0,"subject, tense_aspect",34
+13555,Thomas/021011.cha,CAR,I think we'll unlock it and we'll pop the key in just inside there for now and then we know where it is.,,,34
+13556,Thomas/021011.cha,CAR,I think that's a lovely present.,,,34
+13557,Thomas/021011.cha,CAR,and I still can't work out whether it's black or blue.,,,34
+13558,Thomas/021011.cha,CAR,what do you think?,,,34
+13559,Thomas/021011.cha,CHI,just open it.,0.0,,34
+13560,Thomas/021011.cha,CHI,open it first.,0.0,,34
+13561,Thomas/021011.cha,CAR,you wanna open it.,,,34
+13562,Thomas/021011.cha,CAR,what would you like to put inside?,,,34
+13563,Thomas/021011.cha,CHI,this.,,,34
+13564,Thomas/021011.cha,CAR,"well they really could do with going in the bin, Thomas.",,,34
+13565,Thomas/021011.cha,CAR,don't you think?,,,34
+13566,Thomas/021011.cha,CHI,no.,,,34
+13567,Thomas/021011.cha,CHI,wanna be Fireman Sam.,-1.0,subject,34
+13568,Thomas/021011.cha,CAR,you wanna be Fireman Sam.,,,34
+13569,Thomas/021011.cha,CHI,yes.,,,34
+13570,Thomas/021011.cha,CAR,okay.,,,34
+13571,Thomas/021011.cha,CHI,"Mummy, you say help.",1.0,,34
+13572,Thomas/021011.cha,CAR,have I got to say help?,,,34
+13573,Thomas/021011.cha,CAR,help help help help.,,,34
+13574,Thomas/021011.cha,CAR,"hello, Fireman Sam.",,,34
+13575,Thomas/021011.cha,CHI,I Fireman Sam.,-1.0,verb,34
+13576,Thomas/021011.cha,CHI,fireman.,,,34
+13577,Thomas/021011.cha,CAR,you're Fireman Sam are you?,,,34
+13578,Thomas/021011.cha,CHI,yes.,,,34
+13579,Thomas/021011.cha,CHI,jump over my gate.,0.0,,34
+13580,Thomas/021011.cha,CAR,jumping over your gate.,,,34
+13581,Thomas/021011.cha,CAR,you're normally a dustbin man when you've seen the dustbin men on a Monday.,,,34
+13582,Thomas/021011.cha,CHI,yes.,,,34
+13583,Thomas/021011.cha,CAR,you're a fireman today are you?,,,34
+13584,Thomas/021011.cha,CAR,"ah have you come to rescue me, darling?",,,34
+13585,Thomas/021011.cha,CAR,ah you're lovely.,,,34
+13586,Thomas/021011.cha,CAR,shall we have a drink?,,,34
+13587,Thomas/021011.cha,CAR,and then we better go to Didsbury before the shops close.,,,34
+13588,Thomas/021011.cha,CAR,yes.,,,34
+13589,Thomas/021011.cha,CAR,okay.,,,34
+13590,Thomas/021011.cha,CAR,and we'll talk a little more later on.,,,34
+13591,Thomas/021011.cha,CAR,how's that?,,,34
+13592,Thomas/021011.cha,CHI,wanna talk now.,-1.0,subject,34
+13593,Thomas/021011.cha,CAR,you wanna talk now.,,,34
+13594,Thomas/021011.cha,CHI,yes.,,,34
+13595,Thomas/021011.cha,CHI,"Purdie, that Fireman Sam.",-1.0,verb,34
+13596,Thomas/021011.cha,CAR,are you telling Purdie you're a fireman?,,,34
+13597,Thomas/021011.cha,CHI,yes.,,,34
+13598,Thomas/021011.cha,CHI,lift Purdie's tail.,0.0,,34
+13599,Thomas/021011.cha,CAR,no.,,,34
+13600,Thomas/021011.cha,CAR,don't.,,,34
+13601,Thomas/021011.cha,CAR,leave Purdie's tail.,,,34
+13602,Thomas/021011.cha,CAR,no.,,,34
+13603,Thomas/021011.cha,CAR,sometimes firemen have to rescue pussycats from trees don't they?,,,34
+13604,Thomas/021011.cha,CHI,um.,,,34
+13605,Thomas/021011.cha,CHI,a ladder climb up.,-1.0,other,34
+13606,Thomas/021011.cha,CAR,that's right.,,,34
+13607,Thomas/021011.cha,CAR,climbing up a ladder.,,,34
+13608,Thomas/021011.cha,CAR,oh Purdie's going now.,,,34
+13609,Thomas/021011.cha,CHI,Purdie going down the ladder.,-1.0,present_progressive,34
+13610,Thomas/021011.cha,CAR,she's going down the ladder.,,,34
+13611,Thomas/021011.cha,CAR,I wonder where she's going to?,,,34
+13612,Thomas/021011.cha,CHI,looking the kitchen for a Wendy's hat.,-1.0,"subject, present_progressive, preposition, determiner",34
+13613,Thomas/021011.cha,CAR,she's looking in the kitchen for what?,,,34
+13614,Thomas/021011.cha,CHI,Wend Wendy's hat.,1.0,,34
+13615,Thomas/021011.cha,CAR,Wendy's hat.,,,34
+13616,Thomas/021011.cha,CAR,what do you mean by Wendy's hat?,,,34
+13617,Thomas/021011.cha,CHI,that's Wendy's hat there.,1.0,,34
+13618,Thomas/021011.cha,CAR,ah I see.,,,34
+13619,Thomas/021011.cha,CAR,it's the two yellow helmets.,,,34
+13620,Thomas/021011.cha,CAR,well you're using it as a fireman's helmet but really they're they're construction site helmets aren't they?,,,34
+13621,Thomas/021011.cha,CAR,for Bob the Builder and Wendy.,,,34
+13622,Thomas/021011.cha,CAR,okay.,,,34
+13623,Thomas/021011.cha,CHI,and dustbin men.,-1.0,determiner,34
+13624,Thomas/021011.cha,CAR,and the dustbin men.,,,34
+13625,Thomas/021011.cha,CHI,I'm not a fireman.,1.0,,34
+13626,Thomas/021011.cha,CHI,a dustbin man.,0.0,,34
+13627,Thomas/021011.cha,CAR,are you?,,,34
+13628,Thomas/021011.cha,CAR,you're not a fireman.,,,34
+13629,Thomas/021011.cha,CAR,you're a dustbin man.,,,34
+13630,Thomas/021011.cha,CAR,I thought you would be.,,,34
+13631,Thomas/021011.cha,CHI,taking out the rubbish.,1.0,,34
+13632,Thomas/021011.cha,CAR,yes.,,,34
+13633,Thomas/021011.cha,CAR,the dustbin man had a hat on today but his was a woollen hat.,,,34
+13634,Thomas/021011.cha,CAR,it wasn't a yellow helmet was it?,,,34
+13635,Thomas/021011.cha,CAR,right.,,,34
+13636,Thomas/021011.cha,CAR,okay.,,,34
+13637,Thomas/021011.cha,CAR,are you singing?,,,34
+13638,Thomas/021011.cha,CHI,you find Thomas's face.,0.0,,34
+13639,Thomas/021011.cha,CAR,find Thomas's face.,,,34
+13640,Thomas/021011.cha,CAR,where is Thomas's face?,,,34
+13641,Thomas/021011.cha,CHI,I not know.,-1.0,auxiliary,34
+13642,Thomas/021011.cha,CAR,I don't know either.,,,34
+13643,Thomas/021011.cha,CAR,is it hidden beneath that towel?,,,34
+13644,Thomas/021011.cha,CAR,oh there he is.,,,34
+13645,Thomas/021011.cha,CAR,"hello, sweetheart.",,,34
+13646,Thomas/021011.cha,CAR,are you alright?,,,34
+13647,Thomas/021011.cha,CHI,yes.,,,34
+13648,Thomas/021011.cha,CAR,are you hiding?,,,34
+13649,Thomas/021011.cha,CHI,yes.,,,34
+13650,Thomas/021011.cha,CAR,hiding from Mummy.,,,34
+13651,Thomas/021011.cha,CHI,yes.,,,34
+13652,Thomas/021011.cha,CAR,why are you hiding?,,,34
+13653,Thomas/021011.cha,CAR,pardon.,,,34
+13654,Thomas/021011.cha,CHI,not called.,-1.0,"subject, auxiliary, object",34
+13655,Thomas/021011.cha,CHI,I not called Aunty Mabel.,-1.0,auxiliary,34
+13656,Thomas/021011.cha,CAR,are you not?,,,34
+13657,Thomas/021011.cha,CAR,you're not called Aunty Mabel are you?,,,34
+13658,Thomas/021011.cha,CAR,well we're going to change you fairly soon aren't we?,,,34
+13659,Thomas/021011.cha,CHI,yes.,,,34
+13660,Thomas/021011.cha,CHI,not now.,1.0,,34
+13661,Thomas/021011.cha,CAR,not now.,,,34
+13662,Thomas/021011.cha,CAR,alright.,,,34
+13663,Thomas/021011.cha,CAR,would you like an apple?,,,34
+13664,Thomas/021011.cha,CHI,uh no thanks.,1.0,,34
+13665,Thomas/021011.cha,CAR,are you sure?,,,34
+13666,Thomas/021011.cha,CHI,I'm sure.,1.0,,34
+13667,Thomas/021011.cha,CAR,what about a strawberry?,,,34
+13668,Thomas/021011.cha,CHI,oh no.,1.0,,34
+13669,Thomas/021011.cha,CHI,yes.,,,34
+13670,Thomas/021011.cha,CHI,yes.,,,34
+13671,Thomas/021011.cha,CAR,you'd you'd like a strawberry.,,,34
+13672,Thomas/021011.cha,CHI,I I need a dumper truck for a Smartie.,1.0,,34
+13673,Thomas/021011.cha,CAR,no.,,,34
+13674,Thomas/021011.cha,CAR,I don't think so.,,,34
+13675,Thomas/021011.cha,CHI,yes.,,,34
+13676,Thomas/021011.cha,CAR,"I don't think so, Thomas.",,,34
+13677,Thomas/021011.cha,CHI,yes.,,,34
+13678,Thomas/021011.cha,CAR,would you like a strawberry?,,,34
+13679,Thomas/021011.cha,CHI,Mummy need a dumper truck and a big digger to the Smarties.,-1.0,subject,34
+13680,Thomas/021011.cha,CHI,Smartie.,,,34
+13681,Thomas/021011.cha,CAR,you can have a few Smarties and that's all.,,,34
+13682,Thomas/021011.cha,CHI,yes.,,,34
+13683,Thomas/021011.cha,CHI,I need lots.,-1.0,"preposition, object",34
+13684,Thomas/021011.cha,CAR,no.,,,34
+13685,Thomas/021011.cha,CHI,yes.,,,34
+13686,Thomas/021011.cha,CAR,you either have a few or none at all.,,,34
+13687,Thomas/021011.cha,CHI,what I going do?,-1.0,present_progressive,34
+13688,Thomas/021011.cha,CAR,what are you going to do?,,,34
+13689,Thomas/021011.cha,CAR,well if I were you I accept just a few.,,,34
+13690,Thomas/021011.cha,CAR,and then you get some don't you?,,,34
+13691,Thomas/021011.cha,CAR,now then the rest of the strawberries are for tea Thomas so just a little bit there.,,,34
+13692,Thomas/021011.cha,CAR,there you are.,,,34
+13693,Thomas/021011.cha,CAR,how's that?,,,34
+13694,Thomas/021011.cha,CHI,thanks.,,,34
+13695,Thomas/021011.cha,CAR,and would you like a dumper truck with some Smarties in?,,,34
+13696,Thomas/021011.cha,CHI,yes.,,,34
+13697,Thomas/021011.cha,CHI,this is a street lamp.,1.0,,34
+13698,Thomas/021011.cha,CHI,"this is a street lamp, Mummy.",1.0,,34
+13699,Thomas/021011.cha,CHI,this is a tunnel.,1.0,,34
+13700,Thomas/021011.cha,CAR,oh I see.,,,34
+13701,Thomas/021011.cha,CHI,I put the poo and cat poo.,-1.0,"determiner, other",34
+13702,Thomas/021011.cha,CAR,"Thomas, don't be ridiculous.",,,34
+13703,Thomas/021011.cha,CHI,stop it.,1.0,,34
+13704,Thomas/021011.cha,CAR,anymore talk like that and you won't get your Smarties.,,,34
+13705,Thomas/021011.cha,CHI,on this this train.,-1.0,"subject, verb",34
+13706,Thomas/021011.cha,CHI,more like chocolate balls actually.,-1.0,"subject, verb",34
+13707,Thomas/021011.cha,CAR,what's more like chocolate balls?,,,34
+13708,Thomas/021011.cha,CHI,these.,,,34
+13709,Thomas/021011.cha,CAR,the strawberries.,,,34
+13710,Thomas/021011.cha,CHI,yes.,,,34
+13711,Thomas/021011.cha,CAR,right.,,,34
+13712,Thomas/021011.cha,CAR,here you are.,,,34
+13713,Thomas/021011.cha,CAR,a few Smarties.,,,34
+13714,Thomas/021011.cha,CAR,and don't ask for anymore because you're not getting anymore.,,,34
+13715,Thomas/021011.cha,CHI,anymore later.,-1.0,"subject, verb",34
+13716,Thomas/021011.cha,CAR,no.,,,34
+13717,Thomas/021011.cha,CHI,I'm just saying anymore later.,1.0,,34
+13718,Thomas/021011.cha,CAR,well you can say anymore later but you're not getting anymore later.,,,34
+13719,Thomas/021011.cha,CAR,okay.,,,34
+13720,Thomas/021011.cha,CHI,oh there's my dumper truck over there.,1.0,,34
+13721,Thomas/021011.cha,CAR,Mummy has got a little bit of ironing to do so shall I do that while I'm talking to you?,,,34
+13722,Thomas/021011.cha,CHI,no.,,,34
+13723,Thomas/021011.cha,CHI,I not need that.,-1.0,auxiliary,34
+13724,Thomas/021011.cha,CHI,"Mummy, don't.",0.0,,34
+13725,Thomas/021011.cha,CHI,"Mummy, need you sit there.",-1.0,"subject, tense_aspect",34
+13726,Thomas/021011.cha,CAR,"well I can't sit there, darling.",,,34
+13727,Thomas/021011.cha,CAR,because I'm ironing.,,,34
+13728,Thomas/021011.cha,CAR,I can stand there.,,,34
+13729,Thomas/021011.cha,CAR,that's where I was going to stand.,,,34
+13730,Thomas/021011.cha,CHI,no.,,,34
+13731,Thomas/021011.cha,CHI,no reach that dumper truck.,-1.0,"subject, auxiliary, other",34
+13732,Thomas/021011.cha,CAR,can you not reach it?,,,34
+13733,Thomas/021011.cha,CHI,no.,,,34
+13734,Thomas/021011.cha,CAR,"sorry, love.",,,34
+13735,Thomas/021011.cha,CHI,silly Thomas.,1.0,,34
+13736,Thomas/021011.cha,CAR,there.,,,34
+13737,Thomas/021011.cha,CAR,if I put the put the board there that's not in your way is it?,,,34
+13738,Thomas/021011.cha,CAR,and I'm a bit stick now because Daddy has been sorting all the extension leads out and the one that Mummy uses for her ironing I think is somewhere else now.,,,34
+13739,Thomas/021011.cha,CAR,"oh dear dear, Thomas.",,,34
+13740,Thomas/021011.cha,CHI,oh sorry.,1.0,,34
+13741,Thomas/021011.cha,CHI,I not need it.,-1.0,auxiliary,34
+13742,Thomas/021011.cha,CHI,lots of Smarties on it.,-1.0,verb,34
+13743,Thomas/021011.cha,CHI,leaving the people.,-1.0,"subject, present_progressive",34
+13744,Thomas/021011.cha,CAR,goodness.,,,34
+13745,Thomas/021011.cha,CAR,what's this?,,,34
+13746,Thomas/021011.cha,CHI,I not know.,-1.0,other,34
+13747,Thomas/021011.cha,CAR,this is a brand new extension lead.,,,34
+13748,Thomas/021011.cha,CAR,I've never had it out of the box.,,,34
+13749,Thomas/021011.cha,CHI,"here you are, Mummy.",1.0,,34
+13750,Thomas/021011.cha,CHI,a train brought a Smartie for you.,1.0,,34
+13751,Thomas/021011.cha,CAR,oh how beautiful.,,,34
+13752,Thomas/021011.cha,CAR,thank you so much.,,,34
+13753,Thomas/021011.cha,CAR,a nice blue Smartie.,,,34
+13754,Thomas/021011.cha,CAR,look at this.,,,34
+13755,Thomas/021011.cha,CAR,this is smart isn't it?,,,34
+13756,Thomas/021011.cha,CHI,yes.,,,34
+13757,Thomas/021011.cha,CHI,choo choo.,0.0,,34
+13758,Thomas/021011.cha,CAR,look.,,,34
+13759,Thomas/021011.cha,CAR,"we use these, Thomas.",,,34
+13760,Thomas/021011.cha,CAR,when we're trying to plug something in.,,,34
+13761,Thomas/021011.cha,CAR,this lead on the iron is to short to go in that plug.,,,34
+13762,Thomas/021011.cha,CAR,I need to stand here.,,,34
+13763,Thomas/021011.cha,CAR,so you use this.,,,34
+13764,Thomas/021011.cha,CAR,it's an extension lead.,,,34
+13765,Thomas/021011.cha,CHI,have this.,0.0,,34
+13766,Thomas/021011.cha,CHI,that's my favorite.,1.0,,34
+13767,Thomas/021011.cha,CAR,what's your favorite?,,,34
+13768,Thomas/021011.cha,CAR,the blue one.,,,34
+13769,Thomas/021011.cha,CHI,yes.,,,34
+13770,Thomas/021011.cha,CHI,this coffee one.,1.0,,34
+13771,Thomas/021011.cha,CAR,the coffee one.,,,34
+13772,Thomas/021011.cha,CAR,do you think it tastes like coffee?,,,34
+13773,Thomas/021011.cha,CHI,yes.,,,34
+13774,Thomas/021011.cha,CAR,look.,,,34
+13775,Thomas/021011.cha,CAR,I'm plugging the iron into that.,,,34
+13776,Thomas/021011.cha,CAR,let's hope it works.,,,34
+13777,Thomas/021011.cha,CAR,yes.,,,34
+13778,Thomas/021011.cha,CAR,the light has lit up.,,,34
+13779,Thomas/021011.cha,CAR,oh that's good isn't it?,,,34
+13780,Thomas/021011.cha,CAR,I don't normally bother ironing your socks.,,,34
+13781,Thomas/021011.cha,CHI,ironing my socks.,1.0,,34
+13782,Thomas/021011.cha,CAR,no.,,,34
+13783,Thomas/021011.cha,CAR,I don't usually bother ironing your socks but they've got so crumpled up.,,,34
+13784,Thomas/021011.cha,CAR,they've been drying on the radiator and they've been screwed up.,,,34
+13785,Thomas/021011.cha,CAR,I'll just give them a quick press with that.,,,34
+13786,Thomas/021011.cha,CAR,you've got lots of socks haven't you?,,,34
+13787,Thomas/021011.cha,CAR,you need to eat those.,,,34
+13788,Thomas/021011.cha,CAR,they're Smarties.,,,34
+13789,Thomas/021011.cha,CHI,no.,,,34
+13790,Thomas/021011.cha,CHI,strawberries.,,,34
+13791,Thomas/021011.cha,CAR,oh the strawberries.,,,34
+13792,Thomas/021011.cha,CAR,are the strawberries nice?,,,34
+13793,Thomas/021011.cha,CHI,um.,,,34
+13794,Thomas/021011.cha,CAR,oh well that's your your little Valentine strawberry.,,,34
+13795,Thomas/021011.cha,CAR,there we are.,,,34
+13796,Thomas/021011.cha,CAR,shall we light this special candle?,,,34
+13797,Thomas/021011.cha,CAR,that's a Valentines Day candle isn't it?,,,34
+13798,Thomas/021011.cha,CHI,um.,,,34
+13799,Thomas/021011.cha,CAR,we'll do that just while the iron's heating up.,,,34
+13800,Thomas/021011.cha,CHI,Mummy need to do it.,-1.0,sv_agreement,34
+13801,Thomas/021011.cha,CAR,oh you can't.,,,34
+13802,Thomas/021011.cha,CAR,no no.,,,34
+13803,Thomas/021011.cha,CAR,we're not blowing it out yet.,,,34
+13804,Thomas/021011.cha,CAR,we've just lit it.,,,34
+13805,Thomas/021011.cha,CAR,I can't let you strike the match.,,,34
+13806,Thomas/021011.cha,CAR,there.,,,34
+13807,Thomas/021011.cha,CAR,how's that?,,,34
+13808,Thomas/021011.cha,CHI,that's a match.,1.0,,34
+13809,Thomas/021011.cha,CAR,this is a match.,,,34
+13810,Thomas/021011.cha,CAR,that's the candle.,,,34
+13811,Thomas/021011.cha,CHI,it smells like a cheeky worm.,1.0,,34
+13812,Thomas/021011.cha,CAR,it smells like what?,,,34
+13813,Thomas/021011.cha,CHI,cheeky worm.,-1.0,determiner,34
+13814,Thomas/021011.cha,CAR,a what worm?,,,34
+13815,Thomas/021011.cha,CHI,a cheeky worm.,1.0,,34
+13816,Thomas/021011.cha,CAR,a cheeky worm.,,,34
+13817,Thomas/021011.cha,CHI,yes.,,,34
+13818,Thomas/021011.cha,CAR,"well it's sposta have a nice smell, Thomas.",,,34
+13819,Thomas/021011.cha,CAR,I don't think the smell has had a chance to get out yet.,,,34
+13820,Thomas/021011.cha,CAR,but it smells nice.,,,34
+13821,Thomas/021011.cha,CHI,smells like dirty.,-1.0,subject,34
+13822,Thomas/021011.cha,CAR,smells like dirty.,,,34
+13823,Thomas/021011.cha,CAR,oh I don't think it does.,,,34
+13824,Thomas/021011.cha,CAR,oh the iron sounds a bit like a snake doesn't it?,,,34
+13825,Thomas/021011.cha,CAR,what's it saying?,,,34
+13826,Thomas/021011.cha,CAR,what's the iron saying?,,,34
+13827,Thomas/021011.cha,CAR,um.,,,34
+13828,Thomas/021011.cha,CAR,psh.,,,34
+13829,Thomas/021011.cha,CAR,it's a steam iron.,,,34
+13830,Thomas/021011.cha,CAR,like the steam train.,,,34
+13831,Thomas/021011.cha,CAR,it's a steam iron.,,,34
+13832,Thomas/021011.cha,CHI,is this the train?,1.0,,34
+13833,Thomas/021011.cha,CAR,um.,,,34
+13834,Thomas/021011.cha,CAR,it sounds like a steam train.,,,34
+13835,Thomas/021011.cha,CAR,anything with steam makes a noise doesn't it?,,,34
+13836,Thomas/021011.cha,CHI,it's a train.,1.0,,34
+13837,Thomas/021011.cha,CAR,um.,,,34
+13838,Thomas/021011.cha,CHI,put some.,-1.0,"subject, object",34
+13839,Thomas/021011.cha,CHI,put some letters in it.,0.0,,34
+13840,Thomas/021011.cha,CAR,oh I see.,,,34
+13841,Thomas/021011.cha,CAR,you're pretending the Smarties are letters in the back of the train are you?,,,34
+13842,Thomas/021011.cha,CHI,it's a mail train.,1.0,,34
+13843,Thomas/021011.cha,CAR,it's a mail train.,,,34
+13844,Thomas/021011.cha,CAR,"and where's it going to, Thomas?",,,34
+13845,Thomas/021011.cha,CHI,it's Mummy's house.,0.0,,34
+13846,Thomas/021011.cha,CAR,Mummy's house.,,,34
+13847,Thomas/021011.cha,CHI,it's going the wrong way.,1.0,,34
+13848,Thomas/021011.cha,CAR,oh that's lovely.,,,34
+13849,Thomas/021011.cha,CAR,are there lots of Valentines cards inside the train?,,,34
+13850,Thomas/021011.cha,CHI,yes.,,,34
+13851,Thomas/021011.cha,CAR,going to Mummy's house.,,,34
+13852,Thomas/021011.cha,CHI,yes.,,,34
+13853,Thomas/021011.cha,CAR,are they all for Mummy?,,,34
+13854,Thomas/021011.cha,CHI,yes.,,,34
+13855,Thomas/021011.cha,CAR,oh how lovely.,,,34
+13856,Thomas/021011.cha,CAR,Daddy's going to be a little bit cross isn't he?,,,34
+13857,Thomas/021011.cha,CHI,yes.,,,34
+13858,Thomas/021011.cha,CHI,look.,,,34
+13859,Thomas/021011.cha,CHI,just one.,0.0,,34
+13860,Thomas/021011.cha,CAR,oh thank you.,,,34
+13861,Thomas/021011.cha,CAR,you're handing all these Smarties away.,,,34
+13862,Thomas/021011.cha,CAR,are you sure?,,,34
+13863,Thomas/021011.cha,CHI,you eat it.,0.0,,34
+13864,Thomas/021011.cha,CAR,can I eat it?,,,34
+13865,Thomas/021011.cha,CAR,are you sure?,,,34
+13866,Thomas/021011.cha,CHI,sure.,,,34
+13867,Thomas/021011.cha,CAR,"oh thank you, darling.",,,34
+13868,Thomas/021011.cha,CAR,very kind of you.,,,34
+13869,Thomas/021011.cha,CAR,thank you.,,,34
+13870,Thomas/021011.cha,CHI,and I go up the train.,-1.0,tense_aspect,34
+13871,Thomas/021011.cha,CHI,you're poorly Mummy.,-1.0,other,34
+13872,Thomas/021011.cha,CHI,you're poorly.,-1.0,other,34
+13873,Thomas/021011.cha,CAR,um well it was the hospital.,,,34
+13874,Thomas/021011.cha,CAR,it was the hospital ringing Mummy.,,,34
+13875,Thomas/021011.cha,CAR,I've just got to go for a check up.,,,34
+13876,Thomas/021011.cha,CAR,people do now and again.,,,34
+13877,Thomas/021011.cha,CHI,check up.,-1.0,determiner,34
+13878,Thomas/021011.cha,CAR,yes.,,,34
+13879,Thomas/021011.cha,CAR,a check up.,,,34
+13880,Thomas/021011.cha,CAR,you know like we go to the Doctor's.,,,34
+13881,Thomas/021011.cha,CAR,and Doctor's just check us over to see we're alright.,,,34
+13882,Thomas/021011.cha,CAR,well Mummy has to go to the hospital in March.,,,34
+13883,Thomas/021011.cha,CAR,and that was the lady just phoning up to to see if we could go.,,,34
+13884,Thomas/021011.cha,CAR,or if I could go.,,,34
+13885,Thomas/021011.cha,CHI,and me too.,1.0,,34
+13886,Thomas/021011.cha,CAR,I'm sure you'll be with me.,,,34
+13887,Thomas/021011.cha,CAR,yes.,,,34
+13888,Thomas/021011.cha,CHI,what about Daddy?,1.0,,34
+13889,Thomas/021011.cha,CAR,uh well Daddy might come as well.,,,34
+13890,Thomas/021011.cha,CAR,I don't know.,,,34
+13891,Thomas/021011.cha,CAR,it's at one o'clock on Thursday the ninth of March.,,,34
+13892,Thomas/021011.cha,CAR,Daddy might very well.,,,34
+13893,Thomas/021011.cha,CAR,it might be Daddy's lunchtime then.,,,34
+13894,Thomas/021011.cha,CAR,Daddy might call to look after you so that you don't have to come to the hospital.,,,34
+13895,Thomas/021011.cha,CAR,they're quite exciting places to look at but sometimes.,,,34
+13896,Thomas/021011.cha,CHI,where's that big brown red post box?,1.0,,34
+13897,Thomas/021011.cha,CAR,oh oh that's a different hospital.,,,34
+13898,Thomas/021011.cha,CAR,yes.,,,34
+13899,Thomas/021011.cha,CAR,yes.,,,34
+13900,Thomas/021011.cha,CAR,you're thinking about the one in York aren't you?,,,34
+13901,Thomas/021011.cha,CAR,where there's a a huge post box at the entrance to the hospital.,,,34
+13902,Thomas/021011.cha,CAR,but this is Withington Hospital just down the road.,,,34
+13903,Thomas/021011.cha,CAR,and they can be exciting places to watch but if you're waiting a long time which sometimes you are I think you'll get terribly bored.,,,34
+13904,Thomas/021011.cha,CAR,do you remember when we went to Wythenshaw last?,,,34
+13905,Thomas/021011.cha,CAR,Wythenshaw Hospital.,,,34
+13906,Thomas/021011.cha,CAR,in the waiting room there was that beautiful big red bus.,,,34
+13907,Thomas/021011.cha,CAR,and Mummy and Daddy had tried all over the place to buy a big red bus and we couldn't find one.,,,34
+13908,Thomas/021011.cha,CAR,and we went to the Outpatients in Wythenshaw Hospital and they had a beautiful big red bus.,,,34
+13909,Thomas/021011.cha,CAR,and you played with it all the time.,,,34
+13910,Thomas/021011.cha,CAR,you probably don't remember that.,,,34
+13911,Thomas/021011.cha,CHI,you sing it.,1.0,,34
+13912,Thomas/021011.cha,CAR,I sing it.,,,34
+13913,Thomas/021011.cha,CAR,"I can't sing it, darling.",,,34
+13914,Thomas/021011.cha,CHI,"Mummy, you sing a thing.",1.0,,34
+13915,Thomas/021011.cha,CAR,what do you want me to sing?,,,34
+13916,Thomas/021011.cha,CHI,the little red bus.,1.0,,34
+13917,Thomas/021011.cha,CAR,the little red bus.,,,34
+13918,Thomas/021011.cha,CAR,I only know one song about a bus and that's the Wheels on the Bus.,,,34
+13919,Thomas/021011.cha,CAR,is that the one you mean?,,,34
+13920,Thomas/021011.cha,CHI,no.,,,34
+13921,Thomas/021011.cha,CHI,a big red bus.,1.0,,34
+13922,Thomas/021011.cha,CAR,a big red bus.,,,34
+13923,Thomas/021011.cha,CAR,I don't think I know a song about a big red bus.,,,34
+13924,Thomas/021011.cha,CHI,yes.,,,34
+13925,Thomas/021011.cha,CAR,well how does it go?,,,34
+13926,Thomas/021011.cha,CHI,wheels on the bus go red red red.,0.0,,34
+13927,Thomas/021011.cha,CAR,"Thomas, you silly billy.",,,34
+13928,Thomas/021011.cha,CAR,that's the Wheels on the Bus go round and round but you've substituted the word red.,,,34
+13929,Thomas/021011.cha,CHI,red red red.,0.0,,34
+13930,Thomas/021011.cha,CAR,no wonder I didn't know that song.,,,34
+13931,Thomas/021011.cha,CAR,you've just made it up.,,,34
+13932,Thomas/021011.cha,CHI,red red red red red.,0.0,,34
+13933,Thomas/021011.cha,CAR,alright.,,,34
+13934,Thomas/021011.cha,CAR,we'll sing that one then.,,,34
+13935,Thomas/021011.cha,CHI,no.,,,34
+13936,Thomas/021011.cha,CHI,red red red.,0.0,,34
+13937,Thomas/021011.cha,CAR,red red red red red red.,,,34
+13938,Thomas/021011.cha,CAR,"that's the little bus the little book you have called a little yellow bus and that plays a little tune and at the end it goes, doesn't it?",,,34
+13939,Thomas/021011.cha,CAR,"well it is Valentines Day, Thomas.",,,34
+13940,Thomas/021011.cha,CAR,so I suppose we can sing about red.,,,34
+13941,Thomas/021011.cha,CHI,where's the little yellow bus?,1.0,,34
+13942,Thomas/021011.cha,CHI,wanna read it.,-1.0,subject,34
+13943,Thomas/021011.cha,CAR,"I'm not sure where the book is, sweetheart.",,,34
+13944,Thomas/021011.cha,CAR,well let's just sing it again.,,,34
+13945,Thomas/021011.cha,CAR,the story about the little yellow what happens?,,,34
+13946,Thomas/021011.cha,CHI,don't know.,0.0,,34
+13947,Thomas/021011.cha,CAR,can you not remember?,,,34
+13948,Thomas/021011.cha,CHI,no.,,,34
+13949,Thomas/021011.cha,CAR,well the driver is called Pete and he has a little yellow bus.,,,34
+13950,Thomas/021011.cha,CHI,what's it called?,1.0,,34
+13951,Thomas/021011.cha,CAR,and one day.,,,34
+13952,Thomas/021011.cha,CAR,pardon.,,,34
+13953,Thomas/021011.cha,CHI,what's it called that yellow bus?,1.0,,34
+13954,Thomas/021011.cha,CAR,well I think he just calls it his little yellow bus but we could give it a name if you like.,,,34
+13955,Thomas/021011.cha,CAR,what would you like to call it?,,,34
+13956,Thomas/021011.cha,CHI,Aunty Frank.,1.0,,34
+13957,Thomas/021011.cha,CAR,Aunty Frank.,,,34
+13958,Thomas/021011.cha,CAR,"oh Thomas, you've called your fish Aunty Frank.",,,34
+13959,Thomas/021011.cha,CAR,you can't call a bus Aunty Frank as well.,,,34
+13960,Thomas/021011.cha,CHI,um.,,,34
+13961,Thomas/021011.cha,CAR,can we?,,,34
+13962,Thomas/021011.cha,CHI,yes.,,,34
+13963,Thomas/021011.cha,CAR,no.,,,34
+13964,Thomas/021011.cha,CHI,yes.,,,34
+13965,Thomas/021011.cha,CAR,well we'll think of a name for the little yellow bus.,,,34
+13966,Thomas/021011.cha,CAR,and the driver and the bus is stuck in the traffic aren't they?,,,34
+13967,Thomas/021011.cha,CAR,one day.,,,34
+13968,Thomas/021011.cha,CAR,and the driver's fed up with this.,,,34
+13969,Thomas/021011.cha,CAR,and he said.,,,34
+13970,Thomas/021011.cha,CAR,"it's time we had a day off, little yellow bus.",,,34
+13971,Thomas/021011.cha,CAR,it's time we took a day in the country.,,,34
+13972,Thomas/021011.cha,CAR,so the following morning the driver gets up and he washes and he polishes his little bus doesn't he?,,,34
+13973,Thomas/021011.cha,CAR,and they set off for a day in the country.,,,34
+13974,Thomas/021011.cha,CAR,and I think it's just sposta be the driver and the bus.,,,34
+13975,Thomas/021011.cha,CAR,but all the way along he meets people who want lifts doesn't he?,,,34
+13976,Thomas/021011.cha,CAR,like there's some people riding bicycles who were stuck in the rain.,,,34
+13977,Thomas/021011.cha,CAR,and there's an elderly lady.,,,34
+13978,Thomas/021011.cha,CAR,and there's a lady with some children and they're all tired of walking and two boys.,,,34
+13979,Thomas/021011.cha,CAR,one of them has a flat tyre on his bicycle and all sorts of things happen.,,,34
+13980,Thomas/021011.cha,CAR,and one by one the little yellow bus picks them up doesn't he?,,,34
+13981,Thomas/021011.cha,CAR,and then who do they meet at the side of the road who has broken down?,,,34
+13982,Thomas/021011.cha,CHI,a helicopter.,1.0,,34
+13983,Thomas/021011.cha,CHI,and a pilot too.,1.0,,34
+13984,Thomas/021011.cha,CAR,that's right.,,,34
+13985,Thomas/021011.cha,CAR,yes.,,,34
+13986,Thomas/021011.cha,CAR,one of the things.,,,34
+13987,Thomas/021011.cha,CAR,yes.,,,34
+13988,Thomas/021011.cha,CAR,a pilot lands in a field doesn't he?,,,34
+13989,Thomas/021011.cha,CAR,and helicopter.,,,34
+13990,Thomas/021011.cha,CAR,and he says.,,,34
+13991,Thomas/021011.cha,CAR,may I have a lift home?,,,34
+13992,Thomas/021011.cha,CAR,but.,,,34
+13993,Thomas/021011.cha,CHI,no thanks.,1.0,,34
+13994,Thomas/021011.cha,CHI,I'm going home now in my helicopter.,1.0,,34
+13995,Thomas/021011.cha,CAR,no.,,,34
+13996,Thomas/021011.cha,CAR,that isn't part of the story.,,,34
+13997,Thomas/021011.cha,CAR,he doesn't say.,,,34
+13998,Thomas/021011.cha,CAR,"Thomas Lastname, you do make up storys.",,,34
+13999,Thomas/021011.cha,CAR,no.,,,34
+14000,Thomas/021011.cha,CAR,what happened?,,,34
+14001,Thomas/021011.cha,CAR,who breaks down at the side of the road?,,,34
+14002,Thomas/021011.cha,CHI,the ice cream man.,1.0,,34
+14003,Thomas/021011.cha,CAR,the ice cream man.,,,34
+14004,Thomas/021011.cha,CAR,and the ice cream man says to the bus.,,,34
+14005,Thomas/021011.cha,CAR,my ice cream van has broken down.,,,34
+14006,Thomas/021011.cha,CAR,all the ice cream's going to melt.,,,34
+14007,Thomas/021011.cha,CAR,so he gives it to all the passengers on the bus doesn't he?,,,34
+14008,Thomas/021011.cha,CAR,so there they are.,,,34
+14009,Thomas/021011.cha,CAR,they've all had a nice day out.,,,34
+14010,Thomas/021011.cha,CAR,they've all had a lift.,,,34
+14011,Thomas/021011.cha,CAR,and they've all had an ice cream.,,,34
+14012,Thomas/021011.cha,CAR,and the driver says to his little yellow bus.,,,34
+14013,Thomas/021011.cha,CAR,oh it's been a great day out.,,,34
+14014,Thomas/021011.cha,CAR,it's been just like a normal day picking up all these passengers.,,,34
+14015,Thomas/021011.cha,CAR,and who else is in the story book?,,,34
+14016,Thomas/021011.cha,CAR,do you remember there's an old lady?,,,34
+14017,Thomas/021011.cha,CHI,no.,,,34
+14018,Thomas/021011.cha,CAR,and what's she.,,,34
+14019,Thomas/021011.cha,CAR,what was she riding in before she saw the bus?,,,34
+14020,Thomas/021011.cha,CHI,in the.,-1.0,object,34
+14021,Thomas/021011.cha,CAR,in the what?,,,34
+14022,Thomas/021011.cha,CHI,in the dotdot.,0.0,,34
+14023,Thomas/021011.cha,CAR,in the dotdot.,,,34
+14024,Thomas/021011.cha,CAR,you're just making things up now.,,,34
+14025,Thomas/021011.cha,CAR,well she was riding in the basket of a hot air balloon wasn't she?,,,34
+14026,Thomas/021011.cha,CHI,I'm cutting this.,1.0,,34
+14027,Thomas/021011.cha,CAR,"oh Thomas, you're going to knock the horse off.",,,34
+14028,Thomas/021011.cha,CAR,ah poor horse.,,,34
+14029,Thomas/021011.cha,CAR,that's not nice is it?,,,34
+14030,Thomas/021011.cha,CHI,this is the police car.,1.0,,34
+14031,Thomas/021011.cha,CHI,nee nah.,0.0,,34
+14032,Thomas/021011.cha,CAR,oh the train has turned into a police car has it?,,,34
+14033,Thomas/021011.cha,CAR,that's interesting.,,,34
+14034,Thomas/021011.cha,CHI,got flashing beebas.,-1.0,subject,34
+14035,Thomas/021011.cha,CAR,has it?,,,34
+14036,Thomas/021011.cha,CAR,it has got flashing lights.,,,34
+14037,Thomas/021011.cha,CHI,bee bah.,0.0,,34
+14038,Thomas/021011.cha,CHI,oops stopped.,-1.0,subject,34
+14039,Thomas/021011.cha,CHI,the horse is crying.,1.0,,34
+14040,Thomas/021011.cha,CAR,why is the horse crying?,,,34
+14041,Thomas/021011.cha,CHI,because it's police car.,-1.0,determiner,34
+14042,Thomas/021011.cha,CHI,nee nah.,0.0,,34
+14043,Thomas/021011.cha,CAR,and has the police car come to the horse because the horse is crying or is the horse crying because he has seen a policeman?,,,34
+14044,Thomas/021011.cha,CHI,see a policeman.,-1.0,subject,34
+14045,Thomas/021011.cha,CAR,oh what has he done then?,,,34
+14046,Thomas/021011.cha,CHI,naughty horse.,0.0,,34
+14047,Thomas/021011.cha,CAR,naughty horse.,,,34
+14048,Thomas/021011.cha,CAR,has he been a naughty horse?,,,34
+14049,Thomas/021011.cha,CHI,um.,,,34
+14050,Thomas/021011.cha,CAR,oh dear.,,,34
+14051,Thomas/021011.cha,CAR,how can a horse be naughty?,,,34
+14052,Thomas/021011.cha,CAR,what has he done?,,,34
+14053,Thomas/021011.cha,CHI,frightened somebody's beer.,0.0,,34
+14054,Thomas/021011.cha,CAR,he has frightened somebody's what?,,,34
+14055,Thomas/021011.cha,CHI,somebody's beer.,1.0,,34
+14056,Thomas/021011.cha,CAR,frightened somebody's beer.,,,34
+14057,Thomas/021011.cha,CHI,yes.,,,34
+14058,Thomas/021011.cha,CAR,what do you mean?,,,34
+14059,Thomas/021011.cha,CHI,smack her.,0.0,,34
+14060,Thomas/021011.cha,CAR,"pardon, darling.",,,34
+14061,Thomas/021011.cha,CHI,smack that little Mummy.,0.0,,34
+14062,Thomas/021011.cha,CHI,naughty Mummy the policeman say.,-1.0,"determiner, sv_agreement",34
+14063,Thomas/021011.cha,CAR,the policeman said naughty Mummy.,,,34
+14064,Thomas/021011.cha,CAR,why?,,,34
+14065,Thomas/021011.cha,CAR,what am I sposta have done?,,,34
+14066,Thomas/021011.cha,CHI,um bashed that tray over there up on your.,-1.0,"subject, other",34
+14067,Thomas/021011.cha,CAR,I've bashed the train.,,,34
+14068,Thomas/021011.cha,CAR,"what train, love?",,,34
+14069,Thomas/021011.cha,CHI,this tray.,1.0,,34
+14070,Thomas/021011.cha,CAR,train.,,,34
+14071,Thomas/021011.cha,CAR,oh the tray.,,,34
+14072,Thomas/021011.cha,CAR,Purdie's tray.,,,34
+14073,Thomas/021011.cha,CHI,yes.,,,34
+14074,Thomas/021011.cha,CAR,well I walked into Purdie's tray earlier on and her water bowl fell over didn't it?,,,34
+14075,Thomas/021011.cha,CAR,"I hardly think we need call the police over that though, Thomas.",,,34
+14076,Thomas/021011.cha,CHI,and the policeman what's going on.,-1.0,verb,34
+14077,Thomas/021011.cha,CAR,did he?,,,34
+14078,Thomas/021011.cha,CAR,the policeman said what's going on.,,,34
+14079,Thomas/021011.cha,CAR,ah!,,,34
+14080,Thomas/021011.cha,CAR,and what did Mummy say?,,,34
+14081,Thomas/021011.cha,CHI,oh God.,1.0,,34
+14082,Thomas/021011.cha,CHI,yes.,,,34
+14083,Thomas/021011.cha,CHI,it is.,-1.0,object,34
+14084,Thomas/021011.cha,CHI,I said that.,0.0,,34
+14085,Thomas/021011.cha,CHI,naughty Mummy policeman said.,-1.0,determiner,34
+14086,Thomas/021011.cha,CAR,"well it's a funny thing, Thomas.",,,34
+14087,Thomas/021011.cha,CAR,because when I walked into the tray and knocked Purdie's water bowl over I remember the water going on the floor.,,,34
+14088,Thomas/021011.cha,CAR,and I remember picking up a cloth and wiping it up.,,,34
+14089,Thomas/021011.cha,CAR,I don't remember any policeman coming and telling me I was a naughty girl.,,,34
+14090,Thomas/021011.cha,CAR,you didn't even bother to come through to see what had happened.,,,34
+14091,Thomas/021011.cha,CAR,you just shouted what has happened.,,,34
+14092,Thomas/021011.cha,CHI,I look.,-1.0,object,34
+14093,Thomas/021011.cha,CAR,did you look?,,,34
+14094,Thomas/021011.cha,CAR,did you peep?,,,34
+14095,Thomas/021011.cha,CHI,yes.,,,34
+14096,Thomas/021011.cha,CAR,did you see me moping up the water?,,,34
+14097,Thomas/021011.cha,CHI,no.,,,34
+14098,Thomas/021011.cha,CAR,no.,,,34
+14099,Thomas/021011.cha,CAR,you didn't you see because you didn't bother coming through did you?,,,34
+14100,Thomas/021011.cha,CHI,no.,,,34
+14101,Thomas/021011.cha,CAR,no.,,,34
+14102,Thomas/021011.cha,CAR,you just asked me what had happened?,,,34
+14103,Thomas/021011.cha,CAR,"you're a monkey monkey, Thomas.",,,34
+14104,Thomas/021011.cha,CAR,look.,,,34
+14105,Thomas/021011.cha,CAR,we're getting all this ironing done.,,,34
+14106,Thomas/021011.cha,CAR,this is good isn't it?,,,34
+14107,Thomas/021011.cha,CHI,no.,,,34
+14108,Thomas/021011.cha,CHI,it's dirty.,1.0,,34
+14109,Thomas/021011.cha,CHI,loads of Smarties me.,-1.0,"verb, preposition",34
+14110,Thomas/021011.cha,CAR,oh no.,,,34
+14111,Thomas/021011.cha,CAR,I said all the Smarties had gone.,,,34
+14112,Thomas/021011.cha,CAR,no more.,,,34
+14113,Thomas/021011.cha,CAR,that's why I asked you twice.,,,34
+14114,Thomas/021011.cha,CHI,I got some more in here.,1.0,,34
+14115,Thomas/021011.cha,CAR,have you?,,,34
+14116,Thomas/021011.cha,CAR,oh so you have.,,,34
+14117,Thomas/021011.cha,CAR,that's why I was asking you if you were sure you wanted to give them away to me.,,,34
+14118,Thomas/021011.cha,CHI,and Mum said oh no no.,1.0,,34
+14119,Thomas/021011.cha,CAR,did I?,,,34
+14120,Thomas/021011.cha,CHI,yes.,,,34
+14121,Thomas/021011.cha,CAR,I can't remember.,,,34
+14122,Thomas/021011.cha,CHI,I need a big.,-1.0,object,34
+14123,Thomas/021011.cha,CHI,I need a.,-1.0,object,34
+14124,Thomas/021011.cha,CHI,I need a trailer.,1.0,,34
+14125,Thomas/021011.cha,CHI,a big trailer and a car.,1.0,,34
+14126,Thomas/021011.cha,CAR,"what would you like, darling?",,,34
+14127,Thomas/021011.cha,CHI,the trailer and the car.,1.0,,34
+14128,Thomas/021011.cha,CAR,okay.,,,34
+14129,Thomas/021011.cha,CHI,and the.,-1.0,object,34
+14130,Thomas/021011.cha,CAR,alright.,,,34
+14131,Thomas/021011.cha,CAR,I heard.,,,34
+14132,Thomas/021011.cha,CAR,how's that?,,,34
+14133,Thomas/021011.cha,CHI,um I not like lit little boy.,-1.0,"auxiliary, determiner",34
+14134,Thomas/021011.cha,CAR,you don't like the little boy.,,,34
+14135,Thomas/021011.cha,CAR,well let's leave him.,,,34
+14136,Thomas/021011.cha,CAR,let's put him over there by your juice.,,,34
+14137,Thomas/021011.cha,CAR,he is the driver of the car though.,,,34
+14138,Thomas/021011.cha,CAR,pardon.,,,34
+14139,Thomas/021011.cha,CHI,that little boy said.,-1.0,object,34
+14140,Thomas/021011.cha,CAR,what did he say?,,,34
+14141,Thomas/021011.cha,CHI,crying wanna go down there.,-1.0,subject,34
+14142,Thomas/021011.cha,CAR,oh the little boy's crying because he wants to go in the trailer and you said no.,,,34
+14143,Thomas/021011.cha,CHI,it's mine.,1.0,,34
+14144,Thomas/021011.cha,CAR,oh no.,,,34
+14145,Thomas/021011.cha,CAR,"it's not, Thomas.",,,34
+14146,Thomas/021011.cha,CHI,yes.,,,34
+14147,Thomas/021011.cha,CHI,it is.,1.0,,34
+14148,Thomas/021011.cha,CAR,no no no.,,,34
+14149,Thomas/021011.cha,CAR,what have we said about sharing?,,,34
+14150,Thomas/021011.cha,CAR,um.,,,34
+14151,Thomas/021011.cha,CAR,some things may belong to you but when other people come it's nice to share isn't it?,,,34
+14152,Thomas/021011.cha,CAR,you go to Becky's house and you go to Isabel's house and Bethany's house and Jake's house.,,,34
+14153,Thomas/021011.cha,CAR,"just imagine when you got there all the time they said you can't touch my toys, Thomas.",,,34
+14154,Thomas/021011.cha,CAR,they're mine.,,,34
+14155,Thomas/021011.cha,CAR,"you can't go in there, Thomas.",,,34
+14156,Thomas/021011.cha,CAR,it's mine.,,,34
+14157,Thomas/021011.cha,CAR,you can't have a Smartie.,,,34
+14158,Thomas/021011.cha,CAR,it's mine.,,,34
+14159,Thomas/021011.cha,CAR,you'd be terribly upset wouldn't you?,,,34
+14160,Thomas/021011.cha,CHI,want one.,-1.0,"subject, object",34
+14161,Thomas/021011.cha,CAR,precisely.,,,34
+14162,Thomas/021011.cha,CAR,because you'd want one.,,,34
+14163,Thomas/021011.cha,CAR,you'd wanna join in.,,,34
+14164,Thomas/021011.cha,CAR,you'd like to play with the toys and see what's happening.,,,34
+14165,Thomas/021011.cha,CAR,and look.,,,34
+14166,Thomas/021011.cha,CAR,fair enough all those people have at times got a little bit upset and said things are theirs.,,,34
+14167,Thomas/021011.cha,CAR,but in the end it has all been sorted out and you've both played with things together and done things together.,,,34
+14168,Thomas/021011.cha,CAR,it's the same when people come here.,,,34
+14169,Thomas/021011.cha,CAR,at first you might enjoy showing off your toys and then you get a little bit fed up because other people are playing with them.,,,34
+14170,Thomas/021011.cha,CAR,but that's all part of playing together and sharing isn't it?,,,34
+14171,Thomas/021011.cha,CAR,it is nice to share things.,,,34
+14172,Thomas/021011.cha,CAR,and if you let people share things here then when you go to their house they're happy to let you share their toys.,,,34
+14173,Thomas/021011.cha,CAR,yes.,,,34
+14174,Thomas/021011.cha,CHI,no.,,,34
+14175,Thomas/021011.cha,CHI,dirty.,,,34
+14176,Thomas/021011.cha,CAR,because you're very generous with Mummy and Daddy aren't you?,,,34
+14177,Thomas/021011.cha,CAR,and Nana and Grandad.,,,34
+14178,Thomas/021011.cha,CAR,you want us to share things with you.,,,34
+14179,Thomas/021011.cha,CAR,is that the racing car driver?,,,34
+14180,Thomas/021011.cha,CHI,it's the train driver.,1.0,,34
+14181,Thomas/021011.cha,CAR,is it?,,,34
+14182,Thomas/021011.cha,CAR,well our train driver has gone missing hasn't he?,,,34
+14183,Thomas/021011.cha,CAR,I don't know what has happened to him?,,,34
+14184,Thomas/021011.cha,CHI,under.,,,34
+14185,Thomas/021011.cha,CHI,steady.,,,34
+14186,Thomas/021011.cha,CHI,under this chair.,-1.0,"subject, verb",34
+14187,Thomas/021011.cha,CAR,"pardon, sweetheart.",,,34
+14188,Thomas/021011.cha,CHI,who's under this chair?,1.0,,34
+14189,Thomas/021011.cha,CHI,that chair.,1.0,,34
+14190,Thomas/021011.cha,CAR,who's under the chair?,,,34
+14191,Thomas/021011.cha,CHI,the another train driver.,-1.0,determiner,34
+14192,Thomas/021011.cha,CAR,no.,,,34
+14193,Thomas/021011.cha,CAR,"the train driver has been missing a long long time, Thomas.",,,34
+14194,Thomas/021011.cha,CAR,the train driver.,,,34
+14195,Thomas/021011.cha,CAR,the little Duplo train driver has got little blue dungarees hasn't he?,,,34
+14196,Thomas/021011.cha,CAR,and his head moves round and his arms move round.,,,34
+14197,Thomas/021011.cha,CAR,but we haven't seen him for a long time.,,,34
+14198,Thomas/021011.cha,CAR,he has gone missing.,,,34
+14199,Thomas/021011.cha,CAR,I don't know what has happened to him.,,,34
+14200,Thomas/021011.cha,CAR,you had him one day and then gone next didn't you?,,,34
+14201,Thomas/021011.cha,CHI,it's in playgroup.,-1.0,determiner,34
+14202,Thomas/021011.cha,CAR,it's at playgroup.,,,34
+14203,Thomas/021011.cha,CHI,yes.,,,34
+14204,Thomas/021011.cha,CAR,no.,,,34
+14205,Thomas/021011.cha,CAR,"we've we've not taken him out, Thomas.",,,34
+14206,Thomas/021011.cha,CAR,we've taken the train many times.,,,34
+14207,Thomas/021011.cha,CAR,when we've gone to Weddings and Chirstenings we've always taken the train because it's something you've been happy to play with quietly at tables isn't it?,,,34
+14208,Thomas/021011.cha,CHI,more trains.,-1.0,verb,34
+14209,Thomas/021011.cha,CAR,"we haven't got anymore trains, love.",,,34
+14210,Thomas/021011.cha,CAR,but we've never taken.,,,34
+14211,Thomas/021011.cha,CHI,more cranes.,-1.0,object,34
+14212,Thomas/021011.cha,CAR,we haven't a crane either.,,,34
+14213,Thomas/021011.cha,CAR,but when.,,,34
+14214,Thomas/021011.cha,CHI,got a digger.,-1.0,subject,34
+14215,Thomas/021011.cha,CAR,yes.,,,34
+14216,Thomas/021011.cha,CAR,we've got a digger.,,,34
+14217,Thomas/021011.cha,CAR,would you like a digger?,,,34
+14218,Thomas/021011.cha,CHI,what um.,-1.0,"verb, object",34
+14219,Thomas/021011.cha,CHI,what about Dizzy?,1.0,,34
+14220,Thomas/021011.cha,CAR,what do you mean what about.,,,34
+14221,Thomas/021011.cha,CAR,oh Dizzy's upstairs.,,,34
+14222,Thomas/021011.cha,CAR,Dizzy the mixer's in the bathroom and he has been for quite a few weeks now.,,,34
+14223,Thomas/021011.cha,CHI,"lots of vegetables, Mummy.",0.0,,34
+14224,Thomas/021011.cha,CHI,look.,,,34
+14225,Thomas/021011.cha,CHI,there's Smarties.,0.0,,34
+14226,Thomas/021011.cha,CAR,he has got vegetables has he?,,,34
+14227,Thomas/021011.cha,CHI,um.,,,34
+14228,Thomas/021011.cha,CAR,is he a fruit and veggie lorry?,,,34
+14229,Thomas/021011.cha,CHI,eating my Smartie.,-1.0,"subject, present_progressive",34
+14230,Thomas/021011.cha,CAR,are you?,,,34
+14231,Thomas/021011.cha,CHI,under this lid.,0.0,,34
+14232,Thomas/021011.cha,CAR,um.,,,34
+14233,Thomas/021011.cha,CAR,cheeky isn't it?,,,34
+14234,Thomas/021011.cha,CAR,cheeky cheeky meeky.,,,34
+14235,Thomas/021011.cha,CHI,you're cheeky Mummy.,1.0,,34
+14236,Thomas/021011.cha,CAR,Mummy's not cheeky is she?,,,34
+14237,Thomas/021011.cha,CHI,where's the train?,1.0,,34
+14238,Thomas/021011.cha,CAR,pardon.,,,34
+14239,Thomas/021011.cha,CHI,oh that's the car.,1.0,,34
+14240,Thomas/021011.cha,CHI,driver oh that's mine.,-1.0,"determiner, other",34
+14241,Thomas/021011.cha,CHI,that's mine.,1.0,,34
+14242,Thomas/021011.cha,CHI,that's mine.,1.0,,34
+14243,Thomas/021011.cha,CAR,so when we've taken the little Lego train to places we've always checked that we've got everything before we've gone home.,,,34
+14244,Thomas/021011.cha,CHI,Lego.,,,34
+14245,Thomas/021011.cha,CAR,"this was just one of the days in in the summer, Thomas.",,,34
+14246,Thomas/021011.cha,CAR,when one day you had the train driver and the next day you didn't.,,,34
+14247,Thomas/021011.cha,CAR,so we don't know what has happened to him.,,,34
+14248,Thomas/021011.cha,CHI,broken the train driver.,-1.0,"verb, other",34
+14249,Thomas/021011.cha,CHI,this this the police car nee nah nee nah.,-1.0,verb,34
+14250,Thomas/021011.cha,CHI,this is the breakdown lorry.,1.0,,34
+14251,Thomas/021011.cha,CHI,this is the fire engine.,1.0,,34
+14252,Thomas/021011.cha,CHI,this is the fire engine.,1.0,,34
+14253,Thomas/021011.cha,CAR,is it?,,,34
+14254,Thomas/021011.cha,CHI,um.,,,34
+14255,Thomas/021011.cha,CHI,nee nah nee nah.,0.0,,34
+14256,Thomas/021011.cha,CAR,the train has turned into a fire engine now has he?,,,34
+14257,Thomas/021011.cha,CHI,um.,,,34
+14258,Thomas/021011.cha,CAR,um.,,,34
+14259,Thomas/021011.cha,CHI,this is the fireman.,1.0,,34
+14260,Thomas/021011.cha,CHI,there's a fireman in there.,1.0,,34
+14261,Thomas/021011.cha,CAR,yes.,,,34
+14262,Thomas/021011.cha,CHI,he's going nee nah beep beep.,0.0,,34
+14263,Thomas/021011.cha,CAR,"and where are they going to, Thomas.",,,34
+14264,Thomas/021011.cha,CHI,the Fire Service.,1.0,,34
+14265,Thomas/021011.cha,CAR,they're in the Fire Service but where are they going to?,,,34
+14266,Thomas/021011.cha,CAR,who has got a fire?,,,34
+14267,Thomas/021011.cha,CHI,you.,,,34
+14268,Thomas/021011.cha,CAR,I have.,,,34
+14269,Thomas/021011.cha,CHI,yes.,,,34
+14270,Thomas/021011.cha,CAR,oh goodness me.,,,34
+14271,Thomas/021011.cha,CAR,well the candle's lit.,,,34
+14272,Thomas/021011.cha,CAR,and I've got a hot iron in my hand but I don't think we're on fire yet are we?,,,34
+14273,Thomas/021011.cha,CHI,yes.,,,34
+14274,Thomas/021011.cha,CAR,oh gosh where?,,,34
+14275,Thomas/021011.cha,CAR,where have we got a fire that Mummy doesn't know about?,,,34
+14276,Thomas/021011.cha,CHI,there.,,,34
+14277,Thomas/021011.cha,CAR,oh there on the edge of the table.,,,34
+14278,Thomas/021011.cha,CAR,oh gosh.,,,34
+14279,Thomas/021011.cha,CAR,well I hope.,,,34
+14280,Thomas/021011.cha,CHI,fire engine coming nee nah.,-1.0,"determiner, present_progressive",34
+14281,Thomas/021011.cha,CAR,oh I hope he gets to me quickly before it spreads.,,,34
+14282,Thomas/021011.cha,CAR,"hello, fireman.",,,34
+14283,Thomas/021011.cha,CAR,oh I am pleased to see you.,,,34
+14284,Thomas/021011.cha,CAR,Thomas says we've got a fire on the edge of the tablecloth.,,,34
+14285,Thomas/021011.cha,CAR,can you help me please?,,,34
+14286,Thomas/021011.cha,CHI,okay.,,,34
+14287,Thomas/021011.cha,CHI,"thanks, Mummy.",1.0,,34
+14288,Thomas/021011.cha,CAR,"thank you, fireman.",,,34
+14289,Thomas/021011.cha,CAR,appreciate that.,,,34
+14290,Thomas/021011.cha,CHI,yes.,,,34
+14291,Thomas/021011.cha,CHI,I done it.,-1.0,auxiliary,34
+14292,Thomas/021011.cha,CAR,"oh well done, fireman.",,,34
+14293,Thomas/021011.cha,CAR,"thank you, Thomas.",,,34
+14294,Thomas/021011.cha,CAR,for pointing out the fire.,,,34
+14295,Thomas/021011.cha,CAR,that's very clever.,,,34
+14296,Thomas/021011.cha,CHI,"that's very clever you, Mummy.",-1.0,preposition,34
+14297,Thomas/021011.cha,CAR,"bye bye, fireman.",,,34
+14298,Thomas/021011.cha,CAR,thank you.,,,34
+14299,Thomas/021011.cha,CAR,would you like a cup of tea before you go?,,,34
+14300,Thomas/021011.cha,CHI,yes.,,,34
+14301,Thomas/021011.cha,CHI,I driving off.,-1.0,auxiliary,34
+14302,Thomas/021011.cha,CAR,oh are you driving off?,,,34
+14303,Thomas/021011.cha,CAR,well would you like some tea first or do you have to go and put out another fire somewhere?,,,34
+14304,Thomas/021011.cha,CHI,another fire.,-1.0,verb,34
+14305,Thomas/021011.cha,CAR,another fire.,,,34
+14306,Thomas/021011.cha,CAR,oh gosh so really the fireman's a little bit too busy to have a cup of tea with Mummy isn't he?,,,34
+14307,Thomas/021011.cha,CHI,hm.,,,34
+14308,Thomas/021011.cha,CHI,there.,,,34
+14309,Thomas/021011.cha,CHI,that near that flower.,-1.0,verb,34
+14310,Thomas/021011.cha,CAR,oh near the flower on the tablecloth.,,,34
+14311,Thomas/021011.cha,CHI,yes.,,,34
+14312,Thomas/021011.cha,CAR,there's another fire is there?,,,34
+14313,Thomas/021011.cha,CHI,nee nah nee nah.,0.0,,34
+14314,Thomas/021011.cha,CAR,"I hope he doesn't notice the candle burning at the other end of the table, Thomas.",,,34
+14315,Thomas/021011.cha,CAR,otherwise he will be upset because it's a big flame isn't it?,,,34
+14316,Thomas/021011.cha,CAR,look at that.,,,34
+14317,Thomas/021011.cha,CHI,nee nah nee nah.,0.0,,34
+14318,Thomas/021011.cha,CHI,I need a cup of tea.,1.0,,34
+14319,Thomas/021011.cha,CAR,"oh here you are, fireman.",,,34
+14320,Thomas/021011.cha,CAR,there's one I've just made.,,,34
+14321,Thomas/021011.cha,CAR,a a nice fresh pot.,,,34
+14322,Thomas/021011.cha,CAR,would you like milk?,,,34
+14323,Thomas/021011.cha,CHI,uh no thanks.,1.0,,34
+14324,Thomas/021011.cha,CHI,tea and coffee and milk.,0.0,,34
+14325,Thomas/021011.cha,CAR,ah but would you like um would you like tea or coffee.,,,34
+14326,Thomas/021011.cha,CHI,tea uh tea.,1.0,,34
+14327,Thomas/021011.cha,CAR,tea.,,,34
+14328,Thomas/021011.cha,CAR,and would you like milk in the cup first?,,,34
+14329,Thomas/021011.cha,CHI,uh no no.,1.0,,34
+14330,Thomas/021011.cha,CAR,no.,,,34
+14331,Thomas/021011.cha,CHI,I need some sugar.,1.0,,34
+14332,Thomas/021011.cha,CAR,you'd like some sugar.,,,34
+14333,Thomas/021011.cha,CAR,how many spoonfuls would you like?,,,34
+14334,Thomas/021011.cha,CHI,uh one.,1.0,,34
+14335,Thomas/021011.cha,CAR,one.,,,34
+14336,Thomas/021011.cha,CAR,there we are.,,,34
+14337,Thomas/021011.cha,CAR,there's the tea.,,,34
+14338,Thomas/021011.cha,CAR,there's the sugar.,,,34
+14339,Thomas/021011.cha,CAR,look.,,,34
+14340,Thomas/021011.cha,CAR,we'll leave a little jug of milk at the side just in case he changes his mind and he wants to pop some milk in it.,,,34
+14341,Thomas/021011.cha,CHI,I need some milk.,1.0,,34
+14342,Thomas/021011.cha,CHI,that's that's a fireman.,1.0,,34
+14343,Thomas/021011.cha,CHI,that's a fireman.,1.0,,34
+14344,Thomas/021011.cha,CHI,coffee and milk.,0.0,,34
+14345,Thomas/021011.cha,CHI,and his coffee.,0.0,,34
+14346,Thomas/021011.cha,CHI,and his and his tea and his sugar.,0.0,,34
+14347,Thomas/021011.cha,CAR,he has had tea coffee.,,,34
+14348,Thomas/021011.cha,CAR,a tea and a coffee.,,,34
+14349,Thomas/021011.cha,CHI,I mend I mend your fire.,-1.0,present_progressive,34

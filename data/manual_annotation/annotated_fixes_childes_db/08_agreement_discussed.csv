@@ -1,0 +1,865 @@
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels,age
+7291,Thomas/020924.cha,CAR,you're very happy are you?,,,34
+7292,Thomas/020924.cha,CHI,yes.,,,34
+7293,Thomas/020924.cha,CHI,I'm very happy.,1.0,,34
+7294,Thomas/020924.cha,CHI,Thomas The Tank.,0.0,,34
+7295,Thomas/020924.cha,CHI,Thomas The Tank Engine really useful engine.,-1.0,"verb, determiner",34
+7296,Thomas/020924.cha,CAR,oh Thomas The Tank Engine's a really useful engine.,,,34
+7297,Thomas/020924.cha,CAR,is that what you said?,,,34
+7298,Thomas/020924.cha,CAR,Thomas The Tank is a really useful engine.,,,34
+7299,Thomas/020924.cha,CAR,what's that?,,,34
+7300,Thomas/020924.cha,CHI,I don't know.,1.0,,34
+7301,Thomas/020924.cha,CAR,we're spinning this round on the table aren't we?,,,34
+7302,Thomas/020924.cha,CHI,it's noisy Thomas The Tank.,-1.0,determiner,34
+7303,Thomas/020924.cha,CAR,it's a noisy Thomas The Tank.,,,34
+7304,Thomas/020924.cha,CHI,yes.,,,34
+7305,Thomas/020924.cha,CHI,lots of passengers.,0.0,,34
+7306,Thomas/020924.cha,CAR,lots of passengers.,,,34
+7307,Thomas/020924.cha,CAR,I'm just going to go and to find that little yellow coach then I can show you.,,,34
+7308,Thomas/020924.cha,CHI,my Fireman Sam.,0.0,,34
+7309,Thomas/020924.cha,CHI,a lot of fire on the.,-1.0,"verb, object",34
+7310,Thomas/020924.cha,CAR,"I don't know where it is now, Thomas.",,,34
+7311,Thomas/020924.cha,CHI,I not know.,-1.0,auxiliary,34
+7312,Thomas/020924.cha,CHI,climb up my ladders.,0.0,,34
+7313,Thomas/020924.cha,CAR,you're climbing up your ladders.,,,34
+7314,Thomas/020924.cha,CHI,yes.,,,34
+7315,Thomas/020924.cha,CAR,perhaps it's in one of these.,,,34
+7316,Thomas/020924.cha,CHI,I want a balloon.,1.0,,34
+7317,Thomas/020924.cha,CAR,you want a balloon.,,,34
+7318,Thomas/020924.cha,CHI,yes.,,,34
+7319,Thomas/020924.cha,CAR,okay.,,,34
+7320,Thomas/020924.cha,CAR,look.,,,34
+7321,Thomas/020924.cha,CAR,it's this one.,,,34
+7322,Thomas/020924.cha,CHI,yellow one.,-1.0,determiner,34
+7323,Thomas/020924.cha,CAR,yes.,,,34
+7324,Thomas/020924.cha,CAR,Daddy'll have to mend that won't he?,,,34
+7325,Thomas/020924.cha,CHI,yes.,,,34
+7326,Thomas/020924.cha,CAR,did you say you wanted a balloon?,,,34
+7327,Thomas/020924.cha,CHI,yes.,,,34
+7328,Thomas/020924.cha,CAR,there we are.,,,34
+7329,Thomas/020924.cha,CAR,there's a nice grey one here.,,,34
+7330,Thomas/020924.cha,CAR,let's see if Mummy has got enough energy to blow it up.,,,34
+7331,Thomas/020924.cha,CHI,oh yes.,1.0,,34
+7332,Thomas/020924.cha,CAR,you've got that very very big green balloon that Ben and Charlotte's Mum gave you haven't you?,,,34
+7333,Thomas/020924.cha,CAR,this looks like one left from your birthday party.,,,34
+7334,Thomas/020924.cha,CHI,wanna wanna blow it.,-1.0,subject,34
+7335,Thomas/020924.cha,CAR,you wanna blow it.,,,34
+7336,Thomas/020924.cha,CAR,well you blow it then.,,,34
+7337,Thomas/020924.cha,CAR,you can't.,,,34
+7338,Thomas/020924.cha,CAR,don't hurt your ears.,,,34
+7339,Thomas/020924.cha,CAR,no.,,,34
+7340,Thomas/020924.cha,CAR,it's very very hard to do.,,,34
+7341,Thomas/020924.cha,CAR,what's happening as I'm blowing?,,,34
+7342,Thomas/020924.cha,CAR,is it getting bigger?,,,34
+7343,Thomas/020924.cha,CHI,yes.,,,34
+7344,Thomas/020924.cha,CHI,bigger.,,,34
+7345,Thomas/020924.cha,CAR,I won't blow it too hard in case it goes pop.,,,34
+7346,Thomas/020924.cha,CAR,I'm not blowing it anymore Thomas because I don't want it to go pop.,,,34
+7347,Thomas/020924.cha,CAR,you were playing with some balloons at Bethany's house weren't you?,,,34
+7348,Thomas/020924.cha,CHI,um.,,,34
+7349,Thomas/020924.cha,CAR,what color were they?,,,34
+7350,Thomas/020924.cha,CAR,white and red.,,,34
+7351,Thomas/020924.cha,CHI,yes.,,,34
+7352,Thomas/020924.cha,CAR,did you have a good time?,,,34
+7353,Thomas/020924.cha,CHI,no.,,,34
+7354,Thomas/020924.cha,CAR,no.,,,34
+7355,Thomas/020924.cha,CAR,you did with all the girls.,,,34
+7356,Thomas/020924.cha,CHI,no.,,,34
+7357,Thomas/020924.cha,CAR,that's lovely.,,,34
+7358,Thomas/020924.cha,CAR,it's sort of silvery grey color that isn't it?,,,34
+7359,Thomas/020924.cha,CAR,it'll soon be your birthday again and we'll have to buy some balloons.,,,34
+7360,Thomas/020924.cha,CHI,blow up and down.,0.0,,34
+7361,Thomas/020924.cha,CAR,you can't blow it up now.,,,34
+7362,Thomas/020924.cha,CAR,it's blown up.,,,34
+7363,Thomas/020924.cha,CAR,we've tied a know in it.,,,34
+7364,Thomas/020924.cha,CAR,that's it.,,,34
+7365,Thomas/020924.cha,CHI,pop.,,,34
+7366,Thomas/020924.cha,CAR,well yes.,,,34
+7367,Thomas/020924.cha,CAR,it'll pop if you keep blowing it.,,,34
+7368,Thomas/020924.cha,CAR,but it doesn't matter if we blow it now because it's sealed up.,,,34
+7369,Thomas/020924.cha,CAR,you like balloons don't you?,,,34
+7370,Thomas/020924.cha,CHI,no.,,,34
+7371,Thomas/020924.cha,CAR,do you think there'll be balloons at Isabel's party on Saturday?,,,34
+7372,Thomas/020924.cha,CHI,um.,,,34
+7373,Thomas/020924.cha,CHI,no Isabel's.,-1.0,"preposition, other",34
+7374,Thomas/020924.cha,CHI,the balloons here.,-1.0,verb,34
+7375,Thomas/020924.cha,CAR,do you think there will be balloons?,,,34
+7376,Thomas/020924.cha,CHI,no.,,,34
+7377,Thomas/020924.cha,CHI,one two three four five.,0.0,,34
+7378,Thomas/020924.cha,CAR,one two three four five.,,,34
+7379,Thomas/020924.cha,CHI,I'm Milly.,1.0,,34
+7380,Thomas/020924.cha,CHI,I'm I'm Milly.,1.0,,34
+7381,Thomas/020924.cha,CAR,you're Milly.,,,34
+7382,Thomas/020924.cha,CHI,Milly.,,,34
+7383,Thomas/020924.cha,CAR,who's Milly?,,,34
+7384,Thomas/020924.cha,CHI,my tiny bear.,1.0,,34
+7385,Thomas/020924.cha,CAR,you're.,,,34
+7386,Thomas/020924.cha,CHI,tiny bear.,-1.0,determiner,34
+7387,Thomas/020924.cha,CAR,tiny bear.,,,34
+7388,Thomas/020924.cha,CHI,yes.,,,34
+7389,Thomas/020924.cha,CAR,Milly the tiny bear.,,,34
+7390,Thomas/020924.cha,CAR,who is Milly the tiny bear?,,,34
+7391,Thomas/020924.cha,CHI,uh snow snowball.,-1.0,determiner,34
+7392,Thomas/020924.cha,CHI,uh snow little teddy bear.,-1.0,determiner,34
+7393,Thomas/020924.cha,CHI,Milly.,,,34
+7394,Thomas/020924.cha,CAR,"I don't know who Milly is, Thomas.",,,34
+7395,Thomas/020924.cha,CHI,it on the telly a big bear.,-1.0,"verb, other",34
+7396,Thomas/020924.cha,CAR,yes.,,,34
+7397,Thomas/020924.cha,CHI,is a big snowball big snowball and Milly.,-1.0,subject,34
+7398,Thomas/020924.cha,CAR,on the telly there's a big snowball and Milly.,,,34
+7399,Thomas/020924.cha,CHI,yes.,,,34
+7400,Thomas/020924.cha,CAR,"oh this must be something you watch with somebody else, Thomas.",,,34
+7401,Thomas/020924.cha,CAR,because I don't really recognize that.,,,34
+7402,Thomas/020924.cha,CHI,one two three four.,0.0,,34
+7403,Thomas/020924.cha,CAR,I know the other day.,,,34
+7404,Thomas/020924.cha,CAR,"oops steady, darling.",,,34
+7405,Thomas/020924.cha,CHI,yes.,,,34
+7406,Thomas/020924.cha,CAR,you're falling over.,,,34
+7407,Thomas/020924.cha,CAR,but the other day there was a story on television about Peace at last and that was a book that Mummy useta have a long time ago.,,,34
+7408,Thomas/020924.cha,CHI,um.,,,34
+7409,Thomas/020924.cha,CAR,written by Jill Murphy and it's about some teddy bears.,,,34
+7410,Thomas/020924.cha,CAR,a family of teddy bears.,,,34
+7411,Thomas/020924.cha,CAR,and the Father bear he can't get to sleep can he?,,,34
+7412,Thomas/020924.cha,CAR,I've forgotten why that he can't sleep.,,,34
+7413,Thomas/020924.cha,CAR,and he ends up going downstairs and trying to sleep downstairs in the kitchen.,,,34
+7414,Thomas/020924.cha,CHI,um.,,,34
+7415,Thomas/020924.cha,CAR,but the kitchen tap tap goes drip drip drip and he can't sleep there.,,,34
+7416,Thomas/020924.cha,CAR,so he gets up and he goes outside and he gets into his car.,,,34
+7417,Thomas/020924.cha,CAR,but he has slept in so many different places through the night that by the time he gets into the car.,,,34
+7418,Thomas/020924.cha,CHI,yes.,,,34
+7419,Thomas/020924.cha,CAR,dawn is breaking.,,,34
+7420,Thomas/020924.cha,CAR,and the sun's just starting to come up and all the birds are tweeting so that wakes up.,,,34
+7421,Thomas/020924.cha,CAR,so he thinks I'll go back inside and go up to bed.,,,34
+7422,Thomas/020924.cha,CAR,just as he gets into bed the alarm clock goes off.,,,34
+7423,Thomas/020924.cha,CAR,and his wife says.,,,34
+7424,Thomas/020924.cha,CAR,"good morning, dear.",,,34
+7425,Thomas/020924.cha,CAR,had a nice sleep.,,,34
+7426,Thomas/020924.cha,CAR,and he said.,,,34
+7427,Thomas/020924.cha,CAR,no.,,,34
+7428,Thomas/020924.cha,CAR,not really.,,,34
+7429,Thomas/020924.cha,CAR,and she said.,,,34
+7430,Thomas/020924.cha,CAR,never mind.,,,34
+7431,Thomas/020924.cha,CAR,I'll make a nice cup of tea.,,,34
+7432,Thomas/020924.cha,CAR,everytime he thinks he has got peace at last something else happens.,,,34
+7433,Thomas/020924.cha,CAR,I'll have to find the book.,,,34
+7434,Thomas/020924.cha,CHI,uh uh Thomas going up my ladders again.,-1.0,auxiliary,34
+7435,Thomas/020924.cha,CAR,you're going up your ladders again.,,,34
+7436,Thomas/020924.cha,CHI,my Fireman Sam.,0.0,,34
+7437,Thomas/020924.cha,CAR,you're Fireman Sam.,,,34
+7438,Thomas/020924.cha,CHI,I'm not getting anything.,1.0,,34
+7439,Thomas/020924.cha,CAR,no.,,,34
+7440,Thomas/020924.cha,CAR,you're not getting anything.,,,34
+7441,Thomas/020924.cha,CAR,no.,,,34
+7442,Thomas/020924.cha,CAR,"get down, Thomas.",,,34
+7443,Thomas/020924.cha,CAR,you'll fall please.,,,34
+7444,Thomas/020924.cha,CHI,I'm Fireman Sam.,1.0,,34
+7445,Thomas/020924.cha,CAR,"well Fireman Sam, please get down off the table.",,,34
+7446,Thomas/020924.cha,CAR,you'll fall.,,,34
+7447,Thomas/020924.cha,CHI,it's it's my it's my ladder.,1.0,,34
+7448,Thomas/020924.cha,CAR,"well it looks like a coffee table to me, Thomas.",,,34
+7449,Thomas/020924.cha,CHI,it's not.,1.0,,34
+7450,Thomas/020924.cha,CAR,is it not?,,,34
+7451,Thomas/020924.cha,CHI,it's a ladder.,1.0,,34
+7452,Thomas/020924.cha,CAR,right.,,,34
+7453,Thomas/020924.cha,CHI,not touching anything.,-1.0,"subject, present_progressive",34
+7454,Thomas/020924.cha,CAR,good.,,,34
+7455,Thomas/020924.cha,CAR,I'm glad you're not touching anything because if you are you'll be in big.,,,34
+7456,Thomas/020924.cha,CAR,big what?,,,34
+7457,Thomas/020924.cha,CAR,trouble.,,,34
+7458,Thomas/020924.cha,CAR,won't you?,,,34
+7459,Thomas/020924.cha,CHI,no.,,,34
+7460,Thomas/020924.cha,CAR,I think you will.,,,34
+7461,Thomas/020924.cha,CAR,"I don't like it when you go quiet, Thomas.",,,34
+7462,Thomas/020924.cha,CAR,oh somebody's coming down the stairs now.,,,34
+7463,Thomas/020924.cha,CAR,just sitting on the stairs looking down.,,,34
+7464,Thomas/020924.cha,CHI,I can't see anybody.,1.0,,34
+7465,Thomas/020924.cha,CAR,you can't see anybody.,,,34
+7466,Thomas/020924.cha,CAR,well you won't standing there.,,,34
+7467,Thomas/020924.cha,CAR,come in here.,,,34
+7468,Thomas/020924.cha,CHI,oh okay okay.,1.0,,34
+7469,Thomas/020924.cha,CAR,now look on the stairs but don't say anything to upset her.,,,34
+7470,Thomas/020924.cha,CAR,just say hello nicely.,,,34
+7471,Thomas/020924.cha,CHI,I can't see anybody.,1.0,,34
+7472,Thomas/020924.cha,CAR,no.,,,34
+7473,Thomas/020924.cha,CAR,stand here.,,,34
+7474,Thomas/020924.cha,CAR,look.,,,34
+7475,Thomas/020924.cha,CAR,there.,,,34
+7476,Thomas/020924.cha,CHI,Purdie.,,,34
+7477,Thomas/020924.cha,CHI,"hello, Puss.",1.0,,34
+7478,Thomas/020924.cha,CHI,where you been?,-1.0,auxiliary,34
+7479,Thomas/020924.cha,CAR,where has she been?,,,34
+7480,Thomas/020924.cha,CAR,I think she has probably been in bed hasn't she?,,,34
+7481,Thomas/020924.cha,CHI,it's not.,-1.0,object,34
+7482,Thomas/020924.cha,CHI,it's not well.,-1.0,verb,34
+7483,Thomas/020924.cha,CHI,not going where.,-1.0,"subject, auxiliary, other",34
+7484,Thomas/020924.cha,CHI,it's not going.,0.0,,34
+7485,Thomas/020924.cha,CHI,it's not.,-1.0,object,34
+7486,Thomas/020924.cha,CAR,what are you saying to her.,,,34
+7487,Thomas/020924.cha,CHI,"hello, Purdie.",1.0,,34
+7488,Thomas/020924.cha,CAR,"hello, Thomas.",,,34
+7489,Thomas/020924.cha,CHI,"nice to see you, Purdie.",1.0,,34
+7490,Thomas/020924.cha,CAR,"nice to see you, Thomas.",,,34
+7491,Thomas/020924.cha,CAR,oh are you blowing kiss at Purdie?,,,34
+7492,Thomas/020924.cha,CHI,yes.,,,34
+7493,Thomas/020924.cha,CAR,that's very nice.,,,34
+7494,Thomas/020924.cha,CAR,very nice of you isn't it?,,,34
+7495,Thomas/020924.cha,CHI,Purdie Purdie like balloons.,-1.0,sv_agreement,34
+7496,Thomas/020924.cha,CAR,"oh well I'm not sure she does like balloons really, Thomas.",,,34
+7497,Thomas/020924.cha,CAR,I think she might be a little bit frightened of them.,,,34
+7498,Thomas/020924.cha,CHI,um.,,,34
+7499,Thomas/020924.cha,CAR,Purdie useta like when she was a kitten.,,,34
+7500,Thomas/020924.cha,CAR,well not a kitten but a young cat.,,,34
+7501,Thomas/020924.cha,CAR,running around after little ping pong balls.,,,34
+7502,Thomas/020924.cha,CAR,little tennis table tennis balls.,,,34
+7503,Thomas/020924.cha,CHI,um.,,,34
+7504,Thomas/020924.cha,CAR,she still does sometimes doesn't she?,,,34
+7505,Thomas/020924.cha,CAR,we see her chasing leaves and butterflys in the garden and running round.,,,34
+7506,Thomas/020924.cha,CAR,and at Christmas.,,,34
+7507,Thomas/020924.cha,CAR,do you remember when we had the Christmas tree in the window.,,,34
+7508,Thomas/020924.cha,CAR,all the baubles decorating the tree.,,,34
+7509,Thomas/020924.cha,CAR,Purdie walked past one day and there was an ornament in the shape of a red.,,,34
+7510,Thomas/020924.cha,CHI,Purdie's coming down.,1.0,,34
+7511,Thomas/020924.cha,CAR,is she?,,,34
+7512,Thomas/020924.cha,CAR,oh yes.,,,34
+7513,Thomas/020924.cha,CAR,she's coming a bit nearer isn't she?,,,34
+7514,Thomas/020924.cha,CHI,it's going meow.,1.0,,34
+7515,Thomas/020924.cha,CAR,yes.,,,34
+7516,Thomas/020924.cha,CAR,she went meow.,,,34
+7517,Thomas/020924.cha,CAR,she perhaps wants to go outside but she's maybe a little bit nervous because we're sitting here.,,,34
+7518,Thomas/020924.cha,CAR,and one of the baubles at the bottom of the tree was in the shape of an a red apple.,,,34
+7519,Thomas/020924.cha,CAR,and Purdie walked past.,,,34
+7520,Thomas/020924.cha,CAR,don't shout at her.,,,34
+7521,Thomas/020924.cha,CAR,and she knocked the apple didn't she?,,,34
+7522,Thomas/020924.cha,CAR,she started playing with it.,,,34
+7523,Thomas/020924.cha,CHI,ah my crocodile.,0.0,,34
+7524,Thomas/020924.cha,CAR,you're a crocodile.,,,34
+7525,Thomas/020924.cha,CAR,well that will frighten Purdie if she thinks there's a crocodile at the bottom of the stairs.,,,34
+7526,Thomas/020924.cha,CAR,she's not going to come down if she thinks she's going to be eaten by a crocodile is she?,,,34
+7527,Thomas/020924.cha,CHI,my um downstairs.,-1.0,"subject, verb",34
+7528,Thomas/020924.cha,CAR,I think you better come downstairs and I'll try and get Purdie down.,,,34
+7529,Thomas/020924.cha,CAR,I think she'll have to go out.,,,34
+7530,Thomas/020924.cha,CHI,the crocodile staying in bed.,-1.0,present_progressive,34
+7531,Thomas/020924.cha,CAR,oh the crocodile's staying in bed.,,,34
+7532,Thomas/020924.cha,CAR,are you having a little sleep on your bean bag?,,,34
+7533,Thomas/020924.cha,CAR,"night night, Thomas.",,,34
+7534,Thomas/020924.cha,CHI,"night night, crocodile.",1.0,,34
+7535,Thomas/020924.cha,CAR,"night night, crocodile.",,,34
+7536,Thomas/020924.cha,CHI,Teletubbies.,,,34
+7537,Thomas/020924.cha,CHI,going see television Teletubbies on.,-1.0,"subject, auxiliary, tense_aspect, other",34
+7538,Thomas/020924.cha,CHI,and Purdie's here.,1.0,,34
+7539,Thomas/020924.cha,CAR,yes.,,,34
+7540,Thomas/020924.cha,CAR,Purdie's here.,,,34
+7541,Thomas/020924.cha,CHI,stroke her.,0.0,,34
+7542,Thomas/020924.cha,CAR,stroke her.,,,34
+7543,Thomas/020924.cha,CHI,I kiss Purdie's fur.,-1.0,tense_aspect,34
+7544,Thomas/020924.cha,CAR,you kissed Purdie's fur.,,,34
+7545,Thomas/020924.cha,CAR,right.,,,34
+7546,Thomas/020924.cha,CAR,"you sit up there, sweetheart.",,,34
+7547,Thomas/020924.cha,CHI,um.,,,34
+7548,Thomas/020924.cha,CAR,and just watch what I'm doing while I feed Purdie.,,,34
+7549,Thomas/020924.cha,CHI,yes.,,,34
+7550,Thomas/020924.cha,CHI,"look, Purdie.",1.0,,34
+7551,Thomas/020924.cha,CHI,"Purdie, where are you?",1.0,,34
+7552,Thomas/020924.cha,CAR,right.,,,34
+7553,Thomas/020924.cha,CAR,"sit still, Thomas.",,,34
+7554,Thomas/020924.cha,CAR,you'll fall.,,,34
+7555,Thomas/020924.cha,CAR,sit still.,,,34
+7556,Thomas/020924.cha,CHI,"hello, cat food.",0.0,,34
+7557,Thomas/020924.cha,CHI,not like cat food.,-1.0,"subject, auxiliary",34
+7558,Thomas/020924.cha,CAR,no.,,,34
+7559,Thomas/020924.cha,CAR,well you're not sposta eat cat food are you?,,,34
+7560,Thomas/020924.cha,CHI,no.,,,34
+7561,Thomas/020924.cha,CAR,it doesn't matter that you don't like it as long as Purdie likes it.,,,34
+7562,Thomas/020924.cha,CHI,pat pat pat patter cake.,-1.0,determiner,34
+7563,Thomas/020924.cha,CAR,patter cake.,,,34
+7564,Thomas/020924.cha,CHI,yes.,,,34
+7565,Thomas/020924.cha,CAR,why are you saying patter cake?,,,34
+7566,Thomas/020924.cha,CHI,silly Thomas.,1.0,,34
+7567,Thomas/020924.cha,CHI,patter cake patter cake.,-1.0,determiner,34
+7568,Thomas/020924.cha,CAR,oh are they saying patter cake on Teletubbies?,,,34
+7569,Thomas/020924.cha,CHI,yes.,,,34
+7570,Thomas/020924.cha,CHI,Tinky Winky and Dipsy look.,0.0,,34
+7571,Thomas/020924.cha,CAR,pardon.,,,34
+7572,Thomas/020924.cha,CHI,Dips Dipsy come here and and Tinky Winky.,-1.0,verb,34
+7573,Thomas/020924.cha,CAR,Dipsy and Tinky Winky.,,,34
+7574,Thomas/020924.cha,CHI,look.,,,34
+7575,Thomas/020924.cha,CHI,Po.,,,34
+7576,Thomas/020924.cha,CHI,all dancing.,-1.0,verb,34
+7577,Thomas/020924.cha,CAR,are they dancing?,,,34
+7578,Thomas/020924.cha,CHI,yes.,,,34
+7579,Thomas/020924.cha,CAR,we've got Teletubbies on at the next.,,,34
+7580,Thomas/020924.cha,CHI,okay.,,,34
+7581,Thomas/020924.cha,CAR,we've got Teletubbies on at the moment haven't we?,,,34
+7582,Thomas/020924.cha,CHI,yes.,,,34
+7583,Thomas/020924.cha,CAR,it looks like some children are doing some baking doesn't it?,,,34
+7584,Thomas/020924.cha,CHI,more like a cake a make.,-1.0,"subject, verb",34
+7585,Thomas/020924.cha,CAR,they're making a cake.,,,34
+7586,Thomas/020924.cha,CHI,yes.,,,34
+7587,Thomas/020924.cha,CAR,they've got wooden spoons in a bowl and they're both mixing aren't they?,,,34
+7588,Thomas/020924.cha,CHI,um.,,,34
+7589,Thomas/020924.cha,CAR,what are they mixing?,,,34
+7590,Thomas/020924.cha,CHI,oh a chocolate cake.,1.0,,34
+7591,Thomas/020924.cha,CAR,they're making a mix for chocolate cake.,,,34
+7592,Thomas/020924.cha,CAR,don't touch the light.,,,34
+7593,Thomas/020924.cha,CAR,oh look.,,,34
+7594,Thomas/020924.cha,CAR,they've baked the cake.,,,34
+7595,Thomas/020924.cha,CHI,yes.,,,34
+7596,Thomas/020924.cha,CAR,cut it in half and now they're spreading it with.,,,34
+7597,Thomas/020924.cha,CAR,it's probably a butter cream.,,,34
+7598,Thomas/020924.cha,CAR,butter cream is butter mixed with icing sugar.,,,34
+7599,Thomas/020924.cha,CHI,ice ice.,0.0,,34
+7600,Thomas/020924.cha,CAR,icing sugar.,,,34
+7601,Thomas/020924.cha,CAR,I don't know what else they're putting on top.,,,34
+7602,Thomas/020924.cha,CAR,oh now look.,,,34
+7603,Thomas/020924.cha,CAR,on the top they've put some more butter cream.,,,34
+7604,Thomas/020924.cha,CAR,sprinkled it with.,,,34
+7605,Thomas/020924.cha,CAR,they're called hundreds and thousands.,,,34
+7606,Thomas/020924.cha,CAR,they're decorating it with chocolate buttons.,,,34
+7607,Thomas/020924.cha,CAR,but look.,,,34
+7608,Thomas/020924.cha,CAR,they're eating some of them aren't they?,,,34
+7609,Thomas/020924.cha,CAR,right.,,,34
+7610,Thomas/020924.cha,CAR,let's we're going to change you.,,,34
+7611,Thomas/020924.cha,CHI,they're eating them.,1.0,,34
+7612,Thomas/020924.cha,CAR,they're eating them.,,,34
+7613,Thomas/020924.cha,CHI,yes.,,,34
+7614,Thomas/020924.cha,CAR,right.,,,34
+7615,Thomas/020924.cha,CAR,are you going to lie down?,,,34
+7616,Thomas/020924.cha,CHI,eating them all up.,0.0,,34
+7617,Thomas/020924.cha,CAR,they're eating them all up.,,,34
+7618,Thomas/020924.cha,CHI,look.,,,34
+7619,Thomas/020924.cha,CHI,Smarties.,,,34
+7620,Thomas/020924.cha,CAR,Smarties.,,,34
+7621,Thomas/020924.cha,CAR,they're putting Smarties on top now.,,,34
+7622,Thomas/020924.cha,CHI,yes.,,,34
+7623,Thomas/020924.cha,CAR,oh isn't it?,,,34
+7624,Thomas/020924.cha,CAR,butter cream hundreds and thousands Smarties chocolate buttons.,,,34
+7625,Thomas/020924.cha,CAR,oh he's not going to pipe some cream round the edge is he?,,,34
+7626,Thomas/020924.cha,CAR,yes.,,,34
+7627,Thomas/020924.cha,CAR,he's using squirty cream.,,,34
+7628,Thomas/020924.cha,CHI,dirty cream.,1.0,,34
+7629,Thomas/020924.cha,CAR,no.,,,34
+7630,Thomas/020924.cha,CAR,not dirty cream.,,,34
+7631,Thomas/020924.cha,CAR,squirty cream.,,,34
+7632,Thomas/020924.cha,CAR,it's in a can.,,,34
+7633,Thomas/020924.cha,CAR,we've got some of that.,,,34
+7634,Thomas/020924.cha,CHI,more like dirty cream.,-1.0,"subject, verb, determiner",34
+7635,Thomas/020924.cha,CAR,is it more like dirty cream?,,,34
+7636,Thomas/020924.cha,CHI,yes.,,,34
+7637,Thomas/020924.cha,CAR,ah.,,,34
+7638,Thomas/020924.cha,CHI,strawberries.,,,34
+7639,Thomas/020924.cha,CAR,oh lovely.,,,34
+7640,Thomas/020924.cha,CAR,oh gosh what are they doing?,,,34
+7641,Thomas/020924.cha,CAR,they're dipping strawberries in melted chocolate.,,,34
+7642,Thomas/020924.cha,CHI,putting them on top.,0.0,,34
+7643,Thomas/020924.cha,CAR,putting them on top of the cake.,,,34
+7644,Thomas/020924.cha,CAR,oh it's a very busy cake isn't it?,,,34
+7645,Thomas/020924.cha,CHI,yes.,,,34
+7646,Thomas/020924.cha,CHI,and more strawberries.,-1.0,"subject, verb",34
+7647,Thomas/020924.cha,CAR,more strawberries in the chocolate.,,,34
+7648,Thomas/020924.cha,CAR,give it a twirl and ah.,,,34
+7649,Thomas/020924.cha,CAR,do know what she done?,,,34
+7650,Thomas/020924.cha,CAR,the little girl.,,,34
+7651,Thomas/020924.cha,CHI,eated it.,-1.0,"subject, tense_aspect",34
+7652,Thomas/020924.cha,CAR,she has eaten eat.,,,34
+7653,Thomas/020924.cha,CAR,I thought she was going to put it on the cake and then at the last moment she popped it in her mouth.,,,34
+7654,Thomas/020924.cha,CAR,what's the little boy going to do?,,,34
+7655,Thomas/020924.cha,CAR,he's eating it as well isn't he?,,,34
+7656,Thomas/020924.cha,CAR,wow wow wow.,,,34
+7657,Thomas/020924.cha,CHI,I want one.,1.0,,34
+7658,Thomas/020924.cha,CAR,I bet you do.,,,34
+7659,Thomas/020924.cha,CAR,look.,,,34
+7660,Thomas/020924.cha,CAR,they're cutting the cake.,,,34
+7661,Thomas/020924.cha,CAR,they're going to have a piece do you think?,,,34
+7662,Thomas/020924.cha,CHI,yes.,,,34
+7663,Thomas/020924.cha,CHI,I think so.,1.0,,34
+7664,Thomas/020924.cha,CAR,I think so.,,,34
+7665,Thomas/020924.cha,CHI,yes.,,,34
+7666,Thomas/020924.cha,CAR,wow look at that.,,,34
+7667,Thomas/020924.cha,CHI,little girl eat one.,-1.0,"determiner, tense_aspect",34
+7668,Thomas/020924.cha,CAR,little girl eating one.,,,34
+7669,Thomas/020924.cha,CAR,yes.,,,34
+7670,Thomas/020924.cha,CAR,I think it must have been the summer because the little girl has got a summer dress on hasn't she?,,,34
+7671,Thomas/020924.cha,CHI,yes.,,,34
+7672,Thomas/020924.cha,CAR,oh and of course strawberries.,,,34
+7673,Thomas/020924.cha,CAR,mind you.,,,34
+7674,Thomas/020924.cha,CAR,we've got some strawberries in the fridge.,,,34
+7675,Thomas/020924.cha,CAR,ah do you think the Teletubbies are going to say again again now.,,,34
+7676,Thomas/020924.cha,CHI,yes.,,,34
+7677,Thomas/020924.cha,CAR,again again again again.,,,34
+7678,Thomas/020924.cha,CAR,oh yes.,,,34
+7679,Thomas/020924.cha,CAR,there we are.,,,34
+7680,Thomas/020924.cha,CAR,back again.,,,34
+7681,Thomas/020924.cha,CHI,little boy little girl.,-1.0,"determiner, other",34
+7682,Thomas/020924.cha,CAR,little boy and a little girl.,,,34
+7683,Thomas/020924.cha,CAR,we'll watch the beginning because we didn't see the beginning of it.,,,34
+7684,Thomas/020924.cha,CAR,we only saw them decorating the cake at the end didn't we?,,,34
+7685,Thomas/020924.cha,CHI,come and see.,0.0,,34
+7686,Thomas/020924.cha,CAR,is that what they're saying?,,,34
+7687,Thomas/020924.cha,CAR,come and see.,,,34
+7688,Thomas/020924.cha,CAR,come and see.,,,34
+7689,Thomas/020924.cha,CAR,is that what you think they're saying?,,,34
+7690,Thomas/020924.cha,CAR,"they've got live in a nice house don't they, Thomas?",,,34
+7691,Thomas/020924.cha,CHI,yes.,,,34
+7692,Thomas/020924.cha,CAR,a nice big kitchen.,,,34
+7693,Thomas/020924.cha,CAR,oh look.,,,34
+7694,Thomas/020924.cha,CAR,they've got some scales.,,,34
+7695,Thomas/020924.cha,CAR,measuring scales.,,,34
+7696,Thomas/020924.cha,CHI,building another cake.,-1.0,"subject, verb",34
+7697,Thomas/020924.cha,CAR,they're building another cake.,,,34
+7698,Thomas/020924.cha,CAR,oh it's just a repeat of what we've just seen.,,,34
+7699,Thomas/020924.cha,CAR,but they're building another cake.,,,34
+7700,Thomas/020924.cha,CAR,yes.,,,34
+7701,Thomas/020924.cha,CAR,building another cake.,,,34
+7702,Thomas/020924.cha,CAR,right.,,,34
+7703,Thomas/020924.cha,CAR,"sit down please, sweetheart.",,,34
+7704,Thomas/020924.cha,CAR,sit down.,,,34
+7705,Thomas/020924.cha,CAR,sit down please.,,,34
+7706,Thomas/020924.cha,CAR,that was Grandma on the phone wasn't it?,,,34
+7707,Thomas/020924.cha,CHI,yes.,,,34
+7708,Thomas/020924.cha,CHI,I can't talk her my a little baby.,-1.0,other,34
+7709,Thomas/020924.cha,CAR,you can't talk to her because you're a little baby.,,,34
+7710,Thomas/020924.cha,CHI,yes.,,,34
+7711,Thomas/020924.cha,CAR,oh fair enough.,,,34
+7712,Thomas/020924.cha,CHI,little baby's over there.,1.0,,34
+7713,Thomas/020924.cha,CAR,little baby's over there.,,,34
+7714,Thomas/020924.cha,CAR,well I'd like the little baby over here please because I wanna change your.,,,34
+7715,Thomas/020924.cha,CAR,come on.,,,34
+7716,Thomas/020924.cha,CAR,quick because we're watching this cake again.,,,34
+7717,Thomas/020924.cha,CAR,oh I we missed a bit of it.,,,34
+7718,Thomas/020924.cha,CAR,they've got to the squirty cream stage.,,,34
+7719,Thomas/020924.cha,CAR,come on.,,,34
+7720,Thomas/020924.cha,CAR,you come here and I'll get you a strawberry.,,,34
+7721,Thomas/020924.cha,CAR,you get your nappie changed.,,,34
+7722,Thomas/020924.cha,CHI,oh uhoh.,1.0,,34
+7723,Thomas/020924.cha,CAR,uhoh.,,,34
+7724,Thomas/020924.cha,CHI,oh strawberries.,0.0,,34
+7725,Thomas/020924.cha,CAR,strawberries.,,,34
+7726,Thomas/020924.cha,CAR,they're eating strawberries and chocolates.,,,34
+7727,Thomas/020924.cha,CAR,why have we got strawberries in the fridge today?,,,34
+7728,Thomas/020924.cha,CHI,I not know.,-1.0,auxiliary,34
+7729,Thomas/020924.cha,CAR,I do.,,,34
+7730,Thomas/020924.cha,CHI,bought them in a shop.,-1.0,subject,34
+7731,Thomas/020924.cha,CAR,we've bought.,,,34
+7732,Thomas/020924.cha,CAR,oh we've bought them in a shop.,,,34
+7733,Thomas/020924.cha,CAR,yes.,,,34
+7734,Thomas/020924.cha,CAR,that's one reason why we've got strawberries in the house.,,,34
+7735,Thomas/020924.cha,CAR,but the other reason.,,,34
+7736,Thomas/020924.cha,CAR,"would you like a cushion, sweetheart?",,,34
+7737,Thomas/020924.cha,CAR,behind your head.,,,34
+7738,Thomas/020924.cha,CHI,yes.,,,34
+7739,Thomas/020924.cha,CAR,the other reason is because.,,,34
+7740,Thomas/020924.cha,CHI,yes.,,,34
+7741,Thomas/020924.cha,CAR,Sister Eileen.,,,34
+7742,Thomas/020924.cha,CHI,Sister Eileen.,1.0,,34
+7743,Thomas/020924.cha,CAR,Sister Eileen is coming for dinner this evening.,,,34
+7744,Thomas/020924.cha,CHI,the little boy eating the strawberry.,0.0,,34
+7745,Thomas/020924.cha,CAR,is the little boy eating the strawberry as well?,,,34
+7746,Thomas/020924.cha,CHI,one.,,,34
+7747,Thomas/020924.cha,CAR,let's fix your bottom.,,,34
+7748,Thomas/020924.cha,CAR,and Sister Eileen is on a.,,,34
+7749,Thomas/020924.cha,CAR,well Daddy is on a diet to lose weight and Sister Eileen's on quite a strict medical diet.,,,34
+7750,Thomas/020924.cha,CAR,so we've had to think of all sorts of things that she can eat.,,,34
+7751,Thomas/020924.cha,CAR,she can't eat bread and she can't have milk.,,,34
+7752,Thomas/020924.cha,CAR,she can't have cheese or eggs.,,,34
+7753,Thomas/020924.cha,CAR,or all sorts of things.,,,34
+7754,Thomas/020924.cha,CAR,she can't have chinesey bits and all the things she likes.,,,34
+7755,Thomas/020924.cha,CAR,so we're going to have some chicken.,,,34
+7756,Thomas/020924.cha,CAR,hot chicken.,,,34
+7757,Thomas/020924.cha,CHI,oh no.,1.0,,34
+7758,Thomas/020924.cha,CHI,uhoh.,,,34
+7759,Thomas/020924.cha,CAR,and we've got all sorts of salads.,,,34
+7760,Thomas/020924.cha,CAR,we've got carrot and orange salad.,,,34
+7761,Thomas/020924.cha,CHI,um.,,,34
+7762,Thomas/020924.cha,CAR,in a dressing.,,,34
+7763,Thomas/020924.cha,CHI,um.,,,34
+7764,Thomas/020924.cha,CAR,yes.,,,34
+7765,Thomas/020924.cha,CAR,a fat free dressing.,,,34
+7766,Thomas/020924.cha,CAR,and we've got pasta.,,,34
+7767,Thomas/020924.cha,CHI,yes.,,,34
+7768,Thomas/020924.cha,CAR,salad.,,,34
+7769,Thomas/020924.cha,CHI,yes.,,,34
+7770,Thomas/020924.cha,CHI,and chocolate cake.,1.0,,34
+7771,Thomas/020924.cha,CAR,no.,,,34
+7772,Thomas/020924.cha,CAR,we haven't had chocolate cake.,,,34
+7773,Thomas/020924.cha,CAR,she can't have chocolate cake.,,,34
+7774,Thomas/020924.cha,CHI,yes.,,,34
+7775,Thomas/020924.cha,CAR,and we've got couscous with roasted vegetables.,,,34
+7776,Thomas/020924.cha,CHI,sausage rolls.,0.0,,34
+7777,Thomas/020924.cha,CAR,no.,,,34
+7778,Thomas/020924.cha,CAR,we've not got sausage rolls.,,,34
+7779,Thomas/020924.cha,CHI,yes.,,,34
+7780,Thomas/020924.cha,CAR,and we've also got some mixed leafs.,,,34
+7781,Thomas/020924.cha,CHI,oh look.,1.0,,34
+7782,Thomas/020924.cha,CHI,Dipsy's hat on floor.,-1.0,determiner,34
+7783,Thomas/020924.cha,CAR,Dipsy's hat on the floor.,,,34
+7784,Thomas/020924.cha,CAR,and we've got mixed leafs.,,,34
+7785,Thomas/020924.cha,CAR,and what else have we got?,,,34
+7786,Thomas/020924.cha,CAR,we've got cherry tomatoes.,,,34
+7787,Thomas/020924.cha,CHI,yes.,,,34
+7788,Thomas/020924.cha,CAR,and cucumber.,,,34
+7789,Thomas/020924.cha,CHI,cucumber.,,,34
+7790,Thomas/020924.cha,CAR,cucumber.,,,34
+7791,Thomas/020924.cha,CAR,that's what we've got.,,,34
+7792,Thomas/020924.cha,CHI,potatoes.,,,34
+7793,Thomas/020924.cha,CAR,potatoes.,,,34
+7794,Thomas/020924.cha,CAR,yes.,,,34
+7795,Thomas/020924.cha,CAR,but we're not having potatoes tonight.,,,34
+7796,Thomas/020924.cha,CHI,no.,,,34
+7797,Thomas/020924.cha,CAR,and then for dessert we've got strawberries.,,,34
+7798,Thomas/020924.cha,CHI,having strawberries now.,-1.0,"subject, auxiliary",34
+7799,Thomas/020924.cha,CAR,having strawberries.,,,34
+7800,Thomas/020924.cha,CAR,yes.,,,34
+7801,Thomas/020924.cha,CAR,we're going to have one now.,,,34
+7802,Thomas/020924.cha,CHI,Daddy's.,,,34
+7803,Thomas/020924.cha,CHI,Daddy have one too.,0.0,,34
+7804,Thomas/020924.cha,CAR,well Daddy can't because at the moment because he's at work isn't he?,,,34
+7805,Thomas/020924.cha,CAR,but I'm sure.,,,34
+7806,Thomas/020924.cha,CHI,Purdie want one.,-1.0,sv_agreement,34
+7807,Thomas/020924.cha,CAR,no.,,,34
+7808,Thomas/020924.cha,CAR,I don't think Purdie eats strawberries.,,,34
+7809,Thomas/020924.cha,CAR,but Daddy's on a diet.,,,34
+7810,Thomas/020924.cha,CAR,and yes.,,,34
+7811,Thomas/020924.cha,CAR,I'm sure Daddy could manage the odd strawberry don't you?,,,34
+7812,Thomas/020924.cha,CAR,it has been very difficult knowing what to make because she can't have so many things.,,,34
+7813,Thomas/020924.cha,CAR,and she can drink wine so I think we'll have some wine.,,,34
+7814,Thomas/020924.cha,CHI,Dips Dipsy likes strawberries.,1.0,,34
+7815,Thomas/020924.cha,CAR,does Dipsy like strawberries?,,,34
+7816,Thomas/020924.cha,CHI,yes.,,,34
+7817,Thomas/020924.cha,CAR,how do you know that?,,,34
+7818,Thomas/020924.cha,CHI,Dipsy tummy.,-1.0,verb,34
+7819,Thomas/020924.cha,CAR,have you seen Dipsy eating strawberries before or are you just guessing that Dipsy would like to eat strawberries?,,,34
+7820,Thomas/020924.cha,CHI,eat.,,,34
+7821,Thomas/020924.cha,CHI,Purdie like strawberries.,-1.0,sv_agreement,34
+7822,Thomas/020924.cha,CHI,Purdie likes strawberries.,1.0,,34
+7823,Thomas/020924.cha,CAR,Purdie likes strawberries.,,,34
+7824,Thomas/020924.cha,CHI,Purdie.,,,34
+7825,Thomas/020924.cha,CAR,Purdie likes strawberries.,,,34
+7826,Thomas/020924.cha,CAR,there we are.,,,34
+7827,Thomas/020924.cha,CHI,yes.,,,34
+7828,Thomas/020924.cha,CAR,we'll have to get some new nappies won't we?,,,34
+7829,Thomas/020924.cha,CHI,um.,,,34
+7830,Thomas/020924.cha,CAR,in fact we can write that on the shopping list because we've made a shopping list haven't we?,,,34
+7831,Thomas/020924.cha,CHI,yes.,,,34
+7832,Thomas/020924.cha,CAR,we made shopping list and not been shopping yet.,,,34
+7833,Thomas/020924.cha,CHI,no.,,,34
+7834,Thomas/020924.cha,CAR,right.,,,34
+7835,Thomas/020924.cha,CAR,"could you put your legs down straight for me please, darling?",,,34
+7836,Thomas/020924.cha,CHI,yes.,,,34
+7837,Thomas/020924.cha,CAR,that's a good boy.,,,34
+7838,Thomas/020924.cha,CAR,because these nappies you're wearing are really a little bit too small for you now aren't they?,,,34
+7839,Thomas/020924.cha,CHI,um.,,,34
+7840,Thomas/020924.cha,CAR,but we've run out of the big ones.,,,34
+7841,Thomas/020924.cha,CAR,so these are fine as long as we remember to change you often.,,,34
+7842,Thomas/020924.cha,CAR,"but you've hardly eaten anything really, Thomas have you?",,,34
+7843,Thomas/020924.cha,CHI,no.,,,34
+7844,Thomas/020924.cha,CAR,and you've not.,,,34
+7845,Thomas/020924.cha,CAR,well you've had more to drink but you've not had many wet nappies.,,,34
+7846,Thomas/020924.cha,CAR,there we are.,,,34
+7847,Thomas/020924.cha,CAR,how does that feel?,,,34
+7848,Thomas/020924.cha,CAR,nice and snug.,,,34
+7849,Thomas/020924.cha,CHI,no.,,,34
+7850,Thomas/020924.cha,CAR,no.,,,34
+7851,Thomas/020924.cha,CAR,do you not feel nice and snug?,,,34
+7852,Thomas/020924.cha,CHI,no.,,,34
+7853,Thomas/020924.cha,CAR,snuggywugwug.,,,34
+7854,Thomas/020924.cha,CHI,no.,,,34
+7855,Thomas/020924.cha,CHI,put the cushion down floor.,-1.0,"preposition, determiner",34
+7856,Thomas/020924.cha,CAR,you've put the cushion on the floor have you?,,,34
+7857,Thomas/020924.cha,CHI,yes.,,,34
+7858,Thomas/020924.cha,CAR,oh I wondered why you felt wet then but it's the cream that Mummy has put on you isn't it?,,,34
+7859,Thomas/020924.cha,CAR,I'm just going to put a dab of cream behind your knees because it the skin is still a little bit dry isn't it?,,,34
+7860,Thomas/020924.cha,CAR,I don't want you to get sore.,,,34
+7861,Thomas/020924.cha,CAR,legs up.,,,34
+7862,Thomas/020924.cha,CAR,legs up like you do in your exercises.,,,34
+7863,Thomas/020924.cha,CAR,how's that?,,,34
+7864,Thomas/020924.cha,CAR,and is your poorly toe better?,,,34
+7865,Thomas/020924.cha,CHI,yes.,,,34
+7866,Thomas/020924.cha,CAR,we put special cream on that this morning didn't we?,,,34
+7867,Thomas/020924.cha,CHI,nice and soft.,0.0,,34
+7868,Thomas/020924.cha,CAR,nice and soft.,,,34
+7869,Thomas/020924.cha,CAR,let's have a look.,,,34
+7870,Thomas/020924.cha,CAR,put a dab more cream on there just while we've got it on our hands.,,,34
+7871,Thomas/020924.cha,CAR,oh I love these little feet.,,,34
+7872,Thomas/020924.cha,CAR,I love these little feet.,,,34
+7873,Thomas/020924.cha,CAR,are you trying to say home?,,,34
+7874,Thomas/020924.cha,CHI,yes.,,,34
+7875,Thomas/020924.cha,CAR,why couldn't you say home?,,,34
+7876,Thomas/020924.cha,CHI,big bear.,-1.0,determiner,34
+7877,Thomas/020924.cha,CAR,what are you trying to say?,,,34
+7878,Thomas/020924.cha,CHI,uh Teletubbies look big bears.,0.0,,34
+7879,Thomas/020924.cha,CHI,big tree.,-1.0,determiner,34
+7880,Thomas/020924.cha,CAR,do you think there's a bear coming from the tree?,,,34
+7881,Thomas/020924.cha,CHI,no.,,,34
+7882,Thomas/020924.cha,CAR,oh with going out this morning and with Sister Eileen coming later on we've not gone to the Beehive today have we?,,,34
+7883,Thomas/020924.cha,CAR,we usually go to the Beehive on a Thursday if we can.,,,34
+7884,Thomas/020924.cha,CAR,and when we're walking through Didsbury Park you usually talk about big bears don't you?,,,34
+7885,Thomas/020924.cha,CHI,have a strawberry now.,-1.0,"subject, auxiliary",34
+7886,Thomas/020924.cha,CAR,you'd like a strawberry.,,,34
+7887,Thomas/020924.cha,CAR,oh you've not forgotten about strawberries have you?,,,34
+7888,Thomas/020924.cha,CHI,yes.,,,34
+7889,Thomas/020924.cha,CAR,yes.,,,34
+7890,Thomas/020924.cha,CAR,you mean no.,,,34
+7891,Thomas/020924.cha,CAR,trousers on.,,,34
+7892,Thomas/020924.cha,CAR,let's put your slippers back on.,,,34
+7893,Thomas/020924.cha,CHI,uhoh.,,,34
+7894,Thomas/020924.cha,CAR,uhoh.,,,34
+7895,Thomas/020924.cha,CAR,slippers back on.,,,34
+7896,Thomas/020924.cha,CHI,oh.,,,34
+7897,Thomas/020924.cha,CAR,what's happening with the tree on Teletubbies?,,,34
+7898,Thomas/020924.cha,CHI,bump.,,,34
+7899,Thomas/020924.cha,CHI,Teletubb dicky birds on a Christmas tree.,0.0,,34
+7900,Thomas/020924.cha,CAR,no.,,,34
+7901,Thomas/020924.cha,CAR,it's not a Christmas tree.,,,34
+7902,Thomas/020924.cha,CAR,the dicky birds are on the Christmas tree.,,,34
+7903,Thomas/020924.cha,CAR,it's just an ordinary tree isn't it?,,,34
+7904,Thomas/020924.cha,CAR,I think it might be an oak tree because it looks like a very big tree.,,,34
+7905,Thomas/020924.cha,CHI,like me.,1.0,,34
+7906,Thomas/020924.cha,CAR,you're a very big tree are you?,,,34
+7907,Thomas/020924.cha,CHI,yes.,,,34
+7908,Thomas/020924.cha,CAR,you're a very big boy.,,,34
+7909,Thomas/020924.cha,CAR,right.,,,34
+7910,Thomas/020924.cha,CAR,sit down please and we'll get you a strawberry.,,,34
+7911,Thomas/020924.cha,CAR,sit down quickly.,,,34
+7912,Thomas/020924.cha,CHI,oh like a kiss.,-1.0,"subject, verb",34
+7913,Thomas/020924.cha,CAR,you'd like a kiss.,,,34
+7914,Thomas/020924.cha,CHI,yes.,,,34
+7915,Thomas/020924.cha,CAR,well just let me wash my hands then I'll come for a kiss.,,,34
+7916,Thomas/020924.cha,CAR,and then I'll get you a strawberry.,,,34
+7917,Thomas/020924.cha,CHI,I love your hair.,1.0,,34
+7918,Thomas/020924.cha,CAR,you like my hair.,,,34
+7919,Thomas/020924.cha,CAR,you'll say anything to flatter me when you think you're getting something.,,,34
+7920,Thomas/020924.cha,CHI,I no like doggypoos.,-1.0,auxiliary,34
+7921,Thomas/020924.cha,CAR,no.,,,34
+7922,Thomas/020924.cha,CAR,good.,,,34
+7923,Thomas/020924.cha,CAR,and I don't like you talking about it.,,,34
+7924,Thomas/020924.cha,CAR,as long as you keep telling me my hair's nice and you stop talking about doggypoos we'll get on fine won't we?,,,34
+7925,Thomas/020924.cha,CHI,getting on fine.,-1.0,"subject, verb",34
+7926,Thomas/020924.cha,CAR,"we'll get on fine you, Thomas.",,,34
+7927,Thomas/020924.cha,CAR,won't we?,,,34
+7928,Thomas/020924.cha,CAR,we'll get on fine.,,,34
+7929,Thomas/020924.cha,CHI,oh my god.,1.0,,34
+7930,Thomas/020924.cha,CAR,no.,,,34
+7931,Thomas/020924.cha,CAR,we won't get on fine if you say that.,,,34
+7932,Thomas/020924.cha,CHI,yes.,,,34
+7933,Thomas/020924.cha,CAR,no.,,,34
+7934,Thomas/020924.cha,CAR,I don't like that.,,,34
+7935,Thomas/020924.cha,CHI,strawberry gone.,-1.0,determiner,34
+7936,Thomas/020924.cha,CAR,"I don't know, darling.",,,34
+7937,Thomas/020924.cha,CAR,oh there we are.,,,34
+7938,Thomas/020924.cha,CHI,here you are.,1.0,,34
+7939,Thomas/020924.cha,CAR,next to the brussel sprouts.,,,34
+7940,Thomas/020924.cha,CAR,oh gosh what has happened to the fridge?,,,34
+7941,Thomas/020924.cha,CAR,oh no.,,,34
+7942,Thomas/020924.cha,CHI,what has happened the fridge?,-1.0,preposition,34
+7943,Thomas/020924.cha,CAR,well I think when it's very full sometimes we knock the dial.,,,34
+7944,Thomas/020924.cha,CHI,yes.,,,34
+7945,Thomas/020924.cha,CAR,and it has um turned itself off.,,,34
+7946,Thomas/020924.cha,CAR,I've just opened it now and there seemed to be quite a lot of water.,,,34
+7947,Thomas/020924.cha,CAR,I better just check the freezer.,,,34
+7948,Thomas/020924.cha,CHI,what's happening the freezer?,-1.0,preposition,34
+7949,Thomas/020924.cha,CAR,no.,,,34
+7950,Thomas/020924.cha,CAR,everything.,,,34
+7951,Thomas/020924.cha,CHI,holding this.,-1.0,"subject, present_progressive",34
+7952,Thomas/020924.cha,CAR,no.,,,34
+7953,Thomas/020924.cha,CAR,everything's fine in the freezer.,,,34
+7954,Thomas/020924.cha,CAR,it's still solid.,,,34
+7955,Thomas/020924.cha,CHI,not touch anything.,-1.0,"subject, tense_aspect",34
+7956,Thomas/020924.cha,CHI,I'm not open anything.,-1.0,present_progressive,34
+7957,Thomas/020924.cha,CAR,good.,,,34
+7958,Thomas/020924.cha,CAR,pleased to hear it.,,,34
+7959,Thomas/020924.cha,CHI,what has happened?,1.0,,34
+7960,Thomas/020924.cha,CHI,want smell strawberries.,-1.0,"subject, tense_aspect",34
+7961,Thomas/020924.cha,CAR,wanna smell the strawberries.,,,34
+7962,Thomas/020924.cha,CHI,yes.,,,34
+7963,Thomas/020924.cha,CAR,there you are.,,,34
+7964,Thomas/020924.cha,CAR,there's a whole punnet of strawberries.,,,34
+7965,Thomas/020924.cha,CAR,what we don't eat tonight we can eat tomorrow can't we?,,,34
+7966,Thomas/020924.cha,CHI,want I wanna eat two now.,1.0,,34
+7967,Thomas/020924.cha,CAR,you wanna eat two now.,,,34
+7968,Thomas/020924.cha,CAR,I'll wash them and slice them up and you can eat them.,,,34
+7969,Thomas/020924.cha,CHI,um Teletubbies not say bye bye.,-1.0,auxiliary,34
+7970,Thomas/020924.cha,CAR,the Teletubbies haven't said bye bye.,,,34
+7971,Thomas/020924.cha,CHI,no no.,1.0,,34
+7972,Thomas/020924.cha,CHI,the tape's on board.,1.0,,34
+7973,Thomas/020924.cha,CHI,the tape's on board.,1.0,,34
+7974,Thomas/020924.cha,CAR,the tape's on board.,,,34
+7975,Thomas/020924.cha,CAR,what do you mean the tape's on board?,,,34
+7976,Thomas/020924.cha,CHI,I not know.,-1.0,auxiliary,34
+7977,Thomas/020924.cha,CAR,oh if you don't know there's no chance of me knowing what's going on.,,,34
+7978,Thomas/020924.cha,CAR,that's it.,,,34
+7979,Thomas/020924.cha,CAR,sit there.,,,34
+7980,Thomas/020924.cha,CAR,eat them nicely.,,,34
+7981,Thomas/020924.cha,CHI,um.,,,34
+7982,Thomas/020924.cha,CAR,oh I see what you're saying saying.,,,34
+7983,Thomas/020924.cha,CAR,the Teletubbies are going.,,,34
+7984,Thomas/020924.cha,CAR,they're saying good bye.,,,34
+7985,Thomas/020924.cha,CAR,mm.,,,34
+7986,Thomas/020924.cha,CAR,Sainsburys strawberries.,,,34
+7987,Thomas/020924.cha,CAR,very nice.,,,34
+7988,Thomas/020924.cha,CHI,um.,,,34
+7989,Thomas/020924.cha,CAR,"thank you, Mister Sainsbury.",,,34
+7990,Thomas/020924.cha,CAR,they're nice aren't they?,,,34
+7991,Thomas/020924.cha,CAR,mm mm.,,,34
+7992,Thomas/020924.cha,CAR,I think Sister Eileen'll like those don't you?,,,34
+7993,Thomas/020924.cha,CHI,hm.,,,34
+7994,Thomas/020924.cha,CAR,well the fridge can't have been defrosting too long because we went in it earlier on didn't we?,,,34
+7995,Thomas/020924.cha,CAR,when we got your milk ready.,,,34
+7996,Thomas/020924.cha,CAR,I think I would have noticed then if it was swimming in water like it is now.,,,34
+7997,Thomas/020924.cha,CAR,"so perhaps it has only just happened, Thomas.",,,34
+7998,Thomas/020924.cha,CAR,are those nice?,,,34
+7999,Thomas/020924.cha,CHI,um.,,,34
+8000,Thomas/020924.cha,CAR,nice and tasty.,,,34
+8001,Thomas/020924.cha,CAR,"oh Thomas Lastname, you said you had not touched anything and you've taken the lid of the Sudacrem stuffed it with cotton wool and put your special cream on it.",,,34
+8002,Thomas/020924.cha,CAR,you cheeky monkey.,,,34
+8003,Thomas/020924.cha,CAR,and all that after I've given you strawberries.,,,34
+8004,Thomas/020924.cha,CAR,if I'd known if I'd know you wouldn't have got them.,,,34
+8005,Thomas/020924.cha,CAR,because you'd told me you'd been a good boy didn't you?,,,34
+8006,Thomas/020924.cha,CHI,hm.,,,34
+8007,Kuczaj/030906.cha,CHI,what were the Indians angry at?,1.0,,45
+8008,Kuczaj/030906.cha,CAR,they were angry because that guy went through their burial grounds.,,,45
+8009,Kuczaj/030906.cha,CHI,huh?,,,45
+8010,Kuczaj/030906.cha,CAR,they were angry because that guy went through their burial grounds.,,,45
+8011,Kuczaj/030906.cha,CHI,what's burial grounds?,0.0,,45
+8012,Kuczaj/030906.cha,CAR,that's where they bury everybody.,,,45
+8013,Kuczaj/030906.cha,CHI,Daddy is this a antique cup?,-1.0,determiner,45
+8014,Kuczaj/030906.cha,CHI,is this a antique cup?,-1.0,determiner,45
+8015,Kuczaj/030906.cha,CHI,antique this?,-1.0,"verb, determiner, other",45
+8016,Kuczaj/030906.cha,CAR,I think it might be.,,,45
+8017,Kuczaj/030906.cha,CHI,how come they got cars on them?,1.0,,45
+8018,Kuczaj/030906.cha,CAR,those are just pictures.,,,45
+8019,Kuczaj/030906.cha,CHI,yeah where is that thing?,1.0,,45
+8020,Kuczaj/030906.cha,CAR,what thing?,,,45
+8021,Kuczaj/030906.cha,CHI,my thing.,1.0,,45
+8022,Kuczaj/030906.cha,CAR,what thing's your thing?,,,45
+8023,Kuczaj/030906.cha,CHI,me that's my thing.,1.0,,45
+8024,Kuczaj/030906.cha,CHI,mine me is my thing.,-1.0,subject,45
+8025,Kuczaj/030906.cha,CAR,do you want toast?,,,45
+8026,Kuczaj/030906.cha,CHI,yeah.,,,45
+8027,Kuczaj/030906.cha,CAR,banana bread?,,,45
+8028,Kuczaj/030906.cha,CHI,no no with our honey bread.,0.0,,45
+8029,Kuczaj/030906.cha,CAR,okay dang it.,,,45
+8030,Kuczaj/030906.cha,CHI,was it on the floor?,1.0,,45
+8031,Kuczaj/030906.cha,CAR,Daddy spilled it.,,,45
+8032,Kuczaj/030906.cha,CHI,are you going to get me some new milk?,1.0,,45
+8033,Kuczaj/030906.cha,CAR,I will.,,,45
+8034,Kuczaj/030906.cha,CAR,let me wipe this up first okay?,,,45
+8035,Kuczaj/030906.cha,CHI,okay how did it get to over there?,1.0,,45
+8036,Kuczaj/030906.cha,CAR,because when it fell it fell all over.,,,45
+8037,Kuczaj/030906.cha,CHI,was it a big one too?,1.0,,45
+8038,Kuczaj/030906.cha,CAR,yep.,,,45
+8039,Kuczaj/030906.cha,CHI,I bet it was really bigger.,1.0,,45
+8040,Kuczaj/030906.cha,CAR,it was pretty big.,,,45
+8041,Kuczaj/030906.cha,CHI,I better watch out for it.,1.0,,45
+8042,Kuczaj/030906.cha,CHI,can I leave my blanket down Daddy?,1.0,,45
+8043,Kuczaj/030906.cha,CAR,where?,,,45
+8044,Kuczaj/030906.cha,CHI,down on the floor.,1.0,,45
+8045,Kuczaj/030906.cha,CAR,yeah.,,,45
+8046,Kuczaj/030906.cha,CHI,how are we going to get across this river?,1.0,,45
+8047,Kuczaj/030906.cha,CHI,I can't walk in the river Daddy.,1.0,,45
+8048,Kuczaj/030906.cha,CHI,Daddy?,,,45
+8049,Kuczaj/030906.cha,CAR,yeah Abe.,,,45
+8050,Kuczaj/030906.cha,CHI,I like you.,1.0,,45
+8051,Kuczaj/030906.cha,CAR,good deal.,,,45
+8052,Kuczaj/030906.cha,CHI,if I have honey on my toast I want a big glass of milk okay?,1.0,,45
+8053,Kuczaj/030906.cha,CAR,sure.,,,45
+8054,Kuczaj/030906.cha,CHI,my toast popped up.,1.0,,45
+8055,Kuczaj/030906.cha,CHI,could I get it?,1.0,,45
+8056,Kuczaj/030906.cha,CAR,why don't you let me.,,,45
+8057,Kuczaj/030906.cha,CAR,because there's a lot of stuff still on the floor.,,,45
+8058,Kuczaj/030906.cha,CAR,okay?,,,45
+8059,Kuczaj/030906.cha,CHI,are you going to walk in it?,1.0,,45
+8060,Kuczaj/030906.cha,CAR,I'll get it.,,,45
+8061,Kuczaj/030906.cha,CHI,I wanna put the honey on.,1.0,,45
+8062,Kuczaj/030906.cha,CAR,no I'll put it on.,,,45
+8063,Kuczaj/030906.cha,CHI,how come you'll put it on?,1.0,,45
+8064,Kuczaj/030906.cha,CAR,because I don't wanna make another mess for a little while okay?,,,45
+8065,Kuczaj/030906.cha,CHI,okay except are you going to get me new milk?,1.0,,45
+8066,Kuczaj/030906.cha,CAR,yeah I'm not going to cut it.,,,45
+8067,Kuczaj/030906.cha,CAR,because this bread is shaped differently.,,,45
+8068,Kuczaj/030906.cha,CHI,how how do you know it's shaped different?,1.0,,45
+8069,Kuczaj/030906.cha,CAR,because I can see it.,,,45
+8070,Kuczaj/030906.cha,CHI,I can't see it.,1.0,,45
+8071,Kuczaj/030906.cha,CHI,is it square?,1.0,,45
+8072,Kuczaj/030906.cha,CAR,no it's round.,,,45
+8073,Kuczaj/030906.cha,CAR,but it's not very big.,,,45
+8074,Kuczaj/030906.cha,CHI,did you cut it?,1.0,,45
+8075,Kuczaj/030906.cha,CHI,did you cut it round?,1.0,,45
+8076,Kuczaj/030906.cha,CAR,that's the way the loaf is shaped.,,,45
+8077,Kuczaj/030906.cha,CAR,the loaf is round.,,,45
+8078,Kuczaj/030906.cha,CHI,Daddy.,,,45
+8079,Kuczaj/030906.cha,CAR,yeah.,,,45
+8080,Kuczaj/030906.cha,CHI,do you know this is wheat bread because it's made from wheat?,1.0,,45
+8081,Kuczaj/030906.cha,CAR,yep I know that.,,,45
+8082,Kuczaj/030906.cha,CHI,I didn't know that.,1.0,,45
+8083,Kuczaj/030906.cha,CAR,oh you didn't know until you tasted it?,,,45
+8084,Kuczaj/030906.cha,CHI,no I thought it wasn't wheat bread.,1.0,,45
+8085,Kuczaj/030906.cha,CAR,here's your milk.,,,45
+8086,Kuczaj/030906.cha,CHI,thanks.,,,45
+8087,Kuczaj/030906.cha,CAR,you're welcome is that good toast.,,,45
+8088,Kuczaj/030906.cha,CHI,not very good.,1.0,,45
+8089,Kuczaj/030906.cha,CAR,how come?,,,45
+8090,Kuczaj/030906.cha,CHI,because it's made from wheat.,1.0,,45
+8091,Kuczaj/030906.cha,CAR,oh you don't like wheat bread?,,,45
+8092,Kuczaj/030906.cha,CHI,uhuh.,,,45
+8093,Kuczaj/030906.cha,CAR,I thought you liked it.,,,45
+8094,Kuczaj/030906.cha,CHI,no I don't like wheat bread.,1.0,,45
+8095,Kuczaj/030906.cha,CHI,that's black.,1.0,,45
+8096,Kuczaj/030906.cha,CAR,did you like that movie last night?,,,45
+8097,Kuczaj/030906.cha,CHI,yeah.,,,45
+8098,Kuczaj/030906.cha,CAR,what did you like best?,,,45
+8099,Kuczaj/030906.cha,CHI,I liked all the parts.,1.0,,45
+8100,Kuczaj/030906.cha,CAR,oh.,,,45
+8101,Kuczaj/030906.cha,CHI,which parts did you like best?,0.0,,45
+8102,Kuczaj/030906.cha,CAR,I liked watching him build the log cabin.,,,45
+8103,Kuczaj/030906.cha,CAR,I though that was pretty neat.,,,45
+8104,Kuczaj/030906.cha,CHI,I liked that too.,1.0,,45
+8105,Kuczaj/030906.cha,CHI,I liked all of them.,1.0,,45
+8106,Kuczaj/030906.cha,CHI,which part did Momma like?,1.0,,45
+8107,Kuczaj/030906.cha,CAR,I think she liked it all too.,,,45
+8108,Kuczaj/030906.cha,CHI,how come you didn't like them all?,1.0,,45
+8109,Kuczaj/030906.cha,CAR,I did.,,,45
+8110,Kuczaj/030906.cha,CAR,I just liked some parts the best.,,,45
+8111,Kuczaj/030906.cha,CAR,don't spill it.,,,45
+8112,Kuczaj/030906.cha,CHI,I didn't spill it.,1.0,,45
+8113,Kuczaj/030906.cha,CAR,huh?,,,45
+8114,Kuczaj/030906.cha,CHI,I didn't spill it.,1.0,,45
+8115,Kuczaj/030906.cha,CAR,I know you didn't.,,,45
+8116,Kuczaj/030906.cha,CAR,I just want you to.,,,45
+8117,Kuczaj/030906.cha,CHI,you did?,1.0,,45
+8118,Kuczaj/030906.cha,CAR,huh?,,,45
+8119,Kuczaj/030906.cha,CHI,you did?,1.0,,45
+8120,Kuczaj/030906.cha,CAR,I didn't spill it.,,,45
+8121,Kuczaj/030906.cha,CHI,you did spill it remember?,1.0,,45
+8122,Kuczaj/030906.cha,CAR,yeah but that wasn't what I was talking about it.,,,45
+8123,Kuczaj/030906.cha,CHI,that is what I was talking about.,1.0,,45
+8124,Kuczaj/030906.cha,CAR,huh?,,,45
+8125,Kuczaj/030906.cha,CHI,I was just talking to myself.,1.0,,45
+8126,Kuczaj/030906.cha,CAR,oh.,,,45
+8127,Kuczaj/030906.cha,CHI,did Texas win?,1.0,,45
+8128,Kuczaj/030906.cha,CAR,yeah.,,,45
+8129,Kuczaj/030906.cha,CHI,yeah for Texas.,1.0,,45
+8130,Kuczaj/030906.cha,CAR,what are you thinking about?,,,45
+8131,Kuczaj/030906.cha,CHI,I'm not thinking about anything.,1.0,,45
+8132,Kuczaj/030906.cha,CAR,oh.,,,45
+8133,Kuczaj/030906.cha,CHI,Daddy I couldn't eat the rest.,1.0,,45
+8134,Kuczaj/030906.cha,CAR,you can't?,,,45
+8135,Kuczaj/030906.cha,CHI,no.,,,45
+8136,Kuczaj/030906.cha,CAR,how come?,,,45
+8137,Kuczaj/030906.cha,CHI,you got me a too big round piece.,1.0,,45
+8138,Kuczaj/030906.cha,CAR,what are you going to do then?,,,45
+8139,Kuczaj/030906.cha,CHI,get down.,1.0,,45
+8140,Kuczaj/030906.cha,CHI,I ate pretty much.,1.0,,45
+8141,Kuczaj/030906.cha,CHI,Daddy if I ate pretty much could I have some of my candy?,1.0,,45
+8142,Kuczaj/030906.cha,CAR,what?,,,45
+8143,Kuczaj/030906.cha,CHI,if I ate pretty much could I have some of my candy?,1.0,,45
+8144,Kuczaj/030906.cha,CAR,why don't you eat one more bite?,,,45
+8145,Kuczaj/030906.cha,CHI,okay I ate one more bite.,1.0,,45
+8146,Kuczaj/030906.cha,CAR,is this what you want?,,,45
+8147,Kuczaj/030906.cha,CHI,yeah.,,,45
+8148,Kuczaj/030906.cha,CAR,what would we have done if we wouldn't have taken any candy to the drivein last night?,,,45
+8149,Kuczaj/030906.cha,CHI,we would be starving.,1.0,,45
+8150,Kuczaj/030906.cha,CAR,what?,,,45
+8151,Kuczaj/030906.cha,CHI,we would be starving.,1.0,,45
+8152,Kuczaj/030906.cha,CAR,yeah what would we have done?,,,45
+8153,Kuczaj/030906.cha,CHI,we would say.,1.0,,45
+8154,Kuczaj/030906.cha,CHI,aw we forgot to bring candy.,1.0,,45

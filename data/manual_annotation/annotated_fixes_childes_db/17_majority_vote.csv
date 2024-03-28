@@ -1,0 +1,758 @@
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels,age
+16241,Thomas/020702.cha,CHI,play that.,0.0,,31
+16242,Thomas/020702.cha,CAR,now if you went to Isabel's house and you were playing with her toys she'd expect you to put away everything you're playing with before you go the next thing out.,,,31
+16243,Thomas/020702.cha,CHI,uh.,,,31
+16244,Thomas/020702.cha,CHI,uh.,,,31
+16245,Thomas/020702.cha,CAR,come on.,,,31
+16246,Thomas/020702.cha,CAR,let's turn the page now.,,,31
+16247,Thomas/020702.cha,CAR,the jigsaw's back together.,,,31
+16248,Thomas/020702.cha,CAR,ah what's this now?,,,31
+16249,Thomas/020702.cha,CAR,we're onto the next page now.,,,31
+16250,Thomas/020702.cha,CAR,autumn.,,,31
+16251,Thomas/020702.cha,CAR,now what can you see here?,,,31
+16252,Thomas/020702.cha,CAR,look.,,,31
+16253,Thomas/020702.cha,CAR,autumn's the time to start getting jumpers out isn't it?,,,31
+16254,Thomas/020702.cha,CAR,instead of t shirts.,,,31
+16255,Thomas/020702.cha,CHI,that out.,-1.0,verb,31
+16256,Thomas/020702.cha,CAR,you want this jigsaw out.,,,31
+16257,Thomas/020702.cha,CAR,now this is a beautiful jigsaw of autumn leaves isn't it?,,,31
+16258,Thomas/020702.cha,CAR,just like the ones we've been playing with.,,,31
+16259,Thomas/020702.cha,CAR,there's a picture of a jumper and some wheat because it's harvest time in autumn isn't it?,,,31
+16260,Thomas/020702.cha,CHI,hm.,,,31
+16261,Thomas/020702.cha,CHI,when the mixers comes.,-1.0,sv_agreement,31
+16262,Thomas/020702.cha,CHI,pardon.,,,31
+16263,Thomas/020702.cha,CHI,where the mixer?,-1.0,verb,31
+16264,Thomas/020702.cha,CHI,over there.,1.0,,31
+16265,Thomas/020702.cha,CHI,um um Mummy's.,-1.0,"subject, verb",31
+16266,Thomas/020702.cha,CHI,Mummy's house mix mix mix.,-1.0,other,31
+16267,Thomas/020702.cha,CHI,the mixer round and round.,-1.0,verb,31
+16268,Thomas/020702.cha,CAR,the mixer round and round.,,,31
+16269,Thomas/020702.cha,CHI,yes.,,,31
+16270,Thomas/020702.cha,CAR,what has that got to do with wheat?,,,31
+16271,Thomas/020702.cha,CHI,where the mixer gone?,-1.0,tense_aspect,31
+16272,Thomas/020702.cha,CAR,the mixer's upstairs in the bathroom because you've been playing with it in the bath haven't you?,,,31
+16273,Thomas/020702.cha,CHI,yes.,,,31
+16274,Thomas/020702.cha,CHI,mixer gone.,-1.0,determiner,31
+16275,Thomas/020702.cha,CAR,"you took it upstairs, Thomas.",,,31
+16276,Thomas/020702.cha,CAR,it's still there.,,,31
+16277,Thomas/020702.cha,CAR,we'll see it tonight.,,,31
+16278,Thomas/020702.cha,CHI,no.,,,31
+16279,Thomas/020702.cha,CHI,play it.,0.0,,31
+16280,Thomas/020702.cha,CAR,no.,,,31
+16281,Thomas/020702.cha,CAR,you don't need to play it.,,,31
+16282,Thomas/020702.cha,CAR,come on.,,,31
+16283,Thomas/020702.cha,CAR,we're having a look at these things.,,,31
+16284,Thomas/020702.cha,CHI,no.,,,31
+16285,Thomas/020702.cha,CAR,what's in the blue basket on this page?,,,31
+16286,Thomas/020702.cha,CAR,I'm going to go round with your shopping basket and collect some of the fruit I can see in that basket there.,,,31
+16287,Thomas/020702.cha,CAR,look.,,,31
+16288,Thomas/020702.cha,CAR,what's in the shopping basket on the page?,,,31
+16289,Thomas/020702.cha,CAR,oh I see.,,,31
+16290,Thomas/020702.cha,CAR,you wanna be a little dumper truck to collect all the pieces of jigsaw.,,,31
+16291,Thomas/020702.cha,CAR,are you thinking of the leaves?,,,31
+16292,Thomas/020702.cha,CAR,is that what you're doing?,,,31
+16293,Thomas/020702.cha,CAR,because it's a picture of autumn leaves you're tidying the leaves up.,,,31
+16294,Thomas/020702.cha,CAR,is that right?,,,31
+16295,Thomas/020702.cha,CHI,not touch it.,-1.0,auxiliary,31
+16296,Thomas/020702.cha,CHI,hurt me.,-1.0,subject,31
+16297,Thomas/020702.cha,CAR,not.,,,31
+16298,Thomas/020702.cha,CHI,not touch.,-1.0,auxiliary,31
+16299,Thomas/020702.cha,CHI,not touch it.,-1.0,auxiliary,31
+16300,Thomas/020702.cha,CAR,hurt me.,,,31
+16301,Thomas/020702.cha,CAR,you don't want me to touch them.,,,31
+16302,Thomas/020702.cha,CHI,yes.,,,31
+16303,Thomas/020702.cha,CAR,you do want me to touch them.,,,31
+16304,Thomas/020702.cha,CAR,you want me to help you.,,,31
+16305,Thomas/020702.cha,CHI,no.,,,31
+16306,Thomas/020702.cha,CHI,no Mummy touch them.,0.0,,31
+16307,Thomas/020702.cha,CHI,leaves dumper trucks.,-1.0,subject,31
+16308,Thomas/020702.cha,CAR,oh the dumper truck has to touch them.,,,31
+16309,Thomas/020702.cha,CHI,mhm.,,,31
+16310,Thomas/020702.cha,CHI,no.,,,31
+16311,Thomas/020702.cha,CHI,stop it hurt.,-1.0,sv_agreement,31
+16312,Thomas/020702.cha,CAR,"what's in the basket, Thomas?",,,31
+16313,Thomas/020702.cha,CHI,apples.,,,31
+16314,Thomas/020702.cha,CAR,and.,,,31
+16315,Thomas/020702.cha,CHI,what have you.,-1.0,verb,31
+16316,Thomas/020702.cha,CHI,pear.,,,31
+16317,Thomas/020702.cha,CAR,apples and pears.,,,31
+16318,Thomas/020702.cha,CAR,what have you got in your shopping basket here?,,,31
+16319,Thomas/020702.cha,CHI,um apples pears.,-1.0,other,31
+16320,Thomas/020702.cha,CAR,apples and pears.,,,31
+16321,Thomas/020702.cha,CAR,and of course what's this?,,,31
+16322,Thomas/020702.cha,CHI,orange.,,,31
+16323,Thomas/020702.cha,CAR,that was a big bang wasn't it?,,,31
+16324,Thomas/020702.cha,CAR,no.,,,31
+16325,Thomas/020702.cha,CAR,it's not an orange.,,,31
+16326,Thomas/020702.cha,CAR,what is it?,,,31
+16327,Thomas/020702.cha,CHI,firework.,,,31
+16328,Thomas/020702.cha,CAR,oh that.,,,31
+16329,Thomas/020702.cha,CAR,yes.,,,31
+16330,Thomas/020702.cha,CAR,a firework outside.,,,31
+16331,Thomas/020702.cha,CAR,but on the page what's this?,,,31
+16332,Thomas/020702.cha,CHI,not see it.,-1.0,"subject, auxiliary",31
+16333,Thomas/020702.cha,CHI,pumpkin.,,,31
+16334,Thomas/020702.cha,CAR,a pumpkin.,,,31
+16335,Thomas/020702.cha,CAR,that's right.,,,31
+16336,Thomas/020702.cha,CAR,oh now we've got to the last page in the book.,,,31
+16337,Thomas/020702.cha,CAR,this is winter.,,,31
+16338,Thomas/020702.cha,CAR,and what has the jigsaw got a picture of?,,,31
+16339,Thomas/020702.cha,CHI,big trees.,1.0,,31
+16340,Thomas/020702.cha,CAR,big trees covered in snow.,,,31
+16341,Thomas/020702.cha,CAR,so in spring we've got the trees covered in blossom.,,,31
+16342,Thomas/020702.cha,CAR,the picture of summer doesn't show any trees.,,,31
+16343,Thomas/020702.cha,CAR,oh yes.,,,31
+16344,Thomas/020702.cha,CAR,there are some trees there with leaves on.,,,31
+16345,Thomas/020702.cha,CAR,in autumn it's all the leaves falling down.,,,31
+16346,Thomas/020702.cha,CAR,and in winter it's all the leaves covered in.,,,31
+16347,Thomas/020702.cha,CHI,leaves covered in.,-1.0,"determiner, auxiliary, other",31
+16348,Thomas/020702.cha,CAR,in snow.,,,31
+16349,Thomas/020702.cha,CHI,snow.,,,31
+16350,Thomas/020702.cha,CAR,and look.,,,31
+16351,Thomas/020702.cha,CAR,it's showing the things that you might see in winter.,,,31
+16352,Thomas/020702.cha,CAR,or pine cones.,,,31
+16353,Thomas/020702.cha,CAR,we've seen lots of pine cones haven't we?,,,31
+16354,Thomas/020702.cha,CHI,not this stick it.,-1.0,"other, auxiliary",31
+16355,Thomas/020702.cha,CHI,not stick it.,-1.0,auxiliary,31
+16356,Thomas/020702.cha,CHI,cone on that one.,-1.0,"determiner, verb",31
+16357,Thomas/020702.cha,CAR,no.,,,31
+16358,Thomas/020702.cha,CAR,we'll do it on the other page.,,,31
+16359,Thomas/020702.cha,CAR,you might see pine cones and you might see holly.,,,31
+16360,Thomas/020702.cha,CAR,well we've seen lots of holly and the red berries haven't we?,,,31
+16361,Thomas/020702.cha,CHI,holly.,,,31
+16362,Thomas/020702.cha,CHI,yes.,,,31
+16363,Thomas/020702.cha,CAR,but you call them red peas and Mummy says they're not peas and you mustn't eat them.,,,31
+16364,Thomas/020702.cha,CAR,and jackets and gloves.,,,31
+16365,Thomas/020702.cha,CHI,not biscuits.,-1.0,determiner,31
+16366,Thomas/020702.cha,CHI,a big digger comes.,1.0,,31
+16367,Thomas/020702.cha,CHI,no bite it.,-1.0,auxiliary,31
+16368,Thomas/020702.cha,CHI,no no no.,1.0,,31
+16369,Thomas/020702.cha,CHI,a big digger came.,1.0,,31
+16370,Thomas/020702.cha,CHI,big digger coming.,-1.0,"determiner, auxiliary",31
+16371,Thomas/020702.cha,CAR,you're busy gathering up the leaves again are you?,,,31
+16372,Thomas/020702.cha,CHI,watch it.,1.0,,31
+16373,Thomas/020702.cha,CAR,it's very dark outside isn't it now?,,,31
+16374,Thomas/020702.cha,CHI,yes.,,,31
+16375,Thomas/020702.cha,CHI,a big digger.,0.0,,31
+16376,Thomas/020702.cha,CAR,oh the big digger has come now has it?,,,31
+16377,Thomas/020702.cha,CAR,to pick up the autumn leaves.,,,31
+16378,Thomas/020702.cha,CAR,"gosh I tell you what, Thomas.",,,31
+16379,Thomas/020702.cha,CAR,this bucket on the digger.,,,31
+16380,Thomas/020702.cha,CAR,if Mummy's doing this picture of the snow and there's a lot of snow the digger could come and pretend it was a snowplow and scoop up all the snow couldn't it?,,,31
+16381,Thomas/020702.cha,CHI,minute minute.,-1.0,determiner,31
+16382,Thomas/020702.cha,CHI,move off a minute.,0.0,,31
+16383,Thomas/020702.cha,CAR,it's busy driving off at the moment is it?,,,31
+16384,Thomas/020702.cha,CAR,with all the autumn leaves.,,,31
+16385,Thomas/020702.cha,CHI,minute stops.,-1.0,"determiner, other",31
+16386,Thomas/020702.cha,CHI,stop a minute.,0.0,,31
+16387,Thomas/020702.cha,CHI,pick it up.,0.0,,31
+16388,Thomas/020702.cha,CAR,stop a minute.,,,31
+16389,Thomas/020702.cha,CAR,"where has the driver from that truck gone, Thomas?",,,31
+16390,Thomas/020702.cha,CHI,um tip it out.,0.0,,31
+16391,Thomas/020702.cha,CHI,um.,,,31
+16392,Thomas/020702.cha,CAR,no.,,,31
+16393,Thomas/020702.cha,CAR,he's not in there.,,,31
+16394,Thomas/020702.cha,CAR,don't tip that up because Mummy has looked and he's not in that box.,,,31
+16395,Thomas/020702.cha,CAR,he has been missing a few days now hasn't he?,,,31
+16396,Thomas/020702.cha,CHI,Mummy it.,-1.0,verb,31
+16397,Thomas/020702.cha,CHI,Mummy.,,,31
+16398,Thomas/020702.cha,CAR,"well I don't know where he is, darling.",,,31
+16399,Thomas/020702.cha,CAR,we'll have to keep looking won't we?,,,31
+16400,Thomas/020702.cha,CAR,and that's the picture of snow I'm painting.,,,31
+16401,Thomas/020702.cha,CHI,digger.,,,31
+16402,Thomas/020702.cha,CHI,the digger came.,1.0,,31
+16403,Thomas/020702.cha,CAR,the digger came.,,,31
+16404,Thomas/020702.cha,CHI,another one.,0.0,,31
+16405,Thomas/020702.cha,CHI,another one.,0.0,,31
+16406,Thomas/020702.cha,CHI,snow snow snow on there.,-1.0,"determiner, verb",31
+16407,Thomas/020702.cha,CAR,you want the digger to come and help shovel some snow.,,,31
+16408,Thomas/020702.cha,CHI,yes please.,1.0,,31
+16409,Thomas/020702.cha,CAR,you see this little hole there.,,,31
+16410,Thomas/020702.cha,CAR,that's for you to put your finger in.,,,31
+16411,Thomas/020702.cha,CAR,and that releases all the pieces of the jigsaw.,,,31
+16412,Thomas/020702.cha,CHI,big digger.,-1.0,determiner,31
+16413,Thomas/020702.cha,CHI,big.,,,31
+16414,Thomas/020702.cha,CHI,big the big.,-1.0,subject,31
+16415,Thomas/020702.cha,CHI,the big big um.,-1.0,subject,31
+16416,Thomas/020702.cha,CHI,a big.,-1.0,subject,31
+16417,Thomas/020702.cha,CHI,a big.,-1.0,subject,31
+16418,Thomas/020702.cha,CAR,a big.,,,31
+16419,Thomas/020702.cha,CAR,oh dear dear dear.,,,31
+16420,Thomas/020702.cha,CAR,he has had such a heavy load he has tipped over hasn't he?,,,31
+16421,Thomas/020702.cha,CHI,yes.,,,31
+16422,Thomas/020702.cha,CHI,don't worry there.,-1.0,other,31
+16423,Thomas/020702.cha,CAR,don't worry.,,,31
+16424,Thomas/020702.cha,CHI,come back in a minute.,0.0,,31
+16425,Thomas/020702.cha,CHI,oh dear.,1.0,,31
+16426,Thomas/020702.cha,CHI,wait wait minute.,-1.0,determiner,31
+16427,Thomas/020702.cha,CHI,big wheels.,0.0,,31
+16428,Thomas/020702.cha,CAR,big wheels.,,,31
+16429,Thomas/020702.cha,CHI,they're going now.,1.0,,31
+16430,Thomas/020702.cha,CHI,stop.,,,31
+16431,Thomas/020702.cha,CAR,yes.,,,31
+16432,Thomas/020702.cha,CAR,they've stopped.,,,31
+16433,Thomas/020702.cha,CAR,they're not going round now are they?,,,31
+16434,Thomas/020702.cha,CHI,man at man digging now at Mummy's house.,-1.0,"determiner, auxiliary",31
+16435,Thomas/020702.cha,CAR,is he digging at Mummy's house?,,,31
+16436,Thomas/020702.cha,CAR,I don't think he's digging.,,,31
+16437,Thomas/020702.cha,CAR,I think he's collecting leaves.,,,31
+16438,Thomas/020702.cha,CHI,no.,,,31
+16439,Thomas/020702.cha,CAR,he's shoveling up some snow isn't he?,,,31
+16440,Thomas/020702.cha,CAR,there's nothing really for him to do in spring apart from perhaps.,,,31
+16441,Thomas/020702.cha,CHI,no.,,,31
+16442,Thomas/020702.cha,CAR,sweep up all the blossom when that has blown down.,,,31
+16443,Thomas/020702.cha,CHI,yes.,,,31
+16444,Thomas/020702.cha,CAR,and there's nothing for him to do in the summer.,,,31
+16445,Thomas/020702.cha,CHI,no no no no.,1.0,,31
+16446,Thomas/020702.cha,CAR,but autumn and winter he's busy isn't he?,,,31
+16447,Thomas/020702.cha,CHI,no no.,1.0,,31
+16448,Thomas/020702.cha,CHI,oh big leaves.,0.0,,31
+16449,Thomas/020702.cha,CAR,I don't think we looked at this picture on the autumn page.,,,31
+16450,Thomas/020702.cha,CAR,who's that?,,,31
+16451,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16452,Thomas/020702.cha,CHI,yes.,,,31
+16453,Thomas/020702.cha,CAR,what's this?,,,31
+16454,Thomas/020702.cha,CHI,what's this now?,1.0,,31
+16455,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16456,Thomas/020702.cha,CAR,what is it?,,,31
+16457,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16458,Thomas/020702.cha,CHI,a squirrel eating the walnut.,1.0,,31
+16459,Thomas/020702.cha,CAR,a squirrel eating a whole nut.,,,31
+16460,Thomas/020702.cha,CHI,walnut.,,,31
+16461,Thomas/020702.cha,CAR,oh a walnut.,,,31
+16462,Thomas/020702.cha,CHI,yes.,,,31
+16463,Thomas/020702.cha,CHI,eating a walnut.,1.0,,31
+16464,Thomas/020702.cha,CAR,are you saying walnut or a whole nut?,,,31
+16465,Thomas/020702.cha,CHI,um no.,1.0,,31
+16466,Thomas/020702.cha,CHI,um eating um pumpkin.,-1.0,"subject, auxiliary, determiner",31
+16467,Thomas/020702.cha,CAR,no.,,,31
+16468,Thomas/020702.cha,CAR,he's not eating pumpkin.,,,31
+16469,Thomas/020702.cha,CAR,you're quite right he is eating a walnut.,,,31
+16470,Thomas/020702.cha,CAR,but I didn't know that you knew the word walnut and I didn't know that you recognized a walnut.,,,31
+16471,Thomas/020702.cha,CAR,but I thought you might have been saying he's eating a whole nut.,,,31
+16472,Thomas/020702.cha,CHI,eating a walnut.,0.0,,31
+16473,Thomas/020702.cha,CAR,well the other day when I was at.,,,31
+16474,Thomas/020702.cha,CHI,a driver a driver a driver.,0.0,,31
+16475,Thomas/020702.cha,CAR,but we don't know where the driver is?,,,31
+16476,Thomas/020702.cha,CAR,listen.,,,31
+16477,Thomas/020702.cha,CAR,I don't know where the driver is.,,,31
+16478,Thomas/020702.cha,CAR,listen.,,,31
+16479,Thomas/020702.cha,CAR,perhaps the driver.,,,31
+16480,Thomas/020702.cha,CAR,I think he has gone.,,,31
+16481,Thomas/020702.cha,CAR,I think with it being bonfire night the driver has nipped off early to go to the shop to buy some fireworks.,,,31
+16482,Thomas/020702.cha,CAR,"so that he can go home and that his children can see fireworks going, up in the air.",,,31
+16483,Thomas/020702.cha,CHI,no no no.,1.0,,31
+16484,Thomas/020702.cha,CAR,no.,,,31
+16485,Thomas/020702.cha,CAR,oh dear.,,,31
+16486,Thomas/020702.cha,CAR,oops.,,,31
+16487,Thomas/020702.cha,CAR,oh dear.,,,31
+16488,Thomas/020702.cha,CAR,Thomas's ending up sitting in the shopping basket.,,,31
+16489,Thomas/020702.cha,CAR,"Tom, it's no good crying because I don't know where the driver is?",,,31
+16490,Thomas/020702.cha,CAR,we looked for him the other day.,,,31
+16491,Thomas/020702.cha,CAR,how about the train driver from your train set?,,,31
+16492,Thomas/020702.cha,CHI,no.,,,31
+16493,Thomas/020702.cha,CHI,yes.,,,31
+16494,Thomas/020702.cha,CAR,let's find.,,,31
+16495,Thomas/020702.cha,CHI,no find.,-1.0,"subject, auxiliary, object, other",31
+16496,Thomas/020702.cha,CHI,no find.,-1.0,"subject, auxiliary, object, other",31
+16497,Thomas/020702.cha,CHI,no find.,-1.0,"subject, auxiliary, object, other",31
+16498,Thomas/020702.cha,CAR,this isn't the driver of the digger but I'm sure this little man.,,,31
+16499,Thomas/020702.cha,CAR,this little man's already wearing overalls.,,,31
+16500,Thomas/020702.cha,CAR,look.,,,31
+16501,Thomas/020702.cha,CAR,he's wearing a bib and braces so he can.,,,31
+16502,Thomas/020702.cha,CAR,oh he's a little bit too big isn't he?,,,31
+16503,Thomas/020702.cha,CAR,"he's a little bit too big, Thomas.",,,31
+16504,Thomas/020702.cha,CHI,no.,,,31
+16505,Thomas/020702.cha,CHI,on.,,,31
+16506,Thomas/020702.cha,CAR,here you are.,,,31
+16507,Thomas/020702.cha,CHI,no.,,,31
+16508,Thomas/020702.cha,CHI,not little man.,-1.0,determiner,31
+16509,Thomas/020702.cha,CHI,no.,,,31
+16510,Thomas/020702.cha,CAR,yes.,,,31
+16511,Thomas/020702.cha,CAR,"but we've lost the driver, sweetheart.",,,31
+16512,Thomas/020702.cha,CAR,so we.,,,31
+16513,Thomas/020702.cha,CHI,"Mummy, lost him.",-1.0,subject,31
+16514,Thomas/020702.cha,CAR,"I know we've lost him, darling.",,,31
+16515,Thomas/020702.cha,CAR,I know.,,,31
+16516,Thomas/020702.cha,CAR,he'll turn up.,,,31
+16517,Thomas/020702.cha,CAR,Mummy has had a really good look round but I'm sure he'll turn up.,,,31
+16518,Thomas/020702.cha,CAR,don't you think so.,,,31
+16519,Thomas/020702.cha,CHI,no.,,,31
+16520,Thomas/020702.cha,CHI,uh yes.,1.0,,31
+16521,Thomas/020702.cha,CHI,missed him.,-1.0,subject,31
+16522,Thomas/020702.cha,CHI,"Mummy, find him.",1.0,,31
+16523,Thomas/020702.cha,CAR,no.,,,31
+16524,Thomas/020702.cha,CAR,"I Thomas, I really have looked for him, darling.",,,31
+16525,Thomas/020702.cha,CAR,and I can't see him.,,,31
+16526,Thomas/020702.cha,CAR,but I'm quite sure he'll turn up.,,,31
+16527,Thomas/020702.cha,CAR,look.,,,31
+16528,Thomas/020702.cha,CAR,talking of drivers.,,,31
+16529,Thomas/020702.cha,CAR,let's have a look at these books.,,,31
+16530,Thomas/020702.cha,CHI,no.,,,31
+16531,Thomas/020702.cha,CAR,oh.,,,31
+16532,Thomas/020702.cha,CHI,no.,,,31
+16533,Thomas/020702.cha,CAR,do you not wanna look at these books?,,,31
+16534,Thomas/020702.cha,CHI,no.,,,31
+16535,Thomas/020702.cha,CAR,ah.,,,31
+16536,Thomas/020702.cha,CAR,well these are all about drivers of different things aren't they?,,,31
+16537,Thomas/020702.cha,CHI,no no no.,1.0,,31
+16538,Thomas/020702.cha,CHI,no no read.,-1.0,"subject, auxiliary, object, other",31
+16539,Thomas/020702.cha,CHI,no read it.,-1.0,"subject, auxiliary, object, other",31
+16540,Thomas/020702.cha,CHI,no read it.,-1.0,"subject, auxiliary, object, other",31
+16541,Thomas/020702.cha,CAR,not even this one about a train.,,,31
+16542,Thomas/020702.cha,CHI,no no no no no.,1.0,,31
+16543,Thomas/020702.cha,CAR,"oh Tom, come on.",,,31
+16544,Thomas/020702.cha,CAR,look.,,,31
+16545,Thomas/020702.cha,CAR,I can see the train driver a bus driver.,,,31
+16546,Thomas/020702.cha,CAR,ah a tractor driver.,,,31
+16547,Thomas/020702.cha,CAR,what's a tractor driver called?,,,31
+16548,Thomas/020702.cha,CAR,a farmer and.,,,31
+16549,Thomas/020702.cha,CAR,there's a truck driver.,,,31
+16550,Thomas/020702.cha,CAR,oh dear.,,,31
+16551,Thomas/020702.cha,CAR,I think we better have.,,,31
+16552,Thomas/020702.cha,CHI,no.,,,31
+16553,Thomas/020702.cha,CAR,I think we better have a little break because you're not going to do this are you?,,,31
+16554,Thomas/020702.cha,CAR,oh whatever is the matter?,,,31
+16555,Thomas/020702.cha,CAR,"it's nearly teatime, Thomas isn't it?",,,31
+16556,Thomas/020702.cha,CAR,it's half past four.,,,31
+16557,Thomas/020702.cha,CHI,no.,,,31
+16558,Thomas/020702.cha,CAR,shh.,,,31
+16559,Thomas/020702.cha,CAR,it's half past four.,,,31
+16560,Thomas/020702.cha,CHI,no four.,1.0,,31
+16561,Thomas/020702.cha,CHI,no.,,,31
+16562,Thomas/020702.cha,CAR,it is.,,,31
+16563,Thomas/020702.cha,CHI,no.,,,31
+16564,Thomas/020702.cha,CAR,you've had a busy day because.,,,31
+16565,Thomas/020702.cha,CHI,no busy day.,-1.0,"subject, auxiliary, determiner, other",31
+16566,Thomas/020702.cha,CAR,listen.,,,31
+16567,Thomas/020702.cha,CAR,you have had a busy day.,,,31
+16568,Thomas/020702.cha,CAR,Elena came to see you this morning.,,,31
+16569,Thomas/020702.cha,CHI,no Elena.,-1.0,other,31
+16570,Thomas/020702.cha,CAR,shh.,,,31
+16571,Thomas/020702.cha,CAR,she did.,,,31
+16572,Thomas/020702.cha,CHI,no.,,,31
+16573,Thomas/020702.cha,CAR,when when you were having breakfast this morning that nice lady came to see you.,,,31
+16574,Thomas/020702.cha,CAR,and you were eating brown grapes and green grapes and eating Cornflakes and eating an apple.,,,31
+16575,Thomas/020702.cha,CAR,and then we went to music class and then we went shopping.,,,31
+16576,Thomas/020702.cha,CAR,and it was raining.,,,31
+16577,Thomas/020702.cha,CHI,no no.,1.0,,31
+16578,Thomas/020702.cha,CAR,it was.,,,31
+16579,Thomas/020702.cha,CAR,and this afternoon we've been out on.,,,31
+16580,Thomas/020702.cha,CHI,no.,,,31
+16581,Thomas/020702.cha,CAR,we've been out on your bicycle haven't we?,,,31
+16582,Thomas/020702.cha,CHI,no.,,,31
+16583,Thomas/020702.cha,CAR,we've been out on your bicycle all the way round the roads because about three o'clock the sun started to shine and the rain stopped.,,,31
+16584,Thomas/020702.cha,CAR,so we went out quick on your bicycle didn't we?,,,31
+16585,Thomas/020702.cha,CAR,and now I think you're absolutely shattered.,,,31
+16586,Thomas/020702.cha,CHI,no shattered.,-1.0,"subject, auxiliary, other",31
+16587,Thomas/020702.cha,CHI,no.,,,31
+16588,Thomas/020702.cha,CAR,shall we have a break?,,,31
+16589,Thomas/020702.cha,CHI,no.,,,31
+16590,Thomas/020702.cha,CAR,come on.,,,31
+16591,Thomas/020702.cha,CAR,let's have a break.,,,31
+16592,Thomas/020702.cha,CAR,oh who's this?,,,31
+16592,Thomas/020702.cha,CHI,m.,,,31
+16593,Thomas/020702.cha,CAR,it's.,,,31
+16594,Thomas/020702.cha,CAR,oh I thought it was Daddy home.,,,31
+16595,Thomas/020702.cha,CAR,it's not is it?,,,31
+16596,Thomas/020702.cha,CHI,no.,,,31
+16597,Thomas/020702.cha,CHI,not.,,,31
+16598,Thomas/020702.cha,CHI,man drove off.,-1.0,determiner,31
+16599,Thomas/020702.cha,CAR,they've driven off haven't they?,,,31
+16600,Thomas/020702.cha,CAR,whoever it was.,,,31
+16601,Thomas/020702.cha,CAR,it is Daddy.,,,31
+16602,Thomas/020702.cha,CAR,it is Daddy.,,,31
+16603,Thomas/020702.cha,CAR,not come back.,,,31
+16604,Thomas/020702.cha,CAR,it is Daddy.,,,31
+16605,Thomas/020702.cha,CAR,he has come back.,,,31
+16606,Thomas/020702.cha,CAR,he's there.,,,31
+16607,Thomas/020702.cha,CHI,not wave.,-1.0,"subject, auxiliary",31
+16608,Thomas/020702.cha,CAR,you don't wanna wave to Daddy.,,,31
+16609,Thomas/020702.cha,CHI,no.,,,31
+16610,Thomas/020702.cha,CAR,well you don't have to wave.,,,31
+16611,Thomas/020702.cha,CAR,but we say hello when he walks through the door.,,,31
+16612,Thomas/020702.cha,CHI,no.,,,31
+16613,Thomas/020702.cha,CHI,not hello.,-1.0,"subject, auxiliary, verb",31
+16614,Thomas/020702.cha,CHI,no.,,,31
+16615,Thomas/020702.cha,CAR,shall we go and open the door for Daddy?,,,31
+16616,Thomas/020702.cha,CAR,shall we go and open the door for Daddy?,,,31
+16617,Thomas/020702.cha,CHI,no no.,1.0,,31
+16618,Thomas/020702.cha,CAR,no.,,,31
+16619,Thomas/020702.cha,CHI,no.,,,31
+16620,Thomas/020702.cha,CAR,"oh but Daddy has had a hard day at work, Tom.",,,31
+16621,Thomas/020702.cha,CHI,no.,,,31
+16622,Thomas/020702.cha,CAR,he has.,,,31
+16623,Thomas/020702.cha,CAR,do you not think he might appreciate the door being opened for him?,,,31
+16624,Thomas/020702.cha,CHI,no.,,,31
+16625,Thomas/020702.cha,CAR,do you not think he would?,,,31
+16626,Thomas/020702.cha,CHI,no no.,1.0,,31
+16627,Thomas/020702.cha,CAR,hello.,,,31
+16628,Thomas/020702.cha,CHI,the digger.,0.0,,31
+16629,Thomas/020702.cha,CHI,dig dig dig.,0.0,,31
+16630,Thomas/020702.cha,CHI,no.,,,31
+16631,Thomas/020702.cha,CHI,big birdie's on it.,-1.0,determiner,31
+16632,Thomas/020702.cha,CAR,shh.,,,31
+16633,Thomas/020702.cha,CHI,big birdie's on it.,-1.0,determiner,31
+16634,Thomas/020702.cha,CAR,have you been a good boy?,,,31
+16635,Thomas/020702.cha,CHI,no.,,,31
+16636,Thomas/020702.cha,CAR,I bet you have.,,,31
+16637,Thomas/020702.cha,CHI,no.,,,31
+16638,Thomas/020702.cha,CAR,he has just been a bit upset.,,,31
+16639,Thomas/020702.cha,CAR,I think it's getting near teatime.,,,31
+16640,Thomas/020702.cha,CHI,no.,,,31
+16641,Thomas/020702.cha,CAR,and he's tired.,,,31
+16642,Thomas/020702.cha,CAR,"but we've got to look out for some fireworks later, Daddy.",,,31
+16643,Thomas/020702.cha,CAR,haven't we?,,,31
+16644,Thomas/020702.cha,CAR,are you going to say hello to Daddy?,,,31
+16645,Thomas/020702.cha,CHI,no.,,,31
+16646,Thomas/020702.cha,CAR,oh dear.,,,31
+16647,Thomas/020702.cha,CAR,oh Daddy.,,,31
+16648,Thomas/020702.cha,CHI,no.,,,31
+16649,Thomas/020702.cha,CAR,well I'm going to say hello to Daddy.,,,31
+16650,Thomas/020702.cha,CHI,no no no say hello Daddy.,-1.0,"auxiliary, other",31
+16651,Thomas/020702.cha,CHI,no.,,,31
+16652,Thomas/020702.cha,CHI,no say hello.,-1.0,"auxiliary, other",31
+16653,Thomas/020702.cha,CAR,have you seen the fireworks?,,,31
+16654,Thomas/020702.cha,CHI,yes.,,,31
+16655,Thomas/020702.cha,CHI,hiding in the trees.,0.0,,31
+16656,Thomas/020702.cha,CAR,the fireworks were hiding in the trees.,,,31
+16657,Thomas/020702.cha,CHI,hiding.,,,31
+16658,Thomas/020702.cha,CHI,hiding.,,,31
+16659,Thomas/020702.cha,CHI,no.,,,31
+16660,Thomas/020702.cha,CHI,a big firework came.,1.0,,31
+16661,Thomas/020702.cha,CHI,oh.,,,31
+16662,Thomas/020702.cha,CAR,well Thomas and Mummy have just been for a walk.,,,31
+16663,Thomas/020702.cha,CAR,and we've heard lots of fireworks and we've seen quite a few.,,,31
+16664,Thomas/020702.cha,CHI,watch.,,,31
+16665,Thomas/020702.cha,CAR,but as well we.,,,31
+16666,Thomas/020702.cha,CAR,listen.,,,31
+16667,Thomas/020702.cha,CAR,listen to the bangs.,,,31
+16668,Thomas/020702.cha,CAR,as we were walking past one house they lit a bonfire and there was lots of smoke wasn't there?,,,31
+16669,Thomas/020702.cha,CAR,yes.,,,31
+16670,Thomas/020702.cha,CAR,it sounded like that didn't it?,,,31
+16671,Thomas/020702.cha,CAR,and then all of a sudden rockets went up.,,,31
+16672,Thomas/020702.cha,CAR,what happened?,,,31
+16673,Thomas/020702.cha,CAR,where they banging?,,,31
+16674,Thomas/020702.cha,CAR,oh like that.,,,31
+16675,Thomas/020702.cha,CAR,don't hit Daddy in the tummy.,,,31
+16676,Thomas/020702.cha,CAR,that's not nice.,,,31
+16677,Thomas/020702.cha,CHI,nice.,,,31
+16678,Thomas/020702.cha,CAR,what did the fireworks say?,,,31
+16679,Thomas/020702.cha,CAR,bang.,,,31
+16680,Thomas/020702.cha,CAR,no.,,,31
+16681,Thomas/020702.cha,CAR,some of them went.,,,31
+16682,Thomas/020702.cha,CAR,what did they do?,,,31
+16683,Thomas/020702.cha,CHI,watch.,,,31
+16684,Thomas/020702.cha,CHI,shh shh.,0.0,,31
+16685,Thomas/020702.cha,CAR,I tell you what.,,,31
+16686,Thomas/020702.cha,CAR,shall we just put the light off and open the curtains?,,,31
+16687,Thomas/020702.cha,CAR,"and then we've got to have our tea, Thomas.",,,31
+16688,Thomas/020702.cha,CAR,and once we've had tea.,,,31
+16689,Thomas/020702.cha,CAR,how about we go.,,,31
+16690,Thomas/020702.cha,CHI,firework.,,,31
+16691,Thomas/020702.cha,CAR,we go.,,,31
+16692,Thomas/020702.cha,CAR,let's put the blind back.,,,31
+16693,Thomas/020702.cha,CAR,oh did you see that?,,,31
+16694,Thomas/020702.cha,CAR,oh quicketyquick.,,,31
+16695,Thomas/020702.cha,CHI,quick.,,,31
+16696,Thomas/020702.cha,CHI,where's Daddy?,1.0,,31
+16697,Thomas/020702.cha,CAR,just let's just take your wellies off.,,,31
+16698,Thomas/020702.cha,CAR,"Thomas, wellies off.",,,31
+16699,Thomas/020702.cha,CAR,wellies off.,,,31
+16700,Thomas/020702.cha,CAR,it's cold outside so we had to put wellies and hats and gloves on didn't we?,,,31
+16701,Thomas/020702.cha,CHI,watch.,,,31
+16702,Thomas/020702.cha,CHI,watch.,,,31
+16703,Thomas/020702.cha,CAR,you just keep watching.,,,31
+16704,Thomas/020702.cha,CHI,watch.,,,31
+16705,Thomas/020702.cha,CHI,watch.,,,31
+16706,Thomas/020702.cha,CAR,you just watch a few minutes.,,,31
+16707,Thomas/020702.cha,CAR,I'm sure you'll see something.,,,31
+16708,Thomas/020702.cha,CAR,oh it's dark now.,,,31
+16709,Thomas/020702.cha,CAR,it's dark in the house.,,,31
+16710,Thomas/020702.cha,CHI,not see.,-1.0,"subject, auxiliary, object",31
+16711,Thomas/020702.cha,CAR,no.,,,31
+16712,Thomas/020702.cha,CAR,they haven't let one on off.,,,31
+16713,Thomas/020702.cha,CAR,let's just watch.,,,31
+16714,Thomas/020702.cha,CAR,oh.,,,31
+16715,Thomas/020702.cha,CHI,"Daddy, a firework.",1.0,,31
+16716,Thomas/020702.cha,CAR,I see it.,,,31
+16717,Thomas/020702.cha,CHI,um um.,0.0,,31
+16718,Thomas/020702.cha,CAR,right you you keep watching through there.,,,31
+16719,Thomas/020702.cha,CAR,through that gap in the houses.,,,31
+16720,Thomas/020702.cha,CAR,Daddy can see.,,,31
+16721,Thomas/020702.cha,CAR,but you keep watching.,,,31
+16722,Thomas/020702.cha,CAR,don't turn round to tell Daddy because otherwise you'll miss it.,,,31
+16723,Thomas/020702.cha,CAR,"and what else did we hear, Thomas?",,,31
+16724,Thomas/020702.cha,CAR,when we were walking out.,,,31
+16725,Thomas/020702.cha,CAR,beeba beeba.,,,31
+16726,Thomas/020702.cha,CAR,"Fireman Sam will be really really busy tonight, Thomas.",,,31
+16727,Thomas/020702.cha,CHI,Fireman Sam.,1.0,,31
+16728,Thomas/020702.cha,CAR,because you know all these fires bonfires people are having sometimes they get a bit out of hand.,,,31
+16729,Thomas/020702.cha,CAR,and Fireman Sam has to come.,,,31
+16730,Thomas/020702.cha,CHI,oh.,,,31
+16731,Thomas/020702.cha,CHI,oh.,,,31
+16732,Thomas/020702.cha,CHI,big car going backwards like a fish.,-1.0,"determiner, auxiliary",31
+16733,Thomas/020702.cha,CAR,there's a big car going backwards like a fish.,,,31
+16734,Thomas/020702.cha,CHI,dark round here.,-1.0,"subject, verb, other",31
+16735,Thomas/020702.cha,CAR,it is dark round here with the lights off but it's the only way we can see the fireworks when we're inside.,,,31
+16736,Thomas/020702.cha,CAR,a lot of people aren't there?,,,31
+16737,Thomas/020702.cha,CAR,I bet those children in that house are going to a bonfire don't you?,,,31
+16738,Thomas/020702.cha,CHI,yes yes.,1.0,,31
+16739,Thomas/020702.cha,CAR,there might not be a lot now because it has started to.,,,31
+16740,Thomas/020702.cha,CHI,there's a.,-1.0,object,31
+16741,Thomas/020702.cha,CHI,post police car and fire engine.,-1.0,determiner,31
+16742,Thomas/020702.cha,CHI,there's the cars.,0.0,,31
+16743,Thomas/020702.cha,CHI,police car and fire engine.,-1.0,determiner,31
+16744,Thomas/020702.cha,CHI,there's a firework.,1.0,,31
+16745,Thomas/020702.cha,CHI,watch the firework.,1.0,,31
+16746,Thomas/020702.cha,CAR,look.,,,31
+16747,Thomas/020702.cha,CAR,there's some more flashes up there behind Sue's house.,,,31
+16748,Thomas/020702.cha,CAR,and when we spoke to Aunty Linda a few minutes ago she said that all her pussy cats were inside and that Alice the dog was very upset.,,,31
+16749,Thomas/020702.cha,CAR,so Alice was inside as well.,,,31
+16750,Thomas/020702.cha,CAR,what about Purdie?,,,31
+16751,Thomas/020702.cha,CAR,do you think she's frightened?,,,31
+16752,Thomas/020702.cha,CHI,oh no no no.,1.0,,31
+16753,Thomas/020702.cha,CAR,no.,,,31
+16754,Thomas/020702.cha,CHI,no.,,,31
+16755,Thomas/020702.cha,CAR,do you think she Purdie's brave?,,,31
+16756,Thomas/020702.cha,CHI,no Purdie brave.,-1.0,verb,31
+16757,Thomas/020702.cha,CAR,I think in a few minutes Mummy's going to go upstairs and give Purdie a cuddle.,,,31
+16758,Thomas/020702.cha,CHI,oh.,,,31
+16759,Thomas/020702.cha,CHI,a Purdie coming too.,-1.0,"determiner, present_progressive",31
+16760,Thomas/020702.cha,CAR,no.,,,31
+16761,Thomas/020702.cha,CAR,Purdie wouldn't wanna come and watch the fireworks.,,,31
+16762,Thomas/020702.cha,CAR,Purdie gets a bit frightened of the bang.,,,31
+16763,Thomas/020702.cha,CHI,uhoh.,,,31
+16764,Thomas/020702.cha,CAR,oh gosh!,,,31
+16765,Thomas/020702.cha,CAR,did you see that?,,,31
+16766,Thomas/020702.cha,CHI,big green one.,-1.0,determiner,31
+16767,Thomas/020702.cha,CAR,a big green one.,,,31
+16768,Thomas/020702.cha,CAR,yes.,,,31
+16769,Thomas/020702.cha,CAR,that frightened Mummy.,,,31
+16770,Thomas/020702.cha,CHI,shh shh.,0.0,,31
+16771,Thomas/020702.cha,CAR,did it frighten Thomas?,,,31
+16772,Thomas/020702.cha,CHI,no.,,,31
+16773,Thomas/020702.cha,CAR,no.,,,31
+16774,Thomas/020702.cha,CHI,yes.,,,31
+16775,Thomas/020702.cha,CHI,hurt me.,-1.0,subject,31
+16776,Thomas/020702.cha,CAR,it didn't hurt you.,,,31
+16777,Thomas/020702.cha,CHI,yes.,,,31
+16778,Thomas/020702.cha,CAR,no.,,,31
+16779,Thomas/020702.cha,CAR,it startled you.,,,31
+16780,Thomas/020702.cha,CAR,the bang frightened you a bit.,,,31
+16781,Thomas/020702.cha,CHI,yes.,,,31
+16782,Thomas/020702.cha,CAR,it didn't hurt you though did it?,,,31
+16783,Thomas/020702.cha,CHI,um.,,,31
+16784,Thomas/020702.cha,CAR,and do you think.,,,31
+16785,Thomas/020702.cha,CHI,frighten for me.,-1.0,"subject, verb, other",31
+16786,Thomas/020702.cha,CAR,frighten for me.,,,31
+16787,Thomas/020702.cha,CHI,frighten for me.,-1.0,"subject, verb, other",31
+16788,Thomas/020702.cha,CHI,see firework.,-1.0,"subject, determiner",31
+16789,Thomas/020702.cha,CAR,I was frightened for you was I?,,,31
+16790,Thomas/020702.cha,CHI,yes.,,,31
+16791,Thomas/020702.cha,CAR,because I jumped.,,,31
+16792,Thomas/020702.cha,CHI,I jump.,-1.0,tense_aspect,31
+16793,Thomas/020702.cha,CHI,um.,,,31
+16794,Thomas/020702.cha,CHI,firework.,,,31
+16795,Thomas/020702.cha,CHI,big green one been.,-1.0,"determiner, tense_aspect",31
+16796,Thomas/020702.cha,CHI,not a lot like blue.,-1.0,"subject, verb",31
+16797,Thomas/020702.cha,CAR,not a lot like blue.,,,31
+16798,Thomas/020702.cha,CHI,no.,,,31
+16799,Thomas/020702.cha,CHI,another one near Sue's house.,0.0,,31
+16800,Thomas/020702.cha,CHI,not see it.,-1.0,"subject, auxiliary",31
+16801,Thomas/020702.cha,CAR,well there was a little flash behind Sue's house wasn't there?,,,31
+16802,Thomas/020702.cha,CHI,flash.,,,31
+16803,Thomas/020702.cha,CAR,we didn't see.,,,31
+16804,Thomas/020702.cha,CAR,the firework but.,,,31
+16805,Thomas/020702.cha,CHI,a big green one.,0.0,,31
+16806,Thomas/020702.cha,CAR,yes.,,,31
+16807,Thomas/020702.cha,CAR,it was a big green one and a big pink one that we saw.,,,31
+16808,Thomas/020702.cha,CAR,it wasn't blue was it?,,,31
+16809,Thomas/020702.cha,CAR,another flash.,,,31
+16810,Thomas/020702.cha,CAR,no bangs.,,,31
+16811,Thomas/020702.cha,CHI,I saw one.,1.0,,31
+16812,Thomas/020702.cha,CHI,another one.,0.0,,31
+16813,Thomas/020702.cha,CHI,saw a big one.,-1.0,subject,31
+16814,Thomas/020702.cha,CHI,one two three.,0.0,,31
+16815,Thomas/020702.cha,CHI,one two three.,0.0,,31
+16816,Thomas/020702.cha,CAR,oh what was that?,,,31
+16817,Thomas/020702.cha,CHI,blue one.,-1.0,determiner,31
+16818,Thomas/020702.cha,CHI,yellow.,,,31
+16819,Thomas/020702.cha,CAR,a blue one.,,,31
+16820,Thomas/020702.cha,CHI,um.,,,31
+16821,Thomas/020702.cha,CAR,we didn't see it.,,,31
+16822,Thomas/020702.cha,CAR,we just heard a bang didn't we?,,,31
+16823,Thomas/020702.cha,CAR,"I like the pretty ones, Thomas.",,,31
+16824,Thomas/020702.cha,CHI,red one.,-1.0,determiner,31
+16825,Thomas/020702.cha,CHI,you.,,,31
+16826,Thomas/020702.cha,CHI,um it's frightened.,1.0,,31
+16827,Thomas/020702.cha,CAR,I'm not frightened of those.,,,31
+16828,Thomas/020702.cha,CHI,um.,,,31
+16829,Thomas/020702.cha,CAR,but it's nicer when you can see rather than when we just hear the bang isn't it?,,,31
+16830,Thomas/020702.cha,CHI,uh.,,,31
+16831,Thomas/020702.cha,CAR,heard a blue.,,,31
+16832,Thomas/020702.cha,CHI,heard a blue one.,-1.0,subject,31
+16833,Thomas/020702.cha,CAR,you heard a blue one.,,,31
+16834,Thomas/020702.cha,CHI,saw a red one.,-1.0,subject,31
+16835,Thomas/020702.cha,CHI,not mean to.,-1.0,"subject, auxiliary",31
+16836,Thomas/020702.cha,CHI,heard the blue.,-1.0,"subject, object",31
+16837,Thomas/020702.cha,CAR,saw a red one.,,,31
+16838,Thomas/020702.cha,CAR,not mean to.,,,31
+16839,Thomas/020702.cha,CAR,heard the blue.,,,31
+16840,Thomas/020702.cha,CHI,yes.,,,31
+16841,Thomas/020702.cha,CHI,pink too.,-1.0,determiner,31
+16842,Thomas/020702.cha,CAR,you heard the pink one too.,,,31
+16843,Thomas/020702.cha,CHI,oh.,,,31
+16844,Thomas/020702.cha,CHI,um a brown.,-1.0,"subject, verb",31
+16845,Thomas/020702.cha,CAR,and a brown one.,,,31
+16846,Thomas/020702.cha,CHI,um.,,,31
+16847,Thomas/020702.cha,CAR,I don't think there were brown fireworks.,,,31
+16848,Thomas/020702.cha,CAR,I think you're seeing things.,,,31
+16849,Thomas/020702.cha,CHI,I see colors.,0.0,,31
+16850,Thomas/020702.cha,CAR,you're seeing colors.,,,31
+16851,Thomas/020702.cha,CHI,yes.,,,31
+16852,Thomas/020702.cha,CHI,brown.,,,31
+16853,Thomas/020702.cha,CHI,I see green one.,-1.0,determiner,31
+16854,Thomas/020702.cha,CAR,yes.,,,31
+16855,Thomas/020702.cha,CAR,we've seen green ones and pink ones and red ones.,,,31
+16856,Thomas/020702.cha,CHI,oh.,,,31
+16857,Thomas/020702.cha,CAR,and apart from bangs what else have you heard?,,,31
+16858,Thomas/020702.cha,CHI,crackles.,,,31
+16859,Thomas/020702.cha,CAR,yes.,,,31
+16860,Thomas/020702.cha,CAR,crackles.,,,31
+16861,Thomas/020702.cha,CAR,oh.,,,31
+16862,Thomas/020702.cha,CAR,oh do you think people'll be having baked potatoes and hot soup?,,,31
+16863,Thomas/020702.cha,CHI,not hot soup potatoes.,-1.0,"subject, verb",31
+16864,Thomas/020702.cha,CHI,no.,,,31
+16865,Thomas/020702.cha,CAR,well we're going to have some Parkin and a gingerbread man aren't we?,,,31
+16866,Thomas/020702.cha,CHI,baby one.,-1.0,determiner,31
+16867,Thomas/020702.cha,CHI,the red one.,0.0,,31
+16868,Thomas/020702.cha,CHI,see it.,0.0,,31
+16869,Thomas/020702.cha,CHI,baby one.,-1.0,determiner,31
+16870,Thomas/020702.cha,CHI,not.,,,31
+16871,Thomas/020702.cha,CHI,um big baby one.,-1.0,determiner,31
+16872,Thomas/020702.cha,CHI,big baby.,-1.0,determiner,31
+16873,Thomas/020702.cha,CHI,big bang.,-1.0,determiner,31
+16874,Thomas/020702.cha,CAR,"they seem to be coming from over there, Thomas.",,,31
+16875,Thomas/020702.cha,CAR,if you keep looking over in that direction.,,,31
+16876,Thomas/020702.cha,CAR,where Mummy's pointing.,,,31
+16877,Thomas/020702.cha,CAR,behind Fred's car.,,,31
+16878,Thomas/020702.cha,CAR,that's the place to look.,,,31
+16879,Thomas/020702.cha,CHI,ah show me.,1.0,,31
+16880,Thomas/020702.cha,CAR,just this way.,,,31
+16881,Thomas/020702.cha,CHI,this way.,1.0,,31
+16882,Thomas/020702.cha,CAR,where Mummy's pointing her finger.,,,31
+16883,Thomas/020702.cha,CAR,oh perhaps you can't see.,,,31
+16884,Thomas/020702.cha,CAR,it's dark.,,,31
+16885,Thomas/020702.cha,CAR,that way.,,,31
+16886,Thomas/020702.cha,CHI,you watch.,-1.0,tense_aspect,31
+16887,Thomas/020702.cha,CHI,you watch.,-1.0,tense_aspect,31
+16888,Thomas/020702.cha,CAR,yes.,,,31
+16889,Thomas/020702.cha,CAR,you keep watching.,,,31
+16890,Thomas/020702.cha,CAR,mind now.,,,31
+16891,Thomas/020702.cha,CAR,be careful.,,,31
+16892,Thomas/020702.cha,CAR,be careful.,,,31
+16893,Thomas/020702.cha,CHI,oh oh.,1.0,,31
+16894,Thomas/020702.cha,CAR,"but in a minute we must go, Thomas.",,,31
+16895,Thomas/020702.cha,CAR,and have our tea.,,,31
+16896,Thomas/020702.cha,CAR,and then if you wanna go out again after tea you can have another quick walk.,,,31
+16897,Thomas/020702.cha,CAR,and then the best place to be is Mummy's bedroom window.,,,31
+16898,Thomas/020702.cha,CAR,Mummy and Daddy's bedroom window.,,,31
+16899,Thomas/020702.cha,CAR,because you'll see a lot then.,,,31
+16900,Thomas/020702.cha,CHI,um um.,1.0,,31
+16901,Thomas/020702.cha,CHI,another one.,0.0,,31
+16902,Thomas/020702.cha,CHI,another red one.,0.0,,31
+16903,Thomas/020702.cha,CAR,another red one.,,,31
+16904,Thomas/020702.cha,CAR,that was one from.,,,31
+16905,Thomas/020702.cha,CHI,red one.,-1.0,determiner,31
+16906,Thomas/020702.cha,CAR,oh a red one.,,,31
+16907,Thomas/020702.cha,CAR,I thought you said Fred one because it was coming from.,,,31
+16908,Thomas/020702.cha,CHI,no.,,,31
+16909,Thomas/020702.cha,CHI,a a red one.,0.0,,31
+16910,Thomas/020702.cha,CHI,big red one.,-1.0,determiner,31
+16911,Thomas/020702.cha,CAR,big red one.,,,31
+16912,Thomas/020702.cha,CHI,big red.,-1.0,"determiner, subject",31
+16913,Thomas/020702.cha,CHI,red white blue.,-1.0,"determiner, subject",31
+16914,Thomas/020702.cha,CHI,red and blue.,-1.0,"determiner, subject",31
+16915,Thomas/020702.cha,CAR,red and blue.,,,31
+16916,Thomas/020702.cha,CAR,red white and blue.,,,31
+16917,Thomas/020702.cha,CHI,yes.,,,31
+16918,Thomas/020702.cha,CHI,not blue red.,-1.0,"subject, verb",31
+16919,Thomas/020702.cha,CAR,not blue red.,,,31
+16920,Thomas/020702.cha,CHI,it's actually red.,1.0,,31
+16921,Thomas/020702.cha,CAR,it's actually red.,,,31
+16922,Thomas/020702.cha,CHI,yes.,,,31
+16923,Thomas/020702.cha,CHI,big tummy.,-1.0,determiner,31
+16924,Thomas/020702.cha,CHI,big red tummys.,-1.0,verb,31
+16925,Thomas/020702.cha,CAR,big red tummys.,,,31
+16926,Thomas/020702.cha,CAR,did you say it's actually red?,,,31
+16927,Thomas/020702.cha,CHI,oh.,,,31
+16928,Thomas/020702.cha,CHI,lights.,,,31
+16929,Thomas/020702.cha,CHI,lights up here.,-1.0,"determiner, verb",31
+16930,Thomas/020702.cha,CHI,lights.,,,31
+16931,Thomas/020702.cha,CHI,big red light.,-1.0,determiner,31
+16932,Thomas/020702.cha,CAR,big red light.,,,31
+16933,Thomas/020702.cha,CAR,yes.,,,31
+16934,Thomas/020702.cha,CAR,well they're reversing out of their drive aren't they?,,,31
+16935,Thomas/020702.cha,CAR,they've put their car lights on.,,,31
+16936,Thomas/020702.cha,CHI,oh look.,1.0,,31
+16937,Thomas/020702.cha,CHI,look.,,,31
+16938,Thomas/020702.cha,CAR,I'm looking.,,,31
+16939,Thomas/020702.cha,CAR,they're going backwards aren't they?,,,31
+16940,Thomas/020702.cha,CHI,people are.,-1.0,"determiner, object",31
+16941,Thomas/020702.cha,CHI,a lot of children on it.,-1.0,verb,31
+16942,Thomas/020702.cha,CAR,a lot of children on it.,,,31
+16943,Thomas/020702.cha,CAR,there are two children sitting in the back of the car.,,,31
+16944,Thomas/020702.cha,CAR,they're going now.,,,31
+16945,Thomas/020702.cha,CAR,I think they're going to a bonfire somewhere.,,,31
+16946,Thomas/020702.cha,CAR,because we saw them last year at Halloween.,,,31
+16947,Thomas/020702.cha,CAR,do you remember?,,,31
+16948,Thomas/020702.cha,CAR,carrying pumpkins with the lanterns inside.,,,31
+16949,Thomas/020702.cha,CHI,saw them.,-1.0,subject,31
+16950,Thomas/020702.cha,CHI,two red one.,-1.0,plural,31
+16951,Thomas/020702.cha,CHI,to mean to.,-1.0,"subject, object, other",31
+16952,Thomas/020702.cha,CHI,no no.,1.0,,31
+16953,Thomas/020702.cha,CHI,not mean to.,-1.0,"subject, auxiliary, object",31
+16954,Thomas/020702.cha,CHI,um big big loudly.,-1.0,"determiner, other, verb",31
+16955,Thomas/020702.cha,CAR,did you say not mean to?,,,31
+16956,Thomas/020702.cha,CHI,um it's too heavy for me.,1.0,,31
+16957,Thomas/020702.cha,CAR,what's what's too heavy for you?,,,31
+16958,Thomas/020702.cha,CHI,too heavy.,1.0,,31
+16959,Thomas/020702.cha,CAR,excuse me.,,,31
+16960,Thomas/020702.cha,CAR,do you mind not putting fingerprints on my windowpane you cheeky monkey?,,,31
+16961,Thomas/020702.cha,CAR,oh.,,,31
+16962,Thomas/020702.cha,CHI,baby.,,,31
+16963,Thomas/020702.cha,CHI,a baby one.,0.0,,31
+16964,Thomas/020702.cha,CAR,a baby one.,,,31
+16965,Thomas/020702.cha,CAR,"no banging the glass, Thomas.",,,31
+16966,Thomas/020702.cha,CAR,no.,,,31
+16967,Thomas/020702.cha,CHI,one no baby one.,-1.0,"determiner, other",31
+16968,Thomas/020702.cha,CHI,a baby one.,0.0,,31
+16969,Thomas/020702.cha,CAR,no.,,,31
+16970,Thomas/020702.cha,CAR,if you bang the glass and it breaks we'll have to have it boarded up and then you won't be able to see anything at all will you?,,,31
+16971,Thomas/020702.cha,CHI,one one bang.,-1.0,verb,31
+16972,Thomas/020702.cha,CAR,one bang.,,,31
+16973,Thomas/020702.cha,CHI,come back again.,0.0,,31
+16974,Thomas/020702.cha,CAR,no.,,,31
+16975,Thomas/020702.cha,CAR,it's a different car.,,,31
+16976,Thomas/020702.cha,CAR,it's a car driving past but it's not the people that have just gone out.,,,31
+16977,Thomas/020702.cha,CAR,right.,,,31
+16978,Thomas/020702.cha,CAR,what's that?,,,31
+16979,Thomas/020702.cha,CHI,Thomas The Tank Engine.,1.0,,31
+16980,Thomas/020702.cha,CAR,Thomas The Tank Engine.,,,31
+16981,Thomas/020702.cha,CAR,is it a train?,,,31
+16982,Thomas/020702.cha,CHI,um Thomas The Tank Engine too too heavy for me.,-1.0,verb,31
+16983,Thomas/020702.cha,CAR,Thomas The Tank Engine's too heavy for you.,,,31
+16984,Thomas/020702.cha,CHI,um no.,1.0,,31
+16985,Thomas/020702.cha,CHI,the sky too heavy for me.,-1.0,verb,31
+16986,Thomas/020702.cha,CAR,the sky's too heavy for you.,,,31
+16987,Thomas/020702.cha,CHI,oh.,,,31
+16988,Thomas/020702.cha,CAR,yes.,,,31
+16989,Thomas/020702.cha,CAR,you can't lift the sky up can you?,,,31
+16990,Thomas/020702.cha,CHI,oh.,,,31
+16991,Thomas/020702.cha,CHI,get the ladder for me.,1.0,,31
+16992,Thomas/020702.cha,CAR,get the ladder for you.,,,31
+16993,Thomas/020702.cha,CHI,yes.,,,31
+16994,Thomas/020702.cha,CHI,it's.,,,31
+16995,Thomas/020702.cha,CHI,not reach something.,-1.0,"subject, auxiliary, other",31
+16996,Thomas/020702.cha,CHI,um no reach them lights.,-1.0,"subject, auxiliary, other",31

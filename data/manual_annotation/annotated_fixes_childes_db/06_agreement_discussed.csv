@@ -1,0 +1,663 @@
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels,age
+5516,Kuczaj/041113.cha,CAR,I really do.,,,59
+5517,Kuczaj/041113.cha,CAR,those were good Thanksgiving pictures.,,,59
+5518,Kuczaj/041113.cha,CHI,how much people do you think liked them?,-1.0,other,59
+5519,Kuczaj/041113.cha,CAR,Jean liked them.,,,59
+5520,Kuczaj/041113.cha,CAR,and Lyle liked them.,,,59
+5521,Kuczaj/041113.cha,CAR,and I know Daddy liked them.,,,59
+5522,Kuczaj/041113.cha,CAR,where are you going?,,,59
+5523,Kuczaj/041113.cha,CHI,I have to go poop.,1.0,,59
+5524,Kuczaj/041113.cha,CHI,you can't go down there unless you get your bluejeans on.,1.0,,59
+5525,Kuczaj/041113.cha,CAR,I can go down right now.,,,59
+5526,Kuczaj/041113.cha,CHI,you don't got no bluejeans on.,-1.0,determiner,59
+5527,Kuczaj/041113.cha,CAR,I know.,,,59
+5528,Kuczaj/041113.cha,CAR,I'm just going down for a second.,,,59
+5529,Kuczaj/041113.cha,CAR,we both have to go to the dentist in January.,,,59
+5530,Kuczaj/041113.cha,CHI,you got to go in January.,1.0,,59
+5531,Kuczaj/041113.cha,CHI,January is when the baby's getting born.,1.0,,59
+5532,Kuczaj/041113.cha,CAR,in February.,,,59
+5533,Kuczaj/041113.cha,CHI,oh yeah Mom I didn't know farmers would let robins sit in barns.,1.0,,59
+5534,Kuczaj/041113.cha,CAR,some do.,,,59
+5535,Kuczaj/041113.cha,CHI,huh?,,,59
+5536,Kuczaj/041113.cha,CAR,some do.,,,59
+5537,Kuczaj/041113.cha,CHI,"of course like Joe he useta run a farm, a neat farm too.",1.0,,59
+5538,Kuczaj/041113.cha,CAR,yeah.,,,59
+5539,Kuczaj/041113.cha,CHI,I thought it was neat farm.,-1.0,determiner,59
+5540,Kuczaj/041113.cha,CAR,it looks like some birds have eaten some of the bread.,,,59
+5541,Kuczaj/041113.cha,CHI,I wanna see.,1.0,,59
+5542,Kuczaj/041113.cha,CHI,could I see?,1.0,,59
+5543,Kuczaj/041113.cha,CAR,sure go look.,,,59
+5544,Kuczaj/041113.cha,CHI,you mean some of the birds had a Thanksgiving.,-1.0,determiner,59
+5545,Kuczaj/041113.cha,CAR,huh?,,,59
+5546,Kuczaj/041113.cha,CHI,one bird had a Thanksgiving when he ate our breads.,-1.0,plural,59
+5547,Kuczaj/041113.cha,CAR,uhhuh see that number fifteen Abe?,,,59
+5548,Kuczaj/041113.cha,CAR,with the yellow circle around it?,,,59
+5549,Kuczaj/041113.cha,CHI,I can't see a yellow circle.,1.0,,59
+5550,Kuczaj/041113.cha,CAR,I mean a yellow square.,,,59
+5551,Kuczaj/041113.cha,CHI,uhhuh.,,,59
+5552,Kuczaj/041113.cha,CAR,guess whose birthday that is.,,,59
+5553,Kuczaj/041113.cha,CHI,mine.,,,59
+5554,Kuczaj/041113.cha,CHI,how many more days?,1.0,,59
+5555,Kuczaj/041113.cha,CAR,seventeen.,,,59
+5556,Kuczaj/041113.cha,CHI,oh.,,,59
+5557,Kuczaj/041113.cha,CAR,what would you do if I stole all your gifts?,,,59
+5558,Kuczaj/041113.cha,CHI,I'd punch you.,1.0,,59
+5559,Kuczaj/041113.cha,CAR,I better not do it then.,,,59
+5560,Kuczaj/041113.cha,CHI,hey Mommy hey Daddy what did they say about Karen?,1.0,,59
+5561,Kuczaj/041113.cha,CAR,she can't come.,,,59
+5562,Kuczaj/041113.cha,CAR,know why?,,,59
+5563,Kuczaj/041113.cha,CHI,it costs too much.,1.0,,59
+5564,Kuczaj/041113.cha,CAR,uhhuh.,,,59
+5565,Kuczaj/041113.cha,CHI,why didn't they pay for Karen and then Karen only goes?,-1.0,tense_aspect,59
+5566,Kuczaj/041113.cha,CAR,well I suggested that.,,,59
+5567,Kuczaj/041113.cha,CAR,but it still costs too much.,,,59
+5568,Kuczaj/041113.cha,CHI,hey!,,,59
+5569,Kuczaj/041113.cha,CHI,there's thread in my cereal.,1.0,,59
+5570,Kuczaj/041113.cha,CHI,I'll show you a piece of thread.,1.0,,59
+5571,Kuczaj/041113.cha,CAR,Grandma said.,,,59
+5572,Kuczaj/041113.cha,CAR,I spent all my money on as gifts.,,,59
+5573,Kuczaj/041113.cha,CAR,and I don't have any left to let Karen fly up.,,,59
+5574,Kuczaj/041113.cha,CHI,is that true?,1.0,,59
+5575,Kuczaj/041113.cha,CAR,yeah.,,,59
+5576,Kuczaj/041113.cha,CHI,hey Mommy.,1.0,,59
+5577,Kuczaj/041113.cha,CAR,yeah.,,,59
+5578,Kuczaj/041113.cha,CHI,we can put this up after we're done eating.,1.0,,59
+5579,Kuczaj/041113.cha,CAR,uhhuh which do you think Mike would like?,,,59
+5580,Kuczaj/041113.cha,CAR,a cowboy jacket or a zebra robe?,,,59
+5581,Kuczaj/041113.cha,CHI,probably one of those zebra robes and a cowboy jacket.,1.0,,59
+5582,Kuczaj/041113.cha,CAR,no it has to one or the other.,,,59
+5583,Kuczaj/041113.cha,CHI,how about a cowboy jacket like the one I have?,1.0,,59
+5584,Kuczaj/041113.cha,CAR,do you think he'd like it?,,,59
+5585,Kuczaj/041113.cha,CHI,except with a different kind of material.,1.0,,59
+5586,Kuczaj/041113.cha,CHI,because he likes softest material.,-1.0,"determiner, other",59
+5587,Kuczaj/041113.cha,CAR,oh Abe.,,,59
+5588,Kuczaj/041113.cha,CHI,I can't talk with my mouth full.,1.0,,59
+5589,Kuczaj/041113.cha,CHI,I can't talk now.,1.0,,59
+5590,Kuczaj/041113.cha,CHI,I forgot.,1.0,,59
+5591,Kuczaj/041113.cha,CHI,I can't laugh with my mouth full.,1.0,,59
+5592,Kuczaj/041113.cha,CHI,I can't drink with my mouth full.,1.0,,59
+5593,Kuczaj/041113.cha,CHI,and I can't eat with my mouth full.,1.0,,59
+5594,Kuczaj/041113.cha,CAR,oh.,,,59
+5595,Kuczaj/041113.cha,CHI,Mom how do you think Santa could sneak into our house?,1.0,,59
+5596,Kuczaj/041113.cha,CAR,he has magical powers.,,,59
+5597,Kuczaj/041113.cha,CHI,no he doesn't.,1.0,,59
+5598,Kuczaj/041113.cha,CHI,he has real sneak shoes or slippers.,1.0,,59
+5599,Kuczaj/041113.cha,CHI,real quiet shoes.,1.0,,59
+5600,Kuczaj/041113.cha,CAR,I think I'll stay up real late this year and see if I can see Santa when he comes to our house.,,,59
+5601,Kuczaj/041113.cha,CHI,Santa gots real magical powers if you look up he'll be up down.,-1.0,tense_aspect,59
+5602,Kuczaj/041113.cha,CHI,if you look down he'll be up.,1.0,,59
+5603,Kuczaj/041113.cha,CHI,so you better not stay up.,1.0,,59
+5604,Kuczaj/041113.cha,CHI,because if he sees you he'll give you a spanking.,1.0,,59
+5605,Kuczaj/041113.cha,CAR,if he sees me he won't leave any presents for anybody.,,,59
+5606,Kuczaj/041113.cha,CAR,that'd be okay.,,,59
+5607,Kuczaj/041113.cha,CHI,no he wouldn't.,1.0,,59
+5608,Kuczaj/041113.cha,CHI,he would just leave not presents for you.,-1.0,determiner,59
+5609,Kuczaj/041113.cha,CAR,oh should we leave him a carrot to eat?,,,59
+5610,Kuczaj/041113.cha,CHI,I don't know.,1.0,,59
+5611,Kuczaj/041113.cha,CHI,but when is it going to be Easter?,1.0,,59
+5612,Kuczaj/041113.cha,CAR,I hope he doesn't bring the reindeer in the house.,,,59
+5613,Kuczaj/041113.cha,CAR,they'd make a real mess.,,,59
+5614,Kuczaj/041113.cha,CHI,or leave footprints.,1.0,,59
+5615,Kuczaj/041113.cha,CHI,or go tee tee on the floor.,0.0,,59
+5616,Kuczaj/041113.cha,CHI,Mom where did you see the Christmas decorations?,1.0,,59
+5617,Kuczaj/041113.cha,CAR,in Dayton's.,,,59
+5618,Kuczaj/041113.cha,CHI,how much do they cost?,1.0,,59
+5619,Kuczaj/041113.cha,CAR,I can't remember.,,,59
+5620,Kuczaj/041113.cha,CAR,they also had some beautiful wreaths that we can make.,,,59
+5621,Kuczaj/041113.cha,CHI,how would how could we make them?,1.0,,59
+5622,Kuczaj/041113.cha,CAR,it's a kit.,,,59
+5623,Kuczaj/041113.cha,CHI,did they give you the thread and needle?,1.0,,59
+5624,Kuczaj/041113.cha,CHI,and did they give the package of the shapes?,1.0,,59
+5625,Kuczaj/041113.cha,CAR,uhhuh.,,,59
+5626,Kuczaj/041113.cha,CHI,so you could sew them?,0.0,,59
+5627,Kuczaj/041113.cha,CAR,uhhuh.,,,59
+5628,Kuczaj/041113.cha,CHI,remember that Christmas wrapper that we useta have or have?,1.0,,59
+5629,Kuczaj/041113.cha,CHI,we could use that to wrap our presents.,1.0,,59
+5630,Kuczaj/041113.cha,CAR,good idea.,,,59
+5631,Kuczaj/041113.cha,CHI,we could buy some ribbon or wrap it with string.,1.0,,59
+5632,Kuczaj/041113.cha,CHI,and we could also make bows.,1.0,,59
+5633,Kuczaj/041113.cha,CAR,there's a bug!,,,59
+5634,Kuczaj/041113.cha,CAR,climbing up the wall by Abe's pictures.,,,59
+5635,Kuczaj/041113.cha,CHI,which picture was it going to go under?,1.0,,59
+5636,Kuczaj/020818.cha,CHI,Mommy make some tacos please.,1.0,,33
+5637,Kuczaj/020818.cha,CAR,will you help me make them?,,,33
+5638,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5639,Kuczaj/020818.cha,CAR,okay.,,,33
+5640,Kuczaj/020818.cha,CAR,look at the caterpillars.,,,33
+5641,Kuczaj/020818.cha,CAR,they really like those leaves.,,,33
+5642,Kuczaj/020818.cha,CAR,uhhuh see all that poop on the bottom?,,,33
+5643,Kuczaj/020818.cha,CAR,they must be eating something.,,,33
+5644,Kuczaj/020818.cha,CHI,Mom they pooping?,-1.0,auxiliary,33
+5645,Kuczaj/020818.cha,CAR,uhhuh.,,,33
+5646,Kuczaj/020818.cha,CHI,what they are pooping Mom?,-1.0,auxiliary,33
+5647,Kuczaj/020818.cha,CAR,those caterpillars eat those sunflower leaves.,,,33
+5648,Kuczaj/020818.cha,CAR,and then they poop are they?,,,33
+5649,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5650,Kuczaj/020818.cha,CAR,I guess they are.,,,33
+5651,Kuczaj/020818.cha,CHI,Daddy you put my new shoes on?,-1.0,auxiliary,33
+5652,Kuczaj/020818.cha,CAR,you wanna put your shoes on?,,,33
+5653,Kuczaj/020818.cha,CHI,uhhuh Daddy you put them on.,1.0,,33
+5654,Kuczaj/020818.cha,CAR,okay I'll put them on.,,,33
+5655,Kuczaj/020818.cha,CHI,Daddy.,,,33
+5656,Kuczaj/020818.cha,CAR,uhhuh.,,,33
+5657,Kuczaj/020818.cha,CHI,you got bigger shoes and I got bigger shoes also.,1.0,,33
+5658,Kuczaj/020818.cha,CAR,uhhuh we both have bigger shoes.,,,33
+5659,Kuczaj/020818.cha,CAR,what about mine?,,,33
+5660,Kuczaj/020818.cha,CHI,you have bigger shoes also like mine right there.,1.0,,33
+5661,Kuczaj/020818.cha,CAR,uhhuh do you know what they're called?,,,33
+5662,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5663,Kuczaj/020818.cha,CAR,waffle stompers.,,,33
+5664,Kuczaj/020818.cha,CHI,oh.,,,33
+5665,Kuczaj/020818.cha,CAR,was the man nice at the store where you bought your shoes?,,,33
+5666,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5667,Kuczaj/020818.cha,CAR,remember when he touched your feet?,,,33
+5668,Kuczaj/020818.cha,CHI,huh?,,,33
+5669,Kuczaj/020818.cha,CAR,remember when the man touched your toes?,,,33
+5670,Kuczaj/020818.cha,CHI,hunhunh.,,,33
+5671,Kuczaj/020818.cha,CAR,don't you remember when he felt your toes to make sure that your shoes were the right size?,,,33
+5672,Kuczaj/020818.cha,CHI,hunhunh.,,,33
+5673,Kuczaj/020818.cha,CAR,why did you get these shoes Abe?,,,33
+5674,Kuczaj/020818.cha,CHI,because I want those brown shoes.,-1.0,tense_aspect,33
+5675,Kuczaj/020818.cha,CAR,oh you know what?,,,33
+5676,Kuczaj/020818.cha,CHI,uhhuh Daddy.,1.0,,33
+5677,Kuczaj/020818.cha,CAR,we have to be careful with these shoes don't we?,,,33
+5678,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5679,Kuczaj/020818.cha,CAR,what were you going to say?,,,33
+5680,Kuczaj/020818.cha,CAR,go ahead and tell me.,,,33
+5681,Kuczaj/020818.cha,CHI,I said uhhuh.,1.0,,33
+5682,Kuczaj/020818.cha,CAR,oh.,,,33
+5683,Kuczaj/020818.cha,CHI,I wanna taste of flour Daddy.,0.0,,33
+5684,Kuczaj/020818.cha,CHI,this is a right leg.,1.0,,33
+5685,Kuczaj/020818.cha,CHI,and this is a foot leg.,1.0,,33
+5686,Kuczaj/020818.cha,CAR,this is a right leg?,,,33
+5687,Kuczaj/020818.cha,CHI,uhhuh that's a right leg.,1.0,,33
+5688,Kuczaj/020818.cha,CAR,this is a right leg?,,,33
+5689,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5690,Kuczaj/020818.cha,CAR,one's right and one's left?,,,33
+5691,Kuczaj/020818.cha,CHI,uhhuh Mom I have a piece okay?,-1.0,auxiliary,33
+5692,Kuczaj/020818.cha,CHI,Mom I have a piece okay?,-1.0,auxiliary,33
+5693,Kuczaj/020818.cha,CAR,I'm going to run out in the garden and get some onions and tomatoes.,,,33
+5694,Kuczaj/020818.cha,CHI,I'm going to go out there with you.,1.0,,33
+5695,Kuczaj/020818.cha,CAR,you are?,,,33
+5696,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5697,Kuczaj/020818.cha,CAR,you're going out to help Mom huh?,,,33
+5698,Kuczaj/020818.cha,CHI,uhhuh I don't wanna stay with you.,1.0,,33
+5699,Kuczaj/020818.cha,CAR,you don't wanna stay with me?,,,33
+5700,Kuczaj/020818.cha,CHI,uhuh.,,,33
+5701,Kuczaj/020818.cha,CAR,on man.,,,33
+5702,Kuczaj/020818.cha,CAR,did Abe pick an onion?,,,33
+5703,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5704,Kuczaj/020818.cha,CAR,let me see.,,,33
+5705,Kuczaj/020818.cha,CHI,you have to cut this.,1.0,,33
+5706,Kuczaj/020818.cha,CAR,I have to cut it?,,,33
+5707,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5708,Kuczaj/020818.cha,CAR,you know what else I have to cut?,,,33
+5709,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5710,Kuczaj/020818.cha,CAR,tomatoes.,,,33
+5711,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5712,Kuczaj/020818.cha,CAR,cheese.,,,33
+5713,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5714,Kuczaj/020818.cha,CAR,and lettuce.,,,33
+5715,Kuczaj/020818.cha,CHI,uhhuh and that.,1.0,,33
+5716,Kuczaj/020818.cha,CAR,uhhuh I have to cut that onion too.,,,33
+5717,Kuczaj/020818.cha,CHI,Mom they still eating?,0.0,,33
+5718,Kuczaj/020818.cha,CHI,Mom they still eating?,0.0,,33
+5719,Kuczaj/020818.cha,CHI,Mommy they still eating these?,0.0,,33
+5720,Kuczaj/020818.cha,CAR,what?,,,33
+5721,Kuczaj/020818.cha,CHI,Mommy they still eating those?,0.0,,33
+5722,Kuczaj/020818.cha,CAR,the onion?,,,33
+5723,Kuczaj/020818.cha,CHI,uhhuh I mean those those things.,1.0,,33
+5724,Kuczaj/020818.cha,CAR,oh yeah the caterpillars are still eating sunflower leaves.,,,33
+5725,Kuczaj/020818.cha,CAR,we'll go out and pick them some more later okay?,,,33
+5726,Kuczaj/020818.cha,CHI,okay.,,,33
+5727,Kuczaj/020818.cha,CAR,Abe picked a huge tomato too.,,,33
+5728,Kuczaj/020818.cha,CAR,good.,,,33
+5729,Kuczaj/020818.cha,CAR,we're going to use that in the tacos if it's okay with you.,,,33
+5730,Kuczaj/020818.cha,CAR,is it okay?,,,33
+5731,Kuczaj/020818.cha,CHI,uhhuh it's okay with me.,1.0,,33
+5732,Kuczaj/020818.cha,CAR,these are such tiny little onions.,,,33
+5733,Kuczaj/020818.cha,CHI,that mine?,0.0,,33
+5734,Kuczaj/020818.cha,CAR,uhhuh no Daddy has yours.,,,33
+5735,Kuczaj/020818.cha,CHI,oh that yours?,0.0,,33
+5736,Kuczaj/020818.cha,CHI,that yours?,0.0,,33
+5737,Kuczaj/020818.cha,CAR,this is for the taco meat.,,,33
+5738,Kuczaj/020818.cha,CHI,why you making tacos?,0.0,,33
+5739,Kuczaj/020818.cha,CAR,I thought you'd like them.,,,33
+5740,Kuczaj/020818.cha,CHI,I like tacos tacos tacos tacos!,1.0,,33
+5741,Kuczaj/020818.cha,CAR,who told you that?,,,33
+5742,Kuczaj/020818.cha,CHI,my Daddy told it.,-1.0,object,33
+5743,Kuczaj/020818.cha,CAR,he did?,,,33
+5744,Kuczaj/020818.cha,CHI,uhhuh Mom how that comed off?,-1.0,"auxiliary, tense_aspect",33
+5745,Kuczaj/020818.cha,CAR,hm?,,,33
+5746,Kuczaj/020818.cha,CHI,how that comed off?,-1.0,"auxiliary, tense_aspect",33
+5747,Kuczaj/020818.cha,CAR,it came off and I put it in there.,,,33
+5748,Kuczaj/020818.cha,CHI,you put it all in there?,1.0,,33
+5749,Kuczaj/020818.cha,CHI,you put it all in there?,1.0,,33
+5750,Kuczaj/020818.cha,CAR,all the popper.,,,33
+5751,Kuczaj/020818.cha,CHI,what's that Mommy?,1.0,,33
+5752,Kuczaj/020818.cha,CHI,what's that Mommy?,1.0,,33
+5753,Kuczaj/020818.cha,CAR,chili powder.,,,33
+5754,Kuczaj/020818.cha,CAR,and I put way too much in there.,,,33
+5755,Kuczaj/020818.cha,CHI,how'd you put some a lot of money in there Mom?,1.0,,33
+5756,Kuczaj/020818.cha,CAR,a lot of chili powder.,,,33
+5757,Kuczaj/020818.cha,CHI,Mom you put that in there.,1.0,,33
+5758,Kuczaj/020818.cha,CAR,a lot of salt.,,,33
+5759,Kuczaj/020818.cha,CHI,Mom that's not all.,1.0,,33
+5760,Kuczaj/020818.cha,CHI,Mom that's not all.,1.0,,33
+5761,Kuczaj/020818.cha,CHI,that's not all.,1.0,,33
+5762,Kuczaj/020818.cha,CHI,what's that Mom?,1.0,,33
+5763,Kuczaj/020818.cha,CHI,what's what's why that's meat for tacos?,-1.0,auxiliary,33
+5764,Kuczaj/020818.cha,CHI,Mom why that's meat for tacos?,-1.0,auxiliary,33
+5765,Kuczaj/020818.cha,CAR,that's to make our tacos Abe.,,,33
+5766,Kuczaj/020818.cha,CHI,uhhuh Mom I can't believe that.,1.0,,33
+5767,Kuczaj/020818.cha,CAR,you can't believe what?,,,33
+5768,Kuczaj/020818.cha,CHI,Mom Mom I saw a big big big eagle.,1.0,,33
+5769,Kuczaj/020818.cha,CAR,you saw a big eagle huh?,,,33
+5770,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5771,Kuczaj/020818.cha,CAR,while we were shopping right?,,,33
+5772,Kuczaj/020818.cha,CHI,uhhuh I still can't believe that.,1.0,,33
+5773,Kuczaj/020818.cha,CAR,did he say anything to you?,,,33
+5774,Kuczaj/020818.cha,CHI,uhuh I said no!,1.0,,33
+5775,Kuczaj/020818.cha,CAR,how come?,,,33
+5776,Kuczaj/020818.cha,CHI,I just said no!,1.0,,33
+5777,Kuczaj/020818.cha,CHI,I don't want a woodpecker peck on me.,-1.0,tense_aspect,33
+5778,Kuczaj/020818.cha,CAR,I don't either.,,,33
+5779,Kuczaj/020818.cha,CAR,what makes you think a woodpecker would peck on you?,,,33
+5780,Kuczaj/020818.cha,CHI,I get a hole in my hole in my mouth and my nose and my eyes and here and here and here and here and here and here and here and here and here and here.,1.0,,33
+5781,Kuczaj/020818.cha,CAR,you'd be a holey Abe wouldn't you?,,,33
+5782,Kuczaj/020818.cha,CHI,uhhuh and then I can't walk when them peck holes on me.,-1.0,verb,33
+5783,Kuczaj/020818.cha,CAR,not if you had all those holes in you could you?,,,33
+5784,Kuczaj/020818.cha,CHI,hunhunh and then I can't walk when them peck holes on me.,-1.0,verb,33
+5785,Kuczaj/020818.cha,CAR,you couldn't walk if you had that many holes?,,,33
+5786,Kuczaj/020818.cha,CHI,hunhunh.,,,33
+5787,Kuczaj/020818.cha,CAR,what would happen if you drank water?,,,33
+5788,Kuczaj/020818.cha,CHI,make all the holes feel good.,1.0,,33
+5789,Kuczaj/020818.cha,CAR,all the water would come out of all those holes?,,,33
+5790,Kuczaj/020818.cha,CAR,like a water fountain?,,,33
+5791,Kuczaj/020818.cha,CHI,I I blowed that Mommy.,-1.0,tense_aspect,33
+5792,Kuczaj/020818.cha,CAR,the sugar?,,,33
+5793,Kuczaj/020818.cha,CAR,the baking powder?,,,33
+5794,Kuczaj/020818.cha,CHI,the the sugar I blowed the sugar Mom.,-1.0,tense_aspect,33
+5795,Kuczaj/020818.cha,CHI,why that's yellow Mom?,-1.0,auxiliary,33
+5796,Kuczaj/020818.cha,CAR,I don't know why this ended up yellow.,,,33
+5797,Kuczaj/020818.cha,CAR,what are you thinking Abe?,,,33
+5798,Kuczaj/020818.cha,CAR,will you like tacos made with yellow lard?,,,33
+5799,Kuczaj/020818.cha,CHI,I also like this goes around and makes these things flat.,1.0,,33
+5800,Kuczaj/020818.cha,CHI,Mom what's this letter?,1.0,,33
+5801,Kuczaj/020818.cha,CHI,a e what's two letters?,-1.0,determiner,33
+5802,Kuczaj/020818.cha,CHI,what's this?,1.0,,33
+5803,Kuczaj/020818.cha,CHI,what's.,,,33
+5804,Kuczaj/020818.cha,CHI,Mommy when you're through with.,-1.0,object,33
+5805,Kuczaj/020818.cha,CHI,don't beater it Mom!,0.0,,33
+5806,Kuczaj/020818.cha,CAR,I'm sort of blending it in.,,,33
+5807,Kuczaj/020818.cha,CHI,you cut those.,1.0,,33
+5808,Kuczaj/020818.cha,CAR,I'm going to cut them.,,,33
+5809,Kuczaj/020818.cha,CHI,cut that onion too.,1.0,,33
+5810,Kuczaj/020818.cha,CAR,I already cut the onion.,,,33
+5811,Kuczaj/020818.cha,CHI,huh?,,,33
+5812,Kuczaj/020818.cha,CAR,I already cut the onion.,,,33
+5813,Kuczaj/020818.cha,CHI,huh?,,,33
+5814,Kuczaj/020818.cha,CHI,where the onion at?,-1.0,verb,33
+5815,Kuczaj/020818.cha,CAR,it's over there on the table all cut up.,,,33
+5816,Kuczaj/020818.cha,CHI,why that's cut all cut up?,-1.0,other,33
+5817,Kuczaj/020818.cha,CHI,Dad you should have cut up right there.,-1.0,object,33
+5818,Kuczaj/020818.cha,CHI,that's the onion I picked.,1.0,,33
+5819,Kuczaj/020818.cha,CAR,is that the onion you picked?,,,33
+5820,Kuczaj/020818.cha,CHI,uhhuh Mommy Mommy see Mommy see Mommy see.,1.0,,33
+5821,Kuczaj/020818.cha,CAR,yes indeed you've gotten into the flour haven't you?,,,33
+5822,Kuczaj/020818.cha,CHI,Mom Mommy see Mommy see.,1.0,,33
+5823,Kuczaj/020818.cha,CAR,I don't think that you should get into it any more.,,,33
+5824,Kuczaj/020818.cha,CHI,why you put some water in there Mom?,-1.0,auxiliary,33
+5825,Kuczaj/020818.cha,CHI,why you put some water in there Mom?,-1.0,auxiliary,33
+5826,Kuczaj/020818.cha,CAR,to help mix all of the ingredients together.,,,33
+5827,Kuczaj/020818.cha,CHI,when you through with that I have a lick of bowl that bowl?,-1.0,"verb, auxiliary, determiner",33
+5828,Kuczaj/020818.cha,CAR,you wanna lick the bowl?,,,33
+5829,Kuczaj/020818.cha,CHI,I lick one little piece okay?,-1.0,auxiliary,33
+5830,Kuczaj/020818.cha,CHI,Mom one big piece.,1.0,,33
+5831,Kuczaj/020818.cha,CAR,just a second.,,,33
+5832,Kuczaj/020818.cha,CHI,a bigger piece!,0.0,,33
+5833,Kuczaj/020818.cha,CHI,not this small piece!,1.0,,33
+5834,Kuczaj/020818.cha,CAR,here.,,,33
+5835,Kuczaj/020818.cha,CHI,thank you.,1.0,,33
+5836,Kuczaj/020818.cha,CAR,you're welcome how many do you want Dad?,,,33
+5837,Kuczaj/020818.cha,CAR,how many can I have Abe?,,,33
+5838,Kuczaj/020818.cha,CHI,one two three four.,0.0,,33
+5839,Kuczaj/020818.cha,CAR,four.,,,33
+5840,Kuczaj/020818.cha,CAR,okay I'll have four.,,,33
+5841,Kuczaj/020818.cha,CHI,Mommy I have one little another lick please.,-1.0,auxiliary,33
+5842,Kuczaj/020818.cha,CAR,I thought you wanted tacos.,,,33
+5843,Kuczaj/020818.cha,CHI,huh?,,,33
+5844,Kuczaj/020818.cha,CAR,I thought you wanted to eat tacos.,,,33
+5845,Kuczaj/020818.cha,CHI,I have one.,0.0,,33
+5846,Kuczaj/020818.cha,CHI,I have one.,0.0,,33
+5847,Kuczaj/020818.cha,CHI,I have one two three four I have Mommy.,0.0,,33
+5848,Kuczaj/020818.cha,CAR,five tacos?,,,33
+5849,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5850,Kuczaj/020818.cha,CAR,I really don't think you'll eat that many.,,,33
+5851,Kuczaj/020818.cha,CHI,don't bug me fly.,1.0,,33
+5852,Kuczaj/020818.cha,CHI,shoo fly don't bother me.,1.0,,33
+5853,Kuczaj/020818.cha,CAR,shoo fly get out of here.,,,33
+5854,Kuczaj/020818.cha,CHI,I catch you.,-1.0,auxiliary,33
+5855,Kuczaj/020818.cha,CHI,and I cook you.,-1.0,auxiliary,33
+5856,Kuczaj/020818.cha,CHI,shoo fly.,0.0,,33
+5857,Kuczaj/020818.cha,CHI,we don't wanna cook some fly.,1.0,,33
+5858,Kuczaj/020818.cha,CHI,uhhuh we don't wanna cook some fly.,1.0,,33
+5859,Kuczaj/020818.cha,CHI,not me either I will not fit in the pan.,-1.0,other,33
+5860,Kuczaj/020818.cha,CHI,I will not fit in the pan Mom.,1.0,,33
+5861,Kuczaj/020818.cha,CAR,that's right.,,,33
+5862,Kuczaj/020818.cha,CHI,I'm cutting this Mom.,1.0,,33
+5863,Kuczaj/020818.cha,CAR,and then what will happen after you cut it?,,,33
+5864,Kuczaj/020818.cha,CHI,then we don't wanna break it.,1.0,,33
+5865,Kuczaj/020818.cha,CHI,I don't wanna cook a fly Mom.,1.0,,33
+5866,Kuczaj/020818.cha,CAR,you don't wanna cook a fly?,,,33
+5867,Kuczaj/020818.cha,CHI,hunhunh I have one more little taste Mom?,-1.0,auxiliary,33
+5868,Kuczaj/020818.cha,CHI,I have one little taste?,-1.0,auxiliary,33
+5869,Kuczaj/020818.cha,CHI,I have a big taste Mom?,-1.0,auxiliary,33
+5870,Kuczaj/020818.cha,CHI,I have one more little big taste again Mom?,-1.0,auxiliary,33
+5871,Kuczaj/020818.cha,CAR,no I don't think so Abe.,,,33
+5872,Kuczaj/020818.cha,CAR,you're going to get full of dough and won't have any room for tacos.,,,33
+5873,Kuczaj/020818.cha,CHI,I don't wanna have tacos.,1.0,,33
+5874,Kuczaj/020818.cha,CAR,you don't?,,,33
+5875,Kuczaj/020818.cha,CHI,hunhunh I want pizza.,1.0,,33
+5876,Kuczaj/020818.cha,CAR,you do?,,,33
+5877,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5878,Kuczaj/020818.cha,CAR,you know what?,,,33
+5879,Kuczaj/020818.cha,CAR,maybe Mom would like to ride up to the store when we're done and get us a surprise.,,,33
+5880,Kuczaj/020818.cha,CHI,with you and me and Mom?,1.0,,33
+5881,Kuczaj/020818.cha,CAR,I don't know who.,,,33
+5882,Kuczaj/020818.cha,CAR,but I thought that we'd get somebody to go to the store and get some ice cream.,,,33
+5883,Kuczaj/020818.cha,CHI,oh what's this Mom?,1.0,,33
+5884,Kuczaj/020818.cha,CHI,what's this Mom?,1.0,,33
+5885,Kuczaj/020818.cha,CAR,little pieces of lettuce.,,,33
+5886,Kuczaj/020818.cha,CHI,oh little pieces of lettuce for tacos?,1.0,,33
+5887,Kuczaj/020818.cha,CAR,uhhuh.,,,33
+5888,Kuczaj/020818.cha,CAR,Abe guess what's on tv tonight?,,,33
+5889,Kuczaj/020818.cha,CHI,I don't know.,1.0,,33
+5890,Kuczaj/020818.cha,CAR,it's Saturday.,,,33
+5891,Kuczaj/020818.cha,CHI,Mickey Mouse.,1.0,,33
+5892,Kuczaj/020818.cha,CAR,yeah at six thirty.,,,33
+5893,Kuczaj/020818.cha,CAR,one hour and fifteen minutes do you think that you can wait that long?,,,33
+5894,Kuczaj/020818.cha,CHI,uhhuh our tiny cheese Dad.,0.0,,33
+5895,Kuczaj/020818.cha,CHI,I got tiny cheese cut it up okay?,0.0,,33
+5896,Kuczaj/020818.cha,CAR,we'll use it later okay?,,,33
+5897,Kuczaj/020818.cha,CHI,now.,,,33
+5898,Kuczaj/020818.cha,CAR,we'll see.,,,33
+5899,Kuczaj/020818.cha,CAR,but I think this would work better big Abe.,,,33
+5900,Kuczaj/020818.cha,CHI,I'm bigger.,1.0,,33
+5901,Kuczaj/020818.cha,CAR,you're bigger?,,,33
+5902,Kuczaj/020818.cha,CHI,I'm going to grow big and big and touch the wall.,1.0,,33
+5903,Kuczaj/020818.cha,CAR,you are?,,,33
+5904,Kuczaj/020818.cha,CHI,uhhuh put those in Mom.,1.0,,33
+5905,Kuczaj/020818.cha,CHI,Mom put those in Mom.,1.0,,33
+5906,Kuczaj/020818.cha,CHI,I'll eat it all Mommy.,1.0,,33
+5907,Kuczaj/020818.cha,CAR,you did?,,,33
+5908,Kuczaj/020818.cha,CHI,uhuh uhuh I eat a real tiny one like yours.,-1.0,auxiliary,33
+5909,Kuczaj/020818.cha,CAR,it didn't fill you up then did it?,,,33
+5910,Kuczaj/020818.cha,CHI,I tried to eat it all.,1.0,,33
+5911,Kuczaj/020818.cha,CAR,you did try?,,,33
+5912,Kuczaj/020818.cha,CHI,there's no more!,1.0,,33
+5913,Kuczaj/020818.cha,CAR,you ate all of that tiny one huh?,,,33
+5914,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5915,Kuczaj/020818.cha,CAR,what do you wanna drink?,,,33
+5916,Kuczaj/020818.cha,CAR,milk.,,,33
+5917,Kuczaj/020818.cha,CHI,I want some milk.,1.0,,33
+5918,Kuczaj/020818.cha,CAR,okay I think I can arrange that.,,,33
+5919,Kuczaj/020818.cha,CHI,Daddy what we watch Daddy.,-1.0,auxiliary,33
+5920,Kuczaj/020818.cha,CAR,what are we going to watch?,,,33
+5921,Kuczaj/020818.cha,CHI,uhhuh.,,,33
+5922,Kuczaj/020818.cha,CAR,let's see.,,,33
+5923,Kuczaj/020818.cha,CHI,Mom I need some cheese.,1.0,,33
+5924,Kuczaj/020818.cha,CHI,also I just love cheese Mom.,1.0,,33
+5925,Kuczaj/020818.cha,CAR,well you can have all you want.,,,33
+5926,Kuczaj/020818.cha,CHI,I need some in here Mom.,1.0,,33
+5927,Kuczaj/020818.cha,CAR,here you go.,,,33
+5928,Kuczaj/020818.cha,CHI,Mommy Mommy it's broken.,1.0,,33
+5929,Kuczaj/020818.cha,CHI,Mommy I can't see it.,1.0,,33
+5930,Kuczaj/020818.cha,CAR,it's wiggling because it's real windy outside.,,,33
+5931,Kuczaj/020818.cha,CAR,it'll be okay soon.,,,33
+5932,Kuczaj/020818.cha,CHI,Daddy soon that's a be gone.,-1.0,"auxiliary, determiner",33
+5933,Kuczaj/020818.cha,CAR,soon it will be gone?,,,33
+5934,Kuczaj/020818.cha,CHI,uhhuh it's gone now Mom.,1.0,,33
+5935,Kuczaj/020818.cha,CAR,uhhuh I'll have to grate some more.,,,33
+5936,Kuczaj/020818.cha,CHI,Mommy I need some another one Mom.,1.0,,33
+5937,Kuczaj/020818.cha,CAR,another taco?,,,33
+5938,Kuczaj/020818.cha,CHI,uhhuh I I don't want you eat them all.,-1.0,tense_aspect,33
+5939,Kuczaj/020818.cha,CAR,I won't I'll just eat a couple.,,,33
+5940,Kuczaj/020818.cha,CHI,Mommy Mommy see that he's walking!,0.0,,33
+5941,Kuczaj/020818.cha,CAR,uhhuh see how he walks he just sort of.,,,33
+5942,EllisWeismer/LT/30pc/22142.cha,CAR,should we get some some water in case he's thirsty?,,,30
+5943,EllisWeismer/LT/30pc/22142.cha,CAR,and some hay.,,,30
+5944,EllisWeismer/LT/30pc/22142.cha,CAR,do you see hay?,,,30
+5945,EllisWeismer/LT/30pc/22142.cha,CAR,oh yes.,,,30
+5946,EllisWeismer/LT/30pc/22142.cha,CAR,oh I think the horse likes that hay.,,,30
+5947,EllisWeismer/LT/30pc/22142.cha,CAR,mm tasty sweet hay.,,,30
+5948,EllisWeismer/LT/30pc/22142.cha,CAR,hay.,,,30
+5949,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+5950,EllisWeismer/LT/30pc/22142.cha,CAR,is this a momma horse?,,,30
+5951,EllisWeismer/LT/30pc/22142.cha,CAR,does she have a baby?,,,30
+5952,EllisWeismer/LT/30pc/22142.cha,CHI,uh no.,1.0,,30
+5953,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+5954,EllisWeismer/LT/30pc/22142.cha,CAR,ah I think we need to look around cause I think maybe she does Childsname.,,,30
+5955,EllisWeismer/LT/30pc/22142.cha,CAR,do you see a baby horse?,,,30
+5956,EllisWeismer/LT/30pc/22142.cha,CAR,mhm.,,,30
+5957,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+5958,EllisWeismer/LT/30pc/22142.cha,CAR,what's that?,,,30
+5959,EllisWeismer/LT/30pc/22142.cha,CHI,cow.,,,30
+5960,EllisWeismer/LT/30pc/22142.cha,CAR,that's right.,,,30
+5961,EllisWeismer/LT/30pc/22142.cha,CAR,a baby cow you're right.,,,30
+5962,EllisWeismer/LT/30pc/22142.cha,CAR,you said that nicely.,,,30
+5963,EllisWeismer/LT/30pc/22142.cha,CAR,let's look around for a baby horse though.,,,30
+5964,EllisWeismer/LT/30pc/22142.cha,CAR,I think there's one.,,,30
+5965,EllisWeismer/LT/30pc/22142.cha,CAR,what's that?,,,30
+5966,EllisWeismer/LT/30pc/22142.cha,CAR,in that stall?,,,30
+5967,EllisWeismer/LT/30pc/22142.cha,CHI,baby horse.,-1.0,determiner,30
+5968,EllisWeismer/LT/30pc/22142.cha,CAR,baby horse.,,,30
+5969,EllisWeismer/LT/30pc/22142.cha,CAR,that's right.,,,30
+5970,EllisWeismer/LT/30pc/22142.cha,CAR,oh the baby horse is so happy to be with his mo.,,,30
+5970,EllisWeismer/LT/30pc/22142.cha,CHI,da.,,,30
+5971,EllisWeismer/LT/30pc/22142.cha,CAR,uh is this his daddy or mommy?,,,30
+5972,EllisWeismer/LT/30pc/22142.cha,CHI,daddy.,,,30
+5973,EllisWeismer/LT/30pc/22142.cha,CAR,daddy okay.,,,30
+5974,EllisWeismer/LT/30pc/22142.cha,CAR,I think the baby horse will enjoy having some sweet hay with his daddy.,,,30
+5975,EllisWeismer/LT/30pc/22142.cha,CAR,and maybe a drink of water.,,,30
+5976,EllisWeismer/LT/30pc/22142.cha,CAR,mm good hay.,,,30
+5977,EllisWeismer/LT/30pc/22142.cha,CHI,water mom where's the water?,1.0,,30
+5978,EllisWeismer/LT/30pc/22142.cha,CAR,well we'll have to pretend the water.,,,30
+5979,EllisWeismer/LT/30pc/22142.cha,CAR,let's see how can we pretend?,,,30
+5980,EllisWeismer/LT/30pc/22142.cha,CAR,what can we use to pretend that they get a drink?,,,30
+5981,EllisWeismer/LT/30pc/22142.cha,CAR,should we use the pumpkins?,,,30
+5982,EllisWeismer/LT/30pc/22142.cha,CAR,and pretend like they're drinking from the pumpkins.,,,30
+5983,EllisWeismer/LT/30pc/22142.cha,CAR,that it's a bucket.,,,30
+5984,EllisWeismer/LT/30pc/22142.cha,CAR,should we do that?,,,30
+5985,EllisWeismer/LT/30pc/22142.cha,CAR,should we pretend?,,,30
+5986,EllisWeismer/LT/30pc/22142.cha,CAR,sh oh maybe the fireman gives them some water huh?,,,30
+5987,EllisWeismer/LT/30pc/22142.cha,CAR,okay do you think that the mama and the baby cow would like to come out and play?,,,30
+5988,EllisWeismer/LT/30pc/22142.cha,CAR,out of their stall.,,,30
+5989,EllisWeismer/LT/30pc/22142.cha,CAR,would they like to come out and play?,,,30
+5990,EllisWeismer/LT/30pc/22142.cha,CHI,wawa.,,,30
+5991,EllisWeismer/LT/30pc/22142.cha,CAR,mm I don't really like hay.,,,30
+5992,EllisWeismer/LT/30pc/22142.cha,CAR,let's not put things in our mouth okay?,,,30
+5993,EllisWeismer/LT/30pc/22142.cha,CHI,okay.,,,30
+5994,EllisWeismer/LT/30pc/22142.cha,CAR,well we can maybe bring the cow and the the um baby cow out and see if they want to play.,,,30
+5995,EllisWeismer/LT/30pc/22142.cha,CHI,hay.,,,30
+5996,EllisWeismer/LT/30pc/22142.cha,CAR,is it going to eat?,,,30
+5997,EllisWeismer/LT/30pc/22142.cha,CAR,they're playing huh?,,,30
+5998,EllisWeismer/LT/30pc/22142.cha,CHI,mama.,,,30
+5999,EllisWeismer/LT/30pc/22142.cha,CAR,mhm.,,,30
+6000,EllisWeismer/LT/30pc/22142.cha,CHI,cow.,,,30
+6001,EllisWeismer/LT/30pc/22142.cha,CAR,mama cow.,,,30
+6002,EllisWeismer/LT/30pc/22142.cha,CHI,hello horse.,1.0,,30
+6003,EllisWeismer/LT/30pc/22142.cha,CAR,say hello Mr Horse.,,,30
+6004,EllisWeismer/LT/30pc/22142.cha,CHI,this is baby.,-1.0,determiner,30
+6005,EllisWeismer/LT/30pc/22142.cha,CAR,uhhuh she's with her baby.,,,30
+6006,EllisWeismer/LT/30pc/22142.cha,CAR,she wants to go back in her stall?,,,30
+6007,EllisWeismer/LT/30pc/22142.cha,CAR,oh nice job.,,,30
+6008,EllisWeismer/LT/30pc/22142.cha,CAR,you shut the gate very nicely.,,,30
+6009,EllisWeismer/LT/30pc/22142.cha,CAR,so it will be nice and safe huh?,,,30
+6010,EllisWeismer/LT/30pc/22142.cha,CHI,up.,,,30
+6011,EllisWeismer/LT/30pc/22142.cha,CAR,up put it up.,,,30
+6012,EllisWeismer/LT/30pc/22142.cha,CAR,yep it needs to be up.,,,30
+6013,EllisWeismer/LT/30pc/22142.cha,CHI,baby.,,,30
+6014,EllisWeismer/LT/30pc/22142.cha,CAR,bring the baby back in?,,,30
+6015,EllisWeismer/LT/30pc/22142.cha,CAR,oh.,,,30
+6016,EllisWeismer/LT/30pc/22142.cha,CAR,there they are.,,,30
+6017,EllisWeismer/LT/30pc/22142.cha,CAR,they get to look around the pasture now with all the other animals.,,,30
+6018,EllisWeismer/LT/30pc/22142.cha,CAR,what other animals do we have Childsname?,,,30
+6019,EllisWeismer/LT/30pc/22142.cha,CHI,da.,,,30
+6019,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+6020,EllisWeismer/LT/30pc/22142.cha,CAR,oh do you think the sheep needs a place to stay?,,,30
+6021,EllisWeismer/LT/30pc/22142.cha,CAR,where's the sheep?,,,30
+6021,EllisWeismer/LT/30pc/22142.cha,CAR,baa baa.,,,30
+6022,EllisWeismer/LT/30pc/22142.cha,CAR,where's that sheep?,,,30
+6023,EllisWeismer/LT/30pc/22142.cha,CAR,there's the sheep.,,,30
+6024,EllisWeismer/LT/30pc/22142.cha,CAR,do you think the sheep wants to stay up with those chickens?,,,30
+6025,EllisWeismer/LT/30pc/22142.cha,CAR,or would the sheep like a stall.,,,30
+6026,EllisWeismer/LT/30pc/22142.cha,CHI,huh.,,,30
+6027,EllisWeismer/LT/30pc/22142.cha,CAR,what's that?,,,30
+6028,EllisWeismer/LT/30pc/22142.cha,CHI,there's water.,1.0,,30
+6029,EllisWeismer/LT/30pc/22142.cha,CAR,yeah we can pretend like that's water.,,,30
+6030,EllisWeismer/LT/30pc/22142.cha,CHI,oh.,,,30
+6031,EllisWeismer/LT/30pc/22142.cha,CAR,oh nice.,,,30
+6032,EllisWeismer/LT/30pc/22142.cha,CAR,you gave them a drink.,,,30
+6033,EllisWeismer/LT/30pc/22142.cha,CAR,they were really thirsty.,,,30
+6034,EllisWeismer/LT/30pc/22142.cha,CAR,should we make drinking sounds together?,,,30
+6035,EllisWeismer/LT/30pc/22142.cha,CAR,mm good drink of water.,,,30
+6036,EllisWeismer/LT/30pc/22142.cha,CAR,oh nice job.,,,30
+6037,EllisWeismer/LT/30pc/22142.cha,CAR,yeah you fixed the gate nicely.,,,30
+6038,EllisWeismer/LT/30pc/22142.cha,CAR,so they have water and they have hay.,,,30
+6039,EllisWeismer/LT/30pc/22142.cha,CHI,I eat and bite the.,-1.0,"auxiliary, object",30
+6040,EllisWeismer/LT/30pc/22142.cha,CAR,so he's going to play with the cow?,,,30
+6041,EllisWeismer/LT/30pc/22142.cha,CAR,oh I think they're enjoying playing together.,,,30
+6042,EllisWeismer/LT/30pc/22142.cha,CAR,very nice you shut the door nicely okay.,,,30
+6043,EllisWeismer/LT/30pc/22142.cha,CAR,so daddy daddy horse is going to to go play with mama cow?,,,30
+6044,EllisWeismer/LT/30pc/22142.cha,CAR,I don't know?,,,30
+6045,EllisWeismer/LT/30pc/22142.cha,CAR,do those do they fit?,,,30
+6046,EllisWeismer/LT/30pc/22142.cha,CAR,yes you made them fit.,,,30
+6047,EllisWeismer/LT/30pc/22142.cha,CAR,I don't think there's room for hay in with the adults.,,,30
+6048,EllisWeismer/LT/30pc/22142.cha,CAR,oh the baby cow and baby horse will enjoy that.,,,30
+6049,EllisWeismer/LT/30pc/22142.cha,CAR,now who should come out in the pasture to play and look around?,,,30
+6050,EllisWeismer/LT/30pc/22142.cha,CAR,should we do the sheep?,,,30
+6051,EllisWeismer/LT/30pc/22142.cha,CAR,or the pig?,,,30
+6052,EllisWeismer/LT/30pc/22142.cha,CAR,hey Childsname I would like some eggs for breakfast.,,,30
+6053,EllisWeismer/LT/30pc/22142.cha,CAR,do you know where we get the eggs?,,,30
+6054,EllisWeismer/LT/30pc/22142.cha,CHI,mm egg.,-1.0,determiner,30
+6055,EllisWeismer/LT/30pc/22142.cha,CAR,underneath the chicken.,,,30
+6056,EllisWeismer/LT/30pc/22142.cha,CAR,oh let's check the nest.,,,30
+6057,EllisWeismer/LT/30pc/22142.cha,CAR,oh there's one.,,,30
+6058,EllisWeismer/LT/30pc/22142.cha,CAR,we'll have to we'll have to sit this aside and cook it later.,,,30
+6059,EllisWeismer/LT/30pc/22142.cha,CAR,were pretending now.,,,30
+6060,EllisWeismer/LT/30pc/22142.cha,CAR,can you get can you get some out of the nest?,,,30
+6061,EllisWeismer/LT/30pc/22142.cha,CHI,uhhuh.,,,30
+6062,EllisWeismer/LT/30pc/22142.cha,CAR,what's that?,,,30
+6063,EllisWeismer/LT/30pc/22142.cha,CHI,duck.,,,30
+6064,EllisWeismer/LT/30pc/22142.cha,CAR,is there another one?,,,30
+6065,EllisWeismer/LT/30pc/22142.cha,CAR,hm.,,,30
+6066,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+6067,EllisWeismer/LT/30pc/22142.cha,CAR,open?,,,30
+6068,EllisWeismer/LT/30pc/22142.cha,CAR,who's going to go in there?,,,30
+6069,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+6070,EllisWeismer/LT/30pc/22142.cha,CAR,Mr Horse.,,,30
+6071,EllisWeismer/LT/30pc/22142.cha,CAR,oh he's looking out the window.,,,30
+6072,EllisWeismer/LT/30pc/22142.cha,CAR,do you think he's looking for the farmer?,,,30
+6073,EllisWeismer/LT/30pc/22142.cha,CAR,is the baby tall enough to look out?,,,30
+6074,EllisWeismer/LT/30pc/22142.cha,CAR,a little bit.,,,30
+6075,EllisWeismer/LT/30pc/22142.cha,CAR,who's that?,,,30
+6076,EllisWeismer/LT/30pc/22142.cha,CHI,ah.,,,30
+6077,EllisWeismer/LT/30pc/22142.cha,CAR,the hay.,,,30
+6078,EllisWeismer/LT/30pc/22142.cha,CAR,you want to put the hay up with the chickens?,,,30
+6079,EllisWeismer/LT/30pc/22142.cha,CAR,close that gate nicely yeah.,,,30
+6080,EllisWeismer/LT/30pc/22142.cha,CAR,Mr Cow's going to go back in?,,,30
+6081,EllisWeismer/LT/30pc/22142.cha,CAR,is he going to look out the window too like Mr Horse?,,,30
+6082,EllisWeismer/LT/30pc/22142.cha,CAR,oh yes.,,,30
+6083,EllisWeismer/LT/30pc/22142.cha,CAR,oh that's boy that baby cow can really look out the window like that on that ledge.,,,30
+6084,EllisWeismer/LT/30pc/22142.cha,CAR,he's up high.,,,30
+6085,EllisWeismer/LT/30pc/22142.cha,CAR,you going to put baby horse up high?,,,30
+6086,EllisWeismer/LT/30pc/22142.cha,CAR,hm they look like they're enjoying looking out that nice window.,,,30
+6087,EllisWeismer/LT/30pc/22142.cha,CAR,do you think it's a sunny day?,,,30
+6088,EllisWeismer/LT/30pc/22142.cha,CAR,or rainy.,,,30
+6089,EllisWeismer/LT/30pc/22142.cha,CHI,rainy.,,,30
+6090,EllisWeismer/LT/30pc/22142.cha,CAR,rainy?,,,30
+6091,EllisWeismer/LT/30pc/22142.cha,CAR,that's why they're in their stall huh?,,,30
+6092,EllisWeismer/LT/30pc/22142.cha,CAR,it's a rainy day?,,,30
+6093,EllisWeismer/LT/30pc/22142.cha,CAR,hm do you think the sheep would like to come down?,,,30
+6094,EllisWeismer/LT/30pc/22142.cha,CAR,baa.,,,30
+6094,EllisWeismer/LT/30pc/22142.cha,CAR,sheep?,,,30
+6095,EllisWeismer/LT/30pc/22142.cha,CAR,here's another sheep.,,,30
+6096,EllisWeismer/LT/30pc/22142.cha,CAR,this one has a strong dark face huh?,,,30
+6097,EllisWeismer/LT/30pc/22142.cha,CAR,and this one has the gray face.,,,30
+6098,EllisWeismer/LT/30pc/22142.cha,CAR,oh the horse is going to up there to visit the chickens?,,,30
+6099,EllisWeismer/LT/30pc/22142.cha,CAR,open.,,,30
+6100,EllisWeismer/LT/30pc/22142.cha,CAR,yeah they can look out the open window.,,,30
+6101,EllisWeismer/LT/30pc/22142.cha,CHI,up.,,,30
+6102,EllisWeismer/LT/30pc/22142.cha,CAR,that's right up.,,,30
+6103,EllisWeismer/LT/30pc/22142.cha,CAR,you wanna come back down?,,,30
+6104,EllisWeismer/LT/30pc/22142.cha,CAR,and look out the window.,,,30
+6105,EllisWeismer/LT/30pc/22142.cha,CAR,oh and their food and water.,,,30
+6106,EllisWeismer/LT/30pc/22142.cha,CAR,so if they get hungry or thirsty they have something.,,,30
+6107,EllisWeismer/LT/30pc/22142.cha,CAR,is it hard to close the gate?,,,30
+6108,EllisWeismer/LT/30pc/22142.cha,CAR,there you go.,,,30
+6109,EllisWeismer/LT/30pc/22142.cha,CAR,there it closes nicely.,,,30
+6110,EllisWeismer/LT/30pc/22142.cha,CAR,fits easily now.,,,30
+6111,EllisWeismer/LT/30pc/22142.cha,CAR,now what should we do next Childsname?,,,30
+6112,EllisWeismer/LT/30pc/22142.cha,CAR,oh the girl's going to go up with all of the other firemen.,,,30
+6113,EllisWeismer/LT/30pc/22142.cha,CAR,think they're going to fix breakfast up there?,,,30
+6114,EllisWeismer/LT/30pc/22142.cha,CAR,or do some work?,,,30
+6115,EllisWeismer/LT/30pc/22142.cha,CHI,work.,,,30
+6116,EllisWeismer/LT/30pc/22142.cha,CAR,work.,,,30
+6117,EllisWeismer/LT/30pc/22142.cha,CHI,done.,,,30
+6118,EllisWeismer/LT/30pc/22142.cha,CAR,are we done with this?,,,30
+6119,EllisWeismer/LT/30pc/22142.cha,CAR,no?,,,30
+6120,EllisWeismer/LT/30pc/22142.cha,CAR,okay.,,,30
+6121,EllisWeismer/LT/30pc/22142.cha,CAR,baa.,,,30
+6121,EllisWeismer/LT/30pc/22142.cha,CAR,wow baa.,,,30
+6122,EllisWeismer/LT/30pc/22142.cha,CAR,oh so the farm babies are going to play in the pasture huh?,,,30
+6123,EllisWeismer/LT/30pc/22142.cha,CAR,I think they'll like that.,,,30
+6124,EllisWeismer/LT/30pc/22142.cha,CAR,so is it the chicken's turn to have some water and hay?,,,30
+6125,EllisWeismer/LT/30pc/22142.cha,CAR,oh the baby horse is going to eat.,,,30
+6126,EllisWeismer/LT/30pc/22142.cha,CAR,mm good hay and water.,,,30
+6127,EllisWeismer/LT/30pc/22142.cha,CAR,thank you Childsname.,,,30
+6128,EllisWeismer/LT/30pc/22142.cha,CAR,is he eating or drinking Childsname?,,,30
+6129,EllisWeismer/LT/30pc/22142.cha,CHI,baby.,,,30
+6130,EllisWeismer/LT/30pc/22142.cha,CAR,the bab the baby horse is right there.,,,30
+6131,EllisWeismer/LT/30pc/22142.cha,CAR,oh they're both eating.,,,30
+6132,EllisWeismer/LT/30pc/22142.cha,CAR,oh what a good breakfast.,,,30
+6133,EllisWeismer/LT/30pc/22142.cha,CAR,hay and water.,,,30
+6134,EllisWeismer/LT/30pc/22142.cha,CAR,they're very happy you gave them that hay and water.,,,30
+6135,EllisWeismer/LT/30pc/22142.cha,CAR,now they're going to go down in their stall?,,,30
+6136,EllisWeismer/LT/30pc/22142.cha,CAR,what are they going to do now Childsname?,,,30
+6137,EllisWeismer/LT/30pc/22142.cha,CAR,they're going to look out the window.,,,30
+6138,EllisWeismer/LT/30pc/22142.cha,CAR,is it time for mama cow and baby cow to come out?,,,30
+6139,EllisWeismer/LT/30pc/22142.cha,CAR,no?,,,30
+6140,EllisWeismer/LT/30pc/22142.cha,CAR,who should come out now?,,,30
+6141,EllisWeismer/LT/30pc/22142.cha,CAR,going to fix the fence.,,,30
+6142,EllisWeismer/LT/30pc/22142.cha,CAR,yeah.,,,30
+6143,EllisWeismer/LT/30pc/22142.cha,CAR,there we go.,,,30
+6144,EllisWeismer/LT/30pc/22142.cha,CAR,is he going to go in the fence?,,,30
+6145,EllisWeismer/LT/30pc/22142.cha,CAR,or just next to the fence?,,,30
+6146,EllisWeismer/LT/30pc/22142.cha,CAR,oh daddy horse and baby horse are going to go in the fence.,,,30
+6147,EllisWeismer/LT/30pc/22142.cha,CAR,and there's your food and water.,,,30
+6148,EllisWeismer/LT/30pc/22142.cha,CAR,that's so nice of you to think of them.,,,30
+6149,EllisWeismer/LT/30pc/22142.cha,CHI,mouth.,,,30
+6150,EllisWeismer/LT/30pc/22142.cha,CAR,oh not in my mouth.,,,30
+6151,EllisWeismer/LT/30pc/22142.cha,CAR,we'll pretend.,,,30
+6152,EllisWeismer/LT/30pc/22142.cha,CAR,Childsname not in my mouth honey.,,,30
+6153,EllisWeismer/LT/30pc/22142.cha,CAR,not in my mouth.,,,30
+6154,EllisWeismer/LT/30pc/22142.cha,CAR,we don't put things in our mouth okay?,,,30
+6155,EllisWeismer/LT/30pc/22142.cha,CAR,we just pretend.,,,30
+6156,EllisWeismer/LT/30pc/22142.cha,CAR,there.,,,30
+6157,EllisWeismer/LT/30pc/22142.cha,CAR,no not in my mouth Childsname.,,,30
+6158,EllisWeismer/LT/30pc/22142.cha,CAR,is he eating?,,,30
+6159,EllisWeismer/LT/30pc/22142.cha,CAR,can you make eating sounds?,,,30
+6160,EllisWeismer/LT/30pc/22142.cha,CAR,are they playing?,,,30
+6161,EllisWeismer/LT/30pc/22142.cha,CAR,so daddy horse is going in.,,,30
+6162,EllisWeismer/LT/30pc/22142.cha,CAR,is momma cow coming out?,,,30
+6163,EllisWeismer/LT/30pc/22142.cha,CAR,nope she's going back in.,,,30
+6164,EllisWeismer/LT/30pc/22142.cha,CAR,but the babies are playing huh?,,,30
+6165,EllisWeismer/LT/30pc/22142.cha,CAR,do you think Mr Pig would like to come out and play with the baby cow and the baby horse?,,,30
+6166,EllisWeismer/LT/30pc/22142.cha,CHI,baby.,,,30
+6167,EllisWeismer/LT/30pc/22142.cha,CAR,baby that's right.,,,30
+6168,EllisWeismer/LT/30pc/22142.cha,CAR,just close.,,,30
+6169,EllisWeismer/LT/30pc/22142.cha,CAR,mm good sweet hay.,,,30
+6170,EllisWeismer/LT/30pc/22142.cha,CAR,do you think Mr Horse would like some?,,,30
+6171,EllisWeismer/LT/30pc/22142.cha,CAR,mm a cool drink of water.,,,30
+6172,EllisWeismer/LT/30pc/22142.cha,CHI,up oh.,-1.0,verb,30

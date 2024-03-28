@@ -1,0 +1,1104 @@
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels,age
+15145,EllisWeismer/LT/30pc/22098.cha,CAR,oh is he saying where's my mommy?,,,30
+15145,EllisWeismer/LT/30pc/22098.cha,CAR,baa baa.,,,30
+15145,EllisWeismer/LT/30pc/22098.cha,CHI,baa baa.,0.0,,30
+15146,EllisWeismer/LT/30pc/22098.cha,CHI,my mommy go here.,-1.0,"tense_aspect, sv_agreement",30
+15147,EllisWeismer/LT/30pc/22098.cha,CAR,oh.,,,30
+15147,EllisWeismer/LT/30pc/22098.cha,CHI,baa baa.,0.0,,30
+15148,EllisWeismer/LT/30pc/22098.cha,CAR,what other animals are there?,,,30
+15149,EllisWeismer/LT/30pc/22098.cha,CAR,do you wanna make the fence?,,,30
+15150,EllisWeismer/LT/30pc/22098.cha,CAR,here.,,,30
+15151,EllisWeismer/LT/30pc/22098.cha,CAR,the fence hooks together.,,,30
+15151,EllisWeismer/LT/30pc/22098.cha,CHI,baa baa.,0.0,,30
+15152,EllisWeismer/LT/30pc/22098.cha,CAR,oh the sheep are making lots of noise.,,,30
+15153,EllisWeismer/LT/30pc/22098.cha,CAR,oh look look what else there is.,,,30
+15153,EllisWeismer/LT/30pc/22098.cha,CHI,baa.,,,30
+15154,EllisWeismer/LT/30pc/22098.cha,CAR,should we make the fence?,,,30
+15155,EllisWeismer/LT/30pc/22098.cha,CAR,okay.,,,30
+15155,EllisWeismer/LT/30pc/22098.cha,CHI,baa baa.,0.0,,30
+15156,EllisWeismer/LT/30pc/22098.cha,CHI,mommy want open this house.,-1.0,subject,30
+15157,EllisWeismer/LT/30pc/22098.cha,CAR,you wanna open the door?,,,30
+15158,EllisWeismer/LT/30pc/22098.cha,CAR,okay.,,,30
+15159,EllisWeismer/LT/30pc/22098.cha,CAR,the chicken going to jump out?,,,30
+15160,EllisWeismer/LT/30pc/22098.cha,CHI,no.,,,30
+15161,EllisWeismer/LT/30pc/22098.cha,CAR,no.,,,30
+15162,EllisWeismer/LT/30pc/22098.cha,CHI,chicken stay here.,-1.0,"determiner, tense_aspect",30
+15163,EllisWeismer/LT/30pc/22098.cha,CAR,the chicken's going to stay in the nest.,,,30
+15164,EllisWeismer/LT/30pc/22098.cha,CAR,chicken going night night.,,,30
+15165,EllisWeismer/LT/30pc/22098.cha,CAR,the chicken going night night.,,,30
+15166,EllisWeismer/LT/30pc/22098.cha,CAR,go night night in the barn.,,,30
+15167,EllisWeismer/LT/30pc/22098.cha,CAR,there.,,,30
+15168,EllisWeismer/LT/30pc/22098.cha,CAR,night night.,,,30
+15169,EllisWeismer/LT/30pc/22098.cha,CAR,you wanna see some of these other animals?,,,30
+15170,EllisWeismer/LT/30pc/22098.cha,CHI,that right there.,0.0,,30
+15171,EllisWeismer/LT/30pc/22098.cha,CAR,yeah.,,,30
+15172,EllisWeismer/LT/30pc/22098.cha,CAR,who else is there?,,,30
+15173,EllisWeismer/LT/30pc/22098.cha,CAR,oh a mom and a baby cow.,,,30
+15174,EllisWeismer/LT/30pc/22098.cha,CAR,oh should we give them something to eat?,,,30
+15175,EllisWeismer/LT/30pc/22098.cha,CAR,should we give them something to eat?,,,30
+15176,EllisWeismer/LT/30pc/22098.cha,CAR,hay yum yum yum.,,,30
+15177,EllisWeismer/LT/30pc/22098.cha,CHI,moo.,,,30
+15178,EllisWeismer/LT/30pc/22098.cha,CAR,moo.,,,30
+15179,EllisWeismer/LT/30pc/22098.cha,CHI,moo moo.,0.0,,30
+15180,EllisWeismer/LT/30pc/22098.cha,CAR,is he calling for some food?,,,30
+15181,EllisWeismer/LT/30pc/22098.cha,CAR,he's so hungry.,,,30
+15182,EllisWeismer/LT/30pc/22098.cha,CAR,where's the farmer?,,,30
+15183,EllisWeismer/LT/30pc/22098.cha,CAR,here comes the farmer.,,,30
+15184,EllisWeismer/LT/30pc/22098.cha,CAR,he'll give him some food.,,,30
+15185,EllisWeismer/LT/30pc/22098.cha,CHI,no food.,0.0,,30
+15186,EllisWeismer/LT/30pc/22098.cha,CAR,no?,,,30
+15187,EllisWeismer/LT/30pc/22098.cha,CAR,oh but he said he's hungry.,,,30
+15188,EllisWeismer/LT/30pc/22098.cha,CHI,neigh neigh.,0.0,,30
+15189,EllisWeismer/LT/30pc/22098.cha,CAR,neigh neigh.,,,30
+15190,EllisWeismer/LT/30pc/22098.cha,CHI,this horse.,0.0,,30
+15191,EllisWeismer/LT/30pc/22098.cha,CAR,that's the horse.,,,30
+15192,EllisWeismer/LT/30pc/22098.cha,CAR,oh there are some horses too aren't there?,,,30
+15193,EllisWeismer/LT/30pc/22098.cha,CAR,oh you're going to give the baby sheep the hay.,,,30
+15194,EllisWeismer/LT/30pc/22098.cha,CHI,hey mommy.,1.0,,30
+15195,Braunwald/0diary/020503.cha,CHI,I wonder when Susie coming.,-1.0,present_progressive,29
+15196,Braunwald/0diary/020503.cha,CAR,Susie's not coming.,,,29
+15197,Braunwald/0diary/020503.cha,CHI,or Judie.,1.0,,29
+15198,Braunwald/0diary/020503.cha,CAR,Judie's not coming.,,,29
+15199,Braunwald/0diary/020503.cha,CAR,a new friend is coming.,,,29
+15200,Braunwald/0diary/020503.cha,CHI,who?,,,29
+15201,Braunwald/0diary/020503.cha,CAR,Missus Childress.,,,29
+15202,Gelman/2014-IndDiff/55C-P1.cha,CAR,what does that look like?,,,53
+15203,Gelman/2014-IndDiff/55C-P1.cha,CHI,cake piece.,-1.0,determiner,53
+15204,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm did you know that's Daddy's favorite kind?,,,53
+15205,Gelman/2014-IndDiff/55C-P1.cha,CAR,it's yellow cake with chocolate frosting.,,,53
+15206,Gelman/2014-IndDiff/55C-P1.cha,CHI,wow.,,,53
+15207,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's your favorite part the cake or the frosting?,,,53
+15208,Gelman/2014-IndDiff/55C-P1.cha,CHI,"the frost, the frosting.",1.0,,53
+15209,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm.,,,53
+15210,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you know what?,,,53
+15211,Gelman/2014-IndDiff/55C-P1.cha,CAR,my birthday's coming up pretty soon.,,,53
+15212,Gelman/2014-IndDiff/55C-P1.cha,CAR,"in about, nine days.",,,53
+15213,Gelman/2014-IndDiff/55C-P1.cha,CAR,think we'll make a cake for it?,,,53
+15214,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm-hm.,,,53
+15215,Gelman/2014-IndDiff/55C-P1.cha,CAR,will you help Daddy make a cake?,,,53
+15216,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15217,Gelman/2014-IndDiff/55C-P1.cha,CHI,can we please make this kind?,1.0,,53
+15218,Gelman/2014-IndDiff/55C-P1.cha,CAR,the yellow cake with the chocolate frosting?,,,53
+15219,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15220,Gelman/2014-IndDiff/55C-P1.cha,CAR,sure.,,,53
+15221,Gelman/2014-IndDiff/55C-P1.cha,CAR,that sounds good to me.,,,53
+15222,Gelman/2014-IndDiff/55C-P1.cha,CAR,we'll have to look downstairs and see if we have those kinds of cake mixes.,,,53
+15223,Gelman/2014-IndDiff/55C-P1.cha,CAR,alright.,,,53
+15224,Gelman/2014-IndDiff/55C-P1.cha,CAR,whoa what does that look like?,,,53
+15225,Gelman/2014-IndDiff/55C-P1.cha,CHI,pilot.,,,53
+15226,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh that's a good idea huh?,,,53
+15227,Gelman/2014-IndDiff/55C-P1.cha,CAR,a pilot.,,,53
+15228,Gelman/2014-IndDiff/55C-P1.cha,CAR,we were just talking about pilots weren't we?,,,53
+15229,Gelman/2014-IndDiff/55C-P1.cha,CAR,"and going to pilot, going to school to learn how to be a pilot?",,,53
+15230,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15231,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you know Uncle Firstname knows how to fly airplanes?,,,53
+15232,Gelman/2014-IndDiff/55C-P1.cha,CAR,firstname's dad.,,,53
+15233,Gelman/2014-IndDiff/55C-P1.cha,CAR,aunt Firstname's husband.,,,53
+15234,Gelman/2014-IndDiff/55C-P1.cha,CHI,wow.,,,53
+15235,Gelman/2014-IndDiff/55C-P1.cha,CAR,what does it look like the pilots doing?,,,53
+15236,Gelman/2014-IndDiff/55C-P1.cha,CHI,"flying an air, flying the airplane.",1.0,,53
+15237,Gelman/2014-IndDiff/55C-P1.cha,CAR,but he's not looking out the window.,,,53
+15238,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15239,Gelman/2014-IndDiff/55C-P1.cha,CAR,hm.,,,53
+15240,Gelman/2014-IndDiff/55C-P1.cha,CAR,kinda of tough to tell.,,,53
+15241,Gelman/2014-IndDiff/55C-P1.cha,CHI,uh huh.,1.0,,53
+15242,Gelman/2014-IndDiff/55C-P1.cha,CAR,maybe he's saying something to someone else over here.,,,53
+15243,Gelman/2014-IndDiff/55C-P1.cha,CHI,no maybe he's talking on the radio.,1.0,,53
+15244,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh that's true.,,,53
+15245,Gelman/2014-IndDiff/55C-P1.cha,CAR,to the air traffic controllers?,,,53
+15246,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15247,Gelman/2014-IndDiff/55C-P1.cha,CAR,good.,,,53
+15248,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you remember what the air traffic controllers do?,,,53
+15249,Gelman/2014-IndDiff/55C-P1.cha,CHI,what?,,,53
+15250,Gelman/2014-IndDiff/55C-P1.cha,CAR,they're the ones that sit up in those big high towers and they make sure that none of the planes bump into each other.,,,53
+15251,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15252,Gelman/2014-IndDiff/55C-P1.cha,CAR,seems like an important job.,,,53
+15253,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh what's that?,,,53
+15254,Gelman/2014-IndDiff/55C-P1.cha,CHI,penguin.,,,53
+15255,Gelman/2014-IndDiff/55C-P1.cha,CAR,look at that.,,,53
+15256,Gelman/2014-IndDiff/55C-P1.cha,CAR,you know I didn't know penguins had claws.,,,53
+15257,Gelman/2014-IndDiff/55C-P1.cha,CHI,I think those are they help them catch fish.,1.0,,53
+15258,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh do penguins catch fish?,,,53
+15259,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh oh oh at least they like to eat fish.,1.0,,53
+15260,Gelman/2014-IndDiff/55C-P1.cha,CAR,"mm, well the fish probably don't just crawl into their mouths by themselves huh?",,,53
+15261,Gelman/2014-IndDiff/55C-P1.cha,CHI,no.,,,53
+15262,Gelman/2014-IndDiff/55C-P1.cha,CAR,they probably have to catch them.,,,53
+15263,Gelman/2014-IndDiff/55C-P1.cha,CHI,because they only have fins.,1.0,,53
+15264,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh.,,,53
+15265,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's that?,,,53
+15266,Gelman/2014-IndDiff/55C-P1.cha,CHI,broccoli.,,,53
+15267,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm.,,,53
+15268,Gelman/2014-IndDiff/55C-P1.cha,CHI,my favorite with butter.,1.0,,53
+15269,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah yum.,,,53
+15270,Gelman/2014-IndDiff/55C-P1.cha,CAR,you know Firstname likes broccoli not cooked dipped in ranch dressing.,,,53
+15271,Gelman/2014-IndDiff/55C-P1.cha,CHI,wow.,,,53
+15272,Gelman/2014-IndDiff/55C-P1.cha,CAR,last night what were you dipping your broccoli in?,,,53
+15273,Gelman/2014-IndDiff/55C-P1.cha,CHI,what?,,,53
+15274,Gelman/2014-IndDiff/55C-P1.cha,CAR,didn't you dip it in ketchup last night?,,,53
+15275,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh yeah.,1.0,,53
+15276,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's that?,,,53
+15277,Gelman/2014-IndDiff/55C-P1.cha,CHI,clown.,,,53
+15278,Gelman/2014-IndDiff/55C-P1.cha,CAR,that's kind of silly.,,,53
+15279,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15280,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's the clown doing with his fingers?,,,53
+15281,Gelman/2014-IndDiff/55C-P1.cha,CHI,putting them in his ears.,1.0,,53
+15282,Gelman/2014-IndDiff/55C-P1.cha,CAR,I wonder why he's doing that.,,,53
+15283,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15284,Gelman/2014-IndDiff/55C-P1.cha,CAR,maybe somebody made a loud nose.,,,53
+15285,Gelman/2014-IndDiff/55C-P1.cha,CHI,no.,,,53
+15286,Gelman/2014-IndDiff/55C-P1.cha,CHI,I think just is one of his jokes.,-1.0,subject,53
+15287,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh okay.,,,53
+15288,Gelman/2014-IndDiff/55C-P1.cha,CAR,what do you think is in the clown's pockets?,,,53
+15289,Gelman/2014-IndDiff/55C-P1.cha,CHI,I don't know.,1.0,,53
+15290,Gelman/2014-IndDiff/55C-P1.cha,CAR,maybe balloons?,,,53
+15291,Gelman/2014-IndDiff/55C-P1.cha,CAR,sometimes clowns make things out of balloons.,,,53
+15292,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15293,Gelman/2014-IndDiff/55C-P1.cha,CHI,then what see the pockets are full.,-1.0,other,53
+15294,Gelman/2014-IndDiff/55C-P1.cha,CAR,so maybe they're empty balloons waiting to be blown up.,,,53
+15295,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you remember when you went to Firstname's birthday party and the clown made something for you?,,,53
+15296,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15297,Gelman/2014-IndDiff/55C-P1.cha,CHI,it was a sword.,1.0,,53
+15298,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15299,Gelman/2014-IndDiff/55C-P1.cha,CAR,and when Daddy and I found a clown later that night that clown made us another sword for you.,,,53
+15300,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15301,Gelman/2014-IndDiff/55C-P1.cha,CHI,that clown did?,1.0,,53
+15302,Gelman/2014-IndDiff/55C-P1.cha,CAR,no but it was a clown that looked kind of like that.,,,53
+15303,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15304,Gelman/2014-IndDiff/55C-P1.cha,CAR,want to see what's on the next page?,,,53
+15305,Gelman/2014-IndDiff/55C-P1.cha,CHI,I'll turn.,-1.0,object,53
+15306,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh what does that look like?,,,53
+15307,Gelman/2014-IndDiff/55C-P1.cha,CHI,a teacher.,1.0,,53
+15308,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm-hm.,,,53
+15309,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you know what she's teaching?,,,53
+15310,Gelman/2014-IndDiff/55C-P1.cha,CHI,what?,,,53
+15311,Gelman/2014-IndDiff/55C-P1.cha,CAR,"looks like she's teaching, trigonometry or geometry.",,,53
+15312,Gelman/2014-IndDiff/55C-P1.cha,CAR,she's talking about shapes.,,,53
+15313,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15314,Gelman/2014-IndDiff/55C-P1.cha,CAR,see right there?,,,53
+15315,Gelman/2014-IndDiff/55C-P1.cha,CAR,there's those different shapes?,,,53
+15316,Gelman/2014-IndDiff/55C-P1.cha,CAR,how many sides does this shape have?,,,53
+15317,Gelman/2014-IndDiff/55C-P1.cha,CHI,uh.,,,53
+15318,Gelman/2014-IndDiff/55C-P1.cha,CAR,"one, two, three, four.",,,53
+15319,Gelman/2014-IndDiff/55C-P1.cha,CAR,daddy learned about a lot of that and so did I when we were in school.,,,53
+15320,Gelman/2014-IndDiff/55C-P1.cha,CAR,what does that look like?,,,53
+15321,Gelman/2014-IndDiff/55C-P1.cha,CHI,cereal.,,,53
+15322,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you know what kind of cereal?,,,53
+15323,Gelman/2014-IndDiff/55C-P1.cha,CHI,what?,,,53
+15324,Gelman/2014-IndDiff/55C-P1.cha,CAR,it's called cornflakes.,,,53
+15325,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15326,Gelman/2014-IndDiff/55C-P1.cha,CAR,they take corn and they mix it with some other things.,,,53
+15327,Gelman/2014-IndDiff/55C-P1.cha,CAR,and they roll it out really flat and make these crunchy little flakes.,,,53
+15328,Gelman/2014-IndDiff/55C-P1.cha,CAR,I used to eat that a lot when I was growing up.,,,53
+15329,Gelman/2014-IndDiff/55C-P1.cha,CAR,grandma and Grandpa liked to buy that.,,,53
+15330,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15331,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's that?,,,53
+15332,Gelman/2014-IndDiff/55C-P1.cha,CHI,horse.,,,53
+15333,Gelman/2014-IndDiff/55C-P1.cha,CAR,does that look like an adult horse or a baby horse?,,,53
+15334,Gelman/2014-IndDiff/55C-P1.cha,CHI,an adult.,1.0,,53
+15335,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm.,,,53
+15336,Gelman/2014-IndDiff/55C-P1.cha,CAR,it's kind of hard to tell.,,,53
+15337,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you remember when you got to ride a horse?,,,53
+15338,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15339,Gelman/2014-IndDiff/55C-P1.cha,CHI,at at when we were at the zoo.,1.0,,53
+15340,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15341,Gelman/2014-IndDiff/55C-P1.cha,CAR,that was kind of fun wasn't it?,,,53
+15342,Gelman/2014-IndDiff/55C-P1.cha,CAR,but the horse that you rode did it have a saddle on it?,,,53
+15343,Gelman/2014-IndDiff/55C-P1.cha,CAR,something you can sit on?,,,53
+15344,Gelman/2014-IndDiff/55C-P1.cha,CHI,yep.,,,53
+15345,Gelman/2014-IndDiff/55C-P1.cha,CAR,this horse looks kind of wild and free.,,,53
+15346,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15347,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's that look like?,,,53
+15348,Gelman/2014-IndDiff/55C-P1.cha,CHI,someone playing baseball.,1.0,,53
+15349,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm no.,,,53
+15350,Gelman/2014-IndDiff/55C-P1.cha,CAR,baseballs are small and white.,,,53
+15351,Gelman/2014-IndDiff/55C-P1.cha,CAR,white kind of ball is that?,,,53
+15352,Gelman/2014-IndDiff/55C-P1.cha,CHI,football.,,,53
+15353,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15354,Gelman/2014-IndDiff/55C-P1.cha,CAR,and she's got a helmet on her head.,,,53
+15355,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you know why?,,,53
+15356,Gelman/2014-IndDiff/55C-P1.cha,CHI,why?,,,53
+15357,Gelman/2014-IndDiff/55C-P1.cha,CAR,to protect her head.,,,53
+15358,Gelman/2014-IndDiff/55C-P1.cha,CAR,because sometimes in football people crash into each other.,,,53
+15359,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15360,Gelman/2014-IndDiff/55C-P1.cha,CAR,and she's got what on her shirt?,,,53
+15361,Gelman/2014-IndDiff/55C-P1.cha,CHI,number three and zero.,1.0,,53
+15362,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah a zero and a three.,,,53
+15363,Gelman/2014-IndDiff/55C-P1.cha,CAR,that means she's player number three.,,,53
+15364,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15365,Gelman/2014-IndDiff/55C-P1.cha,CAR,did you ever notice that Firstname has a number on her soccer shirt?,,,53
+15366,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15367,Gelman/2014-IndDiff/55C-P1.cha,CHI,what number does she have?,1.0,,53
+15368,Gelman/2014-IndDiff/55C-P1.cha,CAR,I'm not sure.,,,53
+15369,Gelman/2014-IndDiff/55C-P1.cha,CAR,we'll have to look and see.,,,53
+15370,Gelman/2014-IndDiff/55C-P1.cha,CAR,for awhile she was player number zero one.,,,53
+15371,Gelman/2014-IndDiff/55C-P1.cha,CAR,so she was player number one.,,,53
+15372,Gelman/2014-IndDiff/55C-P1.cha,CAR,all of the players on the team have a different number.,,,53
+15373,Gelman/2014-IndDiff/55C-P1.cha,CAR,so they can keep track of them.,,,53
+15374,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15375,Gelman/2014-IndDiff/55C-P1.cha,CAR,they'll say player number one caught the ball.,,,53
+15376,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15377,Gelman/2014-IndDiff/55C-P1.cha,CHI,with their foot though.,1.0,,53
+15378,Gelman/2014-IndDiff/55C-P1.cha,CAR,yes if it's soccer they have to use their foot but if it's football they can use their hands.,,,53
+15379,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh why is football have the have the name foot in it?,-1.0,"determiner, auxiliary",53
+15380,Gelman/2014-IndDiff/55C-P1.cha,CAR,"mm maybe because they kick the ball, sometimes.",,,53
+15381,Gelman/2014-IndDiff/55C-P1.cha,CHI,hm.,,,53
+15382,Gelman/2014-IndDiff/55C-P1.cha,CAR,that's a good question.,,,53
+15383,Gelman/2014-IndDiff/55C-P1.cha,CAR,I don't know.,,,53
+15384,Gelman/2014-IndDiff/55C-P1.cha,CHI,why?,,,53
+15385,Gelman/2014-IndDiff/55C-P1.cha,CAR,well I guess I hadn't thought about it before.,,,53
+15386,Gelman/2014-IndDiff/55C-P1.cha,CAR,did you know in different countries though they call soccer football?,,,53
+15387,Gelman/2014-IndDiff/55C-P1.cha,CAR,if you ask Firstname what football was she would describe the game soccer.,,,53
+15388,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh.,,,53
+15389,Gelman/2014-IndDiff/55C-P1.cha,CAR,did you cut your finger?,,,53
+15390,Gelman/2014-IndDiff/55C-P1.cha,CHI,no.,,,53
+15391,Gelman/2014-IndDiff/55C-P1.cha,CAR,is it just dry?,,,53
+15392,Gelman/2014-IndDiff/55C-P1.cha,CHI,what?,,,53
+15393,Gelman/2014-IndDiff/55C-P1.cha,CAR,is it just dry skin?,,,53
+15394,Gelman/2014-IndDiff/55C-P1.cha,CHI,"I think it's, red.",1.0,,53
+15395,Gelman/2014-IndDiff/55C-P1.cha,CAR,"hm, I think we need to start putting lotion on your hands again.",,,53
+15396,Gelman/2014-IndDiff/55C-P1.cha,CHI,no I I think it's when I scrape it on something.,1.0,,53
+15397,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm.,,,53
+15398,Gelman/2014-IndDiff/55C-P1.cha,CAR,should we see what the next picture is?,,,53
+15399,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm-hm.,,,53
+15400,Gelman/2014-IndDiff/55C-P1.cha,CHI,I'll turn.,1.0,,53
+15401,Gelman/2014-IndDiff/55C-P1.cha,CAR,okay.,,,53
+15402,Gelman/2014-IndDiff/55C-P1.cha,CHI,"because I, know a a a where the part is.",1.0,,53
+15403,Gelman/2014-IndDiff/55C-P1.cha,CAR,okay.,,,53
+15404,Gelman/2014-IndDiff/55C-P1.cha,CAR,ooh what's that?,,,53
+15405,Gelman/2014-IndDiff/55C-P1.cha,CHI,cra- crayfish.,-1.0,determiner,53
+15406,Gelman/2014-IndDiff/55C-P1.cha,CAR,looks kind of like a crayfish doesn't it.,,,53
+15407,Gelman/2014-IndDiff/55C-P1.cha,CAR,or a lobster.,,,53
+15408,Gelman/2014-IndDiff/55C-P1.cha,CAR,it's kind of hard to tell.,,,53
+15409,Gelman/2014-IndDiff/55C-P1.cha,CAR,because we don't know how big it is.,,,53
+15410,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you remember where we saw our crayfish the last time?,,,53
+15411,Gelman/2014-IndDiff/55C-P1.cha,CHI,in Utah!,1.0,,53
+15412,Gelman/2014-IndDiff/55C-P1.cha,CAR,we saw a bunch of them in Utah.,,,53
+15413,Gelman/2014-IndDiff/55C-P1.cha,CAR,but didn't you catch some when you went fishing with Daddy?,,,53
+15414,Gelman/2014-IndDiff/55C-P1.cha,CHI,uh huh.,1.0,,53
+15415,Gelman/2014-IndDiff/55C-P1.cha,CHI,where?,,,53
+15416,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh it was when you went to go set the fish free in Firstname Creek.,,,53
+15417,Gelman/2014-IndDiff/55C-P1.cha,CAR,didn't your daddy bring a crayfish back?,,,53
+15418,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh yeah.,1.0,,53
+15419,Gelman/2014-IndDiff/55C-P1.cha,CAR,and we saw a crayfish when we went inside the botanical gardens last time.,,,53
+15420,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh yeah.,1.0,,53
+15421,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15422,Gelman/2014-IndDiff/55C-P1.cha,CHI,ready turn the page?,-1.0,tense_aspect,53
+15423,Gelman/2014-IndDiff/55C-P1.cha,CAR,sure.,,,53
+15424,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's that?,,,53
+15425,Gelman/2014-IndDiff/55C-P1.cha,CHI,silver crocodile.,-1.0,determiner,53
+15426,Gelman/2014-IndDiff/55C-P1.cha,CAR,"ah, wow.",,,53
+15427,Gelman/2014-IndDiff/55C-P1.cha,CAR,I wonder why it has all those bumps on top of it.,,,53
+15428,Gelman/2014-IndDiff/55C-P1.cha,CHI,uh.,,,53
+15429,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh I remember.,1.0,,53
+15430,Gelman/2014-IndDiff/55C-P1.cha,CHI,all crocodiles have those.,1.0,,53
+15431,Gelman/2014-IndDiff/55C-P1.cha,CAR,do they?,,,53
+15432,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15433,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you know why they have them?,,,53
+15434,Gelman/2014-IndDiff/55C-P1.cha,CHI,wh- no.,1.0,,53
+15435,Gelman/2014-IndDiff/55C-P1.cha,CAR,I don't either.,,,53
+15436,Gelman/2014-IndDiff/55C-P1.cha,CAR,just curious.,,,53
+15437,Gelman/2014-IndDiff/55C-P1.cha,CHI,orange.,,,53
+15438,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm that looks like a tasty orange doesn't it?,,,53
+15439,Gelman/2014-IndDiff/55C-P1.cha,CHI,why?,,,53
+15440,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh it's just all the same color.,,,53
+15441,Gelman/2014-IndDiff/55C-P1.cha,CAR,and it doesn't have any bruises on it.,,,53
+15442,Gelman/2014-IndDiff/55C-P1.cha,CAR,looks like it'd be nice and juicy.,,,53
+15443,Gelman/2014-IndDiff/55C-P1.cha,CHI,witch!,,,53
+15444,Gelman/2014-IndDiff/55C-P1.cha,CAR,"who was it, I think it was Firstname that dressed up like a witch for Halloween.",,,53
+15445,Gelman/2014-IndDiff/55C-P1.cha,CHI,mm.,,,53
+15446,Gelman/2014-IndDiff/55C-P1.cha,CAR,I never got to see her in her costume but Firstname said that's what she dressed up as.,,,53
+15447,Gelman/2014-IndDiff/55C-P1.cha,CHI,well look.,1.0,,53
+15448,Gelman/2014-IndDiff/55C-P1.cha,CHI,there's even a bat.,1.0,,53
+15449,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm.,,,53
+15450,Gelman/2014-IndDiff/55C-P1.cha,CHI,I'm sure she didn't have a bat on her costume.,1.0,,53
+15451,Gelman/2014-IndDiff/55C-P1.cha,CAR,no probably not.,,,53
+15452,Gelman/2014-IndDiff/55C-P1.cha,CAR,but Firstname had a hat that had a flashing light on it.,,,53
+15453,Gelman/2014-IndDiff/55C-P1.cha,CHI,like that witch did?,1.0,,53
+15454,Gelman/2014-IndDiff/55C-P1.cha,CAR,well I don't know if that flashes or that's just a shiny thing on there.,,,53
+15455,Gelman/2014-IndDiff/55C-P1.cha,CAR,maybe we can ask Firstname sometime to see her flashing hat.,,,53
+15456,Gelman/2014-IndDiff/55C-P1.cha,CHI,yeah.,,,53
+15457,Gelman/2014-IndDiff/55C-P1.cha,CAR,mm.,,,53
+15458,Gelman/2014-IndDiff/55C-P1.cha,CHI,what's that?,1.0,,53
+15459,Gelman/2014-IndDiff/55C-P1.cha,CAR,popcorn.,,,53
+15460,Gelman/2014-IndDiff/55C-P1.cha,CHI,yum.,,,53
+15461,Gelman/2014-IndDiff/55C-P1.cha,CAR,you know you got some popcorn when you went trick or treating.,,,53
+15462,Gelman/2014-IndDiff/55C-P1.cha,CAR,little bags of popcorn that we can put in the microwave and cook.,,,53
+15463,Gelman/2014-IndDiff/55C-P1.cha,CHI,oh yeah.,1.0,,53
+15464,Gelman/2014-IndDiff/55C-P1.cha,CAR,would you like to make some?,,,53
+15465,Gelman/2014-IndDiff/55C-P1.cha,CHI,yes please.,1.0,,53
+15466,Gelman/2014-IndDiff/55C-P1.cha,CAR,okay.,,,53
+15467,Gelman/2014-IndDiff/55C-P1.cha,CAR,what's that?,,,53
+15468,Gelman/2014-IndDiff/55C-P1.cha,CHI,elephant.,,,53
+15469,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15470,Gelman/2014-IndDiff/55C-P1.cha,CHI,firstname like's elephants too.,0.0,,53
+15471,Gelman/2014-IndDiff/55C-P1.cha,CAR,he does?,,,53
+15472,Gelman/2014-IndDiff/55C-P1.cha,CAR,did you talk with Firstname about elephants?,,,53
+15473,Gelman/2014-IndDiff/55C-P1.cha,CHI,no not really.,1.0,,53
+15474,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh.,,,53
+15475,Gelman/2014-IndDiff/55C-P1.cha,CAR,how do you know he likes them?,,,53
+15476,Gelman/2014-IndDiff/55C-P1.cha,CHI,he just said because he brought el a elephant for show and tell.,-1.0,"object, determiner",53
+15477,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh okay.,,,53
+15478,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you want to look at any of them again or are you all done?,,,53
+15479,Gelman/2014-IndDiff/55C-P1.cha,CHI,and see these are the flaps that open them up.,1.0,,53
+15480,Gelman/2014-IndDiff/55C-P1.cha,CAR,oh that's right.,,,53
+15481,Gelman/2014-IndDiff/55C-P1.cha,CAR,did you want to try opening them one time?,,,53
+15482,Gelman/2014-IndDiff/55C-P1.cha,CHI,yep.,,,53
+15483,Gelman/2014-IndDiff/55C-P1.cha,CAR,you have to use both hands and pull out on them.,,,53
+15484,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15485,Gelman/2014-IndDiff/55C-P1.cha,CAR,and then you use your fingers to push the rings back together.,,,53
+15486,Gelman/2014-IndDiff/55C-P1.cha,CAR,use this hand on this ring and this hand on this ring.,,,53
+15487,Gelman/2014-IndDiff/55C-P1.cha,CAR,make sure not to get your fingers caught in there otherwise they'll snap them and pinch your skin.,,,53
+15488,Gelman/2014-IndDiff/55C-P1.cha,CAR,good.,,,53
+15489,Gelman/2014-IndDiff/55C-P1.cha,CAR,you figured it out.,,,53
+15490,Gelman/2014-IndDiff/55C-P1.cha,CAR,this is called a three ring binder.,,,53
+15491,Gelman/2014-IndDiff/55C-P1.cha,CHI,wow.,,,53
+15492,Gelman/2014-IndDiff/55C-P1.cha,CHI,neat.,,,53
+15493,Gelman/2014-IndDiff/55C-P1.cha,CAR,yeah.,,,53
+15494,Gelman/2014-IndDiff/55C-P1.cha,CAR,okay they said when we're done we're supposed to go knock on the window.,,,53
+15495,Gelman/2014-IndDiff/55C-P1.cha,CAR,do you want to do that?,,,53
+15496,Gelman/2014-IndDiff/55C-P1.cha,CHI,so that they'll know we're done with the book?,1.0,,53
+15497,Gelman/2014-IndDiff/55C-P1.cha,CAR,yep.,,,53
+15498,Gelman/2014-IndDiff/55C-P1.cha,CHI,okay.,,,53
+15499,Gelman/2014-IndDiff/55C-P1.cha,CAR,"there's the window right there, the mirror.",,,53
+15500,Thomas/020702.cha,CHI,"what's that, Mummy?",1.0,,31
+15501,Thomas/020702.cha,CAR,what's that?,,,31
+15502,Thomas/020702.cha,CAR,well these are some coat hangers.,,,31
+15503,Thomas/020702.cha,CHI,mhm.,,,31
+15504,Thomas/020702.cha,CAR,because I think now it's time to put away all our Summer things and we'll just have the winter things out don't you?,,,31
+15505,Thomas/020702.cha,CAR,because it's not sunny anymore is it?,,,31
+15506,Thomas/020702.cha,CHI,no.,,,31
+15507,Thomas/020702.cha,CAR,so we've got this.,,,31
+15508,Thomas/020702.cha,CAR,"oh you've got hiccups, sweetheart.",,,31
+15509,Thomas/020702.cha,CAR,are you going to be alright?,,,31
+15510,Thomas/020702.cha,CHI,no.,,,31
+15511,Thomas/020702.cha,CAR,has Thomas worn his coat today?,,,31
+15512,Thomas/020702.cha,CHI,hm.,,,31
+15513,Thomas/020702.cha,CAR,where did he wear it?,,,31
+15514,Thomas/020702.cha,CAR,to music group.,,,31
+15515,Thomas/020702.cha,CHI,hanging up.,-1.0,"subject, auxiliary",31
+15516,Thomas/020702.cha,CAR,are you going to help me put them on hangers?,,,31
+15517,Thomas/020702.cha,CHI,coat hangers.,1.0,,31
+15518,Thomas/020702.cha,CAR,coat hangers.,,,31
+15519,Thomas/020702.cha,CAR,that's right.,,,31
+15520,Thomas/020702.cha,CAR,do you wanna do your zip up?,,,31
+15521,Thomas/020702.cha,CHI,coat hangers.,-1.0,determiner,31
+15522,Thomas/020702.cha,CAR,that's right.,,,31
+15523,Thomas/020702.cha,CAR,well done well done.,,,31
+15524,Thomas/020702.cha,CHI,coat hanger.,-1.0,determiner,31
+15525,Thomas/020702.cha,CAR,coat hanger.,,,31
+15526,Thomas/020702.cha,CAR,that's a very thick coat isn't it?,,,31
+15527,Thomas/020702.cha,CAR,it has got a very nice fleecy lining.,,,31
+15528,Thomas/020702.cha,CAR,and this one's even thicker.,,,31
+15529,Thomas/020702.cha,CAR,look.,,,31
+15530,Thomas/020702.cha,CAR,and this has got a sheepskin lining hasn't it?,,,31
+15531,Thomas/020702.cha,CAR,a wool lining.,,,31
+15532,Thomas/020702.cha,CAR,ah look at that.,,,31
+15533,Thomas/020702.cha,CHI,and that one on.,-1.0,verb,31
+15534,Thomas/020702.cha,CAR,that one on.,,,31
+15535,Thomas/020702.cha,CAR,right.,,,31
+15536,Thomas/020702.cha,CAR,we're going to put that on that hanger are we?,,,31
+15537,Thomas/020702.cha,CAR,this one has a zip and buttons.,,,31
+15538,Thomas/020702.cha,CAR,look.,,,31
+15539,Thomas/020702.cha,CAR,so let's do the zip together.,,,31
+15540,Thomas/020702.cha,CAR,that's right.,,,31
+15541,Thomas/020702.cha,CAR,I think it's a bit more tricky this one isn't it?,,,31
+15542,Thomas/020702.cha,CHI,yes.,,,31
+15543,Thomas/020702.cha,CAR,shall I start it off?,,,31
+15544,Thomas/020702.cha,CHI,hm.,,,31
+15545,Thomas/020702.cha,CAR,right then.,,,31
+15546,Thomas/020702.cha,CAR,you pull.,,,31
+15547,Thomas/020702.cha,CAR,"we need to sew a button on this coat as well, Thomas.",,,31
+15548,Thomas/020702.cha,CAR,one of the buttons has fallen off.,,,31
+15549,Thomas/020702.cha,CAR,there you are.,,,31
+15550,Thomas/020702.cha,CAR,you zip it up the rest of the way.,,,31
+15551,Thomas/020702.cha,CAR,it's there.,,,31
+15552,Thomas/020702.cha,CAR,one two three.,,,31
+15553,Thomas/020702.cha,CAR,up it goes.,,,31
+15554,Thomas/020702.cha,CAR,well done.,,,31
+15555,Thomas/020702.cha,CAR,right.,,,31
+15556,Thomas/020702.cha,CHI,coat hangers.,0.0,,31
+15557,Thomas/020702.cha,CAR,because these can go and hang on the coat stand can't they?,,,31
+15558,Thomas/020702.cha,CAR,now look at this.,,,31
+15559,Thomas/020702.cha,CAR,this is much thinner.,,,31
+15560,Thomas/020702.cha,CHI,put that one on.,0.0,,31
+15561,Thomas/020702.cha,CAR,this is more like a tracksuit top isn't it?,,,31
+15562,Thomas/020702.cha,CAR,you could wear this inside as well as outside but it has got a hood.,,,31
+15563,Thomas/020702.cha,CHI,put that one on.,0.0,,31
+15564,Thomas/020702.cha,CAR,shall we put it on that hanger?,,,31
+15565,Thomas/020702.cha,CHI,yes.,,,31
+15566,Thomas/020702.cha,CAR,there we are.,,,31
+15567,Thomas/020702.cha,CAR,this has a zip as well.,,,31
+15568,Thomas/020702.cha,CHI,a.,,,31
+15569,Thomas/020702.cha,CAR,I'll start it and then you pull it up.,,,31
+15570,Thomas/020702.cha,CAR,one two three.,,,31
+15571,Thomas/020702.cha,CAR,ooh!,,,31
+15572,Thomas/020702.cha,CAR,gosh that went up easily didn't it?,,,31
+15573,Thomas/020702.cha,CAR,there.,,,31
+15574,Thomas/020702.cha,CAR,that's nice.,,,31
+15575,Thomas/020702.cha,CAR,and have you seen they've all got pockets on the front?,,,31
+15576,Thomas/020702.cha,CAR,and this one isn't a coat.,,,31
+15577,Thomas/020702.cha,CAR,what's this?,,,31
+15578,Thomas/020702.cha,CHI,what's this?,1.0,,31
+15579,Thomas/020702.cha,CAR,what is it?,,,31
+15580,Thomas/020702.cha,CHI,what this?,-1.0,verb,31
+15581,Thomas/020702.cha,CHI,baby coat.,-1.0,determiner,31
+15582,Thomas/020702.cha,CAR,a waistcoat.,,,31
+15583,Thomas/020702.cha,CHI,waistcoat.,,,31
+15584,Thomas/020702.cha,CAR,a waistcoat.,,,31
+15585,Thomas/020702.cha,CAR,you've got a very very smart waistcoat that you wore to Linda's wedding and you've got a new waistcoat that you can wear to Christmas Partys with Thomas The Tank Engine on.,,,31
+15586,Thomas/020702.cha,CAR,but this is a very thick waistcoat isn't it?,,,31
+15587,Thomas/020702.cha,CAR,and have you seen it has got checks on one side and it's plain on the other.,,,31
+15588,Thomas/020702.cha,CAR,so you've got you've got two waistcoats there.,,,31
+15589,Thomas/020702.cha,CHI,two waistcoats.,1.0,,31
+15590,Thomas/020702.cha,CAR,and this.,,,31
+15591,Thomas/020702.cha,CAR,this is.,,,31
+15592,Thomas/020702.cha,CAR,look.,,,31
+15593,Thomas/020702.cha,CHI,one.,,,31
+15594,Thomas/020702.cha,CAR,and when do you wear this waistcoat?,,,31
+15595,Thomas/020702.cha,CAR,are you going to do that up?,,,31
+15596,Thomas/020702.cha,CAR,this is a lovely one isn't it?,,,31
+15597,Thomas/020702.cha,CAR,it's a nice waistcoat.,,,31
+15598,Thomas/020702.cha,CHI,Mummy do it?,-1.0,auxiliary,31
+15599,Thomas/020702.cha,CAR,one two three.,,,31
+15600,Thomas/020702.cha,CAR,oh no.,,,31
+15601,Thomas/020702.cha,CAR,we haven't got.,,,31
+15602,Thomas/020702.cha,CAR,see these little things on the zip.,,,31
+15603,Thomas/020702.cha,CAR,they're called teeth.,,,31
+15604,Thomas/020702.cha,CHI,teeth.,,,31
+15605,Thomas/020702.cha,CAR,and the teeth have to be all lined up properly otherwise it doesn't work.,,,31
+15606,Thomas/020702.cha,CAR,so let's start again.,,,31
+15607,Thomas/020702.cha,CHI,start again.,1.0,,31
+15608,Thomas/020702.cha,CAR,let's push that down to the teeth and then come on try to pull the zip.,,,31
+15609,Thomas/020702.cha,CHI,pull zip.,-1.0,determiner,31
+15610,Thomas/020702.cha,CAR,what happened to you the other day when we were putting your coat on?,,,31
+15611,Thomas/020702.cha,CHI,it hurt me.,1.0,,31
+15612,Thomas/020702.cha,CAR,it hurt you did it?,,,31
+15613,Thomas/020702.cha,CAR,hang on.,,,31
+15614,Thomas/020702.cha,CAR,you can pull it up now.,,,31
+15615,Thomas/020702.cha,CAR,where did it hurt you?,,,31
+15616,Thomas/020702.cha,CAR,there.,,,31
+15617,Thomas/020702.cha,CHI,hm.,,,31
+15618,Thomas/020702.cha,CAR,what's that called?,,,31
+15619,Thomas/020702.cha,CHI,mouth.,,,31
+15620,Thomas/020702.cha,CAR,your mouth.,,,31
+15621,Thomas/020702.cha,CHI,yes.,,,31
+15622,Thomas/020702.cha,CAR,no no.,,,31
+15623,Thomas/020702.cha,CAR,it's lower than your mouth.,,,31
+15624,Thomas/020702.cha,CAR,what's it called?,,,31
+15625,Thomas/020702.cha,CHI,not do it.,-1.0,auxiliary,31
+15626,Thomas/020702.cha,CAR,it was your chin wasn't it?,,,31
+15627,Thomas/020702.cha,CHI,not do it.,-1.0,auxiliary,31
+15628,Thomas/020702.cha,CAR,it hurt didn't it?,,,31
+15629,Thomas/020702.cha,CAR,there we are.,,,31
+15630,Thomas/020702.cha,CAR,so all those coats can go on the coat stand.,,,31
+15631,Thomas/020702.cha,CAR,and what's this one?,,,31
+15632,Thomas/020702.cha,CHI,this.,,,31
+15633,Thomas/020702.cha,CAR,"what's this, Thomas?",,,31
+15634,Thomas/020702.cha,CHI,a.,,,31
+15635,Thomas/020702.cha,CHI,oh no oh no.,1.0,,31
+15636,Thomas/020702.cha,CHI,no.,,,31
+15637,Thomas/020702.cha,CAR,this looks like a bag a plastic bag doesn't it?,,,31
+15638,Thomas/020702.cha,CAR,a bright yellow plastic bag.,,,31
+15639,Thomas/020702.cha,CHI,no.,,,31
+15640,Thomas/020702.cha,CAR,do you know what's inside the bag?,,,31
+15641,Thomas/020702.cha,CAR,shall we open the bag?,,,31
+15642,Thomas/020702.cha,CAR,right.,,,31
+15643,Thomas/020702.cha,CAR,what's in the bag?,,,31
+15644,Thomas/020702.cha,CHI,what's this?,1.0,,31
+15645,Thomas/020702.cha,CHI,what's in the bag?,1.0,,31
+15646,Thomas/020702.cha,CAR,what's in the bag?,,,31
+15647,Thomas/020702.cha,CAR,it's a coat.,,,31
+15648,Thomas/020702.cha,CHI,uh.,,,31
+15649,Thomas/020702.cha,CAR,look at that.,,,31
+15650,Thomas/020702.cha,CAR,magic.,,,31
+15651,Thomas/020702.cha,CAR,and guess what?,,,31
+15652,Thomas/020702.cha,CAR,that has got a zip as well.,,,31
+15653,Thomas/020702.cha,CAR,it's a blue yellow and white coat.,,,31
+15654,Thomas/020702.cha,CHI,it.,,,31
+15655,Thomas/020702.cha,CAR,yes.,,,31
+15656,Thomas/020702.cha,CHI,it.,,,31
+15657,Thomas/020702.cha,CHI,mend it.,0.0,,31
+15658,Thomas/020702.cha,CAR,mend it.,,,31
+15659,Thomas/020702.cha,CAR,oh you're looking at Mummy's broken straw hat aren't you?,,,31
+15660,Thomas/020702.cha,CAR,"so this coat, Thomas, is completely waterproof.",,,31
+15661,Thomas/020702.cha,CAR,you can go out in the rain in this.,,,31
+15662,Thomas/020702.cha,CAR,and you stay dry.,,,31
+15663,Thomas/020702.cha,CAR,and it has got a hood.,,,31
+15664,Thomas/020702.cha,CAR,and it folds up into it's own pocket doesn't it?,,,31
+15665,Thomas/020702.cha,CHI,yes.,,,31
+15666,Thomas/020702.cha,CAR,you could have done with that today because it was awful when we went to Didsbury this morning wasn't it?,,,31
+15667,Thomas/020702.cha,CAR,shall we fold it up again?,,,31
+15668,Thomas/020702.cha,CAR,shall see this coat.,,,31
+15669,Thomas/020702.cha,CHI,not do it.,-1.0,auxiliary,31
+15670,Thomas/020702.cha,CHI,Mummy do it.,0.0,,31
+15671,Thomas/020702.cha,CAR,shall do you wanna see it disappear?,,,31
+15672,Thomas/020702.cha,CHI,no.,,,31
+15673,Thomas/020702.cha,CAR,oh.,,,31
+15674,Thomas/020702.cha,CHI,Mummy do it.,0.0,,31
+15675,Thomas/020702.cha,CAR,off it goes.,,,31
+15676,Thomas/020702.cha,CAR,off it goes into the bag.,,,31
+15677,Thomas/020702.cha,CAR,there it is.,,,31
+15678,Thomas/020702.cha,CAR,it has gone.,,,31
+15679,Thomas/020702.cha,CAR,it's a bag again.,,,31
+15680,Thomas/020702.cha,CAR,it's a bag.,,,31
+15681,Thomas/020702.cha,CAR,where's the coat?,,,31
+15682,Thomas/020702.cha,CHI,no coat.,-1.0,"subject, verb",31
+15683,Thomas/020702.cha,CAR,where has the coat gone?,,,31
+15684,Thomas/020702.cha,CHI,I see it.,1.0,,31
+15685,Thomas/020702.cha,CAR,you can see it.,,,31
+15686,Thomas/020702.cha,CHI,yes.,,,31
+15687,Thomas/020702.cha,CAR,where can you see it?,,,31
+15688,Thomas/020702.cha,CHI,in here.,1.0,,31
+15689,Thomas/020702.cha,CAR,in there.,,,31
+15690,Thomas/020702.cha,CAR,"don't be silly, Thomas.",,,31
+15691,Thomas/020702.cha,CAR,don't do that.,,,31
+15692,Thomas/020702.cha,CAR,you'll break it.,,,31
+15693,Thomas/020702.cha,CHI,no.,,,31
+15694,Thomas/020702.cha,CAR,here you are.,,,31
+15695,Thomas/020702.cha,CAR,I'll show you something.,,,31
+15696,Thomas/020702.cha,CAR,"uh Thomas, don't put those on the floor.",,,31
+15697,Thomas/020702.cha,CAR,look.,,,31
+15698,Thomas/020702.cha,CAR,Teddy wants to go out and it's summer.,,,31
+15699,Thomas/020702.cha,CAR,pretend it's summer.,,,31
+15700,Thomas/020702.cha,CAR,what should Teddy wear?,,,31
+15701,Thomas/020702.cha,CAR,what did you wear in the Summer?,,,31
+15702,Thomas/020702.cha,CHI,oh too big.,-1.0,"subject, verb",31
+15703,Thomas/020702.cha,CAR,Teddy's feet are too big for those but these are your.,,,31
+15704,Thomas/020702.cha,CHI,slippers.,,,31
+15705,Thomas/020702.cha,CAR,they're not slippers.,,,31
+15706,Thomas/020702.cha,CAR,what are they called?,,,31
+15707,Thomas/020702.cha,CHI,what's this?,1.0,,31
+15708,Thomas/020702.cha,CAR,it's a sandal.,,,31
+15709,Thomas/020702.cha,CHI,sandal.,,,31
+15710,Thomas/020702.cha,CAR,do you remember wearing sandals when it was hot?,,,31
+15711,Thomas/020702.cha,CHI,hurt hurt me.,-1.0,subject,31
+15712,Thomas/020702.cha,CHI,put it down now.,1.0,,31
+15713,Thomas/020702.cha,CAR,hurt me.,,,31
+15714,Thomas/020702.cha,CAR,did it hurt you?,,,31
+15715,Thomas/020702.cha,CAR,right.,,,31
+15716,Thomas/020702.cha,CAR,"I think I think the thing was, Thomas, these sandals were too big last summer and they were a little bit too small this summer.",,,31
+15717,Thomas/020702.cha,CAR,they've never really felt right on you have they?,,,31
+15718,Thomas/020702.cha,CAR,but do you remember wearing sandals in the summer?,,,31
+15719,Thomas/020702.cha,CAR,and what were your little blue sandals called?,,,31
+15720,Thomas/020702.cha,CHI,blue.,,,31
+15721,Thomas/020702.cha,CAR,do you remember Jellies?,,,31
+15722,Thomas/020702.cha,CHI,Jellies.,,,31
+15723,Thomas/020702.cha,CAR,you wore Jellies a lot when we were in Spain didn't you?,,,31
+15724,Thomas/020702.cha,CAR,and what what rhymes with Jellies?,,,31
+15725,Thomas/020702.cha,CHI,wore Jellies.,-1.0,subject,31
+15726,Thomas/020702.cha,CHI,Wellingtons.,,,31
+15727,Thomas/020702.cha,CAR,Wellingtons.,,,31
+15728,Thomas/020702.cha,CAR,I've never heard you say Wellingtons before.,,,31
+15729,Thomas/020702.cha,CAR,you normally say wellies.,,,31
+15730,Thomas/020702.cha,CAR,so when Mummy said what rhymes with Jellies I was expecting you to say wellies.,,,31
+15731,Thomas/020702.cha,CAR,and you said Wellingtons.,,,31
+15732,Thomas/020702.cha,CAR,who's on the Wellingtons.,,,31
+15733,Thomas/020702.cha,CHI,Po on.,-1.0,verb,31
+15734,Thomas/020702.cha,CAR,Po.,,,31
+15735,Thomas/020702.cha,CHI,Po Lala.,-1.0,verb,31
+15736,Thomas/020702.cha,CAR,is it all the Teletubbies?,,,31
+15737,Thomas/020702.cha,CHI,yes.,,,31
+15738,Thomas/020702.cha,CHI,all the Teletubbies.,1.0,,31
+15739,Thomas/020702.cha,CHI,big tummy and big nips.,-1.0,determiner,31
+15740,Thomas/020702.cha,CAR,all.,,,31
+15741,Thomas/020702.cha,CHI,big tummy.,-1.0,determiner,31
+15742,Thomas/020702.cha,CAR,don't bang into that.,,,31
+15743,Thomas/020702.cha,CHI,bang.,,,31
+15744,Thomas/020702.cha,CAR,oh Teddy wants to go out in the sun.,,,31
+15745,Thomas/020702.cha,CAR,we're still trying to dress him.,,,31
+15746,Thomas/020702.cha,CHI,dress him.,1.0,,31
+15747,Thomas/020702.cha,CAR,shall we put a nice sunhat on?,,,31
+15748,Thomas/020702.cha,CHI,on here.,1.0,,31
+15749,Thomas/020702.cha,CAR,there.,,,31
+15750,Thomas/020702.cha,CHI,Mummy do it.,0.0,,31
+15751,Thomas/020702.cha,CAR,what are you doing?,,,31
+15752,Thomas/020702.cha,CHI,not that.,0.0,,31
+15753,Thomas/020702.cha,CHI,change.,,,31
+15754,Thomas/020702.cha,CHI,ah.,,,31
+15755,Thomas/020702.cha,CAR,this useta be your sunhat.,,,31
+15756,Thomas/020702.cha,CAR,oh can you see that?,,,31
+15757,Thomas/020702.cha,CAR,Teddy looks nice doesn't he?,,,31
+15758,Thomas/020702.cha,CAR,shall Mummy put a sunhat on?,,,31
+15759,Thomas/020702.cha,CHI,um yes.,1.0,,31
+15760,Thomas/020702.cha,CAR,would would you like to wear Daddy's sunhat?,,,31
+15761,Thomas/020702.cha,CHI,hm.,,,31
+15762,Thomas/020702.cha,CAR,there you are.,,,31
+15763,Thomas/020702.cha,CHI,hey.,,,31
+15764,Thomas/020702.cha,CAR,we've got some photographs of you wearing that hat.,,,31
+15765,Thomas/020702.cha,CHI,hey.,,,31
+15766,Thomas/020702.cha,CAR,it's really big isn't it?,,,31
+15767,Thomas/020702.cha,CAR,much too big for Thomas.,,,31
+15768,Thomas/020702.cha,CHI,uhoh.,,,31
+15769,Thomas/020702.cha,CAR,uhoh.,,,31
+15770,Thomas/020702.cha,CHI,run away.,0.0,,31
+15771,Thomas/020702.cha,CAR,have you.,,,31
+15772,Thomas/020702.cha,CHI,run away.,0.0,,31
+15773,Thomas/020702.cha,CAR,oh you haven't run away.,,,31
+15774,Thomas/020702.cha,CAR,it's just the hat has gone over your face.,,,31
+15775,Thomas/020702.cha,CHI,hm.,,,31
+15776,Thomas/020702.cha,CHI,hello.,,,31
+15777,Thomas/020702.cha,CAR,no.,,,31
+15778,Thomas/020702.cha,CAR,"be careful with that hat, Thomas.",,,31
+15779,Thomas/020702.cha,CAR,don't break that one.,,,31
+15780,Thomas/020702.cha,CAR,Mummy's is broken already but Daddy's is not so.,,,31
+15781,Thomas/020702.cha,CAR,it's a nice hat isn't it?,,,31
+15782,Thomas/020702.cha,CHI,yes.,,,31
+15783,Thomas/020702.cha,CHI,it.,,,31
+15784,Thomas/020702.cha,CHI,it.,,,31
+15785,Thomas/020702.cha,CAR,do you wanna wear my hat?,,,31
+15786,Thomas/020702.cha,CHI,yes.,,,31
+15787,Thomas/020702.cha,CAR,oh that's lovely.,,,31
+15788,Thomas/020702.cha,CAR,we've got pictures of you wearing that hat as well.,,,31
+15789,Thomas/020702.cha,CAR,what else does Teddy need to do in the sun?,,,31
+15790,Thomas/020702.cha,CAR,he needs to put on sun cream.,,,31
+15791,Thomas/020702.cha,CAR,do you remember you had to put on lots of sun cream?,,,31
+15792,Thomas/020702.cha,CHI,yes.,,,31
+15793,Thomas/020702.cha,CAR,and.,,,31
+15794,Thomas/020702.cha,CHI,sunglasses.,,,31
+15795,Thomas/020702.cha,CAR,sunglasses.,,,31
+15796,Thomas/020702.cha,CAR,that's right.,,,31
+15797,Thomas/020702.cha,CAR,let's put the sunglasses on Teddy.,,,31
+15798,Thomas/020702.cha,CAR,ah now he looks cool doesn't he?,,,31
+15799,Thomas/020702.cha,CHI,hm.,,,31
+15800,Thomas/020702.cha,CAR,hm.,,,31
+15801,Thomas/020702.cha,CHI,big tummy and big nips.,-1.0,determiner,31
+15802,Thomas/020702.cha,CAR,big tummy and big nips.,,,31
+15803,Thomas/020702.cha,CHI,yes.,,,31
+15804,Thomas/020702.cha,CAR,well I would have said big sunhat big glasses if I was looking at him.,,,31
+15805,Thomas/020702.cha,CAR,because that's the things that stick out.,,,31
+15806,Thomas/020702.cha,CAR,so there we are.,,,31
+15807,Thomas/020702.cha,CAR,Teddy's dressed for the sun.,,,31
+15808,Thomas/020702.cha,CAR,but really it's not summer anymore is it?,,,31
+15809,Thomas/020702.cha,CAR,so what should Teddy be wearing?,,,31
+15810,Thomas/020702.cha,CHI,uhoh.,,,31
+15811,Thomas/020702.cha,CHI,Mummy's broken hat.,1.0,,31
+15812,Thomas/020702.cha,CAR,oh dear.,,,31
+15813,Thomas/020702.cha,CAR,Mummy's hat.,,,31
+15814,Thomas/020702.cha,CAR,yes.,,,31
+15815,Thomas/020702.cha,CAR,it's a straw hat and it's broken.,,,31
+15816,Thomas/020702.cha,CAR,some of the pieces of straw.,,,31
+15817,Thomas/020702.cha,CHI,Mummy doing it.,-1.0,present_progressive,31
+15818,Thomas/020702.cha,CHI,Mummy do it.,0.0,,31
+15819,Thomas/020702.cha,CAR,yes.,,,31
+15820,Thomas/020702.cha,CAR,I'll mend it.,,,31
+15821,Thomas/020702.cha,CAR,so what should Teddy be wearing now?,,,31
+15821,Thomas/020702.cha,CHI,a.,,,31
+15822,Thomas/020702.cha,CAR,in winter.,,,31
+15823,Thomas/020702.cha,CAR,shall we put some Wellington boots on teddy?,,,31
+15824,Thomas/020702.cha,CHI,no.,,,31
+15825,Thomas/020702.cha,CHI,everywhere.,,,31
+15826,Thomas/020702.cha,CHI,everywhere.,,,31
+15827,Thomas/020702.cha,CAR,pardon.,,,31
+15828,Thomas/020702.cha,CHI,everywhere.,,,31
+15829,Thomas/020702.cha,CHI,Wellingtons everywhere.,0.0,,31
+15830,Thomas/020702.cha,CHI,oh.,,,31
+15831,Thomas/020702.cha,CAR,Wellingtons everywhere.,,,31
+15832,Thomas/020702.cha,CAR,no.,,,31
+15833,Thomas/020702.cha,CAR,there's only one pair of Wellingtons and teddy's wearing them.,,,31
+15834,Thomas/020702.cha,CAR,look at him now.,,,31
+15835,Thomas/020702.cha,CAR,look at that.,,,31
+15836,Thomas/020702.cha,CAR,and what else does he need?,,,31
+15837,Thomas/020702.cha,CHI,uhoh.,,,31
+15838,Thomas/020702.cha,CHI,the sunglasses.,1.0,,31
+15839,Thomas/020702.cha,CAR,no.,,,31
+15840,Thomas/020702.cha,CAR,he doesn't need sunglasses unless in winter unless the the snow the sun's very bright.,,,31
+15841,Thomas/020702.cha,CAR,look.,,,31
+15842,Thomas/020702.cha,CAR,what are these?,,,31
+15843,Thomas/020702.cha,CHI,gloves.,,,31
+15844,Thomas/020702.cha,CAR,gloves.,,,31
+15845,Thomas/020702.cha,CAR,that's wear right.,,,31
+15846,Thomas/020702.cha,CAR,he's wearing mittens on a string.,,,31
+15847,Thomas/020702.cha,CAR,and do you think he needs a nice warm coat?,,,31
+15848,Thomas/020702.cha,CHI,oh no no no.,1.0,,31
+15849,Thomas/020702.cha,CAR,I think he does.,,,31
+15850,Thomas/020702.cha,CHI,no no.,1.0,,31
+15851,Thomas/020702.cha,CHI,uhoh.,,,31
+15852,Thomas/020702.cha,CHI,no.,,,31
+15853,Thomas/020702.cha,CHI,doing a fish swim.,-1.0,"subject, auxiliary",31
+15854,Thomas/020702.cha,CAR,"why are you putting a fish on his head, Thomas?",,,31
+15855,Thomas/020702.cha,CHI,fish head Wellingtons.,-1.0,"determiner, preposition",31
+15856,Thomas/020702.cha,CAR,oh I see.,,,31
+15857,Thomas/020702.cha,CAR,you think because he has got his Wellingtons on he's going fishing.,,,31
+15858,Thomas/020702.cha,CAR,is that right?,,,31
+15859,Thomas/020702.cha,CAR,do you think Teddy's going fishing?,,,31
+15860,Thomas/020702.cha,CHI,oh yes.,1.0,,31
+15861,Thomas/020702.cha,CHI,bite a fish.,0.0,,31
+15862,Thomas/020702.cha,CHI,bite a fish.,0.0,,31
+15863,Thomas/020702.cha,CHI,one two three four five.,0.0,,31
+15864,Thomas/020702.cha,CAR,bite a fish.,,,31
+15865,Thomas/020702.cha,CAR,one two three four five.,,,31
+15866,Thomas/020702.cha,CHI,one two three four five.,0.0,,31
+15867,Thomas/020702.cha,CHI,yes.,,,31
+15868,Thomas/020702.cha,CAR,you're thinking of the nursery rhyme.,,,31
+15869,Thomas/020702.cha,CAR,one two three four five.,,,31
+15870,Thomas/020702.cha,CAR,once I caught a fish alive.,,,31
+15871,Thomas/020702.cha,CAR,aren't you?,,,31
+15872,Thomas/020702.cha,CHI,one two three four five.,0.0,,31
+15873,Thomas/020702.cha,CHI,caught a fish alive.,0.0,,31
+15874,Thomas/020702.cha,CHI,seven eight nine ten.,0.0,,31
+15875,Thomas/020702.cha,CHI,go again.,0.0,,31
+15876,Thomas/020702.cha,CAR,and I let him go again.,,,31
+15877,Thomas/020702.cha,CAR,why did you let him go?,,,31
+15878,Thomas/020702.cha,CHI,bite the fingers.,-1.0,"subject, tense_aspect",31
+15879,Thomas/020702.cha,CHI,so bite.,-1.0,other,31
+15880,Thomas/020702.cha,CAR,he bit your little fingers so.,,,31
+15881,Thomas/020702.cha,CAR,which finger did he bite?,,,31
+15882,Thomas/020702.cha,CHI,this one.,1.0,,31
+15883,Thomas/020702.cha,CAR,this one.,,,31
+15884,Thomas/020702.cha,CAR,which one's that?,,,31
+15885,Thomas/020702.cha,CAR,is that the little one on the right?,,,31
+15886,Thomas/020702.cha,CHI,hm.,,,31
+15887,Thomas/020702.cha,CAR,ah gosh.,,,31
+15888,Thomas/020702.cha,CAR,goodness me.,,,31
+15889,Thomas/020702.cha,CAR,so Teddy's all set now isn't he?,,,31
+15890,Thomas/020702.cha,CAR,he has got his Wellingtons.,,,31
+15891,Thomas/020702.cha,CAR,he's wearing a hat.,,,31
+15892,Thomas/020702.cha,CAR,he has got a nice warm coat on and some gloves.,,,31
+15893,Thomas/020702.cha,CAR,and I think he might need a scarf mightn't he?,,,31
+15894,Thomas/020702.cha,CAR,you've got a nice bright green scarf.,,,31
+15895,Thomas/020702.cha,CHI,yes.,,,31
+15896,Thomas/020702.cha,CAR,but your green scarf's upstairs so we won't go and get it now.,,,31
+15897,Thomas/020702.cha,CAR,oh look.,,,31
+15898,Thomas/020702.cha,CAR,he has got a ribbon on.,,,31
+15899,Thomas/020702.cha,CAR,look.,,,31
+15900,Thomas/020702.cha,CAR,he has got a green velvet ribbon.,,,31
+15901,Thomas/020702.cha,CAR,we can pretend that's his scarf can't we?,,,31
+15902,Thomas/020702.cha,CAR,"now what else might Teddy be doing tonight, Thomas?",,,31
+15903,Thomas/020702.cha,CHI,have a sleep.,-1.0,"subject, tense_aspect, other",31
+15904,Thomas/020702.cha,CAR,well yes.,,,31
+15905,Thomas/020702.cha,CAR,he'll be having a sleep.,,,31
+15906,Thomas/020702.cha,CAR,he'll be sleeping with you later.,,,31
+15907,Thomas/020702.cha,CHI,huh.,,,31
+15908,Thomas/020702.cha,CAR,oh doesn't he look gorgeous.,,,31
+15909,Thomas/020702.cha,CAR,what else might he be doing tonight?,,,31
+15910,Thomas/020702.cha,CHI,uh.,,,31
+15911,Thomas/020702.cha,CAR,do you know what day it is?,,,31
+15912,Thomas/020702.cha,CAR,do you know what day it is?,,,31
+15913,Thomas/020702.cha,CHI,um bangadrumtime day.,0.0,,31
+15914,Thomas/020702.cha,CAR,it's bangadrumtime day.,,,31
+15915,Thomas/020702.cha,CAR,and bangadrumtime day is Friday.,,,31
+15916,Thomas/020702.cha,CAR,and this year Friday falls on the fifth of November and it's Bonfire Night.,,,31
+15917,Thomas/020702.cha,CAR,and when you were a baby.,,,31
+15918,Thomas/020702.cha,CHI,fish in.,-1.0,"determiner, verb, other",31
+15919,Thomas/020702.cha,CHI,fish.,,,31
+15920,Thomas/020702.cha,CHI,fish in.,-1.0,"determiner, verb, other",31
+15921,Thomas/020702.cha,CAR,no.,,,31
+15922,Thomas/020702.cha,CAR,don't put it.,,,31
+15923,Thomas/020702.cha,CAR,no no no.,,,31
+15924,Thomas/020702.cha,CAR,you mustn't put the fishing rod anywhere near Mummy's face.,,,31
+15925,Thomas/020702.cha,CAR,alright.,,,31
+15926,Thomas/020702.cha,CHI,yes.,,,31
+15927,Thomas/020702.cha,CAR,listen.,,,31
+15928,Thomas/020702.cha,CAR,I'm talking to you.,,,31
+15929,Thomas/020702.cha,CAR,when you were a baby and you useta hear fireworks going bang bang you were very frightened.,,,31
+15930,Thomas/020702.cha,CAR,"but last year you didn't mind the bangs but there were a lot of, sort of noises.",,,31
+15931,Thomas/020702.cha,CAR,when we looked out of the window at the back we saw some really pretty lights.,,,31
+15932,Thomas/020702.cha,CAR,fireworks going off in the air.,,,31
+15933,Thomas/020702.cha,CAR,all different colors.,,,31
+15934,Thomas/020702.cha,CAR,and when we looked out of Mummy and Daddy's bedroom window behind the church we saw a beautiful display of fireworks.,,,31
+15935,Thomas/020702.cha,CAR,so tonight after tea shall we go out?,,,31
+15936,Thomas/020702.cha,CAR,just stand outside.,,,31
+15937,Thomas/020702.cha,CHI,yes.,,,31
+15938,Thomas/020702.cha,CAR,and see what we can see.,,,31
+15939,Thomas/020702.cha,CHI,fireworks.,,,31
+15940,Thomas/020702.cha,CAR,fireworks.,,,31
+15941,Thomas/020702.cha,CAR,because you've been listening to them all week haven't you?,,,31
+15942,Thomas/020702.cha,CAR,but it's tonight that they're sposta be let off.,,,31
+15943,Thomas/020702.cha,CHI,caught a fish.,-1.0,subject,31
+15944,Thomas/020702.cha,CAR,no.,,,31
+15945,Thomas/020702.cha,CAR,you haven't caught a fish.,,,31
+15946,Thomas/020702.cha,CHI,uhoh.,,,31
+15947,Thomas/020702.cha,CAR,uhoh.,,,31
+15948,Thomas/020702.cha,CHI,where's the fish now?,1.0,,31
+15949,Thomas/020702.cha,CAR,right.,,,31
+15950,Thomas/020702.cha,CAR,there's the fish.,,,31
+15951,Thomas/020702.cha,CAR,"you know when we're crossing the road, Thomas.",,,31
+15952,Thomas/020702.cha,CHI,yes.,,,31
+15953,Thomas/020702.cha,CAR,we look right.,,,31
+15954,Thomas/020702.cha,CAR,we look left.,,,31
+15955,Thomas/020702.cha,CAR,and we look right again.,,,31
+15956,Thomas/020702.cha,CAR,that's called the green cross code.,,,31
+15957,Thomas/020702.cha,CAR,well tonight it's the firework code.,,,31
+15958,Thomas/020702.cha,CAR,we've got to be really really careful with fireworks.,,,31
+15959,Thomas/020702.cha,CAR,and bonfires because they're hot and they might burn.,,,31
+15960,Thomas/020702.cha,CAR,you've not been to a bonfire have you?,,,31
+15961,Thomas/020702.cha,CAR,no.,,,31
+15962,Thomas/020702.cha,CAR,but on bonfire night people eat things like baked potatoes and hot dogs.,,,31
+15963,Thomas/020702.cha,CAR,and they often have hot soup and then they have things like gingerbread men and sticky toffee apples and Parkin.,,,31
+15964,Thomas/020702.cha,CAR,and because we had a cooked meal at lunchtime guess what Mummy has got for tea tonight?,,,31
+15965,Thomas/020702.cha,CAR,once you've had your main course you can have some Parkin or a gingerbread man.,,,31
+15966,Thomas/020702.cha,CAR,would you like that?,,,31
+15967,Thomas/020702.cha,CHI,oh no.,1.0,,31
+15968,Thomas/020702.cha,CAR,or perhaps sticky treacle toffee as well.,,,31
+15969,Thomas/020702.cha,CHI,"uh um, a teddy bear like a apple.",-1.0,"sv_agreement, determiner",31
+15970,Thomas/020702.cha,CAR,teddy bear would love an apple.,,,31
+15971,Thomas/020702.cha,CAR,oh is this the toffee apple on a stick.,,,31
+15972,Thomas/020702.cha,CHI,here you are.,1.0,,31
+15973,Thomas/020702.cha,CAR,ah that's lovely.,,,31
+15974,Thomas/020702.cha,CAR,is that specially for bonfire night?,,,31
+15975,Thomas/020702.cha,CHI,mm yes.,1.0,,31
+15976,Thomas/020702.cha,CAR,and do you think teddy bear would like a gingerbread man or a piece of Parkin when we have some at teatime?,,,31
+15977,Thomas/020702.cha,CHI,oh no no no no.,1.0,,31
+15978,Thomas/020702.cha,CAR,no.,,,31
+15979,Thomas/020702.cha,CHI,here you are.,1.0,,31
+15980,Thomas/020702.cha,CHI,here you are.,1.0,,31
+15981,Thomas/020702.cha,CHI,"here you are, Mummy.",1.0,,31
+15982,Thomas/020702.cha,CAR,I can hear some fireworks now can you?,,,31
+15983,Thomas/020702.cha,CHI,not heard it.,-1.0,"subject, tense_aspect",31
+15984,Thomas/020702.cha,CAR,not heard it.,,,31
+15985,Thomas/020702.cha,CAR,did you not hear the firework?,,,31
+15986,Thomas/020702.cha,CHI,no.,,,31
+15987,Thomas/020702.cha,CHI,whee catch a light.,0.0,,31
+15988,Thomas/020702.cha,CAR,catch a light.,,,31
+15989,Thomas/020702.cha,CHI,too hairy for me.,-1.0,"subject, verb",31
+15990,Thomas/020702.cha,CAR,too hairy for you.,,,31
+15991,Thomas/020702.cha,CAR,what are you doing?,,,31
+15992,Thomas/020702.cha,CAR,holding up your fishing rod towards the light.,,,31
+15993,Thomas/020702.cha,CHI,not it.,-1.0,"subject, verb",31
+15994,Thomas/020702.cha,CHI,another one there.,0.0,,31
+15995,Thomas/020702.cha,CHI,tummy hurts.,-1.0,determiner,31
+15996,Thomas/020702.cha,CHI,don't like.,-1.0,"subject, object",31
+15997,Thomas/020702.cha,CAR,"what are you doing, Thomas?",,,31
+15998,Thomas/020702.cha,CHI,orange lemon.,-1.0,"determiner, other",31
+15999,Thomas/020702.cha,CAR,an orange and a lemon.,,,31
+16000,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16001,Thomas/020702.cha,CHI,apple.,,,31
+16002,Thomas/020702.cha,CAR,toffee apples.,,,31
+16003,Thomas/020702.cha,CHI,toffee apples.,1.0,,31
+16004,Thomas/020702.cha,CAR,toffee apples.,,,31
+16005,Thomas/020702.cha,CAR,they're apples.,,,31
+16006,Thomas/020702.cha,CAR,and look.,,,31
+16007,Thomas/020702.cha,CAR,here's your toy apple.,,,31
+16008,Thomas/020702.cha,CAR,but if we had a stick like a lollipop stick you put it inside the apple there.,,,31
+16009,Thomas/020702.cha,CAR,and then you coat the apple in hot runny toffee and then you leave them to dry.,,,31
+16010,Thomas/020702.cha,CAR,and when they're dry the toffee has gone hard on the outside of the apple.,,,31
+16011,Thomas/020702.cha,CAR,it's a toffee apple.,,,31
+16012,Thomas/020702.cha,CHI,now.,,,31
+16013,Thomas/020702.cha,CAR,no.,,,31
+16014,Thomas/020702.cha,CAR,"put the fishing rod down, Thomas.",,,31
+16015,Thomas/020702.cha,CAR,you're swinging it round too much.,,,31
+16016,Thomas/020702.cha,CAR,and then what happened on Sunday?,,,31
+16017,Thomas/020702.cha,CAR,it was Halloween wasn't it?,,,31
+16018,Thomas/020702.cha,CHI,Halloween.,,,31
+16019,Thomas/020702.cha,CAR,do you remember what happened on Halloween?,,,31
+16020,Thomas/020702.cha,CHI,Dimitra came.,1.0,,31
+16021,Thomas/020702.cha,CAR,Dimitra came.,,,31
+16022,Thomas/020702.cha,CAR,well Dimitra came the day after Halloween and we had this candle on Halloween but we lit it again when Dimitra came the following day didn't we?,,,31
+16023,Thomas/020702.cha,CAR,what's this?,,,31
+16024,Thomas/020702.cha,CHI,"Mummy, what's this?",1.0,,31
+16025,Thomas/020702.cha,CHI,pumpkin.,,,31
+16026,Thomas/020702.cha,CAR,it's a pumpkin isn't it?,,,31
+16027,Thomas/020702.cha,CAR,it's a pumpkin with a candle inside.,,,31
+16028,Thomas/020702.cha,CHI,uhoh.,,,31
+16029,Thomas/020702.cha,CHI,what happened?,1.0,,31
+16030,Thomas/020702.cha,CAR,oh dear.,,,31
+16031,Thomas/020702.cha,CAR,what happened?,,,31
+16032,Thomas/020702.cha,CAR,well that's a little bit of the wax.,,,31
+16033,Thomas/020702.cha,CAR,it has melted and it has run out of the candle down the front of the pumpkin.,,,31
+16034,Thomas/020702.cha,CAR,that's a pumpkin candle.,,,31
+16035,Thomas/020702.cha,CAR,so shall we light that again tonight?,,,31
+16036,Thomas/020702.cha,CHI,again.,,,31
+16037,Thomas/020702.cha,CAR,and do you remember seeing some children who were dressed as witches?,,,31
+16038,Thomas/020702.cha,CAR,they had big tall black hats on with broomsticks.,,,31
+16039,Thomas/020702.cha,CAR,do you remember seeing them?,,,31
+16040,Thomas/020702.cha,CHI,uhoh.,,,31
+16041,Thomas/020702.cha,CAR,uhoh.,,,31
+16042,Thomas/020702.cha,CHI,oh dear.,1.0,,31
+16043,Thomas/020702.cha,CHI,oh dear.,1.0,,31
+16044,Thomas/020702.cha,CHI,the naughty leaf.,0.0,,31
+16045,Thomas/020702.cha,CAR,the naughty leaf.,,,31
+16046,Thomas/020702.cha,CAR,what do you mean the naughty leaf?,,,31
+16047,Thomas/020702.cha,CHI,leaf come off.,-1.0,"determiner, tense_aspect",31
+16048,Thomas/020702.cha,CAR,oh that's the leaf that you brought back for me when you went for a walk the other day with Grandma and Granddad didn't you?,,,31
+16049,Thomas/020702.cha,CHI,uhoh.,,,31
+16050,Thomas/020702.cha,CHI,the naughty leaf.,0.0,,31
+16051,Thomas/020702.cha,CAR,the naughty leaf.,,,31
+16052,Thomas/020702.cha,CAR,why's it a naughty leaf?,,,31
+16053,Thomas/020702.cha,CHI,broken.,,,31
+16054,Thomas/020702.cha,CAR,no.,,,31
+16055,Thomas/020702.cha,CAR,it hasn't broken.,,,31
+16056,Thomas/020702.cha,CAR,what has happened when you picked for Mummy.,,,31
+16057,Thomas/020702.cha,CAR,well you didn't pick it you picked it up off the ground.,,,31
+16058,Thomas/020702.cha,CAR,it was a very very big shiny leaf wasn't it?,,,31
+16059,Thomas/020702.cha,CAR,but it has dried now.,,,31
+16060,Thomas/020702.cha,CAR,it was on Wednesday you picked it and it's Friday now.,,,31
+16061,Thomas/020702.cha,CAR,and look.,,,31
+16062,Thomas/020702.cha,CAR,come here.,,,31
+16063,Thomas/020702.cha,CAR,it sounds like paper doesn't it?,,,31
+16064,Thomas/020702.cha,CAR,can you hear it crackle?,,,31
+16065,Thomas/020702.cha,CAR,it has all gone dry and it has curled up.,,,31
+16066,Thomas/020702.cha,CHI,it's all crunchy now.,1.0,,31
+16067,Thomas/020702.cha,CHI,the big crunchy.,-1.0,"subject, verb",31
+16068,Thomas/020702.cha,CAR,you brought that.,,,31
+16069,Thomas/020702.cha,CAR,you brought that especially for Mummy didn't you?,,,31
+16070,Thomas/020702.cha,CHI,crunch crunch.,0.0,,31
+16071,Thomas/020702.cha,CAR,crunch crunch.,,,31
+16072,Thomas/020702.cha,CAR,and what have we got in that yellow bag on the stairs?,,,31
+16073,Thomas/020702.cha,CHI,no.,,,31
+16074,Thomas/020702.cha,CHI,oh.,,,31
+16075,Thomas/020702.cha,CHI,run away.,0.0,,31
+16076,Thomas/020702.cha,CAR,these are all pictures that we did together.,,,31
+16077,Thomas/020702.cha,CAR,do you remember when we found all those we went out picking leaves off the ground and when they were nice and dry and all these little cones?,,,31
+16078,Thomas/020702.cha,CAR,and we glued them onto paper didn't we?,,,31
+16079,Thomas/020702.cha,CHI,stand up now.,0.0,,31
+16080,Thomas/020702.cha,CHI,stand up.,0.0,,31
+16081,Thomas/020702.cha,CAR,no.,,,31
+16082,Thomas/020702.cha,CAR,it's they're glued on.,,,31
+16083,Thomas/020702.cha,CAR,they won't come off.,,,31
+16084,Thomas/020702.cha,CHI,not on leaf.,-1.0,"subject, verb, determiner",31
+16085,Thomas/020702.cha,CHI,damaged.,,,31
+16086,Thomas/020702.cha,CAR,is it a damaged leaf?,,,31
+16087,Thomas/020702.cha,CAR,is that leaf damaged?,,,31
+16088,Thomas/020702.cha,CAR,yes.,,,31
+16089,Thomas/020702.cha,CAR,it does look damaged doesn't it?,,,31
+16090,Thomas/020702.cha,CAR,"there's some very nice pictures here, Thomas.",,,31
+16091,Thomas/020702.cha,CAR,autumn leaves.,,,31
+16092,Thomas/020702.cha,CHI,blue blue blue.,0.0,,31
+16093,Thomas/020702.cha,CAR,blue.,,,31
+16094,Thomas/020702.cha,CAR,that's the blue picture.,,,31
+16095,Thomas/020702.cha,CAR,look.,,,31
+16096,Thomas/020702.cha,CAR,autumn leaves.,,,31
+16097,Thomas/020702.cha,CAR,and there's there's one leaf.,,,31
+16098,Thomas/020702.cha,CAR,and there's a cone.,,,31
+16099,Thomas/020702.cha,CAR,"be careful with it, Thomas.",,,31
+16100,Thomas/020702.cha,CAR,don't break it.,,,31
+16101,Thomas/020702.cha,CAR,I think that leaf and that cone must have fallen off one of these pictures.,,,31
+16102,Thomas/020702.cha,CAR,I think that leaf belongs on there don't you?,,,31
+16103,Thomas/020702.cha,CHI,oh dear.,1.0,,31
+16104,Thomas/020702.cha,CHI,what has happened now cone?,-1.0,"preposition, determiner",31
+16105,Thomas/020702.cha,CAR,what has happened to the cone?,,,31
+16106,Thomas/020702.cha,CAR,I think it has fallen off the picture.,,,31
+16107,Thomas/020702.cha,CAR,and that's dry glue that you've just seen on the back.,,,31
+16108,Thomas/020702.cha,CAR,are you putting it back in the bag for me?,,,31
+16109,Thomas/020702.cha,CHI,uhoh.,,,31
+16110,Thomas/020702.cha,CHI,no.,,,31
+16111,Thomas/020702.cha,CAR,you've dropped it.,,,31
+16112,Thomas/020702.cha,CAR,do you remember after we had been to the music class this morning that we went to see that shop in Didsbury and it had a Christmas tree in the window?,,,31
+16113,Thomas/020702.cha,CAR,and it had all those cones sprayed gold.,,,31
+16114,Thomas/020702.cha,CHI,not see it.,-1.0,"subject, auxiliary",31
+16115,Thomas/020702.cha,CAR,well you did see it at the time.,,,31
+16116,Thomas/020702.cha,CAR,can you not remember?,,,31
+16117,Thomas/020702.cha,CHI,no.,,,31
+16118,Thomas/020702.cha,CAR,no.,,,31
+16119,Thomas/020702.cha,CHI,smartypants.,,,31
+16120,Thomas/020702.cha,CAR,smartypants.,,,31
+16121,Thomas/020702.cha,CAR,why are you saying that?,,,31
+16122,Thomas/020702.cha,CAR,look look.,,,31
+16123,Thomas/020702.cha,CAR,on your chair.,,,31
+16124,Thomas/020702.cha,CAR,sit next to me.,,,31
+16125,Thomas/020702.cha,CHI,no.,,,31
+16126,Thomas/020702.cha,CHI,leaves coming now.,-1.0,"determiner, present_progressive",31
+16127,Thomas/020702.cha,CHI,leaves blowing off the tree.,-1.0,"determiner, present_progressive, other",31
+16128,Thomas/020702.cha,CAR,leaves blowing off the tree.,,,31
+16129,Thomas/020702.cha,CAR,well is different because this is a book about the different Seasons.,,,31
+16130,Thomas/020702.cha,CAR,and if we look we start off with spring.,,,31
+16131,Thomas/020702.cha,CAR,spring's the time of year you were born.,,,31
+16132,Thomas/020702.cha,CAR,and look.,,,31
+16133,Thomas/020702.cha,CAR,that tree's very much in bud.,,,31
+16134,Thomas/020702.cha,CAR,there's lots of blossom on that.,,,31
+16135,Thomas/020702.cha,CAR,and what does this remind you of at the bottom of the tree?,,,31
+16136,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16137,Thomas/020702.cha,CAR,you saw yellow flowers.,,,31
+16138,Thomas/020702.cha,CHI,yellow flowers.,1.0,,31
+16139,Thomas/020702.cha,CAR,and where did we use to go to where we saw yellow flowers in the spring?,,,31
+16140,Thomas/020702.cha,CHI,not see it.,-1.0,"subject, auxiliary",31
+16141,Thomas/020702.cha,CAR,do you remember going to playgroup?,,,31
+16142,Thomas/020702.cha,CAR,we useta walk across the Common amongst all those yellow flowers.,,,31
+16143,Thomas/020702.cha,CAR,but spring.,,,31
+16144,Thomas/020702.cha,CHI,ducks.,,,31
+16145,Thomas/020702.cha,CAR,they're little chicks like this one here.,,,31
+16146,Thomas/020702.cha,CHI,little chicks.,1.0,,31
+16147,Thomas/020702.cha,CAR,little chicks chirping.,,,31
+16148,Thomas/020702.cha,CAR,there are lots of birds nests in the tree with eggs.,,,31
+16149,Thomas/020702.cha,CAR,and little spring lambs and spring flowers like tulips.,,,31
+16150,Thomas/020702.cha,CAR,and then we go from spring to summer.,,,31
+16151,Thomas/020702.cha,CAR,now we've just been talking about summer because teddy was dressing for the summer.,,,31
+16152,Thomas/020702.cha,CHI,ice cream this one.,-1.0,"verb, other",31
+16153,Thomas/020702.cha,CAR,ice cream this one.,,,31
+16154,Thomas/020702.cha,CAR,yes.,,,31
+16155,Thomas/020702.cha,CAR,there's a bit of an ice cream.,,,31
+16156,Thomas/020702.cha,CAR,what can you see on this page?,,,31
+16157,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16158,Thomas/020702.cha,CAR,well you tell me.,,,31
+16159,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16160,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16161,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16162,Thomas/020702.cha,CAR,well you tell me what it is.,,,31
+16163,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16164,Thomas/020702.cha,CAR,well you tell me what it is.,,,31
+16165,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16166,Thomas/020702.cha,CHI,what's this?,1.0,,31
+16167,Thomas/020702.cha,CAR,you tell me.,,,31
+16168,Thomas/020702.cha,CAR,move the.,,,31
+16169,Thomas/020702.cha,CHI,move the elephant.,0.0,,31
+16170,Thomas/020702.cha,CAR,pardon.,,,31
+16171,Thomas/020702.cha,CHI,move the elephant.,0.0,,31
+16172,Thomas/020702.cha,CAR,move the elephant.,,,31
+16173,Thomas/020702.cha,CHI,yes.,,,31
+16174,Thomas/020702.cha,CAR,no.,,,31
+16175,Thomas/020702.cha,CAR,that's a picture of the seaside and the cliffs.,,,31
+16176,Thomas/020702.cha,CAR,and I think because the cliffs go round in a circle are you thinking of the elephants trunk?,,,31
+16177,Thomas/020702.cha,CHI,little.,,,31
+16178,Thomas/020702.cha,CAR,yes.,,,31
+16179,Thomas/020702.cha,CAR,this is a little book and for each season there's a picture showing what what happens in each season.,,,31
+16180,Thomas/020702.cha,CAR,like in the summer we go to the seaside so there's a picture of a bucket and a spade and sandcastle with seashells.,,,31
+16181,Thomas/020702.cha,CAR,and ice cream and sailing boats and a beach ball.,,,31
+16182,Thomas/020702.cha,CAR,and on the other side is a jigsaw puzzle showing a picture of something in summer and it's a picture of the seaside isn't it?,,,31
+16183,Thomas/020702.cha,CAR,shall we put that piece there?,,,31
+16184,Thomas/020702.cha,CAR,are you banging it down hard?,,,31
+16185,Thomas/020702.cha,CHI,hm.,,,31
+16186,Thomas/020702.cha,CHI,pieces come off again.,-1.0,"determiner, tense_aspect",31
+16187,Thomas/020702.cha,CAR,pieces come off again.,,,31
+16188,Thomas/020702.cha,CAR,no.,,,31
+16189,Thomas/020702.cha,CAR,there's still two more pieces to to put in.,,,31
+16190,Thomas/020702.cha,CAR,are you going to finish it off?,,,31
+16191,Thomas/020702.cha,CAR,that's it.,,,31
+16192,Thomas/020702.cha,CAR,turn it round that way and then you can bang it in.,,,31
+16193,Thomas/020702.cha,CAR,steady steady steady.,,,31
+16194,Thomas/020702.cha,CAR,don't be so rough.,,,31
+16195,Thomas/020702.cha,CAR,"you're being too rough, Thomas.",,,31
+16196,Thomas/020702.cha,CHI,no.,,,31
+16197,Thomas/020702.cha,CHI,no bang it.,-1.0,"auxiliary, other",31
+16198,Thomas/020702.cha,CHI,no bang it.,-1.0,"auxiliary, other",31
+16199,Thomas/020702.cha,CAR,you can press them in but there's no need to hammer like that is there?,,,31
+16200,Thomas/020702.cha,CHI,press it on.,0.0,,31
+16201,Thomas/020702.cha,CAR,that's that's right.,,,31
+16202,Thomas/020702.cha,CAR,push it there.,,,31
+16203,Thomas/020702.cha,CAR,lovely.,,,31
+16204,Thomas/020702.cha,CAR,look at that.,,,31
+16205,Thomas/020702.cha,CAR,and where did you last go to the seaside?,,,31
+16206,Thomas/020702.cha,CHI,no.,,,31
+16207,Thomas/020702.cha,CHI,pieces come off.,-1.0,"determiner, tense_aspect",31
+16208,Thomas/020702.cha,CAR,no.,,,31
+16209,Thomas/020702.cha,CAR,we won't take the pieces off again.,,,31
+16210,Thomas/020702.cha,CAR,do you wanna do it again?,,,31
+16211,Thomas/020702.cha,CHI,yes.,,,31
+16212,Thomas/020702.cha,CAR,right.,,,31
+16213,Thomas/020702.cha,CAR,okay.,,,31
+16214,Thomas/020702.cha,CAR,it's only six pieces so it won't take long to do will it?,,,31
+16215,Thomas/020702.cha,CHI,seaside come off.,-1.0,"determiner, auxiliary",31
+16216,Thomas/020702.cha,CAR,seaside has come off.,,,31
+16217,Thomas/020702.cha,CHI,that one off.,-1.0,verb,31
+16218,Thomas/020702.cha,CAR,no.,,,31
+16219,Thomas/020702.cha,CAR,this one doesn't come off.,,,31
+16220,Thomas/020702.cha,CAR,this isn't a jigsaw.,,,31
+16221,Thomas/020702.cha,CAR,this is just a picture of things you might see in summer.,,,31
+16222,Thomas/020702.cha,CAR,let's put this one back together.,,,31
+16223,Thomas/020702.cha,CHI,put it in that way.,0.0,,31
+16224,Thomas/020702.cha,CAR,no.,,,31
+16225,Thomas/020702.cha,CAR,we'll.,,,31
+16226,Thomas/020702.cha,CAR,we've got to.,,,31
+16227,Thomas/020702.cha,CHI,no.,,,31
+16228,Thomas/020702.cha,CAR,well we can't turn the page until we've put the jigsaw back in here because it'll all fall to bits.,,,31
+16229,Thomas/020702.cha,CHI,no no.,1.0,,31
+16230,Thomas/020702.cha,CAR,"I'm not going to play with you if you're going to do this, Thomas.",,,31
+16231,Thomas/020702.cha,CHI,no.,,,31
+16232,Thomas/020702.cha,CAR,now listen.,,,31
+16233,Thomas/020702.cha,CAR,nobody else is going to wanna play with you either.,,,31
+16234,Thomas/020702.cha,CAR,no no.,,,31
+16235,Thomas/020702.cha,CAR,"Thomas, you've got to learn when you've finished playing with one thing like at the moment we've finished playing with this jigsaw you wanna go onto the next thing.",,,31
+16236,Thomas/020702.cha,CHI,yes.,,,31
+16237,Thomas/020702.cha,CAR,you wanna go onto the next thing so we finish playing with this.,,,31
+16238,Thomas/020702.cha,CHI,no.,,,31
+16239,Thomas/020702.cha,CAR,we have to put this away before we get the next thing out.,,,31
+16240,Thomas/020702.cha,CHI,no no.,1.0,,31

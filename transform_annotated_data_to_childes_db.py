@@ -1,13 +1,14 @@
 """Load and store transcripts from childes-db."""
 import argparse
 import math
+import pickle
 
 from tqdm import tqdm
 
 import pandas as pd
 
 from grammaticality_annotation.data import load_childes_data, DATA_PATH_CHILDES_ANNOTATED, \
-    DATA_PATH_CHILDES_DB_ANNOTATED
+    DATA_PATH_CHILDES_DB_ANNOTATED, DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB
 from preprocess import get_pos_tag
 from utils import POS_PUNCTUATION
 
@@ -63,30 +64,40 @@ def add_punctuation(tokens, utterance_type):
     return tokens
 
 
-def transform(args):
-    from childespy.childespy import get_transcripts, get_utterances
+def approx_match(utt1, utt2):
+    if utt1.replace("_", "").replace(" ", "") == utt2.replace(",", "").replace(" ", ""):
+        return True
+    # else:
+        # print(utt1)
+    return False
 
-    data_annotated = load_childes_data(DATA_PATH_CHILDES_ANNOTATED)
+
+def transform(args):
+    # from childespy.childespy import get_transcripts, get_utterances
+    data_annotated = load_childes_data(DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB)
     data_annotated["corpus"] = data_annotated.transcript_file.apply(lambda x: x.split('/')[0])
-    data_annotated["transcript_file_name"] = data_annotated.transcript_file.apply(lambda x: x.split('/')[1])
+    data_annotated["transcript_file_name"] = data_annotated.transcript_file.apply(lambda x: "/".join(x.split('/')[1:]))
     data_annotated["transcript_no_punct"] = [u[:-1] for u in data_annotated.transcript_clean.values]
 
     for corpus in data_annotated.corpus.unique():
         print("\ncorpus: ", corpus)
-        transcripts = get_transcripts(corpus=corpus, db_args=DB_ARGS, db_version="2021.1")
-        utt_corpus = get_utterances(
-            corpus=corpus, language="eng", db_args=DB_ARGS, db_version="2021.1",
-        )
-        utt_corpus.to_pickle(f"{corpus}.pickle")
+        # transcripts = get_transcripts(corpus=corpus, db_args=DB_ARGS, db_version="2021.1")
+        # utt_corpus = get_utterances(
+        #     corpus=corpus, language="eng", db_args=DB_ARGS, db_version="2021.1",
+        # )
+        transcripts = pickle.load(open(f"corpora/transcripts_{corpus}.pickle", "rb"))
+        utt_corpus = pickle.load(open(f"corpora/{corpus}.pickle", "rb")) #TODO
 
         data_annotated_corpus = data_annotated[data_annotated.corpus == corpus]
         for transcript_file_name in data_annotated_corpus.transcript_file_name.unique():
             print(transcript_file_name)
-            transcript_ids = transcripts[transcripts.filename.str.endswith(f"{transcript_file_name.replace('.cha', '')}.xml")].transcript_id.values
-            assert len(transcript_ids) == 1
+            transcript_ids = transcripts[transcripts.filename.str.contains(f"{corpus}/{transcript_file_name.replace('.cha', '')}")].transcript_id.values
+            if not len(transcript_ids) == 1:
+                print(len(transcript_ids))
             transcript_id = transcript_ids[0]
-            utts_transcript = utt_corpus[utt_corpus.transcript_id == transcript_id]
-            utts_transcript = utts_transcript[utts_transcript.gloss != "xxx"]
+            utts_transcript = utt_corpus[utt_corpus.transcript_id == transcript_id].copy()
+            utts_transcript["gloss"] = utts_transcript["gloss"].apply(lambda x: x.replace("xxx", "").replace("www", "").replace("yyy", "").replace("  ", "").strip())
+            utts_transcript = utts_transcript[~utts_transcript.gloss.isin([""])]
 
             data_annotated_transcript = data_annotated_corpus[data_annotated_corpus.transcript_file_name == transcript_file_name]
             # first_3_utts = data_annotated_transcript.transcript_no_punct.values[:3]
@@ -103,15 +114,28 @@ def transform(args):
 
             utterances_selection = utts_transcript.iloc[:len(data_annotated_transcript)]
 
-            for i in range(3):
-                if utterances_selection.gloss.values[i] != data_annotated_transcript.transcript_no_punct.values[i]:
+            #
+            # if transcript_file_name == "fatsib/fatsibcharles.cha":
+            #     for i in range(0, len(data_annotated_transcript)):
+            #         if not approx_match(utterances_selection.gloss.values[i], data_annotated_transcript.transcript_no_punct.values[i]):
+            #             print(f"mismatch: {i}")
+            #             print(utterances_selection.gloss.values[i])
+            #             print(data_annotated_transcript.transcript_no_punct.values[i])
+            #             print("")
+
+            assert len(utterances_selection) == len(data_annotated_transcript)
+
+            for i in range(min(len(data_annotated_transcript), 5)):
+                if not approx_match(utterances_selection.gloss.values[i], data_annotated_transcript.transcript_no_punct.values[i]):
                     print("mismatch:")
                     print(utterances_selection.gloss.values[i])
                     print(data_annotated_transcript.transcript_no_punct.values[i])
-                if utterances_selection.gloss.values[-i] != data_annotated_transcript.transcript_no_punct.values[-i]:
+                    print("")
+                if not approx_match(utterances_selection.gloss.values[-i], data_annotated_transcript.transcript_no_punct.values[-i]):
                     print("mismatch:")
                     print(utterances_selection.gloss.values[-i])
                     print(data_annotated_transcript.transcript_no_punct.values[-i])
+                    print("")
 
             #TODO
         # for _, transcript in tqdm(transcripts.iterrows(), total=len(transcripts)):

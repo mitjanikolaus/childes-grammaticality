@@ -1,0 +1,603 @@
+,transcript_file,speaker_code,transcript_clean,is_grammatical,labels,age
+4277,Suppes/021006.cha,CAR,it's a little baby carriage.,,,34
+4278,Suppes/021006.cha,CHI,oh.,,,34
+4279,Suppes/021006.cha,CHI,then what is this?,1.0,,34
+4280,Suppes/021006.cha,CHI,what are these thing?,-1.0,plural,34
+4281,Suppes/021006.cha,CAR,that's a little crib.,,,34
+4282,Suppes/021006.cha,CHI,oh with a baby in it?,1.0,,34
+4283,Suppes/021006.cha,CHI,let me take it out of there.,1.0,,34
+4284,Suppes/021006.cha,CAR,here.,,,34
+4285,Suppes/021006.cha,CAR,what are those things?,,,34
+4286,Suppes/021006.cha,CAR,these are the wheels of the carriage.,,,34
+4287,Suppes/021006.cha,CAR,shall we put them in place?,,,34
+4288,Suppes/021006.cha,CHI,yup.,,,34
+4289,Suppes/021006.cha,CHI,put them on the carriage.,0.0,,34
+4290,Suppes/021006.cha,CHI,and who's in there?,1.0,,34
+4291,Suppes/021006.cha,CHI,that's another little baby.,1.0,,34
+4292,Suppes/021006.cha,CHI,he wants to come out of his crib.,1.0,,34
+4293,Suppes/021006.cha,CAR,look.,,,34
+4294,Suppes/021006.cha,CHI,yeah.,,,34
+4295,Suppes/021006.cha,CHI,this baby.,-1.0,verb,34
+4296,Suppes/021006.cha,CHI,this baby is here.,1.0,,34
+4297,Suppes/021006.cha,CHI,where the mother to push him?,-1.0,verb,34
+4298,Suppes/021006.cha,CHI,where's the mother to push him?,1.0,,34
+4299,Suppes/021006.cha,CAR,I guess you'll be his mother.,,,34
+4300,Suppes/021006.cha,CHI,this one?,1.0,,34
+4301,Suppes/021006.cha,CHI,this one?,1.0,,34
+4302,Suppes/021006.cha,CAR,you can be the mother of the baby okay?,,,34
+4303,Suppes/021006.cha,CHI,nope I won't.,1.0,,34
+4304,Suppes/021006.cha,CAR,you don't wanna be the mother of the baby?,,,34
+4305,Suppes/021006.cha,CHI,yup.,,,34
+4306,Suppes/021006.cha,CHI,I do.,1.0,,34
+4307,Suppes/021006.cha,CAR,you do?,,,34
+4308,Suppes/021006.cha,CHI,them both of them are going to go there.,1.0,,34
+4309,Suppes/021006.cha,CAR,both of who are going to go there?,,,34
+4310,Suppes/021006.cha,CHI,the babies are.,1.0,,34
+4311,Suppes/021006.cha,CHI,this baby wants to go.,1.0,,34
+4312,Suppes/021006.cha,CAR,where's the baby?,,,34
+4313,Suppes/021006.cha,CHI,this baby's going to share the carriage.,1.0,,34
+4314,Suppes/021006.cha,CAR,in the carriage?,,,34
+4315,Suppes/021006.cha,CHI,he's going to.,-1.0,object,34
+4316,Suppes/021006.cha,CHI,he's going to go in the carriage.,1.0,,34
+4317,Suppes/021006.cha,CHI,see.,,,34
+4318,Suppes/021006.cha,CHI,I'm going to be the mother.,1.0,,34
+4319,Suppes/021006.cha,CHI,both of them going to go in the carriage.,-1.0,auxiliary,34
+4320,Suppes/021006.cha,CHI,see.,,,34
+4321,Suppes/021006.cha,CAR,where are you going to take the carriage?,,,34
+4322,Suppes/021006.cha,CAR,um?,,,34
+4323,Suppes/021006.cha,CHI,take the babies out of there.,0.0,,34
+4324,Suppes/021006.cha,CAR,are you going to take them to the park?,,,34
+4325,Suppes/021006.cha,CHI,yup.,,,34
+4326,Suppes/021006.cha,CHI,I take the babies to the park.,-1.0,tense_aspect,34
+4327,Suppes/021006.cha,CAR,you're going to do what?,,,34
+4328,Suppes/021006.cha,CHI,going to take the babies to the park.,1.0,,34
+4329,Suppes/021006.cha,CAR,you are?,,,34
+4330,Suppes/021006.cha,CAR,what are they going to do at the park?,,,34
+4331,Suppes/021006.cha,CHI,play.,,,34
+4332,Suppes/021006.cha,CAR,with what?,,,34
+4333,Suppes/021006.cha,CHI,with toys.,1.0,,34
+4334,Suppes/021006.cha,CAR,would you like to go to the park?,,,34
+4335,Suppes/021006.cha,CHI,yup.,,,34
+4336,Suppes/021006.cha,CAR,which park shall we go to?,,,34
+4337,Suppes/021006.cha,CHI,to to the zoo.,1.0,,34
+4338,Suppes/021006.cha,CAR,oh you'd like to go to the zoo.,,,34
+4339,Suppes/021006.cha,CAR,did we go to the park last week end?,,,34
+4340,Suppes/021006.cha,CHI,yup.,,,34
+4341,Suppes/021006.cha,CAR,what did you do at the park with Becky and Miriam?,,,34
+4342,Suppes/021006.cha,CHI,I swim.,-1.0,tense_aspect,34
+4343,Suppes/021006.cha,CAR,you did?,,,34
+4344,Suppes/021006.cha,CAR,was it fun?,,,34
+4345,Suppes/021006.cha,CHI,yeah.,,,34
+4346,Suppes/021006.cha,CHI,we're going to the park.,1.0,,34
+4347,Suppes/021006.cha,CHI,there's a little grandmothers.,-1.0,plural,34
+4348,Suppes/021006.cha,CAR,what?,,,34
+4349,Suppes/021006.cha,CHI,there's a grand.,-1.0,object,34
+4350,Suppes/021006.cha,CHI,there's a mothers.,-1.0,plural,34
+4351,Suppes/021006.cha,CAR,oh those are the mothers.,,,34
+4352,Suppes/021006.cha,CAR,that's the little package that the carriage was in.,,,34
+4353,Suppes/021006.cha,CHI,yup.,,,34
+4354,Suppes/021006.cha,CAR,and those are the pictures of the mothers of whom?,,,34
+4355,Suppes/021006.cha,CHI,yeah.,,,34
+4356,Suppes/021006.cha,CAR,who are they the mothers of?,,,34
+4357,Suppes/021006.cha,CHI,of whom?,1.0,,34
+4358,Suppes/021006.cha,CAR,of the babies?,,,34
+4359,Suppes/021006.cha,CHI,yup.,,,34
+4360,Suppes/021006.cha,CHI,the little babies?,1.0,,34
+4361,Suppes/021006.cha,CAR,do you think you'll take care of their babies?,,,34
+4362,Suppes/021006.cha,CHI,yeah.,,,34
+4363,Suppes/021006.cha,CHI,yup.,,,34
+4364,Suppes/021006.cha,CAR,maybe the babies would like something to eat.,,,34
+4365,Suppes/021006.cha,CHI,nope.,,,34
+4366,Suppes/021006.cha,CAR,you don't think so?,,,34
+4367,Suppes/021006.cha,CHI,yes they do.,1.0,,34
+4368,Suppes/021006.cha,CHI,they want this food.,1.0,,34
+4369,Suppes/021006.cha,CHI,they want this.,-1.0,object,34
+4370,Suppes/021006.cha,CHI,food.,,,34
+4371,Suppes/021006.cha,CAR,the food that's cooking?,,,34
+4372,Suppes/021006.cha,CHI,yeah.,,,34
+4373,Suppes/021006.cha,CHI,this is the food that they want.,1.0,,34
+4374,Suppes/021006.cha,CAR,I see.,,,34
+4375,Suppes/021006.cha,CHI,now where is the babies?,-1.0,tense_aspect,34
+4376,Suppes/021006.cha,CHI,to pop in the food.,0.0,,34
+4377,Suppes/021006.cha,CHI,see.,,,34
+4378,Suppes/021006.cha,CHI,eat their food at the park with Nina.,-1.0,"subject, tense_aspect",34
+4379,Suppes/021006.cha,CHI,now they're lying down take a sunshine.,-1.0,other,34
+4380,Suppes/021006.cha,CHI,now they're lying down take a sunshine.,-1.0,other,34
+4381,Suppes/021006.cha,CAR,now they're what?,,,34
+4382,Suppes/021006.cha,CHI,they're eating the food.,1.0,,34
+4383,Suppes/021006.cha,CHI,take a sunshine in the sun.,-1.0,"subject, tense_aspect",34
+4384,Suppes/021006.cha,CAR,they're taking a sun bath?,,,34
+4385,Suppes/021006.cha,CHI,yup.,,,34
+4386,Suppes/021006.cha,CHI,then they're going to swim with me.,1.0,,34
+4387,Suppes/021006.cha,CHI,see what what the babies are?,-1.0,"subject, tense_aspect",34
+4388,Suppes/021006.cha,CAR,they're going to do what?,,,34
+4389,Suppes/021006.cha,CHI,they're going to swim with me.,1.0,,34
+4390,Suppes/021006.cha,CHI,with on the beach.,0.0,,34
+4391,Suppes/021006.cha,CAR,oh that's nice.,,,34
+4392,Suppes/021006.cha,CAR,that was fun in that swimming pool wasn't it?,,,34
+4393,Suppes/021006.cha,CAR,did you get wet?,,,34
+4394,Suppes/021006.cha,CHI,yup.,,,34
+4395,Suppes/021006.cha,CAR,you didn't go in very much because your toe hurt right?,,,34
+4396,Suppes/021006.cha,CHI,yup.,,,34
+4397,Suppes/021006.cha,CAR,is your toe better now?,,,34
+4398,Suppes/021006.cha,CHI,yup.,,,34
+4399,Suppes/021006.cha,CAR,let me see it.,,,34
+4400,Suppes/021006.cha,CAR,where did you hurt your toe?,,,34
+4401,Suppes/021006.cha,CHI,I just runned on the beach.,-1.0,tense_aspect,34
+4402,Suppes/021006.cha,CAR,you just what?,,,34
+4403,Suppes/021006.cha,CHI,I just runned on the beach.,-1.0,tense_aspect,34
+4404,Suppes/021006.cha,CAR,just ran?,,,34
+4405,Suppes/021006.cha,CAR,around the pool you mean?,,,34
+4406,Suppes/021006.cha,CHI,yup.,,,34
+4407,Suppes/021006.cha,CHI,who goes in that little bed?,1.0,,34
+4408,Suppes/021006.cha,CHI,o goes in that little bed?,0.0,,34
+4409,Suppes/021006.cha,CHI,look it.,-1.0,preposition,34
+4410,Suppes/021006.cha,CHI,look.,,,34
+4411,Suppes/021006.cha,CHI,look it.,-1.0,preposition,34
+4412,Suppes/021006.cha,CHI,where is the crib?,1.0,,34
+4413,Suppes/021006.cha,CHI,where's the crib?,1.0,,34
+4414,Suppes/021006.cha,CHI,there's the crib.,1.0,,34
+4415,Suppes/021006.cha,CHI,a crib on on at the park.,1.0,,34
+4416,Suppes/021006.cha,CHI,uh?,,,34
+4417,Suppes/021006.cha,CAR,do you take a carriage or a crib to the park?,,,34
+4418,Suppes/021006.cha,CHI,the crib and the carriage.,1.0,,34
+4419,Suppes/021006.cha,CHI,a crib and a carriage.,1.0,,34
+4420,Suppes/021006.cha,CAR,a crib and a carriage?,,,34
+4421,Suppes/021006.cha,CHI,yeah.,,,34
+4422,Suppes/021006.cha,CHI,for we wanna go in to.,-1.0,object,34
+4423,Suppes/021006.cha,CHI,this baby wanna go in the carriage.,-1.0,sv_agreement,34
+4424,Suppes/021006.cha,CHI,baby wants to go in the carriage.,-1.0,determiner,34
+4425,Suppes/021006.cha,CHI,he wants to go in the crib.,1.0,,34
+4426,Suppes/021006.cha,CHI,now they both sleep.,-1.0,present_progressive,34
+4427,Suppes/021006.cha,CHI,now they're both sleeping at the park.,1.0,,34
+4428,Suppes/021006.cha,CAR,what are they going to do when they wake up?,,,34
+4429,Suppes/021006.cha,CHI,they're going to play with me with.,-1.0,preposition,34
+4430,Suppes/021006.cha,CHI,with.,,,34
+4431,Suppes/021006.cha,CHI,they're going to eat with me with this breakfast.,-1.0,preposition,34
+4432,Suppes/021006.cha,CAR,oh.,,,34
+4433,Suppes/021006.cha,CAR,did you eat at the park last week?,,,34
+4434,Suppes/021006.cha,CHI,yup.,,,34
+4435,Suppes/021006.cha,CAR,what did you eat?,,,34
+4436,Suppes/021006.cha,CHI,sandwiches.,,,34
+4437,Suppes/021006.cha,CHI,we didn't eat at the park.,1.0,,34
+4438,Suppes/021006.cha,CAR,that was fun wasn't it?,,,34
+4439,Suppes/021006.cha,CHI,yup.,,,34
+4440,Suppes/021006.cha,CAR,we had a picnic.,,,34
+4441,Suppes/021006.cha,CHI,yup.,,,34
+4442,Suppes/021006.cha,CAR,what did we eat after our picnic?,,,34
+4443,Suppes/021006.cha,CAR,remember?,,,34
+4444,Suppes/021006.cha,CHI,yeah.,,,34
+4445,Suppes/021006.cha,CAR,what?,,,34
+4446,Suppes/021006.cha,CHI,oh.,,,34
+4447,Suppes/021006.cha,CAR,something chewy.,,,34
+4448,Suppes/021006.cha,CAR,what was it?,,,34
+4449,Suppes/021006.cha,CHI,oh gum.,1.0,,34
+4450,Suppes/021006.cha,CAR,gum.,,,34
+4451,Suppes/021006.cha,CAR,did you swallow your gum by mistake?,,,34
+4452,Suppes/021006.cha,CHI,no I chewed it.,1.0,,34
+4453,Suppes/021006.cha,CAR,you chewed it?,,,34
+4454,Suppes/021006.cha,CAR,did you spit it out then?,,,34
+4455,Suppes/021006.cha,CHI,nope.,,,34
+4456,Suppes/021006.cha,CAR,what happened to it?,,,34
+4457,Suppes/021006.cha,CHI,here's some of the play dough.,1.0,,34
+4458,Suppes/021006.cha,CAR,oh careful.,,,34
+4459,Suppes/021006.cha,CAR,let's not spill any more on the floor.,,,34
+4460,Suppes/021006.cha,CAR,Pierre and Maryse brought you a hat.,,,34
+4461,Suppes/021006.cha,CHI,oh.,,,34
+4462,Suppes/021006.cha,CHI,a a Mickey mouse hat?,1.0,,34
+4463,Suppes/021006.cha,CAR,a Mickey mouse hat.,,,34
+4464,Suppes/021006.cha,CAR,they bought it at Disney Land for Nina.,,,34
+4465,Suppes/021006.cha,CHI,what is it a Mickey mouse hat?,1.0,,34
+4466,Suppes/021006.cha,CHI,yeah.,,,34
+4467,Suppes/021006.cha,CAR,oh that looks cute on you.,,,34
+4468,Suppes/021006.cha,CHI,for Mickey mouse.,0.0,,34
+4469,Suppes/021006.cha,CAR,that's so sweet.,,,34
+4470,Suppes/021006.cha,CAR,what does it have on it?,,,34
+4471,Suppes/021006.cha,CAR,two big ears?,,,34
+4472,Suppes/021006.cha,CHI,yup.,,,34
+4473,Suppes/021006.cha,CAR,let me see it.,,,34
+4474,Suppes/021006.cha,CHI,kitty wants to come in.,-1.0,determiner,34
+4475,Suppes/021006.cha,CAR,oh shall we let the kitty in?,,,34
+4476,Suppes/021006.cha,CAR,come in here kitty.,,,34
+4477,Suppes/021006.cha,CHI,come on kitty.,1.0,,34
+4478,Suppes/021006.cha,CHI,come on you can play with us.,1.0,,34
+4479,Suppes/021006.cha,CHI,look at this little Mickey mouse hat.,1.0,,34
+4480,Suppes/021006.cha,CHI,um?,,,34
+4481,Suppes/021006.cha,CHI,here.,,,34
+4482,Suppes/021006.cha,CHI,um?,,,34
+4483,Suppes/021006.cha,CHI,the kitty says he wants to come in.,1.0,,34
+4484,Suppes/021006.cha,CAR,okay.,,,34
+4485,Suppes/021006.cha,CAR,what's he doing?,,,34
+4486,Suppes/021006.cha,CAR,oh.,,,34
+4487,Suppes/021006.cha,CHI,purring.,,,34
+4488,Suppes/021006.cha,CHI,purr.,,,34
+4489,Suppes/021006.cha,CHI,do you like to play with the play dough?,1.0,,34
+4490,Suppes/021006.cha,CAR,what are you doing to the cat?,,,34
+4491,Suppes/021006.cha,CAR,where is the cat?,,,34
+4492,Suppes/021006.cha,CHI,oh he's on my arm.,1.0,,34
+4493,Suppes/021006.cha,CAR,he's in your arms?,,,34
+4494,Suppes/021006.cha,CAR,what's he doing?,,,34
+4495,Suppes/021006.cha,CHI,he's saying meow because he's sad.,1.0,,34
+4496,Suppes/021006.cha,CAR,do you think so?,,,34
+4497,Suppes/021006.cha,CHI,yes.,,,34
+4498,Suppes/021006.cha,CHI,ah.,,,34
+4498,Suppes/021006.cha,CHI,ouch.,,,34
+4499,Suppes/021006.cha,CAR,what did he do?,,,34
+4500,Suppes/021006.cha,CHI,he scratches me.,-1.0,present_progressive,34
+4501,Suppes/021006.cha,CAR,uhoh I guess you better let him down.,,,34
+4502,Suppes/021006.cha,CAR,he wants to look at your Mickey mouse hat.,,,34
+4503,Suppes/021006.cha,CHI,oh.,,,34
+4504,Suppes/021006.cha,CHI,lookat.,,,34
+4505,Suppes/021006.cha,CHI,lookat.,,,34
+4506,Suppes/021006.cha,CHI,oh look at my Mickey mouse hat.,1.0,,34
+4507,Suppes/021006.cha,CAR,Nina don't pull him by the tail.,,,34
+4508,Suppes/021006.cha,CHI,I wanna carry him.,1.0,,34
+4509,Suppes/021006.cha,CAR,well honey I don't know if he wants to be carried right now.,,,34
+4510,Suppes/021006.cha,CHI,yes he does.,1.0,,34
+4511,Suppes/021006.cha,CAR,let's wait until he comes out.,,,34
+4512,Suppes/021006.cha,CAR,where's the Mickey mouse hat?,,,34
+4513,Suppes/021006.cha,CHI,on you.,1.0,,34
+4514,Suppes/021006.cha,CHI,cause you're Mickey mouse.,1.0,,34
+4515,Suppes/021006.cha,CAR,what are these?,,,34
+4516,Suppes/021006.cha,CAR,do you know what those are?,,,34
+4517,Suppes/021006.cha,CHI,yup ears.,1.0,,34
+4518,Suppes/021006.cha,CHI,ears.,,,34
+4519,Suppes/021006.cha,CHI,ears.,,,34
+4520,Suppes/021006.cha,CHI,ears.,,,34
+4521,Suppes/021006.cha,CAR,they're awfully big ears aren't they?,,,34
+4522,Suppes/021006.cha,CHI,yup these are ears too on him.,1.0,,34
+4523,Suppes/021006.cha,CAR,yeah who is that?,,,34
+4524,Suppes/021006.cha,CHI,that's Mickey mouse.,1.0,,34
+4525,Suppes/021006.cha,CAR,that was nice of Pierre and Maryse to bring that to you wasn't it?,,,34
+4526,Suppes/021006.cha,CAR,we'll have to.,,,34
+4527,Suppes/021006.cha,CHI,put it on your head.,1.0,,34
+4528,Suppes/021006.cha,CAR,does it look right on my head?,,,34
+4529,Suppes/021006.cha,CHI,yes.,,,34
+4530,Suppes/021006.cha,CAR,does it fit well?,,,34
+4531,Suppes/021006.cha,CHI,yeah.,,,34
+4532,Suppes/021006.cha,CAR,now you put it on your head.,,,34
+4533,Suppes/021006.cha,CHI,nope.,,,34
+4534,Suppes/021006.cha,CAR,you wanna wear it today when you go?,,,34
+4535,Suppes/021006.cha,CHI,yeah.,,,34
+4536,Suppes/021006.cha,CHI,oh.,,,34
+4537,Suppes/021006.cha,CHI,I wanna carry the kitty when I'm done with the play dough.,1.0,,34
+4538,Suppes/021006.cha,CAR,I think the kitty doesn't wanna be held right now.,,,34
+4539,Suppes/021006.cha,CHI,I wanna carry her.,1.0,,34
+4540,Suppes/021006.cha,CAR,where is she?,,,34
+4541,Suppes/021006.cha,CHI,she's under your bed.,1.0,,34
+4542,Suppes/021006.cha,CAR,well I don't know if she wants to be held right now.,,,34
+4543,Suppes/021006.cha,CHI,I wanna carry her.,1.0,,34
+4544,Suppes/021006.cha,CHI,okay?,,,34
+4545,Suppes/021006.cha,CAR,I don't think she wants to be held.,,,34
+4546,Suppes/021006.cha,CHI,I wanna carry her.,1.0,,34
+4547,Suppes/021006.cha,CHI,I wanna carry her Mommy.,1.0,,34
+4548,Suppes/021006.cha,CAR,do you think she's hiding from you?,,,34
+4549,Suppes/021006.cha,CHI,yup.,,,34
+4550,Suppes/021006.cha,CAR,I think it means that she doesn't wanna be played with right now.,,,34
+4551,Suppes/021006.cha,CAR,can you help me put the top on the play dough?,,,34
+4552,Suppes/021006.cha,CHI,no.,,,34
+4553,Suppes/021006.cha,CAR,what are you doing?,,,34
+4554,Suppes/021006.cha,CAR,oh look Nina what's that?,,,34
+4555,Suppes/021006.cha,CAR,see.,,,34
+4556,Suppes/021006.cha,CHI,yeah.,,,34
+4557,Suppes/021006.cha,CAR,what is it?,,,34
+4558,Suppes/021006.cha,CHI,a moth.,1.0,,34
+4559,Suppes/021006.cha,CAR,what's the moth doing?,,,34
+4560,Suppes/021006.cha,CAR,what is he doing?,,,34
+4561,Suppes/021006.cha,CHI,he's going to eat my play dough.,1.0,,34
+4562,Suppes/021006.cha,CAR,what is he doing?,,,34
+4563,Suppes/021006.cha,CHI,he's getting me.,-1.0,other,34
+4564,Suppes/021006.cha,CAR,he's what?,,,34
+4565,Suppes/021006.cha,CHI,he's getting me.,-1.0,other,34
+4566,Suppes/021006.cha,CAR,he's flying.,,,34
+4567,Suppes/021006.cha,CAR,he's trying to get out I guess.,,,34
+4568,Suppes/021006.cha,CHI,yeah.,,,34
+4569,Suppes/021006.cha,CAR,where is he flying?,,,34
+4570,Suppes/021006.cha,CHI,inside our house.,1.0,,34
+4571,Suppes/021006.cha,CAR,inside our house.,,,34
+4572,Suppes/021006.cha,CHI,yup.,,,34
+4573,Suppes/021006.cha,CHI,let's let him out Mommy.,1.0,,34
+4574,Suppes/021006.cha,CAR,let him out.,,,34
+4575,Suppes/021006.cha,CAR,oh what a nice kitty.,,,34
+4576,Suppes/021006.cha,CHI,what a nice kitty.,1.0,,34
+4577,Suppes/021006.cha,CHI,she she wanna see the moth.,-1.0,sv_agreement,34
+4578,Suppes/021006.cha,CHI,yes.,,,34
+4579,Suppes/021006.cha,CHI,yes.,,,34
+4580,Suppes/021006.cha,CAR,poor kitty.,,,34
+4581,Suppes/021006.cha,CHI,kitty.,,,34
+4582,Suppes/021006.cha,CAR,I guess the kitty wants you to let her down.,,,34
+4583,Suppes/021006.cha,CHI,nope.,,,34
+4584,Suppes/021006.cha,CHI,nope.,,,34
+4585,Suppes/021006.cha,CAR,give kitty a nice pat.,,,34
+4586,Suppes/021006.cha,CAR,how do you pat kitty?,,,34
+4587,Suppes/021006.cha,CHI,like this.,1.0,,34
+5227,Braunwald/0diary/020119.cha,CAR,you're going to visit in Ruthie's group today.,,,26
+5228,Braunwald/0diary/020119.cha,CHI,no.,,,26
+5229,Braunwald/0diary/020119.cha,CHI,it's too hard.,1.0,,26
+5230,Braunwald/0diary/020119.cha,CHI,keep them.,0.0,,26
+5231,Braunwald/0diary/020119.cha,CHI,keep them.,0.0,,26
+5232,Braunwald/0diary/020119.cha,CHI,where Toffer?,-1.0,verb,26
+5233,Braunwald/0diary/020119.cha,CAR,he's at home.,,,26
+5234,Braunwald/0diary/020119.cha,CHI,him home.,-1.0,verb,26
+5235,Braunwald/0diary/020119.cha,CHI,don't scream me.,-1.0,preposition,26
+5236,Braunwald/0diary/020119.cha,CHI,Deedee have a bad mood.,-1.0,sv_agreement,26
+5237,Braunwald/0diary/020119.cha,CHI,my front lights on.,-1.0,verb,26
+5238,Braunwald/0diary/020119.cha,CHI,I need my music on.,1.0,,26
+5239,Braunwald/0diary/020119.cha,CHI,roll up you window hard you can.,-1.0,other,26
+5240,Braunwald/0diary/020119.cha,CHI,I have itch.,-1.0,determiner,26
+5241,Braunwald/0diary/020119.cha,CHI,afraid.,,,26
+5242,Braunwald/0diary/020119.cha,CAR,what are you afraid of?,,,26
+5243,Braunwald/0diary/020119.cha,CHI,ambulance.,,,26
+5244,Braunwald/0diary/020119.cha,CHI,"Mama, Devon might die.",1.0,,26
+5245,Braunwald/0diary/020119.cha,CAR,who might die?,,,26
+5246,Braunwald/0diary/020119.cha,CHI,Devon.,,,26
+5247,Braunwald/0diary/020119.cha,CHI,I'm wearing my party hat.,1.0,,26
+5248,Bates/Free28/will28.cha,CAR,look they all fit inside of each other.,,,28
+5249,Bates/Free28/will28.cha,CAR,boom boom boom boom boom.,,,28
+5250,Bates/Free28/will28.cha,CHI,hm.,,,28
+5251,Bates/Free28/will28.cha,CAR,you try.,,,28
+5252,Bates/Free28/will28.cha,CAR,you try.,,,28
+5253,Bates/Free28/will28.cha,CHI,boom.,,,28
+5254,Bates/Free28/will28.cha,CHI,boom.,,,28
+5255,Bates/Free28/will28.cha,CHI,see um get this.,0.0,,28
+5256,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5257,Bates/Free28/will28.cha,CAR,aren't those nice?,,,28
+5258,Bates/Free28/will28.cha,CAR,they all fit inside each other.,,,28
+5259,Bates/Free28/will28.cha,CAR,huh.,,,28
+5260,Bates/Free28/will28.cha,CAR,a big one and a bigger one.,,,28
+5261,Bates/Free28/will28.cha,CHI,another one.,0.0,,28
+5262,Bates/Free28/will28.cha,CAR,and a bigger one.,,,28
+5263,Bates/Free28/will28.cha,CHI,another one.,0.0,,28
+5264,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5265,Bates/Free28/will28.cha,CHI,this.,,,28
+5266,Bates/Free28/will28.cha,CAR,huh.,,,28
+5267,Bates/Free28/will28.cha,CAR,and another one.,,,28
+5268,Bates/Free28/will28.cha,CHI,another one.,1.0,,28
+5269,Bates/Free28/will28.cha,CHI,another one.,1.0,,28
+5270,Bates/Free28/will28.cha,CAR,huh.,,,28
+5271,Bates/Free28/will28.cha,CAR,another one.,,,28
+5272,Bates/Free28/will28.cha,CHI,another one!,1.0,,28
+5273,Bates/Free28/will28.cha,CAR,yeah!,,,28
+5274,Bates/Free28/will28.cha,CHI,another one.,1.0,,28
+5275,Bates/Free28/will28.cha,CAR,that's the biggest one.,,,28
+5276,Bates/Free28/will28.cha,CAR,here's two more.,,,28
+5277,Bates/Free28/will28.cha,CAR,huh.,,,28
+5278,Bates/Free28/will28.cha,CAR,another one.,,,28
+5279,Bates/Free28/will28.cha,CHI,another one.,1.0,,28
+5280,Bates/Free28/will28.cha,CHI,another one.,1.0,,28
+5281,Bates/Free28/will28.cha,CHI,one uh another one.,1.0,,28
+5282,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5283,Bates/Free28/will28.cha,CHI,one!,,,28
+5284,Bates/Free28/will28.cha,CHI,uh okay.,1.0,,28
+5285,Bates/Free28/will28.cha,CAR,good.,,,28
+5286,Bates/Free28/will28.cha,CAR,no that doesn't fit.,,,28
+5287,Bates/Free28/will28.cha,CAR,try another one.,,,28
+5288,Bates/Free28/will28.cha,CHI,that fit?,-1.0,auxiliary,28
+5289,Bates/Free28/will28.cha,CAR,that fits.,,,28
+5290,Bates/Free28/will28.cha,CHI,doesn't fit.,-1.0,subject,28
+5291,Bates/Free28/will28.cha,CHI,no toys.,-1.0,"subject, verb",28
+5292,Bates/Free28/will28.cha,CHI,that fit.,-1.0,sv_agreement,28
+5293,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5294,Bates/Free28/will28.cha,CHI,uh this one.,1.0,,28
+5295,Bates/Free28/will28.cha,CAR,like that?,,,28
+5296,Bates/Free28/will28.cha,CHI,like this like this.,1.0,,28
+5297,Bates/Free28/will28.cha,CAR,here like this.,,,28
+5298,Bates/Free28/will28.cha,CHI,see it does!,0.0,,28
+5299,Bates/Free28/will28.cha,CAR,there's another one.,,,28
+5300,Bates/Free28/will28.cha,CAR,huh.,,,28
+5301,Bates/Free28/will28.cha,CHI,oh.,,,28
+5302,Bates/Free28/will28.cha,CAR,here put that one in there.,,,28
+5303,Bates/Free28/will28.cha,CHI,okay.,,,28
+5304,Bates/Free28/will28.cha,CAR,oh good.,,,28
+5305,Bates/Free28/will28.cha,CHI,go back?,0.0,,28
+5306,Bates/Free28/will28.cha,CAR,uh yeah.,,,28
+5307,Bates/Free28/will28.cha,CHI,too whoops.,0.0,,28
+5308,Bates/Free28/will28.cha,CAR,whoops.,,,28
+5309,Bates/Free28/will28.cha,CAR,what goes in there?,,,28
+5310,Bates/Free28/will28.cha,CAR,huh.,,,28
+5311,Bates/Free28/will28.cha,CAR,think this one goes in there.,,,28
+5312,Bates/Free28/will28.cha,CAR,huh.,,,28
+5313,Bates/Free28/will28.cha,CAR,think that one.,,,28
+5314,Bates/Free28/will28.cha,CHI,the one!,0.0,,28
+5315,Bates/Free28/will28.cha,CHI,the oops.,0.0,,28
+5316,Bates/Free28/will28.cha,CAR,oops.,,,28
+5317,Bates/Free28/will28.cha,CHI,a cup.,0.0,,28
+5318,Bates/Free28/will28.cha,CAR,here's one.,,,28
+5319,Bates/Free28/will28.cha,CAR,let's put that one in that one.,,,28
+5320,Bates/Free28/will28.cha,CHI,do right.,-1.0,"subject, object",28
+5321,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5322,Bates/Free28/will28.cha,CHI,do do right.,-1.0,"subject, object",28
+5323,Bates/Free28/will28.cha,CAR,good.,,,28
+5324,Bates/Free28/will28.cha,CHI,one.,,,28
+5324,Bates/Free28/will28.cha,CHI,pss pss.,0,,28
+5325,Bates/Free28/will28.cha,CHI,go like this?,-1.0,"auxiliary, subject",28
+5326,Bates/Free28/will28.cha,CAR,hm.,,,28
+5327,Bates/Free28/will28.cha,CAR,that fits huh?,,,28
+5328,Bates/Free28/will28.cha,CHI,like this.,1.0,,28
+5329,Bates/Free28/will28.cha,CHI,oops.,,,28
+5330,Bates/Free28/will28.cha,CAR,like that?,,,28
+5331,Bates/Free28/will28.cha,CHI,oops.,,,28
+5332,Bates/Free28/will28.cha,CHI,this.,,,28
+5333,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5334,Bates/Free28/will28.cha,CHI,this.,,,28
+5335,Bates/Free28/will28.cha,CAR,huh.,,,28
+5336,Bates/Free28/will28.cha,CAR,wow.,,,28
+5337,Bates/Free28/will28.cha,CHI,oops.,,,28
+5338,Bates/Free28/will28.cha,CHI,see!,,,28
+5339,Bates/Free28/will28.cha,CHI,oh.,,,28
+5340,Bates/Free28/will28.cha,CAR,there's some blocks.,,,28
+5341,Bates/Free28/will28.cha,CHI,a trucks.,-1.0,plural,28
+5342,Bates/Free28/will28.cha,CAR,blocks.,,,28
+5343,Bates/Free28/will28.cha,CHI,then that do.,-1.0,other,28
+5344,Bates/Free28/will28.cha,CHI,these.,,,28
+5345,Bates/Free28/will28.cha,CAR,you going to take them all out.,,,28
+5346,Bates/Free28/will28.cha,CHI,see it them?,0.0,,28
+5347,Bates/Free28/will28.cha,CHI,ares.,,,28
+5348,Bates/Free28/will28.cha,CAR,here why don't you put them over here.,,,28
+5349,Bates/Free28/will28.cha,CAR,put them over here.,,,28
+5350,Bates/Free28/will28.cha,CHI,okay.,,,28
+5351,Bates/Free28/will28.cha,CAR,okay?,,,28
+5352,Bates/Free28/will28.cha,CAR,Will.,,,28
+5353,Bates/Free28/will28.cha,CHI,what?,,,28
+5354,Bates/Free28/will28.cha,CAR,put them right here.,,,28
+5355,Bates/Free28/will28.cha,CHI,see.,,,28
+5356,Bates/Free28/will28.cha,CAR,oh there some balls huh?,,,28
+5357,Bates/Free28/will28.cha,CHI,ball.,,,28
+5358,Bates/Free28/will28.cha,CHI,play baseball.,0.0,,28
+5359,Bates/Free28/will28.cha,CHI,baseball?,,,28
+5360,Bates/Free28/will28.cha,CAR,hm?,,,28
+5361,Bates/Free28/will28.cha,CHI,go baseball.,-1.0,"preposition, determiner",28
+5362,Bates/Free28/will28.cha,CAR,no no no no.,,,28
+5363,Bates/Free28/will28.cha,CAR,you can't throw that.,,,28
+5364,Bates/Free28/will28.cha,CAR,that's not a basketball.,,,28
+5365,Bates/Free28/will28.cha,CAR,you don't throw it up there.,,,28
+5366,Bates/Free28/will28.cha,CAR,no you play right here with it.,,,28
+5367,Bates/Free28/will28.cha,CHI,what?,,,28
+5368,Bates/Free28/will28.cha,CHI,uh.,,,28
+5369,Bates/Free28/will28.cha,CAR,that's a different kind of ball.,,,28
+5370,Bates/Free28/will28.cha,CHI,get.,,,28
+5371,Bates/Free28/will28.cha,CHI,basketball.,,,28
+5372,Bates/Free28/will28.cha,CAR,no those aren't basketballs.,,,28
+5373,Bates/Free28/will28.cha,CAR,see they go through this hole.,,,28
+5374,Bates/Free28/will28.cha,CAR,try putting it through that hole.,,,28
+5375,Bates/Free28/will28.cha,CAR,huh.,,,28
+5376,Bates/Free28/will28.cha,CAR,hey!,,,28
+5377,Bates/Free28/will28.cha,CAR,they fit!,,,28
+5378,Bates/Free28/will28.cha,CAR,huh?,,,28
+5379,Bates/Free28/will28.cha,CHI,basketball.,,,28
+5380,Bates/Free28/will28.cha,CAR,no they don't fit in the basketball Zach.,,,28
+5381,Bates/Free28/will28.cha,CAR,come here.,,,28
+5382,Bates/Free28/will28.cha,CHI,why?,,,28
+5383,Bates/Free28/will28.cha,CAR,come here!,,,28
+5384,Bates/Free28/will28.cha,CAR,put it in that hole.,,,28
+5385,Bates/Free28/will28.cha,CAR,put it in the hole.,,,28
+5386,Bates/Free28/will28.cha,CAR,oh good.,,,28
+5387,Bates/Free28/will28.cha,CHI,good!,,,28
+5388,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5389,Bates/Free28/will28.cha,CHI,oops oops.,0.0,,28
+5390,Bates/Free28/will28.cha,CHI,here it is.,1.0,,28
+5391,Bates/Free28/will28.cha,CHI,play basketball.,0.0,,28
+5392,Bates/Free28/will28.cha,CAR,no those aren't basketballs.,,,28
+5393,Bates/Free28/will28.cha,CAR,those are wooden balls.,,,28
+5394,Bates/Free28/will28.cha,CHI,balls.,,,28
+5395,Bates/Free28/will28.cha,CAR,yeah.,,,28
+5396,Bates/Free28/will28.cha,CHI,ball.,,,28
+5397,Bates/Free28/will28.cha,CHI,the balls?,0.0,,28
+5398,Bates/Free28/will28.cha,CAR,balls.,,,28
+5399,Bates/Free28/will28.cha,CAR,nice balls huh?,,,28
+5400,Bates/Free28/will28.cha,CAR,where's the yellow ball?,,,28
+5401,Bates/Free28/will28.cha,CHI,what?,,,28
+5402,Bates/Free28/will28.cha,CAR,which one is the yellow ball?,,,28
+5403,Bates/Free28/will28.cha,CHI,ball.,,,28
+5404,Bates/Free28/will28.cha,CAR,come here I'll show you.,,,28
+5405,Bates/Free28/will28.cha,CHI,oh.,,,28
+5406,Bates/Free28/will28.cha,CAR,come here.,,,28
+5407,Bates/Free28/will28.cha,CHI,oh.,,,28
+5408,Bates/Free28/will28.cha,CAR,there's a yellow ball.,,,28
+5409,Bates/Free28/will28.cha,CAR,put it through the put it in the hole.,,,28
+5410,Bates/Free28/will28.cha,CAR,and the red ball.,,,28
+5411,Bates/Free28/will28.cha,CHI,play baseball.,0.0,,28
+5412,Bates/Free28/will28.cha,CAR,no that's not a basketball.,,,28
+5413,Bates/Free28/will28.cha,CAR,come here.,,,28
+5414,Bates/Free28/will28.cha,CHI,why?,,,28
+5415,Bates/Free28/will28.cha,CAR,no don't throw those up there.,,,28
+5416,Bates/Free28/will28.cha,CAR,you're going to get in trouble.,,,28
+5417,Bates/Free28/will28.cha,CAR,come here.,,,28
+5418,Bates/Free28/will28.cha,CAR,put it in that hole.,,,28
+5419,Bates/Free28/will28.cha,CAR,the red ball.,,,28
+5420,Bates/Free28/will28.cha,CAR,huh.,,,28
+5421,Bates/Free28/will28.cha,CAR,put the green ball in there.,,,28
+5422,Bates/Free28/will28.cha,CHI,what?,,,28
+5423,Bates/Free28/will28.cha,CAR,put that green ball in there.,,,28
+5424,Bates/Free28/will28.cha,CHI,okay.,,,28
+5425,Bates/Free28/will28.cha,CAR,you put it in.,,,28
+5426,Bates/Free28/will28.cha,CAR,okay.,,,28
+5427,Bates/Free28/will28.cha,CAR,you put it in there.,,,28
+5428,Bates/Free28/will28.cha,CHI,oh.,,,28
+5429,Bates/Free28/will28.cha,CHI,oh.,,,28
+5430,Bates/Free28/will28.cha,CAR,oh look I think these people want to go for a ride.,,,28
+5431,Bates/Free28/will28.cha,CAR,huh.,,,28
+5432,Bates/Free28/will28.cha,CHI,see.,,,28
+5433,Bates/Free28/will28.cha,CAR,don't you think they might want to go for a ride?,,,28
+5434,Bates/Free28/will28.cha,CHI,yep.,,,28
+5435,Bates/Free28/will28.cha,CAR,here why don't you take them for a ride?,,,28
+5436,Bates/Free28/will28.cha,CHI,okay.,,,28
+5437,Kuczaj/041113.cha,CAR,what do you want for breakfast?,,,59
+5438,Kuczaj/041113.cha,CHI,jello and something else.,1.0,,59
+5439,Kuczaj/041113.cha,CAR,do you want one of these toasted?,,,59
+5440,Kuczaj/041113.cha,CHI,I wanna see what you have Mom Mommy.,1.0,,59
+5441,Kuczaj/041113.cha,CAR,uhhuh.,,,59
+5442,Kuczaj/041113.cha,CHI,I want a little bowl of grapenuts.,1.0,,59
+5443,Kuczaj/041113.cha,CAR,a little bowl of grapenuts and jello?,,,59
+5444,Kuczaj/041113.cha,CHI,uhhuh but put a lot of honey in.,1.0,,59
+5445,Kuczaj/041113.cha,CAR,okay do you want hot chocolate?,,,59
+5446,Kuczaj/041113.cha,CHI,no I want milk.,1.0,,59
+5447,Kuczaj/041113.cha,CHI,I have to go poop.,1.0,,59
+5448,Kuczaj/041113.cha,CAR,okay.,,,59
+5449,Kuczaj/041113.cha,CHI,who's using the toilet?,1.0,,59
+5450,Kuczaj/041113.cha,CAR,nobody.,,,59
+5451,Kuczaj/041113.cha,CHI,who left the light on?,1.0,,59
+5452,Kuczaj/041113.cha,CAR,I did.,,,59
+5453,Kuczaj/041113.cha,CHI,I forgot to go tee tee.,0.0,,59
+5454,Kuczaj/041113.cha,CHI,Mommy let's see how little the bowls are.,1.0,,59
+5455,Kuczaj/041113.cha,CHI,hey they're both the same.,1.0,,59
+5456,Kuczaj/041113.cha,CAR,we need to get milk today.,,,59
+5457,Kuczaj/041113.cha,CHI,where?,,,59
+5458,Kuczaj/041113.cha,CHI,hey we're running out of everything.,1.0,,59
+5459,Kuczaj/041113.cha,CHI,we're running out of everything now.,1.0,,59
+5460,Kuczaj/041113.cha,CAR,what are we running out of?,,,59
+5461,Kuczaj/041113.cha,CHI,we're running out of something that was here.,1.0,,59
+5462,Kuczaj/041113.cha,CHI,something that could be here.,1.0,,59
+5463,Kuczaj/041113.cha,CHI,and something that could be here.,1.0,,59
+5464,Kuczaj/041113.cha,CHI,and something that could be here too.,1.0,,59
+5465,Kuczaj/041113.cha,CAR,do you think we should keep all the shelves full all of the time?,,,59
+5466,Kuczaj/041113.cha,CHI,yeah because if we have a lot of food all the time.,-1.0,tense_aspect,59
+5467,Kuczaj/041113.cha,CHI,then we could have then we could have a lot of food.,1.0,,59
+5468,Kuczaj/041113.cha,CAR,we have more bad new Abe.,,,59
+5469,Kuczaj/041113.cha,CHI,what?,,,59
+5470,Kuczaj/041113.cha,CAR,Steve and Marsha called and they aren't going to be able to come up here.,,,59
+5471,Kuczaj/041113.cha,CHI,why didn't we call them?,1.0,,59
+5472,Kuczaj/041113.cha,CAR,it was really strange.,,,59
+5473,Kuczaj/041113.cha,CAR,I tried to call them.,,,59
+5474,Kuczaj/041113.cha,CAR,but their line was busy.,,,59
+5475,Kuczaj/041113.cha,CAR,so I hung up the phone.,,,59
+5476,Kuczaj/041113.cha,CAR,and guess what happened?,,,59
+5477,Kuczaj/041113.cha,CHI,what?,,,59
+5478,Kuczaj/041113.cha,CAR,they called us.,,,59
+5479,Kuczaj/041113.cha,CAR,I called them while they were trying to call us.,,,59
+5480,Kuczaj/041113.cha,CAR,isn't that strange?,,,59
+5481,Kuczaj/041113.cha,CHI,yeah hey Mommy.,1.0,,59
+5482,Kuczaj/041113.cha,CAR,what?,,,59
+5483,Kuczaj/041113.cha,CHI,why don't we go to the grocery store and just look for things that are cheap?,1.0,,59
+5484,Kuczaj/041113.cha,CAR,for what?,,,59
+5485,Kuczaj/041113.cha,CHI,for cereal.,1.0,,59
+5486,Kuczaj/041113.cha,CAR,what kind of cereal?,,,59
+5487,Kuczaj/041113.cha,CHI,you know Alphabits.,1.0,,59
+5488,Kuczaj/041113.cha,CAR,if they're on sale we'll get them.,,,59
+5489,Kuczaj/041113.cha,CHI,I can't make them.,1.0,,59
+5490,Kuczaj/041113.cha,CHI,so we'll have to buy them.,1.0,,59
+5491,Kuczaj/041113.cha,CAR,maybe Santa'll put some in your stocking.,,,59
+5492,Kuczaj/041113.cha,CAR,sometimes he leaves stuff like that.,,,59
+5493,Kuczaj/041113.cha,CHI,yeah like candy.,1.0,,59
+5494,Kuczaj/041113.cha,CHI,how will he know what I want all the way up there?,1.0,,59
+5495,Kuczaj/041113.cha,CAR,you'll have to write a letter and tell him to bring our gifts here instead of to Texas.,,,59
+5496,Kuczaj/041113.cha,CHI,uhuh we're probably going to rent a cabin for some days.,1.0,,59
+5497,Kuczaj/041113.cha,CAR,yeah but not on Christmas day.,,,59
+5498,Kuczaj/041113.cha,CAR,we'll be here then.,,,59
+5499,Kuczaj/041113.cha,CHI,well what are the cabins going to be for?,1.0,,59
+5500,Kuczaj/041113.cha,CHI,who's going to give us gifts.,1.0,,59
+5501,Kuczaj/041113.cha,CAR,all of our friends in Texas.,,,59
+5502,Kuczaj/041113.cha,CHI,how?,,,59
+5503,Kuczaj/041113.cha,CHI,they can't mail them.,1.0,,59
+5504,Kuczaj/041113.cha,CAR,why do you think they can't mail them?,,,59
+5505,Kuczaj/041113.cha,CHI,because then we wouldn't get them on Christmas Eve.,1.0,,59
+5506,Kuczaj/041113.cha,CAR,I think we'd get them before.,,,59
+5507,Kuczaj/041113.cha,CAR,then we're going to mail our gifts to Texas.,,,59
+5508,Kuczaj/041113.cha,CHI,uhhuh but we would get our Christmas gifts before Christmas Eve.,1.0,,59
+5509,Kuczaj/041113.cha,CHI,so we would think we could unwrap them before Christmas.,1.0,,59
+5510,Kuczaj/041113.cha,CAR,no way.,,,59
+5511,Kuczaj/041113.cha,CHI,I have to go poop.,1.0,,59
+5512,Kuczaj/041113.cha,CAR,do you have diarrhea?,,,59
+5513,Kuczaj/041113.cha,CHI,no I went tee tee.,0.0,,59
+5514,Kuczaj/041113.cha,CHI,and then I have to go poop.,1.0,,59
+5515,Kuczaj/041113.cha,CHI,Mommy do you really like those?,1.0,,59
