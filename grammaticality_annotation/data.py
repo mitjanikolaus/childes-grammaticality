@@ -19,6 +19,7 @@ from utils import PROJECT_ROOT_DIR, SPEAKER_CODE_CHILD, SPEAKER_CODES_CAREGIVER
 DATA_SPLIT_RANDOM_STATE = 8
 
 DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
+DATA_PATH_CHILDES_DB_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db")
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
@@ -88,7 +89,7 @@ def load_childes_data_file(path, add_file_ids=False):
 def load_childes_data(path, exclude_test_data=False, add_file_ids=False):
     transcripts = []
     file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
-    for f in Path(path).glob("*.csv"):
+    for f in sorted(Path(path).glob("*.csv")):
         if not exclude_test_data or (f.name.replace(".csv", "") not in file_ids_annotated):
             data = load_childes_data_file(f, add_file_ids)
             transcripts.append(data)

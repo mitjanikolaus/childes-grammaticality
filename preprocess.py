@@ -4,7 +4,6 @@ import os
 import re
 
 import pandas as pd
-import pylangacq
 from tqdm import tqdm
 tqdm.pandas()
 
@@ -313,6 +312,8 @@ def is_external_event(utterance):
 
 
 def preprocess_transcripts(args):
+    import pylangacq
+
     all_utterances = []
     start_index = 0
     if not args.corpora:

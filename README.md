@@ -18,10 +18,7 @@ pip install .
 
 Additionally, we need to install [my fork of the pylangacq repo](https://github.com/mitjanikolaus/pylangacq) (The original repo can be found here: [pylangacq](https://github.com/jacksonllee/pylangacq)) using pip:
 ```
-git clone git@github.com:mitjanikolaus/pylangacq.git
-cd pylangacq
-source activate cf
-pip install .
+pip install git+https://github.com/mitjanikolaus/pylangacq.git
 ```
 
 ## Preprocess data
