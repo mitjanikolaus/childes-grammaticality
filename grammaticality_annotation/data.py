@@ -20,7 +20,7 @@ DATA_SPLIT_RANDOM_STATE = 8
 
 DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
 DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_fixes_childes_db")
-DATA_PATH_CHILDES_DB_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db.csv")
+DATA_FILE_ANNOTATED_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db.csv")
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
@@ -87,22 +87,60 @@ def load_childes_data_file(path, add_file_ids=False):
     return data
 
 
-def load_childes_data(path, exclude_test_data=False, add_file_ids=False):
-    transcripts = []
-    file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
-    for f in sorted(Path(path).glob("*.csv")):
-        if not exclude_test_data or (f.name.replace(".csv", "") not in file_ids_annotated):
-            data = load_childes_data_file(f, add_file_ids)
-            transcripts.append(data)
+TYPES_QUESTION = {
+    "question",
+    "interruption question",
+    "trail off question",
+    "question exclamation",
+    "self interruption question",
+    "trail off",
+}
+TYPES_EXCLAMATION = {"imperative_emphatic"}
+TYPES_STATEMENT = {
+    "declarative",
+    "quotation next line",
+    "quotation precedes",
+    "self interruption",
+    "interruption",
+}
 
-    transcripts = pd.concat(transcripts, ignore_index=True)
+
+def parse_punctuation(utterance_type):
+    if utterance_type in TYPES_QUESTION:
+        return "?"
+    elif utterance_type in TYPES_EXCLAMATION:
+        return "!"
+    elif utterance_type in TYPES_STATEMENT:
+        return "."
+    else:
+        print("Unknown utterance type: ", utterance_type)
+        return "."
+
+
+def load_childes_data(path, exclude_test_data=False, add_file_ids=False, childes_db=False):
+    if childes_db:
+        transcripts = pd.read_csv(DATA_FILE_ANNOTATED_CHILDES_DB)
+        transcripts.rename(columns={"transcript_id": "transcript_file"}, inplace=True)
+        transcripts["transcript_clean"] = transcripts.gloss + transcripts.type.apply(parse_punctuation)
+        transcripts["age"] = transcripts["target_child_age"].round()
+        transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
+    else:
+        transcripts = []
+        file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
+        for f in sorted(Path(path).glob("*.csv")):
+            if not exclude_test_data or (f.name.replace(".csv", "") not in file_ids_annotated):
+                data = load_childes_data_file(f, add_file_ids)
+                transcripts.append(data)
+
+        transcripts = pd.concat(transcripts, ignore_index=True)
 
     return transcripts
 
 
 def load_annotated_childes_data_with_context(path=DATA_PATH_CHILDES_ANNOTATED, context_length=0, sep_token=None,
-                                             exclude_test_data=False, preserve_age_column=False, add_file_ids=False):
-    transcripts = load_childes_data(path, exclude_test_data, add_file_ids)
+                                             exclude_test_data=False, preserve_age_column=False, add_file_ids=False,
+                                             childes_db=False):
+    transcripts = load_childes_data(path, exclude_test_data, add_file_ids, childes_db)
     data = []
     for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
         sentence = row.speaker_code + row.transcript_clean
@@ -136,10 +174,10 @@ def load_annotated_childes_data_with_context(path=DATA_PATH_CHILDES_ANNOTATED, c
     return data
 
 
-def create_dataset_dicts(num_cv_folds, val_split_proportion, context_length, random_seed=DATA_SPLIT_RANDOM_STATE, train_data_size=1.0, create_val_split=False, sep_token=None):
+def create_dataset_dicts(num_cv_folds, val_split_proportion, context_length, childes_db, random_seed=DATA_SPLIT_RANDOM_STATE, train_data_size=1.0, create_val_split=False, sep_token=None):
     dataset_dicts = [DatasetDict() for _ in range(num_cv_folds)]
 
-    data_manual_annotations = load_annotated_childes_data_with_context(context_length=context_length, sep_token=sep_token)
+    data_manual_annotations = load_annotated_childes_data_with_context(context_length=context_length, sep_token=sep_token, childes_db=childes_db)
     data_manual_annotations_train_splits, data_manual_annotations_test_splits = create_cv_folds(data_manual_annotations, num_cv_folds)
     if train_data_size < 1.0:
         data_manual_annotations_train_splits = [d.sample(round(len(d) * train_data_size), random_state=DATA_SPLIT_RANDOM_STATE) for d in data_manual_annotations_train_splits]

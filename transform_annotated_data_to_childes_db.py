@@ -1,16 +1,10 @@
 """Load and store transcripts from childes-db."""
 import argparse
-import math
-import pickle
-
-from tqdm import tqdm
 
 import pandas as pd
 
-from grammaticality_annotation.data import load_childes_data, DATA_PATH_CHILDES_ANNOTATED, \
-    DATA_PATH_CHILDES_DB_ANNOTATED, DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB
-from preprocess import get_pos_tag
-from utils import POS_PUNCTUATION
+from grammaticality_annotation.data import load_childes_data, \
+    DATA_FILE_ANNOTATED_CHILDES_DB, DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB
 
 DB_ARGS = None
 # Change if you are using local db access:
@@ -118,7 +112,7 @@ def parse_args():
     argparser = argparse.ArgumentParser()
 
     argparser.add_argument(
-        "--output-path", type=str, default=DATA_PATH_CHILDES_DB_ANNOTATED
+        "--output-path", type=str, default=DATA_FILE_ANNOTATED_CHILDES_DB
     )
 
     args = argparser.parse_args()

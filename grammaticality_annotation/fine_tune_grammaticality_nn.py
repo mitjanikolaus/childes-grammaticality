@@ -226,7 +226,7 @@ def main(args):
     else:
         tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
-    datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length,
+    datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length, args.childes_db,
                                        args.train_data_size, create_val_split=True,
                                        sep_token=tokenizer.sep_token, train_data_size=args.train_data_size)
 
@@ -382,6 +382,13 @@ def parse_args():
         type=float,
         default=1.0,
         help="Use only a subset of the available training data."
+    )
+
+    argparser.add_argument(
+        "--childes-db",
+        default=False,
+        action="store_true",
+        help="Use data from childes-db"
     )
     argparser = Trainer.add_argparse_args(argparser)
 

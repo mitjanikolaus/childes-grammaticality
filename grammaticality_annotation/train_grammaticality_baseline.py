@@ -67,7 +67,7 @@ def main(args):
     maj_class_mccs = []
     maj_class_pearson_scores = []
 
-    dataset_dicts = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length)
+    dataset_dicts = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length, args.childes_db)
 
     for fold, dataset in enumerate(dataset_dicts):
         tokenizer_path = os.path.join(TOKENIZERS_DIR, f"tokenizer_{fold}.json")
@@ -129,7 +129,7 @@ def main(args):
 
         pearson_r = pearsonr(labels, preds)[0]
         pearson_scores.append(pearson_r)
-        print("MCC: ", mcc)
+        print("PCC: ", pearson_r)
 
     print(f"==================================\n"
           f"Majority Classifier Accuracy: {np.mean(maj_class_accuracies):.2f} Stddev: {np.std(maj_class_accuracies):.2f}")
@@ -197,6 +197,12 @@ def parse_args():
         type=int,
         default=5,
         help="Number of cross-validation folds"
+    )
+    argparser.add_argument(
+        "--childes-db",
+        default=False,
+        action="store_true",
+        help="Use data from childes-db"
     )
     argparser = Trainer.add_argparse_args(argparser)
 
