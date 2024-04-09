@@ -65,8 +65,8 @@ python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsof
 ```
 
 If you are using a small GPU you will most likely need to decrease the batch size for finetuning. The following command
-can be used to train models which reach a Pearson Correlation Coefficient (PCC) of 0.75 on the test set, even better
-than what the score reported in the paper (thanks to improved hyperparameters).
+can be used to train models which reach an average Pearson Correlation Coefficient (PCC) of 0.75 on the test sets, even
+better than what the score reported in the paper (thanks to improved hyperparameters).
 ```
 python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsoft/deberta-v3-large --context-length 8 --batch-size 5 --accumulate_grad_batches 20 --learning-rate 5e-6
 ```
