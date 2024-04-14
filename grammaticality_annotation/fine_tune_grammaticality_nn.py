@@ -18,7 +18,7 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
-    create_dataset_dicts, load_childes_data_file
+    create_dataset_dicts
 from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, FILE_ID_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
@@ -198,11 +198,9 @@ class CHILDESGrammarModel(LightningModule):
 
         preds = preds - 1
 
-        file_ids = batch[FILE_ID_FIELD]
-        assert torch.all(file_ids == torch.min(file_ids))
-
         # Store predictions
-        path_name = os.path.join(self.predict_data_dir, f"{int(torch.min(file_ids))}.csv")
+        # TODO file names? batch[FILE_ID_FIELD] transcript id?
+        path_name = os.path.join(self.predict_data_dir, f"annotated_{batch_idx}.csv")
         data_raw = load_childes_data_file(path_name)
         data_raw.loc[data_raw[LABEL_FIELD] == "TODO", f"is_grammatical_{self.model_id}"] = preds.tolist()
 
@@ -226,7 +224,7 @@ def main(args):
     else:
         tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
-    datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length, args.childes_db,
+    datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length,
                                        args.train_data_size, create_val_split=True,
                                        sep_token=tokenizer.sep_token, train_data_size=args.train_data_size)
 
@@ -384,12 +382,6 @@ def parse_args():
         help="Use only a subset of the available training data."
     )
 
-    argparser.add_argument(
-        "--childes-db",
-        default=False,
-        action="store_true",
-        help="Use data from childes-db"
-    )
     argparser = Trainer.add_argparse_args(argparser)
 
     args = argparser.parse_args()

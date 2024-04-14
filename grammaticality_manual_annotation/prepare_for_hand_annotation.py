@@ -3,7 +3,6 @@ import os
 
 import pandas as pd
 
-from grammaticality_annotation.data import ANNOTATION_ALL_FILES_PATH
 from utils import (
     SPEAKER_CODE_CHILD,
     SPEAKER_CODES_CAREGIVER, ANNOTATED_UTTERANCES_FILE, filter_for_min_num_words, split_into_words

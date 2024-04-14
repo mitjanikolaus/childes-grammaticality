@@ -74,7 +74,7 @@ python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsof
 ## Annotate data
 
 ```
-python grammaticality_annotation/annotate_grammaticality_nn.py --model lightning_logs/version_123 --data-dir data/manual_annotation/all
+python grammaticality_annotation/annotate_grammaticality_nn.py --model ~/data/childes_grammaticality/lightning_logs/version_123 --data-dir data/manual_annotation/all
 ```
 
 The data will be annotated with the following coding scheme:

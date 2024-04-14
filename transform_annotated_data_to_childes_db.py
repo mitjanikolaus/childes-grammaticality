@@ -1,9 +1,16 @@
 import argparse
+import os
+from pathlib import Path
 
 import pandas as pd
 
-from grammaticality_annotation.data import load_childes_data, \
-    DATA_FILE_ANNOTATED_CHILDES_DB, DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB, transform_childes_db_transcripts
+from grammaticality_annotation.data import DATA_FILE_ANNOTATED_CHILDES_DB, transform_childes_db_transcripts, speaker_code_to_speaker_token
+from grammaticality_annotation.tokenizer import FILE_ID_FIELD
+from utils import PROJECT_ROOT_DIR
+
+DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated")
+DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_fixes_childes_db")
+
 
 DB_ARGS = None
 # Change if you are using local db access:
@@ -33,6 +40,26 @@ TYPES_STATEMENT = {
 
 CHILD = "CHI"
 ADULT = "ADU"
+
+
+def load_childes_data_file(path, add_file_ids=False):
+    data = pd.read_csv(path, index_col=0)
+    data["speaker_code"] = data.speaker_code.apply(speaker_code_to_speaker_token)
+    if add_file_ids:
+        data[FILE_ID_FIELD] = int(os.path.basename(path).split(".csv")[0])
+    return data
+
+
+def load_childes_data(path, exclude_test_data=False, add_file_ids=False, childes_db=False):
+    transcripts = []
+    file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
+    for f in sorted(Path(path).glob("*.csv")):
+        if not exclude_test_data or (f.name.replace(".csv", "") not in file_ids_annotated):
+            data = load_childes_data_file(f, add_file_ids)
+            transcripts.append(data)
+
+    transcripts = pd.concat(transcripts, ignore_index=True)
+    return transcripts
 
 
 def parse_speaker_role(role):

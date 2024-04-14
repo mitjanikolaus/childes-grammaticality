@@ -9,11 +9,10 @@ from pytorch_lightning import Trainer
 from transformers import AutoTokenizer
 import pandas as pd
 
-from grammaticality_annotation.data import load_childes_data, load_annotated_childes_data_with_context, \
-    CHILDESGrammarDataModule, DATA_PATH_CHILDES_ANNOTATED
+from grammaticality_annotation.data import CHILDESGrammarDataModule, add_context
 from grammaticality_annotation.fine_tune_grammaticality_nn import CHILDESGrammarModel
 from grammaticality_annotation.tokenizer import LABEL_FIELD
-from grammaticality_manual_annotation.prepare_for_hand_annotation import ANNOTATION_ALL_FILES_PATH
+from load_childes_db_data import DATA_FILE_PREPROCESSED_CHILDES_DB
 from utils import PROJECT_ROOT_DIR
 
 ANNOTATION_ANNOTATED_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/automatically_annotated"
@@ -21,7 +20,7 @@ ANNOTATION_ANNOTATED_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/auto
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Needs to match the number of utterances within a file to be annotated!
-BATCH_SIZE = 200
+BATCH_SIZE = 200 #TODO
 
 
 def annotate(args):
@@ -30,8 +29,10 @@ def annotate(args):
 
     context_length = hparams["context_length"]
     sep_token = tokenizer.sep_token
-    data = load_annotated_childes_data_with_context(args.data_dir, context_length=context_length, sep_token=sep_token,
-                                                    exclude_test_data=True, preserve_age_column=True, add_file_ids=True)
+    data = pd.read_csv(args.data_path)
+
+    data = add_context(data, context_length=context_length, sep_token=sep_token)
+
     dataset = Dataset.from_pandas(data, preserve_index=False)
     dataset_dict = DatasetDict()
     dataset_dict["pred"] = dataset
@@ -60,7 +61,7 @@ def annotate(args):
         torch.cat(predictions)
 
     # Majority voting
-    data_annotated = load_childes_data(args.data_dir)
+    data_annotated = pd.read_csv(args.data_path) #TODO ??
 
     def majority_vote(row):
         if row[LABEL_FIELD] == "TODO":
@@ -81,9 +82,9 @@ def annotate(args):
 def parse_args():
     argparser = argparse.ArgumentParser()
     argparser.add_argument(
-        "--data-dir",
+        "--data-path",
         type=str,
-        default=ANNOTATION_ALL_FILES_PATH,
+        default=DATA_FILE_PREPROCESSED_CHILDES_DB,
     )
     argparser.add_argument(
         "--model",
