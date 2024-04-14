@@ -3,9 +3,10 @@ import os
 
 import pandas as pd
 
+from grammaticality_annotation.data import ANNOTATION_ALL_FILES_PATH
 from utils import (
     SPEAKER_CODE_CHILD,
-    SPEAKER_CODES_CAREGIVER, ANNOTATED_UTTERANCES_FILE, filter_for_min_num_words, PROJECT_ROOT_DIR, split_into_words
+    SPEAKER_CODES_CAREGIVER, ANNOTATED_UTTERANCES_FILE, filter_for_min_num_words, split_into_words
 )
 import random
 
@@ -62,9 +63,6 @@ def get_utts_to_annotate(utterances):
     utts_to_annotate = utterances[(utterances.speaker_code == SPEAKER_CODE_CHILD)]
     utts_to_annotate = filter_for_min_num_words(utts_to_annotate, MIN_NUM_WORDS)
     return utts_to_annotate
-
-
-ANNOTATION_ALL_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/all"
 
 
 def prepare(args):

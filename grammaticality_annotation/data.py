@@ -22,7 +22,9 @@ DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_ann
 DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_fixes_childes_db")
 DATA_FILE_ANNOTATED_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db.csv")
 
-DATA_FILE_ALL_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "childes_db.csv")
+ANNOTATION_ALL_FILES_PATH = os.path.join(PROJECT_ROOT_DIR, "data", "preprocessed", "all")
+
+DATA_FILE_ALL_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "preprocessed", "childes_db.csv")
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
