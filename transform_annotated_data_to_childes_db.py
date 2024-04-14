@@ -1,10 +1,9 @@
-"""Load and store transcripts from childes-db."""
 import argparse
 
 import pandas as pd
 
 from grammaticality_annotation.data import load_childes_data, \
-    DATA_FILE_ANNOTATED_CHILDES_DB, DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB
+    DATA_FILE_ANNOTATED_CHILDES_DB, DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB, transform_childes_db_transcripts
 
 DB_ARGS = None
 # Change if you are using local db access:
@@ -31,7 +30,6 @@ TYPES_STATEMENT = {
     "self interruption",
     "interruption",
 }
-
 
 CHILD = "CHI"
 ADULT = "ADU"
@@ -83,18 +81,21 @@ def transform():
 
         data_annotated_corpus = data_annotated[data_annotated.corpus == corpus]
         for transcript_file_name in data_annotated_corpus.transcript_file_name.unique():
-            print(transcript_file_name)
-            transcript_ids = transcripts[transcripts.filename.str.contains(f"{corpus}/{transcript_file_name.replace('.cha', '')}")].transcript_id.values
+            transcript_ids = transcripts[transcripts.filename.str.contains(
+                f"{corpus}/{transcript_file_name.replace('.cha', '')}")].transcript_id.values
             if not len(transcript_ids) == 1:
+                print(transcript_file_name)
                 print(len(transcript_ids))
                 raise RuntimeError("Transcript id error")
             transcript_id = transcript_ids[0]
 
             utts_transcript = utt_corpus[utt_corpus.transcript_id == transcript_id].copy()
-            utts_transcript["gloss"] = utts_transcript["gloss"].apply(lambda x: x.replace("xxx", "").replace("www", "").replace("yyy", "").replace("  ", " ").strip())
+            utts_transcript["gloss"] = utts_transcript["gloss"].apply(
+                lambda x: x.replace("xxx", "").replace("www", "").replace("yyy", "").replace("  ", " ").strip())
             utts_transcript = utts_transcript[~utts_transcript.gloss.isin([""])]
 
-            data_annotated_transcript = data_annotated_corpus[data_annotated_corpus.transcript_file_name == transcript_file_name]
+            data_annotated_transcript = data_annotated_corpus[
+                data_annotated_corpus.transcript_file_name == transcript_file_name]
 
             utterances_selection = utts_transcript.iloc[:len(data_annotated_transcript)].copy()
 
@@ -102,6 +103,14 @@ def transform():
 
             utterances_selection["is_grammatical"] = data_annotated_transcript["is_grammatical"].values
             utterances_selection["labels"] = data_annotated_transcript["labels"].values
+
+            utterances_selection = transform_childes_db_transcripts(utterances_selection)
+
+            keep_columns = [
+                "id", "transcript_file", "speaker_code", "transcript_clean", "is_grammatical", "labels", "age"
+            ]
+            utterances_selection = utterances_selection[keep_columns]
+
             data_annotated_childes_db.append(utterances_selection)
 
     data_annotated_childes_db = pd.concat(data_annotated_childes_db, ignore_index=True)

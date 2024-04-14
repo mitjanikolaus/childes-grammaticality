@@ -23,6 +23,7 @@ MIN_NUM_WORDS = 1
 # We are unfortunately only studying mainstream US/UK English
 EXCLUDED_CORPORA = ["Wells", "MPI-EVA-Manchester", "Post", "HSLLD", "Bohannon", "Brown", "Hall", "Brent", "Gleason", "Morisset", "Belfast"]
 ADDITIONAL_EXCLUDED_CORPORA = ["Demetras1", "Demetras2"]
+ALL_EXCLUDED_CORPORA = EXCLUDED_CORPORA + ADDITIONAL_EXCLUDED_CORPORA
 
 # These files have been excluded as they have been included in preliminary annotation experiments
 TRANSCRIPT_FILES_EXCLUDED = ["Braunwald/020128.cha", "MPI-EVA-Manchester/Fraser/030100b.cha", "Providence/Alex/021025.cha"]

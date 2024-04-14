@@ -22,6 +22,8 @@ DATA_PATH_CHILDES_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "manual_ann
 DATA_PATH_CHILDES_ANNOTATED_FIXES_FOR_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_fixes_childes_db")
 DATA_FILE_ANNOTATED_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db.csv")
 
+DATA_FILE_ALL_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "childes_db.csv")
+
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
 
@@ -117,13 +119,17 @@ def parse_punctuation(utterance_type):
         return "."
 
 
+def transform_childes_db_transcripts(data):
+    data.rename(columns={"transcript_id": "transcript_file"}, inplace=True)
+    data["transcript_clean"] = data.gloss + data.type.apply(parse_punctuation)
+    data["age"] = data["target_child_age"].round()
+    data["speaker_code"] = data.speaker_code.apply(speaker_code_to_speaker_token)
+    return data
+
+
 def load_childes_data(path, exclude_test_data=False, add_file_ids=False, childes_db=False):
     if childes_db:
         transcripts = pd.read_csv(DATA_FILE_ANNOTATED_CHILDES_DB)
-        transcripts.rename(columns={"transcript_id": "transcript_file"}, inplace=True)
-        transcripts["transcript_clean"] = transcripts.gloss + transcripts.type.apply(parse_punctuation)
-        transcripts["age"] = transcripts["target_child_age"].round()
-        transcripts["speaker_code"] = transcripts.speaker_code.apply(speaker_code_to_speaker_token)
     else:
         transcripts = []
         file_ids_annotated = [f.name[0] for f in Path(DATA_PATH_CHILDES_ANNOTATED).glob("*.csv")]
