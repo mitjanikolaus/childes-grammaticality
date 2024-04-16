@@ -90,6 +90,8 @@ def load():
         utt_corpus = utt_corpus[utt_corpus.speaker_code.isin(SPEAKER_CODES_CAREGIVER + [SPEAKER_CODE_CHILD])]
         utt_corpus = transform_childes_db_transcripts(utt_corpus)
 
+        # TODO transcript file ids are not monotonically increasing?
+
         utt_corpus["num_words"] = utt_corpus.transcript_clean.apply(
             lambda x: len(split_into_words(x, split_on_apostrophe=False, remove_commas=True,
                                            remove_trailing_punctuation=True))
