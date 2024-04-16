@@ -90,8 +90,6 @@ def load():
         utt_corpus = utt_corpus[utt_corpus.speaker_code.isin(SPEAKER_CODES_CAREGIVER + [SPEAKER_CODE_CHILD])]
         utt_corpus = transform_childes_db_transcripts(utt_corpus)
 
-        # TODO transcript file ids are not monotonically increasing?
-
         utt_corpus["num_words"] = utt_corpus.transcript_clean.apply(
             lambda x: len(split_into_words(x, split_on_apostrophe=False, remove_commas=True,
                                            remove_trailing_punctuation=True))
@@ -100,6 +98,7 @@ def load():
         utt_corpus[LABEL_FIELD] = ""
         utt_corpus.loc[(utt_corpus.speaker_code == TOKEN_SPEAKER_CHILD) & (utt_corpus.num_words > 1), LABEL_FIELD] = "TODO"
 
+        utt_corpus.sort_values(["transcript_file", "utterance_order"], inplace=True)
         utt_corpus = utt_corpus[["id", "transcript_file", "speaker_code", "transcript_clean", LABEL_FIELD, "age"]]
         data_childes_db.append(utt_corpus)
 
