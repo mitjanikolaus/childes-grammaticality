@@ -16,7 +16,7 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizerFast
 
-from grammaticality_annotation.data import train_val_split, DATA_FILE_PREPROCESSED_CHILDES_DB
+from grammaticality_annotation.data import train_val_split
 from grammaticality_annotation.tokenizer import (train_tokenizer, TOKEN_PAD, TOKENIZERS_DIR,
                                                  TOKEN_SPEAKER_CHILD, TOKEN_SPEAKER_CAREGIVER)
 from utils import PROJECT_ROOT_DIR

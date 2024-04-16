@@ -19,7 +19,7 @@ from transformers import (
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
     create_dataset_dicts
-from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, FILE_ID_FIELD
+from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, TRANSCRIPT_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
 
@@ -203,6 +203,7 @@ class CHILDESGrammarModel(LightningModule):
 
         # Store predictions
         # TODO file names? batch[FILE_ID_FIELD] transcript id?
+        batch[TRANSCRIPT_FIELD]
         path_name = os.path.join(self.predict_data_dir, f"annotated_{batch_idx}.csv")
         data_raw = load_childes_data_file(path_name)
         data_raw.loc[data_raw[LABEL_FIELD] == "TODO", f"is_grammatical_{self.model_id}"] = preds.tolist()

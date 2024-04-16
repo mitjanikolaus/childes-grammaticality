@@ -79,17 +79,6 @@ python grammaticality_annotation/annotate_grammaticality_nn.py --model ~/data/ch
 
 The data will be annotated with the following coding scheme:
 
-|  ungrammatical  | ambiguous | grammatical  |
-|:---------------:|:---------:|:------------:|
-|        0        |     1     |      2       |
-
-
-
-
-## Acknowledgements
-Thanks to the authors of the pylangacq repo: 
-
-Lee, Jackson L., Ross Burkholder, Gallagher B. Flinn, and Emily R. Coppess. 2016.
-[Working with CHAT transcripts in Python](https://jacksonllee.com/papers/lee-etal-2016-pylangacq.pdf).
-Technical report [TR-2016-02](https://newtraell.cs.uchicago.edu/research/publications/techreports/TR-2016-02),
-Department of Computer Science, University of Chicago.
+| ungrammatical | ambiguous | grammatical |
+|:-------------:|:---------:|:-----------:|
+|      -1       |     0     |      1      |

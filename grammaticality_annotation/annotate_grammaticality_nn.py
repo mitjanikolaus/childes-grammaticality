@@ -22,6 +22,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # Needs to match the number of utterances within a file to be annotated!
 BATCH_SIZE = 200 #TODO
 
+DATA_DIR_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "childes_db")
+
 
 def annotate(args):
     hparams = yaml.safe_load(open(os.path.join(args.model, "hparams.yaml")))
@@ -48,17 +50,20 @@ def annotate(args):
                                   train_data_size=1,
                                   ds_dict=dataset_dict)
 
-    checkpoints = glob.glob(args.model+"/checkpoints/epoch*.ckpt")
-    print(f"Model checkpoints: {checkpoints}")
+    checkpoints = list(glob.glob(args.model+"/checkpoints/epoch*.ckpt"))
+    assert len(checkpoints) == 1, "No or multiple checkpoints found."
+    checkpoint = checkpoints[0]
+    print(f"Model checkpoint: {checkpoint}")
 
-    for i, checkpoint in enumerate(checkpoints):
-        print(f"\n\nAnnotating with model checkpoint #{i}")
-        model = CHILDESGrammarModel.load_from_checkpoint(checkpoint, predict_data_dir=args.data_dir, model_id=i)
-        model.eval()
+    os.makedirs(args.out_data_dir, exist_ok=True)
 
-        trainer = Trainer(devices=1 if torch.cuda.is_available() else None, accelerator="auto")
-        predictions = trainer.predict(model, datamodule=dm)
-        torch.cat(predictions)
+    model_id = int(args.model.split("_")[-1])
+    model = CHILDESGrammarModel.load_from_checkpoint(checkpoint, predict_data_dir=args.out_data_dir, model_id=model_id)
+    model.eval()
+
+    trainer = Trainer(devices=1 if torch.cuda.is_available() else None, accelerator="auto")
+    predictions = trainer.predict(model, datamodule=dm)
+    torch.cat(predictions)
 
     # Majority voting
     data_annotated = pd.read_csv(args.data_path) #TODO ??
@@ -73,9 +78,6 @@ def annotate(args):
     data_annotated[LABEL_FIELD] = data_annotated.apply(majority_vote, axis=1)
 
     # Append training data
-    data_train = load_childes_data(DATA_PATH_CHILDES_ANNOTATED)
-    data_all = pd.concat([data_train, data_annotated])
-
     data_all.to_csv(os.path.join(args.data_dir, "majority_vote.csv"))
 
 
@@ -85,6 +87,11 @@ def parse_args():
         "--data-path",
         type=str,
         default=DATA_FILE_PREPROCESSED_CHILDES_DB,
+    )
+    argparser.add_argument(
+        "--out-data-dir",
+        type=str,
+        default=DATA_DIR_ANNOTATED,
     )
     argparser.add_argument(
         "--model",

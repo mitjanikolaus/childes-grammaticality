@@ -10,9 +10,10 @@ from sklearn.utils import class_weight
 
 from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
+from tqdm import tqdm
 
 from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TRANSCRIPT_FIELD,
-                                                 ERROR_LABELS_FIELD, AGE_FIELD, FILE_ID_FIELD)
+                                                 ERROR_LABELS_FIELD, AGE_FIELD)
 from utils import PROJECT_ROOT_DIR
 
 DATA_SPLIT_RANDOM_STATE = 8
@@ -67,9 +68,9 @@ def train_val_split(data, val_split_size, random_seed=DATA_SPLIT_RANDOM_STATE):
 
 
 def add_context(transcripts, context_length=0, sep_token=None):
-
     data = []
-    for i, row in transcripts[~transcripts[LABEL_FIELD].isna()].iterrows():
+    rows_to_annotate = transcripts[~transcripts[LABEL_FIELD].isna()]
+    for i, row in tqdm(rows_to_annotate.iterrows(), total=len(rows_to_annotate)):
         sentence = row.speaker_code + row.transcript_clean
         if sep_token and context_length >= 1:
             sentence = sep_token + sentence
@@ -172,7 +173,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
         return DataLoader(self.dataset["test"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_batch, num_workers=self.num_workers)
 
     def predict_dataloader(self):
-        return DataLoader(self.dataset["pred"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_inference_batch, num_workers=self.num_workers)
+        return DataLoader(self.dataset["pred"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_inference_batch, num_workers=self.num_workers, shuffle=False)
 
     def tokenize_batch(self, batch):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens)
@@ -192,7 +193,7 @@ def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=T
     if add_labels:
         features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
     if add_file_ids:
-        features.data[FILE_ID_FIELD] = torch.tensor([b[FILE_ID_FIELD] for b in batch])
+        features.data[TRANSCRIPT_FIELD] = torch.tensor([b[TRANSCRIPT_FIELD] for b in batch])
 
     return features
 
