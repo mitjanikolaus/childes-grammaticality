@@ -41,7 +41,7 @@ class CHILDESGrammarModel(LightningModule):
             eval_batch_size: int,
             learning_rate: float,
             class_weights=None,
-            dataset = None,
+            dataset=None,
             adam_epsilon: float = 1e-8,
             warmup_steps: int = 0,
             weight_decay: float = 0.0,
@@ -58,7 +58,8 @@ class CHILDESGrammarModel(LightningModule):
         self.save_hyperparameters(ignore=["dataset", "class_weights"])
 
         if os.path.isfile(model_name_or_path):
-            self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels, strict=False)
+            self.model = LSTMSequenceClassification.load_from_checkpoint(model_name_or_path, num_labels=num_labels,
+                                                                         strict=False)
         else:
             self.config = AutoConfig.from_pretrained(model_name_or_path, num_labels=num_labels)
             self.model = AutoModelForSequenceClassification.from_pretrained(model_name_or_path, config=self.config)
@@ -135,7 +136,8 @@ class CHILDESGrammarModel(LightningModule):
         self.log(f"val_loss", loss, prog_bar=True)
         for metric in self.metrics:
             metric_results = metric.compute(predictions=preds, references=labels)
-            metric_results = {"val_" + key: value if not np.isnan(value) else 0 for key, value in metric_results.items()}
+            metric_results = {"val_" + key: value if not np.isnan(value) else 0 for key, value in
+                              metric_results.items()}
 
             self.log_dict(metric_results, prog_bar=True)
 
@@ -147,7 +149,8 @@ class CHILDESGrammarModel(LightningModule):
         self.log(f"test_loss", loss, prog_bar=True)
         for metric in self.metrics:
             metric_results = metric.compute(predictions=preds, references=labels)
-            metric_results = {"test_" + key: value if not np.isnan(value) else 0 for key, value in metric_results.items()}
+            metric_results = {"test_" + key: value if not np.isnan(value) else 0 for key, value in
+                              metric_results.items()}
 
             self.log_dict(metric_results, prog_bar=True)
 
@@ -225,8 +228,8 @@ def main(args):
         tokenizer = AutoTokenizer.from_pretrained(args.model, use_fast=True)
 
     datasets = create_dataset_dicts(args.num_cv_folds, args.val_split_proportion, args.context_length,
-                                       args.train_data_size, create_val_split=True,
-                                       sep_token=tokenizer.sep_token, train_data_size=args.train_data_size)
+                                    args.train_data_size, create_val_split=True,
+                                    sep_token=tokenizer.sep_token, train_data_size=args.train_data_size)
 
     run_id = 0
     for fold in range(args.num_cv_folds):
@@ -266,8 +269,9 @@ def main(args):
             tokenizer.pad_token = tokenizer.eos_token
             model.config.pad_token_id = model.config.eos_token_id
 
-        checkpoint_callback = ModelCheckpoint(monitor="val_pearsonr", mode="max", save_last=True,
-                                                filename="{epoch:02d}-{val_pearsonr:.2f}")
+        checkpoint_callback = ModelCheckpoint(monitor="val_pearsonr",
+                                              mode="max",
+                                              filename="{epoch:02d}-{val_pearsonr:.2f}")
         early_stop_callback = EarlyStopping(monitor="val_pearsonr", patience=20, verbose=True, mode="max",
                                             min_delta=0.01, stopping_threshold=0.99)
 
@@ -321,7 +325,13 @@ def main(args):
 
     val_pearsonr_scores = [results["val_pearsonr"] for results in val_results]
 
-    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs), "pearson_r: mean": np.mean(pearson_r_scores), "pearson_r: std": np.std(pearson_r_scores), "accuracy: mean": np.mean(accuracies), "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs), "val_mcc: std": np.std(val_mccs), "val_pearsonr: mean": np.mean(val_pearsonr_scores), "val_pearsonr: std": np.std(val_pearsonr_scores), "context_length": args.context_length, "train_data_size": args.train_data_size,
+    results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs),
+                                "pearson_r: mean": np.mean(pearson_r_scores),
+                                "pearson_r: std": np.std(pearson_r_scores), "accuracy: mean": np.mean(accuracies),
+                                "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs),
+                                "val_mcc: std": np.std(val_mccs), "val_pearsonr: mean": np.mean(val_pearsonr_scores),
+                                "val_pearsonr: std": np.std(val_pearsonr_scores), "context_length": args.context_length,
+                                "train_data_size": args.train_data_size,
                                 "run_id": run_id}])
     results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
 
