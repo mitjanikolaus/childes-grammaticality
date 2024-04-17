@@ -16,36 +16,10 @@ To install the current repo:
 pip install .
 ```
 
-Additionally, we need to install [my fork of the pylangacq repo](https://github.com/mitjanikolaus/pylangacq) (The original repo can be found here: [pylangacq](https://github.com/jacksonllee/pylangacq)) using pip:
-```
-pip install git+https://github.com/mitjanikolaus/pylangacq.git
-```
-
-## Preprocess data
-
-
-### CHILDES corpora
-All English CHILDES corpora need to be downloaded from the
-[CHILDES database](https://childes.talkbank.org/) and extracted to `~/data/CHILDES/`.
-
-To preprocess the data, once you've installed the [pylangacq](https://github.com/mitjanikolaus/pylangacq) library as
-mentioned above, you can run:
+## Load data from CHILDES-DB
 
 ```
-python preprocess.py
-```
-This preprocessed all corpora that are conversational (have child AND caregiver transcripts), and are in English.
-
-Afterwards, the utterances need to be annotated with speech acts. Use the method `crf_annotate` from the following
-repo: [childes-speech-acts](https://github.com/mitjanikolaus/childes-speech-acts).
-```
-python crf_annotate.py --model checkpoint_full_train --data ~/data/communicative_feedback/utterances_annotated.csv --out ~/data/communicative_feedback/utterances_with_speech_acts.csv --use-pos --use-bi-grams --use-repetitions
-```
-
-Finally, annotate speech-relatedness and intelligibility (this is used to filter out non-speech-like utterances and
-non-intelligible utterances before annotating grammaticality):
-```
-python annotate_speech_related_and_intelligible.py
+python load_childes_db_data.py
 ```
 
 ## Train models for annotation
