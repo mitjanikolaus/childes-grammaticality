@@ -1,17 +1,16 @@
 import argparse
 import glob
 import os
-import numpy as np
 import torch
 import yaml
 from datasets import Dataset, DatasetDict
 from pytorch_lightning import Trainer
+from tqdm import tqdm
 from transformers import AutoTokenizer
 import pandas as pd
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, add_context
 from grammaticality_annotation.fine_tune_grammaticality_nn import CHILDESGrammarModel
-from grammaticality_annotation.tokenizer import LABEL_FIELD
 from load_childes_db_data import DATA_DIR_PREPROCESSED_CHILDES_DB
 from utils import PROJECT_ROOT_DIR
 
@@ -31,7 +30,10 @@ def annotate(args):
 
     context_length = hparams["context_length"]
     sep_token = tokenizer.sep_token
-    data = pd.read_csv(args.data_path)
+
+    print('loading data...')
+    transcript_files = {p: pd.read_csv(p) for p in tqdm(sorted(glob.glob(os.path.join(args.data_path, "*.csv"))))}
+    data = pd.concat(transcript_files.values(), ignore_index=True)
 
     data = add_context(data, context_length=context_length, sep_token=sep_token)
 
@@ -55,30 +57,19 @@ def annotate(args):
     checkpoint = checkpoints[0]
     print(f"Model checkpoint: {checkpoint}")
 
+    # copy the raw data into the output dir, the prediction loop will update the labels directly in these files
     os.makedirs(args.out_data_dir, exist_ok=True)
+    for path, file in transcript_files.items():
+        file_name = os.path.basename(path)
+        out_path = os.path.join(args.out_data_dir, file_name)
+        file.to_csv(out_path, index=False)
 
     model_id = int(args.model.split("_")[-1])
     model = CHILDESGrammarModel.load_from_checkpoint(checkpoint, predict_data_dir=args.out_data_dir, model_id=model_id)
     model.eval()
 
     trainer = Trainer(devices=1 if torch.cuda.is_available() else None, accelerator="auto")
-    predictions = trainer.predict(model, datamodule=dm)
-    torch.cat(predictions)
-
-    # Majority voting
-    data_annotated = pd.read_csv(args.data_path) #TODO ??
-
-    def majority_vote(row):
-        if row[LABEL_FIELD] == "TODO":
-            votes = [row[f"is_grammatical_{i}"] for i in range(len(checkpoints))]
-            return np.median(votes)
-        else:
-            return ""
-
-    data_annotated[LABEL_FIELD] = data_annotated.apply(majority_vote, axis=1)
-
-    # Append training data
-    data_all.to_csv(os.path.join(args.data_dir, "majority_vote.csv"))
+    trainer.predict(model, datamodule=dm)
 
 
 def parse_args():

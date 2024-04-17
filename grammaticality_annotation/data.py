@@ -13,7 +13,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TRANSCRIPT_FIELD,
-                                                 ERROR_LABELS_FIELD, AGE_FIELD)
+                                                 ERROR_LABELS_FIELD, AGE_FIELD, UTT_ID_FIELD)
 from utils import PROJECT_ROOT_DIR
 
 DATA_SPLIT_RANDOM_STATE = 8
@@ -81,6 +81,7 @@ def add_context(transcripts, context_length=0, sep_token=None):
         datapoint = {
             TEXT_FIELD: sentence,
             TRANSCRIPT_FIELD: row[TRANSCRIPT_FIELD],
+            UTT_ID_FIELD: row["id"],
             AGE_FIELD: row[AGE_FIELD],
         }
         if LABEL_FIELD in row.index:
@@ -179,10 +180,11 @@ class CHILDESGrammarDataModule(LightningDataModule):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens)
 
     def tokenize_inference_batch(self, batch):
-        return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens, add_labels=False, add_file_ids=True)
+        return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens,
+                        add_labels=False, add_file_ids=True, add_utt_ids=True)
 
 
-def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=True, add_file_ids=False):
+def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=True, add_file_ids=False, add_utt_ids=False):
     texts = [b[TEXT_FIELD] for b in batch]
     if add_eos_token:
         texts = [t+tokenizer.eos_token for t in texts]
@@ -194,6 +196,8 @@ def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=T
         features.data[LABEL_FIELD] = torch.tensor([b[LABEL_FIELD] for b in batch])
     if add_file_ids:
         features.data[TRANSCRIPT_FIELD] = torch.tensor([b[TRANSCRIPT_FIELD] for b in batch])
+    if add_utt_ids:
+        features.data[UTT_ID_FIELD] = torch.tensor([b[UTT_ID_FIELD] for b in batch])
 
     return features
 
