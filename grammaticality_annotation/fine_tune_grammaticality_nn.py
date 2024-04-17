@@ -205,10 +205,10 @@ class CHILDESGrammarModel(LightningModule):
         # Store predictions
         for transcript_file in batch[TRANSCRIPT_FIELD].unique():
             path_name = os.path.join(self.predict_data_dir, f"{transcript_file}.csv")
-            preds_transcript = preds[batch[TRANSCRIPT_FIELD] == transcript_file]
-            utt_ids_transcript = batch[UTT_ID_FIELD][batch[TRANSCRIPT_FIELD] == transcript_file]
+            preds_transcript = preds[batch[TRANSCRIPT_FIELD] == transcript_file].cpu().numpy()
+            utt_ids_transcript = batch[UTT_ID_FIELD][batch[TRANSCRIPT_FIELD] == transcript_file].cpu().numpy()
             data = pd.read_csv(path_name, index_col=0)
-            data.loc[utt_ids_transcript, LABEL_FIELD] = preds_transcript.cpu().numpy()
+            data.loc[utt_ids_transcript, LABEL_FIELD] = preds_transcript
             data.to_csv(path_name, index_label=data.index.name)
 
         return preds
