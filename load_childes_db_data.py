@@ -8,7 +8,7 @@ from grammaticality_annotation.tokenizer import TOKEN_SPEAKER_CHILD, TOKEN_SPEAK
 from grammaticality_manual_annotation.prepare_for_hand_annotation import ALL_EXCLUDED_CORPORA
 from utils import SPEAKER_CODES_CAREGIVER, SPEAKER_CODE_CHILD, split_into_words, PROJECT_ROOT_DIR
 
-DATA_FILE_PREPROCESSED_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "preprocessed", "childes_db", "all.csv")
+DATA_DIR_PREPROCESSED_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "preprocessed", "childes_db")
 
 DB_VERSION = "2021.1"
 DB_ARGS = None
@@ -68,14 +68,12 @@ def parse_punctuation(utterance_type):
         return "."
 
 
-def load():
+def load_and_save():
     from childespy.childespy import get_utterances, get_corpora
 
     corpora = get_corpora()
     corpora = corpora[corpora.collection_name.isin(["Eng-NA", "Eng-UK"])]
     corpora = corpora[~corpora.corpus_name.isin(ALL_EXCLUDED_CORPORA)]
-
-    data_childes_db = []
 
     for corpus in corpora.corpus_name.unique():
         print("\ncorpus: ", corpus)
@@ -92,7 +90,7 @@ def load():
 
         # Filter for transcript that contain at least one caregiver utterance
         transcripts_with_caregiver_utts = utt_corpus[utt_corpus.speaker_code != TOKEN_SPEAKER_CHILD].transcript_file
-        utt_corpus = data[data.transcript_file.isin(transcripts_with_caregiver_utts.unique())]
+        utt_corpus = utt_corpus[utt_corpus.transcript_file.isin(transcripts_with_caregiver_utts.unique())]
 
         utt_corpus["num_words"] = utt_corpus.transcript_clean.apply(
             lambda x: len(split_into_words(x, split_on_apostrophe=False, remove_commas=True,
@@ -100,21 +98,23 @@ def load():
         )
 
         utt_corpus[LABEL_FIELD] = ""
-        utt_corpus.loc[(utt_corpus.speaker_code == TOKEN_SPEAKER_CHILD) & (utt_corpus.num_words > 1), LABEL_FIELD] = "TODO"
+        utt_corpus.loc[
+            (utt_corpus.speaker_code == TOKEN_SPEAKER_CHILD) & (utt_corpus.num_words > 1), LABEL_FIELD
+        ] = "TODO"
 
         utt_corpus.sort_values(["transcript_file", "utterance_order"], inplace=True)
         utt_corpus = utt_corpus[["id", "transcript_file", "speaker_code", "transcript_clean", LABEL_FIELD, "age"]]
-        data_childes_db.append(utt_corpus)
 
-    data_childes_db = pd.concat(data_childes_db, ignore_index=True)
-    return data_childes_db
+        for transcript_id in utt_corpus.transcript_file.unique():
+            out_file_path = os.path.join(args.out_dir, f"{transcript_id}.csv")
+            utt_corpus[utt_corpus.transcript_file == transcript_id].to_csv(out_file_path, index=False)
 
 
 def parse_args():
     argparser = argparse.ArgumentParser()
 
     argparser.add_argument(
-        "--output-path", type=str, default=DATA_FILE_PREPROCESSED_CHILDES_DB
+        "--output-dir", type=str, default=DATA_DIR_PREPROCESSED_CHILDES_DB
     )
 
     args = argparser.parse_args()
@@ -125,5 +125,4 @@ def parse_args():
 if __name__ == "__main__":
     args = parse_args()
 
-    data = load()
-    data.to_csv(args.output_path, index=False)
+    load_and_save()
