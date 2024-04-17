@@ -208,7 +208,7 @@ class CHILDESGrammarModel(LightningModule):
             preds_transcript = preds[batch[TRANSCRIPT_FIELD] == transcript_file]
             utt_ids_transcript = batch[UTT_ID_FIELD][batch[TRANSCRIPT_FIELD] == transcript_file]
             data = pd.read_csv(path_name, index_col=0)
-            data.loc[utt_ids_transcript, LABEL_FIELD] = preds_transcript
+            data.loc[utt_ids_transcript, LABEL_FIELD] = preds_transcript.cpu().numpy()
             data.to_csv(path_name, index_label=data.index.name)
 
         return preds
