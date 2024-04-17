@@ -12,7 +12,7 @@ import pandas as pd
 from grammaticality_annotation.data import CHILDESGrammarDataModule, add_context
 from grammaticality_annotation.fine_tune_grammaticality_nn import CHILDESGrammarModel
 from grammaticality_annotation.tokenizer import LABEL_FIELD
-from load_childes_db_data import DATA_FILE_PREPROCESSED_CHILDES_DB
+from load_childes_db_data import DATA_DIR_PREPROCESSED_CHILDES_DB
 from utils import PROJECT_ROOT_DIR
 
 ANNOTATION_ANNOTATED_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/automatically_annotated"
@@ -86,7 +86,7 @@ def parse_args():
     argparser.add_argument(
         "--data-path",
         type=str,
-        default=DATA_FILE_PREPROCESSED_CHILDES_DB,
+        default=DATA_DIR_PREPROCESSED_CHILDES_DB,
     )
     argparser.add_argument(
         "--out-data-dir",
