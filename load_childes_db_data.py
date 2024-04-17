@@ -92,6 +92,10 @@ def load_and_save():
         transcripts_with_caregiver_utts = utt_corpus[utt_corpus.speaker_code != TOKEN_SPEAKER_CHILD].transcript_file
         utt_corpus = utt_corpus[utt_corpus.transcript_file.isin(transcripts_with_caregiver_utts.unique())]
 
+        # Filter for transcript that contain at least one child utterance
+        transcripts_with_child_utts = utt_corpus[utt_corpus.speaker_code == TOKEN_SPEAKER_CHILD].transcript_file
+        utt_corpus = utt_corpus[utt_corpus.transcript_file.isin(transcripts_with_child_utts.unique())]
+
         utt_corpus["num_words"] = utt_corpus.transcript_clean.apply(
             lambda x: len(split_into_words(x, split_on_apostrophe=False, remove_commas=True,
                                            remove_trailing_punctuation=True))
