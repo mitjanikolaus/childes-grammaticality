@@ -22,6 +22,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 200 #TODO
 
 DATA_DIR_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "childes_db")
+DATA_FILE_ANNOTATED_ALL = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "childes_db.csv")
 
 
 def annotate(args):
@@ -71,6 +72,21 @@ def annotate(args):
     trainer = Trainer(devices=1 if torch.cuda.is_available() else None, accelerator="auto")
     trainer.predict(model, datamodule=dm)
 
+    print("finished annotating.")
+
+    print("creating single file with all annotated utterances..")
+    annotated_data_files = sorted(glob.glob(os.path.join(args.out_data_dir, "*.csv")))
+    transcript_files = {p: pd.read_csv(p) for p in tqdm(annotated_data_files)}
+    data_annotated = pd.concat(transcript_files.values(), ignore_index=True)
+
+    # for childes-db import:
+    data_annotated.rename(columns={"id": "utterance_id", "transcript_file": "transcript_id"}, inplace=True)
+    data_annotated = data_annotated[["utterance_id", "is_grammatical"]]
+    data_annotated.dropna(inplace=True)
+
+    print(f"saving {len(data_annotated)} utterances")
+    data_annotated.to_csv(args.out_data_file, index=False)
+
 
 def parse_args():
     argparser = argparse.ArgumentParser()
@@ -83,6 +99,11 @@ def parse_args():
         "--out-data-dir",
         type=str,
         default=DATA_DIR_ANNOTATED,
+    )
+    argparser.add_argument(
+        "--out-data-file",
+        type=str,
+        default=DATA_FILE_ANNOTATED_ALL,
     )
     argparser.add_argument(
         "--model",
