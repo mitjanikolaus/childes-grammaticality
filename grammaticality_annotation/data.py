@@ -11,17 +11,21 @@ from sklearn.utils import class_weight
 from pytorch_lightning import LightningDataModule
 from torch.utils.data import DataLoader
 from tqdm import tqdm
+from transformers import AutoTokenizer
 
 from grammaticality_annotation.tokenizer import (TEXT_FIELD, LABEL_FIELD, TRANSCRIPT_FIELD,
                                                  ERROR_LABELS_FIELD, AGE_FIELD)
 from utils import PROJECT_ROOT_DIR
 
 DATA_SPLIT_RANDOM_STATE = 8
+FINE_TUNE_RANDOM_STATE = 1
 
 DATA_FILE_ANNOTATED_CHILDES_DB = os.path.join(PROJECT_ROOT_DIR, "data", "manual_annotation", "annotated_childes_db.csv")
 
 LABEL_GRAMMATICAL = 2
 LABEL_UNGRAMMATICAL = 0
+
+DEFAULT_BATCH_SIZE = 5
 
 
 if torch.cuda.is_available():
@@ -126,23 +130,20 @@ def create_dataset_dicts(num_cv_folds, val_split_proportion, context_length, ran
 class CHILDESGrammarDataModule(LightningDataModule):
     def __init__(
             self,
-            model_name_or_path: str,
-            train_batch_size: int,
-            eval_batch_size: int,
-            ds_dict: DatasetDict,
-            tokenizer,
+            train_batch_size: int = DEFAULT_BATCH_SIZE,
+            eval_batch_size: int = DEFAULT_BATCH_SIZE,
             max_seq_length: int = 128,
             num_cv_folds = 5,
             val_split_proportion: float = 0.2,
-            context_length: int = 1,
-            random_seed = 1,
+            context_length: int = 8,
+            random_seed = FINE_TUNE_RANDOM_STATE,
             num_workers = 8,
             add_eos_tokens = False,
             train_data_size = 1.0,
+            fold = 0,
             **kwargs,
     ):
         super().__init__()
-        self.model_name_or_path = model_name_or_path
         self.max_seq_length = max_seq_length
         self.train_batch_size = train_batch_size
         self.eval_batch_size = eval_batch_size
@@ -152,13 +153,25 @@ class CHILDESGrammarDataModule(LightningDataModule):
         self.random_seed = random_seed
         self.num_workers = num_workers
         self.train_data_size = train_data_size
-        self.dataset = ds_dict
+        self.fold = fold
 
         self.num_labels = 3
-        self.tokenizer = tokenizer
         self.add_eos_tokens = add_eos_tokens
 
     def setup(self, stage: str):
+        model_name = self.trainer.model.hparams.model_name_or_path
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+
+        if "gpt2" in model_name:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+            self.trainer.model.model.pad_token_id = self.trainer.model.model.eos_token_id
+
+        datasets = create_dataset_dicts(self.num_cv_folds, self.val_split_proportion, self.context_length,
+                                        self.train_data_size, create_val_split=True,
+                                        sep_token=self.tokenizer.sep_token, train_data_size=self.train_data_size)
+        self.dataset = datasets[self.fold]
+        print(f"Selected dataset CV fold: {self.fold}")
+
         for split in self.dataset.keys():
             columns = [c for c in self.dataset[split].column_names]
             self.dataset[split].set_format(type="torch", columns=columns)
