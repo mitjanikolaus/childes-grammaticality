@@ -15,9 +15,10 @@ from transformers import (
     get_linear_schedule_with_warmup,
 )
 
-from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, FINE_TUNE_RANDOM_STATE
-from grammaticality_annotation.tokenizer import LABEL_FIELD, TRANSCRIPT_FIELD
-from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
+from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
+    create_dataset_dicts
+from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, TRANSCRIPT_FIELD
+from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
 from utils import RESULTS_FILE, RESULTS_DIR
 
 DEFAULT_LEARNING_RATE = 1e-5
@@ -208,16 +209,17 @@ class CHILDESGrammarModel(LightningModule):
 
         preds = torch.argmax(logits, dim=1)
 
+        # Transform to annotation scheme (2, 1, 0) to (1, 0, -1)
         preds = preds - 1
 
         # Store predictions
-        # TODO file names? batch[FILE_ID_FIELD] transcript id?
-        batch[TRANSCRIPT_FIELD]
-        path_name = os.path.join(self.predict_data_dir, f"annotated_{batch_idx}.csv")
-        data_raw = load_childes_data_file(path_name)
-        data_raw.loc[data_raw[LABEL_FIELD] == "TODO", f"is_grammatical_{self.model_id}"] = preds.tolist()
-
-        data_raw.to_csv(path_name)
+        for transcript_file in batch[TRANSCRIPT_FIELD].unique():
+            path_name = os.path.join(self.predict_data_dir, f"{transcript_file}.csv")
+            preds_transcript = preds[batch[TRANSCRIPT_FIELD] == transcript_file].cpu().numpy()
+            utt_ids_transcript = batch[UTT_ID_FIELD][batch[TRANSCRIPT_FIELD] == transcript_file].cpu().numpy()
+            data = pd.read_csv(path_name, index_col=0)
+            data.loc[utt_ids_transcript, LABEL_FIELD] = preds_transcript
+            data.to_csv(path_name, index_label=data.index.name)
 
         return preds
 

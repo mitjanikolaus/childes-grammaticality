@@ -1,28 +1,30 @@
 import argparse
 import glob
 import os
-import numpy as np
 import torch
 import yaml
 from datasets import Dataset, DatasetDict
 from pytorch_lightning import Trainer
+from tqdm import tqdm
 from transformers import AutoTokenizer
 import pandas as pd
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, add_context
 from grammaticality_annotation.fine_tune_grammaticality_nn import CHILDESGrammarModel
-from grammaticality_annotation.tokenizer import LABEL_FIELD
-from load_childes_db_data import DATA_FILE_PREPROCESSED_CHILDES_DB
+from load_childes_db_data import DATA_DIR_PREPROCESSED_CHILDES_DB, DB_VERSION
 from utils import PROJECT_ROOT_DIR
 
-ANNOTATION_ANNOTATED_FILES_PATH = PROJECT_ROOT_DIR+"/data/manual_annotation/automatically_annotated"
+ANNOTATION_ANNOTATED_FILES_PATH = PROJECT_ROOT_DIR + "/data/manual_annotation/automatically_annotated"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Needs to match the number of utterances within a file to be annotated!
-BATCH_SIZE = 200 #TODO
+BATCH_SIZE = 200
 
 DATA_DIR_ANNOTATED = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "childes_db")
+DATA_FILE_ANNOTATED_ALL = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "childes_db.csv")
+DATA_FILE_CHILDES_DB_METADATA = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "metadata.csv")
+DATA_FILE_CHILDES_DB_VARIABLES = os.path.join(PROJECT_ROOT_DIR, "data", "automatically_annotated", "variables.csv")
 
 
 def annotate(args):
@@ -31,7 +33,10 @@ def annotate(args):
 
     context_length = hparams["context_length"]
     sep_token = tokenizer.sep_token
-    data = pd.read_csv(args.data_path)
+
+    print('loading data...')
+    transcript_files = {p: pd.read_csv(p) for p in tqdm(sorted(glob.glob(os.path.join(args.data_path, "*.csv"))))}
+    data = pd.concat(transcript_files.values(), ignore_index=True)
 
     data = add_context(data, context_length=context_length, sep_token=sep_token)
 
@@ -50,35 +55,39 @@ def annotate(args):
                                   train_data_size=1,
                                   ds_dict=dataset_dict)
 
-    checkpoints = list(glob.glob(args.model+"/checkpoints/epoch*.ckpt"))
+    checkpoints = list(glob.glob(args.model + "/checkpoints/epoch*.ckpt"))
     assert len(checkpoints) == 1, "No or multiple checkpoints found."
     checkpoint = checkpoints[0]
     print(f"Model checkpoint: {checkpoint}")
 
+    # copy the raw data into the output dir, the prediction loop will update the labels directly in these files
     os.makedirs(args.out_data_dir, exist_ok=True)
+    for path, file in transcript_files.items():
+        file_name = os.path.basename(path)
+        out_path = os.path.join(args.out_data_dir, file_name)
+        file.to_csv(out_path, index=False)
 
     model_id = int(args.model.split("_")[-1])
     model = CHILDESGrammarModel.load_from_checkpoint(checkpoint, predict_data_dir=args.out_data_dir, model_id=model_id)
     model.eval()
 
     trainer = Trainer(devices=1 if torch.cuda.is_available() else None, accelerator="auto")
-    predictions = trainer.predict(model, datamodule=dm)
-    torch.cat(predictions)
+    trainer.predict(model, datamodule=dm)
 
-    # Majority voting
-    data_annotated = pd.read_csv(args.data_path) #TODO ??
+    print("finished annotating.")
 
-    def majority_vote(row):
-        if row[LABEL_FIELD] == "TODO":
-            votes = [row[f"is_grammatical_{i}"] for i in range(len(checkpoints))]
-            return np.median(votes)
-        else:
-            return ""
+    print("creating single file with all annotated utterances..")
+    annotated_data_files = sorted(glob.glob(os.path.join(args.out_data_dir, "*.csv")))
+    transcript_files = {p: pd.read_csv(p) for p in tqdm(annotated_data_files)}
+    data_annotated = pd.concat(transcript_files.values(), ignore_index=True)
 
-    data_annotated[LABEL_FIELD] = data_annotated.apply(majority_vote, axis=1)
+    # for childes-db import:
+    data_annotated.rename(columns={"id": "utterance_id", "transcript_file": "transcript_id"}, inplace=True)
+    data_annotated = data_annotated[["utterance_id", "is_grammatical"]]
+    data_annotated.dropna(inplace=True)
 
-    # Append training data
-    data_all.to_csv(os.path.join(args.data_dir, "majority_vote.csv"))
+    print(f"saving {len(data_annotated)} utterances")
+    data_annotated.to_csv(DATA_FILE_ANNOTATED_ALL, index=False)
 
 
 def parse_args():
@@ -86,12 +95,16 @@ def parse_args():
     argparser.add_argument(
         "--data-path",
         type=str,
-        default=DATA_FILE_PREPROCESSED_CHILDES_DB,
+        default=DATA_DIR_PREPROCESSED_CHILDES_DB,
     )
     argparser.add_argument(
         "--out-data-dir",
         type=str,
         default=DATA_DIR_ANNOTATED,
+    )
+    argparser.add_argument(
+        "--childes-db-export",
+        action="store_true",
     )
     argparser.add_argument(
         "--model",
@@ -111,5 +124,25 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
+    metadata = pd.DataFrame.from_records([{
+        "dataset_name": "grammaticality_deberta",
+        "entity_type": "utterances",
+        "childes_db_version": DB_VERSION,
+        "dataset_version": "1",
+        "tag_type": "model",
+        "model_version": "1",
+        "date_of_release": "2024-05-01",
+        "contact": "mitja.nikolaus@posteo.de",
+        "citation": "https://doi.org/10.48550/arXiv.2403.14208",
+    }])
+    metadata.to_csv(DATA_FILE_CHILDES_DB_METADATA, index=False)
 
-    annotate(args)
+    variables_meta = pd.DataFrame.from_records([{
+        "variable_id": "1",
+        "variable_name": "is_grammatical",
+        "data_type": "float",
+        "values": "[-1,0,1]",
+    }])
+    variables_meta.to_csv(DATA_FILE_CHILDES_DB_VARIABLES, index=False)
+
+    # annotate(args)

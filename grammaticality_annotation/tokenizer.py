@@ -22,6 +22,7 @@ TOKEN_SPEAKER_CAREGIVER = "[CAR]"
 TEXT_FIELD = "transcript"
 LABEL_FIELD = "is_grammatical"
 TRANSCRIPT_FIELD = "transcript_file"
+UTT_ID_FIELD = "utterance_id"
 ERROR_LABELS_FIELD = "labels"
 AGE_FIELD = "age"
 
