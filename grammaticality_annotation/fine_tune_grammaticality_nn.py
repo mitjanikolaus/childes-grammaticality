@@ -16,9 +16,9 @@ from transformers import (
 )
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
-    create_dataset_dicts
-from grammaticality_annotation.tokenizer import TOKEN_PAD, LABEL_FIELD, TRANSCRIPT_FIELD
-from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification, LSTM_TOKENIZER_PATH
+    FINE_TUNE_RANDOM_STATE
+from grammaticality_annotation.tokenizer import LABEL_FIELD, TRANSCRIPT_FIELD
+from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
 from utils import RESULTS_FILE, RESULTS_DIR
 
 DEFAULT_LEARNING_RATE = 1e-5
