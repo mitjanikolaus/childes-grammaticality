@@ -166,7 +166,7 @@ class CHILDESGrammarModel(LightningModule):
 
             self.log_dict(metric_results, prog_bar=True)
 
-        data_test = self.dataset["test"].to_pandas()
+        data_test = self.trainer.datamodule.dataset["test"].to_pandas()
         data_test["pred"] = preds
         output_path = os.path.join(self.logger.log_dir, "test_set_predictions.csv")
         data_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
