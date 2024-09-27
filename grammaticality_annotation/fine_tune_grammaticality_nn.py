@@ -20,15 +20,15 @@ from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_
     FINE_TUNE_RANDOM_STATE
 from grammaticality_annotation.tokenizer import LABEL_FIELD, TRANSCRIPT_FIELD, UTT_ID_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
-from utils import RESULTS_FILE, RESULTS_DIR
 
-DEFAULT_LEARNING_RATE = 1e-5
+DEFAULT_LEARNING_RATE = 5e-6
+DEFAULT_MODEL_NAME = "microsoft/deberta-v3-large"
 
 
 class CHILDESGrammarModel(LightningModule):
     def __init__(
             self,
-            model_name_or_path: str,
+            model_name_or_path: str = DEFAULT_MODEL_NAME,
             num_cv_folds: int = 5,
             train_data_size: float = 1.0,
             learning_rate: float = DEFAULT_LEARNING_RATE,
