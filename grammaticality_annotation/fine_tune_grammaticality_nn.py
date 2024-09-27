@@ -3,6 +3,7 @@ import os
 import numpy as np
 
 import evaluate
+import pandas as pd
 import torch
 from pytorch_lightning import LightningModule
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
@@ -17,7 +18,7 @@ from transformers import (
 
 from grammaticality_annotation.data import CHILDESGrammarDataModule, calc_class_weights, \
     FINE_TUNE_RANDOM_STATE
-from grammaticality_annotation.tokenizer import LABEL_FIELD, TRANSCRIPT_FIELD
+from grammaticality_annotation.tokenizer import LABEL_FIELD, TRANSCRIPT_FIELD, UTT_ID_FIELD
 from grammaticality_annotation.pretrain_lstm import LSTMSequenceClassification
 from utils import RESULTS_FILE, RESULTS_DIR
 
@@ -55,8 +56,6 @@ class CHILDESGrammarModel(LightningModule):
 
         self.predict_data_dir = predict_data_dir
         self.model_id = model_id
-
-        self.test_error_analysis = False
 
     def configure_model(self):
         self.context_length = self.trainer.datamodule.context_length
@@ -151,10 +150,13 @@ class CHILDESGrammarModel(LightningModule):
 
             self.log_dict(metric_results, prog_bar=True)
 
-    def test_epoch_end(self, outputs):
-        preds = torch.cat([x["preds"] for x in outputs]).detach().cpu().numpy()
-        labels = torch.cat([x[LABEL_FIELD] for x in outputs]).detach().cpu().numpy()
-        loss = torch.stack([x["loss"] for x in outputs]).mean()
+    def on_test_epoch_start(self) -> None:
+        self.on_validation_epoch_start()
+
+    def on_test_epoch_end(self):
+        preds = self.val_outputs["preds"]
+        labels = self.val_outputs[LABEL_FIELD]
+        loss = np.mean(self.val_outputs["loss"])
 
         self.log(f"test_loss", loss, prog_bar=True)
         for metric in self.metrics:
@@ -164,12 +166,10 @@ class CHILDESGrammarModel(LightningModule):
 
             self.log_dict(metric_results, prog_bar=True)
 
-        if self.test_error_analysis:
-            data_test = self.dataset["test"].to_pandas()
-            data_test["pred"] = preds
-
-            output_path = os.path.join(self.logger.log_dir, "test_set_predictions.csv")
-            data_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
+        data_test = self.dataset["test"].to_pandas()
+        data_test["pred"] = preds
+        output_path = os.path.join(self.logger.log_dir, "test_set_predictions.csv")
+        data_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
 
     def configure_optimizers(self):
         """Prepare optimizer and schedule (linear warmup and decay)"""
@@ -222,63 +222,6 @@ class CHILDESGrammarModel(LightningModule):
             data.to_csv(path_name, index_label=data.index.name)
 
         return preds
-
-
-def gather_results(args):
-    test_results = []
-    val_results = []
-
-    # for res in results:
-    #     run_id = trainer.logger.version
-    #
-    #     print(f"\n\nFinal validation (using {checkpoint_callback.best_model_path}):")
-    #     best_model = CHILDESGrammarModel.load_from_checkpoint(checkpoint_callback.best_model_path,
-    #                                                           context_length=args.context_length,
-    #                                                           val_split_proportion=args.val_split_proportion,
-    #                                                           dataset=datasets[fold],
-    #                                                           class_weights=class_weights)
-    #
-    #     if args.model == "gpt2":
-    #         tokenizer.pad_token = tokenizer.eos_token
-    #         best_model.config.pad_token_id = model.config.eos_token_id
-    #
-    #     val_result = trainer.validate(best_model, datamodule=dm)
-    #     val_results.append(val_result[0])
-    #
-    #     best_model.test_error_analysis = True
-    #     test_result = trainer.test(best_model, datamodule=dm)
-    #     test_results.append(test_result[0])
-    #
-    # accuracies = [results["test_accuracy"] for results in test_results]
-    # print(f"\n\n\nAccuracy: {np.mean(accuracies):.2f} Stddev: {np.std(accuracies):.2f}")
-    #
-    # mccs = [results["test_matthews_correlation"] for results in test_results]
-    # print(f"MCC: {np.mean(mccs):.2f} Stddev: {np.std(mccs):.2f}")
-    #
-    # pearson_r_scores = [results["test_pearsonr"] for results in test_results]
-    # print(f"Pearson r: {np.mean(pearson_r_scores):.2f} Stddev: {np.std(pearson_r_scores):.2f}")
-    #
-    # val_mccs = [results["val_matthews_correlation"] for results in val_results]
-    #
-    # val_pearsonr_scores = [results["val_pearsonr"] for results in val_results]
-    #
-    # results_df = pd.DataFrame([{"model": args.model, "mcc: mean": np.mean(mccs), "mcc: std": np.std(mccs),
-    #                             "pearson_r: mean": np.mean(pearson_r_scores),
-    #                             "pearson_r: std": np.std(pearson_r_scores), "accuracy: mean": np.mean(accuracies),
-    #                             "accuracy: std": np.std(accuracies), "val_mcc: mean": np.mean(val_mccs),
-    #                             "val_mcc: std": np.std(val_mccs), "val_pearsonr: mean": np.mean(val_pearsonr_scores),
-    #                             "val_pearsonr: std": np.std(val_pearsonr_scores), "context_length": args.context_length,
-    #                             "train_data_size": args.train_data_size,
-    #                             "run_id": run_id}])
-    # results_df.set_index(["model", "context_length", "train_data_size"], inplace=True)
-    #
-    # os.makedirs(RESULTS_DIR, exist_ok=True)
-    # if not os.path.isfile(RESULTS_FILE):
-    #     results_df.to_csv(RESULTS_FILE)
-    # else:
-    #     old_res_file = pd.read_csv(RESULTS_FILE, index_col=["model", "context_length", "train_data_size"])
-    #     results_df = results_df.combine_first(old_res_file)
-    #     results_df.to_csv(RESULTS_FILE)
 
 
 if __name__ == "__main__":
