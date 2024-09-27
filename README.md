@@ -35,14 +35,22 @@ python grammaticality_annotation/train_grammaticality_baseline.py --model svc --
 
 These models are only fine-tuned on the task. Example for DeBERTa:
 ```
-python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsoft/deberta-v3-large
+python grammaticality_annotation/fine_tune_grammaticality_nn.py fit --model.model_name_or_path microsoft/deberta-v3-large --data.fold 0
 ```
 
 If you are using a small GPU you will most likely need to decrease the batch size for finetuning. The following command
 can be used to train models which reach an average Pearson Correlation Coefficient (PCC) of 0.75 on the test sets, even
 better than what the score reported in the paper (thanks to improved hyperparameters).
 ```
-python grammaticality_annotation/fine_tune_grammaticality_nn.py --model microsoft/deberta-v3-large --context-length 8 --batch-size 5 --accumulate_grad_batches 20 --learning-rate 5e-6
+python grammaticality_annotation/fine_tune_grammaticality_nn.py fit --model.model_name_or_path microsoft/deberta-v3-large  --data.fold 0 --data.train_batch_size 5 --data.eval_batch_size 5 --trainer.accumulate_grad_batches 20
+```
+
+For the results in the paper, 5-fold cross-validation was performed. In order to train the models for the different
+folds, set the `--fold` argument to different indices (0 to 4, default: 0).
+
+In order to test a model you can run the following command: (make sure to specify the correct data fold!)
+```
+python grammaticality_annotation/fine_tune_grammaticality_nn.py test --ckpt_path ~/data/childes_grammaticality/lightning_logs/version_0/checkpoints/epoch\=11-val_pearsonr\=0.77.ckpt  --data.fold 0
 ```
 
 ## Annotate data
