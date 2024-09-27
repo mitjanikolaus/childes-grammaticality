@@ -39,11 +39,13 @@ class CHILDESGrammarModel(LightningModule):
             random_seed=1,
             predict_data_dir=None,
             model_id=None,
+            num_labels=3,
             **kwargs,
     ):
         super().__init__()
         self.learning_rate = learning_rate
         self.model_name_or_path = model_name_or_path
+        self.num_labels = num_labels
 
         self.save_hyperparameters()
 
@@ -57,15 +59,6 @@ class CHILDESGrammarModel(LightningModule):
         self.predict_data_dir = predict_data_dir
         self.model_id = model_id
 
-    def configure_model(self):
-        self.context_length = self.trainer.datamodule.context_length
-        self.num_labels = self.trainer.datamodule.num_labels
-
-        self.class_weights = calc_class_weights(self.trainer.datamodule.dataset["train"][LABEL_FIELD].cpu().numpy())
-        self.loss_fct = CrossEntropyLoss(weight=torch.tensor(self.class_weights, dtype=torch.float))
-
-        print(f"Model loss class weights: {self.class_weights}")
-
         if os.path.isfile(self.model_name_or_path):
             self.model = LSTMSequenceClassification.load_from_checkpoint(self.model_name_or_path,
                                                                          num_labels=self.num_labels,
@@ -73,6 +66,16 @@ class CHILDESGrammarModel(LightningModule):
         else:
             self.config = AutoConfig.from_pretrained(self.model_name_or_path, num_labels=self.num_labels)
             self.model = AutoModelForSequenceClassification.from_pretrained(self.model_name_or_path, config=self.config)
+
+        # Loss function with dummy weight (will be updated on train start, defined here to to allow ckpt loading)
+        self.loss_fct = CrossEntropyLoss(weight=torch.tensor([1] * self.num_labels, dtype=torch.float))
+
+    def on_train_start(self):
+        self.class_weights = calc_class_weights(self.trainer.datamodule.dataset["train"][LABEL_FIELD].cpu().numpy())
+        self.loss_fct = CrossEntropyLoss(weight=torch.tensor(self.class_weights, dtype=torch.float))
+        print(f"Model loss class weights: {self.class_weights}")
+
+        assert self.num_labels == self.trainer.datamodule.num_labels
 
     def forward(self, **inputs):
         output = self.model(**inputs)
