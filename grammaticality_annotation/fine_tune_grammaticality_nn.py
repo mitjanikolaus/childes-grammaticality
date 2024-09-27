@@ -169,7 +169,8 @@ class CHILDESGrammarModel(LightningModule):
         data_test = self.trainer.datamodule.dataset["test"].to_pandas()
         data_test["pred"] = preds
         output_path = os.path.join(self.logger.log_dir, "test_set_predictions.csv")
-        data_test.to_csv(output_path, mode='a', header=not os.path.exists(output_path))
+        print(f"Saving test set predictions to {output_path}")
+        data_test.to_csv(output_path)
 
     def configure_optimizers(self):
         """Prepare optimizer and schedule (linear warmup and decay)"""
