@@ -72,7 +72,7 @@ class CHILDESGrammarModel(LightningModule):
 
     def on_train_start(self):
         self.class_weights = calc_class_weights(self.trainer.datamodule.dataset["train"][LABEL_FIELD].cpu().numpy())
-        self.loss_fct = CrossEntropyLoss(weight=torch.tensor(self.class_weights, dtype=torch.float))
+        self.loss_fct = CrossEntropyLoss(weight=torch.tensor(self.class_weights, dtype=torch.float, device=self.device))
         print(f"Model loss class weights: {self.class_weights}")
 
         assert self.num_labels == self.trainer.datamodule.num_labels
