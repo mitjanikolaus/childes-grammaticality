@@ -142,6 +142,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
             add_eos_tokens = False,
             train_data_size = 1.0,
             fold = 0,
+            lowercase = False,
             **kwargs,
     ):
         super().__init__()
@@ -158,6 +159,7 @@ class CHILDESGrammarDataModule(LightningDataModule):
 
         self.num_labels = 3
         self.add_eos_tokens = add_eos_tokens
+        self.lowercase = lowercase
 
     def setup(self, stage: str):
         model_name = self.trainer.model.hparams.model_name_or_path
@@ -190,15 +192,17 @@ class CHILDESGrammarDataModule(LightningDataModule):
         return DataLoader(self.dataset["pred"], batch_size=self.eval_batch_size, collate_fn=self.tokenize_inference_batch, num_workers=self.num_workers, shuffle=False)
 
     def tokenize_batch(self, batch):
-        return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens)
+        return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens, lowercase=self.lowercase)
 
     def tokenize_inference_batch(self, batch):
         return tokenize(batch, self.tokenizer, self.max_seq_length, add_eos_token=self.add_eos_tokens,
-                        add_labels=False, add_file_ids=True, add_utt_ids=True)
+                        add_labels=False, add_file_ids=True, add_utt_ids=True, lowercase=self.lowercase)
 
 
-def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=True, add_file_ids=False, add_utt_ids=False):
+def tokenize(batch, tokenizer, max_seq_length, add_eos_token=False, add_labels=True, add_file_ids=False, add_utt_ids=False, lowercase=False):
     texts = [b[TEXT_FIELD] for b in batch]
+    if lowercase:
+        texts = [t.lower() for t in texts]
     if add_eos_token:
         texts = [t+tokenizer.eos_token for t in texts]
 
