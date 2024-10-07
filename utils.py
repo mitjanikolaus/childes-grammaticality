@@ -1,7 +1,6 @@
 import argparse
 import os
 import re
-import matplotlib
 
 from multiprocessing import Pool
 
